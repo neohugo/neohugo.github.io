@@ -13,7 +13,7 @@
   <title>Shortcodes | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.77.0-DEV" />
+  <meta name="generator" content="Hugo 0.79.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -61,12 +61,12 @@
 <meta property="og:url" content="https://gohugo.io/content-management/shortcodes/" />
 <meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta property="article:published_time" content="2017-02-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2019-11-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-11-07T22:46:18+07:00" />
 <meta itemprop="name" content="Shortcodes">
 <meta itemprop="description" content="Shortcodes are simple snippets inside your content files calling built-in or custom templates.">
 <meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2019-11-07T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1839">
+<meta itemprop="dateModified" content="2020-11-07T22:46:18+07:00" />
+<meta itemprop="wordCount" content="1883">
 <meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 
 
@@ -567,6 +567,17 @@ and a new line with a &quot;quoted string&quot;.` &gt;}}
 <p>Using the preceding <code>instagram</code> with <code>hidecaption</code> example above, the following simulates the displayed experience for visitors to your website. Naturally, the final display will be contingent on your stylesheets and surrounding markup.</p>
 
 
+
+
+<aside class="admonition note">
+	<div class="note-icon">
+		
+	</div>
+	
+	
+	<div class="admonition-content"><p>The <code>instagram</code>-shortcode refers an endpoint of Instagram&rsquo;s API, that&rsquo;s deprecated since October 24th, 2020. Thus, no images can be fetched from this API endpoint, resulting in an error when the <code>instagram</code>-shortcode is used. For more information please have a look at GitHub issue <a href="https://github.com/gohugoio/hugo/issues/7879">#7879</a>.</p>
+</div>
+</aside>
 
 <h3 id="param"><code>param</code> <a class="header-link" href="#param"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>Gets a value from the current <code>Page's</code> params set in front matter, with a fall back to the site param value. It will log an <code>ERROR</code> if the param with the given key could not be found in either.</p>
@@ -1803,6 +1814,16 @@ Hugo Rocks!
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/urldecode/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              urldecode
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/urlencode/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              urlencode
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/urlize/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               urlize
             </a>
@@ -2133,7 +2154,7 @@ Hugo Rocks!
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “Shortcodes”
-  </a> was last updated: November 7, 2019
+  </a> was last updated: November 7, 2020: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/e974a6656be33395073bf64cf0b30a2b99ece909">ci: fix benchmark and releaser (e974a66)</a>
 </h6>
 
     <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/content-management/shortcodes.md" class="

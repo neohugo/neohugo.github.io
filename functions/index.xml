@@ -1319,6 +1319,28 @@ In addition, borrowing from the extended behavior described at https://php.net s
     </item>
     
     <item>
+      <title>urldecode</title>
+      <link>https://gohugo.io/functions/urldecode/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/functions/urldecode/</guid>
+      <description>The following examples pull from a content file with the following front matter:
+content/blog/neohugo.md +++ title = &amp;#34;A Forked of Hugo&amp;#34; location = &amp;#34;กรุงเทพ ไทย&amp;#34; +++    The following might be used as a partial within a single page template:
+layouts/partials/content-header.html  &amp;lt;header&amp;gt; &amp;lt;h1&amp;gt;{{.Title}}&amp;lt;/h1&amp;gt; {{with.Params.location}} &amp;lt;div&amp;gt;&amp;lt;a href=&amp;#34;/locations/{{urldecode(.|urlize)}}&amp;#34;&amp;gt;{{.}}&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt; {{end}} &amp;lt;/header&amp;gt;    The preceding partial would then output to the rendered page as follows, assuming the page is being built with Hugo&amp;rsquo;s default pretty URLs.</description>
+    </item>
+    
+    <item>
+      <title>urlencode</title>
+      <link>https://gohugo.io/functions/urlencode/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/functions/urlencode/</guid>
+      <description>The following examples pull from a content file with the following front matter:
+content/blog/greatest-city.md +++ title = &amp;#34;The World&amp;#39;s Greatest City&amp;#34; location = &amp;#34;Chicago IL&amp;#34; tags = [&amp;#34;pizza&amp;#34;,&amp;#34;beer&amp;#34;,&amp;#34;hot dogs&amp;#34;] +++    The following might be used as a partial within a single page template:
+layouts/partials/content-header.html  &amp;lt;header&amp;gt; &amp;lt;h1&amp;gt;{{.Title}}&amp;lt;/h1&amp;gt; {{with.Params.location}} &amp;lt;div&amp;gt;&amp;lt;a href=&amp;#34;/locations/{{.|urlencode}}&amp;#34;&amp;gt;{{.}}&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt; {{end}} &amp;lt;!-- Creates a list of tags for the content and links to each of their pages --&amp;gt; {{with.</description>
+    </item>
+    
+    <item>
       <title>urlize</title>
       <link>https://gohugo.io/functions/urlize/</link>
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>

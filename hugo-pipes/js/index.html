@@ -13,7 +13,7 @@
   <title>JavaScript Building | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.77.0-DEV" />
+  <meta name="generator" content="Hugo 0.79.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -61,12 +61,12 @@
 <meta property="og:url" content="https://gohugo.io/hugo-pipes/js/" />
 <meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta property="article:published_time" content="2020-07-20T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-07-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-11-07T22:46:18+07:00" />
 <meta itemprop="name" content="JavaScript Building">
 <meta itemprop="description" content="Hugo Pipes can process JavaScript files with [ESBuild](https://github.com/evanw/esbuild).">
 <meta itemprop="datePublished" content="2020-07-20T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2020-07-20T00:00:00+00:00" />
-<meta itemprop="wordCount" content="406">
+<meta itemprop="dateModified" content="2020-11-07T22:46:18+07:00" />
+<meta itemprop="wordCount" content="691">
 <meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 
 
@@ -265,8 +265,28 @@
 <dt>targetPath [string]</dt>
 <dd>If not set, the source path will be used as the base target path.
 Note that the target path&rsquo;s extension may change if the target MIME type is different, e.g. when the source is TypeScript.</dd>
+<dt>params [map or slice] 
+
+
+<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
+    <a href="https://gohugo.io/news/0.78.0-relnotes/" target="_blank">New in v0.78.0</a>
+</button></dt>
+<dd>Params that can be imported as JSON in your JS files, e.g.:</dd>
+</dl>
+<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">$js</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">resources</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;js/main.js&#34;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">js</span><span class="na">.Build</span><span class="w"> </span><span class="o">(</span><span class="nx">dict</span><span class="w"> </span><span class="s">&#34;params&#34;</span><span class="w"> </span><span class="o">(</span><span class="nx">dict</span><span class="w"> </span><span class="s">&#34;api&#34;</span><span class="w"> </span><span class="s">&#34;https://example.org/api&#34;</span><span class="w"> </span><span class="o">)</span><span class="w"> </span><span class="err">}}</span><span class="w">
+</span></code></pre></div><p>And then in your JS file:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">params</span> <span class="nx">from</span> <span class="s1">&#39;@params&#39;</span><span class="p">;</span>
+</code></pre></div><p>Note that this is meant for small data sets, e.g. config settings. For larger data, please put/mount the files into <code>/assets</code> and import them directly.</p>
+<dl>
 <dt>minify [bool]</dt>
 <dd>Let <code>js.Build</code> handle the minification.</dd>
+<dt>avoidTDZ 
+
+
+<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
+    <a href="https://gohugo.io/news/0.78.0-relnotes/" target="_blank">New in v0.78.0</a>
+</button></dt>
+<dd>There is/was a bug in WebKit with severe performance issue with the tracking of TDZ checks in JavaScriptCore. Enabling this flag removes the TDZ and <code>const</code> assignment checks and may improve performance of larger JS codebases until the WebKit fix is in widespread use. See <a href="https://bugs.webkit.org/show_bug.cgi?id=199866">https://bugs.webkit.org/show_bug.cgi?id=199866</a></dd>
 <dt>target [string]</dt>
 <dd>The language target.
 One of: <code>es5</code>, <code>es2015</code>, <code>es2016</code>, <code>es2017</code>, <code>es2018</code>, <code>es2019</code>, <code>es2020</code> or <code>esnext</code>.
@@ -294,6 +314,27 @@ Default is <code>esnext</code>.</dd>
 One of: <code>iife</code>, <code>cjs</code>, <code>esm</code>.
 Default is <code>iife</code>, a self-executing function, suitable for inclusion as a <!-- raw HTML omitted --> tag.</dd>
 </dl>
+<h3 id="import-js-code-from-assets">Import JS code from /assets <a class="header-link" href="#import-js-code-from-assets"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+
+
+
+<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
+    <a href="https://gohugo.io/news/0.78.0-relnotes/" target="_blank">New in v0.78.0</a>
+</button>
+<p>Since Hugo <code>v0.78.0</code> <code>js.Build</code> has full support for the virtual union file system in <a href="/hugo-modules/">Hugo Modules</a>. You can see some simple examples in this <a href="https://github.com/gohugoio/hugoTestProjectJSModImports">test project</a>, but in short this means that you can do this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="p">{</span> <span class="nx">hello</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;my/module&#39;</span><span class="p">;</span>
+</code></pre></div><p>And it will respolve to the top-most <code>index.{js,ts,tsx,jsx}</code> inside <code>assets/my/module</code> in the layered file system.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="p">{</span> <span class="nx">hello3</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;my/module/hello3&#39;</span><span class="p">;</span>
+</code></pre></div><p>Wil resolve to <code>hello3.{js,ts,tsx,jsx}</code> inside <code>assets/my/module</code>.</p>
+<p>Any imports starting with <code>.</code> is resolved relative to the current file:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="p">{</span> <span class="nx">hello4</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./lib&#39;</span><span class="p">;</span>
+</code></pre></div><p>For other files (e.g. <code>JSON</code>, <code>CSS</code>) you need to use the relative path including any extension, e.g:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">data</span> <span class="nx">from</span> <span class="s1">&#39;my/module/data.json&#39;</span><span class="p">;</span>
+</code></pre></div><p>Also note the new <code>params</code> option that can be passed from template to your JS files, e.g.:</p>
+<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">$js</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">resources</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;js/main.js&#34;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">js</span><span class="na">.Build</span><span class="w"> </span><span class="o">(</span><span class="nx">dict</span><span class="w"> </span><span class="s">&#34;params&#34;</span><span class="w"> </span><span class="o">(</span><span class="nx">dict</span><span class="w"> </span><span class="s">&#34;api&#34;</span><span class="w"> </span><span class="s">&#34;https://example.org/api&#34;</span><span class="w"> </span><span class="o">)</span><span class="w"> </span><span class="err">}}</span><span class="w">
+</span></code></pre></div><p>And then in your JS file:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">params</span> <span class="nx">from</span> <span class="s1">&#39;@params&#39;</span><span class="p">;</span>
+</code></pre></div><p>Hugo will, by default, generate a <code>assets/jsconfig.js</code> file that maps the imports. This is useful for navigation/intellisense help inside code editors, but if you don&rsquo;t need/want it, you can <a href="/getting-started/configuration/#configure-build">turn it off</a>.</p>
 <h3 id="examples">Examples <a class="header-link" href="#examples"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">$built</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">resources</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;js/index.js&#34;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">js</span><span class="na">.Build</span><span class="w"> </span><span class="s">&#34;main.js&#34;</span><span class="w"> </span><span class="cp">}}</span>
 </code></pre></div><p>Or with options:</p>
@@ -1317,6 +1358,16 @@ Default is <code>iife</code>, a self-executing function, suitable for inclusion 
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/urldecode/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              urldecode
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/urlencode/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              urlencode
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/urlize/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               urlize
             </a>
@@ -1647,7 +1698,7 @@ Default is <code>iife</code>, a self-executing function, suitable for inclusion 
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “JavaScript Building”
-  </a> was last updated: July 20, 2020
+  </a> was last updated: November 7, 2020: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/e974a6656be33395073bf64cf0b30a2b99ece909">ci: fix benchmark and releaser (e974a66)</a>
 </h6>
 
     <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/hugo-pipes/js.md" class="

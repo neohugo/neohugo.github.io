@@ -133,7 +133,6 @@
 /extras/robots-txt/                	/templates/robots/
 /templates/ace/                    	/templates/alternatives/
 /templates/amber/                  	/templates/alternatives/
-/release-notes/                    	/news/
 hmac                               	/functions/hmac/
 /showcase/1password/               	/showcase/1password-support/
 /0-25-1/                           	/news/0.25.1-relnotes/
@@ -162,3 +161,4 @@ sha256                             	/functions/sha/
 /0-18/                             	/news/0.18-relnotes/
 /0-17/                             	/news/0.17-relnotes/
 /0-16/                             	/news/0.16-relnotes/
+/release-notes/                    	/news/

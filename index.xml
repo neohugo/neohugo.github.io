@@ -16,7 +16,68 @@
     
     
     <item>
-      <title>News: 0.77.0</title>
+      <title>News: Hugo 0.78.1: A couple of Bug Fixes</title>
+      <link>https://gohugo.io/news/0.78.1-relnotes/</link>
+      <pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/news/0.78.1-relnotes/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This is a bug-fix release with a couple of important fixes.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Disable NPM test on Travis on Windows &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/3437174c3a7b96925b82b351ac87530b4fa796a5&#34;&gt;3437174c&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;travis: Install nodejs on Windows &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/f66302ca0579171ffd1730eb8f33dd05af3d9a00&#34;&gt;f66302ca&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;js: Remove external source map option &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/944150bafbbb5c3e807ba3688174e70764dbdc64&#34;&gt;944150ba&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7932&#34;&gt;#7932&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;js: Misc fixes &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/bf2837a314eaf70135791984a423b0b09f58741d&#34;&gt;bf2837a3&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7924&#34;&gt;#7924&lt;/a&gt;&lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7923&#34;&gt;#7923&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>News: 0.78.0</title>
+      <link>https://gohugo.io/news/0.78.0-relnotes/</link>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/news/0.78.0-relnotes/</guid>
+      <description>
+        
+        
+        &lt;pre&gt;&lt;code&gt;This release finally brings full [Hugo Modules](https://gohugo.io/hugo-modules/) support to [js.Build](https://gohugo.io/hugo-pipes/js/), curtsy of he new plugin API in the really, really fast [ESBuild](https://github.com/evanw/esbuild) by [@evanw](https://github.com/evanw).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Some notes on the improvements in this release:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Now &lt;code&gt;js.Build&lt;/code&gt; fully supports the virtual union file system in &lt;a href=&#34;https://gohugo.io/hugo-modules/&#34;&gt;Hugo Modules&lt;/a&gt;. Any import inside your JavaScript components will resolve starting from the top component mount inside &lt;code&gt;/assets&lt;/code&gt; with a fallback to the traditional &amp;ldquo;JS way&amp;rdquo; (&lt;code&gt;node_modules&lt;/code&gt; etc.)&lt;/li&gt;
+&lt;li&gt;You can now pass configuration data from the templates to your scripts via a new &lt;code&gt;params&lt;/code&gt; option.&lt;/li&gt;
+&lt;li&gt;Hugo now writes a &lt;code&gt;jsconfig.js&lt;/code&gt; file inside &lt;code&gt;/assets&lt;/code&gt; (you can turn it off) with import mappings to help editors such as VS Code with intellisense/navigation, which is especially useful when there is no common root and the source lives inside some temporary directory.&lt;/li&gt;
+&lt;li&gt;We have also improved the build errors you get from &lt;code&gt;js.Build&lt;/code&gt;. In server mode you will get a preview of the failing lines and in the console you will get a link to the location.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Read more about this in &lt;a href=&#34;https://gohugo.io/hugo-pipes/js/&#34;&gt;the documentation&lt;/a&gt;, but a short usage example would look like:&lt;/p&gt;
+&lt;p&gt;In the template:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go-html-template&#34; data-lang=&#34;go-html-template&#34;&gt;&lt;span class=&#34;cp&#34;&gt;{{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;$js&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;resources&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;.Get&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;js/main.js&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;js&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;.Build&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;dict&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;params&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;dict&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;api&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;https://example.org/api&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;}}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And then in a JavaScript component:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;kr&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;params&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;@params&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;// Wil resolve to one of `hello.{js,ts,tsx,jsx}` inside `assets/my/module`.
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kr&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;hello&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;my/module/hello&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;api&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;params&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;api&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+&lt;span class=&#34;nx&#34;&gt;hello&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;changes&#34;&gt;Changes &lt;a class=&#34;header-link&#34; href=&#34;#changes&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Add avoidTDZ option &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/3b2fe3cd33b74166c3debec9826826f2b5a54fd9&#34;&gt;3b2fe3cd&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7865&#34;&gt;#7865&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Make js.Build fully support modules &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/85e4dd7370eae97ae367e596aa6a10ba42fd4b7c&#34;&gt;85e4dd73&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7816&#34;&gt;#7816&lt;/a&gt;&lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7777&#34;&gt;#7777&lt;/a&gt;&lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7916&#34;&gt;#7916&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Generate tsconfig files &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/3089fc0ba171be14670b19439bc2eab6b077b6c3&#34;&gt;3089fc0b&lt;/a&gt; &lt;a href=&#34;https://github.com/richtera&#34;&gt;@richtera&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7777&#34;&gt;#7777&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>News: Hugo 0.77.0: Hugo Modules Improvements and More </title>
       <link>https://gohugo.io/news/0.77.0-relnotes/</link>
       <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
       
@@ -24,11 +85,13 @@
       <description>
         
         
-        &lt;pre&gt;&lt;code&gt;Hugo `0.77.0` is a small, but useful release. Some notable updates are:
-&lt;/code&gt;&lt;/pre&gt;
+        
+        <![CDATA[<img src="https://gohugo.io/news/0.77.0-relnotes/featured_hu95e3f73231f4ff78ed176e490b00b665_130926_640x0_resize_catmullrom_2.png" width="640" height="320"/>]]>
+        
+        &lt;p&gt;Hugo &lt;code&gt;0.77.0&lt;/code&gt; is a small, but useful release. Some notable updates are:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;time.AsTime&lt;/strong&gt; accepts an optional location as second parameter, allowing timezone aware printing of dates.&lt;/li&gt;
-&lt;li&gt;You can now build with &lt;code&gt;hugo install -tags nodeploy&lt;/code&gt; if you don&amp;rsquo;t need the &lt;strong&gt;&lt;code&gt;hugo deploy&lt;/code&gt;&lt;/strong&gt; feature.&lt;/li&gt;
+&lt;li&gt;You can now build with &lt;code&gt;go install -tags nodeploy&lt;/code&gt; if you don&amp;rsquo;t need the &lt;strong&gt;&lt;code&gt;hugo deploy&lt;/code&gt;&lt;/strong&gt; feature.&lt;/li&gt;
 &lt;li&gt;Remote &lt;strong&gt;&lt;code&gt;getJSON&lt;/code&gt;&lt;/strong&gt; errors can now be ignored by adding &lt;code&gt;ignoreErrors = [&amp;quot;error-remote-getjson&amp;quot;]&lt;/code&gt; to your site config.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;There are also several useful &lt;strong&gt;&lt;a href=&#34;https://gohugo.io/hugo-modules/&#34;&gt;Hugo Modules&lt;/a&gt;&lt;/strong&gt; enhancements:&lt;/p&gt;
@@ -36,8 +99,8 @@
 &lt;li&gt;We have added &lt;code&gt;Replacements&lt;/code&gt; to the &lt;a href=&#34;https://gohugo.io/hugo-modules/configuration/#module-config-top-level&#34;&gt;Module Configuration&lt;/a&gt;. This should enable a much simpler developer workflow, simpler to set up preview sites for your remote theme etc, as you now can do &lt;code&gt;env HUGO_MODULE_REPLACEMENTS=&amp;quot;github.com/bep/myprettytheme -&amp;gt; ../..&amp;quot; hugo&lt;/code&gt; and similar.&lt;/li&gt;
 &lt;li&gt;The module &lt;code&gt;Path&lt;/code&gt; for local modules can now be absolute for imports defined in the project.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;This release represents &lt;strong&gt;38 contributions by 11 contributors&lt;/strong&gt; to the main Hugo code base.&lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; leads the Hugo development with a significant amount of contributions, but also a big shoutout to &lt;a href=&#34;https://github.com/moorereason&#34;&gt;@moorereason&lt;/a&gt;, and &lt;a href=&#34;https://github.com/anthonyfok&#34;&gt;@anthonyfok&lt;/a&gt; for their ongoing contributions.
-And a big thanks to &lt;a href=&#34;https://github.com/digitalcraftsman&#34;&gt;@digitalcraftsman&lt;/a&gt; for his relentless work on keeping the themes site in pristine condition and to &lt;a href=&#34;https://github.com/davidsneighbour&#34;&gt;@davidsneighbour&lt;/a&gt;, &lt;a href=&#34;https://github.com/coliff&#34;&gt;@coliff&lt;/a&gt; and &lt;a href=&#34;https://github.com/kaushalmodi&#34;&gt;@kaushalmodi&lt;/a&gt; for all the great work on the documentation site.&lt;/p&gt;
+&lt;p&gt;This release represents &lt;strong&gt;38 contributions by 11 contributors&lt;/strong&gt; to the main Hugo code base. &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; leads the Hugo development with a significant amount of contributions, but also a big shoutout to &lt;a href=&#34;https://github.com/moorereason&#34;&gt;@moorereason&lt;/a&gt;, and &lt;a href=&#34;https://github.com/anthonyfok&#34;&gt;@anthonyfok&lt;/a&gt; for their ongoing contributions.&lt;/p&gt;
+&lt;p&gt;And a big thanks to &lt;a href=&#34;https://github.com/digitalcraftsman&#34;&gt;@digitalcraftsman&lt;/a&gt; for his relentless work on keeping the themes site in pristine condition and to &lt;a href=&#34;https://github.com/davidsneighbour&#34;&gt;@davidsneighbour&lt;/a&gt;, &lt;a href=&#34;https://github.com/coliff&#34;&gt;@coliff&lt;/a&gt; and &lt;a href=&#34;https://github.com/kaushalmodi&#34;&gt;@kaushalmodi&lt;/a&gt; for all the great work on the documentation site.&lt;/p&gt;
 &lt;p&gt;Many have also been busy writing and fixing the documentation in &lt;a href=&#34;https://github.com/gohugoio/hugoDocs&#34;&gt;hugoDocs&lt;/a&gt;,
 which has received &lt;strong&gt;3 contributions by 3 contributors&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Hugo now has:&lt;/p&gt;
@@ -2234,61 +2297,6 @@ which has received &lt;strong&gt;34 contributions by 20 contributors&lt;/strong&
 &lt;li&gt;Fix cache key transformed resources &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/6dec671fb930029e18ba9aa5135b3a27adcddb21&#34;&gt;6dec671f&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/6348&#34;&gt;#6348&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Fix cache keys for bundled resoures in transform.Unmarshal &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/c0d7573677e9726c14749ccd432dccb75e0d194d&#34;&gt;c0d75736&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/6327&#34;&gt;#6327&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Fix concat with fingerprint regression &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/3be2c25351b421a26ee1ff2a38cbab00280c0583&#34;&gt;3be2c253&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/6309&#34;&gt;#6309&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Showcase: Hapticmedia Blog</title>
-      <link>https://gohugo.io/showcase/hapticmedia/</link>
-      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://gohugo.io/showcase/hapticmedia/</guid>
-      <description>
-        
-        
-        
-        <![CDATA[<img src="https://gohugo.io/showcase/hapticmedia/featured_hu4e9c0830eabb70b93572090b79da0c5d_543922_640x0_resize_catmullrom_2.png" width="640" height="320"/>]]>
-        
-        &lt;p&gt;Our goal was to create a simple, effective and multilingual blog on &lt;a href=&#34;https://hapticmedia.fr/blog/en/3d-technology/&#34;&gt;3D technology&lt;/a&gt; that could be managed by a non-technical profile.&lt;/p&gt;
-&lt;h2 id=&#34;why-hugo&#34;&gt;Why Hugo? &lt;a class=&#34;header-link&#34; href=&#34;#why-hugo&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Hugo addresses all these needs, coupled with &lt;a href=&#34;https://forestry.io/&#34;&gt;Forestry.io&lt;/a&gt; for its administration via a &amp;ldquo;turnkey&amp;rdquo; interface. We have attached particular importance to SEO, and therefore to the creation of an advanced taxonomy system. Thus, each author and tag has a dedicated page, listing the related posts.&lt;/p&gt;
-&lt;h2 id=&#34;what-we-liked&#34;&gt;What we liked &lt;a class=&#34;header-link&#34; href=&#34;#what-we-liked&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;The &lt;strong&gt;multilingual&lt;/strong&gt; content support, especially simple to setup.&lt;/li&gt;
-&lt;li&gt;The &lt;strong&gt;multiple environments&lt;/strong&gt; support (develop, staging, test, production, &amp;hellip;).&lt;/li&gt;
-&lt;li&gt;Although a hard start with the Go language, the power of the &lt;strong&gt;Hugo&amp;rsquo;s templating&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;The &lt;strong&gt;partial layouts&lt;/strong&gt;, including the &lt;code&gt;internals&lt;/code&gt; (e.g. social metas).&lt;/li&gt;
-&lt;li&gt;The &lt;strong&gt;build time&lt;/strong&gt;, unbeatable ⚡️⚡️⚡️.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;tools--workflow&#34;&gt;Tools &amp;amp; workflow &lt;a class=&#34;header-link&#34; href=&#34;#tools--workflow&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;We used the same design as &lt;strong&gt;&lt;a href=&#34;https://hapticmedia.fr/en/&#34;&gt;our website&lt;/a&gt;&lt;/strong&gt;, recreated as a Hugo HTML template.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt;&lt;/strong&gt; for the static website generator.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://circleci.com&#34;&gt;CircleCI&lt;/a&gt;&lt;/strong&gt; for continuous integration &amp;amp; deployment.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://aws.amazon.com/&#34;&gt;AWS&lt;/a&gt;&lt;/strong&gt; for web hosting.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://forestry.io&#34;&gt;Forestry.io&lt;/a&gt;&lt;/strong&gt; for the content management.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;All of these tools allow our editor to manage the blog&amp;rsquo;s content without having to worry about its technical aspect, which is managed by the developers.&lt;/strong&gt;&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>News: Hugo 0.58.3: A couple of Bug Fixes</title>
-      <link>https://gohugo.io/news/0.58.3-relnotes/</link>
-      <pubDate>Thu, 19 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://gohugo.io/news/0.58.3-relnotes/</guid>
-      <description>
-        
-        
-        &lt;p&gt;This is a bug-fix release with a couple of important fixes.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Add some more resource transform tests &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/c262a95a5c5a9304c82b9d9e39701bc471916851&#34;&gt;c262a95a&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/6348&#34;&gt;#6348&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Fix cache key transformed resources &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/6dec671fb930029e18ba9aa5135b3a27adcddb21&#34;&gt;6dec671f&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/6348&#34;&gt;#6348&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;deploy: Do not compile in Azure on Solaris &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/c0d7188ec85e7a4b61489e38896108d877f6d902&#34;&gt;c0d7188e&lt;/a&gt; &lt;a href=&#34;https://github.com/fazalmajid&#34;&gt;@fazalmajid&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/6324&#34;&gt;#6324&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>

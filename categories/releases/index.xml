@@ -6,14 +6,36 @@
     <description>Recent content in Releases on Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://gohugo.io/categories/releases/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://gohugo.io/categories/releases/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>0.77.0</title>
+      <title>Hugo 0.78.1: A couple of Bug Fixes</title>
+      <link>https://gohugo.io/news/0.78.1-relnotes/</link>
+      <pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/news/0.78.1-relnotes/</guid>
+      <description>This is a bug-fix release with a couple of important fixes.
+ Disable NPM test on Travis on Windows 3437174c @bep travis: Install nodejs on Windows f66302ca @bep js: Remove external source map option 944150ba @bep #7932 js: Misc fixes bf2837a3 @bep #7924#7923  </description>
+    </item>
+    
+    <item>
+      <title>0.78.0</title>
+      <link>https://gohugo.io/news/0.78.0-relnotes/</link>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/news/0.78.0-relnotes/</guid>
+      <description>This release finally brings full [Hugo Modules](https://gohugo.io/hugo-modules/) support to [js.Build](https://gohugo.io/hugo-pipes/js/), curtsy of he new plugin API in the really, really fast [ESBuild](https://github.com/evanw/esbuild) by [@evanw](https://github.com/evanw).  Some notes on the improvements in this release:
+ Now js.Build fully supports the virtual union file system in Hugo Modules. Any import inside your JavaScript components will resolve starting from the top component mount inside /assets with a fallback to the traditional &amp;ldquo;JS way&amp;rdquo; (node_modules etc.</description>
+    </item>
+    
+    <item>
+      <title>Hugo 0.77.0: Hugo Modules Improvements and More </title>
       <link>https://gohugo.io/news/0.77.0-relnotes/</link>
       <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/news/0.77.0-relnotes/</guid>
-      <description>Hugo `0.77.0` is a small, but useful release. Some notable updates are:   time.AsTime accepts an optional location as second parameter, allowing timezone aware printing of dates. You can now build with hugo install -tags nodeploy if you don&amp;rsquo;t need the hugo deploy feature. Remote getJSON errors can now be ignored by adding ignoreErrors = [&amp;quot;error-remote-getjson&amp;quot;] to your site config.  There are also several useful Hugo Modules enhancements:</description>
+      <description>Hugo 0.77.0 is a small, but useful release. Some notable updates are:
+ time.AsTime accepts an optional location as second parameter, allowing timezone aware printing of dates. You can now build with go install -tags nodeploy if you don&amp;rsquo;t need the hugo deploy feature. Remote getJSON errors can now be ignored by adding ignoreErrors = [&amp;quot;error-remote-getjson&amp;quot;] to your site config.  There are also several useful Hugo Modules enhancements:
+ We have added Replacements to the Module Configuration.</description>
     </item>
     
     <item>

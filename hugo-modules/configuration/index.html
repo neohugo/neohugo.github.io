@@ -13,7 +13,7 @@
   <title>Configure Modules | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.77.0-DEV" />
+  <meta name="generator" content="Hugo 0.79.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -61,12 +61,12 @@
 <meta property="og:url" content="https://gohugo.io/hugo-modules/configuration/" />
 <meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta property="article:published_time" content="2019-07-24T00:00:00+00:00" />
-<meta property="article:modified_time" content="2019-07-24T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-11-07T22:46:18+07:00" />
 <meta itemprop="name" content="Configure Modules">
 <meta itemprop="description" content="This page describes the configuration options for a module.">
 <meta itemprop="datePublished" content="2019-07-24T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2019-07-24T00:00:00+00:00" />
-<meta itemprop="wordCount" content="725">
+<meta itemprop="dateModified" content="2020-11-07T22:46:18+07:00" />
+<meta itemprop="wordCount" content="795">
 <meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 
 
@@ -285,6 +285,7 @@
 </span><span class="w">  </span><span class="nt">noVendor</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&#34;</span><span class="w">
 </span><span class="w">  </span><span class="nt">private</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;*.*&#39;</span><span class="w">
 </span><span class="w">  </span><span class="nt">proxy</span><span class="p">:</span><span class="w"> </span><span class="l">direct</span><span class="w">
+</span><span class="w">  </span><span class="nt">replacements</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&#34;</span><span class="w">
 </span></code></pre></div>
 			</div>
 			
@@ -299,6 +300,7 @@
   <span class="nx">noVendor</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
   <span class="nx">private</span> <span class="p">=</span> <span class="s2">&#34;*.*&#34;</span>
   <span class="nx">proxy</span> <span class="p">=</span> <span class="s2">&#34;direct&#34;</span>
+  <span class="nx">replacements</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
 </code></pre></div>
 			</div>
 			
@@ -313,7 +315,8 @@
       <span class="nt">&#34;noProxy&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span><span class="p">,</span>
       <span class="nt">&#34;noVendor&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
       <span class="nt">&#34;private&#34;</span><span class="p">:</span> <span class="s2">&#34;*.*&#34;</span><span class="p">,</span>
-      <span class="nt">&#34;proxy&#34;</span><span class="p">:</span> <span class="s2">&#34;direct&#34;</span>
+      <span class="nt">&#34;proxy&#34;</span><span class="p">:</span> <span class="s2">&#34;direct&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;replacements&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span>
    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -342,6 +345,13 @@
 <dd>Comma separated glob list matching paths that should not use the proxy configured above.</dd>
 <dt>private</dt>
 <dd>Comma separated glob list matching paths that should be treated as private.</dd>
+<dt>replacements 
+
+
+<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
+    <a href="https://gohugo.io/news/0.77.0-relnotes/" target="_blank">New in v0.77.0</a>
+</button></dt>
+<dd>A comma separated (or a slice) list of module path to directory replacement mapping, e.g. <code>&quot;github.com/bep/myprettytheme -&gt; ../..,github.com/bep/shortcodes -&gt; /some/path</code>. This is mostly useful for temporary locally development of a module, and then it makes sense to set it as an OS environment variable, e.g: <code>env HUGO_MODULE_REPLACEMENTS=&quot;github.com/bep/myprettytheme -&gt; ../..&quot;</code>. Any relative path is relate to <a href="https://gohugo.io/getting-started/configuration/#all-configuration-settings">themesDir</a>, and absolute paths are allowed.</dd>
 </dl>
 <p>Note that the above terms maps directly to their counterparts in Go Modules. Some of these setting may be natural to set as OS environment variables. To set the proxy server to use, as an example:</p>
 <pre><code>env HUGO_MODULE_PROXY=https://proxy.example.org hugo
@@ -1710,6 +1720,16 @@
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/urldecode/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              urldecode
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/urlencode/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              urlencode
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/urlize/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               urlize
             </a>
@@ -2040,7 +2060,7 @@
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “Configure Modules”
-  </a> was last updated: July 24, 2019
+  </a> was last updated: November 7, 2020: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/e974a6656be33395073bf64cf0b30a2b99ece909">ci: fix benchmark and releaser (e974a66)</a>
 </h6>
 
     <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/hugo-modules/configuration.md" class="
