@@ -10,7 +10,7 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Hugo 0.32: Page Bundles and Image Processing! | Hugo</title>
+  <title>Hugo 0.78.2: A couple of Bug Fixes | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
   <meta name="generator" content="Hugo 0.79.0-DEV" />
@@ -55,28 +55,28 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0594cb">
 <meta name="theme-color" content="#ffffff">
-<meta property="og:title" content="Hugo 0.32: Page Bundles and Image Processing!" />
-<meta property="og:description" content="Images and other resources with page-relative links, resize, scale and crop images, and much more." />
+<meta property="og:title" content="Hugo 0.78.2: A couple of Bug Fixes" />
+<meta property="og:description" content="This version fixes a couple of bugs introduced in 0.78.0." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gohugo.io/news/0.32-relnotes/" />
-<meta property="og:image" content="https://gohugo.io/images/blog/hugo-32-poster.png" />
-<meta property="article:published_time" content="2017-12-31T00:00:00+00:00" />
+<meta property="og:url" content="https://gohugo.io/news/0.78.2-relnotes/" />
+<meta property="og:image" content="https://gohugo.io/images/blog/hugo-bug-poster.png" />
+<meta property="article:published_time" content="2020-11-13T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-11-13T22:25:28+07:00" />
-<meta itemprop="name" content="Hugo 0.32: Page Bundles and Image Processing!">
-<meta itemprop="description" content="Images and other resources with page-relative links, resize, scale and crop images, and much more.">
-<meta itemprop="datePublished" content="2017-12-31T00:00:00+00:00" />
+<meta itemprop="name" content="Hugo 0.78.2: A couple of Bug Fixes">
+<meta itemprop="description" content="This version fixes a couple of bugs introduced in 0.78.0.">
+<meta itemprop="datePublished" content="2020-11-13T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2020-11-13T22:25:28+07:00" />
-<meta itemprop="wordCount" content="854">
-<meta itemprop="image" content="https://gohugo.io/images/blog/hugo-32-poster.png">
+<meta itemprop="wordCount" content="98">
+<meta itemprop="image" content="https://gohugo.io/images/blog/hugo-bug-poster.png">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://gohugo.io/images/blog/hugo-32-poster.png"/>
+<meta name="twitter:image" content="https://gohugo.io/images/blog/hugo-bug-poster.png"/>
 
-<meta name="twitter:title" content="Hugo 0.32: Page Bundles and Image Processing!"/>
-<meta name="twitter:description" content="Images and other resources with page-relative links, resize, scale and crop images, and much more."/>
+<meta name="twitter:title" content="Hugo 0.78.2: A couple of Bug Fixes"/>
+<meta name="twitter:description" content="This version fixes a couple of bugs introduced in 0.78.0."/>
 <meta name="twitter:site" content="@GoHugoIO"/>
 
 
@@ -212,8 +212,8 @@
       
 
       <h1 class="lh-title fw9 mb7 mv0 pt3">
-        <a href="/news/0.32-relnotes/" class="link primary-color dim">
-          Hugo 0.32: Page Bundles and Image Processing!
+        <a href="/news/0.78.2-relnotes/" class="link primary-color dim">
+          Hugo 0.78.2: A couple of Bug Fixes
         </a>
       </h1>
     </header>
@@ -222,11 +222,11 @@
       <aside class="mid-gray fn w-100 w-25-l">
         
           <h2 class="f3 lh-title">
-            Images and other resources with page-relative links, resize, scale and crop images, and much more.
+            This version fixes a couple of bugs introduced in 0.78.0.
           </h2>
         
-        <time class="f6 mt2 db ttu tracked" datetime="2017-12-31T00:00:00Z">
-          December 31, 2017
+        <time class="f6 mt2 db ttu tracked" datetime="2020-11-13T00:00:00Z">
+          November 13, 2020
         </time>
         
         <p>
@@ -239,17 +239,9 @@
 
 	<div date-pref>
 		
-			<a href="https://gohugo.io/news/0.32.1-relnotes/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Hugo 0.32.1: Two bugfixes ">
-				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
-    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
-</svg>
-
-			</a>
-		
 
 		
-			<a href="https://gohugo.io/news/0.31.1-relnotes/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Hugo 0.31.1: One Bugfix!">
+			<a href="https://gohugo.io/news/0.78.1-relnotes/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Hugo 0.78.1: A couple of Bug Fixes">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -268,86 +260,18 @@
           
           
           
-        <pre><code>Hugo `0.32` features **Page Bundles and Image Processing** by [@bep](https://github.com/bep), which is very cool and useful on so many levels. Read about it in more detail in the [Hugo documentation](https://gohugo.io/about/new-in-032/), but some of the highlights include:
-</code></pre>
+        <p>This is a bug-fix release with a couple of important fixes.</p>
 <ul>
-<li>Automatic bundling of a content page with its resources. Resources can be anything: Images, <code>JSON</code> files &hellip; and also other content pages.</li>
-<li>A <code>Resource</code> will have its <code>RelPermalink</code> and <code>Permalink</code> relative to the &ldquo;owning page&rdquo;. This makes the complete article with both text and images portable (just send a ZIP file with a folder to your editor), and it can be previewed directly on GitHub.</li>
-<li>Powerful and simple to use image processing with the new <code>.Resize</code>, <code>.Fill</code>, and <code>.Fit</code> methods on the new <code>Image</code> resource.</li>
-<li>Full support for symbolic links inside <code>/content</code>, both for regular files and directories.</li>
-</ul>
-<p>The built-in benchmarks in Hugo show that this is also the <a href="https://gist.github.com/bep/2a9bbd221de2da5d39c8b32085c658f7">fastest and most memory effective</a> Hugo version to date. But note that the build time total reported in the console is now adjusted to be the <em>real total</em>, including the copy of static files. So, if it reports more milliseconds, it is still most likely faster &hellip;</p>
-<p>This release represents <strong>30 contributions by 7 contributors</strong> to the main Hugo code base.</p>
-<p><a href="https://github.com/bep">@bep</a> leads the Hugo development with a significant amount of contributions, but also a big shoutout to <a href="https://github.com/betaveros">@betaveros</a>, <a href="https://github.com/chaseadamsio">@chaseadamsio</a>, and <a href="https://github.com/kropp">@kropp</a>. And as always big thanks to <a href="https://github.com/digitalcraftsman">@digitalcraftsman</a> for his relentless work on keeping the documentation and the themes site in pristine condition.</p>
-<p>Many have also been busy writing and fixing the documentation in <a href="https://github.com/gohugoio/hugoDocs">hugoDocs</a>,
-which has received <strong>17 contributions by 7 contributors</strong>. A special thanks to <a href="https://github.com/bep">@bep</a>, <a href="https://github.com/felicianotech">@felicianotech</a>, <a href="https://github.com/maiki">@maiki</a>, and <a href="https://github.com/carlchengli">@carlchengli</a> for their work on the documentation site.</p>
-<p>Hugo now has:</p>
-<ul>
-<li>22061+ <a href="https://github.com/gohugoio/hugo/stargazers">stars</a></li>
-<li>454+ <a href="https://github.com/gohugoio/hugo/graphs/contributors">contributors</a></li>
-<li>193+ <a href="http://themes.gohugo.io/">themes</a></li>
-</ul>
-<p>Today is <strong>New Year&rsquo;s Eve.</strong> It is the last day of 2017, a year that have seen a <strong>string of pearls of Hugo releases</strong>, making Hugo <em>the</em> top choice for website development:</p>
-<ul>
-<li>0.32, December 2017: <strong>Page Bundles and Image Processing</strong> edition.</li>
-<li>0.31, November 2017: The Language <strong>Multihost Edition!</strong> with one <code>baseURL</code> per language.</li>
-<li>0.30, October 2017: The Race Car Edition with the <strong>Fast Render Mode</strong>.</li>
-<li>0.29, September 2017: Added <strong>Template Metrics</strong>.</li>
-<li>0.28, September 2017:  <strong>Blistering fast and native syntax highlighting</strong> from <a href="https://github.com/alecthomas/chroma">Chroma</a>.</li>
-<li>0.27, September 2017: Fast and flexible <strong>Related Content.</strong></li>
-<li>0.26, August 2017: The <strong>Language Style Edition</strong>  with AP Style or Chicago Style Title Case and « French Guillemets ».</li>
-<li>0.25, July 2017: The <strong>Kinder Surprise</strong> edition added, among other cool things, <code>hugo server --navigateToChanged</code> which navigates to the content page you start editing.</li>
-<li>0.24, June 2017: Was <strong>The Revival of the Archetypes!</strong> Now archetype files, i.e. the content file templates, can include template syntax with all of Hugo&rsquo;s functions and variables.</li>
-<li>0.23, June 2017: Hugo moved to it&rsquo;s own GitHub organization, <strong>gohugoio</strong>.</li>
-<li>0.22, June 2017: Added <strong>nested sections</strong>, a long sought after feature.</li>
-<li>0.21, May 2017: Full support for shortcodes per output format (think <strong>AMP</strong>).</li>
-<li>0.20, April 2017: Was all about <strong>Custom Output Formats</strong>.</li>
-<li>0.19, February 2017: Native Emacs Org-mode content support and lots of internal upgrades.</li>
-</ul>
-<h2 id="notes">Notes <a class="header-link" href="#notes"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<ul>
-<li>The build total in the console is now the &hellip; total (i.e. it now includes both the copy of the static files and the Hugo build). So if your Hugo site seems to build slightly slower, it is in reality probably slightly faster than before this release.</li>
-<li>Images and other static resources in folders with &ldquo;_index.md&rdquo; will have its <code>RelPermalink</code> relative to its page.</li>
-<li>Images and other static resources in or below &ldquo;index.md&rdquo; folders will have its <code>RelPermalink</code> relative to its page (respecting permalink settings etc.)</li>
-<li>Content pages in or below &ldquo;index.md&rdquo; will not get their own <code>URL</code>, but will be part of the <code>.Resources</code> collection of its page.</li>
-<li><code>.Site.Files</code> is deprecated.</li>
-<li>Hugo no longer minfies CSS files inside <code>/content</code>. This was an undocumented &ldquo;proof of concept feature&rdquo;. We may revisit the &ldquo;assets handling&rdquo; in a future release.</li>
-<li><code>Page.GetParam</code>does not lowercase your result anymore. If you really want to lowercase your params, do it with <code>.GetParam &quot;myparam&quot; | lower</code> or similar.</li>
-</ul>
-<p>Previously deprecated that will now <code>ERROR</code>:</p>
-<ul>
-<li><code>disable404</code>: Use <code>disableKinds=[&quot;404&quot;]</code></li>
-<li><code>disableRSS</code>:  Use <code>disableKinds=[&quot;RSS&quot;]</code></li>
-<li><code>disableSitemap</code>:  Use <code>disableKinds=[&quot;sitemap&quot;]</code></li>
-<li><code>disableRobotsTXT</code>: Use <code>disableKinds=[&quot;robotsTXT&quot;]</code></li>
-</ul>
-<h2 id="enhancements">Enhancements <a class="header-link" href="#enhancements"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<ul>
-<li>Add <code>.Title</code> and <code>.Page</code> to <code>MenuEntry</code> <a href="https://github.com/gohugoio/hugo/commit/9df3736fec164c51d819797416dc263f2869be77">9df3736f</a> <a href="https://github.com/rmetzler">@rmetzler</a> <a href="https://github.com/gohugoio/hugo/issues/2784">#2784</a></li>
-<li>Add <code>Pandoc</code> support <a href="https://github.com/gohugoio/hugo/commit/e69da7a4cb725987f153707bf2fc59c135007e2a">e69da7a4</a> <a href="https://github.com/betaveros">@betaveros</a> <a href="https://github.com/gohugoio/hugo/issues/234">#234</a></li>
-<li>Implement Page bundling and image handling <a href="https://github.com/gohugoio/hugo/commit/3cdf19e9b7e46c57a9bb43ff02199177feb55768">3cdf19e9</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/3651">#3651</a><a href="https://github.com/gohugoio/hugo/issues/3158">#3158</a><a href="https://github.com/gohugoio/hugo/issues/1014">#1014</a><a href="https://github.com/gohugoio/hugo/issues/2021">#2021</a><a href="https://github.com/gohugoio/hugo/issues/1240">#1240</a><a href="https://github.com/gohugoio/hugo/issues/3757">#3757</a></li>
-<li>Make <code>chomp</code> return the type it receives <a href="https://github.com/gohugoio/hugo/commit/22cd89adc4792a3b55389d38acd4acfae3786775">22cd89ad</a> <a href="https://github.com/kropp">@kropp</a> <a href="https://github.com/gohugoio/hugo/issues/2187">#2187</a></li>
-<li>Reuse the <code>BlackFriday</code> config instance when possible <a href="https://github.com/gohugoio/hugo/commit/db4b7a5c6742c75f9cd9627d3b054d3a72802ec8">db4b7a5c</a> <a href="https://github.com/bep">@bep</a></li>
-<li>Remove the goroutines from the shortcode lexer <a href="https://github.com/gohugoio/hugo/commit/243694102a60da2fb1050020f68384539f9f9ef5">24369410</a> <a href="https://github.com/bep">@bep</a></li>
-<li>Improve site benchmarks <a href="https://github.com/gohugoio/hugo/commit/051fa343d06d6c070df742f7cbd125432fcab665">051fa343</a> <a href="https://github.com/bep">@bep</a></li>
-<li>Update <code>Chroma</code> to <code>v0.2.0</code> <a href="https://github.com/gohugoio/hugo/commit/7989210120dbde78da3741e2ef01b13f4aa78692">79892101</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/4087">#4087</a></li>
-<li>Update <code>goorgeous</code> to <code>v1.1.0</code> <a href="https://github.com/gohugoio/hugo/commit/7f2ae3ef39f27a9bd26ddb9258b073a840faf491">7f2ae3ef</a> <a href="https://github.com/chaseadamsio">@chaseadamsio</a></li>
-<li>Add test for homepage content for all rendering engines <a href="https://github.com/gohugoio/hugo/commit/407c24020ef2db90cf33fd07e7522b2257013722">407c2402</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/4166">#4166</a></li>
-<li>Add output formats definition to benchmarks <a href="https://github.com/gohugoio/hugo/commit/a2d81ce983d45b5742c93bd472503c88286f099a">a2d81ce9</a> <a href="https://github.com/bep">@bep</a></li>
-</ul>
-<h2 id="fixes">Fixes <a class="header-link" href="#fixes"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<h3 id="templates">Templates <a class="header-link" href="#templates"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<ul>
-<li>Do not unescape input to <code>highlight</code> <a href="https://github.com/gohugoio/hugo/commit/c067f34558b82455b63b9ce8f5983b4b4849c7cf">c067f345</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/4179">#4179</a></li>
-<li>Properly close image file in <code>imageConfig</code> <a href="https://github.com/gohugoio/hugo/commit/6d79beb5f67dbb54d7714c3195addf9d8e3924e8">6d79beb5</a> <a href="https://github.com/bep">@bep</a></li>
-<li>Fix  <code>opengraph</code> video range template <a href="https://github.com/gohugoio/hugo/commit/23f69efb3914946b39ce673fcc0f2e3a9ed9d878">23f69efb</a> <a href="https://github.com/drlogout">@drlogout</a> <a href="https://github.com/gohugoio/hugo/issues/4136">#4136</a></li>
-<li>Fix <code>humanize</code> for multi-byte runes <a href="https://github.com/gohugoio/hugo/commit/e7652180a13ce149041c48a1c2754c471df569c8">e7652180</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/4133">#4133</a></li>
-</ul>
-<h3 id="other">Other <a class="header-link" href="#other"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<ul>
-<li>Fix broken live reload without a server port. <a href="https://github.com/gohugoio/hugo/commit/25114986086e5877a0b4108d8cf5e4e95f377241">25114986</a> <a href="https://github.com/sainaen">@sainaen</a> <a href="https://github.com/gohugoio/hugo/issues/4141">#4141</a></li>
-<li>Make sure all language homes are always re-rendered in fast render mode <a href="https://github.com/gohugoio/hugo/commit/72903be587e9c4e3644f60b11e26238ec03da2db">72903be5</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/4125">#4125</a></li>
-<li>Do not <code>tolower</code> result from Page.GetParam <a href="https://github.com/gohugoio/hugo/commit/1c114d539b0755724443fe28c90b12fe2a19085a">1c114d53</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/4187">#4187</a></li>
+<li>js: Let ESBuild handle all imports from node_modules <a href="https://github.com/gohugoio/hugo/commit/78f227b664d86c30fbb25f7a953b7ef8f2dacf13">78f227b6</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/7948">#7948</a></li>
+<li>build(deps): bump github.com/evanw/esbuild from 0.8.5 to 0.8.6 <a href="https://github.com/gohugoio/hugo/commit/5e03f644a4507f51bdbcdb42b65ce4e99095374f">5e03f644</a> <a href="https://github.com/apps/dependabot">@dependabot[bot]</a></li>
+<li>build(deps): bump github.com/evanw/esbuild from 0.8.4 to 0.8.5 <a href="https://github.com/gohugoio/hugo/commit/a92ef20ff6e43ba05844539b60782e8190712cdc">a92ef20f</a> <a href="https://github.com/apps/dependabot">@dependabot[bot]</a></li>
+<li>build(deps): bump github.com/getkin/kin-openapi from 0.22.1 to 0.26.0 <a href="https://github.com/gohugoio/hugo/commit/0d54a844061e808dd5b4ff4874b2e4bd9df4d556">0d54a844</a> <a href="https://github.com/apps/dependabot">@dependabot[bot]</a></li>
+<li>Update GH docs to say &ldquo;main&rdquo; as default branch <a href="https://github.com/gohugoio/hugo/commit/943f3c932f5f67ab52bf8e0636e57751dc9b1891">943f3c93</a> <a href="https://github.com/maco">@maco</a></li>
+<li>Updated year in header <a href="https://github.com/gohugoio/hugo/commit/4f20bf29eb246a2e65508175fdd5f25b44e98370">4f20bf29</a> <a href="https://github.com/AdamKorcz">@AdamKorcz</a></li>
+<li>Added first fuzzer <a href="https://github.com/gohugoio/hugo/commit/4c613d5d5d60b80a262e968ae8a4525eba8619a2">4c613d5d</a> <a href="https://github.com/AdamKorcz">@AdamKorcz</a></li>
+<li>build(deps): bump github.com/frankban/quicktest from 1.11.1 to 1.11.2 <a href="https://github.com/gohugoio/hugo/commit/82a182e52c4165b4f51d0cc8ef0f21df5d628c69">82a182e5</a> <a href="https://github.com/apps/dependabot">@dependabot[bot]</a></li>
+<li>build(deps): bump golang.org/x/text from 0.3.3 to 0.3.4 <a href="https://github.com/gohugoio/hugo/commit/dfc662b2086430dde96c18ccb6b92bba4f1be428">dfc662b2</a> <a href="https://github.com/apps/dependabot">@dependabot[bot]</a></li>
+<li>build(deps): bump github.com/evanw/esbuild from 0.8.3 to 0.8.4 <a href="https://github.com/gohugoio/hugo/commit/2f0917cc014557e201a9348664736d608a7fa131">2f0917cc</a> <a href="https://github.com/apps/dependabot">@dependabot[bot]</a></li>
 </ul>
 
       </div>
@@ -356,7 +280,7 @@ which has received <strong>17 contributions by 7 contributors</strong>. A specia
 
       <div class="gray f6 mv6">
         Last Update: November 13, 2020 <br>
-        <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/news/0.32-relnotes/index.md" class="
+        <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/news/0.78.2-relnotes/index.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 ">Improve this page</a>
 
