@@ -209,7 +209,7 @@ Hugo v0.60.0 made a switch to Goldmark as the default library for Markdown which
       <description>You should define the available languages in a languages section in your site configuration.
  Also See Hugo Multilingual Part 1: Content translation
  Configure Languages  The following is an example of a site configuration for a multilingual Hugo project:
-config. yaml&amp;nbsp; toml&amp;nbsp; json&amp;nbsp;  DefaultContentLanguage:encopyright:Everything is minelanguages:ar:languagedirection:rtltitle:مدونتيweight:2en:params:linkedin:https://linkedin.com/whoevertitle:My blogweight:1fr:params:linkedin:https://linkedin.com/fr/whoevernavigation:help:Aidetitle:Mon blogueweight:2pt-pt:title:O meu blogweight:3params:navigation:help:Help   DefaultContentLanguage = &amp;#34;en&amp;#34; copyright = &amp;#34;Everything is mine&amp;#34; [languages] [languages.ar] languagedirection = &amp;#34;rtl&amp;#34; title = &amp;#34;مدونتي&amp;#34; weight = 2 [languages.</description>
+config. yaml&amp;nbsp; toml&amp;nbsp; json&amp;nbsp;  copyright:Everything is minedefaultContentLanguage:enlanguages:ar:languagedirection:rtltitle:مدونتيweight:2en:params:linkedin:https://linkedin.com/whoevertitle:My blogweight:1fr:params:linkedin:https://linkedin.com/fr/whoevernavigation:help:Aidetitle:Mon blogueweight:2pt-pt:title:O meu blogweight:3params:navigation:help:Help   copyright = &amp;#34;Everything is mine&amp;#34; defaultContentLanguage = &amp;#34;en&amp;#34; [languages] [languages.ar] languagedirection = &amp;#34;rtl&amp;#34; title = &amp;#34;مدونتي&amp;#34; weight = 2 [languages.</description>
     </item>
     
     <item>

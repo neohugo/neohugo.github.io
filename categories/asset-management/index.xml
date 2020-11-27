@@ -130,7 +130,7 @@ The function takes three arguments, the resource object, the resource target pat
       <guid>https://gohugo.io/hugo-pipes/resource-from-string/</guid>
       <description>It is possible to create a resource directly from the template using resources.FromString which takes two arguments, the given string and the resource target path.
 The following example creates a resource file containing localized variables for every project&amp;rsquo;s languages.
-{{$string:=(printf&amp;#34;var rootURL: &amp;#39;%s&amp;#39;; var apiURL: &amp;#39;%s&amp;#39;;&amp;#34;(absURL&amp;#34;/&amp;#34;)(.Param&amp;#34;API_URL&amp;#34;))}} {{$targetPath:=&amp;#34;js/vars.js&amp;#34;}} {{$vars:=$string|resources.FromString$targetPath}} {{$global:=resources.Get&amp;#34;js/global.js&amp;#34;|resources.Minify}} &amp;lt;script type=&amp;#34;text/javascript&amp;#34; src=&amp;#34;{{$vars.Permalink}}&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script type=&amp;#34;text/javascript&amp;#34; src=&amp;#34;{{$global.Permalink}}&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; </description>
+{{$string:=(printf&amp;#34;var rootURL = &amp;#39;%s&amp;#39;; var apiURL = &amp;#39;%s&amp;#39;;&amp;#34;(absURL&amp;#34;/&amp;#34;)(.Param&amp;#34;API_URL&amp;#34;))}} {{$targetPath:=&amp;#34;js/vars.js&amp;#34;}} {{$vars:=$string|resources.FromString$targetPath}} {{$global:=resources.Get&amp;#34;js/global.js&amp;#34;|resources.Minify}} &amp;lt;script type=&amp;#34;text/javascript&amp;#34; src=&amp;#34;{{$vars.Permalink}}&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script type=&amp;#34;text/javascript&amp;#34; src=&amp;#34;{{$global.Permalink}}&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; </description>
     </item>
     
   </channel>

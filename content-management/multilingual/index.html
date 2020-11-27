@@ -13,7 +13,7 @@
   <title>Multilingual Mode | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.79.0-DEV" />
+  <meta name="generator" content="Hugo 0.80.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -61,11 +61,11 @@
 <meta property="og:url" content="https://gohugo.io/content-management/multilingual/" />
 <meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta property="article:published_time" content="2017-01-10T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-11-18T21:48:15+07:00" />
+<meta property="article:modified_time" content="2020-11-27T21:24:47+07:00" />
 <meta itemprop="name" content="Multilingual Mode">
 <meta itemprop="description" content="Hugo supports the creation of websites with multiple languages side by side.">
 <meta itemprop="datePublished" content="2017-01-10T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2020-11-18T21:48:15+07:00" />
+<meta itemprop="dateModified" content="2020-11-27T21:24:47+07:00" />
 <meta itemprop="wordCount" content="2310">
 <meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 
@@ -321,8 +321,8 @@
 	<div class="tab-content">
 		
 			<div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-				<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">DefaultContentLanguage</span><span class="p">:</span><span class="w"> </span><span class="l">en</span><span class="w">
-</span><span class="w"></span><span class="nt">copyright</span><span class="p">:</span><span class="w"> </span><span class="l">Everything is mine</span><span class="w">
+				<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">copyright</span><span class="p">:</span><span class="w"> </span><span class="l">Everything is mine</span><span class="w">
+</span><span class="w"></span><span class="nt">defaultContentLanguage</span><span class="p">:</span><span class="w"> </span><span class="l">en</span><span class="w">
 </span><span class="w"></span><span class="nt">languages</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">ar</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">languagedirection</span><span class="p">:</span><span class="w"> </span><span class="l">rtl</span><span class="w">
@@ -355,8 +355,8 @@
 			
 		
 			<div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-				<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">DefaultContentLanguage</span> <span class="p">=</span> <span class="s2">&#34;en&#34;</span>
-<span class="nx">copyright</span> <span class="p">=</span> <span class="s2">&#34;Everything is mine&#34;</span>
+				<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">copyright</span> <span class="p">=</span> <span class="s2">&#34;Everything is mine&#34;</span>
+<span class="nx">defaultContentLanguage</span> <span class="p">=</span> <span class="s2">&#34;en&#34;</span>
 
 <span class="p">[</span><span class="nx">languages</span><span class="p">]</span>
   <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">ar</span><span class="p">]</span>
@@ -392,8 +392,8 @@
 		
 			<div data-pane="json" class="code-copy-content nt3 tab-pane ">
 				<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;DefaultContentLanguage&#34;</span><span class="p">:</span> <span class="s2">&#34;en&#34;</span><span class="p">,</span>
    <span class="nt">&#34;copyright&#34;</span><span class="p">:</span> <span class="s2">&#34;Everything is mine&#34;</span><span class="p">,</span>
+   <span class="nt">&#34;defaultContentLanguage&#34;</span><span class="p">:</span> <span class="s2">&#34;en&#34;</span><span class="p">,</span>
    <span class="nt">&#34;languages&#34;</span><span class="p">:</span> <span class="p">{</span>
       <span class="nt">&#34;ar&#34;</span><span class="p">:</span> <span class="p">{</span>
          <span class="nt">&#34;languagedirection&#34;</span><span class="p">:</span> <span class="s2">&#34;rtl&#34;</span><span class="p">,</span>
@@ -447,7 +447,7 @@ and taxonomy pages will be rendered below <code>/</code> in English (your defaul
 <p><code>defaultContentLanguage</code> sets the project&rsquo;s default language. If not set, the default language will be <code>en</code>.</p>
 <p>If the default language needs to be rendered below its own language code (<code>/en</code>) like the others, set <code>defaultContentLanguageInSubdir: true</code>.</p>
 <p>Only the obvious non-global options can be overridden per language. Examples of global options are <code>baseURL</code>, <code>buildDrafts</code>, etc.</p>
-<p><strong>Please note:</strong> use lowercase language codes, even when using regional languages (ie. use pt-pt instead of pt-PT). Currently Hugo language internals lowercase language codes, which can cause conflicts with settings like <code>DefaultContentLanguage</code> which are not lowercased. Please track the evolution of this issue in <a href="https://github.com/gohugoio/hugo/issues/7344">Hugo repository issue tracker</a></p>
+<p><strong>Please note:</strong> use lowercase language codes, even when using regional languages (ie. use pt-pt instead of pt-PT). Currently Hugo language internals lowercase language codes, which can cause conflicts with settings like <code>defaultContentLanguage</code> which are not lowercased. Please track the evolution of this issue in <a href="https://github.com/gohugoio/hugo/issues/7344">Hugo repository issue tracker</a></p>
 <h3 id="disable-a-language">Disable a Language <a class="header-link" href="#disable-a-language"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>You can disable one or more languages. This can be useful when working on a new translation.</p>
 <div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">disableLanguages</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;fr&#34;</span><span class="p">,</span> <span class="s2">&#34;ja&#34;</span><span class="p">]</span>
@@ -2423,7 +2423,7 @@ i18n|MISSING_TRANSLATION|en|wordCount
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “Multilingual Mode”
-  </a> was last updated: November 18, 2020: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/c9a21cf67881c85a601ce1736f0d5265345bfea9">ci: add docker to build (#62) (c9a21cf)</a>
+  </a> was last updated: November 27, 2020: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/f381a1160d073484bafc6fc4cc7d756ce4ec3e9b">Merge pull request #69 from blackb1rd/hugo/v0.79.0 (f381a11)</a>
 </h6>
 
     <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/content-management/multilingual.md" class="

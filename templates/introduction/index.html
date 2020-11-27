@@ -13,7 +13,7 @@
   <title>Introduction to Hugo Templating | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.79.0-DEV" />
+  <meta name="generator" content="Hugo 0.80.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -61,11 +61,11 @@
 <meta property="og:url" content="https://gohugo.io/templates/introduction/" />
 <meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta property="article:published_time" content="2017-02-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-11-18T21:48:15+07:00" />
+<meta property="article:modified_time" content="2020-11-27T21:24:47+07:00" />
 <meta itemprop="name" content="Introduction to Hugo Templating">
 <meta itemprop="description" content="Hugo uses Go&#39;s `html/template` and `text/template` libraries as the basis for the templating.">
 <meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2020-11-18T21:48:15+07:00" />
+<meta itemprop="dateModified" content="2020-11-27T21:24:47+07:00" />
 <meta itemprop="wordCount" content="2432">
 <meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 
@@ -383,7 +383,7 @@ prints &ldquo;Var is Hugo Home&rdquo; on the home page, and &ldquo;Var is Hugo P
 all other pages:</p>
 <div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">$var</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&#34;Hugo Page&#34;</span><span class="w"> </span><span class="cp">}}</span>
 <span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="na">.IsHome</span><span class="w"> </span><span class="cp">}}</span>
-    <span class="cp">{{</span><span class="w"> </span><span class="nx">$var</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="s">&#34;Hugo Home&#34;</span><span class="w"> </span><span class="cp">}}</span>
+    <span class="cp">{{</span><span class="w"> </span><span class="nx">$var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Hugo Home&#34;</span><span class="w"> </span><span class="cp">}}</span>
 <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
 Var is <span class="cp">{{</span><span class="w"> </span><span class="nx">$var</span><span class="w"> </span><span class="cp">}}</span>
 </code></pre></div><h2 id="functions">Functions <a class="header-link" href="#functions"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
@@ -463,13 +463,13 @@ use <code>range</code>.</p>
 </code></pre></div><h4 id="example-3-declaring-variable-names-for-an-array-elements-index-_and_-value">Example 3: Declaring variable names for an array element&rsquo;s index <em>and</em> value <a class="header-link" href="#example-3-declaring-variable-names-for-an-array-elements-index-_and_-value"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
 <p>For an array or slice, the first declared variable will map to each
 element&rsquo;s index.</p>
-<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">$elem_index</span><span class="err">,</span><span class="w"> </span><span class="nx">$elem_val</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">$array</span><span class="w"> </span><span class="cp">}}</span>
+<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">$elem_index</span><span class="o">,</span><span class="w"> </span><span class="nx">$elem_val</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">$array</span><span class="w"> </span><span class="cp">}}</span>
    <span class="cp">{{</span><span class="w"> </span><span class="nx">$elem_index</span><span class="w"> </span><span class="cp">}}</span> -- <span class="cp">{{</span><span class="w"> </span><span class="nx">$elem_val</span><span class="w"> </span><span class="cp">}}</span>
 <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
 </code></pre></div><h4 id="example-4-declaring-variable-names-for-a-map-elements-key-_and_-value">Example 4: Declaring variable names for a map element&rsquo;s key <em>and</em> value <a class="header-link" href="#example-4-declaring-variable-names-for-a-map-elements-key-_and_-value"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
 <p>For a map, the first declared variable will map to each map element&rsquo;s
 key.</p>
-<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">$elem_key</span><span class="err">,</span><span class="w"> </span><span class="nx">$elem_val</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">$map</span><span class="w"> </span><span class="cp">}}</span>
+<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">$elem_key</span><span class="o">,</span><span class="w"> </span><span class="nx">$elem_val</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">$map</span><span class="w"> </span><span class="cp">}}</span>
    <span class="cp">{{</span><span class="w"> </span><span class="nx">$elem_key</span><span class="w"> </span><span class="cp">}}</span> -- <span class="cp">{{</span><span class="w"> </span><span class="nx">$elem_val</span><span class="w"> </span><span class="cp">}}</span>
 <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
 </code></pre></div><h4 id="example-5-conditional-on-empty-_map_-_array_-or-_slice_">Example 5: Conditional on empty <em>map</em>, <em>array</em>, or <em>slice</em>. <a class="header-link" href="#example-5-conditional-on-empty-_map_-_array_-or-_slice_"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
@@ -696,7 +696,7 @@ following:</p>
 <h3 id="go-templates-comments">Go Templates comments <a class="header-link" href="#go-templates-comments"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>Go Templates support <code>{{/*</code> and <code>*/}}</code> to open and close a comment block. Nothing within that block will be rendered.</p>
 <p>For example:</p>
-<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">Bonsoir, <span class="cp">{{</span><span class="c">/* {{ add 0 + 2 }} */</span><span class="cp">}}</span>Eliott.
+<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">Bonsoir, <span class="cm">{{/* {{ add 0 + 2 }} */}}</span>Eliott.
 </code></pre></div><p>Will render <code>Bonsoir, Eliott.</code>, and not care about the syntax error (<code>add 0 + 2</code>) in the comment block.</p>
 <h3 id="html-comments">HTML comments <a class="header-link" href="#html-comments"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>If you need to produce HTML comments from your templates, take a look at the <a href="#ie-conditional-comments">Internet Explorer conditional comments</a> example. If you need variables to construct such HTML comments, just pipe <code>printf</code> to <code>safeHTML</code>. For example:</p>
@@ -2250,7 +2250,7 @@ notoc: true
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “Introduction to Hugo Templating”
-  </a> was last updated: November 18, 2020: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/c9a21cf67881c85a601ce1736f0d5265345bfea9">ci: add docker to build (#62) (c9a21cf)</a>
+  </a> was last updated: November 27, 2020: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/f381a1160d073484bafc6fc4cc7d756ce4ec3e9b">Merge pull request #69 from blackb1rd/hugo/v0.79.0 (f381a11)</a>
 </h6>
 
     <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/templates/introduction.md" class="

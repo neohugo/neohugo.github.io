@@ -7,6 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://gohugo.io/news/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>0.79.0</title>
+      <link>https://gohugo.io/news/0.79.0-relnotes/</link>
+      <pubDate>Fri, 27 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/news/0.79.0-relnotes/</guid>
+      <description>Hugo `0.79.0` is a small, but useful release. You can now set custom `.Params` in your [menu](https://gohugo.io/content-management/menus/) configuration, and you can now also override deeply nested snake_cased configuration variables with [OS environment variables](https://gohugo.io/getting-started/configuration/#configure-with-environment-variables). Other than that we have refreshed all the core upstream dependencies. A special thanks to [@alecthomas](https://github.com/alecthomas) (some new [Chroma lexers](https://github.com/alecthomas/chroma/releases/tag/v0.8.2) and fixes) and [@evanw](https://github.com/evanw) ([ESBuild](https://github.com/evanw/esbuild)).  This release represents 33 contributions by 8 contributors to the main Hugo code base.</description>
+    </item>
+    
+    <item>
       <title>Hugo 0.78.2: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.78.2-relnotes/</link>
       <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
@@ -22,18 +31,19 @@
       <pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/news/0.78.1-relnotes/</guid>
-      <description>This is a bug-fix release with a couple of important fixes.
+      <description>The main fix in this release is that of dependency resolution for package.json/node_modules in theme components. See the documentation for more information.
  Disable NPM test on Travis on Windows 3437174c @bep travis: Install nodejs on Windows f66302ca @bep js: Remove external source map option 944150ba @bep #7932 js: Misc fixes bf2837a3 @bep #7924#7923  </description>
     </item>
     
     <item>
-      <title>0.78.0</title>
+      <title>Hugo 0.78.0: Full Hugo Modules Support in js.Build</title>
       <link>https://gohugo.io/news/0.78.0-relnotes/</link>
       <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/news/0.78.0-relnotes/</guid>
-      <description>This release finally brings full [Hugo Modules](https://gohugo.io/hugo-modules/) support to [js.Build](https://gohugo.io/hugo-pipes/js/), curtsy of he new plugin API in the really, really fast [ESBuild](https://github.com/evanw/esbuild) by [@evanw](https://github.com/evanw).  Some notes on the improvements in this release:
- Now js.Build fully supports the virtual union file system in Hugo Modules. Any import inside your JavaScript components will resolve starting from the top component mount inside /assets with a fallback to the traditional &amp;ldquo;JS way&amp;rdquo; (node_modules etc.</description>
+      <description>This release finally brings full Hugo Modules support to js.Build, curtsy of he new plugin API in the really, really fast ESBuild by @evanw.
+Some notes on the improvements in this release:
+ Now js.Build fully supports the virtual union filesystem in Hugo Modules. Any import inside your JavaScript components will resolve starting from the top component mount inside /assets with a fallback to the traditional &amp;ldquo;JS way&amp;rdquo; (node_modules etc.) You can now pass configuration data from the templates to your scripts via a new params option.</description>
     </item>
     
     <item>
