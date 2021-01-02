@@ -734,9 +734,10 @@ Remember to pass the output of this to safeHTML if fully un-escaped characters a
       
       <guid>https://gohugo.io/functions/images/</guid>
       <description>Image Filters  See images.Filter for how to apply these filters to an image.
-Brightness  Brightness creates a filter that changes the brightness of an image. The percentage parameter must be in range (-100, 100).
-ColorBalance  ColorBalance creates a filter that changes the color balance of an image. The percentage parameters for each color channel (red, green, blue) must be in range (-100, 500).
-Colorize  Colorize creates a filter that produces a colorized version of an image.</description>
+Overlay  New in v0.80.0  Overlay creates a filter that overlays the source image at position x y, e.g:
+{{$logoFilter:=(images.Overlay$logo5050)}} {{$img:=$img|images.Filter$logoFilter}} A shorter version of the above, if you only need to apply the filter once:
+{{$img:=$img.Filter(images.Overlay$logo5050)}} The above will overlay $logo in the upper left corner of $img (at position x=50, y=50).
+Brightness  Brightness creates a filter that changes the brightness of an image.</description>
     </item>
     
     <item>

@@ -16,6 +16,81 @@
     
     
     <item>
+      <title>News: 0.80.0</title>
+      <link>https://gohugo.io/news/0.80.0-relnotes/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/news/0.80.0-relnotes/</guid>
+      <description>
+        
+        
+        &lt;pre&gt;&lt;code&gt;The last Hugo release of the year brings a new [images.Overlay](https://gohugo.io/functions/images/#overlay) filter to overlay an image on top of another, e.g. for watermarking, and [Dart Sass](https://gohugo.io/hugo-pipes/scss-sass/#options) support.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This release represents &lt;strong&gt;29 contributions by 12 contributors&lt;/strong&gt; to the main Hugo code base. &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; leads the Hugo development with a significant amount of contributions, but also a big shoutout to &lt;a href=&#34;https://github.com/moorereason&#34;&gt;@moorereason&lt;/a&gt;, and &lt;a href=&#34;https://github.com/davidsneighbour&#34;&gt;@davidsneighbour&lt;/a&gt; for their ongoing contributions.
+And a big thanks to &lt;a href=&#34;https://github.com/digitalcraftsman&#34;&gt;@digitalcraftsman&lt;/a&gt; for his relentless work on keeping the themes site in pristine condition and to &lt;a href=&#34;https://github.com/davidsneighbour&#34;&gt;@davidsneighbour&lt;/a&gt;, &lt;a href=&#34;https://github.com/coliff&#34;&gt;@coliff&lt;/a&gt; and &lt;a href=&#34;https://github.com/kaushalmodi&#34;&gt;@kaushalmodi&lt;/a&gt; for all the great work on the documentation site.&lt;/p&gt;
+&lt;p&gt;Many have also been busy writing and fixing the documentation in &lt;a href=&#34;https://github.com/gohugoio/hugoDocs&#34;&gt;hugoDocs&lt;/a&gt;,
+which has received &lt;strong&gt;22 contributions by 6 contributors&lt;/strong&gt;. A special thanks to &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;, &lt;a href=&#34;https://github.com/D4D3VD4V3&#34;&gt;@D4D3VD4V3&lt;/a&gt;, &lt;a href=&#34;https://github.com/chrischute&#34;&gt;@chrischute&lt;/a&gt;, and &lt;a href=&#34;https://github.com/azenk&#34;&gt;@azenk&lt;/a&gt; for their work on the documentation site.&lt;/p&gt;
+&lt;p&gt;Hugo now has:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;49096+ &lt;a href=&#34;https://github.com/gohugoio/hugo/stargazers&#34;&gt;stars&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;436+ &lt;a href=&#34;https://github.com/gohugoio/hugo/graphs/contributors&#34;&gt;contributors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;369+ &lt;a href=&#34;http://themes.gohugo.io/&#34;&gt;themes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;notes&#34;&gt;Notes &lt;a class=&#34;header-link&#34; href=&#34;#notes&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Resource.ResourceType now always returns MIME&amp;rsquo;s main type &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/81975f847dc19c21c2321207645807771db97fab&#34;&gt;81975f84&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/8052&#34;&gt;#8052&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;enhancements&#34;&gt;Enhancements &lt;a class=&#34;header-link&#34; href=&#34;#enhancements&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;templates&#34;&gt;Templates &lt;a class=&#34;header-link&#34; href=&#34;#templates&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Regenerate templates &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/a2d146ec32a26ccca9ffa68d3c840ec5b08cca96&#34;&gt;a2d146ec&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;tpl/internal/go_templates: Revert formatting &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/718e09ed4bc538f4fccc4337f99e9eb86aea31f3&#34;&gt;718e09ed&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add title parameter to YouTube shortcode &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/4fc918e02cfc7f260d6312248ff9d33e95b27943&#34;&gt;4fc918e0&lt;/a&gt; &lt;a href=&#34;https://github.com/azenk&#34;&gt;@azenk&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;output&#34;&gt;Output &lt;a class=&#34;header-link&#34; href=&#34;#output&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add missing OutputStyle option &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/428b0b32947ec16f8585b8c33548d72fd4fb025d&#34;&gt;428b0b32&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;other&#34;&gt;Other &lt;a class=&#34;header-link&#34; href=&#34;#other&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow Dart Sass transformations to be cached on disk &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/ffbf5e45fa0617a37950b34deab63736b1c6b1d3&#34;&gt;ffbf5e45&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Dart Sass only supports &lt;code&gt;expanded&lt;/code&gt; and &lt;code&gt;compressed&lt;/code&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/48994ea766f08332f57c0f8e74843b6c8617c3d1&#34;&gt;48994ea7&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Update emoji import paths and version &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/1f7e9f733397b891cefc725ffc94ba901e70425a&#34;&gt;1f7e9f73&lt;/a&gt; &lt;a href=&#34;https://github.com/moorereason&#34;&gt;@moorereason&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add Dart Sass support &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/cea157402365f34a69882110a4208999728007a6&#34;&gt;cea15740&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7380&#34;&gt;#7380&lt;/a&gt;&lt;a href=&#34;https://github.com/gohugoio/hugo/issues/8102&#34;&gt;#8102&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GroupByParamDate now supports datetimes &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/f9f779786edcefc4449a14cfc04dd93379f71373&#34;&gt;f9f77978&lt;/a&gt; &lt;a href=&#34;https://github.com/zerok&#34;&gt;@zerok&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Skip para test when not on CI &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/a9718f44cd6c938448fc697f0ec720ebed7d863a&#34;&gt;a9718f44&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/6963&#34;&gt;#6963&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Update SECURITY.md &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/f802bb236a60dcc6c64d53edac634891272e0c07&#34;&gt;f802bb23&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Improve LookPath &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/10ae7c3210cd1add14d3750aa9512a87df0e1146&#34;&gt;10ae7c32&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;create a SECURITY.md &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/ae2d1bd52df0099190ef9195666d0788708b0385&#34;&gt;ae2d1bd5&lt;/a&gt; &lt;a href=&#34;https://github.com/davidsneighbour&#34;&gt;@davidsneighbour&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/8074&#34;&gt;#8074&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Show more detail on failed time test &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/8103188b9b9e8eeb3bcb53c8b64e2b83397e82ae&#34;&gt;8103188b&lt;/a&gt; &lt;a href=&#34;https://github.com/moorereason&#34;&gt;@moorereason&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/6963&#34;&gt;#6963&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add images.Overlay filter &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/3ba147e702a5ae0af6e8b3b0296d256c3246a546&#34;&gt;3ba147e7&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/8057&#34;&gt;#8057&lt;/a&gt;&lt;a href=&#34;https://github.com/gohugoio/hugo/issues/4595&#34;&gt;#4595&lt;/a&gt;&lt;a href=&#34;https://github.com/gohugoio/hugo/issues/6731&#34;&gt;#6731&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bump github.com/spf13/cobra from 0.15.0 to 0.20.0 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/c84ad8db821c10225c0e603c6ec920c67b6ce36f&#34;&gt;c84ad8db&lt;/a&gt; &lt;a href=&#34;https://github.com/anthonyfok&#34;&gt;@anthonyfok&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;configure proper link to discourse.gohugo.io (#8020) &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/4e0acb89b793d8895dc53eb8887be27430c3ab31&#34;&gt;4e0acb89&lt;/a&gt; &lt;a href=&#34;https://github.com/davidsneighbour&#34;&gt;@davidsneighbour&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Format code with gofumpt &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/d90e37e0c6e812f9913bf256c9c81aa05b7a08aa&#34;&gt;d90e37e0&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;bump github.com/evanw/esbuild from 0.8.15 to 0.8.17 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/32471b57bde51c55a15dbf1db75d6e5f7232c347&#34;&gt;32471b57&lt;/a&gt; &lt;a href=&#34;https://github.com/apps/dependabot&#34;&gt;@dependabot[bot]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use &amp;ndash;baseURL path for live-reload URL &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/0ad378b09cea90a2a70d7ff06af668abe22475a1&#34;&gt;0ad378b0&lt;/a&gt; &lt;a href=&#34;https://github.com/sth&#34;&gt;@sth&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/6595&#34;&gt;#6595&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;bump github.com/getkin/kin-openapi from 0.31.0 to 0.32.0 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/907d9e92682ed56a57a2206ae9bd9a985b3e1870&#34;&gt;907d9e92&lt;/a&gt; &lt;a href=&#34;https://github.com/apps/dependabot&#34;&gt;@dependabot[bot]&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;fixes&#34;&gt;Fixes &lt;a class=&#34;header-link&#34; href=&#34;#fixes&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;templates-1&#34;&gt;Templates &lt;a class=&#34;header-link&#34; href=&#34;#templates-1&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix series detection in opengraph &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/d2d493ab5d6a054001a8448ea0de2949dac4b30e&#34;&gt;d2d493ab&lt;/a&gt; &lt;a href=&#34;https://github.com/Humberd&#34;&gt;@Humberd&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix substr when length parameter is zero &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/5862fd2a60b5d16f2437bd8c8b7bac700de5f047&#34;&gt;5862fd2a&lt;/a&gt; &lt;a href=&#34;https://github.com/moorereason&#34;&gt;@moorereason&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7993&#34;&gt;#7993&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Refactor and fix substr logic &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/64789fb5dcf8326f14f13d69a2576ae3aa2bbbaa&#34;&gt;64789fb5&lt;/a&gt; &lt;a href=&#34;https://github.com/moorereason&#34;&gt;@moorereason&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7993&#34;&gt;#7993&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;other-1&#34;&gt;Other &lt;a class=&#34;header-link&#34; href=&#34;#other-1&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix Resource.ResourceType so it always returns MIME&amp;rsquo;s main type &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/81975f847dc19c21c2321207645807771db97fab&#34;&gt;81975f84&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/8052&#34;&gt;#8052&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;hugolib/paths: Fix typo &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/ce96895debb67df20ae24fb5f0f04b98a30cc6cc&#34;&gt;ce96895d&lt;/a&gt; &lt;a href=&#34;https://github.com/mayocream&#34;&gt;@mayocream&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix minor typos &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/04b89857e104ac7dcbf9fc65d8d4f1a1178123e6&#34;&gt;04b89857&lt;/a&gt; &lt;a href=&#34;https://github.com/phil-davis&#34;&gt;@phil-davis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix BenchmarkMergeByLanguage &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/21fa1e86f2aa929fb0983a0cc3dc4e271ea1cc54&#34;&gt;21fa1e86&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7914&#34;&gt;#7914&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix RelURL and AbsURL when path starts with language &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/aebfe156fb2f27057e61b2e50c7576e6b06dab58&#34;&gt;aebfe156&lt;/a&gt; &lt;a href=&#34;https://github.com/ivan-meridianbanc-com&#34;&gt;@ivan-meridianbanc-com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>News: Hugo 0.79.1: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.79.1-relnotes/</link>
       <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
@@ -2073,29 +2148,6 @@ which has received &lt;strong&gt;5 contributions by 4 contributors&lt;/strong&gt
 &lt;h3 id=&#34;other-1&#34;&gt;Other &lt;a class=&#34;header-link&#34; href=&#34;#other-1&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Fix headless regression &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/bb80fff69ad3f2ddff23819bf6eb6f4b8512dc2a&#34;&gt;bb80fff6&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/6552&#34;&gt;#6552&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>News: Hugo 0.60.1: A couple of Bug Fixes</title>
-      <link>https://gohugo.io/news/0.60.1-relnotes/</link>
-      <pubDate>Fri, 29 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://gohugo.io/news/0.60.1-relnotes/</guid>
-      <description>
-        
-        
-        
-        <![CDATA[<img src="https://gohugo.io/news/0.60.1-relnotes/featured-061_hu55b86d71cf1e6f4fec276be0fe0d3e6e_28841_640x0_resize_catmullrom_2.png" width="640" height="320"/>]]>
-        
-        &lt;p&gt;This is a bug-fix release with a couple of important fixes.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;deps: Update minify &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/86a5b59f64dd6c4d338a9e091e98cd0ad6d4824f&#34;&gt;86a5b59f&lt;/a&gt; &lt;a href=&#34;https://github.com/MeiK2333&#34;&gt;@MeiK2333&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/6475&#34;&gt;#6475&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Fix headless regression &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/bb80fff69ad3f2ddff23819bf6eb6f4b8512dc2a&#34;&gt;bb80fff6&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/6552&#34;&gt;#6552&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;deps: Update Goldmark &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/347cfb0c17b08626250180e8a84b53fc4800473f&#34;&gt;347cfb0c&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/6549&#34;&gt;#6549&lt;/a&gt;&lt;a href=&#34;https://github.com/gohugoio/hugo/issues/6551&#34;&gt;#6551&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;hugolib: Fix timeout number parsing for YAML/JSON config &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/b60ae35b97c4f44b9b09fcf06c863c695bc3c73a&#34;&gt;b60ae35b&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/6555&#34;&gt;#6555&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
