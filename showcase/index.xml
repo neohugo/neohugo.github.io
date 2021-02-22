@@ -6,7 +6,18 @@
     <description>Recent content in Showcase on Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://gohugo.io/showcase/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://gohugo.io/showcase/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Godot Tutorials</title>
+      <link>https://gohugo.io/showcase/godot-tutorials/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/showcase/godot-tutorials/</guid>
+      <description>Godot Tutorials started as a way to teach beginners game programming and game development. As I created videos, I ran into a problem; if I made a mistake with a Youtube video, it was difficult to correct errors.
+I discovered that blogging episodes and having articles that teach on top of my videos is a fantastic solution to my problem.
+As I researched blogging platforms, I came across two solutions; however, I chose Hugo because it&amp;rsquo;s built with markdown in mind and simplified my workflow.</description>
+    </item>
+    
     <item>
       <title>Digital.gov</title>
       <link>https://gohugo.io/showcase/digitalgov/</link>

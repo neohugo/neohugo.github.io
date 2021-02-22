@@ -8,13 +8,22 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 01 Feb 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://gohugo.io/functions/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>site</title>
+      <link>https://gohugo.io/functions/site/</link>
+      <pubDate>Thu, 11 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/functions/site/</guid>
+      <description>site is a global function which returns the same data as the .Site page method. See: Site Variables.</description>
+    </item>
+    
+    <item>
       <title>strings.Count</title>
       <link>https://gohugo.io/functions/strings.count/</link>
       <pubDate>Mon, 07 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/functions/strings.count/</guid>
       <description> New in v0.74.0  If SUBSTR is an empty string, this function returns 1 plus the number of Unicode code points in STRING.
-   Example Result     {{ &amp;quot;aaabaab&amp;quot; | strings.Count &amp;quot;a&amp;quot; }} 5   {{ &amp;quot;aaabaab&amp;quot; | strings.Count &amp;quot;aa&amp;quot; }} 2   {{ &amp;quot;aaabaab&amp;quot; | strings.Count &amp;quot;aaa&amp;quot; }} 1   {{ &amp;quot;aaabaab&amp;quot; | strings.Count &amp;quot;&amp;quot; }} 8    </description>
+   Example Result     `{{ &amp;ldquo;aaabaab&amp;rdquo; strings.Count &amp;ldquo;a&amp;rdquo; }}`   `{{ &amp;ldquo;aaabaab&amp;rdquo; strings.Count &amp;ldquo;aa&amp;rdquo; }}`   `{{ &amp;ldquo;aaabaab&amp;rdquo; strings.Count &amp;ldquo;aaa&amp;rdquo; }}`   `{{ &amp;ldquo;aaabaab&amp;rdquo; strings.Count &amp;quot;&amp;quot; }}`    </description>
     </item>
     
     <item>
@@ -37,7 +46,7 @@
       <description>New in v0.62.0  .RenderString is a method on Page that renders some markup to HTML using the content renderer defined for that page (if not set in the options).
 Note that this method does not parse and render shortcodes.
 The method takes an optional map argument with these options:
- display (&amp;ldquo;inline&amp;rdquo;) inline or block. If inline (default), surrounding ´` on short snippets will be trimmed. markup (defaults to the Page&amp;rsquo;s markup) See identifiers in List of content formats.</description>
+ display (&amp;ldquo;inline&amp;rdquo;) inline or block. If inline (default), surrounding &amp;lt;p&amp;gt;&amp;lt;/p&amp;gt; on short snippets will be trimmed. markup (defaults to the Page&amp;rsquo;s markup) See identifiers in List of content formats.</description>
     </item>
     
     <item>
@@ -142,7 +151,7 @@ Note: All path elements on Windows are converted to slash (&#39;/&#39;) separato
       <description>path.Split splits PATH immediately following the final slash, separating it into a directory and a base component.
 The returned values have the property that PATH = DIR+BASE. If there is no slash in PATH, it returns an empty directory and the base is set to PATH.
 Note: On Windows, PATH is converted to slash (/) separators.
-{{ path.Split &amp;quot;a/news.html&amp;quot; }} → &amp;quot;a/&amp;quot;, &amp;quot;news.html&amp;quot; {{ path.Split &amp;quot;news.html&amp;quot; }} → &amp;quot;&amp;quot;, &amp;quot;news.html&amp;quot; {{ path.</description>
+{{ $dirFile := path.Split &amp;quot;a/news.html&amp;quot; }} → $dirDile.Dir → &amp;quot;a/&amp;quot;, $dirFile.File → &amp;quot;news.html&amp;quot; {{ $dirFile := path.</description>
     </item>
     
     <item>

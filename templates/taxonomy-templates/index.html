@@ -13,7 +13,7 @@
   <title>Taxonomy Templates | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.81.0-DEV" />
+  <meta name="generator" content="Hugo 0.82.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -26,7 +26,7 @@
   
   
   
-  <link rel="stylesheet" href="/output/css/app.min.aca3c1378a60dba8efa6777c4487de7630232c2d47c2a4330e2af18243a9470b.css" integrity="sha256-rKPBN4pg26jvpnd8RIfedjAjLC1HwqQzDirxgkOpRws=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/output/css/app.min.08ecdd35eb5e6bdccdcc93919eda97a6b87211c44eff7f4bea3c5b0aba3d2e0b.css" integrity="sha256-COzdNetea9zNzJORntqXprhyEcRO/39L6jxbCro9Lgs=" crossorigin="anonymous">
   
   
   
@@ -58,21 +58,15 @@
 <meta property="og:title" content="Taxonomy Templates" />
 <meta property="og:description" content="Taxonomy templating includes taxonomy list pages, taxonomy terms pages, and using taxonomies in your single page templates." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gohugo.io/templates/taxonomy-templates/" />
-<meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/>
-<meta property="article:published_time" content="2017-02-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-01-03T01:12:01+07:00" />
+<meta property="og:url" content="https://gohugo.io/templates/taxonomy-templates/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="templates" />
+<meta property="article:published_time" content="2017-02-01T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-02-22T23:11:02&#43;07:00" />
+
 <meta itemprop="name" content="Taxonomy Templates">
-<meta itemprop="description" content="Taxonomy templating includes taxonomy list pages, taxonomy terms pages, and using taxonomies in your single page templates.">
-<meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-01-03T01:12:01+07:00" />
-<meta itemprop="wordCount" content="1433">
-<meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
-
-
-
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="description" content="Taxonomy templating includes taxonomy list pages, taxonomy terms pages, and using taxonomies in your single page templates."><meta itemprop="datePublished" content="2017-02-01T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-02-22T23:11:02&#43;07:00" />
+<meta itemprop="wordCount" content="1347"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
 
 <meta name="twitter:title" content="Taxonomy Templates"/>
@@ -382,21 +376,9 @@
 <h2 id="order-taxonomies">Order Taxonomies <a class="header-link" href="#order-taxonomies"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Taxonomies can be ordered by either alphabetical key or by the number of content pieces assigned to that key.</p>
 <h3 id="order-alphabetically-example">Order Alphabetically Example <a class="header-link" href="#order-alphabetically-example"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>In Hugo 0.55 and later you can do:</p>
 <div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.Data.Terms.Alphabetical</span><span class="w"> </span><span class="cp">}}</span>
             <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Page.Permalink</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Page.Title</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> <span class="cp">{{</span><span class="w"> </span><span class="na">.Count</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-    <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</code></pre></div><p>Before that you would have to do something like:</p>
-<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
-    <span class="cp">{{</span><span class="w"> </span><span class="nx">$type</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="na">.Type</span><span class="w"> </span><span class="cp">}}</span>
-    <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">$key</span><span class="o">,</span><span class="w"> </span><span class="nx">$value</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="na">.Data.Terms.Alphabetical</span><span class="w"> </span><span class="cp">}}</span>
-        <span class="cp">{{</span><span class="w"> </span><span class="nx">$name</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="na">.Name</span><span class="w"> </span><span class="cp">}}</span>
-        <span class="cp">{{</span><span class="w"> </span><span class="nx">$count</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="na">.Count</span><span class="w"> </span><span class="cp">}}</span>
-        <span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">$.Site.GetPage</span><span class="w"> </span><span class="o">(</span><span class="k">printf</span><span class="w"> </span><span class="s">&#34;/%s/%s&#34;</span><span class="w"> </span><span class="nx">$type</span><span class="w"> </span><span class="nx">$name</span><span class="o">)</span><span class="w"> </span><span class="cp">}}</span>
-            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Permalink</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="nx">$name</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> <span class="cp">{{</span><span class="w"> </span><span class="nx">$count</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-        <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </code></pre></div><!-- raw HTML omitted -->
@@ -442,26 +424,10 @@ term</li>
 <p>Within your content templates, you may wish to display the taxonomies that piece of content is assigned to.</p>
 <p>Because we are leveraging the front matter system to define taxonomies for content, the taxonomies assigned to each content piece are located in the usual place (i.e., <code>.Params.&lt;TAXONOMYPLURAL&gt;</code>).</p>
 <h3 id="example-list-tags-in-a-single-page-template">Example: List Tags in a Single Page Template <a class="header-link" href="#example-list-tags-in-a-single-page-template"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-
-
-
-<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
-    <a href="https://gohugo.io/news/0.65.0-relnotes/" target="_blank">New in v0.65.0</a>
-</button>
 <div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="o">(</span><span class="na">.GetTerms</span><span class="w"> </span><span class="s">&#34;tags&#34;</span><span class="o">)</span><span class="w"> </span><span class="cp">}}</span>
         <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Permalink</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.LinkTitle</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
    <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</code></pre></div><p>Before Hugo 0.65.0 you needed to do something like this:</p>
-<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">$taxo</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&#34;tags&#34;</span><span class="w"> </span><span class="cp">}}</span> <span class="c">&lt;!-- Use the plural form here --&gt;</span>
-<span class="p">&lt;</span><span class="nt">ul</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="nx">$taxo</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span>
-    <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.Param</span><span class="w"> </span><span class="nx">$taxo</span><span class="w"> </span><span class="cp">}}</span>
-        <span class="cp">{{</span><span class="w"> </span><span class="nx">$name</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
-        <span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">$.Site.GetPage</span><span class="w"> </span><span class="o">(</span><span class="k">printf</span><span class="w"> </span><span class="s">&#34;/%s/%s&#34;</span><span class="w"> </span><span class="nx">$taxo</span><span class="w"> </span><span class="o">(</span><span class="nx">$name</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">urlize</span><span class="o">))</span><span class="w"> </span><span class="cp">}}</span>
-            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Permalink</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="nx">$name</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-        <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-    <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </code></pre></div><p>If you want to list taxonomies inline, you will have to take care of optional plural endings in the title (if multiple taxonomies), as well as commas. Let&rsquo;s say we have a taxonomy &ldquo;directors&rdquo; such as <code>directors: [ &quot;Joel Coen&quot;, &quot;Ethan Coen&quot; ]</code> in the TOML-format front matter.</p>
 <p>To list such taxonomies, use the following:</p>
@@ -510,19 +476,9 @@ term</li>
 <p>This may take the form of a tag cloud, a menu, or simply a list.</p>
 <p>The following example displays all terms in a site&rsquo;s tags taxonomy:</p>
 <h3 id="example-list-all-site-tags">Example: List All Site Tags <a class="header-link" href="#example-list-all-site-tags"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>In Hugo 0.55 and later you can simply do:</p>
 <div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.Site.Taxonomies.tags</span><span class="w"> </span><span class="cp">}}</span>
             <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Page.Permalink</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Page.Title</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> <span class="cp">{{</span><span class="w"> </span><span class="na">.Count</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-    <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</code></pre></div><p>Before that you would do something like this:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;all-tags&#34;</span><span class="p">&gt;</span>
-    <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">$name</span><span class="o">,</span><span class="w"> </span><span class="nx">$taxonomy</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="na">.Site.Taxonomies.tags</span><span class="w"> </span><span class="cp">}}</span>
-        <span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">$.Site.GetPage</span><span class="w"> </span><span class="o">(</span><span class="k">printf</span><span class="w"> </span><span class="s">&#34;/tags/%s&#34;</span><span class="w"> </span><span class="nx">$name</span><span class="o">)</span><span class="w"> </span><span class="cp">}}</span>
-            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Permalink</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="nx">$name</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-        <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </code></pre></div><h3 id="example-list-all-taxonomies-terms-and-assigned-content">Example: List All Taxonomies, Terms, and Assigned Content <a class="header-link" href="#example-list-all-taxonomies-terms-and-assigned-content"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
@@ -1497,6 +1453,11 @@ term</li>
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/site/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              site
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/slice/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               slice
             </a>
@@ -1957,7 +1918,7 @@ term</li>
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “Taxonomy Templates”
-  </a> was last updated: January 3, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/c170d396b5097a05c298e7adcd293d0f9aab73b7">Merge pull request #75 from neohugo/hugo/v0.80.0 (c170d39)</a>
+  </a> was last updated: February 22, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/cccfa3c778cb909289b83e51498cc40966ed6c7b">Merge pull request #77 from blackb1rd/hugo/v0.81.0 (cccfa3c)</a>
 </h6>
 
     <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/templates/taxonomy-templates.md" class="

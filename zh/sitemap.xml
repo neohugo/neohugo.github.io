@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://gohugo.io/zh/about/</loc>
-    <lastmod>2021-01-03T01:12:01+07:00</lastmod>
+    <lastmod>2021-02-22T23:11:02+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -15,11 +14,9 @@
                 hreflang="zh"
                 href="https://gohugo.io/zh/about/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://gohugo.io/zh/content-management/</loc>
-    <lastmod>2021-01-03T01:12:01+07:00</lastmod>
+    <lastmod>2021-02-22T23:11:02+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -30,11 +27,9 @@
                 hreflang="zh"
                 href="https://gohugo.io/zh/content-management/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://gohugo.io/zh/documentation/</loc>
-    <lastmod>2021-01-03T01:12:01+07:00</lastmod>
+    <lastmod>2021-02-22T23:11:02+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -45,11 +40,9 @@
                 hreflang="zh"
                 href="https://gohugo.io/zh/documentation/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://gohugo.io/zh/templates/</loc>
-    <lastmod>2021-01-03T01:12:01+07:00</lastmod>
+    <lastmod>2021-02-22T23:11:02+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -60,11 +53,9 @@
                 hreflang="zh"
                 href="https://gohugo.io/zh/templates/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://gohugo.io/zh/templates/base/</loc>
-    <lastmod>2021-01-03T01:12:01+07:00</lastmod>
+    <lastmod>2021-02-22T23:11:02+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -75,11 +66,9 @@
                 hreflang="zh"
                 href="https://gohugo.io/zh/templates/base/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://gohugo.io/zh/categories/</loc>
-    <lastmod>2021-01-03T01:12:01+07:00</lastmod>
+    <lastmod>2021-02-22T23:11:02+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -90,11 +79,9 @@
                 hreflang="zh"
                 href="https://gohugo.io/zh/categories/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://gohugo.io/zh/categories/content-management/</loc>
-    <lastmod>2021-01-03T01:12:01+07:00</lastmod>
+    <lastmod>2021-02-22T23:11:02+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -105,11 +92,9 @@
                 hreflang="zh"
                 href="https://gohugo.io/zh/categories/content-management/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://gohugo.io/zh/</loc>
-    <lastmod>2021-01-03T01:12:01+07:00</lastmod>
+    <lastmod>2021-02-22T23:11:02+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -120,11 +105,9 @@
                 hreflang="zh"
                 href="https://gohugo.io/zh/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://gohugo.io/zh/categories/fundamentals/</loc>
-    <lastmod>2021-01-03T01:12:01+07:00</lastmod>
+    <lastmod>2021-02-22T23:11:02+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -135,11 +118,9 @@
                 hreflang="zh"
                 href="https://gohugo.io/zh/categories/fundamentals/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://gohugo.io/zh/categories/templates/</loc>
-    <lastmod>2021-01-03T01:12:01+07:00</lastmod>
+    <lastmod>2021-02-22T23:11:02+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -150,11 +131,9 @@
                 hreflang="zh"
                 href="https://gohugo.io/zh/categories/templates/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://gohugo.io/zh/news/</loc>
-    <lastmod>2021-01-03T01:12:01+07:00</lastmod>
+    <lastmod>2021-02-22T23:11:02+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -166,5 +145,4 @@
                 href="https://gohugo.io/zh/news/"
                 />
   </url>
-  
 </urlset>
