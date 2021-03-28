@@ -6,15 +6,26 @@
     <description>Recent content in Releases on Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://gohugo.io/categories/releases/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://gohugo.io/categories/releases/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>0.81.0</title>
+      <title>0.82.0</title>
+      <link>https://gohugo.io/news/0.82.0-relnotes/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/news/0.82.0-relnotes/</guid>
+      <description>This is a small release, mostly a maintainance/bugfix release. But also notable is that you can now add custom Markdown attributes (e.g. CSS classes) to code fences ([aed7df62](https://github.com/gohugoio/hugo/commit/aed7df62a811b07b73ec5cbbf03e69e4bbf00919) [@bep](https://github.com/bep) [#8278](https://github.com/gohugoio/hugo/issues/8278)) and that you can use the attribute lists in title render hooks (`.Attributes`; see [cd0c5d7e](https://github.com/gohugoio/hugo/commit/cd0c5d7ef32cbd570af00c50ce760452381df64e) [@bep](https://github.com/bep) [#8270](https://github.com/gohugoio/hugo/issues/8270)).  This release represents 28 contributions by 8 contributors to the main Hugo code base.@bep leads the Hugo development with a significant amount of contributions, but also a big shoutout to @moorereason, and @gzagatti for their ongoing contributions.</description>
+    </item>
+    
+    <item>
+      <title>Hugo 0.81.0: The Smorgasbord Edition</title>
       <link>https://gohugo.io/news/0.81.0-relnotes/</link>
       <pubDate>Fri, 19 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/news/0.81.0-relnotes/</guid>
-      <description>**Hugo 0.81.0** is the first release in this decade, it is the fastest to date, and it&#39;s packed with useful new features.  Newlines in Template Actions and Commands  You can now have newlines within template actions and pipelines. This means that you can now do this and similar:
-FIX dict &amp;#34;country&amp;#34; &amp;#34;Norway&amp;#34; &amp;#34;population&amp;#34; &amp;#34;5 millions&amp;#34; &amp;#34;language&amp;#34; &amp;#34;Norwegian&amp;#34; &amp;#34;language_code&amp;#34; &amp;#34;nb&amp;#34; &amp;#34;weather&amp;#34; &amp;#34;freezing cold&amp;#34; &amp;#34;capitol&amp;#34; &amp;#34;Oslo&amp;#34; &amp;#34;largest_city&amp;#34; &amp;#34;Oslo&amp;#34; &amp;#34;currency&amp;#34; &amp;#34;Norwegian krone&amp;#34; &amp;#34;dialing_code&amp;#34; &amp;#34;+47&amp;#34; FIX Note that the above construction will fail in Hugo versions &amp;lt; 0.</description>
+      <description>Hugo 0.81.0 is the first release of this decade, it is the fastest to date, and it&amp;rsquo;s packed with useful new features.
+Newlines in Template Actions and Commands  You can now have newlines within template actions and pipelines. This means that you can now do this and similar:
+{{dict&amp;#34;country&amp;#34;&amp;#34;Norway&amp;#34;&amp;#34;population&amp;#34;&amp;#34;5 millions&amp;#34;&amp;#34;language&amp;#34;&amp;#34;Norwegian&amp;#34;&amp;#34;language_code&amp;#34;&amp;#34;nb&amp;#34;&amp;#34;weather&amp;#34;&amp;#34;freezing cold&amp;#34;&amp;#34;capitol&amp;#34;&amp;#34;Oslo&amp;#34;&amp;#34;largest_city&amp;#34;&amp;#34;Oslo&amp;#34;&amp;#34;currency&amp;#34;&amp;#34;Norwegian krone&amp;#34;&amp;#34;dialing_code&amp;#34;&amp;#34;+47&amp;#34;}} Note that the above construction will fail in Hugo versions &amp;lt; 0.81.0.
+Attribute Lists after Markdown Blocks  Hugo already supports adding attribute lists (e.</description>
     </item>
     
     <item>

@@ -231,8 +231,7 @@ Properties   ResourceType The main type of the resource&amp;rsquo;s Media Type. 
       <description>The Image Page Resource  The image is a Page Resource, and the processing methods listed below do not work on images inside your /static folder.
 To print all images paths in a Page Bundle:
 {{with.Resources.ByType&amp;#34;image&amp;#34;}} {{range.}} {{.RelPermalink}} {{end}} {{end}} The Image Resource  The image resource can also be retrieved from a global resource
-{{- $image := resources.Get &amp;ldquo;images/logo.jpg&amp;rdquo; -}}
-Image Processing Methods  The image resource implements the methods Resize, Fit and Fill, each returning the transformed image using the specified dimensions and processing options.</description>
+{{-$image:=resources.Get&amp;#34;images/logo.jpg&amp;#34;-}} Image Processing Methods  The image resource implements the Resize, Fit, Fill, and Filter methods, each returning a transformed image using the specified dimensions and processing options.</description>
     </item>
     
     <item>

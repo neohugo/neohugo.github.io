@@ -1184,7 +1184,7 @@ slice.html  {{delimit(slice&amp;#34;foo&amp;#34;&amp;#34;bar&amp;#34;&amp;#34;bu
       
       <guid>https://gohugo.io/functions/sort/</guid>
       <description>A sorted array of map values will be returned with the keys eliminated. There are two optional arguments: sortByField and sortAsc. If left blank, sort will sort by keys (for maps) in ascending order as its default behavior.
-+++ keywords: [ &amp;quot;tag3&amp;quot;, &amp;quot;tag1&amp;quot;, &amp;quot;tag2&amp;quot; ] +++ // Site config +++ [params.authors] [params.authors.Derek] &amp;quot;firstName&amp;quot; = &amp;quot;Derek&amp;quot; &amp;quot;lastName&amp;quot; = &amp;quot;Perkins&amp;quot; [params.authors.Joe] &amp;quot;firstName&amp;quot; = &amp;quot;Joe&amp;quot; &amp;quot;lastName&amp;quot; = &amp;quot;Bergevin&amp;quot; [params.authors.Tanner] &amp;quot;firstName&amp;quot; = &amp;quot;Tanner&amp;quot; &amp;quot;lastName&amp;quot; = &amp;quot;Linsley&amp;quot; +++ // Use default sort options - sort by key / ascending Tags: {{ range sort .</description>
+--- tags: [&amp;quot;tag3&amp;quot;, &amp;quot;tag1&amp;quot;, &amp;quot;tag2&amp;quot;] --- // Site config +++ [params.authors] [params.authors.Joe] firstName = &amp;quot;Joe&amp;quot; lastName = &amp;quot;Bergevin&amp;quot; [params.authors.Derek] firstName = &amp;quot;Derek&amp;quot; lastName = &amp;quot;Perkins&amp;quot; [params.authors.Tanner] firstName = &amp;quot;Tanner&amp;quot; lastName = &amp;quot;Linsley&amp;quot; +++ // Sort by value, ascending (default for lists) Tags: {{ range sort .</description>
     </item>
     
     <item>
