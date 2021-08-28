@@ -102,9 +102,8 @@ A shortcode is a simple snippet inside a content file that Hugo will render usin
       
       <guid>https://gohugo.io/content-management/sections/</guid>
       <description>A Section is a collection of pages that gets defined based on the organization structure under the content/ directory.
-By default, all the first-level directories under content/ form their own sections (root sections).
-If a user needs to define a section foo at a deeper level, they need to create a directory named foo with an _index.md file (see Branch Bundles for more information).
- A section cannot be defined or overridden by a front matter parameter &amp;ndash; it is strictly derived from the content organization structure.</description>
+By default, all the first-level directories under content/ form their own sections (root sections) provided they constitute Branch Bundles. Directories which are just Leaf Bundles do not form their own sections, despite being first-level directories.
+If a user needs to define a section foo at a deeper level, they need to create a directory named foo with an _index.</description>
     </item>
     
     <item>
@@ -209,7 +208,7 @@ Hugo v0.60.0 made a switch to Goldmark as the default library for Markdown which
       <description>You should define the available languages in a languages section in your site configuration.
  Also See Hugo Multilingual Part 1: Content translation
  Configure Languages  The following is an example of a site configuration for a multilingual Hugo project:
-config. yaml&amp;nbsp; toml&amp;nbsp; json&amp;nbsp;  copyright:Everything is minedefaultContentLanguage:enlanguages:ar:languagedirection:rtltitle:مدونتيweight:2en:params:linkedin:https://linkedin.com/whoevertitle:My blogweight:1fr:params:linkedin:https://linkedin.com/fr/whoevernavigation:help:Aidetitle:Mon blogueweight:2pt-pt:title:O meu blogweight:3params:navigation:help:Help   copyright = &amp;#34;Everything is mine&amp;#34; defaultContentLanguage = &amp;#34;en&amp;#34; [languages] [languages.ar] languagedirection = &amp;#34;rtl&amp;#34; title = &amp;#34;مدونتي&amp;#34; weight = 2 [languages.</description>
+config.  yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  copyright:Everything is minedefaultContentLanguage:enlanguages:ar:languagedirection:rtltitle:مدونتيweight:2en:params:linkedin:https://linkedin.com/whoevertitle:My blogweight:1fr:params:linkedin:https://linkedin.com/fr/whoevernavigation:help:Aidetitle:Mon blogueweight:2pt-pt:title:O meu blogweight:3params:navigation:help:Help   copyright = &amp;#39;Everything is mine&amp;#39; defaultContentLanguage = &amp;#39;en&amp;#39; [languages] [languages.</description>
     </item>
     
     <item>
@@ -218,8 +217,8 @@ config. yaml&amp;nbsp; toml&amp;nbsp; json&amp;nbsp;  copyright:Everything is mi
       <pubDate>Wed, 24 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/content-management/page-resources/</guid>
-      <description>Page resources are available for page bundles only, i.e. a directory with either a index.md, or _index.md file at its root. Resources are only attached to the lowest page they are bundled with, and simple which names does not contain index.md are not attached any resource.
-Properties   ResourceType The main type of the resource&amp;rsquo;s Media Type. For example, a file of MIME type image/jpeg has the ResourceType image. A Page will have ResourceType with value page.</description>
+      <description>Page resources are only accessible from page bundles, those directories with index.md or _index.md files at their root. Page resources are only available to the page with which they are bundled.
+In this example, first-post is a page bundle with access to 10 page resources including audio, data, documents, images, and video. Although second-post is also a page bundle, it has no page resources and is unable to directly access the page resources associated with first-post.</description>
     </item>
     
     <item>

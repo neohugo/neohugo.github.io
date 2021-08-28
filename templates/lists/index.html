@@ -13,7 +13,7 @@
   <title>Lists of Content in Hugo | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.83.0-DEV" />
+  <meta name="generator" content="Hugo 0.88.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -26,7 +26,7 @@
   
   
   
-  <link rel="stylesheet" href="/output/css/app.min.08ecdd35eb5e6bdccdcc93919eda97a6b87211c44eff7f4bea3c5b0aba3d2e0b.css" integrity="sha256-COzdNetea9zNzJORntqXprhyEcRO/39L6jxbCro9Lgs=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/output/css/app.min.bab83909a2f2fe2aa45bf7e4813899f4f705e6858479cea5bd48eee72fdf0a70.css" integrity="sha256-urg5CaLy/iqkW/fkgTiZ9PcF5oWEec6lvUju5y/fCnA=" crossorigin="anonymous">
   
   
   
@@ -61,12 +61,12 @@
 <meta property="og:description" content="Lists have a specific meaning and usage in Hugo when it comes to rendering your site homepage, section page, taxonomy list, or taxonomy terms list." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/templates/lists/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="templates" />
-<meta property="article:published_time" content="2017-02-01T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-28T21:54:32&#43;07:00" />
+<meta property="article:published_time" content="2017-02-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-08-28T21:58:58+07:00" />
 
 <meta itemprop="name" content="Lists of Content in Hugo">
-<meta itemprop="description" content="Lists have a specific meaning and usage in Hugo when it comes to rendering your site homepage, section page, taxonomy list, or taxonomy terms list."><meta itemprop="datePublished" content="2017-02-01T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-03-28T21:54:32&#43;07:00" />
+<meta itemprop="description" content="Lists have a specific meaning and usage in Hugo when it comes to rendering your site homepage, section page, taxonomy list, or taxonomy terms list."><meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-08-28T21:58:58+07:00" />
 <meta itemprop="wordCount" content="1765"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
@@ -170,10 +170,9 @@
     <div class="db dib-ns pl3"><form id="site-search-form" action="" role="search">
   <fieldset class="bn ma0 pa0">
     <label class="clip" for="search-input">Search</label>
-    <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: transparent url('/images/icon-search.png') no-repeat 0 8px /16px 16px;">
+    <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: url('/images/icon-search.png') 5px 11px/16px 16px no-repeat; background-color: rgba(255,255,255,0);">
   </fieldset>
-</form>
-</div>
+</form></div>
 
     <span class="absolute mt1 mt2-l pr3 right-0 top-0">
 
@@ -201,51 +200,11 @@
   	<nav id="TableOfContents">
   <ul>
     <li><a href="#what-is-a-list-page-template">What is a List Page Template?</a></li>
-    <li><a href="#list-defaults">List Defaults</a>
-      <ul>
-        <li><a href="#default-templates">Default Templates</a></li>
-      </ul>
-    </li>
-    <li><a href="#add-content-and-front-matter-to-list-pages">Add Content and Front Matter to List Pages</a>
-      <ul>
-        <li><a href="#example-project-directory">Example Project Directory</a></li>
-        <li><a href="#list-pages-without-_indexmd">List Pages Without <code>_index.md</code></a></li>
-      </ul>
-    </li>
-    <li><a href="#example-list-templates">Example List Templates</a>
-      <ul>
-        <li><a href="#section-template">Section Template</a></li>
-        <li><a href="#taxonomy-template">Taxonomy Template</a></li>
-      </ul>
-    </li>
-    <li><a href="#order-content">Order Content</a>
-      <ul>
-        <li><a href="#default-weight--date--linktitle--filepath">Default: Weight &gt; Date &gt; LinkTitle &gt; FilePath</a></li>
-        <li><a href="#by-weight">By Weight</a></li>
-        <li><a href="#by-date">By Date</a></li>
-        <li><a href="#by-publish-date">By Publish Date</a></li>
-        <li><a href="#by-expiration-date">By Expiration Date</a></li>
-        <li><a href="#by-last-modified-date">By Last Modified Date</a></li>
-        <li><a href="#by-length">By Length</a></li>
-        <li><a href="#by-title">By Title</a></li>
-        <li><a href="#by-link-title">By Link Title</a></li>
-        <li><a href="#by-parameter">By Parameter</a></li>
-        <li><a href="#reverse-order">Reverse Order</a></li>
-      </ul>
-    </li>
-    <li><a href="#group-content">Group Content</a>
-      <ul>
-        <li><a href="#by-page-field">By Page Field</a></li>
-        <li><a href="#by-date-1">By Date</a></li>
-        <li><a href="#by-publish-date-1">By Publish Date</a></li>
-        <li><a href="#by-lastmod">By Lastmod</a></li>
-        <li><a href="#by-expiry-date">By Expiry Date</a></li>
-        <li><a href="#by-page-parameter">By Page Parameter</a></li>
-        <li><a href="#by-page-parameter-in-date-format">By Page Parameter in Date Format</a></li>
-        <li><a href="#reverse-key-order">Reverse Key Order</a></li>
-        <li><a href="#order-within-groups">Order Within Groups</a></li>
-      </ul>
-    </li>
+    <li><a href="#list-defaults">List Defaults</a></li>
+    <li><a href="#add-content-and-front-matter-to-list-pages">Add Content and Front Matter to List Pages</a></li>
+    <li><a href="#example-list-templates">Example List Templates</a></li>
+    <li><a href="#order-content">Order Content</a></li>
+    <li><a href="#group-content">Group Content</a></li>
     <li><a href="#filtering-and-limiting-lists">Filtering and Limiting Lists</a></li>
   </ul>
 </nav>
@@ -368,8 +327,8 @@
 		
 	
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-md" data-lang="md">
----
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md">---
 title: My Go Journey
 date: 2017-03-23
 publishdate: 2017-03-24
@@ -377,8 +336,7 @@ publishdate: 2017-03-24
 
 I decided to start learning Go in March 2017.
 
-Follow my journey through this new blog.
-</code></pre></div>
+Follow my journey through this new blog.</code></pre></div>
 	</div>
 
 </div>
@@ -400,8 +358,8 @@ Follow my journey through this new blog.
 		
 	
 	<div class="code-copy-content nt3" id="list.html">
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="cp">{{</span><span class="w"> </span><span class="nx">define</span><span class="w"> </span><span class="s">&#34;main&#34;</span><span class="w"> </span><span class="cp">}}</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">define</span><span class="w"> </span><span class="s">&#34;main&#34;</span><span class="w"> </span><span class="cp">}}</span>
 <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
@@ -419,8 +377,7 @@ Follow my journey through this new blog.
     <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
     <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-</code></pre></div>
+<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span></code></pre></div>
 	</div>
 
 </div>
@@ -438,8 +395,8 @@ Follow my journey through this new blog.
 
 <div class="code relative" id="example.com/posts/index.html"><div class="filename san-serif f6 dib lh-solid pl2 pv2">example.com/posts/index.html</div>
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="c">&lt;!--top of your baseof code--&gt;</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="c">&lt;!--top of your baseof code--&gt;</span>
 <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
@@ -453,8 +410,7 @@ Follow my journey through this new blog.
         <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/posts/post-02/&#34;</span><span class="p">&gt;</span>Post 2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
-<span class="c">&lt;!--bottom of your baseof--&gt;</span>
-</code></pre></div>
+<span class="c">&lt;!--bottom of your baseof--&gt;</span></code></pre></div>
 	</div>
 
 </div>
@@ -474,8 +430,8 @@ Follow my journey through this new blog.
 
 <div class="code relative" id="example.com/quote/index.html"><div class="filename san-serif f6 dib lh-solid pl2 pv2">example.com/quote/index.html</div>
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="c">&lt;!--baseof--&gt;</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="c">&lt;!--baseof--&gt;</span>
 <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
@@ -488,8 +444,7 @@ Follow my journey through this new blog.
         <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://example.com/quote/quotes-02/&#34;</span><span class="p">&gt;</span>Quote 2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
-<span class="c">&lt;!--baseof--&gt;</span>
-</code></pre></div>
+<span class="c">&lt;!--baseof--&gt;</span></code></pre></div>
 	</div>
 
 </div>
@@ -524,8 +479,8 @@ Follow my journey through this new blog.
 		
 	
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="cp">{{</span><span class="w"> </span><span class="nx">partial</span><span class="w"> </span><span class="s">&#34;header.html&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">partial</span><span class="w"> </span><span class="s">&#34;header.html&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
 <span class="cp">{{</span><span class="w"> </span><span class="nx">partial</span><span class="w"> </span><span class="s">&#34;subheader.html&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
 <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -538,8 +493,7 @@ Follow my journey through this new blog.
         <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
-<span class="cp">{{</span><span class="w"> </span><span class="nx">partial</span><span class="w"> </span><span class="s">&#34;footer.html&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
-</code></pre></div>
+<span class="cp">{{</span><span class="w"> </span><span class="nx">partial</span><span class="w"> </span><span class="s">&#34;footer.html&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span></code></pre></div>
 	</div>
 
 </div>
@@ -561,8 +515,8 @@ Follow my journey through this new blog.
 		
 	
 	<div class="code-copy-content nt3" id="taxonomy.html">
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="cp">{{</span><span class="w"> </span><span class="nx">define</span><span class="w"> </span><span class="s">&#34;main&#34;</span><span class="w"> </span><span class="cp">}}</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">define</span><span class="w"> </span><span class="s">&#34;main&#34;</span><span class="w"> </span><span class="cp">}}</span>
 <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Title</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
@@ -572,8 +526,7 @@ Follow my journey through this new blog.
     <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-</code></pre></div>
+<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span></code></pre></div>
 	</div>
 
 </div>
@@ -597,16 +550,15 @@ Follow my journey through this new blog.
 		
 	
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.Pages</span><span class="w"> </span><span class="cp">}}</span>
         <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Permalink</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Title</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">time</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Date.Format</span><span class="w"> </span><span class="s">&#34;Mon, Jan 2, 2006&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
         <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</code></pre></div>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
 	</div>
 
 </div>
@@ -629,16 +581,15 @@ Follow my journey through this new blog.
 		
 	
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.Pages.ByWeight</span><span class="w"> </span><span class="cp">}}</span>
         <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Permalink</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Title</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">time</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Date.Format</span><span class="w"> </span><span class="s">&#34;Mon, Jan 2, 2006&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
         <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</code></pre></div>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
 	</div>
 
 </div>
@@ -660,8 +611,8 @@ Follow my journey through this new blog.
 		
 	
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     <span class="c">&lt;!-- orders content according to the &#34;date&#34; field in front matter --&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.Pages.ByDate</span><span class="w"> </span><span class="cp">}}</span>
         <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -669,8 +620,7 @@ Follow my journey through this new blog.
             <span class="p">&lt;</span><span class="nt">time</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Date.Format</span><span class="w"> </span><span class="s">&#34;Mon, Jan 2, 2006&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
         <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</code></pre></div>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
 	</div>
 
 </div>
@@ -692,8 +642,8 @@ Follow my journey through this new blog.
 		
 	
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     <span class="c">&lt;!-- orders content according to the &#34;publishdate&#34; field in front matter --&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.Pages.ByPublishDate</span><span class="w"> </span><span class="cp">}}</span>
         <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -701,8 +651,7 @@ Follow my journey through this new blog.
             <span class="p">&lt;</span><span class="nt">time</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Date.Format</span><span class="w"> </span><span class="s">&#34;Mon, Jan 2, 2006&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
         <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</code></pre></div>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
 	</div>
 
 </div>
@@ -724,16 +673,15 @@ Follow my journey through this new blog.
 		
 	
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.Pages.ByExpiryDate</span><span class="w"> </span><span class="cp">}}</span>
         <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Permalink</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Title</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">time</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Date.Format</span><span class="w"> </span><span class="s">&#34;Mon, Jan 2, 2006&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
         <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</code></pre></div>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
 	</div>
 
 </div>
@@ -755,8 +703,8 @@ Follow my journey through this new blog.
 		
 	
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     <span class="c">&lt;!-- orders content according to the &#34;lastmod&#34; field in front matter --&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.Pages.ByLastmod</span><span class="w"> </span><span class="cp">}}</span>
         <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -764,8 +712,7 @@ Follow my journey through this new blog.
             <span class="p">&lt;</span><span class="nt">time</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Date.Format</span><span class="w"> </span><span class="s">&#34;Mon, Jan 2, 2006&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
         <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</code></pre></div>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
 	</div>
 
 </div>
@@ -787,8 +734,8 @@ Follow my journey through this new blog.
 		
 	
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     <span class="c">&lt;!-- orders content according to content length in ascending order (i.e., the shortest content will be listed first) --&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.Pages.ByLength</span><span class="w"> </span><span class="cp">}}</span>
         <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -796,8 +743,7 @@ Follow my journey through this new blog.
             <span class="p">&lt;</span><span class="nt">time</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Date.Format</span><span class="w"> </span><span class="s">&#34;Mon, Jan 2, 2006&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
         <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</code></pre></div>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
 	</div>
 
 </div>
@@ -819,8 +765,8 @@ Follow my journey through this new blog.
 		
 	
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     <span class="c">&lt;!-- ranges through content in ascending order according to the &#34;title&#34; field set in front matter --&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.Pages.ByTitle</span><span class="w"> </span><span class="cp">}}</span>
         <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -828,8 +774,7 @@ Follow my journey through this new blog.
             <span class="p">&lt;</span><span class="nt">time</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Date.Format</span><span class="w"> </span><span class="s">&#34;Mon, Jan 2, 2006&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
         <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</code></pre></div>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
 	</div>
 
 </div>
@@ -851,8 +796,8 @@ Follow my journey through this new blog.
 		
 	
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     <span class="c">&lt;!-- ranges through content in ascending order according to the &#34;linktitle&#34; field in front matter. If a &#34;linktitle&#34; field is not set, the range will start with content that only has a &#34;title&#34; field and use that value for .LinkTitle --&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.Pages.ByLinkTitle</span><span class="w"> </span><span class="cp">}}</span>
         <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -860,8 +805,7 @@ Follow my journey through this new blog.
             <span class="p">&lt;</span><span class="nt">time</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Date.Format</span><span class="w"> </span><span class="s">&#34;Mon, Jan 2, 2006&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
         <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</code></pre></div>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
 	</div>
 
 </div>
@@ -884,12 +828,11 @@ Follow my journey through this new blog.
 		
 	
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="c">&lt;!-- Ranges through content according to the &#34;rating&#34; field set in front matter --&gt;</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="c">&lt;!-- Ranges through content according to the &#34;rating&#34; field set in front matter --&gt;</span>
 <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="o">(</span><span class="na">.Pages.ByParam</span><span class="w"> </span><span class="s">&#34;rating&#34;</span><span class="o">)</span><span class="w"> </span><span class="cp">}}</span>
   <span class="c">&lt;!-- ... --&gt;</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-</code></pre></div>
+<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span></code></pre></div>
 	</div>
 
 </div>
@@ -911,11 +854,10 @@ Follow my journey through this new blog.
 		
 	
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="o">(</span><span class="na">.Pages.ByParam</span><span class="w"> </span><span class="s">&#34;author.last_name&#34;</span><span class="o">)</span><span class="w"> </span><span class="cp">}}</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="o">(</span><span class="na">.Pages.ByParam</span><span class="w"> </span><span class="s">&#34;author.last_name&#34;</span><span class="o">)</span><span class="w"> </span><span class="cp">}}</span>
   <span class="c">&lt;!-- ... --&gt;</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-</code></pre></div>
+<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span></code></pre></div>
 	</div>
 
 </div>
@@ -938,16 +880,15 @@ Follow my journey through this new blog.
 		
 	
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.Pages.ByDate.Reverse</span><span class="w"> </span><span class="cp">}}</span>
         <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Permalink</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Title</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">time</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Date.Format</span><span class="w"> </span><span class="s">&#34;Mon, Jan 2, 2006&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
         <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</code></pre></div>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
 	</div>
 
 </div>
@@ -971,8 +912,8 @@ Follow my journey through this new blog.
 		
 	
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="c">&lt;!-- Groups content according to content section. The &#34;.Key&#34; in this instance will be the section&#39;s title. --&gt;</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="c">&lt;!-- Groups content according to content section. The &#34;.Key&#34; in this instance will be the section&#39;s title. --&gt;</span>
 <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.Pages.GroupBy</span><span class="w"> </span><span class="s">&#34;Section&#34;</span><span class="w"> </span><span class="cp">}}</span>
 <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Key</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
@@ -983,8 +924,7 @@ Follow my journey through this new blog.
     <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-</code></pre></div>
+<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span></code></pre></div>
 	</div>
 
 </div>
@@ -1006,8 +946,8 @@ Follow my journey through this new blog.
 		
 	
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="c">&lt;!-- Groups content according to content section.--&gt;</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="c">&lt;!-- Groups content according to content section.--&gt;</span>
 <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.Pages.GroupBy</span><span class="w"> </span><span class="s">&#34;Section&#34;</span><span class="w"> </span><span class="cp">}}</span>
 <span class="c">&lt;!-- Checks for existence of _index.md for a section; if available, pulls from &#34;title&#34; in front matter --&gt;</span>
 <span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">$.Site.GetPage</span><span class="w"> </span><span class="s">&#34;section&#34;</span><span class="w"> </span><span class="na">.Key</span><span class="w"> </span><span class="cp">}}</span>
@@ -1024,8 +964,7 @@ Follow my journey through this new blog.
     <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-</code></pre></div>
+<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span></code></pre></div>
 	</div>
 
 </div>
@@ -1047,8 +986,8 @@ Follow my journey through this new blog.
 		
 	
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="c">&lt;!-- Groups content by month according to the &#34;date&#34; field in front matter --&gt;</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="c">&lt;!-- Groups content by month according to the &#34;date&#34; field in front matter --&gt;</span>
 <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.Pages.GroupByDate</span><span class="w"> </span><span class="s">&#34;2006-01&#34;</span><span class="w"> </span><span class="cp">}}</span>
 <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Key</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
@@ -1059,8 +998,7 @@ Follow my journey through this new blog.
     <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-</code></pre></div>
+<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span></code></pre></div>
 	</div>
 
 </div>
@@ -1082,8 +1020,8 @@ Follow my journey through this new blog.
 		
 	
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="c">&lt;!-- Groups content by month according to the &#34;publishDate&#34; field in front matter --&gt;</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="c">&lt;!-- Groups content by month according to the &#34;publishDate&#34; field in front matter --&gt;</span>
 <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.Pages.GroupByPublishDate</span><span class="w"> </span><span class="s">&#34;2006-01&#34;</span><span class="w"> </span><span class="cp">}}</span>
 <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Key</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
@@ -1094,8 +1032,7 @@ Follow my journey through this new blog.
     <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-</code></pre></div>
+<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span></code></pre></div>
 	</div>
 
 </div>
@@ -1117,8 +1054,8 @@ Follow my journey through this new blog.
 		
 	
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="c">&lt;!-- Groups content by month according to the &#34;lastMod&#34; field in front matter --&gt;</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="c">&lt;!-- Groups content by month according to the &#34;lastMod&#34; field in front matter --&gt;</span>
 <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.Pages.GroupByLastmod</span><span class="w"> </span><span class="s">&#34;2006-01&#34;</span><span class="w"> </span><span class="cp">}}</span>
 <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Key</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
@@ -1129,8 +1066,7 @@ Follow my journey through this new blog.
     <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-</code></pre></div>
+<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span></code></pre></div>
 	</div>
 
 </div>
@@ -1152,8 +1088,8 @@ Follow my journey through this new blog.
 		
 	
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="c">&lt;!-- Groups content by month according to the &#34;expiryDate&#34; field in front matter --&gt;</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="c">&lt;!-- Groups content by month according to the &#34;expiryDate&#34; field in front matter --&gt;</span>
 <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.Pages.GroupByExpiryDate</span><span class="w"> </span><span class="s">&#34;2006-01&#34;</span><span class="w"> </span><span class="cp">}}</span>
 <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Key</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
@@ -1164,8 +1100,7 @@ Follow my journey through this new blog.
     <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-</code></pre></div>
+<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span></code></pre></div>
 	</div>
 
 </div>
@@ -1187,8 +1122,8 @@ Follow my journey through this new blog.
 		
 	
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="c">&lt;!-- Groups content according to the &#34;param_key&#34; field in front matter --&gt;</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="c">&lt;!-- Groups content according to the &#34;param_key&#34; field in front matter --&gt;</span>
 <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.Pages.GroupByParam</span><span class="w"> </span><span class="s">&#34;param_key&#34;</span><span class="w"> </span><span class="cp">}}</span>
 <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Key</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
@@ -1199,8 +1134,7 @@ Follow my journey through this new blog.
     <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-</code></pre></div>
+<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span></code></pre></div>
 	</div>
 
 </div>
@@ -1223,8 +1157,8 @@ Follow my journey through this new blog.
 		
 	
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="c">&lt;!-- Groups content by month according to the &#34;param_key&#34; field in front matter --&gt;</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="c">&lt;!-- Groups content by month according to the &#34;param_key&#34; field in front matter --&gt;</span>
 <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.Pages.GroupByParamDate</span><span class="w"> </span><span class="s">&#34;param_key&#34;</span><span class="w"> </span><span class="s">&#34;2006-01&#34;</span><span class="w"> </span><span class="cp">}}</span>
 <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Key</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
@@ -1235,8 +1169,7 @@ Follow my journey through this new blog.
     <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-</code></pre></div>
+<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span></code></pre></div>
 	</div>
 
 </div>
@@ -1274,8 +1207,8 @@ Follow my journey through this new blog.
 		
 	
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.Pages.GroupByDate</span><span class="w"> </span><span class="s">&#34;2006-01&#34;</span><span class="w"> </span><span class="s">&#34;asc&#34;</span><span class="w"> </span><span class="cp">}}</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.Pages.GroupByDate</span><span class="w"> </span><span class="s">&#34;2006-01&#34;</span><span class="w"> </span><span class="s">&#34;asc&#34;</span><span class="w"> </span><span class="cp">}}</span>
 <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Key</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.Pages.ByTitle</span><span class="w"> </span><span class="cp">}}</span>
@@ -1285,8 +1218,7 @@ Follow my journey through this new blog.
     <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-</code></pre></div>
+<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span></code></pre></div>
 	</div>
 
 </div>
@@ -1804,11 +1736,6 @@ on the blog&rsquo;s homepage.</p>
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/dateformat/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              dateFormat
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/functions/default/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               default
             </a>
@@ -1959,13 +1886,13 @@ on the blog&rsquo;s homepage.</p>
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/lang.merge/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              lang.Merge
+            <a href="/functions/lang/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              lang
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/numfmt/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              lang.NumFmt
+            <a href="/functions/lang.merge/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              lang.Merge
             </a>
           </li>
           <li class="f6 fw4">
@@ -2276,6 +2203,11 @@ on the blog&rsquo;s homepage.</p>
           <li class="f6 fw4">
             <a href="/functions/time/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               time
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/dateformat/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              time.Format
             </a>
           </li>
           <li class="f6 fw4">
@@ -2654,7 +2586,7 @@ on the blog&rsquo;s homepage.</p>
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “Lists of Content in Hugo”
-  </a> was last updated: March 28, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/532f9a0fd13d8a37929738c4283d1915ed574604">Merge pull request #78 from blackb1rd/hugo/v0.82.0 (532f9a0)</a>
+  </a> was last updated: August 28, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/05d39469b1e013009b72f318d2ddfc1d8a48b2ad">Fix build release error (05d3946)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/templates/lists.md" class="

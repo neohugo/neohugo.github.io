@@ -13,7 +13,7 @@
   <title>Site Variables | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.83.0-DEV" />
+  <meta name="generator" content="Hugo 0.88.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -26,7 +26,7 @@
   
   
   
-  <link rel="stylesheet" href="/output/css/app.min.08ecdd35eb5e6bdccdcc93919eda97a6b87211c44eff7f4bea3c5b0aba3d2e0b.css" integrity="sha256-COzdNetea9zNzJORntqXprhyEcRO/39L6jxbCro9Lgs=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/output/css/app.min.bab83909a2f2fe2aa45bf7e4813899f4f705e6858479cea5bd48eee72fdf0a70.css" integrity="sha256-urg5CaLy/iqkW/fkgTiZ9PcF5oWEec6lvUju5y/fCnA=" crossorigin="anonymous">
   
   
   
@@ -61,13 +61,13 @@
 <meta property="og:description" content="Many, but not all, site-wide variables are defined in your site&#39;s configuration. However, Hugo provides a number of built-in variables for convenient access to global values in your templates." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/variables/site/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="variables" />
-<meta property="article:published_time" content="2017-02-01T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-28T21:54:32&#43;07:00" />
+<meta property="article:published_time" content="2017-02-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-08-28T21:58:58+07:00" />
 
 <meta itemprop="name" content="Site Variables">
-<meta itemprop="description" content="Many, but not all, site-wide variables are defined in your site&#39;s configuration. However, Hugo provides a number of built-in variables for convenient access to global values in your templates."><meta itemprop="datePublished" content="2017-02-01T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-03-28T21:54:32&#43;07:00" />
-<meta itemprop="wordCount" content="725"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="description" content="Many, but not all, site-wide variables are defined in your site&#39;s configuration. However, Hugo provides a number of built-in variables for convenient access to global values in your templates."><meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-08-28T21:58:58+07:00" />
+<meta itemprop="wordCount" content="727"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
 
@@ -170,10 +170,9 @@
     <div class="db dib-ns pl3"><form id="site-search-form" action="" role="search">
   <fieldset class="bn ma0 pa0">
     <label class="clip" for="search-input">Search</label>
-    <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: transparent url('/images/icon-search.png') no-repeat 0 8px /16px 16px;">
+    <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: url('/images/icon-search.png') 5px 11px/16px 16px no-repeat; background-color: rgba(255,255,255,0);">
   </fieldset>
-</form>
-</div>
+</form></div>
 
     <span class="absolute mt1 mt2-l pr3 right-0 top-0">
 
@@ -202,16 +201,8 @@
   <ul>
     <li><a href="#get-the-site-object-from-a-partial">Get the Site object from a partial</a></li>
     <li><a href="#site-variables-list">Site Variables List</a></li>
-    <li><a href="#the-siteparams-variable">The <code>.Site.Params</code> Variable</a>
-      <ul>
-        <li><a href="#example-siteparams">Example: <code>.Site.Params</code></a></li>
-      </ul>
-    </li>
-    <li><a href="#site-pages">The <code>.Site.Pages</code> Variable</a>
-      <ul>
-        <li><a href="#sitepages-compared-to-pages"><code>.Site.Pages</code> compared to <code>.Pages</code></a></li>
-      </ul>
-    </li>
+    <li><a href="#the-siteparams-variable">The <code>.Site.Params</code> Variable</a></li>
+    <li><a href="#site-pages">The <code>.Site.Pages</code> Variable</a></li>
   </ul>
 </nav>
 	
@@ -264,7 +255,7 @@
 
 <p>The following is a list of site-level (aka &ldquo;global&rdquo;) variables. Many of these variables are defined in your site&rsquo;s <a href="/getting-started/configuration/">configuration file</a>, whereas others are built into Hugo&rsquo;s core for convenient usage in your templates.</p>
 <h2 id="get-the-site-object-from-a-partial">Get the Site object from a partial <a class="header-link" href="#get-the-site-object-from-a-partial"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>All the methods below, e.g. <code>.Site.RegularPages</code> can also be reached via the global <code>site</code> function, e.g. <code>site.RegularPages</code>, which can be handy in partials where the <code>Page</code> object isn&rsquo;t easily available. 
+<p>All the methods below, e.g. <code>.Site.RegularPages</code> can also be reached via the global <a href="/functions/site/"><code>site</code></a> function, e.g. <code>site.RegularPages</code>, which can be handy in partials where the <code>Page</code> object isn&rsquo;t easily available. 
 
 
 <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
@@ -319,7 +310,7 @@
 <dt>.Site.Sections</dt>
 <dd>top-level directories of the site.</dd>
 <dt>.Site.Taxonomies</dt>
-<dd>the <a href="/taxonomies/usage/">taxonomies</a> for the entire site.  Also see section <a href="#taxonomies-elsewhere">Taxonomies elsewhere</a>.</dd>
+<dd>the <a href="/taxonomies/usage/">taxonomies</a> for the entire site. Also see section <a href="/variables/taxonomy/#use-sitetaxonomies-outside-of-taxonomy-templates">Use <code>.Site.Taxonomies</code> Outside of Taxonomy Templates</a>.</dd>
 <dt>.Site.Title</dt>
 <dd>a string representing the title of the site.</dd>
 </dl>
@@ -330,49 +321,58 @@
 
 
 
-
+  
 
 
 <div class="code relative" id="config">
-	<div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
-			<button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">yaml</button>&nbsp;
-		
-			<button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">toml</button>&nbsp;
-		
-			<button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">json</button>&nbsp;
-		
-	</div>
-	<div class="tab-content">
-		
-			<div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-				<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">baseURL</span><span class="p">:</span><span class="w"> </span><span class="l">https://yoursite.example.com/</span><span class="w">
+  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
+        config.
+      </div>
+      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
+        yaml
+      </button>
+      &nbsp;
+    
+      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        toml
+      </button>
+      &nbsp;
+    
+      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        json
+      </button>
+      &nbsp;
+    
+  </div>
+  <div class="tab-content">
+    
+      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">baseURL</span><span class="p">:</span><span class="w"> </span><span class="l">https://yoursite.example.com/</span><span class="w">
 </span><span class="w"></span><span class="nt">params</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">author</span><span class="p">:</span><span class="w"> </span><span class="l">Nikola Tesla</span><span class="w">
 </span><span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l">Tesla&#39;s Awesome Hugo Site</span><span class="w">
 </span></code></pre></div>
-			</div>
-			
-				<button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-				</button>
-				
-			
-		
-			<div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-				<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;https://yoursite.example.com/&#34;</span>
-
+      </div>
+      
+        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
+        
+      
+    
+      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s1">&#39;https://yoursite.example.com/&#39;</span>
 <span class="p">[</span><span class="nx">params</span><span class="p">]</span>
-  <span class="nx">author</span> <span class="p">=</span> <span class="s2">&#34;Nikola Tesla&#34;</span>
-  <span class="nx">description</span> <span class="p">=</span> <span class="s2">&#34;Tesla&#39;s Awesome Hugo Site&#34;</span>
+<span class="nx">author</span> <span class="p">=</span> <span class="s1">&#39;Nikola Tesla&#39;</span>
+<span class="nx">description</span> <span class="p">=</span> <span class="s2">&#34;Tesla&#39;s Awesome Hugo Site&#34;</span>
+
 </code></pre></div>
-			</div>
-			
-				<button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-				</button>
-				
-			
-		
-			<div data-pane="json" class="code-copy-content nt3 tab-pane ">
-				<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+      </div>
+      
+        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
+        
+      
+    
+      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;baseURL&#34;</span><span class="p">:</span> <span class="s2">&#34;https://yoursite.example.com/&#34;</span><span class="p">,</span>
    <span class="nt">&#34;params&#34;</span><span class="p">:</span> <span class="p">{</span>
       <span class="nt">&#34;author&#34;</span><span class="p">:</span> <span class="s2">&#34;Nikola Tesla&#34;</span><span class="p">,</span>
@@ -380,15 +380,14 @@
    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-			</div>
-			
-				<button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-				</button>
-				
-			
-		
-	</div>
-
+      </div>
+      
+        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
+        
+      
+    
+  </div>
+  
 </div>
 
 <p>You can use <code>.Site.Params</code> in a <a href="/templates/partials/">partial template</a> to call the default site description:</p>
@@ -408,9 +407,8 @@
 		
 	
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;description&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="k">if</span><span class="w"> </span><span class="na">.IsHome</span><span class="cp">}}{{</span><span class="w"> </span><span class="na">$.Site.Params.description</span><span class="w"> </span><span class="cp">}}{{</span><span class="k">else</span><span class="cp">}}{{</span><span class="na">.Description</span><span class="cp">}}{{</span><span class="k">end</span><span class="cp">}}</span><span class="s">&#34;</span> <span class="p">/&gt;</span>
-</code></pre></div>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;description&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="k">if</span><span class="w"> </span><span class="na">.IsHome</span><span class="cp">}}{{</span><span class="w"> </span><span class="na">$.Site.Params.description</span><span class="w"> </span><span class="cp">}}{{</span><span class="k">else</span><span class="cp">}}{{</span><span class="na">.Description</span><span class="cp">}}{{</span><span class="k">end</span><span class="cp">}}</span><span class="s">&#34;</span> <span class="p">/&gt;</span></code></pre></div>
 	</div>
 
 </div>
@@ -450,14 +448,17 @@ section pages under the current <em>list</em> page.</dd>
 <dd>Collection of only <em>regular</em> pages under the
 current <em>list</em> page. This <strong>excludes</strong> regular pages in nested sections/<em>list</em> pages (those are subdirectories with an <code>_index.md</code> file.</dd>
 <dt><code>.RegularPagesRecursive</code></dt>
-<dd>Collection of <strong>all</strong> <em>regular</em> pages under a <em>list</em> page. This <strong>includes</strong> regular pages in nested sections/<em>list</em> pages.</dd>
-</dl>
-<p>This feature was added in Hugo version 0.68.0</p>
-<dl>
+<dd>
+
+
+<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
+    <a href="https://gohugo.io/news/0.68.0-relnotes/" target="_blank">New in v0.68.0</a>
+</button> Collection of <strong>all</strong> <em>regular</em> pages under a <em>list</em> page. This <strong>includes</strong> regular pages in nested sections/<em>list</em> pages.</dd>
 <dt>Note</dt>
 <dd>From the scope of <em>regular</em> pages, <code>.Pages</code> and
 <code>.RegularPages</code> return an empty slice.</dd>
 </dl>
+
 
 
 </div>
@@ -951,11 +952,6 @@ current <em>list</em> page. This <strong>excludes</strong> regular pages in nest
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/dateformat/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              dateFormat
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/functions/default/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               default
             </a>
@@ -1106,13 +1102,13 @@ current <em>list</em> page. This <strong>excludes</strong> regular pages in nest
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/lang.merge/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              lang.Merge
+            <a href="/functions/lang/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              lang
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/numfmt/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              lang.NumFmt
+            <a href="/functions/lang.merge/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              lang.Merge
             </a>
           </li>
           <li class="f6 fw4">
@@ -1423,6 +1419,11 @@ current <em>list</em> page. This <strong>excludes</strong> regular pages in nest
           <li class="f6 fw4">
             <a href="/functions/time/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               time
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/dateformat/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              time.Format
             </a>
           </li>
           <li class="f6 fw4">
@@ -1801,7 +1802,7 @@ current <em>list</em> page. This <strong>excludes</strong> regular pages in nest
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “Site Variables”
-  </a> was last updated: March 28, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/532f9a0fd13d8a37929738c4283d1915ed574604">Merge pull request #78 from blackb1rd/hugo/v0.82.0 (532f9a0)</a>
+  </a> was last updated: August 28, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/05d39469b1e013009b72f318d2ddfc1d8a48b2ad">Fix build release error (05d3946)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/variables/site.md" class="

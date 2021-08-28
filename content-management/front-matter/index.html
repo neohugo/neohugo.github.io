@@ -13,7 +13,7 @@
   <title>Front Matter | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.83.0-DEV" />
+  <meta name="generator" content="Hugo 0.88.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -26,7 +26,7 @@
   
   
   
-  <link rel="stylesheet" href="/output/css/app.min.08ecdd35eb5e6bdccdcc93919eda97a6b87211c44eff7f4bea3c5b0aba3d2e0b.css" integrity="sha256-COzdNetea9zNzJORntqXprhyEcRO/39L6jxbCro9Lgs=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/output/css/app.min.bab83909a2f2fe2aa45bf7e4813899f4f705e6858479cea5bd48eee72fdf0a70.css" integrity="sha256-urg5CaLy/iqkW/fkgTiZ9PcF5oWEec6lvUju5y/fCnA=" crossorigin="anonymous">
   
   
   
@@ -61,13 +61,13 @@
 <meta property="og:description" content="Hugo allows you to add front matter in yaml, toml, or json to your content files." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/content-management/front-matter/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="content-management" />
-<meta property="article:published_time" content="2017-01-09T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-28T21:54:32&#43;07:00" />
+<meta property="article:published_time" content="2017-01-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-08-28T21:58:58+07:00" />
 
 <meta itemprop="name" content="Front Matter">
-<meta itemprop="description" content="Hugo allows you to add front matter in yaml, toml, or json to your content files."><meta itemprop="datePublished" content="2017-01-09T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-03-28T21:54:32&#43;07:00" />
-<meta itemprop="wordCount" content="1328"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="description" content="Hugo allows you to add front matter in yaml, toml, or json to your content files."><meta itemprop="datePublished" content="2017-01-09T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-08-28T21:58:58+07:00" />
+<meta itemprop="wordCount" content="1340"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
 
@@ -170,10 +170,9 @@
     <div class="db dib-ns pl3"><form id="site-search-form" action="" role="search">
   <fieldset class="bn ma0 pa0">
     <label class="clip" for="search-input">Search</label>
-    <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: transparent url('/images/icon-search.png') no-repeat 0 8px /16px 16px;">
+    <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: url('/images/icon-search.png') 5px 11px/16px 16px no-repeat; background-color: rgba(255,255,255,0);">
   </fieldset>
-</form>
-</div>
+</form></div>
 
     <span class="absolute mt1 mt2-l pr3 right-0 top-0">
 
@@ -200,23 +199,9 @@
 		<p class="b">What's on this Page</p>
   	<nav id="TableOfContents">
   <ul>
-    <li><a href="#front-matter-formats">Front Matter Formats</a>
-      <ul>
-        <li><a href="#example">Example</a></li>
-      </ul>
-    </li>
-    <li><a href="#front-matter-variables">Front Matter Variables</a>
-      <ul>
-        <li><a href="#predefined">Predefined</a></li>
-        <li><a href="#user-defined">User-Defined</a></li>
-      </ul>
-    </li>
-    <li><a href="#front-matter-cascade">Front Matter Cascade</a>
-      <ul>
-        <li><a href="#target-specific-pages">Target Specific Pages</a></li>
-        <li><a href="#example-1">Example</a></li>
-      </ul>
-    </li>
+    <li><a href="#front-matter-formats">Front Matter Formats</a></li>
+    <li><a href="#front-matter-variables">Front Matter Variables</a></li>
+    <li><a href="#front-matter-cascade">Front Matter Cascade</a></li>
     <li><a href="#order-content-through-front-matter">Order Content Through Front Matter</a></li>
     <li><a href="#override-global-markdown-configuration">Override Global Markdown Configuration</a></li>
     <li><a href="#front-matter-format-specs">Front Matter Format Specs</a></li>
@@ -301,22 +286,31 @@ Keyword values can be either strings (<code>#+KEY: VALUE</code>) or a whitespace
 
 
 
-
+  
 
 
 <div class="code relative" >
-	<div class="code-nav flex flex-nowrap items-stretch">
-			<button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">yaml</button>&nbsp;
-		
-			<button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">toml</button>&nbsp;
-		
-			<button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">json</button>&nbsp;
-		
-	</div>
-	<div class="tab-content">
-		
-			<div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-				<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">categories</span><span class="p">:</span><span class="w">
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
+        yaml
+      </button>
+      &nbsp;
+    
+      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        toml
+      </button>
+      &nbsp;
+    
+      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        json
+      </button>
+      &nbsp;
+    
+  </div>
+  <div class="tab-content">
+    
+      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">categories</span><span class="p">:</span><span class="w">
 </span><span class="w"></span>- <span class="l">Development</span><span class="w">
 </span><span class="w"></span>- <span class="l">VIM</span><span class="w">
 </span><span class="w"></span><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;2012-04-06&#34;</span><span class="w">
@@ -330,30 +324,28 @@ Keyword values can be either strings (<code>#+KEY: VALUE</code>) or a whitespace
 </span><span class="w"></span>- <span class="l">vim</span><span class="w">
 </span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">spf13-vim 3.0 release and new website</span><span class="w">
 </span></code></pre></div>
-			</div>
-			
-				<button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-				</button>
-				
-			
-		
-			<div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-				<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">categories</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;Development&#34;</span><span class="p">,</span> <span class="s2">&#34;VIM&#34;</span><span class="p">]</span>
-<span class="nx">date</span> <span class="p">=</span> <span class="s2">&#34;2012-04-06&#34;</span>
-<span class="nx">description</span> <span class="p">=</span> <span class="s2">&#34;spf13-vim is a cross platform distribution of vim plugins and resources for Vim.&#34;</span>
-<span class="nx">slug</span> <span class="p">=</span> <span class="s2">&#34;spf13-vim-3-0-release-and-new-website&#34;</span>
-<span class="nx">tags</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;.vimrc&#34;</span><span class="p">,</span> <span class="s2">&#34;plugins&#34;</span><span class="p">,</span> <span class="s2">&#34;spf13-vim&#34;</span><span class="p">,</span> <span class="s2">&#34;vim&#34;</span><span class="p">]</span>
-<span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;spf13-vim 3.0 release and new website&#34;</span>
+      </div>
+      
+        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
+        
+      
+    
+      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">categories</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;Development&#39;</span><span class="p">,</span> <span class="s1">&#39;VIM&#39;</span><span class="p">]</span>
+<span class="nx">date</span> <span class="p">=</span> <span class="s1">&#39;2012-04-06&#39;</span>
+<span class="nx">description</span> <span class="p">=</span> <span class="s1">&#39;spf13-vim is a cross platform distribution of vim plugins and resources for Vim.&#39;</span>
+<span class="nx">slug</span> <span class="p">=</span> <span class="s1">&#39;spf13-vim-3-0-release-and-new-website&#39;</span>
+<span class="nx">tags</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;.vimrc&#39;</span><span class="p">,</span> <span class="s1">&#39;plugins&#39;</span><span class="p">,</span> <span class="s1">&#39;spf13-vim&#39;</span><span class="p">,</span> <span class="s1">&#39;vim&#39;</span><span class="p">]</span>
+<span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;spf13-vim 3.0 release and new website&#39;</span>
 </code></pre></div>
-			</div>
-			
-				<button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-				</button>
-				
-			
-		
-			<div data-pane="json" class="code-copy-content nt3 tab-pane ">
-				<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+      </div>
+      
+        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
+        
+      
+    
+      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;categories&#34;</span><span class="p">:</span> <span class="p">[</span>
       <span class="s2">&#34;Development&#34;</span><span class="p">,</span>
       <span class="s2">&#34;VIM&#34;</span>
@@ -370,15 +362,14 @@ Keyword values can be either strings (<code>#+KEY: VALUE</code>) or a whitespace
    <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;spf13-vim 3.0 release and new website&#34;</span>
 <span class="p">}</span>
 </code></pre></div>
-			</div>
-			
-				<button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-				</button>
-				
-			
-		
-	</div>
-
+      </div>
+      
+        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
+        
+      
+    
+  </div>
+  
 </div>
 
 <h2 id="front-matter-variables">Front Matter Variables <a class="header-link" href="#front-matter-variables"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
@@ -458,45 +449,54 @@ the multilingual feature.</dd>
 
 
 
-
+  
 
 
 <div class="code relative" >
-	<div class="code-nav flex flex-nowrap items-stretch">
-			<button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">yaml</button>&nbsp;
-		
-			<button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">toml</button>&nbsp;
-		
-			<button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">json</button>&nbsp;
-		
-	</div>
-	<div class="tab-content">
-		
-			<div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-				<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">include_toc</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
+        yaml
+      </button>
+      &nbsp;
+    
+      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        toml
+      </button>
+      &nbsp;
+    
+      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        json
+      </button>
+      &nbsp;
+    
+  </div>
+  <div class="tab-content">
+    
+      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">include_toc</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span><span class="w"></span><span class="nt">show_comments</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span></code></pre></div>
-			</div>
-			
-		
-			<div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-				<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">include_toc</span> <span class="p">=</span> <span class="kc">true</span>
+      </div>
+      
+    
+      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">include_toc</span> <span class="p">=</span> <span class="kc">true</span>
 <span class="nx">show_comments</span> <span class="p">=</span> <span class="kc">false</span>
 </code></pre></div>
-			</div>
-			
-		
-			<div data-pane="json" class="code-copy-content nt3 tab-pane ">
-				<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+      </div>
+      
+    
+      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;include_toc&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
    <span class="nt">&#34;show_comments&#34;</span><span class="p">:</span> <span class="kc">false</span>
 <span class="p">}</span>
 </code></pre></div>
-			</div>
-			
-		
-	</div>
-
+      </div>
+      
+    
+  </div>
+  
 </div>
 
 <h2 id="front-matter-cascade">Front Matter Cascade <a class="header-link" href="#front-matter-cascade"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
@@ -512,22 +512,31 @@ the multilingual feature.</dd>
 
 
 
-
+  
 
 
 <div class="code relative" >
-	<div class="code-nav flex flex-nowrap items-stretch">
-			<button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">yaml</button>&nbsp;
-		
-			<button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">toml</button>&nbsp;
-		
-			<button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">json</button>&nbsp;
-		
-	</div>
-	<div class="tab-content">
-		
-			<div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-				<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">cascade</span><span class="p">:</span><span class="w">
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
+        yaml
+      </button>
+      &nbsp;
+    
+      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        toml
+      </button>
+      &nbsp;
+    
+      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        json
+      </button>
+      &nbsp;
+    
+  </div>
+  <div class="tab-content">
+    
+      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">cascade</span><span class="p">:</span><span class="w">
 </span><span class="w"></span>- <span class="nt">_target</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">page</span><span class="w">
 </span><span class="w">    </span><span class="nt">lang</span><span class="p">:</span><span class="w"> </span><span class="l">en</span><span class="w">
@@ -538,29 +547,30 @@ the multilingual feature.</dd>
 </span><span class="w">  </span><span class="nt">background</span><span class="p">:</span><span class="w"> </span><span class="l">goldenbridge.jpg</span><span class="w">
 </span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">Blog</span><span class="w">
 </span></code></pre></div>
-			</div>
-			
-		
-			<div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-				<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Blog&#34;</span>
+      </div>
+      
+    
+      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;Blog&#39;</span>
+<span class="p">[[</span><span class="nx">cascade</span><span class="p">]]</span>
+<span class="nx">background</span> <span class="p">=</span> <span class="s1">&#39;yosemite.jpg&#39;</span>
+<span class="p">[</span><span class="nx">cascade</span><span class="p">.</span><span class="nx">_target</span><span class="p">]</span>
+<span class="nx">kind</span> <span class="p">=</span> <span class="s1">&#39;page&#39;</span>
+<span class="nx">lang</span> <span class="p">=</span> <span class="s1">&#39;en&#39;</span>
+<span class="nx">path</span> <span class="p">=</span> <span class="s1">&#39;/blog/**&#39;</span>
 
 <span class="p">[[</span><span class="nx">cascade</span><span class="p">]]</span>
-  <span class="nx">background</span> <span class="p">=</span> <span class="s2">&#34;yosemite.jpg&#34;</span>
-  <span class="p">[</span><span class="nx">cascade</span><span class="p">.</span><span class="nx">_target</span><span class="p">]</span>
-    <span class="nx">kind</span> <span class="p">=</span> <span class="s2">&#34;page&#34;</span>
-    <span class="nx">lang</span> <span class="p">=</span> <span class="s2">&#34;en&#34;</span>
-    <span class="nx">path</span> <span class="p">=</span> <span class="s2">&#34;/blog/**&#34;</span>
+<span class="nx">background</span> <span class="p">=</span> <span class="s1">&#39;goldenbridge.jpg&#39;</span>
+<span class="p">[</span><span class="nx">cascade</span><span class="p">.</span><span class="nx">_target</span><span class="p">]</span>
+<span class="nx">kind</span> <span class="p">=</span> <span class="s1">&#39;section&#39;</span>
 
-<span class="p">[[</span><span class="nx">cascade</span><span class="p">]]</span>
-  <span class="nx">background</span> <span class="p">=</span> <span class="s2">&#34;goldenbridge.jpg&#34;</span>
-  <span class="p">[</span><span class="nx">cascade</span><span class="p">.</span><span class="nx">_target</span><span class="p">]</span>
-    <span class="nx">kind</span> <span class="p">=</span> <span class="s2">&#34;section&#34;</span>
+
 </code></pre></div>
-			</div>
-			
-		
-			<div data-pane="json" class="code-copy-content nt3 tab-pane ">
-				<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+      </div>
+      
+    
+      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;cascade&#34;</span><span class="p">:</span> <span class="p">[</span>
       <span class="p">{</span>
          <span class="nt">&#34;_target&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -580,11 +590,11 @@ the multilingual feature.</dd>
    <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;Blog&#34;</span>
 <span class="p">}</span>
 </code></pre></div>
-			</div>
-			
-		
-	</div>
-
+      </div>
+      
+    
+  </div>
+  
 </div>
 
 <p>Keywords available for <code>_target</code>:</p>
@@ -602,50 +612,59 @@ the multilingual feature.</dd>
 
 
 
-
+  
 
 
 <div class="code relative" >
-	<div class="code-nav flex flex-nowrap items-stretch">
-			<button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">yaml</button>&nbsp;
-		
-			<button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">toml</button>&nbsp;
-		
-			<button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">json</button>&nbsp;
-		
-	</div>
-	<div class="tab-content">
-		
-			<div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-				<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">cascade</span><span class="p">:</span><span class="w">
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
+        yaml
+      </button>
+      &nbsp;
+    
+      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        toml
+      </button>
+      &nbsp;
+    
+      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        json
+      </button>
+      &nbsp;
+    
+  </div>
+  <div class="tab-content">
+    
+      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">cascade</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">banner</span><span class="p">:</span><span class="w"> </span><span class="l">images/typewriter.jpg</span><span class="w">
 </span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">Blog</span><span class="w">
 </span></code></pre></div>
-			</div>
-			
-		
-			<div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-				<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Blog&#34;</span>
-
+      </div>
+      
+    
+      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;Blog&#39;</span>
 <span class="p">[</span><span class="nx">cascade</span><span class="p">]</span>
-  <span class="nx">banner</span> <span class="p">=</span> <span class="s2">&#34;images/typewriter.jpg&#34;</span>
+<span class="nx">banner</span> <span class="p">=</span> <span class="s1">&#39;images/typewriter.jpg&#39;</span>
+
 </code></pre></div>
-			</div>
-			
-		
-			<div data-pane="json" class="code-copy-content nt3 tab-pane ">
-				<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+      </div>
+      
+    
+      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;cascade&#34;</span><span class="p">:</span> <span class="p">{</span>
       <span class="nt">&#34;banner&#34;</span><span class="p">:</span> <span class="s2">&#34;images/typewriter.jpg&#34;</span>
    <span class="p">},</span>
    <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;Blog&#34;</span>
 <span class="p">}</span>
 </code></pre></div>
-			</div>
-			
-		
-	</div>
-
+      </div>
+      
+    
+  </div>
+  
 </div>
 
 <p>With the above example the Blog section page and its descendents will return <code>images/typewriter.jpg</code> when <code>.Params.banner</code> is invoked unless:</p>
@@ -1170,11 +1189,6 @@ the multilingual feature.</dd>
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/dateformat/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              dateFormat
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/functions/default/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               default
             </a>
@@ -1325,13 +1339,13 @@ the multilingual feature.</dd>
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/lang.merge/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              lang.Merge
+            <a href="/functions/lang/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              lang
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/numfmt/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              lang.NumFmt
+            <a href="/functions/lang.merge/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              lang.Merge
             </a>
           </li>
           <li class="f6 fw4">
@@ -1642,6 +1656,11 @@ the multilingual feature.</dd>
           <li class="f6 fw4">
             <a href="/functions/time/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               time
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/dateformat/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              time.Format
             </a>
           </li>
           <li class="f6 fw4">
@@ -2020,7 +2039,7 @@ the multilingual feature.</dd>
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “Front Matter”
-  </a> was last updated: March 28, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/532f9a0fd13d8a37929738c4283d1915ed574604">Merge pull request #78 from blackb1rd/hugo/v0.82.0 (532f9a0)</a>
+  </a> was last updated: August 28, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/05d39469b1e013009b72f318d2ddfc1d8a48b2ad">Fix build release error (05d3946)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/content-management/front-matter.md" class="

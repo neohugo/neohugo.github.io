@@ -13,7 +13,7 @@
   <title>Hugo 0.50: Errors so Good, You’ll Want to Fail! | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.83.0-DEV" />
+  <meta name="generator" content="Hugo 0.88.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -26,7 +26,7 @@
   
   
   
-  <link rel="stylesheet" href="/output/css/app.min.08ecdd35eb5e6bdccdcc93919eda97a6b87211c44eff7f4bea3c5b0aba3d2e0b.css" integrity="sha256-COzdNetea9zNzJORntqXprhyEcRO/39L6jxbCro9Lgs=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/output/css/app.min.bab83909a2f2fe2aa45bf7e4813899f4f705e6858479cea5bd48eee72fdf0a70.css" integrity="sha256-urg5CaLy/iqkW/fkgTiZ9PcF5oWEec6lvUju5y/fCnA=" crossorigin="anonymous">
   
   
   
@@ -61,12 +61,12 @@
 <meta property="og:description" content="Errors with full filename and line and column number, shown in browser. And improved Fast Render Mode …" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/news/0.50-relnotes/" /><meta property="og:image" content="https://gohugo.io/news/0.50-relnotes/featured-hugo-50-poster.png"/><meta property="article:section" content="news" />
-<meta property="article:published_time" content="2018-10-29T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-28T21:54:32&#43;07:00" />
+<meta property="article:published_time" content="2018-10-29T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-08-28T21:58:58+07:00" />
 
 <meta itemprop="name" content="Hugo 0.50: Errors so Good, You’ll Want to Fail!">
-<meta itemprop="description" content="Errors with full filename and line and column number, shown in browser. And improved Fast Render Mode …"><meta itemprop="datePublished" content="2018-10-29T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-03-28T21:54:32&#43;07:00" />
+<meta itemprop="description" content="Errors with full filename and line and column number, shown in browser. And improved Fast Render Mode …"><meta itemprop="datePublished" content="2018-10-29T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-08-28T21:58:58+07:00" />
 <meta itemprop="wordCount" content="1024"><meta itemprop="image" content="https://gohugo.io/news/0.50-relnotes/featured-hugo-50-poster.png">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/news/0.50-relnotes/featured-hugo-50-poster.png"/>
@@ -169,10 +169,9 @@
     <div class="db dib-ns pl3"><form id="site-search-form" action="" role="search">
   <fieldset class="bn ma0 pa0">
     <label class="clip" for="search-input">Search</label>
-    <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: transparent url('/images/icon-search.png') no-repeat 0 8px /16px 16px;">
+    <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: url('/images/icon-search.png') 5px 11px/16px 16px no-repeat; background-color: rgba(255,255,255,0);">
   </fieldset>
-</form>
-</div>
+</form></div>
 
     <span class="absolute mt1 mt2-l pr3 right-0 top-0">
 
@@ -260,11 +259,11 @@
           
           
           
-          <img src="/news/0.50-relnotes/featured-hugo-50-poster_hudcbbb9a5a0079d08447101e6cfae6e40_227240_480x0_resize_catmullrom_2.png" alt="Featured Image for Hugo 0.50: Errors so Good, You’ll Want to Fail!" class="mw-100">
+          <img src="/news/0.50-relnotes/featured-hugo-50-poster_hudcbbb9a5a0079d08447101e6cfae6e40_227240_480x0_resize_catmullrom_3.png" alt="Featured Image for Hugo 0.50: Errors so Good, You’ll Want to Fail!" class="mw-100">
           
           
         <p>Hugo <code>0.50</code> brings <strong>greatly improved error messages</strong>, and we now also show them in the browser. Having error messages with filename, line- and column number greatly simplify troubleshooting. Many editors (like VS Code) even let you click and navigate directly to the problematic line. If your editor requires a different log format, you can set it via the <code>HUGO_FILE_LOG_FORMAT</code> OS environment variable:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">env <span class="nv">HUGO_FILE_LOG_FORMAT</span><span class="o">=</span><span class="s2">&#34;\&#34;:file::line::col\&#34;&#34;</span> hugo server
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">env <span class="nv">HUGO_FILE_LOG_FORMAT</span><span class="o">=</span><span class="s2">&#34;\&#34;:file::line::col\&#34;&#34;</span> hugo server
 </code></pre></div><p>But this release isn&rsquo;t all about error handling. Getting line- and column number into &ldquo;every&rdquo; error also meant that we had to consolidate and simplify some code paths, which, as a nice side effect, made Hugo a little bit faster. Benchmarks show it running <strong>about 5% faster and consume about 8% less memory</strong>.</p>
 <p>Also, we have now implemented <strong>&ldquo;render on demand&rdquo;</strong> in Hugo&rsquo;s Fast Render Mode (default when running <code>hugo server</code>). This means that you should now always see updated content when navigating around the site after a change.</p>
 <p>This release represents <strong>88 contributions by 14 contributors</strong> to the main Hugo code base.
@@ -395,7 +394,7 @@ which has received <strong>14 contributions by 9 contributors</strong>. A specia
     
 
       <div class="gray f6 mv6">
-        Last Update: March 28, 2021 <br>
+        Last Update: August 28, 2021 <br>
         <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/news/0.50-relnotes/index.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 ">Improve this page</a>

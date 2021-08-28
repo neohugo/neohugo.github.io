@@ -13,7 +13,7 @@
   <title>Syntax Highlighting | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.83.0-DEV" />
+  <meta name="generator" content="Hugo 0.88.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -26,7 +26,7 @@
   
   
   
-  <link rel="stylesheet" href="/output/css/app.min.08ecdd35eb5e6bdccdcc93919eda97a6b87211c44eff7f4bea3c5b0aba3d2e0b.css" integrity="sha256-COzdNetea9zNzJORntqXprhyEcRO/39L6jxbCro9Lgs=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/output/css/app.min.bab83909a2f2fe2aa45bf7e4813899f4f705e6858479cea5bd48eee72fdf0a70.css" integrity="sha256-urg5CaLy/iqkW/fkgTiZ9PcF5oWEec6lvUju5y/fCnA=" crossorigin="anonymous">
   
   
   
@@ -61,13 +61,13 @@
 <meta property="og:description" content="Hugo comes with really fast syntax highlighting from Chroma." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/content-management/syntax-highlighting/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="content-management" />
-<meta property="article:published_time" content="2017-02-01T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-28T21:54:32&#43;07:00" />
+<meta property="article:published_time" content="2017-02-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-08-28T21:58:58+07:00" />
 
 <meta itemprop="name" content="Syntax Highlighting">
-<meta itemprop="description" content="Hugo comes with really fast syntax highlighting from Chroma."><meta itemprop="datePublished" content="2017-02-01T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-03-28T21:54:32&#43;07:00" />
-<meta itemprop="wordCount" content="1270"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="description" content="Hugo comes with really fast syntax highlighting from Chroma."><meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-08-28T21:58:58+07:00" />
+<meta itemprop="wordCount" content="1344"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
 
@@ -170,10 +170,9 @@
     <div class="db dib-ns pl3"><form id="site-search-form" action="" role="search">
   <fieldset class="bn ma0 pa0">
     <label class="clip" for="search-input">Search</label>
-    <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: transparent url('/images/icon-search.png') no-repeat 0 8px /16px 16px;">
+    <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: url('/images/icon-search.png') 5px 11px/16px 16px no-repeat; background-color: rgba(255,255,255,0);">
   </fieldset>
-</form>
-</div>
+</form></div>
 
     <span class="absolute mt1 mt2-l pr3 right-0 top-0">
 
@@ -202,11 +201,7 @@
   <ul>
     <li><a href="#configure-syntax-highlighter">Configure Syntax Highlighter</a></li>
     <li><a href="#generate-syntax-highlighter-css">Generate Syntax Highlighter CSS</a></li>
-    <li><a href="#highlight-shortcode">Highlight Shortcode</a>
-      <ul>
-        <li><a href="#example-highlight-shortcode">Example: Highlight Shortcode</a></li>
-      </ul>
-    </li>
+    <li><a href="#highlight-shortcode">Highlight Shortcode</a></li>
     <li><a href="#highlight-template-func">Highlight Template Func</a></li>
     <li><a href="#highlighting-in-code-fences">Highlighting in Code Fences</a></li>
     <li><a href="#list-of-chroma-highlighting-languages">List of Chroma Highlighting Languages</a></li>
@@ -274,10 +269,10 @@
 <h2 id="generate-syntax-highlighter-css">Generate Syntax Highlighter CSS <a class="header-link" href="#generate-syntax-highlighter-css"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>If you run with <code>pygmentsUseClasses=true</code> in your site config, you need a style sheet.</p>
 <p>You can generate one with Hugo:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">hugo gen chromastyles --style<span class="o">=</span>monokai &gt; syntax.css
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hugo gen chromastyles --style<span class="o">=</span>monokai &gt; syntax.css
 </code></pre></div><p>Run <code>hugo gen chromastyles -h</code> for more options. See <a href="https://xyproto.github.io/splash/docs/">https://xyproto.github.io/splash/docs/</a> for a gallery of available styles.</p>
 <h2 id="highlight-shortcode">Highlight Shortcode <a class="header-link" href="#highlight-shortcode"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>Highlighting is carried out via the <a href="/content-management/shortcodes/">built-in shortcode</a> <code>highlight</code>. <code>highlight</code> takes exactly one required parameter for the programming language to be highlighted and requires a closing shortcode. Note that <code>highlight</code> is <em>not</em> used for client-side javascript highlighting.</p>
+<p>Highlighting is carried out via the built-in <a href="https://gohugo.io/content-management/shortcodes/#highlight"><code>highlight</code> shortcode</a>. It takes exactly one required parameter for the programming language to be highlighted and requires a closing shortcode. Note that <code>highlight</code> is <em>not</em> used for client-side javascript highlighting.</p>
 <p>Options:</p>
 <ul>
 <li><code>linenos</code>: configure line numbers. Valid values are <code>true</code>, <code>false</code>, <code>table</code>, or <code>inline</code>. <code>false</code> will turn off line numbers if it&rsquo;s configured to be on in site config. 
@@ -298,7 +293,7 @@
 </code></pre><p>Gives this:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">199
+<pre tabindex="0" class="chroma"><code><span class="lnt">199
 </span><span class="lnt">200
 </span><span class="lnt">201
 </span><span class="lnt">202
@@ -320,7 +315,7 @@
 </span><span class="lnt">218
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// GetTitleFunc returns a func that can be used to transform a string to
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// GetTitleFunc returns a func that can be used to transform a string to
 </span><span class="c1">// title case.
 </span><span class="c1">//
 </span><span class="c1">// The supported styles are
@@ -339,8 +334,7 @@
 </span><span class="hl">  <span class="k">default</span><span class="p">:</span>
 </span>    <span class="k">return</span> <span class="nx">transform</span><span class="p">.</span><span class="nf">NewTitleConverter</span><span class="p">(</span><span class="nx">transform</span><span class="p">.</span><span class="nx">APStyle</span><span class="p">)</span>
   <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<span class="p">}</span></code></pre></td></tr></table>
 </div>
 </div>
 <h2 id="highlight-template-func">Highlight Template Func <a class="header-link" href="#highlight-template-func"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
@@ -358,7 +352,7 @@
 </code></pre><p>Gives this:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">199
+<pre tabindex="0" class="chroma"><code><span class="lnt">199
 </span><span class="lnt">200
 </span><span class="lnt">201
 </span><span class="lnt">202
@@ -380,7 +374,7 @@
 </span><span class="lnt">218
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// GetTitleFunc returns a func that can be used to transform a string to
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// GetTitleFunc returns a func that can be used to transform a string to
 </span><span class="c1">// title case.
 </span><span class="c1">//
 </span><span class="c1">// The supported styles are
@@ -419,12 +413,6 @@
 <dt>ABNF</dt>
 <dd>abnf</dd>
 
-<dt>ANTLR</dt>
-<dd>antlr</dd>
-
-<dt>APL</dt>
-<dd>apl</dd>
-
 <dt>ActionScript</dt>
 <dd>actionscript, as</dd>
 
@@ -434,11 +422,20 @@
 <dt>Ada</dt>
 <dd>ada, ada2005, ada95, adb, ads</dd>
 
+<dt>AL</dt>
+<dd>al, dal</dd>
+
 <dt>Angular2</dt>
 <dd>ng2</dd>
 
+<dt>ANTLR</dt>
+<dd>antlr</dd>
+
 <dt>ApacheConf</dt>
 <dd>aconf, apache, apacheconf, conf, htaccess</dd>
+
+<dt>APL</dt>
+<dd>apl</dd>
 
 <dt>AppleScript</dt>
 <dd>applescript</dd>
@@ -448,9 +445,6 @@
 
 <dt>Awk</dt>
 <dd>awk, gawk, mawk, nawk</dd>
-
-<dt>BNF</dt>
-<dd>bnf</dd>
 
 <dt>Ballerina</dt>
 <dd>bal, ballerina</dd>
@@ -470,29 +464,20 @@
 <dt>BlitzBasic</dt>
 <dd>b3d, bb, blitzbasic, bplus, decls</dd>
 
+<dt>BNF</dt>
+<dd>bnf</dd>
+
 <dt>Brainfuck</dt>
 <dd>b, bf, brainfuck</dd>
 
 <dt>C</dt>
-<dd>c, h, idc</dd>
+<dd>c, h, idc, x[bp]m</dd>
 
 <dt>C#</dt>
 <dd>c#, cs, csharp</dd>
 
 <dt>C&#43;&#43;</dt>
 <dd>C, CPP, H, c++, cc, cp, cpp, cxx, h++, hh, hpp, hxx</dd>
-
-<dt>CFEngine3</dt>
-<dd>cf, cf3, cfengine3</dd>
-
-<dt>CMake</dt>
-<dd>cmake, txt</dd>
-
-<dt>COBOL</dt>
-<dd>COB, CPY, cob, cobol, cpy</dd>
-
-<dt>CSS</dt>
-<dd>css</dd>
 
 <dt>Caddyfile</dt>
 <dd>caddy, caddyfile</dd>
@@ -509,6 +494,12 @@
 <dt>Ceylon</dt>
 <dd>ceylon</dd>
 
+<dt>CFEngine3</dt>
+<dd>cf, cf3, cfengine3</dd>
+
+<dt>cfstatement</dt>
+<dd>cfs</dd>
+
 <dt>ChaiScript</dt>
 <dd>chai, chaiscript</dd>
 
@@ -517,6 +508,12 @@
 
 <dt>Clojure</dt>
 <dd>clj, clojure</dd>
+
+<dt>CMake</dt>
+<dd>cmake, txt</dd>
+
+<dt>COBOL</dt>
+<dd>COB, CPY, cob, cobol, cpy</dd>
 
 <dt>CoffeeScript</dt>
 <dd>coffee, coffee-script, coffeescript</dd>
@@ -530,14 +527,14 @@
 <dt>Crystal</dt>
 <dd>cr, crystal</dd>
 
+<dt>CSS</dt>
+<dd>css</dd>
+
 <dt>Cython</dt>
 <dd>cython, pxd, pxi, pyrex, pyx</dd>
 
 <dt>D</dt>
 <dd>d, di</dd>
-
-<dt>DTD</dt>
-<dd>dtd</dd>
 
 <dt>Dart</dt>
 <dd>dart</dd>
@@ -550,6 +547,12 @@
 
 <dt>Docker</dt>
 <dd>docker, dockerfile</dd>
+
+<dt>DTD</dt>
+<dd>dtd</dd>
+
+<dt>Dylan</dt>
+<dd>dyl, dylan, intr</dd>
 
 <dt>EBNF</dt>
 <dd>ebnf</dd>
@@ -566,9 +569,6 @@
 <dt>Erlang</dt>
 <dd>erl, erlang, es, escript, hrl</dd>
 
-<dt>FSharp</dt>
-<dd>fs, fsharp, fsi</dd>
-
 <dt>Factor</dt>
 <dd>factor</dd>
 
@@ -581,14 +581,17 @@
 <dt>Fortran</dt>
 <dd>F03, F90, f03, f90, fortran</dd>
 
+<dt>FortranFixed</dt>
+<dd>F, f, fortranfixed</dd>
+
+<dt>FSharp</dt>
+<dd>fs, fsharp, fsi</dd>
+
 <dt>GAS</dt>
 <dd>S, asm, gas, s</dd>
 
 <dt>GDScript</dt>
 <dd>gd, gdscript</dd>
-
-<dt>GLSL</dt>
-<dd>frag, geo, glsl, vert</dd>
 
 <dt>Genshi</dt>
 <dd>genshi, kid, xml+genshi, xml+kid</dd>
@@ -601,6 +604,9 @@
 
 <dt>Gherkin</dt>
 <dd>Cucumber, FEATURE, Gherkin, cucumber, feature, gherkin</dd>
+
+<dt>GLSL</dt>
+<dd>frag, geo, glsl, vert</dd>
 
 <dt>Gnuplot</dt>
 <dd>gnuplot, plot, plt</dd>
@@ -617,11 +623,26 @@
 <dt>GraphQL</dt>
 <dd>gql, graphql, graphqls</dd>
 
+<dt>Groff</dt>
+<dd>1p, 3pm, [1-9], groff, man, nroff</dd>
+
 <dt>Groovy</dt>
 <dd>gradle, groovy</dd>
 
+<dt>Handlebars</dt>
+<dd>handlebars, hbs</dd>
+
+<dt>Haskell</dt>
+<dd>haskell, hs</dd>
+
+<dt>Haxe</dt>
+<dd>haxe, hx, hxsl</dd>
+
 <dt>HCL</dt>
 <dd>hcl</dd>
+
+<dt>Hexdump</dt>
+<dd>hexdump</dd>
 
 <dt>HLB</dt>
 <dd>hlb</dd>
@@ -632,23 +653,8 @@
 <dt>HTTP</dt>
 <dd>http</dd>
 
-<dt>Handlebars</dt>
-<dd>handlebars</dd>
-
-<dt>Haskell</dt>
-<dd>haskell, hs</dd>
-
-<dt>Haxe</dt>
-<dd>haxe, hx, hxsl</dd>
-
-<dt>Hexdump</dt>
-<dd>hexdump</dd>
-
 <dt>Hy</dt>
 <dd>hy, hylang</dd>
-
-<dt>INI</dt>
-<dd>cfg, dosini, editorconfig, gitconfig, inf, ini</dd>
 
 <dt>Idris</dt>
 <dd>idr, idris</dd>
@@ -656,20 +662,23 @@
 <dt>Igor</dt>
 <dd>igor, igorpro, ipf</dd>
 
+<dt>INI</dt>
+<dd>cfg, dosini, editorconfig, gitconfig, inf, ini</dd>
+
 <dt>Io</dt>
 <dd>io</dd>
 
 <dt>J</dt>
 <dd>ijs, j</dd>
 
-<dt>JSON</dt>
-<dd>json</dd>
-
 <dt>Java</dt>
 <dd>java</dd>
 
 <dt>JavaScript</dt>
-<dd>javascript, js, jsm</dd>
+<dd>javascript, js, jsm, mjs</dd>
+
+<dt>JSON</dt>
+<dd>json</dd>
 
 <dt>Julia</dt>
 <dd>jl, julia</dd>
@@ -680,20 +689,20 @@
 <dt>Kotlin</dt>
 <dd>kotlin, kt</dd>
 
-<dt>LLVM</dt>
-<dd>ll, llvm</dd>
-
 <dt>Lighttpd configuration file</dt>
 <dd>lighttpd, lighty</dd>
+
+<dt>LLVM</dt>
+<dd>ll, llvm</dd>
 
 <dt>Lua</dt>
 <dd>lua, wlua</dd>
 
-<dt>MLIR</dt>
-<dd>mlir</dd>
-
 <dt>Mako</dt>
 <dd>mako, mao</dd>
+
+<dt>markdown</dt>
+<dd>markdown, md, mkd</dd>
 
 <dt>Mason</dt>
 <dd>m, mason, mc, mhtml, mi</dd>
@@ -704,8 +713,17 @@
 <dt>Matlab</dt>
 <dd>m, matlab</dd>
 
+<dt>mcfunction</dt>
+<dd>mcfunction</dd>
+
+<dt>Metal</dt>
+<dd>metal</dd>
+
 <dt>MiniZinc</dt>
 <dd>MZN, dzn, fzn, minizinc, mzn</dd>
+
+<dt>MLIR</dt>
+<dd>mlir</dd>
 
 <dt>Modula-2</dt>
 <dd>def, m2, mod, modula2</dd>
@@ -716,11 +734,11 @@
 <dt>MorrowindScript</dt>
 <dd>morrowind, mwscript</dd>
 
-<dt>MySQL</dt>
-<dd>mysql, sql</dd>
-
 <dt>Myghty</dt>
 <dd>myghty, myt</dd>
+
+<dt>MySQL</dt>
+<dd>mysql, sql</dd>
 
 <dt>NASM</dt>
 <dd>ASM, asm, nasm</dd>
@@ -737,11 +755,11 @@
 <dt>Nix</dt>
 <dd>nix, nixos</dd>
 
-<dt>OCaml</dt>
-<dd>ml, mli, mll, mly, ocaml</dd>
-
 <dt>Objective-C</dt>
 <dd>h, m, obj-c, objc, objective-c, objectivec</dd>
+
+<dt>OCaml</dt>
+<dd>ml, mli, mll, mly, ocaml</dd>
 
 <dt>Octave</dt>
 <dd>m, octave</dd>
@@ -752,23 +770,17 @@
 <dt>Org Mode</dt>
 <dd>org, orgmode</dd>
 
-<dt>PHP</dt>
-<dd>inc, php, php3, php4, php5, php[345]</dd>
-
-<dt>PHTML</dt>
-<dd>phtml</dd>
-
-<dt>PL/pgSQL</dt>
-<dd>plpgsql</dd>
-
-<dt>POVRay</dt>
-<dd>inc, pov</dd>
-
 <dt>PacmanConf</dt>
 <dd>conf, pacmanconf</dd>
 
 <dt>Perl</dt>
 <dd>perl, pl, pm, t</dd>
+
+<dt>PHP</dt>
+<dd>inc, php, php3, php4, php5, php[345]</dd>
+
+<dt>PHTML</dt>
+<dd>inc, php, php[345], phtml</dd>
 
 <dt>Pig</dt>
 <dd>pig</dd>
@@ -776,17 +788,29 @@
 <dt>PkgConfig</dt>
 <dd>pc, pkgconfig</dd>
 
+<dt>PL/pgSQL</dt>
+<dd>plpgsql</dd>
+
+<dt>plaintext</dt>
+<dd>no-highlight, plain, text, txt</dd>
+
 <dt>Pony</dt>
 <dd>pony</dd>
-
-<dt>PostScript</dt>
-<dd>eps, postscr, postscript, ps</dd>
 
 <dt>PostgreSQL SQL dialect</dt>
 <dd>postgres, postgresql</dd>
 
+<dt>PostScript</dt>
+<dd>eps, postscr, postscript, ps</dd>
+
+<dt>POVRay</dt>
+<dd>inc, pov</dd>
+
+<dt>PowerQuery</dt>
+<dd>powerquery, pq</dd>
+
 <dt>PowerShell</dt>
-<dd>posh, powershell, ps1, psm1</dd>
+<dd>posh, powershell, ps1, psd1, psm1</dd>
 
 <dt>Prolog</dt>
 <dd>ecl, pl, pro, prolog</dd>
@@ -801,13 +825,16 @@
 <dd>pp, puppet</dd>
 
 <dt>Python</dt>
-<dd>py, python, pyw, sage, sc, tac</dd>
+<dd>bazel, bzl, jy, py, py3, pyi, python, python3, pyw, sage, sc, tac</dd>
 
-<dt>Python 3</dt>
-<dd>py3, python3</dd>
+<dt>Python 2</dt>
+<dd>py2, python2</dd>
 
 <dt>QBasic</dt>
 <dd>BAS, bas, basic, qbasic</dd>
+
+<dt>QML</dt>
+<dd>qbs, qml</dd>
 
 <dt>R</dt>
 <dd>R, Renviron, Rhistory, Rprofile, S, r, s, splus</dd>
@@ -818,8 +845,20 @@
 <dt>Ragel</dt>
 <dd>ragel</dd>
 
+<dt>Raku</dt>
+<dd>6pl, 6pm, nqp, p6, p6l, p6m, perl6, pl, pl6, pm, pm6, raku, rakudoc, rakumod, rakutest, t</dd>
+
+<dt>react</dt>
+<dd>jsx, react</dd>
+
 <dt>ReasonML</dt>
 <dd>re, reason, reasonml, rei</dd>
+
+<dt>reg</dt>
+<dd>reg, registry</dd>
+
+<dt>reStructuredText</dt>
+<dd>rest, restructuredtext, rst</dd>
 
 <dt>Rexx</dt>
 <dd>arexx, rex, rexx, rx</dd>
@@ -833,18 +872,6 @@
 <dt>SAS</dt>
 <dd>SAS, sas</dd>
 
-<dt>SCSS</dt>
-<dd>scss</dd>
-
-<dt>SPARQL</dt>
-<dd>rq, sparql</dd>
-
-<dt>SQL</dt>
-<dd>sql</dd>
-
-<dt>SYSTEMD</dt>
-<dd>service, systemd</dd>
-
 <dt>Sass</dt>
 <dd>sass</dd>
 
@@ -856,6 +883,9 @@
 
 <dt>Scilab</dt>
 <dd>sce, sci, scilab, tst</dd>
+
+<dt>SCSS</dt>
+<dd>scss</dd>
 
 <dt>Smalltalk</dt>
 <dd>smalltalk, squeak, st</dd>
@@ -869,6 +899,12 @@
 <dt>Solidity</dt>
 <dd>sol, solidity</dd>
 
+<dt>SPARQL</dt>
+<dd>rq, sparql</dd>
+
+<dt>SQL</dt>
+<dd>sql</dd>
+
 <dt>SquidConf</dt>
 <dd>conf, squid, squid.conf, squidconf</dd>
 
@@ -878,26 +914,29 @@
 <dt>Stylus</dt>
 <dd>styl, stylus</dd>
 
+<dt>Svelte</dt>
+<dd>svelte</dd>
+
 <dt>Swift</dt>
 <dd>swift</dd>
 
-<dt>TASM</dt>
-<dd>ASM, asm, tasm</dd>
+<dt>SYSTEMD</dt>
+<dd>automount, device, dnssd, link, mount, netdev, network, path, scope, service, slice, socket, swap, systemd, target, timer</dd>
 
-<dt>TOML</dt>
-<dd>toml</dd>
+<dt>systemverilog</dt>
+<dd>sv, svh, systemverilog</dd>
 
 <dt>TableGen</dt>
 <dd>tablegen, td</dd>
+
+<dt>TASM</dt>
+<dd>ASM, asm, tasm</dd>
 
 <dt>Tcl</dt>
 <dd>rvt, tcl</dd>
 
 <dt>Tcsh</dt>
 <dd>csh, tcsh</dd>
-
-<dt>TeX</dt>
-<dd>aux, latex, tex, toc</dd>
 
 <dt>Termcap</dt>
 <dd>src, termcap</dd>
@@ -908,8 +947,14 @@
 <dt>Terraform</dt>
 <dd>terraform, tf</dd>
 
+<dt>TeX</dt>
+<dd>aux, latex, tex, toc</dd>
+
 <dt>Thrift</dt>
 <dd>thrift</dd>
+
+<dt>TOML</dt>
+<dd>toml</dd>
 
 <dt>TradingView</dt>
 <dd>tradingview, tv</dd>
@@ -941,11 +986,17 @@
 <dt>VB.net</dt>
 <dd>bas, vb, vb.net, vbnet</dd>
 
+<dt>verilog</dt>
+<dd>v, verilog</dd>
+
 <dt>VHDL</dt>
 <dd>vhd, vhdl</dd>
 
 <dt>VimL</dt>
 <dd>exrc, gvimrc, vim, vimrc</dd>
+
+<dt>vue</dt>
+<dd>vue, vuejs</dd>
 
 <dt>WDTE</dt>
 <dd>wdte</dd>
@@ -964,33 +1015,6 @@
 
 <dt>Zig</dt>
 <dd>zig</dd>
-
-<dt>cfstatement</dt>
-<dd>cfs</dd>
-
-<dt>markdown</dt>
-<dd>markdown, md, mkd</dd>
-
-<dt>plaintext</dt>
-<dd>no-highlight, plain, text, txt</dd>
-
-<dt>reStructuredText</dt>
-<dd>rest, restructuredtext, rst</dd>
-
-<dt>react</dt>
-<dd>jsx, react</dd>
-
-<dt>reg</dt>
-<dd>reg, registry</dd>
-
-<dt>systemverilog</dt>
-<dd>sv, svh, systemverilog</dd>
-
-<dt>verilog</dt>
-<dd>v, verilog</dd>
-
-<dt>vue</dt>
-<dd>vue, vuejs</dd>
 
 </dl>
 
@@ -1494,11 +1518,6 @@
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/dateformat/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              dateFormat
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/functions/default/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               default
             </a>
@@ -1649,13 +1668,13 @@
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/lang.merge/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              lang.Merge
+            <a href="/functions/lang/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              lang
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/numfmt/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              lang.NumFmt
+            <a href="/functions/lang.merge/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              lang.Merge
             </a>
           </li>
           <li class="f6 fw4">
@@ -1966,6 +1985,11 @@
           <li class="f6 fw4">
             <a href="/functions/time/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               time
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/dateformat/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              time.Format
             </a>
           </li>
           <li class="f6 fw4">
@@ -2344,7 +2368,7 @@
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “Syntax Highlighting”
-  </a> was last updated: March 28, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/532f9a0fd13d8a37929738c4283d1915ed574604">Merge pull request #78 from blackb1rd/hugo/v0.82.0 (532f9a0)</a>
+  </a> was last updated: August 28, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/05d39469b1e013009b72f318d2ddfc1d8a48b2ad">Fix build release error (05d3946)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/content-management/syntax-highlighting.md" class="

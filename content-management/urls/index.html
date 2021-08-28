@@ -13,7 +13,7 @@
   <title>URL Management | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.83.0-DEV" />
+  <meta name="generator" content="Hugo 0.88.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -26,7 +26,7 @@
   
   
   
-  <link rel="stylesheet" href="/output/css/app.min.08ecdd35eb5e6bdccdcc93919eda97a6b87211c44eff7f4bea3c5b0aba3d2e0b.css" integrity="sha256-COzdNetea9zNzJORntqXprhyEcRO/39L6jxbCro9Lgs=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/output/css/app.min.bab83909a2f2fe2aa45bf7e4813899f4f705e6858479cea5bd48eee72fdf0a70.css" integrity="sha256-urg5CaLy/iqkW/fkgTiZ9PcF5oWEec6lvUju5y/fCnA=" crossorigin="anonymous">
   
   
   
@@ -61,13 +61,13 @@
 <meta property="og:description" content="Hugo supports permalinks, aliases, link canonicalization, and multiple options for handling relative vs absolute URLs." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/content-management/urls/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="content-management" />
-<meta property="article:published_time" content="2017-02-01T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-28T21:54:32&#43;07:00" />
+<meta property="article:published_time" content="2017-02-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-08-28T21:58:58+07:00" />
 
 <meta itemprop="name" content="URL Management">
-<meta itemprop="description" content="Hugo supports permalinks, aliases, link canonicalization, and multiple options for handling relative vs absolute URLs."><meta itemprop="datePublished" content="2017-02-01T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-03-28T21:54:32&#43;07:00" />
-<meta itemprop="wordCount" content="1611"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="description" content="Hugo supports permalinks, aliases, link canonicalization, and multiple options for handling relative vs absolute URLs."><meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-08-28T21:58:58+07:00" />
+<meta itemprop="wordCount" content="1678"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
 
@@ -170,10 +170,9 @@
     <div class="db dib-ns pl3"><form id="site-search-form" action="" role="search">
   <fieldset class="bn ma0 pa0">
     <label class="clip" for="search-input">Search</label>
-    <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: transparent url('/images/icon-search.png') no-repeat 0 8px /16px 16px;">
+    <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: url('/images/icon-search.png') 5px 11px/16px 16px no-repeat; background-color: rgba(255,255,255,0);">
   </fieldset>
-</form>
-</div>
+</form></div>
 
     <span class="absolute mt1 mt2-l pr3 right-0 top-0">
 
@@ -200,21 +199,8 @@
 		<p class="b">What's on this Page</p>
   	<nav id="TableOfContents">
   <ul>
-    <li><a href="#permalinks">Permalinks</a>
-      <ul>
-        <li><a href="#permalinks-configuration-example">Permalinks Configuration Example</a></li>
-        <li><a href="#permalink-configuration-values">Permalink Configuration Values</a></li>
-      </ul>
-    </li>
-    <li><a href="#aliases">Aliases</a>
-      <ul>
-        <li><a href="#example-aliases">Example: Aliases</a></li>
-        <li><a href="#example-aliases-in-multilingual">Example: Aliases in Multilingual</a></li>
-        <li><a href="#how-hugo-aliases-work">How Hugo Aliases Work</a></li>
-        <li><a href="#customize">Customize</a></li>
-        <li><a href="#important-behaviors-of-aliases">Important Behaviors of Aliases</a></li>
-      </ul>
-    </li>
+    <li><a href="#permalinks">Permalinks</a></li>
+    <li><a href="#aliases">Aliases</a></li>
     <li><a href="#pretty-urls">Pretty URLs</a></li>
     <li><a href="#ugly-urls">Ugly URLs</a></li>
     <li><a href="#canonicalization">Canonicalization</a></li>
@@ -297,46 +283,58 @@
 
 
 
-
+  
 
 
 <div class="code relative" id="config">
-	<div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
-			<button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">yaml</button>&nbsp;
-		
-			<button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">toml</button>&nbsp;
-		
-			<button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">json</button>&nbsp;
-		
-	</div>
-	<div class="tab-content">
-		
-			<div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-				<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">permalinks</span><span class="p">:</span><span class="w">
+  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
+        config.
+      </div>
+      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
+        yaml
+      </button>
+      &nbsp;
+    
+      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        toml
+      </button>
+      &nbsp;
+    
+      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        json
+      </button>
+      &nbsp;
+    
+  </div>
+  <div class="tab-content">
+    
+      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">permalinks</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">posts</span><span class="p">:</span><span class="w"> </span><span class="l">/:year/:month/:title/</span><span class="w">
 </span></code></pre></div>
-			</div>
-			
-		
-			<div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-				<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
-  <span class="nx">posts</span> <span class="p">=</span> <span class="s2">&#34;/:year/:month/:title/&#34;</span>
+      </div>
+      
+    
+      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
+<span class="nx">posts</span> <span class="p">=</span> <span class="s1">&#39;/:year/:month/:title/&#39;</span>
+
 </code></pre></div>
-			</div>
-			
-		
-			<div data-pane="json" class="code-copy-content nt3 tab-pane ">
-				<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+      </div>
+      
+    
+      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;permalinks&#34;</span><span class="p">:</span> <span class="p">{</span>
       <span class="nt">&#34;posts&#34;</span><span class="p">:</span> <span class="s2">&#34;/:year/:month/:title/&#34;</span>
    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-			</div>
-			
-		
-	</div>
-
+      </div>
+      
+    
+  </div>
+  
 </div>
 
 <p>Only the content under <code>posts/</code> will have the new URL structure. For example, the file <code>content/posts/sample-entry.md</code> with <code>date: 2017-02-27T19:20:00-05:00</code> in its front matter will render to <code>public/2017/02/sample-entry/index.html</code> at build time and therefore be reachable at <code>https://example.com/2017/02/sample-entry/</code>.</p>
@@ -344,92 +342,116 @@
 
 
 
-
+  
 
 
 <div class="code relative" id="config">
-	<div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
-			<button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">yaml</button>&nbsp;
-		
-			<button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">toml</button>&nbsp;
-		
-			<button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">json</button>&nbsp;
-		
-	</div>
-	<div class="tab-content">
-		
-			<div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-				<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">permalinks</span><span class="p">:</span><span class="w">
+  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
+        config.
+      </div>
+      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
+        yaml
+      </button>
+      &nbsp;
+    
+      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        toml
+      </button>
+      &nbsp;
+    
+      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        json
+      </button>
+      &nbsp;
+    
+  </div>
+  <div class="tab-content">
+    
+      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">permalinks</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">/</span><span class="p">:</span><span class="w"> </span><span class="l">/:year/:month/:filename/</span><span class="w">
 </span></code></pre></div>
-			</div>
-			
-		
-			<div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-				<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
-  <span class="s2">&#34;/&#34;</span> <span class="p">=</span> <span class="s2">&#34;/:year/:month/:filename/&#34;</span>
+      </div>
+      
+    
+      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
+<span class="s1">&#39;/&#39;</span> <span class="p">=</span> <span class="s1">&#39;/:year/:month/:filename/&#39;</span>
+
 </code></pre></div>
-			</div>
-			
-		
-			<div data-pane="json" class="code-copy-content nt3 tab-pane ">
-				<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+      </div>
+      
+    
+      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;permalinks&#34;</span><span class="p">:</span> <span class="p">{</span>
       <span class="nt">&#34;/&#34;</span><span class="p">:</span> <span class="s2">&#34;/:year/:month/:filename/&#34;</span>
    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-			</div>
-			
-		
-	</div>
-
+      </div>
+      
+    
+  </div>
+  
 </div>
 
 <p>If the standard date-based permalink configuration does not meet your needs, you can also format URL segments using <a href="https://golang.org/pkg/time/#Time.Format">Go time formatting directives</a>. For example, a URL structure with two digit years and month and day digits without zero padding can be accomplished with:</p>
 
 
 
-
+  
 
 
 <div class="code relative" id="config">
-	<div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
-			<button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">yaml</button>&nbsp;
-		
-			<button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">toml</button>&nbsp;
-		
-			<button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">json</button>&nbsp;
-		
-	</div>
-	<div class="tab-content">
-		
-			<div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-				<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">permalinks</span><span class="p">:</span><span class="w">
+  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
+        config.
+      </div>
+      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
+        yaml
+      </button>
+      &nbsp;
+    
+      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        toml
+      </button>
+      &nbsp;
+    
+      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        json
+      </button>
+      &nbsp;
+    
+  </div>
+  <div class="tab-content">
+    
+      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">permalinks</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">posts</span><span class="p">:</span><span class="w"> </span><span class="l">/:06/:1/:2/:title/</span><span class="w">
 </span></code></pre></div>
-			</div>
-			
-		
-			<div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-				<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
-  <span class="nx">posts</span> <span class="p">=</span> <span class="s2">&#34;/:06/:1/:2/:title/&#34;</span>
+      </div>
+      
+    
+      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
+<span class="nx">posts</span> <span class="p">=</span> <span class="s1">&#39;/:06/:1/:2/:title/&#39;</span>
+
 </code></pre></div>
-			</div>
-			
-		
-			<div data-pane="json" class="code-copy-content nt3 tab-pane ">
-				<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+      </div>
+      
+    
+      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;permalinks&#34;</span><span class="p">:</span> <span class="p">{</span>
       <span class="nt">&#34;posts&#34;</span><span class="p">:</span> <span class="s2">&#34;/:06/:1/:2/:title/&#34;</span>
    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-			</div>
-			
-		
-	</div>
-
+      </div>
+      
+    
+  </div>
+  
 </div>
 
 <p>You can also configure permalinks of taxonomies with the same syntax, by using the plural form of the taxonomy instead of the section. You will probably only want to use the configuration values <code>:slug</code> or <code>:title</code>.</p>
@@ -453,7 +475,12 @@
 <dt><code>:section</code></dt>
 <dd>the content&rsquo;s section</dd>
 <dt><code>:sections</code></dt>
-<dd>the content&rsquo;s sections hierarchy</dd>
+<dd>the content&rsquo;s sections hierarchy. 
+
+
+<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
+    <a href="https://gohugo.io/news/0.83.0-relnotes/" target="_blank">New in v0.83.0</a>
+</button> Since Hugo 0.83 you can use a selection of the sections using <em>slice syntax</em>: <code>:sections[1:]</code> includes all but the first, <code>:sections[:last]</code> includes all but the last, <code>:sections[last]</code> includes only the last, <code>:sections[1:2]</code> includes section 2 and 3. Note that this slice access will not throw any out-of-bounds errors, so you don&rsquo;t have to be exact.</dd>
 <dt><code>:title</code></dt>
 <dd>the content&rsquo;s title</dd>
 <dt><code>:slug</code></dt>
@@ -482,14 +509,13 @@
 
 <div class="code relative" id="content/posts/my-awesome-post.md"><div class="filename san-serif f6 dib lh-solid pl2 pv2">content/posts/my-awesome-post.md</div>
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-md" data-lang="md">
-+++
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md">+++
 aliases = [
     &#34;/posts/my-original-url/&#34;,
     &#34;/2010/01/01/even-earlier-url.html&#34;
 ]
-+++
-</code></pre></div>
++++</code></pre></div>
 	</div>
 
 </div>
@@ -505,13 +531,12 @@ aliases = [
 
 <div class="code relative" id="content/posts/my-awesome-post.md"><div class="filename san-serif f6 dib lh-solid pl2 pv2">content/posts/my-awesome-post.md</div>
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-md" data-lang="md">
----
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md">---
 aliases:
     <span class="k">-</span> /posts/my-original-url/
     <span class="k">-</span> /2010/01/01/even-earlier-url.html
----
-</code></pre></div>
+---</code></pre></div>
 	</div>
 
 </div>
@@ -564,7 +589,7 @@ and the complete filename or directory.</li>
 <p>Hugo&rsquo;s default behavior is to render your content with &ldquo;pretty&rdquo; URLs. No non-standard server-side configuration is required for these pretty URLs to work.</p>
 <p>The following demonstrates the concept:</p>
 <pre><code>content/posts/_index.md
-=&gt; example.com/posts/index.html
+=&gt; example.com/posts/
 content/posts/post-1.md
 =&gt; example.com/posts/post-1/
 </code></pre><h2 id="ugly-urls">Ugly URLs <a class="header-link" href="#ugly-urls"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
@@ -620,11 +645,11 @@ content/posts/post-1.md
 <p>In addition to specifying permalink values in your site configuration for different content sections, Hugo provides even more granular control for individual pieces of content.</p>
 <p>Both <code>slug</code> and <code>url</code> can be defined in individual front matter. For more information on content destinations at build time, see <a href="/content-management/organization/">Content Organization</a>.</p>
 <p>From Hugo 0.55, you can use URLs relative to the current site context (the language), which makes it simpler to maintain. For a Japanese translation, both of the following examples would get the same URL:</p>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">---
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown">---
 title: &#34;Custom URL!&#34;
 url: &#34;/jp/custom/foo&#34;
 ---
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">---
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown">---
 title: &#34;Custom URL!&#34;
 url: &#34;custom/foo&#34;
 ---
@@ -1139,11 +1164,6 @@ url: &#34;custom/foo&#34;
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/dateformat/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              dateFormat
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/functions/default/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               default
             </a>
@@ -1294,13 +1314,13 @@ url: &#34;custom/foo&#34;
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/lang.merge/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              lang.Merge
+            <a href="/functions/lang/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              lang
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/numfmt/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              lang.NumFmt
+            <a href="/functions/lang.merge/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              lang.Merge
             </a>
           </li>
           <li class="f6 fw4">
@@ -1611,6 +1631,11 @@ url: &#34;custom/foo&#34;
           <li class="f6 fw4">
             <a href="/functions/time/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               time
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/dateformat/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              time.Format
             </a>
           </li>
           <li class="f6 fw4">
@@ -1989,7 +2014,7 @@ url: &#34;custom/foo&#34;
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “URL Management”
-  </a> was last updated: March 28, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/532f9a0fd13d8a37929738c4283d1915ed574604">Merge pull request #78 from blackb1rd/hugo/v0.82.0 (532f9a0)</a>
+  </a> was last updated: August 28, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/05d39469b1e013009b72f318d2ddfc1d8a48b2ad">Fix build release error (05d3946)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/content-management/urls.md" class="

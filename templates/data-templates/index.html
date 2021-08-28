@@ -13,7 +13,7 @@
   <title>Data Templates | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.83.0-DEV" />
+  <meta name="generator" content="Hugo 0.88.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -26,7 +26,7 @@
   
   
   
-  <link rel="stylesheet" href="/output/css/app.min.08ecdd35eb5e6bdccdcc93919eda97a6b87211c44eff7f4bea3c5b0aba3d2e0b.css" integrity="sha256-COzdNetea9zNzJORntqXprhyEcRO/39L6jxbCro9Lgs=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/output/css/app.min.bab83909a2f2fe2aa45bf7e4813899f4f705e6858479cea5bd48eee72fdf0a70.css" integrity="sha256-urg5CaLy/iqkW/fkgTiZ9PcF5oWEec6lvUju5y/fCnA=" crossorigin="anonymous">
   
   
   
@@ -61,13 +61,13 @@
 <meta property="og:description" content="In addition to Hugo&#39;s built-in variables, you can specify your own custom data in templates or shortcodes that pull from both local and dynamic sources." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/templates/data-templates/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="templates" />
-<meta property="article:published_time" content="2017-02-01T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-28T21:54:32&#43;07:00" />
+<meta property="article:published_time" content="2017-02-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-08-28T21:58:58+07:00" />
 
 <meta itemprop="name" content="Data Templates">
-<meta itemprop="description" content="In addition to Hugo&#39;s built-in variables, you can specify your own custom data in templates or shortcodes that pull from both local and dynamic sources."><meta itemprop="datePublished" content="2017-02-01T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-03-28T21:54:32&#43;07:00" />
-<meta itemprop="wordCount" content="1302"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="description" content="In addition to Hugo&#39;s built-in variables, you can specify your own custom data in templates or shortcodes that pull from both local and dynamic sources."><meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-08-28T21:58:58+07:00" />
+<meta itemprop="wordCount" content="1452"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
 
@@ -170,10 +170,9 @@
     <div class="db dib-ns pl3"><form id="site-search-form" action="" role="search">
   <fieldset class="bn ma0 pa0">
     <label class="clip" for="search-input">Search</label>
-    <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: transparent url('/images/icon-search.png') no-repeat 0 8px /16px 16px;">
+    <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: url('/images/icon-search.png') 5px 11px/16px 16px no-repeat; background-color: rgba(255,255,255,0);">
   </fieldset>
-</form>
-</div>
+</form></div>
 
     <span class="absolute mt1 mt2-l pr3 right-0 top-0">
 
@@ -204,15 +203,7 @@
     <li><a href="#data-files-in-themes">Data Files in Themes</a></li>
     <li><a href="#example-jaco-pastorius-solo-discography">Example: Jaco Pastorius' Solo Discography</a></li>
     <li><a href="#example-accessing-named-values-in-a-data-file">Example: Accessing Named Values in a Data File</a></li>
-    <li><a href="#data-driven-content">Data-Driven Content</a></li>
-    <li><a href="#implementation-details">Implementation details</a>
-      <ul>
-        <li><a href="#call-the-functions-with-a-url">Call the Functions with a URL</a></li>
-        <li><a href="#example-for-csv-files">Example for CSV files</a></li>
-        <li><a href="#cache-urls">Cache URLs</a></li>
-        <li><a href="#authentication-when-using-rest-urls">Authentication When Using REST URLs</a></li>
-      </ul>
-    </li>
+    <li><a href="#get-remote-data">Get Remote Data</a></li>
     <li><a href="#load-local-files">Load Local files</a></li>
     <li><a href="#livereload-with-data-files">LiveReload with Data Files</a></li>
     <li><a href="#examples-of-data-driven-content">Examples of Data-driven Content</a></li>
@@ -298,24 +289,99 @@
 <li><code>data/jazz/bass/johnpatitucci.toml</code></li>
 </ul>
 <p><code>jacopastorius.toml</code> contains the content below. <code>johnpatitucci.toml</code> contains a similar list:</p>
-<pre><code>discography = [
-&quot;1974 – Modern American Music … Period! The Criteria Sessions&quot;,
-&quot;1974 – Jaco&quot;,
-&quot;1976 - Jaco Pastorius&quot;,
-&quot;1981 - Word of Mouth&quot;,
-&quot;1981 - The Birthday Concert (released in 1995)&quot;,
-&quot;1982 - Twins I &amp; II (released in 1999)&quot;,
-&quot;1983 - Invitation&quot;,
-&quot;1986 - Broadway Blues (released in 1998)&quot;,
-&quot;1986 - Honestly Solo Live (released in 1990)&quot;,
-&quot;1986 - Live In Italy (released in 1991)&quot;,
-&quot;1986 - Heavy'n Jazz (released in 1992)&quot;,
-&quot;1991 - Live In New York City, Volumes 1-7.&quot;,
-&quot;1999 - Rare Collection (compilation)&quot;,
-&quot;2003 - Punk Jazz: The Jaco Pastorius Anthology (compilation)&quot;,
-&quot;2007 - The Essential Jaco Pastorius (compilation)&quot;
-]
-</code></pre><p>The list of bass players can be accessed via <code>.Site.Data.jazz.bass</code>, a single bass player by adding the filename without the suffix, e.g. <code>.Site.Data.jazz.bass.jacopastorius</code>.</p>
+
+
+
+  
+
+
+<div class="code relative" id="jacopastorius">
+  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
+        jacopastorius.
+      </div>
+      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
+        yaml
+      </button>
+      &nbsp;
+    
+      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        toml
+      </button>
+      &nbsp;
+    
+      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        json
+      </button>
+      &nbsp;
+    
+  </div>
+  <div class="tab-content">
+    
+      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">discography</span><span class="p">:</span><span class="w">
+</span><span class="w"></span>- <span class="m">1974</span><span class="w"> </span><span class="l">– Modern American Music … Period! The Criteria Sessions</span><span class="w">
+</span><span class="w"></span>- <span class="m">1974</span><span class="w"> </span><span class="l">– Jaco</span><span class="w">
+</span><span class="w"></span>- <span class="m">1976</span><span class="w"> </span>- <span class="l">Jaco Pastorius</span><span class="w">
+</span><span class="w"></span>- <span class="m">1981</span><span class="w"> </span>- <span class="l">Word of Mouth</span><span class="w">
+</span><span class="w"></span>- <span class="m">1981</span><span class="w"> </span>- <span class="l">The Birthday Concert (released in 1995)</span><span class="w">
+</span><span class="w"></span>- <span class="m">1982</span><span class="w"> </span>- <span class="l">Twins I &amp; II (released in 1999)</span><span class="w">
+</span><span class="w"></span>- <span class="m">1983</span><span class="w"> </span>- <span class="l">Invitation</span><span class="w">
+</span><span class="w"></span>- <span class="m">1986</span><span class="w"> </span>- <span class="l">Broadway Blues (released in 1998)</span><span class="w">
+</span><span class="w"></span>- <span class="m">1986</span><span class="w"> </span>- <span class="l">Honestly Solo Live (released in 1990)</span><span class="w">
+</span><span class="w"></span>- <span class="m">1986</span><span class="w"> </span>- <span class="l">Live In Italy (released in 1991)</span><span class="w">
+</span><span class="w"></span>- <span class="m">1986</span><span class="w"> </span>- <span class="l">Heavy&#39;n Jazz (released in 1992)</span><span class="w">
+</span><span class="w"></span>- <span class="m">1991</span><span class="w"> </span>- <span class="l">Live In New York City, Volumes 1-7.</span><span class="w">
+</span><span class="w"></span>- <span class="m">1999</span><span class="w"> </span>- <span class="l">Rare Collection (compilation)</span><span class="w">
+</span><span class="w"></span>- <span class="nt">&#39;2003 - Punk Jazz</span><span class="p">:</span><span class="w"> </span><span class="l">The Jaco Pastorius Anthology (compilation)&#39;</span><span class="w">
+</span><span class="w"></span>- <span class="m">2007</span><span class="w"> </span>- <span class="l">The Essential Jaco Pastorius (compilation)</span><span class="w">
+</span></code></pre></div>
+      </div>
+      
+        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
+        
+      
+    
+      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">discography</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;1974 – Modern American Music … Period! The Criteria Sessions&#39;</span><span class="p">,</span> <span class="s1">&#39;1974 – Jaco&#39;</span><span class="p">,</span> <span class="s1">&#39;1976 - Jaco Pastorius&#39;</span><span class="p">,</span> <span class="s1">&#39;1981 - Word of Mouth&#39;</span><span class="p">,</span> <span class="s1">&#39;1981 - The Birthday Concert (released in 1995)&#39;</span><span class="p">,</span> <span class="s1">&#39;1982 - Twins I &amp; II (released in 1999)&#39;</span><span class="p">,</span> <span class="s1">&#39;1983 - Invitation&#39;</span><span class="p">,</span> <span class="s1">&#39;1986 - Broadway Blues (released in 1998)&#39;</span><span class="p">,</span> <span class="s1">&#39;1986 - Honestly Solo Live (released in 1990)&#39;</span><span class="p">,</span> <span class="s1">&#39;1986 - Live In Italy (released in 1991)&#39;</span><span class="p">,</span> <span class="s2">&#34;1986 - Heavy&#39;n Jazz (released in 1992)&#34;</span><span class="p">,</span> <span class="s1">&#39;1991 - Live In New York City, Volumes 1-7.&#39;</span><span class="p">,</span> <span class="s1">&#39;1999 - Rare Collection (compilation)&#39;</span><span class="p">,</span> <span class="s1">&#39;2003 - Punk Jazz: The Jaco Pastorius Anthology (compilation)&#39;</span><span class="p">,</span> <span class="s1">&#39;2007 - The Essential Jaco Pastorius (compilation)&#39;</span><span class="p">]</span>
+</code></pre></div>
+      </div>
+      
+        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
+        
+      
+    
+      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+   <span class="nt">&#34;discography&#34;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&#34;1974 – Modern American Music … Period! The Criteria Sessions&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;1974 – Jaco&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;1976 - Jaco Pastorius&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;1981 - Word of Mouth&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;1981 - The Birthday Concert (released in 1995)&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;1982 - Twins I \u0026 II (released in 1999)&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;1983 - Invitation&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;1986 - Broadway Blues (released in 1998)&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;1986 - Honestly Solo Live (released in 1990)&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;1986 - Live In Italy (released in 1991)&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;1986 - Heavy&#39;n Jazz (released in 1992)&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;1991 - Live In New York City, Volumes 1-7.&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;1999 - Rare Collection (compilation)&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;2003 - Punk Jazz: The Jaco Pastorius Anthology (compilation)&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;2007 - The Essential Jaco Pastorius (compilation)&#34;</span>
+   <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+      </div>
+      
+        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
+        
+      
+    
+  </div>
+  
+</div>
+
+<p>The list of bass players can be accessed via <code>.Site.Data.jazz.bass</code>, a single bass player by adding the filename without the suffix, e.g. <code>.Site.Data.jazz.bass.jacopastorius</code>.</p>
 <p>You can now render the list of recordings for all the bass players in a template:</p>
 <pre><code>{{ range $.Site.Data.jazz.bass }}
    {{ partial &quot;artist.html&quot; . }}
@@ -332,49 +398,58 @@
 
 
 
-
+  
 
 
 <div class="code relative" id="user0123">
-	<div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">User0123.</div>
-			<button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">yaml</button>&nbsp;
-		
-			<button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">toml</button>&nbsp;
-		
-			<button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">json</button>&nbsp;
-		
-	</div>
-	<div class="tab-content">
-		
-			<div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-				<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">Achievements</span><span class="p">:</span><span class="w">
+  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
+        User0123.
+      </div>
+      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
+        yaml
+      </button>
+      &nbsp;
+    
+      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        toml
+      </button>
+      &nbsp;
+    
+      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        json
+      </button>
+      &nbsp;
+    
+  </div>
+  <div class="tab-content">
+    
+      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">Achievements</span><span class="p">:</span><span class="w">
 </span><span class="w"></span>- <span class="l">Can create a Key, Value list from Data File</span><span class="w">
 </span><span class="w"></span>- <span class="l">Learns Hugo</span><span class="w">
 </span><span class="w"></span>- <span class="l">Reads documentation</span><span class="w">
 </span><span class="w"></span><span class="nt">Name</span><span class="p">:</span><span class="w"> </span><span class="l">User0123</span><span class="w">
 </span><span class="w"></span><span class="nt">Short Description</span><span class="p">:</span><span class="w"> </span><span class="l">He is a **jolly good** fellow.</span><span class="w">
 </span></code></pre></div>
-			</div>
-			
-				<button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-				</button>
-				
-			
-		
-			<div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-				<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">Achievements</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;Can create a Key, Value list from Data File&#34;</span><span class="p">,</span> <span class="s2">&#34;Learns Hugo&#34;</span><span class="p">,</span> <span class="s2">&#34;Reads documentation&#34;</span><span class="p">]</span>
-<span class="nx">Name</span> <span class="p">=</span> <span class="s2">&#34;User0123&#34;</span>
-<span class="s2">&#34;Short Description&#34;</span> <span class="p">=</span> <span class="s2">&#34;He is a **jolly good** fellow.&#34;</span>
+      </div>
+      
+        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
+        
+      
+    
+      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">Achievements</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;Can create a Key, Value list from Data File&#39;</span><span class="p">,</span> <span class="s1">&#39;Learns Hugo&#39;</span><span class="p">,</span> <span class="s1">&#39;Reads documentation&#39;</span><span class="p">]</span>
+<span class="nx">Name</span> <span class="p">=</span> <span class="s1">&#39;User0123&#39;</span>
+<span class="s1">&#39;Short Description&#39;</span> <span class="p">=</span> <span class="s1">&#39;He is a **jolly good** fellow.&#39;</span>
 </code></pre></div>
-			</div>
-			
-				<button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-				</button>
-				
-			
-		
-			<div data-pane="json" class="code-copy-content nt3 tab-pane ">
-				<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+      </div>
+      
+        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
+        
+      
+    
+      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;Achievements&#34;</span><span class="p">:</span> <span class="p">[</span>
       <span class="s2">&#34;Can create a Key, Value list from Data File&#34;</span><span class="p">,</span>
       <span class="s2">&#34;Learns Hugo&#34;</span><span class="p">,</span>
@@ -384,27 +459,21 @@
    <span class="nt">&#34;Short Description&#34;</span><span class="p">:</span> <span class="s2">&#34;He is a **jolly good** fellow.&#34;</span>
 <span class="p">}</span>
 </code></pre></div>
-			</div>
-			
-				<button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-				</button>
-				
-			
-		
-	</div>
-
+      </div>
+      
+        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
+        
+      
+    
+  </div>
+  
 </div>
 
 <p>You can use the following code to render the <code>Short Description</code> in your layout::</p>
 <pre><code>&lt;div&gt;Short Description of {{.Site.Data.User0123.Name}}: &lt;p&gt;{{ index .Site.Data.User0123 &quot;Short Description&quot; | markdownify }}&lt;/p&gt;&lt;/div&gt;
 </code></pre><p>Note the use of the <a href="/functions/markdownify/"><code>markdownify</code> template function</a>. This will send the description through the Blackfriday Markdown rendering engine.</p>
-<!-- raw HTML omitted -->
-<h2 id="data-driven-content">Data-Driven Content <a class="header-link" href="#data-driven-content"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>In addition to the <a href="/extras/datafiles/">data files</a> feature, Hugo also has a &ldquo;data-driven content&rdquo; feature, which lets you load any <a href="https://www.json.org/">JSON</a> or <a href="https://en.wikipedia.org/wiki/Comma-separated_values">CSV</a> file from nearly any resource.</p>
-<p>Data-driven content currently consists of two functions, <code>getJSON</code> and <code>getCSV</code>, which are available in all template files.</p>
-<h2 id="implementation-details">Implementation details <a class="header-link" href="#implementation-details"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<h3 id="call-the-functions-with-a-url">Call the Functions with a URL <a class="header-link" href="#call-the-functions-with-a-url"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>In your template, call the functions like this:</p>
+<h2 id="get-remote-data">Get Remote Data <a class="header-link" href="#get-remote-data"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<p>Use <code>getJSON</code> or <code>getCSV</code> to get remote data:</p>
 <pre><code>{{ $dataJ := getJSON &quot;url&quot; }}
 {{ $dataC := getCSV &quot;separator&quot; &quot;url&quot; }}
 </code></pre><p>If you use a prefix or postfix for the URL, the functions accept <a href="https://en.wikipedia.org/wiki/Variadic_function">variadic arguments</a>:</p>
@@ -416,17 +485,16 @@
 {{ $gistJ := getJSON $urlPre &quot;/users/GITHUB_USERNAME/gists&quot; }}
 </code></pre><p>This will resolve internally to the following:</p>
 <pre><code>{{ $gistJ := getJSON &quot;https://api.github.com/users/GITHUB_USERNAME/gists&quot; }}
-</code></pre><p>Finally, you can range over an array. This example will output the
-first 5 gists for a GitHub user:</p>
-<pre><code>&lt;ul&gt;
-  {{ $urlPre := &quot;https://api.github.com&quot; }}
-  {{ $gistJ := getJSON $urlPre &quot;/users/GITHUB_USERNAME/gists&quot; }}
-  {{ range first 5 $gistJ }}
-    {{ if .public }}
-      &lt;li&gt;&lt;a href=&quot;{{ .html_url }}&quot; target=&quot;_blank&quot;&gt;{{ .description }}&lt;/a&gt;&lt;/li&gt;
-    {{ end }}
-  {{ end }}
-&lt;/ul&gt;
+</code></pre><h3 id="add-http-headers">Add HTTP headers <a class="header-link" href="#add-http-headers"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<p>
+
+
+<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
+    <a href="https://gohugo.io/news/0.84.0-relnotes/" target="_blank">New in v0.84.0</a>
+</button> Both <code>getJSON</code> and <code>getCSV</code> takes an optional map as the last argument, e.g.:</p>
+<pre><code>{{ $data := getJSON &quot;https://example.org/api&quot; (dict &quot;Authorization&quot; &quot;Bearer abcd&quot;)  }}
+</code></pre><p>If you need multiple values for the same header key, use a slice:</p>
+<pre><code>{{ $data := getJSON &quot;https://example.org/api&quot; (dict &quot;X-List&quot; (slice &quot;a&quot; &quot;b&quot; &quot;c&quot;))  }}
 </code></pre><h3 id="example-for-csv-files">Example for CSV files <a class="header-link" href="#example-for-csv-files"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>For <code>getCSV</code>, the one-character-long separator must be placed in the first position followed by the URL. The following is an example of creating an HTML table in a <a href="/templates/partials/">partial template</a> from a published CSV:</p>
 
@@ -445,8 +513,8 @@ first 5 gists for a GitHub user:</p>
 		
 	
 	<div class="code-copy-content nt3" >
-	  	<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template">
-  <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+		
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template">  <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Name<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
@@ -465,8 +533,7 @@ first 5 gists for a GitHub user:</p>
       <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
     <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
-</code></pre></div>
+  <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span></code></pre></div>
 	</div>
 
 </div>
@@ -1023,11 +1090,6 @@ first 5 gists for a GitHub user:</p>
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/dateformat/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              dateFormat
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/functions/default/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               default
             </a>
@@ -1178,13 +1240,13 @@ first 5 gists for a GitHub user:</p>
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/lang.merge/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              lang.Merge
+            <a href="/functions/lang/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              lang
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/numfmt/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              lang.NumFmt
+            <a href="/functions/lang.merge/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              lang.Merge
             </a>
           </li>
           <li class="f6 fw4">
@@ -1495,6 +1557,11 @@ first 5 gists for a GitHub user:</p>
           <li class="f6 fw4">
             <a href="/functions/time/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               time
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/dateformat/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              time.Format
             </a>
           </li>
           <li class="f6 fw4">
@@ -1873,7 +1940,7 @@ first 5 gists for a GitHub user:</p>
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “Data Templates”
-  </a> was last updated: March 28, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/532f9a0fd13d8a37929738c4283d1915ed574604">Merge pull request #78 from blackb1rd/hugo/v0.82.0 (532f9a0)</a>
+  </a> was last updated: August 28, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/05d39469b1e013009b72f318d2ddfc1d8a48b2ad">Fix build release error (05d3946)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/templates/data-templates.md" class="

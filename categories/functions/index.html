@@ -13,7 +13,7 @@
   <title>functions | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.83.0-DEV" />
+  <meta name="generator" content="Hugo 0.88.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -27,7 +27,7 @@
   
   
   
-  <link rel="stylesheet" href="/output/css/app.min.08ecdd35eb5e6bdccdcc93919eda97a6b87211c44eff7f4bea3c5b0aba3d2e0b.css" integrity="sha256-COzdNetea9zNzJORntqXprhyEcRO/39L6jxbCro9Lgs=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/output/css/app.min.bab83909a2f2fe2aa45bf7e4813899f4f705e6858479cea5bd48eee72fdf0a70.css" integrity="sha256-urg5CaLy/iqkW/fkgTiZ9PcF5oWEec6lvUju5y/fCnA=" crossorigin="anonymous">
   
   
   
@@ -166,10 +166,9 @@
     <div class="db dib-ns pl3"><form id="site-search-form" action="" role="search">
   <fieldset class="bn ma0 pa0">
     <label class="clip" for="search-input">Search</label>
-    <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: transparent url('/images/icon-search.png') no-repeat 0 8px /16px 16px;">
+    <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: url('/images/icon-search.png') 5px 11px/16px 16px no-repeat; background-color: rgba(255,255,255,0);">
   </fieldset>
-</form>
-</div>
+</form></div>
 
     <span class="absolute mt1 mt2-l pr3 right-0 top-0">
 
@@ -677,11 +676,6 @@
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/dateformat/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              dateFormat
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/functions/default/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               default
             </a>
@@ -832,13 +826,13 @@
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/lang.merge/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              lang.Merge
+            <a href="/functions/lang/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              lang
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/numfmt/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              lang.NumFmt
+            <a href="/functions/lang.merge/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              lang.Merge
             </a>
           </li>
           <li class="f6 fw4">
@@ -1149,6 +1143,11 @@
           <li class="f6 fw4">
             <a href="/functions/time/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               time
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/dateformat/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              time.Format
             </a>
           </li>
           <li class="f6 fw4">
@@ -1539,12 +1538,37 @@
     
 
     <h1 class="near-black f3">
+      <a href="/functions/lang/" class="link primary-color dim">lang</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          TODO..
+        
+
+        <a href="/functions/lang/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative flex-auto w-100 w-40-l mr3 mb3 bg-white ba b--moon-gray nested-copy-line-height weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
       <a href="/functions/site/" class="link primary-color dim">site</a>
     </h1>
 
     <div class="lh-copy links">
       
-          The <code>site</code> function provides global access the same data as <code>.Site</code> page method
+          The <code>site</code> function provides global access to the same data as the <code>.Site</code> page method.
         
 
         <a href="/functions/site/" class="f6 mt2 db link primary-color dim">
@@ -1994,7 +2018,7 @@
 
     <div class="lh-copy links">
       
-          Takes a string and sanitizes it the same way as Blackfriday does for markdown headers.
+          Takes a string and sanitizes it the same way as the <a href="https://gohugo.io/getting-started/configuration-markup#configure-markup"><code>defaultMarkdownHandler</code></a> does for markdown headers.
         
 
         <a href="/functions/anchorize/" class="f6 mt2 db link primary-color dim">
@@ -2520,6 +2544,7 @@
     <div class="lh-copy links">
       
           .HasMenuCurrent is a method in Page object returning a boolean value. It returns true if the PAGE is the same object as the .Page in one of the children menu entries under MENUENTRY in a given MENU.
+ New in v0.86.0  If MENUENTRY&rsquo;s .Page is a section then, from Hugo 0.86.0, this method also returns true for any descendant of that section..
 You can find its example use in menu templates.
       
 
@@ -2621,7 +2646,7 @@ You can find its example use in menu templates.
 
     <div class="lh-copy links">
       
-          Acts as a &ldquo;scratchpad&rdquo; to allow for writable page- or shortcode-scoped variables.
+          Acts as a &ldquo;scratchpad&rdquo; to store and manipulate data.
         
 
         <a href="/functions/scratch/" class="f6 mt2 db link primary-color dim">
@@ -2850,31 +2875,6 @@ You can find its example use in menu templates.
         
 
         <a href="/functions/countwords/" class="f6 mt2 db link primary-color dim">
-          Read More &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative flex-auto w-100 w-40-l mr3 mb3 bg-white ba b--moon-gray nested-copy-line-height weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
-      <a href="/functions/dateformat/" class="link primary-color dim">dateFormat</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          Converts the textual representation of the <code>datetime</code> into the specified format.
-        
-
-        <a href="/functions/dateformat/" class="f6 mt2 db link primary-color dim">
           Read More &raquo;
         </a>
 
@@ -3441,31 +3441,6 @@ You can find its example use in menu templates.
     
 
     <h1 class="near-black f3">
-      <a href="/functions/numfmt/" class="link primary-color dim">lang.NumFmt</a>
-    </h1>
-
-    <div class="lh-copy links">
-      
-          Formats a number with a given precision using the requested <code>negative</code>, <code>decimal</code>, and <code>grouping</code> options. The <code>options</code> parameter is a string consisting of <code>&lt;negative&gt; &lt;decimal&gt; &lt;grouping&gt;</code>.
-        
-
-        <a href="/functions/numfmt/" class="f6 mt2 db link primary-color dim">
-          Read More &raquo;
-        </a>
-
-    </div>
-
-
-  </div>
-</div>
-
-          
-            <div class="relative flex-auto w-100 w-40-l mr3 mb3 bg-white ba b--moon-gray nested-copy-line-height weight-0">
-
-  <div class="bg-white mb2 pa3 pa4-l gray">
-    
-
-    <h1 class="near-black f3">
       <a href="/functions/last/" class="link primary-color dim">last</a>
     </h1>
 
@@ -3571,7 +3546,7 @@ You can find its example use in menu templates.
 
     <div class="lh-copy links">
       
-          Hugo provides nine mathematical operators in templates.
+          Hugo provides mathematical operators in templates.
         
 
         <a href="/functions/math/" class="f6 mt2 db link primary-color dim">
@@ -3796,7 +3771,7 @@ You can find its example use in menu templates.
 
     <div class="lh-copy links">
       
-          Takes a set of key-value pairs and returns a query string to be appended to URLs.
+          Takes a set or slice of key-value pairs and returns a query string to be appended to URLs.
         
 
         <a href="/functions/querify/" class="f6 mt2 db link primary-color dim">
@@ -4525,6 +4500,31 @@ You can find its example use in menu templates.
         
 
         <a href="/functions/time/" class="f6 mt2 db link primary-color dim">
+          Read More &raquo;
+        </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+          
+            <div class="relative flex-auto w-100 w-40-l mr3 mb3 bg-white ba b--moon-gray nested-copy-line-height weight-0">
+
+  <div class="bg-white mb2 pa3 pa4-l gray">
+    
+
+    <h1 class="near-black f3">
+      <a href="/functions/dateformat/" class="link primary-color dim">time.Format</a>
+    </h1>
+
+    <div class="lh-copy links">
+      
+          Converts a date/time to a localized string.
+        
+
+        <a href="/functions/dateformat/" class="f6 mt2 db link primary-color dim">
           Read More &raquo;
         </a>
 

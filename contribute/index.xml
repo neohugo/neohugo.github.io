@@ -36,7 +36,7 @@ You can then create a separate branch for your additions. Be sure to choose a de
       <guid>https://gohugo.io/contribute/themes/</guid>
       <description>A collection of all themes created by the Hugo community, including screenshots and demos, can be found at themes.gohugo.io. Every theme in this list will automatically be added to the theme site.
 Another great site for Hugo themes is jamstackthemes.dev/.
-Add Your Theme to the Repo  In order to add your Hugo theme to themes.gohugo.io please open up a new issue in the theme repository. Please make sure that you&amp;rsquo;ve read the theme submission guidelines in the README of the hugoThemes repository.</description>
+Add Your Theme to the Repo  In order to add your Hugo theme to themes.gohugo.io please open a pull request in the theme repository. Please make sure that you&amp;rsquo;ve read the theme submission guidelines in the README of the hugoThemesSiteBuilder repository.</description>
     </item>
     
   </channel>

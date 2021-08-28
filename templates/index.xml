@@ -37,7 +37,7 @@ Basic Syntax  Go Templates are HTML files with the addition of variables and fun
       <description>This page describes how to properly configure your site with the media types and output formats, as well as where to create your templates for your custom outputs.
 Media Types  A media type (also known as MIME type and content type) is a two-part identifier for file formats and format contents transmitted on the Internet.
 This is the full set of built-in media types in Hugo:
- type suffixes   application/javascript [js]   application/json [json]   application/octet-stream []   application/rss&amp;#43;xml [xml]   application/toml [toml]   application/typescript [ts]   application/xml [xml]   application/yaml [yaml yml]   image/jpeg [jpg jpeg]   image/png [png]   image/svg&amp;#43;xml [svg]   text/calendar [ics]   text/css [css]   text/csv [csv]   text/html [html]   text/jsx [jsx]   text/plain [txt]   text/tsx [tsx]   text/x-sass [sass]   text/x-scss [scss]   video/3gpp [3gpp 3gp]   video/mp4 [mp4]   video/mpeg [mpg mpeg]   video/ogg [ogv]   video/webm [webm]   video/x-msvideo [avi]   Note:</description>
+ type suffixes   application/javascript [js]   application/json [json]   application/manifest&amp;#43;json [webmanifest]   application/octet-stream []   application/rss&amp;#43;xml [xml]   application/toml [toml]   application/typescript [ts]   application/xml [xml]   application/yaml [yaml yml]   image/jpeg [jpg jpeg]   image/png [png]   image/svg&amp;#43;xml [svg]   image/webp [webp]   text/calendar [ics]   text/css [css]   text/csv [csv]   text/html [html]   text/jsx [jsx]   text/plain [txt]   text/tsx [tsx]   text/x-sass [sass]   text/x-scss [scss]   video/3gpp [3gpp 3gp]   video/mp4 [mp4]   video/mpeg [mpg mpeg]   video/ogg [ogv]   video/webm [webm]   video/x-msvideo [avi]   Note:</description>
     </item>
     
     <item>
@@ -192,7 +192,7 @@ layouts/partials/sidebar.html  &amp;lt;!-- sidebar start --&amp;gt; &amp;lt;asid
       <guid>https://gohugo.io/templates/pagination/</guid>
       <description>The real power of Hugo pagination shines when combined with the where function and its SQL-like operators: first, last, and after. You can even order the content the way you&amp;rsquo;ve become used to with Hugo.
 Configure Pagination  Pagination can be configured in your site configuration:
- Paginate default = 10. This setting can be overridden within the template. PaginatePath default = page. Allows you to set a different path for your pagination pages.</description>
+ paginate default = 10. This setting can be overridden within the template. paginatePath default = page. Allows you to set a different path for your pagination pages.</description>
     </item>
     
     <item>
@@ -225,9 +225,9 @@ A sitemap is a Page and therefore has all the page variables available to use in
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/templates/robots/</guid>
-      <description>To create your robots.txt as a template, first set the enableRobotsTXT value to true in your configuration file. By default, this option generates a robots.txt with the following content, which tells search engines that they are allowed to crawl everything:
-User-agent: * Robots.txt Template Lookup Order  The lookup order for the robots.txt template is as follows:
- /layouts/robots.txt /themes/&amp;lt;THEME&amp;gt;/layouts/robots.txt   If you do not want Hugo to create a default robots.</description>
+      <description>To generate a robots.txt file from a template, change the site configuration:
+config.  yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  enableRobotsTXT:true   enableRobotsTXT = true    { &amp;#34;enableRobotsTXT&amp;#34;: true }      By default, Hugo generates robots.txt using an internal template.
+User-agent: * Search engines that honor the Robots Exclusion Protocol will interpret this as permission to crawl everything on the site.</description>
     </item>
     
     <item>
@@ -239,7 +239,7 @@ User-agent: * Robots.txt Template Lookup Order  The lookup order for the robots.
       <description>While the following internal templates are called similar to partials, they do not observe the partial template lookup order.
   Google Analytics  Hugo ships with internal templates for Google Analytics tracking, including both synchronous and asynchronous tracking codes. As well as support for both v3 and v4 of Google Analytics.
 Configure Google Analytics  Provide your tracking id in your configuration file:
-Google Analytics v3 (analytics.js) config. yaml&amp;nbsp; toml&amp;nbsp; json&amp;nbsp;  googleAnalytics:UA-PROPERTY_ID   googleAnalytics = &amp;#34;UA-PROPERTY_ID&amp;#34;    { &amp;#34;googleAnalytics&amp;#34;: &amp;#34;UA-PROPERTY_ID&amp;#34; }      Google Analytics v4 (gtag.</description>
+Google Analytics v3 (analytics.js) config.  yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  googleAnalytics:UA-PROPERTY_ID   googleAnalytics = &amp;#39;UA-PROPERTY_ID&amp;#39;    { &amp;#34;googleAnalytics&amp;#34;: &amp;#34;UA-PROPERTY_ID&amp;#34; }      Google Analytics v4 (gtag.</description>
     </item>
     
     <item>

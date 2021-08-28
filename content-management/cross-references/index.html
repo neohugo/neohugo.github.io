@@ -13,7 +13,7 @@
   <title>Links and Cross References | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.83.0-DEV" />
+  <meta name="generator" content="Hugo 0.88.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -26,7 +26,7 @@
   
   
   
-  <link rel="stylesheet" href="/output/css/app.min.08ecdd35eb5e6bdccdcc93919eda97a6b87211c44eff7f4bea3c5b0aba3d2e0b.css" integrity="sha256-COzdNetea9zNzJORntqXprhyEcRO/39L6jxbCro9Lgs=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/output/css/app.min.bab83909a2f2fe2aa45bf7e4813899f4f705e6858479cea5bd48eee72fdf0a70.css" integrity="sha256-urg5CaLy/iqkW/fkgTiZ9PcF5oWEec6lvUju5y/fCnA=" crossorigin="anonymous">
   
   
   
@@ -61,12 +61,12 @@
 <meta property="og:description" content="Shortcodes for creating links to documents." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/content-management/cross-references/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="content-management" />
-<meta property="article:published_time" content="2017-02-01T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-28T21:54:32&#43;07:00" />
+<meta property="article:published_time" content="2017-02-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-08-28T21:58:58+07:00" />
 
 <meta itemprop="name" content="Links and Cross References">
-<meta itemprop="description" content="Shortcodes for creating links to documents."><meta itemprop="datePublished" content="2017-02-01T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-03-28T21:54:32&#43;07:00" />
+<meta itemprop="description" content="Shortcodes for creating links to documents."><meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-08-28T21:58:58+07:00" />
 <meta itemprop="wordCount" content="332"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
@@ -170,10 +170,9 @@
     <div class="db dib-ns pl3"><form id="site-search-form" action="" role="search">
   <fieldset class="bn ma0 pa0">
     <label class="clip" for="search-input">Search</label>
-    <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: transparent url('/images/icon-search.png') no-repeat 0 8px /16px 16px;">
+    <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: url('/images/icon-search.png') 5px 11px/16px 16px no-repeat; background-color: rgba(255,255,255,0);">
   </fieldset>
-</form>
-</div>
+</form></div>
 
     <span class="absolute mt1 mt2-l pr3 right-0 top-0">
 
@@ -200,13 +199,7 @@
 		<p class="b">What's on this Page</p>
   	<nav id="TableOfContents">
   <ul>
-    <li><a href="#use-ref-and-relref">Use <code>ref</code> and <code>relref</code></a>
-      <ul>
-        <li><a href="#link-to-another-language-version">Link to another language version</a></li>
-        <li><a href="#get-another-output-format">Get another Output Format</a></li>
-        <li><a href="#heading-ids">Heading IDs</a></li>
-      </ul>
-    </li>
+    <li><a href="#use-ref-and-relref">Use <code>ref</code> and <code>relref</code></a></li>
     <li><a href="#ref-and-relref-configuration">Ref and RelRef Configuration</a></li>
   </ul>
 </nav>
@@ -268,7 +261,7 @@
 
 <p>The <code>ref</code> and <code>relref</code> shortcodes display the absolute and relative permalinks to a document, respectively.</p>
 <h2 id="use-ref-and-relref">Use <code>ref</code> and <code>relref</code> <a class="header-link" href="#use-ref-and-relref"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">ref</span><span class="w"> </span><span class="s">&#34;document&#34;</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">ref</span><span class="w"> </span><span class="s">&#34;document&#34;</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span>
 <span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">ref</span><span class="w"> </span><span class="s">&#34;document#anchor&#34;</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span>
 <span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">ref</span><span class="w"> </span><span class="s">&#34;document.md&#34;</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span>
 <span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">ref</span><span class="w"> </span><span class="s">&#34;document.md#anchor&#34;</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span>
@@ -280,36 +273,36 @@
 <span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">relref</span><span class="w"> </span><span class="s">&#34;#anchor&#34;</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span>
 <span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">relref</span><span class="w"> </span><span class="s">&#34;/blog/my-post.md&#34;</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span>
 </code></pre></div><p>To generate a hyperlink using <code>ref</code> or <code>relref</code> in markdown:</p>
-<div class="highlight"><pre class="chroma"><code class="language-md" data-lang="md">[<span class="nt">About</span>](<span class="na">{{&lt; ref &#34;/page/about&#34; &gt;}} &#34;About Us&#34;</span>)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md">[<span class="nt">About</span>](<span class="na">{{&lt; ref &#34;/page/about&#34; &gt;}} &#34;About Us&#34;</span>)
 </code></pre></div><p>The <code>ref</code> and <code>relref</code> shortcodes require a single parameter: the path to a content document, with or without a file extension, with or without an anchor.</p>
 <p>**Paths without a leading <code>/</code> are first resolved relative to the current page, then to the remainder of the site.</p>
 <p>Hugo emits an error or warning if a document cannot be uniquely resolved. The error behavior is configurable; see below.</p>
 <h3 id="link-to-another-language-version">Link to another language version <a class="header-link" href="#link-to-another-language-version"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>To link to another language version of a document, use this syntax:</p>
-<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">relref</span><span class="w"> </span><span class="nx">path</span><span class="o">=</span><span class="s">&#34;document.md&#34;</span><span class="w"> </span><span class="nx">lang</span><span class="o">=</span><span class="s">&#34;ja&#34;</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">relref</span><span class="w"> </span><span class="nx">path</span><span class="o">=</span><span class="s">&#34;document.md&#34;</span><span class="w"> </span><span class="nx">lang</span><span class="o">=</span><span class="s">&#34;ja&#34;</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span>
 </code></pre></div><h3 id="get-another-output-format">Get another Output Format <a class="header-link" href="#get-another-output-format"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>To link to another Output Format of a document, use this syntax:</p>
-<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">relref</span><span class="w"> </span><span class="nx">path</span><span class="o">=</span><span class="s">&#34;document.md&#34;</span><span class="w"> </span><span class="nx">outputFormat</span><span class="o">=</span><span class="s">&#34;rss&#34;</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">relref</span><span class="w"> </span><span class="nx">path</span><span class="o">=</span><span class="s">&#34;document.md&#34;</span><span class="w"> </span><span class="nx">outputFormat</span><span class="o">=</span><span class="s">&#34;rss&#34;</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span>
 </code></pre></div><h3 id="heading-ids">Heading IDs <a class="header-link" href="#heading-ids"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>When using Markdown document types, Hugo generates element IDs for every heading on a page. For example:</p>
-<div class="highlight"><pre class="chroma"><code class="language-md" data-lang="md"><span class="gu">## Reference
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="gu">## Reference
 </span></code></pre></div><p>produces this HTML:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;reference&#34;</span><span class="p">&gt;</span>Reference<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;reference&#34;</span><span class="p">&gt;</span>Reference<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 </code></pre></div><p>Get the permalink to a heading by appending the ID to the path when using the <code>ref</code> or <code>relref</code> shortcodes:</p>
-<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">ref</span><span class="w"> </span><span class="s">&#34;document.md#reference&#34;</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">ref</span><span class="w"> </span><span class="s">&#34;document.md#reference&#34;</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span>
 <span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">relref</span><span class="w"> </span><span class="s">&#34;document.md#reference&#34;</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span>
 </code></pre></div><p>Generate a custom heading ID by including an attribute. For example:</p>
-<div class="highlight"><pre class="chroma"><code class="language-md" data-lang="md"><span class="gu">## Reference A {#foo}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="gu">## Reference A {#foo}
 </span><span class="gu">## Reference B {id=&#34;bar&#34;}
 </span></code></pre></div><p>produces this HTML:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;foo&#34;</span><span class="p">&gt;</span>Reference A<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;foo&#34;</span><span class="p">&gt;</span>Reference A<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;bar&#34;</span><span class="p">&gt;</span>Reference B<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 </code></pre></div><p>Hugo will generate unique element IDs if the same heading appears more than once on a page. For example:</p>
-<div class="highlight"><pre class="chroma"><code class="language-md" data-lang="md"><span class="gu">## Reference
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="gu">## Reference
 </span><span class="gu">## Reference
 </span><span class="gu">## Reference
 </span></code></pre></div><p>produces this HTML:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;reference&#34;</span><span class="p">&gt;</span>Reference<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;reference&#34;</span><span class="p">&gt;</span>Reference<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;reference-1&#34;</span><span class="p">&gt;</span>Reference<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;reference-2&#34;</span><span class="p">&gt;</span>Reference<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 </code></pre></div><h2 id="ref-and-relref-configuration">Ref and RelRef Configuration <a class="header-link" href="#ref-and-relref-configuration"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
@@ -827,11 +820,6 @@
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/dateformat/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              dateFormat
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/functions/default/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               default
             </a>
@@ -982,13 +970,13 @@
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/lang.merge/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              lang.Merge
+            <a href="/functions/lang/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              lang
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/numfmt/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              lang.NumFmt
+            <a href="/functions/lang.merge/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              lang.Merge
             </a>
           </li>
           <li class="f6 fw4">
@@ -1299,6 +1287,11 @@
           <li class="f6 fw4">
             <a href="/functions/time/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               time
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/dateformat/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              time.Format
             </a>
           </li>
           <li class="f6 fw4">
@@ -1677,7 +1670,7 @@
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “Links and Cross References”
-  </a> was last updated: March 28, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/532f9a0fd13d8a37929738c4283d1915ed574604">Merge pull request #78 from blackb1rd/hugo/v0.82.0 (532f9a0)</a>
+  </a> was last updated: August 28, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/05d39469b1e013009b72f318d2ddfc1d8a48b2ad">Fix build release error (05d3946)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/content-management/cross-references.md" class="

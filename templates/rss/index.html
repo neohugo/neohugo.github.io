@@ -13,7 +13,7 @@
   <title>RSS Templates | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.83.0-DEV" />
+  <meta name="generator" content="Hugo 0.88.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -26,7 +26,7 @@
   
   
   
-  <link rel="stylesheet" href="/output/css/app.min.08ecdd35eb5e6bdccdcc93919eda97a6b87211c44eff7f4bea3c5b0aba3d2e0b.css" integrity="sha256-COzdNetea9zNzJORntqXprhyEcRO/39L6jxbCro9Lgs=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/output/css/app.min.bab83909a2f2fe2aa45bf7e4813899f4f705e6858479cea5bd48eee72fdf0a70.css" integrity="sha256-urg5CaLy/iqkW/fkgTiZ9PcF5oWEec6lvUju5y/fCnA=" crossorigin="anonymous">
   
   
   
@@ -61,13 +61,13 @@
 <meta property="og:description" content="Hugo ships with its own RSS 2.0 template that requires almost no configuration, or you can create your own RSS templates." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/templates/rss/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="templates" />
-<meta property="article:published_time" content="2017-02-01T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-28T21:54:32&#43;07:00" />
+<meta property="article:published_time" content="2017-02-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-08-28T21:58:58+07:00" />
 
 <meta itemprop="name" content="RSS Templates">
-<meta itemprop="description" content="Hugo ships with its own RSS 2.0 template that requires almost no configuration, or you can create your own RSS templates."><meta itemprop="datePublished" content="2017-02-01T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-03-28T21:54:32&#43;07:00" />
-<meta itemprop="wordCount" content="444"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="description" content="Hugo ships with its own RSS 2.0 template that requires almost no configuration, or you can create your own RSS templates."><meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-08-28T21:58:58+07:00" />
+<meta itemprop="wordCount" content="374"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
 
@@ -170,10 +170,9 @@
     <div class="db dib-ns pl3"><form id="site-search-form" action="" role="search">
   <fieldset class="bn ma0 pa0">
     <label class="clip" for="search-input">Search</label>
-    <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: transparent url('/images/icon-search.png') no-repeat 0 8px /16px 16px;">
+    <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: url('/images/icon-search.png') 5px 11px/16px 16px no-repeat; background-color: rgba(255,255,255,0);">
   </fieldset>
-</form>
-</div>
+</form></div>
 
     <span class="absolute mt1 mt2-l pr3 right-0 top-0">
 
@@ -200,11 +199,7 @@
 		<p class="b">What's on this Page</p>
   	<nav id="TableOfContents">
   <ul>
-    <li><a href="#rss-template-lookup-order">RSS Template Lookup Order</a>
-      <ul>
-        <li><a href="#section-rss">Section RSS</a></li>
-      </ul>
-    </li>
+    <li><a href="#rss-template-lookup-order">RSS Template Lookup Order</a></li>
     <li><a href="#lookup-order-for-rss-templates">Lookup Order for RSS Templates</a></li>
     <li><a href="#configure-rss">Configure RSS</a></li>
     <li><a href="#the-embedded-rssxml">The Embedded rss.xml</a></li>
@@ -323,36 +318,33 @@
 		
 		
 		
-			<td>RSS home</td>
+			<td>
+				
+				
+					RSS home
+				
+			</td>
 		
-			<td>RSS</td>
+			<td>
+				
+				
+					RSS
+				
+			</td>
 		
-			<td>xml</td>
+			<td>
+				
+				
+					xml
+				
+			</td>
 		
-			<td>[layouts/index.rss.xml layouts/home.rss.xml layouts/rss.xml layouts/list.rss.xml layouts/index.xml layouts/home.xml layouts/list.xml layouts/_default/index.rss.xml layouts/_default/home.rss.xml layouts/_default/rss.xml layouts/_default/list.rss.xml layouts/_default/index.xml layouts/_default/home.xml layouts/_default/list.xml layouts/_internal/_default/rss.xml]</td>
-		
-	</tr>
-	
-	<tr>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-			<td>RSS section posts</td>
-		
-			<td>RSS</td>
-		
-			<td>xml</td>
-		
-			<td>[layouts/posts/section.rss.xml layouts/posts/rss.xml layouts/posts/list.rss.xml layouts/posts/section.xml layouts/posts/list.xml layouts/section/section.rss.xml layouts/section/rss.xml layouts/section/list.rss.xml layouts/section/section.xml layouts/section/list.xml layouts/_default/section.rss.xml layouts/_default/rss.xml layouts/_default/list.rss.xml layouts/_default/section.xml layouts/_default/list.xml layouts/_internal/_default/rss.xml]</td>
+			<td>
+				
+				
+					<ol><li>layouts/index.rss.xml</li><li>layouts/home.rss.xml</li><li>layouts/rss.xml</li><li>layouts/list.rss.xml</li><li>layouts/index.xml</li><li>layouts/home.xml</li><li>layouts/list.xml</li><li>layouts/_default/index.rss.xml</li><li>layouts/_default/home.rss.xml</li><li>layouts/_default/rss.xml</li><li>layouts/_default/list.rss.xml</li><li>layouts/_default/index.xml</li><li>layouts/_default/home.xml</li><li>layouts/_default/list.xml</li><li>layouts/_internal/_default/rss.xml</li></ol>
+				
+			</td>
 		
 	</tr>
 	
@@ -369,13 +361,33 @@
 		
 		
 		
-			<td>Taxonomy in categories</td>
+			<td>
+				
+				
+					RSS section posts
+				
+			</td>
 		
-			<td>RSS</td>
+			<td>
+				
+				
+					RSS
+				
+			</td>
 		
-			<td>xml</td>
+			<td>
+				
+				
+					xml
+				
+			</td>
 		
-			<td>[layouts/categories/category.terms.rss.xml layouts/categories/terms.rss.xml layouts/categories/taxonomy.rss.xml layouts/categories/rss.xml layouts/categories/list.rss.xml layouts/categories/category.terms.xml layouts/categories/terms.xml layouts/categories/taxonomy.xml layouts/categories/list.xml layouts/category/category.terms.rss.xml layouts/category/terms.rss.xml layouts/category/taxonomy.rss.xml layouts/category/rss.xml layouts/category/list.rss.xml layouts/category/category.terms.xml layouts/category/terms.xml layouts/category/taxonomy.xml layouts/category/list.xml layouts/taxonomy/category.terms.rss.xml layouts/taxonomy/terms.rss.xml layouts/taxonomy/taxonomy.rss.xml layouts/taxonomy/rss.xml layouts/taxonomy/list.rss.xml layouts/taxonomy/category.terms.xml layouts/taxonomy/terms.xml layouts/taxonomy/taxonomy.xml layouts/taxonomy/list.xml layouts/_default/category.terms.rss.xml layouts/_default/terms.rss.xml layouts/_default/taxonomy.rss.xml layouts/_default/rss.xml layouts/_default/list.rss.xml layouts/_default/category.terms.xml layouts/_default/terms.xml layouts/_default/taxonomy.xml layouts/_default/list.xml layouts/_internal/_default/rss.xml]</td>
+			<td>
+				
+				
+					<ol><li>layouts/posts/section.rss.xml</li><li>layouts/posts/rss.xml</li><li>layouts/posts/list.rss.xml</li><li>layouts/posts/section.xml</li><li>layouts/posts/list.xml</li><li>layouts/section/section.rss.xml</li><li>layouts/section/rss.xml</li><li>layouts/section/list.rss.xml</li><li>layouts/section/section.xml</li><li>layouts/section/list.xml</li><li>layouts/_default/section.rss.xml</li><li>layouts/_default/rss.xml</li><li>layouts/_default/list.rss.xml</li><li>layouts/_default/section.xml</li><li>layouts/_default/list.xml</li><li>layouts/_internal/_default/rss.xml</li></ol>
+				
+			</td>
 		
 	</tr>
 	
@@ -392,13 +404,76 @@
 		
 		
 		
-			<td>Term in categories</td>
+			<td>
+				
+				
+					Taxonomy in categories
+				
+			</td>
 		
-			<td>RSS</td>
+			<td>
+				
+				
+					RSS
+				
+			</td>
 		
-			<td>xml</td>
+			<td>
+				
+				
+					xml
+				
+			</td>
 		
-			<td>[layouts/categories/term.rss.xml layouts/categories/category.rss.xml layouts/categories/taxonomy.rss.xml layouts/categories/rss.xml layouts/categories/list.rss.xml layouts/categories/term.xml layouts/categories/category.xml layouts/categories/taxonomy.xml layouts/categories/list.xml layouts/term/term.rss.xml layouts/term/category.rss.xml layouts/term/taxonomy.rss.xml layouts/term/rss.xml layouts/term/list.rss.xml layouts/term/term.xml layouts/term/category.xml layouts/term/taxonomy.xml layouts/term/list.xml layouts/taxonomy/term.rss.xml layouts/taxonomy/category.rss.xml layouts/taxonomy/taxonomy.rss.xml layouts/taxonomy/rss.xml layouts/taxonomy/list.rss.xml layouts/taxonomy/term.xml layouts/taxonomy/category.xml layouts/taxonomy/taxonomy.xml layouts/taxonomy/list.xml layouts/category/term.rss.xml layouts/category/category.rss.xml layouts/category/taxonomy.rss.xml layouts/category/rss.xml layouts/category/list.rss.xml layouts/category/term.xml layouts/category/category.xml layouts/category/taxonomy.xml layouts/category/list.xml layouts/_default/term.rss.xml layouts/_default/category.rss.xml layouts/_default/taxonomy.rss.xml layouts/_default/rss.xml layouts/_default/list.rss.xml layouts/_default/term.xml layouts/_default/category.xml layouts/_default/taxonomy.xml layouts/_default/list.xml layouts/_internal/_default/rss.xml]</td>
+			<td>
+				
+				
+					<ol><li>layouts/categories/category.terms.rss.xml</li><li>layouts/categories/terms.rss.xml</li><li>layouts/categories/taxonomy.rss.xml</li><li>layouts/categories/rss.xml</li><li>layouts/categories/list.rss.xml</li><li>layouts/categories/category.terms.xml</li><li>layouts/categories/terms.xml</li><li>layouts/categories/taxonomy.xml</li><li>layouts/categories/list.xml</li><li>layouts/category/category.terms.rss.xml</li><li>layouts/category/terms.rss.xml</li><li>layouts/category/taxonomy.rss.xml</li><li>layouts/category/rss.xml</li><li>layouts/category/list.rss.xml</li><li>layouts/category/category.terms.xml</li><li>layouts/category/terms.xml</li><li>layouts/category/taxonomy.xml</li><li>layouts/category/list.xml</li><li>layouts/taxonomy/category.terms.rss.xml</li><li>layouts/taxonomy/terms.rss.xml</li><li>layouts/taxonomy/taxonomy.rss.xml</li><li>layouts/taxonomy/rss.xml</li><li>layouts/taxonomy/list.rss.xml</li><li>layouts/taxonomy/category.terms.xml</li><li>layouts/taxonomy/terms.xml</li><li>layouts/taxonomy/taxonomy.xml</li><li>layouts/taxonomy/list.xml</li><li>layouts/_default/category.terms.rss.xml</li><li>layouts/_default/terms.rss.xml</li><li>layouts/_default/taxonomy.rss.xml</li><li>layouts/_default/rss.xml</li><li>layouts/_default/list.rss.xml</li><li>layouts/_default/category.terms.xml</li><li>layouts/_default/terms.xml</li><li>layouts/_default/taxonomy.xml</li><li>layouts/_default/list.xml</li><li>layouts/_internal/_default/rss.xml</li></ol>
+				
+			</td>
+		
+	</tr>
+	
+	<tr>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<td>
+				
+				
+					Term in categories
+				
+			</td>
+		
+			<td>
+				
+				
+					RSS
+				
+			</td>
+		
+			<td>
+				
+				
+					xml
+				
+			</td>
+		
+			<td>
+				
+				
+					<ol><li>layouts/categories/term.rss.xml</li><li>layouts/categories/category.rss.xml</li><li>layouts/categories/taxonomy.rss.xml</li><li>layouts/categories/rss.xml</li><li>layouts/categories/list.rss.xml</li><li>layouts/categories/term.xml</li><li>layouts/categories/category.xml</li><li>layouts/categories/taxonomy.xml</li><li>layouts/categories/list.xml</li><li>layouts/term/term.rss.xml</li><li>layouts/term/category.rss.xml</li><li>layouts/term/taxonomy.rss.xml</li><li>layouts/term/rss.xml</li><li>layouts/term/list.rss.xml</li><li>layouts/term/term.xml</li><li>layouts/term/category.xml</li><li>layouts/term/taxonomy.xml</li><li>layouts/term/list.xml</li><li>layouts/taxonomy/term.rss.xml</li><li>layouts/taxonomy/category.rss.xml</li><li>layouts/taxonomy/taxonomy.rss.xml</li><li>layouts/taxonomy/rss.xml</li><li>layouts/taxonomy/list.rss.xml</li><li>layouts/taxonomy/term.xml</li><li>layouts/taxonomy/category.xml</li><li>layouts/taxonomy/taxonomy.xml</li><li>layouts/taxonomy/list.xml</li><li>layouts/category/term.rss.xml</li><li>layouts/category/category.rss.xml</li><li>layouts/category/taxonomy.rss.xml</li><li>layouts/category/rss.xml</li><li>layouts/category/list.rss.xml</li><li>layouts/category/term.xml</li><li>layouts/category/category.xml</li><li>layouts/category/taxonomy.xml</li><li>layouts/category/list.xml</li><li>layouts/_default/term.rss.xml</li><li>layouts/_default/category.rss.xml</li><li>layouts/_default/taxonomy.rss.xml</li><li>layouts/_default/rss.xml</li><li>layouts/_default/list.rss.xml</li><li>layouts/_default/term.xml</li><li>layouts/_default/category.xml</li><li>layouts/_default/taxonomy.xml</li><li>layouts/_default/list.xml</li><li>layouts/_internal/_default/rss.xml</li></ol>
+				
+			</td>
 		
 	</tr>
 	
@@ -406,26 +481,94 @@
 
 <h2 id="configure-rss">Configure RSS <a class="header-link" href="#configure-rss"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>By default, Hugo will create an unlimited number of RSS entries. You can limit the number of articles included in the built-in RSS templates by assigning a numeric value to <code>rssLimit:</code> field in your project&rsquo;s <a href="/getting-started/configuration/"><code>config</code> file</a>.</p>
-<p>The following values will also be included in the RSS output if specified in your site’s configuration:</p>
-<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;en-us&#34;</span>
-<span class="nx">copyright</span> <span class="p">=</span> <span class="s2">&#34;This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.&#34;</span>
+<p>The following values will also be included in the RSS output if specified:</p>
 
+
+
+  
+
+
+<div class="code relative" id="config">
+  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
+        config.
+      </div>
+      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
+        yaml
+      </button>
+      &nbsp;
+    
+      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        toml
+      </button>
+      &nbsp;
+    
+      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        json
+      </button>
+      &nbsp;
+    
+  </div>
+  <div class="tab-content">
+    
+      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">author</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">My Name Here</span><span class="w">
+</span><span class="w"></span><span class="nt">copyright</span><span class="p">:</span><span class="w"> </span><span class="l">This work is licensed under a Creative Commons Attribution-ShareAlike 4.0</span><span class="w">
+</span><span class="w">  </span><span class="l">International License.</span><span class="w">
+</span><span class="w"></span><span class="nt">languageCode</span><span class="p">:</span><span class="w"> </span><span class="l">en-us</span><span class="w">
+</span></code></pre></div>
+      </div>
+      
+        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
+        
+      
+    
+      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">copyright</span> <span class="p">=</span> <span class="s1">&#39;This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.&#39;</span>
+<span class="nx">languageCode</span> <span class="p">=</span> <span class="s1">&#39;en-us&#39;</span>
 <span class="p">[</span><span class="nx">author</span><span class="p">]</span>
-    <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;My Name Here&#34;</span>
-</code></pre></div><h2 id="the-embedded-rssxml">The Embedded rss.xml <a class="header-link" href="#the-embedded-rssxml"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<span class="nx">name</span> <span class="p">=</span> <span class="s1">&#39;My Name Here&#39;</span>
+
+</code></pre></div>
+      </div>
+      
+        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
+        
+      
+    
+      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+   <span class="nt">&#34;author&#34;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;My Name Here&#34;</span>
+   <span class="p">},</span>
+   <span class="nt">&#34;copyright&#34;</span><span class="p">:</span> <span class="s2">&#34;This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.&#34;</span><span class="p">,</span>
+   <span class="nt">&#34;languageCode&#34;</span><span class="p">:</span> <span class="s2">&#34;en-us&#34;</span>
+<span class="p">}</span>
+</code></pre></div>
+      </div>
+      
+        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
+        
+      
+    
+  </div>
+  
+</div>
+
+<h2 id="the-embedded-rssxml">The Embedded rss.xml <a class="header-link" href="#the-embedded-rssxml"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>This is the default RSS template that ships with Hugo:</p>
 <p><a href="https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/_default/rss.xml">https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/_default/rss.xml</a></p>
 <h2 id="reference-your-rss-feed-in-head">Reference your RSS Feed in <code>&lt;head&gt;</code> <a class="header-link" href="#reference-your-rss-feed-in-head"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>In your <code>header.html</code> template, you can specify your RSS feed in your <code>&lt;head&gt;&lt;/head&gt;</code> tag using Hugo&rsquo;s <a href="/templates/output-formats/#link-to-output-formats">Output Formats</a> like this:</p>
-<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.AlternativeOutputFormats</span><span class="w"> </span><span class="cp">-}}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.AlternativeOutputFormats</span><span class="w"> </span><span class="cp">-}}</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">printf</span><span class="w"> </span><span class="s">`&lt;link rel=&#34;%s&#34; type=&#34;%s&#34; href=&#34;%s&#34; title=&#34;%s&#34; /&gt;`</span><span class="w"> </span><span class="na">.Rel</span><span class="w"> </span><span class="na">.MediaType.Type</span><span class="w"> </span><span class="na">.Permalink</span><span class="w"> </span><span class="na">$.Site.Title</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">safeHTML</span><span class="w"> </span><span class="cp">}}</span>
 <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">-}}</span>
 </code></pre></div><p>If you only want the RSS link, you can query the formats:</p>
-<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.OutputFormats.Get</span><span class="w"> </span><span class="s">&#34;rss&#34;</span><span class="w"> </span><span class="cp">-}}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.OutputFormats.Get</span><span class="w"> </span><span class="s">&#34;rss&#34;</span><span class="w"> </span><span class="cp">-}}</span>
     <span class="cp">{{</span><span class="w"> </span><span class="k">printf</span><span class="w"> </span><span class="s">`&lt;link rel=&#34;%s&#34; type=&#34;%s&#34; href=&#34;%s&#34; title=&#34;%s&#34; /&gt;`</span><span class="w"> </span><span class="na">.Rel</span><span class="w"> </span><span class="na">.MediaType.Type</span><span class="w"> </span><span class="na">.Permalink</span><span class="w"> </span><span class="na">$.Site.Title</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">safeHTML</span><span class="w"> </span><span class="cp">}}</span>
 <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">-}}</span>
 </code></pre></div><p>Either of the two snippets above will generate the below <code>link</code> tag on the site homepage for RSS output:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;alternate&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;application/rss+xml&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://example.com/index.xml&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Site Title&#34;</span><span class="p">&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;alternate&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;application/rss+xml&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://example.com/index.xml&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Site Title&#34;</span><span class="p">&gt;</span>
 </code></pre></div><p><em>We are assuming <code>BaseURL</code> to be <code>https://example.com/</code> and <code>$.Site.Title</code> to be <code>&quot;Site Title&quot;</code> in this example.</em></p>
 
 </div>
@@ -934,11 +1077,6 @@
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/dateformat/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              dateFormat
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/functions/default/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               default
             </a>
@@ -1089,13 +1227,13 @@
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/lang.merge/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              lang.Merge
+            <a href="/functions/lang/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              lang
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/functions/numfmt/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              lang.NumFmt
+            <a href="/functions/lang.merge/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              lang.Merge
             </a>
           </li>
           <li class="f6 fw4">
@@ -1406,6 +1544,11 @@
           <li class="f6 fw4">
             <a href="/functions/time/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               time
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/dateformat/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              time.Format
             </a>
           </li>
           <li class="f6 fw4">
@@ -1784,7 +1927,7 @@
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “RSS Templates”
-  </a> was last updated: March 28, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/532f9a0fd13d8a37929738c4283d1915ed574604">Merge pull request #78 from blackb1rd/hugo/v0.82.0 (532f9a0)</a>
+  </a> was last updated: August 28, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/05d39469b1e013009b72f318d2ddfc1d8a48b2ad">Fix build release error (05d3946)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/templates/rss.md" class="

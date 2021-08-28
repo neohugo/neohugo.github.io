@@ -133,6 +133,7 @@
 /extras/robots-txt/                	/templates/robots/
 /templates/ace/                    	/templates/alternatives/
 /templates/amber/                  	/templates/alternatives/
+/functions/numfmt/                 	/functions/lang/
 hmac                               	/functions/hmac/
 /showcase/1password/               	/showcase/1password-support/
 /0-25-1/                           	/news/0.25.1-relnotes/
