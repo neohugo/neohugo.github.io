@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  
+  <link rel="preload" href="https://gohugo.io/fonts/muli-latin-200.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://gohugo.io/fonts/muli-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://gohugo.io/fonts/muli-latin-800.woff2" as="font" type="font/woff2" crossorigin>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>0.88.0 | Hugo</title>
+
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <meta name="generator" content="Hugo 0.89.0-DEV" />
+
+  
+  <meta name="robots" content="noindex, nofollow">
+  
+
+  
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/output/css/app.min.bab83909a2f2fe2aa45bf7e4813899f4f705e6858479cea5bd48eee72fdf0a70.css" integrity="sha256-urg5CaLy/iqkW/fkgTiZ9PcF5oWEec6lvUju5y/fCnA=" crossorigin="anonymous">
+  
+  
+  
+
+  <meta name="description"
+  content="0.88.0">
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/output/js/app.175b405753a9c0ce86ab35944e9c4cc1a758a6873209cf5106600f6b2f5a59b6.js" integrity="sha256-F1tAV1OpwM6GqzWUTpxMwadYpocyCc9RBmAPay9aWbY=" crossorigin="anonymous" defer></script>
+  
+      
+ 
+
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0594cb">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="0.88.0" />
+<meta property="og:description" content="0.88.0" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gohugo.io/news/0.88.0-relnotes/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="news" />
+<meta property="article:published_time" content="2021-09-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-10-06T23:36:46+07:00" />
+
+<meta itemprop="name" content="0.88.0">
+<meta itemprop="description" content="0.88.0"><meta itemprop="datePublished" content="2021-09-02T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-10-06T23:36:46+07:00" />
+<meta itemprop="wordCount" content="463"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
+
+<meta name="twitter:title" content="0.88.0"/>
+<meta name="twitter:description" content="0.88.0"/>
+<meta name="twitter:site" content="@GoHugoIO"/>
+
+
+</head>
+
+<body class="ma0 sans-serif bg-primary-color-light">
+  
+<nav class="bg-primary-color-dark pv4 w-100" role="navigation">
+
+  <div class="center flex-ns flex-wrap items-center justify-start mw9">
+
+    <h1 class="dim f3 lh-solid ml0-ns mr0 mr4-l mv0 pl3 pl4-ns">
+      <a href="https://gohugo.io/" class="link white">
+         HUGO
+      </a>
+    </h1>
+    <ul class="list ma0 pa0 dn dib-l">
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="/news/" class="dim link light-silver">
+            News
+              
+            
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="/documentation/" class="dim link light-silver">
+            Docs
+              
+            
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="https://themes.gohugo.io/" class="dim link light-silver">
+            Themes
+              
+            
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="/showcase/" class="dim link light-silver">
+            Showcase
+              
+            
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="https://discourse.gohugo.io/" class="dim link light-silver">
+            Community
+              
+            
+            
+              <span class="pl1">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="10" viewBox="0 0 32 32" class="fill-current v-base" aria-label="External Link">
+<path d="M25.152 16.576v5.696q0 2.144-1.504 3.648t-3.648 1.504h-14.848q-2.144 0-3.648-1.504t-1.504-3.648v-14.848q0-2.112 1.504-3.616t3.648-1.536h12.576q0.224 0 0.384 0.16t0.16 0.416v1.152q0 0.256-0.16 0.416t-0.384 0.16h-12.576q-1.184 0-2.016 0.832t-0.864 2.016v14.848q0 1.184 0.864 2.016t2.016 0.864h14.848q1.184 0 2.016-0.864t0.832-2.016v-5.696q0-0.256 0.16-0.416t0.416-0.16h1.152q0.256 0 0.416 0.16t0.16 0.416zM32 1.152v9.12q0 0.48-0.352 0.8t-0.8 0.352-0.8-0.352l-3.136-3.136-11.648 11.648q-0.16 0.192-0.416 0.192t-0.384-0.192l-2.048-2.048q-0.192-0.16-0.192-0.384t0.192-0.416l11.648-11.648-3.136-3.136q-0.352-0.352-0.352-0.8t0.352-0.8 0.8-0.352h9.12q0.48 0 0.8 0.352t0.352 0.8z"></path>
+</svg>
+
+              </span>
+            
+          </a>
+        </li>
+      
+        <li class="f5 dib mr4" role="menuitem">
+            
+          <a href="https://github.com/gohugoio/hugo" class="dim link light-silver">
+            GitHub
+              
+            
+            
+              <span class="pl1">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="10" viewBox="0 0 32 32" class="fill-current v-base" aria-label="External Link">
+<path d="M25.152 16.576v5.696q0 2.144-1.504 3.648t-3.648 1.504h-14.848q-2.144 0-3.648-1.504t-1.504-3.648v-14.848q0-2.112 1.504-3.616t3.648-1.536h12.576q0.224 0 0.384 0.16t0.16 0.416v1.152q0 0.256-0.16 0.416t-0.384 0.16h-12.576q-1.184 0-2.016 0.832t-0.864 2.016v14.848q0 1.184 0.864 2.016t2.016 0.864h14.848q1.184 0 2.016-0.864t0.832-2.016v-5.696q0-0.256 0.16-0.416t0.416-0.16h1.152q0.256 0 0.416 0.16t0.16 0.416zM32 1.152v9.12q0 0.48-0.352 0.8t-0.8 0.352-0.8-0.352l-3.136-3.136-11.648 11.648q-0.16 0.192-0.416 0.192t-0.384-0.192l-2.048-2.048q-0.192-0.16-0.192-0.384t0.192-0.416l11.648-11.648-3.136-3.136q-0.352-0.352-0.352-0.8t0.352-0.8 0.8-0.352h9.12q0.48 0 0.8 0.352t0.352 0.8z"></path>
+</svg>
+
+              </span>
+            
+          </a>
+        </li>
+      
+    </ul>
+
+    <div class="db dib-ns pl3"><form id="site-search-form" action="" role="search">
+  <fieldset class="bn ma0 pa0">
+    <label class="clip" for="search-input">Search</label>
+    <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: url('/images/icon-search.png') 5px 11px/16px 16px no-repeat; background-color: rgba(255,255,255,0);">
+  </fieldset>
+</form></div>
+
+    <span class="absolute mt1 mt2-l pr3 right-0 top-0">
+
+  <a href="https://twitter.com/intent/follow?screen_name=GoHugoIO" title="Follow on Twitter" class="link-transition twitter link dib z-999 pt3 pt0-l mr2">
+    <svg height="32px" id="Layer_1" style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+  </a>
+
+<a class="github-button needs-js link primary-color-dark" href="https://github.com/gohugoio/hugo" data-size="large" data-show-count="false" aria-label="Star gohugoio/hugo on GitHub">Star</a>
+</span>
+
+  </div>
+</nav>
+
+  
+  <main role="main" class="content-with-sidebar min-vh-100 pb7 pb0-ns">
+    
+  
+
+  <article class="cf ph4 pv3 pv5-ns">
+      
+    <header class="flex-none w-100 pb3">
+      
+        
+          <a href="/categories/releases" class="f6 fw8 mb0 link mid-gray dim mr3">
+            RELEASES
+          </a>
+        
+      
+
+      <h1 class="lh-title fw9 mb7 mv0 pt3">
+        <a href="/news/0.88.0-relnotes/" class="link primary-color dim">
+          0.88.0
+        </a>
+      </h1>
+    </header>
+
+    <div class="flex-l">
+      <aside class="mid-gray fn w-100 w-25-l">
+        
+          <h2 class="f3 lh-title">
+            0.88.0
+          </h2>
+        
+        <time class="f6 mt2 db ttu tracked" datetime="2021-09-02T00:00:00Z">
+          September 2, 2021
+        </time>
+        
+        <p>
+        Go to <a href="https://github.com/gohugoio/hugo/releases" class="link primary-color dim">Hugo Releases</a> for the release downloads.
+        </p>
+        
+        
+
+        <div class="nested-links mt4">
+
+	<div date-pref>
+		
+			<a href="https://gohugo.io/news/0.88.1-relnotes/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Hugo 0.88.1: A couple of Bug Fixes ">
+				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+
+			</a>
+		
+
+		
+			<a href="https://gohugo.io/news/0.87.0-relnotes/" class="dib f6 pr1 hover-bg-light-gray br-100" title="0.87.0">
+			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+
+			</a>
+		
+	</div>
+
+</div>
+
+      </aside>
+
+      <div class="fn pl5-l pt3 mid-gray w-100 w-two-third-l sans-serif nested-copy-line-height no-underline nested-links nested-img nested-copy-seperator nested-blockquote measure-wide-l">
+        
+          
+          
+          
+        <pre><code>The most important piece in this release is the Go 1.17 update. This release is built with that new Go version, but also and more importantly, the Hugo Modules logic has been updated to support Go's new way of (lazy) loading transitive dependencies. If you already have Go 1.17 installed, building existing Hugo Modules backed projects have not been an issue, but `hugo mod init` for a new project could give you _too new_ versions of transitive dependencies. Hugo 0.88 fixes this.
+</code></pre>
+<p>This release represents <strong>26 contributions by 6 contributors</strong> to the main Hugo code base.<a href="https://github.com/bep">@bep</a> leads the Hugo development with a significant amount of contributions, but also a big shoutout to <a href="https://github.com/apps/dependabot">@dependabot[bot]</a>, <a href="https://github.com/helfper">@helfper</a>, and <a href="https://github.com/wzshiming">@wzshiming</a> for their ongoing contributions.</p>
+<p>Many have also been busy writing and fixing the documentation in <a href="https://github.com/gohugoio/hugoDocs">hugoDocs</a>,
+which has received <strong>9 contributions by 6 contributors</strong>. A special thanks to <a href="https://github.com/bep">@bep</a>, <a href="https://github.com/jmooring">@jmooring</a>, <a href="https://github.com/StevenMaude">@StevenMaude</a>, and <a href="https://github.com/coliff">@coliff</a> for their work on the documentation site.</p>
+<p>Hugo now has:</p>
+<ul>
+<li>53915+ <a href="https://github.com/gohugoio/hugo/stargazers">stars</a></li>
+<li>430+ <a href="https://github.com/gohugoio/hugo/graphs/contributors">contributors</a></li>
+<li>404+ <a href="http://themes.gohugo.io/">themes</a></li>
+</ul>
+<h2 id="notes">Notes <a class="header-link" href="#notes"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<ul>
+<li>We have fixed a bug with the import order in <code>js.Build</code> for the case <code>./foo</code> when both <code>./foo.js</code> and <code>./foo/index.js</code> exists. This is in line with how both Node and ESBuild&rsquo;s native import resolver does it. We discovered this trying to build AlpineJS v3 from source mounted in <code>/assets</code>. See <a href="https://github.com/gohugoio/hugo/commit/cf73cc2ececd4e794df09ea382a38ab18960d84e">cf73cc2e</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/8945">#8945</a>.</li>
+</ul>
+<h2 id="enhancements">Enhancements <a class="header-link" href="#enhancements"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<h3 id="templates">Templates <a class="header-link" href="#templates"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<ul>
+<li>Handle nil values in time.AsTime&quot; <a href="https://github.com/gohugoio/hugo/commit/abd969a670852f9ed57c1a26434445aa985706fe">abd969a6</a> <a href="https://github.com/bep">@bep</a></li>
+<li>Handle nil values in time.AsTime <a href="https://github.com/gohugoio/hugo/commit/3e11072892ca31bb76980ee38890a4bd92d83dfd">3e110728</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/8865">#8865</a></li>
+</ul>
+<h3 id="other">Other <a class="header-link" href="#other"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<ul>
+<li>Run go mod tidy <a href="https://github.com/gohugoio/hugo/commit/6631c9c7e00fb9dc237b4ec2fbb261d05df268d1">6631c9c7</a> <a href="https://github.com/bep">@bep</a></li>
+<li>Don&rsquo;t fail on template errors on go mod graph etc. <a href="https://github.com/gohugoio/hugo/commit/7d1f806ecb3621ae7b545a686d04de4568814055">7d1f806e</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/8942">#8942</a></li>
+<li>bump github.com/getkin/kin-openapi from 0.74.0 to 0.75.0 <a href="https://github.com/gohugoio/hugo/commit/04b59599613a62d378bf3710ac0eb06c9543b96d">04b59599</a> <a href="https://github.com/apps/dependabot">@dependabot[bot]</a></li>
+<li>bump github.com/frankban/quicktest from 1.13.0 to 1.13.1 <a href="https://github.com/gohugoio/hugo/commit/c278b6e45d56b101db9691347f9e5a99a9319572">c278b6e4</a> <a href="https://github.com/apps/dependabot">@dependabot[bot]</a></li>
+<li>bump github.com/evanw/esbuild from 0.12.22 to 0.12.24 <a href="https://github.com/gohugoio/hugo/commit/107c86febbb7057c4ae90c6a35b3e8eda24297c7">107c86fe</a> <a href="https://github.com/apps/dependabot">@dependabot[bot]</a></li>
+<li>Avoid failing with &ldquo;module not found&rdquo; for hugo mod init and similar <a href="https://github.com/gohugoio/hugo/commit/a0489c2dfd3ceb4d0702de0da7a4af3eabce05e5">a0489c2d</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/8940">#8940</a></li>
+<li>Update to Go 1.17 <a href="https://github.com/gohugoio/hugo/commit/0fc2ce9e4bf0524994a861b7300e4332f6f8d390">0fc2ce9e</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/8930">#8930</a></li>
+<li>Remove Pygments from snapcraft.yml <a href="https://github.com/gohugoio/hugo/commit/32569285c181c8798ef594c12d3cfd7f9a252a04">32569285</a> <a href="https://github.com/anthonyfok">@anthonyfok</a></li>
+<li>bump github.com/fsnotify/fsnotify from 1.4.9 to 1.5.0&quot; <a href="https://github.com/gohugoio/hugo/commit/5a46eefbc6da3463b796ada8d15902be197455a3">5a46eefb</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/8920">#8920</a></li>
+<li>Add tabindex when code is not highlighted <a href="https://github.com/gohugoio/hugo/commit/7a15edafe240471c072d3548b72ccda0271ffd8f">7a15edaf</a> <a href="https://github.com/helfper">@helfper</a></li>
+<li>bump github.com/evanw/esbuild from 0.12.17 to 0.12.22 <a href="https://github.com/gohugoio/hugo/commit/2f0945bafe501103abe97b2f2b5566b28ec48e52">2f0945ba</a> <a href="https://github.com/apps/dependabot">@dependabot[bot]</a></li>
+<li>bump golang.org/x/text from 0.3.6 to 0.3.7 <a href="https://github.com/gohugoio/hugo/commit/7ba3f3d201e386cb9c7c15df5a6cc1c4b46473bd">7ba3f3d2</a> <a href="https://github.com/apps/dependabot">@dependabot[bot]</a></li>
+<li>bump github.com/fsnotify/fsnotify from 1.4.9 to 1.5.0 <a href="https://github.com/gohugoio/hugo/commit/f70165242b98e3ee182fbac08bf2893a7f09e961">f7016524</a> <a href="https://github.com/apps/dependabot">@dependabot[bot]</a></li>
+<li>Prevent minifier from removing quoutes around post-processed attributes <a href="https://github.com/gohugoio/hugo/commit/bc0743ed8eafc3c2d9b21a1e8f1b05d64b85e8ba">bc0743ed</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/8884">#8884</a></li>
+<li>Avoid too many watch file handles causing the server to fail to start&quot; <a href="https://github.com/gohugoio/hugo/commit/ffa2fe61172aa0d892234b23d1497c77a6a7f5c4">ffa2fe61</a> <a href="https://github.com/bep">@bep</a></li>
+<li>Remove some pygments references <a href="https://github.com/gohugoio/hugo/commit/d966f5d08d7f75f1ae9acd94e292bf61de2adf0d">d966f5d0</a> <a href="https://github.com/helfper">@helfper</a></li>
+<li>Avoid too many watch file handles causing the server to fail to start <a href="https://github.com/gohugoio/hugo/commit/3f38c785b7208440e2a9dd9a80cb39d4ae23e676">3f38c785</a> <a href="https://github.com/wzshiming">@wzshiming</a> <a href="https://github.com/gohugoio/hugo/issues/8904">#8904</a></li>
+<li>bump github.com/getkin/kin-openapi from 0.68.0 to 0.74.0 <a href="https://github.com/gohugoio/hugo/commit/24589c0814bc5d21565470bec6215ee792f1655e">24589c08</a> <a href="https://github.com/apps/dependabot">@dependabot[bot]</a></li>
+<li>Update github.com/spf13/cast v1.4.0 =&gt; v1.4.1 <a href="https://github.com/gohugoio/hugo/commit/efebd756eb1f35c515ac82ccc85ec520bac91240">efebd756</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/8891">#8891</a></li>
+<li>Import time/tzdata on Windows <a href="https://github.com/gohugoio/hugo/commit/58b6742cfeb6d4cd04450cbe9592209510c2b977">58b6742c</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/8892">#8892</a></li>
+<li>Indent TOML tables <a href="https://github.com/gohugoio/hugo/commit/9bba9a3a98fa268391597d8d7a52112fb401d952">9bba9a3a</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/8850">#8850</a></li>
+</ul>
+<h2 id="fixes">Fixes <a class="header-link" href="#fixes"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<h3 id="other-1">Other <a class="header-link" href="#other-1"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<ul>
+<li>Fix import order for ./foo when both ./foo.js and ./foo/index.js exists <a href="https://github.com/gohugoio/hugo/commit/cf73cc2ececd4e794df09ea382a38ab18960d84e">cf73cc2e</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/8945">#8945</a></li>
+<li>Fix it so disableKinds etc. does not get merged in from theme <a href="https://github.com/gohugoio/hugo/commit/f4ffeea71dd3d044a2628bbb5d6634680667398f">f4ffeea7</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/8866">#8866</a></li>
+<li>Fix <code>lang.FormatPercent</code> description <a href="https://github.com/gohugoio/hugo/commit/d6c8cd771834ae2913658c652e30a9feadc2a7b7">d6c8cd77</a> <a href="https://github.com/salim-b">@salim-b</a></li>
+</ul>
+
+      </div>
+    </div>
+    
+
+      <div class="gray f6 mv6">
+        Last Update: October 6, 2021 <br>
+        <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/news/0.88.0-relnotes/index.md" class="
+f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
+">Improve this page</a>
+
+      </div>
+
+  </article>
+
+
+  </main>
+
+  <footer class="bg-primary-color-dark ph4-ns pt4 relative w-100" role="contentinfo">
+    <div class="center flex-ns flex-wrap justify-between mw9 w-90">
+      <div class="pb3 pt4 w-100 w-50-ns">
+
+         <div class="b f3  light-gray mb3 nested-links tc">
+           By the <a href="https://github.com/gohugoio/hugo/graphs/contributors" class="link">Hugo Authors</a><br />
+          </div>
+
+          <div class="center w4">
+            <img src="/images/hugo-logo-wide.svg" alt="Hugo Logo">
+          </div>
+
+          <ul class="center f6 list ma0 mv3 pa0 tc"><li class="dib mr3"><a href="https://github.com/gohugoio/hugo/issues/new" class="dim link light-gray pv2">File an Issue</a></li><li class="dib mr3"><a href="https://discourse.gohugo.io/" class="dim link light-gray pv2">Get Help</a></li><li class="dib"><a href="https://gitter.im/spf13/hugo" class="dim link light-gray pv2">Discuss Source Code</a></li></ul>
+
+          <ul class="center f6 list ma0 mv4 pa0 tc">
+            <li class="dib mr3"><a href="https://twitter.com/gohugoio" class="dim link light-gray pv2">@GoHugoIO</a></li>
+            <li class="dib mr3"><a href="https://twitter.com/spf13" class="dim link light-gray pv2">@spf13</a></li>
+            <li class="dib"><a href="https://twitter.com/bepsays" class="dim link light-gray pv2">@bepsays</a></li>
+          </ul>
+
+          
+
+      </div>
+
+      <div class="w-100 w-50-l"> 
+        
+
+
+  <section class="pb3 w-100">
+    <div class="center mw9"> 
+      <h3 class="b f3 mv0 light-gray">Hugo Sponsors</h3>
+      <div class="flex-ns flex-wrap center justify-between pt3">
+        
+          
+          
+            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100">
+              
+                
+                   <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
+                
+              <img src="/images/sponsors/linode-logo_standard_light_medium.png" alt="Logo for Linode" class="img h3 center" />
+              </a>
+              
+            </div>
+          
+        
+          
+          
+            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100">
+              
+                
+                   <a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
+                
+              <img src="/images/sponsors/esolia-logo.svg" alt="Logo for eSolia" class="img h3 center" />
+              </a>
+              
+            </div>
+          
+        
+          
+          
+            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100" style="background-color: #5A2FA1;">
+              
+                
+                   <a href="https://brave.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
+                
+              <img src="/images/sponsors/brave-logo.svg" alt="Logo for Brave" class="img h3 center" />
+              </a>
+              
+            </div>
+          
+        
+      </div>
+    </div>
+  </section>
+
+
+      </div>
+
+    </div>
+
+    <div class="f7 gray mb5 mb0-ns ph3 w-100"> 
+      <p class="dib mr4">The Hugo logos are copyright © Steve Francia 2013–2021.</p>
+      <p class="dib">The Hugo Gopher is based on an original work by Renée French.</p>
+    </div>
+
+    <img src="/images/gopher-side_color.svg" alt="" class="absolute-l bottom-0 dn db-l h4 right-0 z-999"/>
+
+    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 w-100"><div  class="globalmenu mobilemenu pb3 dn">
+    
+
+<ul class="list hidden dib ph0 ma0 scrolling-touch tc">
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/news/" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          News
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/documentation/" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          Docs
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="https://themes.gohugo.io/" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          Themes
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/showcase/" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          Showcase
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="https://discourse.gohugo.io/" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          Community
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="https://github.com/gohugoio/hugo" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
+          GitHub
+        </a>
+    </li>
+  
+</ul>
+
+</div>
+<div  class="docsmenu mobilemenu pb3 dn">
+    
+
+<ul class="list dib ph0 ma0 scrolling-touch tc">
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/about/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          About Hugo
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/getting-started/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Getting Started
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100 mb2 bb b--mid-gray">
+        <a href="/hugo-modules/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Hugo Modules
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/content-management/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Content Management
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/templates/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Templates
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/functions/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Functions
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/variables/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Variables
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/hugo-pipes/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Hugo Pipes
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100 mb2 bb b--mid-gray">
+        <a href="/commands/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          CLI
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/troubleshooting/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Troubleshooting
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/tools/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Tools
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/hosting-and-deployment/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Hosting &amp; Deployment
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100 mb2 bb b--mid-gray">
+        <a href="/contribute/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Contribute
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/maintenance/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Maintenance
+        </a>
+    </li>
+  
+</ul>
+
+</div>
+
+<div class="flex dn-l justify-between">
+  <button class="js-toggle flex-auto dib dn-l f6 tc db mt4-ns ph3 pv2 link mr2 white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".globalmenu">Menu</button>
+
+  <button class="js-toggle flex-auto dib dn-l f6 tc db mt4-ns ph3 pv2 link white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".docsmenu">Docs Menu</button>
+</div>
+</div>
+
+</footer>
+
+
+</body>
+
+</html>

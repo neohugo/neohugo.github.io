@@ -13,7 +13,7 @@
   <title>Page Variables | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.88.0-DEV" />
+  <meta name="generator" content="Hugo 0.89.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,11 +62,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/variables/page/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="variables" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-08-28T21:58:58+07:00" />
+<meta property="article:modified_time" content="2021-10-06T23:36:46+07:00" />
 
 <meta itemprop="name" content="Page Variables">
 <meta itemprop="description" content="Page-level variables are defined in a content file&#39;s front matter, derived from the content&#39;s file location, or extracted from the content body itself."><meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-08-28T21:58:58+07:00" />
+<meta itemprop="dateModified" content="2021-10-06T23:36:46+07:00" />
 <meta itemprop="wordCount" content="1652"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
@@ -460,7 +460,7 @@ current <em>list</em> page. This <strong>excludes</strong> regular pages in nest
 
 <h2 id="page-level-params">Page-level Params <a class="header-link" href="#page-level-params"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Any other value defined in the front matter in a content file, including taxonomies, will be made available as part of the <code>.Params</code> variable.</p>
-<pre><code>---
+<pre tabindex="0"><code>---
 title: My First Post
 date: 2017-02-20T15:26:23-06:00
 categories: [one]
@@ -482,7 +482,7 @@ tags: [two,three,four]
 </aside>
 
 <p>The <code>.Params</code> variable is particularly useful for the introduction of user-defined front matter fields in content files. For example, a Hugo website on book reviews could have the following front matter in <code>/content/review/book01.md</code>:</p>
-<pre><code>---
+<pre tabindex="0"><code>---
 ...
 affiliatelink: &quot;http://www.my-book-link.here&quot;
 recommendedby: &quot;My Mother&quot;
@@ -538,26 +538,26 @@ recommendedby: &quot;My Mother&quot;
 
 <h3 id="the-param-method">The <code>.Param</code> Method <a class="header-link" href="#the-param-method"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>In Hugo, you can declare params in individual pages and globally for your entire website. A common use case is to have a general value for the site param and a more specific value for some of the pages (i.e., a header image):</p>
-<pre><code>{{ $.Param &quot;header_image&quot; }}
+<pre tabindex="0"><code>{{ $.Param &quot;header_image&quot; }}
 </code></pre><p>The <code>.Param</code> method provides a way to resolve a single value according to it&rsquo;s definition in a page parameter (i.e. in the content&rsquo;s front matter) or a site parameter (i.e., in your <code>config</code>).</p>
 <h3 id="access-nested-fields-in-front-matter">Access Nested Fields in Front Matter <a class="header-link" href="#access-nested-fields-in-front-matter"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>When front matter contains nested fields like the following:</p>
-<pre><code>---
+<pre tabindex="0"><code>---
 author:
   given_name: John
   family_name: Feminella
   display_name: John Feminella
 ---
 </code></pre><p><code>.Param</code> can access these fields by concatenating the field names together with a dot:</p>
-<pre><code>{{ $.Param &quot;author.display_name&quot; }}
+<pre tabindex="0"><code>{{ $.Param &quot;author.display_name&quot; }}
 </code></pre><p>If your front matter contains a top-level key that is ambiguous with a nested key, as in the following case:</p>
-<pre><code>---
+<pre tabindex="0"><code>---
 favorites.flavor: vanilla
 favorites:
   flavor: chocolate
 ---
 </code></pre><p>The top-level key will be preferred. Therefore, the following method, when applied to the previous example, will print <code>vanilla</code> and not <code>chocolate</code>:</p>
-<pre><code>{{ $.Param &quot;favorites.flavor&quot; }}
+<pre tabindex="0"><code>{{ $.Param &quot;favorites.flavor&quot; }}
 =&gt; vanilla
 </code></pre>
 </div>
@@ -1908,7 +1908,7 @@ favorites:
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “Page Variables”
-  </a> was last updated: August 28, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/05d39469b1e013009b72f318d2ddfc1d8a48b2ad">Fix build release error (05d3946)</a>
+  </a> was last updated: October 6, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/279ca7e2ea9fd0fe0449023b5d47862bce6e0564">Merge pull request #81 from blackb1rd/main (279ca7e)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/variables/page.md" class="

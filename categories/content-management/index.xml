@@ -35,7 +35,7 @@ These terms are connected, and you also need to read about Page Resources and Im
       <guid>https://gohugo.io/content-management/syntax-highlighting/</guid>
       <description>Hugo uses Chroma as its code highlighter; it is built in Go and is really, really fast &amp;ndash; and for the most important parts compatible with Pygments we used before.
 Configure Syntax Highlighter  See Configure Highlight.
-Generate Syntax Highlighter CSS  If you run with pygmentsUseClasses=true in your site config, you need a style sheet.
+Generate Syntax Highlighter CSS  If you run with markup.highlight.noClasses=false in your site config, you need a style sheet.
 You can generate one with Hugo:
 hugo gen chromastyles --style=monokai &amp;gt; syntax.css Run hugo gen chromastyles -h for more options.</description>
     </item>

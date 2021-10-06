@@ -13,7 +13,7 @@
   <title>Hugo 0.59.0 | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.88.0-DEV" />
+  <meta name="generator" content="Hugo 0.89.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,11 +62,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/news/0.59.0-relnotes/" /><meta property="og:image" content="https://gohugo.io/news/0.59.0-relnotes/hugo-59-poster-featured.png"/><meta property="article:section" content="news" />
 <meta property="article:published_time" content="2019-10-21T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-08-28T21:58:58+07:00" />
+<meta property="article:modified_time" content="2021-10-06T23:36:46+07:00" />
 
 <meta itemprop="name" content="Hugo 0.59.0">
 <meta itemprop="description" content="Set image target format and background color, and more ..."><meta itemprop="datePublished" content="2019-10-21T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-08-28T21:58:58+07:00" />
+<meta itemprop="dateModified" content="2021-10-06T23:36:46+07:00" />
 <meta itemprop="wordCount" content="672"><meta itemprop="image" content="https://gohugo.io/news/0.59.0-relnotes/hugo-59-poster-featured.png">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/news/0.59.0-relnotes/hugo-59-poster-featured.png"/>
@@ -264,12 +264,12 @@
           
         <p>The timing of this release is motivated by getting the copies of the docs repositories in synch, now fully &ldquo;Hugo Modularized&rdquo;. But it also comes with some very nice additions:</p>
 <p>It is now possible to set the target format and the background fill color when processing images, e.g.:</p>
-<pre><code>{{ $image.Resize &quot;600x jpg #b31280&quot; }}
+<pre tabindex="0"><code>{{ $image.Resize &quot;600x jpg #b31280&quot; }}
 </code></pre><p>See <a href="https://gohugo.io/content-management/image-processing/#image-processing-options">Image Processing Options</a>.</p>
 <p>Another useful addon is the <code>$pages.Next</code> and <code>$pages.Prev</code> methods on the core page collections in Hugo. These works the same way as the built-in static variants one <code>Page</code>, e.g. <code>.Next</code> and <code>.NextInSection</code>:</p>
-<pre><code>{{with .Site.RegularPages.Next . }}{{.RelPermalink}}{{end}}
+<pre tabindex="0"><code>{{with .Site.RegularPages.Next . }}{{.RelPermalink}}{{end}}
 </code></pre><p>The above is a functionally equivalent (but slightly slower) variant of:</p>
-<pre><code>{{with .Next }}{{.RelPermalink}}{{end}}
+<pre tabindex="0"><code>{{with .Next }}{{.RelPermalink}}{{end}}
 </code></pre><p>See <a href="https://gohugo.io/variables/pages/">Pages Methods</a> for more information.</p>
 <p>This release represents <strong>45 contributions by 13 contributors</strong> to the main Hugo code base. <a href="https://github.com/bep">@bep</a> leads the Hugo development with a significant amount of contributions, but also a big shoutout to <a href="https://github.com/anthonyfok">@anthonyfok</a>, <a href="https://github.com/BaibhaVatsa">@BaibhaVatsa</a>, and <a href="https://github.com/XhmikosR">@XhmikosR</a> for their ongoing contributions.
 And a big thanks to <a href="https://github.com/digitalcraftsman">@digitalcraftsman</a> and <a href="https://github.com/onedrawingperday">@onedrawingperday</a> for their relentless work on keeping the themes site in pristine condition and to <a href="https://github.com/kaushalmodi">@kaushalmodi</a> for his great work on the documentation site.</p>
@@ -354,7 +354,7 @@ which has received <strong>34 contributions by 20 contributors</strong>. A speci
     
 
       <div class="gray f6 mv6">
-        Last Update: August 28, 2021 <br>
+        Last Update: October 6, 2021 <br>
         <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/news/0.59.0-relnotes/index.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 ">Improve this page</a>

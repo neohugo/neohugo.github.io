@@ -13,7 +13,7 @@
   <title>Partial Templates | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.88.0-DEV" />
+  <meta name="generator" content="Hugo 0.89.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,11 +62,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/templates/partials/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="templates" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-08-28T21:58:58+07:00" />
+<meta property="article:modified_time" content="2021-10-06T23:36:46+07:00" />
 
 <meta itemprop="name" content="Partial Templates">
 <meta itemprop="description" content="Partials are smaller, context-aware components in your list and page templates that can be used economically to keep your templating DRY."><meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-08-28T21:58:58+07:00" />
+<meta itemprop="dateModified" content="2021-10-06T23:36:46+07:00" />
 <meta itemprop="wordCount" content="666"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
@@ -276,7 +276,7 @@
 <p>This allows a theme&rsquo;s end user to copy a partial&rsquo;s contents into a file of the same name for <a href="/themes/customizing/" title="Hugo provides easy means to customize themes as long as users are familiar with Hugo's template lookup order.">further customization</a>.</p>
 <h2 id="use-partials-in-your-templates">Use Partials in your Templates <a class="header-link" href="#use-partials-in-your-templates"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>All partials for your Hugo project are located in a single <code>layouts/partials</code> directory. For better organization, you can create multiple subdirectories within <code>partials</code> as well:</p>
-<pre><code>.
+<pre tabindex="0"><code>.
 └── layouts
     └── partials
         ├── footer
@@ -291,7 +291,7 @@
             ├── site-header.html
             └── site-nav.html
 </code></pre><p>All partials are called within your templates using the following pattern:</p>
-<pre><code>{{ partial &quot;&lt;PATH&gt;/&lt;PARTIAL&gt;.html&quot; . }}
+<pre tabindex="0"><code>{{ partial &quot;&lt;PATH&gt;/&lt;PARTIAL&gt;.html&quot; . }}
 </code></pre>
 <aside class="admonition note">
 	<div class="note-icon">
@@ -315,7 +315,7 @@
 </aside>
 
 <p>As shown in the above example directory structure, you can nest your directories within <code>partials</code> for better source organization. You only need to call the nested partial&rsquo;s path relative to the <code>partials</code> directory:</p>
-<pre><code>{{ partial &quot;header/site-header.html&quot; . }}
+<pre tabindex="0"><code>{{ partial &quot;header/site-header.html&quot; . }}
 {{ partial &quot;footer/scripts.html&quot; . }}
 </code></pre><h3 id="variable-scoping">Variable Scoping <a class="header-link" href="#variable-scoping"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>The second argument in a partial call is the variable being passed down. The above examples are passing the <code>.</code>, which tells the template receiving the partial to apply the current <a href="/templates/introduction/" title="The most easily overlooked concept to understand about Go templating is how the dot always refers to the current context.">context</a>.</p>
@@ -370,12 +370,12 @@
 
 <h2 id="cached-partials">Cached Partials <a class="header-link" href="#cached-partials"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>The <a href="/functions/partialcached/" title="Use the partial cached function to improve build times in cases where Hugo can cache partials that don't need to be rendered with every page."><code>partialCached</code> template function</a> can offer significant performance gains for complex templates that don&rsquo;t need to be re-rendered on every invocation. The simplest usage is as follows:</p>
-<pre><code>{{ partialCached &quot;footer.html&quot; . }}
+<pre tabindex="0"><code>{{ partialCached &quot;footer.html&quot; . }}
 </code></pre><p>You can also pass additional parameters to <code>partialCached</code> to create <em>variants</em> of the cached partial.</p>
 <p>For example, you can tell Hugo to only render the partial <code>footer.html</code> once per section:</p>
-<pre><code>{{ partialCached &quot;footer.html&quot; . .Section }}
+<pre tabindex="0"><code>{{ partialCached &quot;footer.html&quot; . .Section }}
 </code></pre><p>If you need to pass additional parameters to create unique variants, you can pass as many variant parameters as you need:</p>
-<pre><code>{{ partialCached &quot;footer.html&quot; . .Params.country .Params.province }}
+<pre tabindex="0"><code>{{ partialCached &quot;footer.html&quot; . .Params.country .Params.province }}
 </code></pre><p>Note that the variant parameters are not made available to the underlying partial template. They are only use to create a unique cache key.</p>
 <h3 id="example-headerhtml">Example <code>header.html</code> <a class="header-link" href="#example-headerhtml"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>The following <code>header.html</code> partial template is used for <a href="https://spf13.com/">spf13.com</a>:</p>
@@ -1814,7 +1814,7 @@
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “Partial Templates”
-  </a> was last updated: August 28, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/05d39469b1e013009b72f318d2ddfc1d8a48b2ad">Fix build release error (05d3946)</a>
+  </a> was last updated: October 6, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/279ca7e2ea9fd0fe0449023b5d47862bce6e0564">Merge pull request #81 from blackb1rd/main (279ca7e)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/templates/partials.md" class="

@@ -7,6 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://gohugo.io/news/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Hugo 0.88.1: A couple of Bug Fixes</title>
+      <link>https://gohugo.io/news/0.88.1-relnotes/</link>
+      <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/news/0.88.1-relnotes/</guid>
+      <description>This is a bug-fix release with one important fix.
+ Bump down again to Go 1.16.7 for the release builds e1ead4db @bep #8952#8955  </description>
+    </item>
+    
+    <item>
+      <title>0.88.0</title>
+      <link>https://gohugo.io/news/0.88.0-relnotes/</link>
+      <pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/news/0.88.0-relnotes/</guid>
+      <description>The most important piece in this release is the Go 1.17 update. This release is built with that new Go version, but also and more importantly, the Hugo Modules logic has been updated to support Go&#39;s new way of (lazy) loading transitive dependencies. If you already have Go 1.17 installed, building existing Hugo Modules backed projects have not been an issue, but `hugo mod init` for a new project could give you _too new_ versions of transitive dependencies.</description>
+    </item>
+    
+    <item>
       <title>0.87.0</title>
       <link>https://gohugo.io/news/0.87.0-relnotes/</link>
       <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>

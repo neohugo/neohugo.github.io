@@ -13,7 +13,7 @@
   <title>Shortcodes | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.88.0-DEV" />
+  <meta name="generator" content="Hugo 0.89.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,11 +62,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/content-management/shortcodes/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="content-management" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-08-28T21:58:58+07:00" />
+<meta property="article:modified_time" content="2021-10-06T23:36:46+07:00" />
 
 <meta itemprop="name" content="Shortcodes">
 <meta itemprop="description" content="Shortcodes are simple snippets inside your content files calling built-in or custom templates."><meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-08-28T21:58:58+07:00" />
+<meta itemprop="dateModified" content="2021-10-06T23:36:46+07:00" />
 <meta itemprop="wordCount" content="1929"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
@@ -277,8 +277,8 @@
 <p>The first word in the shortcode declaration is always the name of the shortcode. Parameters follow the name. Depending upon how the shortcode is defined, the parameters may be named, positional, or both, although you can&rsquo;t mix parameter types in a single call. The format for named parameters models that of HTML with the format <code>name=&quot;value&quot;</code>.</p>
 <p>Some shortcodes use or require closing shortcodes. Again like HTML, the opening and closing shortcodes match (name only) with the closing declaration, which is prepended with a slash.</p>
 <p>Here are two examples of paired shortcodes:</p>
-<pre><code>{{% mdshortcode %}}Stuff to `process` in the *center*.{{% /mdshortcode %}}
-</code></pre><pre><code>{{&lt; highlight go &gt;}} A bunch of code here {{&lt; /highlight &gt;}}
+<pre tabindex="0"><code>{{% mdshortcode %}}Stuff to `process` in the *center*.{{% /mdshortcode %}}
+</code></pre><pre tabindex="0"><code>{{&lt; highlight go &gt;}} A bunch of code here {{&lt; /highlight &gt;}}
 </code></pre><p>The examples above use two different delimiters, the difference being the <code>%</code> character in the first and the <code>&lt;&gt;</code> characters in the second.</p>
 <h3 id="shortcodes-with-raw-string-parameters">Shortcodes with raw string parameters <a class="header-link" href="#shortcodes-with-raw-string-parameters"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 
@@ -288,15 +288,15 @@
     <a href="https://gohugo.io/news/0.64.1-relnotes/" target="_blank">New in v0.64.1</a>
 </button>
 <p>You can pass multiple lines as parameters to a shortcode by using raw string literals:</p>
-<pre><code>{{&lt;  myshortcode `This is some &lt;b&gt;HTML&lt;/b&gt;,
+<pre tabindex="0"><code>{{&lt;  myshortcode `This is some &lt;b&gt;HTML&lt;/b&gt;,
 and a new line with a &quot;quoted string&quot;.` &gt;}}
 </code></pre><h3 id="shortcodes-with-markdown">Shortcodes with Markdown <a class="header-link" href="#shortcodes-with-markdown"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>In Hugo <code>0.55</code> we changed how the <code>%</code> delimiter works. Shortcodes using the <code>%</code> as the outer-most delimiter will now be fully rendered when sent to the content renderer. They can be part of the generated table of contents, footnotes, etc.</p>
 <p>If you want the old behavior, you can put the following line in the start of your shortcode template:</p>
-<pre><code>{{ $_hugo_config := `{ &quot;version&quot;: 1 }` }}
+<pre tabindex="0"><code>{{ $_hugo_config := `{ &quot;version&quot;: 1 }` }}
 </code></pre><h3 id="shortcodes-without-markdown">Shortcodes Without Markdown <a class="header-link" href="#shortcodes-without-markdown"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>The <code>&lt;</code> character indicates that the shortcode&rsquo;s inner content does <em>not</em> need further rendering. Often shortcodes without markdown include internal HTML:</p>
-<pre><code>{{&lt; myshortcode &gt;}}&lt;p&gt;Hello &lt;strong&gt;World!&lt;/strong&gt;&lt;/p&gt;{{&lt; /myshortcode &gt;}}
+<pre tabindex="0"><code>{{&lt; myshortcode &gt;}}&lt;p&gt;Hello &lt;strong&gt;World!&lt;/strong&gt;&lt;/p&gt;{{&lt; /myshortcode &gt;}}
 </code></pre><h3 id="nested-shortcodes">Nested Shortcodes <a class="header-link" href="#nested-shortcodes"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>You can call shortcodes within other shortcodes by creating your own templates that leverage the <code>.Parent</code> variable. <code>.Parent</code> allows you to check the context in which the shortcode is being called. See <a href="/templates/shortcode-templates/">Shortcode templates</a>.</p>
 <h2 id="use-hugos-built-in-shortcodes">Use Hugo&rsquo;s Built-in Shortcodes <a class="header-link" href="#use-hugos-built-in-shortcodes"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
@@ -369,9 +369,9 @@ and a new line with a &quot;quoted string&quot;.` &gt;}}
 </div>
 <h3 id="gist"><code>gist</code> <a class="header-link" href="#gist"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>Bloggers often want to include GitHub gists when writing posts. Let&rsquo;s suppose we want to use the <a href="https://gist.github.com/spf13/7896402">gist at the following url</a>:</p>
-<pre><code>https://gist.github.com/spf13/7896402
+<pre tabindex="0"><code>https://gist.github.com/spf13/7896402
 </code></pre><p>We can embed the gist in our content via username and gist ID pulled from the URL:</p>
-<pre><code>{{&lt; gist spf13 7896402 &gt;}}
+<pre tabindex="0"><code>{{&lt; gist spf13 7896402 &gt;}}
 </code></pre><h4 id="example-gist-input">Example <code>gist</code> Input <a class="header-link" href="#example-gist-input"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
 <p>If the gist contains several files and you want to quote just one of them, you can pass the filename (quoted) as an optional third argument:</p>
 
@@ -474,7 +474,7 @@ and a new line with a &quot;quoted string&quot;.` &gt;}}
 
 <h3 id="instagram"><code>instagram</code> <a class="header-link" href="#instagram"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>If you&rsquo;d like to embed a photo from <a href="https://www.instagram.com/">Instagram</a>, you only need the photo&rsquo;s ID. You can discern an Instagram photo ID from the URL:</p>
-<pre><code>https://www.instagram.com/p/BWNjjyYFxVx/
+<pre tabindex="0"><code>https://www.instagram.com/p/BWNjjyYFxVx/
 </code></pre><h4 id="example-instagram-input">Example <code>instagram</code> Input <a class="header-link" href="#example-instagram-input"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
 
 
@@ -572,15 +572,15 @@ Hugo Rocks!
 
 <p><code>ref</code> and <code>relref</code> take exactly one required parameter of <em>reference</em>, quoted and in position <code>0</code>.</p>
 <h4 id="example-ref-and-relref-input">Example <code>ref</code> and <code>relref</code> Input <a class="header-link" href="#example-ref-and-relref-input"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
-<pre><code>[Neat]({{&lt; ref &quot;blog/neat.md&quot; &gt;}})
+<pre tabindex="0"><code>[Neat]({{&lt; ref &quot;blog/neat.md&quot; &gt;}})
 [Who]({{&lt; relref &quot;about.md#who&quot; &gt;}})
 </code></pre><h4 id="example-ref-and-relref-output">Example <code>ref</code> and <code>relref</code> Output <a class="header-link" href="#example-ref-and-relref-output"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
 <p>Assuming that standard Hugo pretty URLs are turned on.</p>
-<pre><code>&lt;a href=&quot;https://example.com/blog/neat&quot;&gt;Neat&lt;/a&gt;
+<pre tabindex="0"><code>&lt;a href=&quot;https://example.com/blog/neat&quot;&gt;Neat&lt;/a&gt;
 &lt;a href=&quot;/about/#who&quot;&gt;Who&lt;/a&gt;
 </code></pre><h3 id="tweet"><code>tweet</code> <a class="header-link" href="#tweet"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>You want to include a single tweet into your blog post? Everything you need is the URL of the tweet:</p>
-<pre><code>https://twitter.com/spf13/status/877500564405444608
+<pre tabindex="0"><code>https://twitter.com/spf13/status/877500564405444608
 </code></pre><h4 id="example-tweet-input">Example <code>tweet</code> Input <a class="header-link" href="#example-tweet-input"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
 <p>Pass the tweet&rsquo;s ID from the URL as a parameter to the <code>tweet</code> shortcode:</p>
 
@@ -624,7 +624,7 @@ Hugo Rocks!
 
 <h3 id="vimeo"><code>vimeo</code> <a class="header-link" href="#vimeo"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>Adding a video from <a href="https://vimeo.com/">Vimeo</a> is equivalent to the <a href="#youtube">YouTube Input shortcode</a>.</p>
-<pre><code>https://vimeo.com/channels/staffpicks/146022717
+<pre tabindex="0"><code>https://vimeo.com/channels/staffpicks/146022717
 </code></pre><h4 id="example-vimeo-input">Example <code>vimeo</code> Input <a class="header-link" href="#example-vimeo-input"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
 <p>Extract the ID from the video&rsquo;s URL and pass it to the <code>vimeo</code> shortcode:</p>
 
@@ -671,7 +671,7 @@ Hugo Rocks!
 	
 	
 	<div class="admonition-content"><p>If you want to further customize the visual styling of the YouTube or Vimeo output, add a <code>class</code> named parameter when calling the shortcode. The new <code>class</code> will be added to the <code>&lt;div&gt;</code> that wraps the <code>&lt;iframe&gt;</code> <em>and</em> will remove the inline styles. Note that you will need to call the <code>id</code> as a named parameter as well. You can also give the vimeo video a descriptive title with <code>title</code>.</p>
-<pre><code>{{&lt; vimeo id=&quot;146022717&quot; class=&quot;my-vimeo-wrapper-class&quot; title=&quot;My vimeo video&quot; &gt;}}
+<pre tabindex="0"><code>{{&lt; vimeo id=&quot;146022717&quot; class=&quot;my-vimeo-wrapper-class&quot; title=&quot;My vimeo video&quot; &gt;}}
 </code></pre></div>
 </aside>
 
@@ -684,7 +684,7 @@ Hugo Rocks!
 
 <h3 id="youtube"><code>youtube</code> <a class="header-link" href="#youtube"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>The <code>youtube</code> shortcode embeds a responsive video player for <a href="https://www.youtube.com/">YouTube videos</a>. Only the ID of the video is required, e.g.:</p>
-<pre><code>https://www.youtube.com/watch?v=w7Ft2ymGmfc
+<pre tabindex="0"><code>https://www.youtube.com/watch?v=w7Ft2ymGmfc
 </code></pre><h4 id="example-youtube-input">Example <code>youtube</code> Input <a class="header-link" href="#example-youtube-input"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
 <p>Copy the YouTube video ID that follows <code>v=</code> in the video&rsquo;s URL and pass it to the <code>youtube</code> shortcode:</p>
 
@@ -2143,7 +2143,7 @@ Hugo Rocks!
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “Shortcodes”
-  </a> was last updated: August 28, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/05d39469b1e013009b72f318d2ddfc1d8a48b2ad">Fix build release error (05d3946)</a>
+  </a> was last updated: October 6, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/279ca7e2ea9fd0fe0449023b5d47862bce6e0564">Merge pull request #81 from blackb1rd/main (279ca7e)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/content-management/shortcodes.md" class="

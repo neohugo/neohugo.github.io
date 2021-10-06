@@ -13,7 +13,7 @@
   <title>Hugo 0.55.0: The early Easter Egg Edition! | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.88.0-DEV" />
+  <meta name="generator" content="Hugo 0.89.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,11 +62,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/news/0.55.0-relnotes/" /><meta property="og:image" content="https://gohugo.io/news/0.55.0-relnotes/featured.png"/><meta property="article:section" content="news" />
 <meta property="article:published_time" content="2019-04-08T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-08-28T21:58:58+07:00" />
+<meta property="article:modified_time" content="2021-10-06T23:36:46+07:00" />
 
 <meta itemprop="name" content="Hugo 0.55.0: The early Easter Egg Edition!">
 <meta itemprop="description" content="Faster, virtualized Output Formats, revised shortcodes, new return keyword, and much more …"><meta itemprop="datePublished" content="2019-04-08T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-08-28T21:58:58+07:00" />
+<meta itemprop="dateModified" content="2021-10-06T23:36:46+07:00" />
 <meta itemprop="wordCount" content="1452"><meta itemprop="image" content="https://gohugo.io/news/0.55.0-relnotes/featured.png">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/news/0.55.0-relnotes/featured.png"/>
@@ -274,7 +274,7 @@
 <h2 id="shortcodes-revised">Shortcodes Revised <a class="header-link" href="#shortcodes-revised"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Shortcodes using the <code>{{% %}}</code> as the outer-most delimiter will now be fully rendered when sent to the content renderer (e.g. Blackfriday for Markdown), meaning they can be part of the generated table of contents, footnotes, etc.</p>
 <p>If you want the old behavior, you can put the following line in the start of your shortcode template:</p>
-<pre><code>{{ $_hugo_config := `{ &quot;version&quot;: 1 }` }}
+<pre tabindex="0"><code>{{ $_hugo_config := `{ &quot;version&quot;: 1 }` }}
 </code></pre><p>But using the <code>{{&lt; &gt;}}</code> delimiter will, in most cases, be a better alternative, possibly in combination with the <code>markdownify</code> template func.</p>
 <p>See <a href="https://github.com/gohugoio/hugo/issues/5763">#5763</a>.</p>
 <h2 id="new-return-keyword-for-partials">New Return Keyword for Partials <a class="header-link" href="#new-return-keyword-for-partials"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
@@ -415,7 +415,7 @@ which has received <strong>36 contributions by 21 contributors</strong>. A speci
     
 
       <div class="gray f6 mv6">
-        Last Update: August 28, 2021 <br>
+        Last Update: October 6, 2021 <br>
         <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/news/0.55.0-relnotes/index.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 ">Improve this page</a>

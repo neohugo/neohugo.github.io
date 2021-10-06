@@ -13,7 +13,7 @@
   <title>Host on Bitbucket | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.88.0-DEV" />
+  <meta name="generator" content="Hugo 0.89.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,11 +62,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/hosting-and-deployment/hosting-on-bitbucket/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="hosting-and-deployment" />
 <meta property="article:published_time" content="2017-02-04T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-08-28T21:58:58+07:00" />
+<meta property="article:modified_time" content="2021-10-06T23:36:46+07:00" />
 
 <meta itemprop="name" content="Host on Bitbucket">
 <meta itemprop="description" content="You can use Bitbucket in conjunction with Aerobatic to build, deploy, and host a Hugo website."><meta itemprop="datePublished" content="2017-02-04T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-08-28T21:58:58+07:00" />
+<meta itemprop="dateModified" content="2021-10-06T23:36:46+07:00" />
 <meta itemprop="wordCount" content="570"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
@@ -271,10 +271,10 @@
 </ul>
 <h2 id="install-aerobatic-cli">Install Aerobatic CLI <a class="header-link" href="#install-aerobatic-cli"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>If you haven&rsquo;t previously used Aerobatic, you&rsquo;ll first need to install the Command Line Interface (CLI) and create an account. For a list of all commands available, see the <a href="https://www.aerobatic.com/docs/cli/">Aerobatic CLI</a> docs.</p>
-<pre><code>npm install aerobatic-cli -g
+<pre tabindex="0"><code>npm install aerobatic-cli -g
 aero register
 </code></pre><h2 id="create-and-deploy-site">Create and Deploy Site <a class="header-link" href="#create-and-deploy-site"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<pre><code>hugo new site my-new-hugo-site
+<pre tabindex="0"><code>hugo new site my-new-hugo-site
 cd my-new-hugo-site
 cd themes; git clone https://github.com/eliasson/liquorice
 hugo -t liquorice
@@ -288,7 +288,7 @@ View now at https://hugo-docs-test.aerobatic.io
 <h2 id="push-hugo-site-to-bitbucket">Push Hugo site to Bitbucket <a class="header-link" href="#push-hugo-site-to-bitbucket"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>We will now create a git repository and then push our code to Bitbucket. In Bitbucket, create a repository.</p>
 <p><img src="/images/hosting-and-deployment/hosting-on-bitbucket/bitbucket-create-repo.png" alt="Bitbucket Screenshot"></p>
-<pre><code># initialize new git repository
+<pre tabindex="0"><code># initialize new git repository
 git init
 
 # set up our .gitignore file
@@ -309,7 +309,7 @@ git push -u origin master
 <li>On the next screen, leave the default template and click Next.</li>
 <li>In the editor, paste in the yaml contents below and click Commit.</li>
 </ol>
-<pre><code>image: beevelop/nodejs-python
+<pre tabindex="0"><code>image: beevelop/nodejs-python
 pipelines:
   branches:
     master:
@@ -325,14 +325,14 @@ pipelines:
             - aero deploy
 </code></pre><h3 id="step-2-create-aerobatic_api_key-environment-variable">Step 2: Create <code>AEROBATIC_API_KEY</code> environment variable. <a class="header-link" href="#step-2-create-aerobatic_api_key-environment-variable"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>This step only needs to be done once per account. From the command line;</p>
-<pre><code>aero apikey
+<pre tabindex="0"><code>aero apikey
 </code></pre><ol>
 <li>Navigate to the Bitbucket account settings for the account that the website repo belongs to.</li>
 <li>Scroll down to the bottom of the left nav and click the Environment variables link in the PIPELINES section.</li>
 <li>Create a new environment variable called AEROBATIC_API_KEY with the value you got by running the <code>aero apikey</code> command. Be sure to click the Secured checkbox.</li>
 </ol>
 <h3 id="step-3-edit-and-commit-code">Step 3: Edit and Commit Code <a class="header-link" href="#step-3-edit-and-commit-code"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<pre><code>hugo new posts/good-to-great.md
+<pre tabindex="0"><code>hugo new posts/good-to-great.md
 hugo server --buildDrafts -t liquorice #Check that all looks good
 
 # commit and push code to master branch
@@ -1701,7 +1701,7 @@ git push -u origin master
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “Host on Bitbucket”
-  </a> was last updated: August 28, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/05d39469b1e013009b72f318d2ddfc1d8a48b2ad">Fix build release error (05d3946)</a>
+  </a> was last updated: October 6, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/279ca7e2ea9fd0fe0449023b5d47862bce6e0564">Merge pull request #81 from blackb1rd/main (279ca7e)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/hosting-and-deployment/hosting-on-bitbucket.md" class="

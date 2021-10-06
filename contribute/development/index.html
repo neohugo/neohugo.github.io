@@ -13,7 +13,7 @@
   <title>Contribute to Hugo Development | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.88.0-DEV" />
+  <meta name="generator" content="Hugo 0.89.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,11 +62,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/contribute/development/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="contribute" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-08-28T21:58:58+07:00" />
+<meta property="article:modified_time" content="2021-10-06T23:36:46+07:00" />
 
 <meta itemprop="name" content="Contribute to Hugo Development">
 <meta itemprop="description" content="Hugo relies heavily on contributions from the open source community."><meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-08-28T21:58:58+07:00" />
+<meta itemprop="dateModified" content="2021-10-06T23:36:46+07:00" />
 <meta itemprop="wordCount" content="2699"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
@@ -284,12 +284,12 @@
 <h3 id="install-go-from-source">Install Go From Source <a class="header-link" href="#install-go-from-source"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p><a href="https://golang.org/dl/">Download the latest stable version of Go</a> and follow the official <a href="https://golang.org/doc/install">Go installation guide</a>.</p>
 <p>Once you&rsquo;re finished installing Go, let&rsquo;s confirm everything is working correctly. Open a terminal&mdash;or command line under Windows&ndash;and type the following:</p>
-<pre><code>go version
+<pre tabindex="0"><code>go version
 </code></pre><p>You should see something similar to the following written to the console. Note that the version here reflects the most recent version of Go as of the last update for this page:</p>
-<pre><code>go version go1.12 darwin/amd64
+<pre tabindex="0"><code>go version go1.12 darwin/amd64
 </code></pre><p>Next, make sure that you set up your <code>GOPATH</code> <a href="https://golang.org/doc/code.html#Workspaces">as described in the installation guide</a>.</p>
 <p>You can print the <code>GOPATH</code> with <code>echo $GOPATH</code>. You should see a non-empty string containing a valid path to your Go workspace; for example:</p>
-<pre><code>/Users/&lt;yourusername&gt;/Code/go
+<pre tabindex="0"><code>/Users/&lt;yourusername&gt;/Code/go
 </code></pre><h3 id="install-go-with-homebrew">Install Go with Homebrew <a class="header-link" href="#install-go-with-homebrew"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>If you are a MacOS user and have <a href="https://brew.sh/">Homebrew</a> installed on your machine, installing Go is as simple as the following command:</p>
 
@@ -328,11 +328,11 @@
 <h3 id="install-hub-on-your-system-optional">Install Hub on Your System (Optional) <a class="header-link" href="#install-hub-on-your-system-optional"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>Hub is a great tool for working with GitHub. The main site for it is <a href="https://hub.github.com/">hub.github.com</a>. Feel free to install this little Git wrapper.</p>
 <p>On a Mac, you can install <a href="https://github.com/github/hub">Hub</a> using <a href="https://brew.sh">Homebrew</a>:</p>
-<pre><code>brew install hub
+<pre tabindex="0"><code>brew install hub
 </code></pre><p>Now we&rsquo;ll create an <a href="https://tldp.org/LDP/abs/html/aliases.html">alias in Bash</a> so that typing <code>git</code> actually runs <code>Hub</code>:</p>
-<pre><code>echo &quot;alias git='hub'&quot; &gt;&gt; ~/.bash_profile
+<pre tabindex="0"><code>echo &quot;alias git='hub'&quot; &gt;&gt; ~/.bash_profile
 </code></pre><p>Confirm the installation:</p>
-<pre><code>git version 2.21.0
+<pre tabindex="0"><code>git version 2.21.0
 hub version 2.10.0
 </code></pre><h2 id="set-up-your-working-copy">Set up your working copy <a class="header-link" href="#set-up-your-working-copy"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>You set up the working copy of the repository locally on your computer. Your local copy of the files is what you&rsquo;ll edit, compile, and end up pushing back to GitHub. The main steps are cloning the repository and creating your fork as a remote.</p>
@@ -343,7 +343,7 @@ hub version 2.10.0
 </blockquote>
 <p>We&rsquo;re going to clone the <a href="https://github.com/gohugoio/hugo">master Hugo repository</a>. That seems counter-intuitive, since you won&rsquo;t have commit rights on it. But it&rsquo;s required for the Go workflow. You&rsquo;ll work on a copy of the master and push your changes to your own repository on GitHub.</p>
 <p>So, let&rsquo;s make a new directory and clone that master repository:</p>
-<pre><code>mkdir $HOME/src
+<pre tabindex="0"><code>mkdir $HOME/src
 cd $HOME/src
 git clone https://github.com/gohugoio/hugo.git
 </code></pre><blockquote>
@@ -351,10 +351,10 @@ git clone https://github.com/gohugoio/hugo.git
 The easiest is to clone Hugo in a directory outside of GOPATH</p>
 </blockquote>
 <p>And then, install dependencies of Hugo by running the following in the cloned directory:</p>
-<pre><code>cd $HOME/src/hugo
+<pre tabindex="0"><code>cd $HOME/src/hugo
 go install
 </code></pre><p>Hugo relies on <a href="https://github.com/magefile/mage">mage</a> for some convenient build and test targets. If you don&rsquo;t already have it, get it:</p>
-<pre><code>go get github.com/magefile/mage
+<pre tabindex="0"><code>go get github.com/magefile/mage
 </code></pre><h3 id="fork-the-repository">Fork the repository <a class="header-link" href="#fork-the-repository"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>If you&rsquo;re not familiar with this term, GitHub&rsquo;s <a href="https://help.github.com/articles/fork-a-repo/">help pages</a> provide again a simple explanation:</p>
 <blockquote>
@@ -366,18 +366,18 @@ go install
 <p>Now open your fork repository on GitHub and copy the remote url of your fork. You can choose between HTTPS and SSH as protocol that Git should use for the following operations. HTTPS works always <a href="https://help.github.com/articles/which-remote-url-should-i-use/">if you&rsquo;re not sure</a>.</p>
 <p><img src="/images/contribute/development/copy-remote-url.png" alt="Copy remote url"></p>
 <p>Switch back to the terminal and move into the directory of the cloned master repository from the last step.</p>
-<pre><code>cd $HOME/src/hugo
+<pre tabindex="0"><code>cd $HOME/src/hugo
 </code></pre><p>Now Git needs to know that our fork exists by adding the copied remote url:</p>
-<pre><code>git remote add &lt;YOUR-GITHUB-USERNAME&gt; &lt;COPIED REMOTE-URL&gt;
+<pre tabindex="0"><code>git remote add &lt;YOUR-GITHUB-USERNAME&gt; &lt;COPIED REMOTE-URL&gt;
 </code></pre><h4 id="fork-with-hub">Fork with Hub <a class="header-link" href="#fork-with-hub"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
 <p>Alternatively, you can use the Git wrapper Hub. Hub makes forking a repository easy:</p>
-<pre><code>git fork
+<pre tabindex="0"><code>git fork
 </code></pre><p>That command will log in to GitHub using your account, create a fork of the repository that you&rsquo;re currently working in, and add it as a remote to your working copy.</p>
 <h4 id="trust-but-verify">Trust, but verify <a class="header-link" href="#trust-but-verify"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
 <p>Let&rsquo;s check if everything went right by listing all known remotes:</p>
-<pre><code>git remote -v
+<pre tabindex="0"><code>git remote -v
 </code></pre><p>The output should look similar:</p>
-<pre><code>digitalcraftsman    git@github.com:digitalcraftsman/hugo.git (fetch)
+<pre tabindex="0"><code>digitalcraftsman    git@github.com:digitalcraftsman/hugo.git (fetch)
 digitalcraftsman    git@github.com:digitalcraftsman/hugo.git (push)
 origin  https://github.com/gohugoio/hugo (fetch)
 origin  https://github.com/gohugoio/hugo (push)
@@ -385,10 +385,10 @@ origin  https://github.com/gohugoio/hugo (push)
 <h3 id="create-a-new-branch">Create a new branch <a class="header-link" href="#create-a-new-branch"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>You should never develop against the &ldquo;master&rdquo; branch. The development team will not accept a pull request against that branch. Instead, create a descriptive named branch and work on it.</p>
 <p>First, you should always pull the latest changes from the master repository:</p>
-<pre><code>git checkout master
+<pre tabindex="0"><code>git checkout master
 git pull
 </code></pre><p>Now we can create a new branch for your additions:</p>
-<pre><code>git checkout -b &lt;BRANCH-NAME&gt;
+<pre tabindex="0"><code>git checkout -b &lt;BRANCH-NAME&gt;
 </code></pre><p>You can check on which branch you are with <code>git branch</code>. You should see a list of all local branches. The current branch is indicated with a little asterisk.</p>
 <h3 id="contribute-to-documentation">Contribute to Documentation <a class="header-link" href="#contribute-to-documentation"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>Perhaps you want to start contributing to the Hugo docs. If so, you can ignore most of the following steps and focus on the <code>/docs</code> directory within your newly cloned repository. You can change directories into the Hugo docs using <code>cd docs</code>.</p>
@@ -396,20 +396,20 @@ git pull
 <p>We have developed a <a href="/contribute/documentation/">separate Hugo documentation contribution guide</a> for more information on how the Hugo docs are built, organized, and improved by the generosity of people like you.</p>
 <h3 id="build-hugo">Build Hugo <a class="header-link" href="#build-hugo"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>While making changes in the codebase it&rsquo;s a good idea to build the binary to test them:</p>
-<pre><code>mage hugo
+<pre tabindex="0"><code>mage hugo
 </code></pre><p>This command generates the binary file at the root of the repository.</p>
 <p>If you want to install the binary in <code>$GOPATH/bin</code>, run</p>
-<pre><code>mage install
+<pre tabindex="0"><code>mage install
 </code></pre><h3 id="test">Test <a class="header-link" href="#test"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>Sometimes changes on the codebase can cause unintended side effects. Or they don&rsquo;t work as expected. Most functions have their own test cases. You can find them in files ending with <code>_test.go</code>.</p>
 <p>Make sure the commands</p>
-<pre><code>mage -v check
+<pre tabindex="0"><code>mage -v check
 </code></pre><p>passes.</p>
 <h3 id="formatting">Formatting <a class="header-link" href="#formatting"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>The Go code styleguide maybe is opinionated but it ensures that the codebase looks the same, regardless who wrote the code. Go comes with its own formatting tool. Let&rsquo;s apply the styleguide to our additions:</p>
-<pre><code>mage fmt
+<pre tabindex="0"><code>mage fmt
 </code></pre><p>Once you made your additions commit your changes. Make sure that you follow our <a href="https://github.com/gohugoio/hugo/blob/master/CONTRIBUTING.md">code contribution guidelines</a>:</p>
-<pre><code># Add all changed files
+<pre tabindex="0"><code># Add all changed files
 git add --all
 git commit --message &quot;YOUR COMMIT MESSAGE&quot;
 </code></pre><p>The commit message should describe what the commit does (e.g. add feature XYZ), not how it is done.</p>
@@ -418,12 +418,12 @@ git commit --message &quot;YOUR COMMIT MESSAGE&quot;
 <p>If you are unsure what a command does leave the commit as it is. We can fix your commits later in the pull request.</p>
 <h4 id="modify-the-last-commit">Modify the last commit <a class="header-link" href="#modify-the-last-commit"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
 <p>Let&rsquo;s say you want to modify the last commit message. Run the following command and replace the current message:</p>
-<pre><code>git commit --amend -m&quot;YOUR NEW COMMIT MESSAGE&quot;
+<pre tabindex="0"><code>git commit --amend -m&quot;YOUR NEW COMMIT MESSAGE&quot;
 </code></pre><p>Take a look at the commit log to see the change:</p>
-<pre><code>git log
+<pre tabindex="0"><code>git log
 # Exit with q
 </code></pre><p>After making the last commit you may have forgot something. There is no need to create a new commit. Just add the latest changes and merge them into the intended commit:</p>
-<pre><code>git add --all
+<pre tabindex="0"><code>git add --all
 git commit --amend
 </code></pre><h4 id="modify-multiple-commits">Modify multiple commits <a class="header-link" href="#modify-multiple-commits"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
 
@@ -438,9 +438,9 @@ git commit --amend
 </aside>
 
 <p>This is a bit more advanced. Git allows you to <a href="https://git-scm.com/docs/git-rebase">rebase</a> commits interactively. In other words: it allows you to rewrite the commit history.</p>
-<pre><code>git rebase --interactive @~6
+<pre tabindex="0"><code>git rebase --interactive @~6
 </code></pre><p>The <code>6</code> at the end of the command represents the number of commits that should be modified. An editor should open and present a list of last six commit messages:</p>
-<pre><code>pick 80d02a1 tpl: Add hasPrefix to the template funcs' &quot;smoke test&quot;
+<pre tabindex="0"><code>pick 80d02a1 tpl: Add hasPrefix to the template funcs' &quot;smoke test&quot;
 pick aaee038 tpl: Sort the smoke tests
 pick f0dbf2c tpl: Add the other test case for hasPrefix
 pick 911c35b Add &quot;How to contribute to Hugo&quot; tutorial
@@ -448,7 +448,7 @@ pick 33c8973 Begin workflow
 pick 3502f2e Refactoring and typo fixes
 </code></pre><p>In the case above we should merge the last to commits in the commit of this tutorial (<code>Add &quot;How to contribute to Hugo&quot; tutorial</code>). You can &ldquo;squash&rdquo; commits, i.e. merge two or more commits into a single one.</p>
 <p>All operations are written before the commit message. Replace &ldquo;pick&rdquo; with an operation. In this case <code>squash</code> or <code>s</code> for short:</p>
-<pre><code>pick 80d02a1 tpl: Add hasPrefix to the template funcs' &quot;smoke test&quot;
+<pre tabindex="0"><code>pick 80d02a1 tpl: Add hasPrefix to the template funcs' &quot;smoke test&quot;
 pick aaee038 tpl: Sort the smoke tests
 pick f0dbf2c tpl: Add the other test case for hasPrefix
 pick 911c35b Add &quot;How to contribute to Hugo&quot; tutorial
@@ -456,7 +456,7 @@ squash 33c8973 Begin workflow
 squash 3502f2e Refactoring and typo fixes
 </code></pre><p>We also want to rewrite the commits message of the third last commit. We forgot &ldquo;docs:&rdquo; as prefix according to the code contribution guidelines. The operation to rewrite a commit is called <code>reword</code> (or <code>r</code> as shortcut).</p>
 <p>You should end up with a similar setup:</p>
-<pre><code>pick 80d02a1 tpl: Add hasPrefix to the template funcs' &quot;smoke test&quot;
+<pre tabindex="0"><code>pick 80d02a1 tpl: Add hasPrefix to the template funcs' &quot;smoke test&quot;
 pick aaee038 tpl: Sort the smoke tests
 pick f0dbf2c tpl: Add the other test case for hasPrefix
 reword 911c35b Add &quot;How to contribute to Hugo&quot; tutorial
@@ -464,11 +464,11 @@ squash 33c8973 Begin workflow
 squash 3502f2e Refactoring and typo fixes
 </code></pre><p>Close the editor. It should open again with a new tab. A text is instructing you to define a new commit message for the last two commits that should be merged (aka &ldquo;squashed&rdquo;). Save the file with <!-- raw HTML omitted -->CTRL<!-- raw HTML omitted -->+<!-- raw HTML omitted -->S<!-- raw HTML omitted --> and close the editor again.</p>
 <p>A last time a new tab opens. Enter a new commit message and save again. Your terminal should contain a status message. Hopefully this one:</p>
-<pre><code>Successfully rebased and updated refs/heads/&lt;BRANCHNAME&gt;.
+<pre tabindex="0"><code>Successfully rebased and updated refs/heads/&lt;BRANCHNAME&gt;.
 </code></pre><p>Check the commit log if everything looks as expected. Should an error occur you can abort this rebase with <code>git rebase --abort</code>.</p>
 <h3 id="push-commits">Push commits <a class="header-link" href="#push-commits"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>To push our commits to the fork on GitHub we need to specify a destination. A destination is defined by the remote and a branch name. Earlier, the defined that the remote url of our fork is the same as our GitHub handle, in my case <code>digitalcraftsman</code>. The branch should have the same as our local one. This makes it easy to identify corresponding branches.</p>
-<pre><code>git push --set-upstream &lt;YOUR-GITHUB-USERNAME&gt; &lt;BRANCHNAME&gt;
+<pre tabindex="0"><code>git push --set-upstream &lt;YOUR-GITHUB-USERNAME&gt; &lt;BRANCHNAME&gt;
 </code></pre><p>Now Git knows the destination. Next time when you to push commits you just need to enter <code>git push</code>.</p>
 <p>If you modified your commit history in the last step GitHub will reject your try to push. This is a safety-feature because the commit history isn&rsquo;t the same and new commits can&rsquo;t be appended as usual. You can enforce this push explicitly with <code>git push --force</code>.</p>
 <h2 id="open-a-pull-request">Open a pull request <a class="header-link" href="#open-a-pull-request"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
@@ -1837,7 +1837,7 @@ squash 3502f2e Refactoring and typo fixes
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “Contribute to Hugo Development”
-  </a> was last updated: August 28, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/05d39469b1e013009b72f318d2ddfc1d8a48b2ad">Fix build release error (05d3946)</a>
+  </a> was last updated: October 6, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/279ca7e2ea9fd0fe0449023b5d47862bce6e0564">Merge pull request #81 from blackb1rd/main (279ca7e)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/contribute/development.md" class="

@@ -13,7 +13,7 @@
   <title>Host on Firebase | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.88.0-DEV" />
+  <meta name="generator" content="Hugo 0.89.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,11 +62,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/hosting-and-deployment/hosting-on-firebase/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="hosting-and-deployment" />
 <meta property="article:published_time" content="2017-03-12T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-08-28T21:58:58+07:00" />
+<meta property="article:modified_time" content="2021-10-06T23:36:46+07:00" />
 
 <meta itemprop="name" content="Host on Firebase">
 <meta itemprop="description" content="You can use Firebase&#39;s free tier to host your static website; this also gives you access to Firebase&#39;s NOSQL API."><meta itemprop="datePublished" content="2017-03-12T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-08-28T21:58:58+07:00" />
+<meta itemprop="dateModified" content="2021-10-06T23:36:46+07:00" />
 <meta itemprop="wordCount" content="275"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
@@ -269,11 +269,11 @@
 </ol>
 <h2 id="initial-setup">Initial setup <a class="header-link" href="#initial-setup"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Go to the <a href="https://console.firebase.google.com">Firebase console</a> and create a new project (unless you already have a project). You will need to globally install <code>firebase-tools</code> (node.js):</p>
-<pre><code>npm install -g firebase-tools
+<pre tabindex="0"><code>npm install -g firebase-tools
 </code></pre><p>Log in to Firebase (setup on your local machine) using <code>firebase login</code>, which opens a browser where you can select your account. Use <code>firebase logout</code> in case you are already logged in but to the wrong account.</p>
-<pre><code>firebase login
+<pre tabindex="0"><code>firebase login
 </code></pre><p>In the root of your Hugo project, initialize the Firebase project with the <code>firebase init</code> command:</p>
-<pre><code>firebase init
+<pre tabindex="0"><code>firebase init
 </code></pre><p>From here:</p>
 <ol>
 <li>Choose Hosting in the feature question</li>
@@ -284,10 +284,10 @@
 </ol>
 <h2 id="deploy">Deploy <a class="header-link" href="#deploy"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>To deploy your Hugo site, execute the <code>firebase deploy</code> command, and your site will be up in no time:</p>
-<pre><code>hugo &amp;&amp; firebase deploy
+<pre tabindex="0"><code>hugo &amp;&amp; firebase deploy
 </code></pre><h2 id="ci-setup">CI Setup <a class="header-link" href="#ci-setup"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>You can generate a deploy token using</p>
-<pre><code>firebase login:ci
+<pre tabindex="0"><code>firebase login:ci
 </code></pre><p>You can also set up your CI (e.g., with <a href="/hosting-and-deployment/deployment-with-wercker/">Wercker</a>) and add the token to a private variable like <code>$FIREBASE_DEPLOY_TOKEN</code>.</p>
 
 <aside class="admonition note">
@@ -301,7 +301,7 @@
 </aside>
 
 <p>You can then add a step in your build to do the deployment using the token:</p>
-<pre><code>firebase deploy --token $FIREBASE_DEPLOY_TOKEN
+<pre tabindex="0"><code>firebase deploy --token $FIREBASE_DEPLOY_TOKEN
 </code></pre><h2 id="reference-links">Reference links <a class="header-link" href="#reference-links"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <ul>
 <li><a href="https://firebase.google.com/docs/cli/#administrative_commands">Firebase CLI Reference</a></li>
@@ -1663,7 +1663,7 @@
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “Host on Firebase”
-  </a> was last updated: August 28, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/05d39469b1e013009b72f318d2ddfc1d8a48b2ad">Fix build release error (05d3946)</a>
+  </a> was last updated: October 6, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/279ca7e2ea9fd0fe0449023b5d47862bce6e0564">Merge pull request #81 from blackb1rd/main (279ca7e)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/hosting-and-deployment/hosting-on-firebase.md" class="

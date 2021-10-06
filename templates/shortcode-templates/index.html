@@ -13,7 +13,7 @@
   <title>Create Your Own Shortcodes | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.88.0-DEV" />
+  <meta name="generator" content="Hugo 0.89.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,11 +62,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/templates/shortcode-templates/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="templates" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-08-28T21:58:58+07:00" />
+<meta property="article:modified_time" content="2021-10-06T23:36:46+07:00" />
 
 <meta itemprop="name" content="Create Your Own Shortcodes">
 <meta itemprop="description" content="You can extend Hugo&#39;s built-in shortcodes by creating your own using the same templating syntax as that for single and list pages."><meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-08-28T21:58:58+07:00" />
+<meta itemprop="dateModified" content="2021-10-06T23:36:46+07:00" />
 <meta itemprop="wordCount" content="1773"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
@@ -284,7 +284,7 @@
 <h3 id="file-location">File Location <a class="header-link" href="#file-location"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>To create a shortcode, place an HTML template in the <code>layouts/shortcodes</code> directory of your <a href="/getting-started/directory-structure/#directory-structure-explained" title="Learn how Hugo scaffolds new sites and what it expects to find in each of your directories.">source organization</a>. Consider the file name carefully since the shortcode name will mirror that of the file but without the <code>.html</code> extension. For example, <code>layouts/shortcodes/myshortcode.html</code> will be called with either <code>{{&lt; myshortcode /&gt;}}</code> or <code>{{% myshortcode /%}}</code> depending on the type of parameters you choose.</p>
 <p>You can organize your shortcodes in subfolders, e.g. in <code>layouts/shortcodes/boxes</code>. These shortcodes would then be accessible with their relative path, e.g:</p>
-<pre><code>{{&lt; boxes/square &gt;}}
+<pre tabindex="0"><code>{{&lt; boxes/square &gt;}}
 </code></pre><p>Note the forward slash.</p>
 <h3 id="shortcode-template-lookup-order">Shortcode Template Lookup Order <a class="header-link" href="#shortcode-template-lookup-order"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>Shortcode templates have a simple <a href="/templates/lookup-order/" title="See the order in which Hugo traverses your template files to decide where and how to render your content at build time">lookup order</a>:</p>
@@ -305,22 +305,22 @@
 <h3 id="access-parameters">Access Parameters <a class="header-link" href="#access-parameters"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>All shortcode parameters can be accessed via the <code>.Get</code> method. Whether you pass a key (i.e., string) or a number to the <code>.Get</code> method depends on whether you are accessing a named or positional parameter, respectively.</p>
 <p>To access a parameter by name, use the <code>.Get</code> method followed by the named parameter as a quoted string:</p>
-<pre><code>{{ .Get &quot;class&quot; }}
+<pre tabindex="0"><code>{{ .Get &quot;class&quot; }}
 </code></pre><p>To access a parameter by position, use the <code>.Get</code> followed by a numeric position, keeping in mind that positional parameters are zero-indexed:</p>
-<pre><code>{{ .Get 0 }}
+<pre tabindex="0"><code>{{ .Get 0 }}
 </code></pre><p>For the second position, you would just use:</p>
-<pre><code>{{ .Get 1 }}
+<pre tabindex="0"><code>{{ .Get 1 }}
 </code></pre><p><code>with</code> is great when the output depends on a parameter being set:</p>
-<pre><code>{{ with .Get &quot;class&quot; }} class=&quot;{{ . }}&quot;{{ end }}
+<pre tabindex="0"><code>{{ with .Get &quot;class&quot; }} class=&quot;{{ . }}&quot;{{ end }}
 </code></pre><p><code>.Get</code> can also be used to check if a parameter has been provided. This is
 most helpful when the condition depends on either of the values, or both:</p>
-<pre><code>{{ if or (.Get &quot;title&quot;) (.Get &quot;alt&quot;) }} alt=&quot;{{ with .Get &quot;alt&quot; }}{{ . }}{{ else }}{{ .Get &quot;title&quot; }}{{ end }}&quot;{{ end }}
+<pre tabindex="0"><code>{{ if or (.Get &quot;title&quot;) (.Get &quot;alt&quot;) }} alt=&quot;{{ with .Get &quot;alt&quot; }}{{ . }}{{ else }}{{ .Get &quot;title&quot; }}{{ end }}&quot;{{ end }}
 </code></pre><h4 id="inner"><code>.Inner</code> <a class="header-link" href="#inner"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
 <p>If a closing shortcode is used, the <code>.Inner</code> variable will be populated with all of the content between the opening and closing shortcodes. If a closing shortcode is required, you can check the length of <code>.Inner</code> as an indicator of its existence.</p>
 <p>A shortcode with content declared via the <code>.Inner</code> variable can also be declared without the
 content and without the closing
 by using the self-closing syntax:</p>
-<pre><code>{{&lt; innershortcode /&gt;}}
+<pre tabindex="0"><code>{{&lt; innershortcode /&gt;}}
 </code></pre><h4 id="params"><code>.Params</code> <a class="header-link" href="#params"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
 <p>The <code>.Params</code> variable in shortcodes contains the list parameters passed to shortcode for more complicated use cases. You can also access higher-scoped parameters with the following logic:</p>
 <dl>
@@ -334,9 +334,9 @@ by using the self-closing syntax:</p>
 <h4 id="isnamedparams"><code>.IsNamedParams</code> <a class="header-link" href="#isnamedparams"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
 <p>The <code>.IsNamedParams</code> variable checks whether the shortcode declaration uses named parameters and returns a boolean value.</p>
 <p>For example, you could create an <code>image</code> shortcode that can take either a <code>src</code> named parameter or the first positional parameter, depending on the preference of the content&rsquo;s author. Let&rsquo;s assume the <code>image</code> shortcode is called as follows:</p>
-<pre><code>{{&lt; image src=&quot;images/my-image.jpg&quot; &gt;}}
+<pre tabindex="0"><code>{{&lt; image src=&quot;images/my-image.jpg&quot; &gt;}}
 </code></pre><p>You could then include the following as part of your shortcode templating:</p>
-<pre><code>{{ if .IsNamedParams }}
+<pre tabindex="0"><code>{{ if .IsNamedParams }}
 &lt;img src=&quot;{{ .Get &quot;src&quot; }}&quot; alt=&quot;&quot;&gt;
 {{ else }}
 &lt;img src=&quot;{{ .Get 0 }}&quot; alt=&quot;&quot;&gt;
@@ -361,7 +361,7 @@ by using the self-closing syntax:</p>
 <p>The following are examples of the different types of shortcodes you can create via shortcode template files in <code>/layouts/shortcodes</code>.</p>
 <h3 id="single-word-example-year">Single-word Example: <code>year</code> <a class="header-link" href="#single-word-example-year"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>Let&rsquo;s assume you would like to keep mentions of your copyright year current in your content files without having to continually review your markdown. Your goal is to be able to call the shortcode as follows:</p>
-<pre><code>{{&lt; year &gt;}}
+<pre tabindex="0"><code>{{&lt; year &gt;}}
 </code></pre>
 
 
@@ -386,7 +386,7 @@ by using the self-closing syntax:</p>
 
 <h3 id="single-positional-example-youtube">Single Positional Example: <code>youtube</code> <a class="header-link" href="#single-positional-example-youtube"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>Embedded videos are a common addition to markdown content that can quickly become unsightly. The following is the code used by <a href="/content-management/shortcodes/#youtube" title="See how to use Hugo's built-in YouTube shortcode.">Hugo&rsquo;s built-in YouTube shortcode</a>:</p>
-<pre><code>{{&lt; youtube 09jf3ow9jfw &gt;}}
+<pre tabindex="0"><code>{{&lt; youtube 09jf3ow9jfw &gt;}}
 </code></pre><p>Would load the template at <code>/layouts/shortcodes/youtube.html</code>:</p>
 
 
@@ -524,7 +524,7 @@ by using the self-closing syntax:</p>
 </div>
 
 <h3 id="single-flexible-example-vimeo">Single Flexible Example: <code>vimeo</code> <a class="header-link" href="#single-flexible-example-vimeo"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<pre><code>{{&lt; vimeo 49718712 &gt;}}
+<pre tabindex="0"><code>{{&lt; vimeo 49718712 &gt;}}
 {{&lt; vimeo id=&quot;49718712&quot; class=&quot;flex-video&quot; &gt;}}
 </code></pre><p>Would load the template found at <code>/layouts/shortcodes/vimeo.html</code>:</p>
 
@@ -608,7 +608,7 @@ by using the self-closing syntax:</p>
 </div>
 
 <p>The template for the <code>highlight</code> shortcode uses the following code, which is already included in Hugo:</p>
-<pre><code>{{ .Get 0 | highlight .Inner }}
+<pre tabindex="0"><code>{{ .Get 0 | highlight .Inner }}
 </code></pre><p>The rendered output of the HTML example code block will be as follows:</p>
 
 
@@ -687,13 +687,13 @@ by using the self-closing syntax:</p>
 </div>
 
 <p>You can then call your shortcode in your content as follows:</p>
-<pre><code>{{&lt; gallery class=&quot;content-gallery&quot; &gt;}}
+<pre tabindex="0"><code>{{&lt; gallery class=&quot;content-gallery&quot; &gt;}}
   {{&lt; img src=&quot;/images/one.jpg&quot; &gt;}}
   {{&lt; img src=&quot;/images/two.jpg&quot; &gt;}}
 {{&lt; /gallery &gt;}}
 {{&lt; img src=&quot;/images/three.jpg&quot; &gt;}}
 </code></pre><p>This will output the following HTML. Note how the first two <code>img</code> shortcodes inherit the <code>class</code> value of <code>content-gallery</code> set with the call to the parent <code>gallery</code>, whereas the third <code>img</code> only uses <code>src</code>:</p>
-<pre><code>&lt;div class=&quot;content-gallery&quot;&gt;
+<pre tabindex="0"><code>&lt;div class=&quot;content-gallery&quot;&gt;
     &lt;img src=&quot;/images/one.jpg&quot; class=&quot;content-gallery-image&quot;&gt;
     &lt;img src=&quot;/images/two.jpg&quot; class=&quot;content-gallery-image&quot;&gt;
 &lt;/div&gt;
@@ -2143,7 +2143,7 @@ by using the self-closing syntax:</p>
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “Create Your Own Shortcodes”
-  </a> was last updated: August 28, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/05d39469b1e013009b72f318d2ddfc1d8a48b2ad">Fix build release error (05d3946)</a>
+  </a> was last updated: October 6, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/279ca7e2ea9fd0fe0449023b5d47862bce6e0564">Merge pull request #81 from blackb1rd/main (279ca7e)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/templates/shortcode-templates.md" class="

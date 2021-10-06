@@ -13,7 +13,7 @@
   <title>URL Management | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.88.0-DEV" />
+  <meta name="generator" content="Hugo 0.89.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,11 +62,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/content-management/urls/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="content-management" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-08-28T21:58:58+07:00" />
+<meta property="article:modified_time" content="2021-10-06T23:36:46+07:00" />
 
 <meta itemprop="name" content="URL Management">
 <meta itemprop="description" content="Hugo supports permalinks, aliases, link canonicalization, and multiple options for handling relative vs absolute URLs."><meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-08-28T21:58:58+07:00" />
+<meta itemprop="dateModified" content="2021-10-06T23:36:46+07:00" />
 <meta itemprop="wordCount" content="1678"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
@@ -317,7 +317,7 @@
     
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
-<span class="nx">posts</span> <span class="p">=</span> <span class="s1">&#39;/:year/:month/:title/&#39;</span>
+  <span class="nx">posts</span> <span class="p">=</span> <span class="s1">&#39;/:year/:month/:title/&#39;</span>
 
 </code></pre></div>
       </div>
@@ -376,7 +376,7 @@
     
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
-<span class="s1">&#39;/&#39;</span> <span class="p">=</span> <span class="s1">&#39;/:year/:month/:filename/&#39;</span>
+  <span class="s1">&#39;/&#39;</span> <span class="p">=</span> <span class="s1">&#39;/:year/:month/:filename/&#39;</span>
 
 </code></pre></div>
       </div>
@@ -434,7 +434,7 @@
     
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
-<span class="nx">posts</span> <span class="p">=</span> <span class="s1">&#39;/:06/:1/:2/:title/&#39;</span>
+  <span class="nx">posts</span> <span class="p">=</span> <span class="s1">&#39;/:06/:1/:2/:title/&#39;</span>
 
 </code></pre></div>
       </div>
@@ -545,7 +545,7 @@ aliases:
 <h3 id="example-aliases-in-multilingual">Example: Aliases in Multilingual <a class="header-link" href="#example-aliases-in-multilingual"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>On <a href="/content-management/multilingual/">multilingual sites</a>, each translation of a post can have unique aliases. To use the same alias across multiple languages, prefix it with the language code.</p>
 <p>In <code>/posts/my-new-post.es.md</code>:</p>
-<pre><code>---
+<pre tabindex="0"><code>---
 aliases:
     - /es/posts/my-original-post/
 ---
@@ -553,12 +553,12 @@ aliases:
 <h3 id="how-hugo-aliases-work">How Hugo Aliases Work <a class="header-link" href="#how-hugo-aliases-work"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>When aliases are specified, Hugo creates a directory to match the alias entry. Inside the directory, Hugo creates an <code>.html</code> file specifying the canonical URL for the page and the new redirect target.</p>
 <p>For example, a content file at <code>posts/my-intended-url.md</code> with the following in the front matter:</p>
-<pre><code>---
+<pre tabindex="0"><code>---
 title: My New post
 aliases: [/posts/my-old-url/]
 ---
 </code></pre><p>Assuming a <code>baseURL</code> of <code>example.com</code>, the contents of the auto-generated alias <code>.html</code> found at <code>https://example.com/posts/my-old-url/</code> will contain the following:</p>
-<pre><code>&lt;!DOCTYPE html&gt;
+<pre tabindex="0"><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;https://example.com/posts/my-intended-url&lt;/title&gt;
@@ -588,7 +588,7 @@ and the complete filename or directory.</li>
 <h2 id="pretty-urls">Pretty URLs <a class="header-link" href="#pretty-urls"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Hugo&rsquo;s default behavior is to render your content with &ldquo;pretty&rdquo; URLs. No non-standard server-side configuration is required for these pretty URLs to work.</p>
 <p>The following demonstrates the concept:</p>
-<pre><code>content/posts/_index.md
+<pre tabindex="0"><code>content/posts/_index.md
 =&gt; example.com/posts/
 content/posts/post-1.md
 =&gt; example.com/posts/post-1/
@@ -596,7 +596,7 @@ content/posts/post-1.md
 <p>If you would like to have what are often referred to as &ldquo;ugly URLs&rdquo; (e.g., example.com/urls.html), set <code>uglyurls = true</code> or <code>uglyurls: true</code> in your site&rsquo;s <code>config.toml</code> or <code>config.yaml</code>, respectively. You can also set the <code>HUGO_UGLYURLS</code> environment variable to <code>true</code> when running <code>hugo</code> or <code>hugo server</code>.</p>
 <p>If you want a specific piece of content to have an exact URL, you can specify this in the <a href="/content-management/front-matter/">front matter</a> under the <code>url</code> key. The following are examples of the same content directory and what the eventual URL structure will be when Hugo runs with its default behavior.</p>
 <p>See <a href="/content-management/organization/">Content Organization</a> for more details on paths.</p>
-<pre><code>.
+<pre tabindex="0"><code>.
 └── content
     └── about
     |   └── _index.md  // &lt;- https://example.com/about/
@@ -609,7 +609,7 @@ content/posts/post-1.md
         ├── first.md       // &lt;- https://example.com/quote/first/
         └── second.md      // &lt;- https://example.com/quote/second/
 </code></pre><p>Here&rsquo;s the same organization run with <code>hugo --uglyURLs</code>:</p>
-<pre><code>.
+<pre tabindex="0"><code>.
 └── content
     └── about
     |   └── _index.md  // &lt;- https://example.com/about.html
@@ -638,9 +638,9 @@ content/posts/post-1.md
 </aside>
 
 <p>To find out the current value of <code>canonifyURLs</code> for your website, you may use the handy <code>hugo config</code> command added in v0.13.</p>
-<pre><code>hugo config | grep -i canon
+<pre tabindex="0"><code>hugo config | grep -i canon
 </code></pre><p>Or, if you are on Windows and do not have <code>grep</code> installed:</p>
-<pre><code>hugo config | FINDSTR /I canon
+<pre tabindex="0"><code>hugo config | FINDSTR /I canon
 </code></pre><h2 id="set-url-in-front-matter">Set URL in Front Matter <a class="header-link" href="#set-url-in-front-matter"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>In addition to specifying permalink values in your site configuration for different content sections, Hugo provides even more granular control for individual pieces of content.</p>
 <p>Both <code>slug</code> and <code>url</code> can be defined in individual front matter. For more information on content destinations at build time, see <a href="/content-management/organization/">Content Organization</a>.</p>
@@ -2014,7 +2014,7 @@ url: &#34;custom/foo&#34;
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “URL Management”
-  </a> was last updated: August 28, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/05d39469b1e013009b72f318d2ddfc1d8a48b2ad">Fix build release error (05d3946)</a>
+  </a> was last updated: October 6, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/279ca7e2ea9fd0fe0449023b5d47862bce6e0564">Merge pull request #81 from blackb1rd/main (279ca7e)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/content-management/urls.md" class="
