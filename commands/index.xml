@@ -228,8 +228,8 @@ Logout and in again to reload the completion scripts, or just source them in dir
       
       <guid>https://gohugo.io/commands/hugo_gen_chromastyles/</guid>
       <description>hugo gen chromastyles  Generate CSS stylesheet for the Chroma code highlighter
-Synopsis  Generate CSS stylesheet for the Chroma code highlighter for a given style. This stylesheet is needed if pygmentsUseClasses is enabled in config.
-See https://help.farbox.com/pygments.html for preview of available styles
+Synopsis  Generate CSS stylesheet for the Chroma code highlighter for a given style. This stylesheet is needed if markup.highlight.noClasses is disabled in config.
+See https://xyproto.github.io/splash/docs/all.html for a preview of the available styles
 hugo gen chromastyles [flags] Options   -h, --help help for chromastyles --highlightStyle string style used for highlighting lines (see https://github.com/alecthomas/chroma) (default &amp;quot;bg:#ffffcc&amp;quot;) --linesStyle string style used for line numbers (see https://github.</description>
     </item>
     

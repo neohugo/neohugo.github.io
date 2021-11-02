@@ -10,10 +10,10 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>0.88.0 | Hugo</title>
+  <title>Go 1.17 Update | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.89.0-DEV" />
+  <meta name="generator" content="Hugo 0.90.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -32,7 +32,7 @@
   
 
   <meta name="description"
-  content="0.88.0">
+  content="Hugo 0.88.0 brings Go 1.17 support, a dependency refresh, and more.">
 
   
 
@@ -57,22 +57,21 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0594cb">
 <meta name="theme-color" content="#ffffff">
-<meta property="og:title" content="0.88.0" />
-<meta property="og:description" content="0.88.0" />
+<meta property="og:title" content="Go 1.17 Update" />
+<meta property="og:description" content="Hugo 0.88.0 brings Go 1.17 support, a dependency refresh, and more." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gohugo.io/news/0.88.0-relnotes/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="news" />
+<meta property="og:url" content="https://gohugo.io/news/0.88.0-relnotes/" /><meta property="og:image" content="https://gohugo.io/news/0.88.0-relnotes/featured.png"/><meta property="article:section" content="news" />
 <meta property="article:published_time" content="2021-09-02T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-10-06T23:36:46+07:00" />
+<meta property="article:modified_time" content="2021-11-02T22:27:18+07:00" />
 
-<meta itemprop="name" content="0.88.0">
-<meta itemprop="description" content="0.88.0"><meta itemprop="datePublished" content="2021-09-02T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-10-06T23:36:46+07:00" />
-<meta itemprop="wordCount" content="463"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="name" content="Go 1.17 Update">
+<meta itemprop="description" content="Hugo 0.88.0 brings Go 1.17 support, a dependency refresh, and more."><meta itemprop="datePublished" content="2021-09-02T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-11-02T22:27:18+07:00" />
+<meta itemprop="wordCount" content="463"><meta itemprop="image" content="https://gohugo.io/news/0.88.0-relnotes/featured.png">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
-
-<meta name="twitter:title" content="0.88.0"/>
-<meta name="twitter:description" content="0.88.0"/>
+<meta name="twitter:image" content="https://gohugo.io/news/0.88.0-relnotes/featured.png"/>
+<meta name="twitter:title" content="Go 1.17 Update"/>
+<meta name="twitter:description" content="Hugo 0.88.0 brings Go 1.17 support, a dependency refresh, and more."/>
 <meta name="twitter:site" content="@GoHugoIO"/>
 
 
@@ -205,7 +204,7 @@
 
       <h1 class="lh-title fw9 mb7 mv0 pt3">
         <a href="/news/0.88.0-relnotes/" class="link primary-color dim">
-          0.88.0
+          Go 1.17 Update
         </a>
       </h1>
     </header>
@@ -214,7 +213,7 @@
       <aside class="mid-gray fn w-100 w-25-l">
         
           <h2 class="f3 lh-title">
-            0.88.0
+            Hugo 0.88.0 brings Go 1.17 support, a dependency refresh, and more.
           </h2>
         
         <time class="f6 mt2 db ttu tracked" datetime="2021-09-02T00:00:00Z">
@@ -231,7 +230,7 @@
 
 	<div date-pref>
 		
-			<a href="https://gohugo.io/news/0.88.1-relnotes/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Hugo 0.88.1: A couple of Bug Fixes ">
+			<a href="https://gohugo.io/news/0.88.1-relnotes/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Hugo 0.88.1: One Fix ">
 				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -241,7 +240,7 @@
 		
 
 		
-			<a href="https://gohugo.io/news/0.87.0-relnotes/" class="dib f6 pr1 hover-bg-light-gray br-100" title="0.87.0">
+			<a href="https://gohugo.io/news/0.87.0-relnotes/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Localized Time and Dates and Numbers">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -260,8 +259,10 @@
           
           
           
-        <pre><code>The most important piece in this release is the Go 1.17 update. This release is built with that new Go version, but also and more importantly, the Hugo Modules logic has been updated to support Go's new way of (lazy) loading transitive dependencies. If you already have Go 1.17 installed, building existing Hugo Modules backed projects have not been an issue, but `hugo mod init` for a new project could give you _too new_ versions of transitive dependencies. Hugo 0.88 fixes this.
-</code></pre>
+          <img src="/news/0.88.0-relnotes/featured_hubd2e74572b88af11154b43148569d005_87331_480x0_resize_catmullrom_3.png" alt="Featured Image for Go 1.17 Update" class="mw-100">
+          
+          
+        <p>The most important piece in this release is the Go 1.17 update. This release is built with that new Go version, but also and more importantly, the Hugo Modules logic has been updated to support Go&rsquo;s new way of (lazy) loading transitive dependencies. If you already have Go 1.17 installed, building existing Hugo Modules backed projects have not been an issue, but <code>hugo mod init</code> for a new project could give you <em>too new</em> versions of transitive dependencies. Hugo 0.88 fixes this.</p>
 <p>This release represents <strong>26 contributions by 6 contributors</strong> to the main Hugo code base.<a href="https://github.com/bep">@bep</a> leads the Hugo development with a significant amount of contributions, but also a big shoutout to <a href="https://github.com/apps/dependabot">@dependabot[bot]</a>, <a href="https://github.com/helfper">@helfper</a>, and <a href="https://github.com/wzshiming">@wzshiming</a> for their ongoing contributions.</p>
 <p>Many have also been busy writing and fixing the documentation in <a href="https://github.com/gohugoio/hugoDocs">hugoDocs</a>,
 which has received <strong>9 contributions by 6 contributors</strong>. A special thanks to <a href="https://github.com/bep">@bep</a>, <a href="https://github.com/jmooring">@jmooring</a>, <a href="https://github.com/StevenMaude">@StevenMaude</a>, and <a href="https://github.com/coliff">@coliff</a> for their work on the documentation site.</p>
@@ -278,7 +279,7 @@ which has received <strong>9 contributions by 6 contributors</strong>. A special
 <h2 id="enhancements">Enhancements <a class="header-link" href="#enhancements"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <h3 id="templates">Templates <a class="header-link" href="#templates"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <ul>
-<li>Handle nil values in time.AsTime&quot; <a href="https://github.com/gohugoio/hugo/commit/abd969a670852f9ed57c1a26434445aa985706fe">abd969a6</a> <a href="https://github.com/bep">@bep</a></li>
+<li>Handle nil values in time.AsTime <a href="https://github.com/gohugoio/hugo/commit/abd969a670852f9ed57c1a26434445aa985706fe">abd969a6</a> <a href="https://github.com/bep">@bep</a></li>
 <li>Handle nil values in time.AsTime <a href="https://github.com/gohugoio/hugo/commit/3e11072892ca31bb76980ee38890a4bd92d83dfd">3e110728</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/8865">#8865</a></li>
 </ul>
 <h3 id="other">Other <a class="header-link" href="#other"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
@@ -291,13 +292,13 @@ which has received <strong>9 contributions by 6 contributors</strong>. A special
 <li>Avoid failing with &ldquo;module not found&rdquo; for hugo mod init and similar <a href="https://github.com/gohugoio/hugo/commit/a0489c2dfd3ceb4d0702de0da7a4af3eabce05e5">a0489c2d</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/8940">#8940</a></li>
 <li>Update to Go 1.17 <a href="https://github.com/gohugoio/hugo/commit/0fc2ce9e4bf0524994a861b7300e4332f6f8d390">0fc2ce9e</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/8930">#8930</a></li>
 <li>Remove Pygments from snapcraft.yml <a href="https://github.com/gohugoio/hugo/commit/32569285c181c8798ef594c12d3cfd7f9a252a04">32569285</a> <a href="https://github.com/anthonyfok">@anthonyfok</a></li>
-<li>bump github.com/fsnotify/fsnotify from 1.4.9 to 1.5.0&quot; <a href="https://github.com/gohugoio/hugo/commit/5a46eefbc6da3463b796ada8d15902be197455a3">5a46eefb</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/8920">#8920</a></li>
+<li>bump github.com/fsnotify/fsnotify from 1.4.9 to 1.5.0 <a href="https://github.com/gohugoio/hugo/commit/5a46eefbc6da3463b796ada8d15902be197455a3">5a46eefb</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/8920">#8920</a></li>
 <li>Add tabindex when code is not highlighted <a href="https://github.com/gohugoio/hugo/commit/7a15edafe240471c072d3548b72ccda0271ffd8f">7a15edaf</a> <a href="https://github.com/helfper">@helfper</a></li>
 <li>bump github.com/evanw/esbuild from 0.12.17 to 0.12.22 <a href="https://github.com/gohugoio/hugo/commit/2f0945bafe501103abe97b2f2b5566b28ec48e52">2f0945ba</a> <a href="https://github.com/apps/dependabot">@dependabot[bot]</a></li>
 <li>bump golang.org/x/text from 0.3.6 to 0.3.7 <a href="https://github.com/gohugoio/hugo/commit/7ba3f3d201e386cb9c7c15df5a6cc1c4b46473bd">7ba3f3d2</a> <a href="https://github.com/apps/dependabot">@dependabot[bot]</a></li>
 <li>bump github.com/fsnotify/fsnotify from 1.4.9 to 1.5.0 <a href="https://github.com/gohugoio/hugo/commit/f70165242b98e3ee182fbac08bf2893a7f09e961">f7016524</a> <a href="https://github.com/apps/dependabot">@dependabot[bot]</a></li>
-<li>Prevent minifier from removing quoutes around post-processed attributes <a href="https://github.com/gohugoio/hugo/commit/bc0743ed8eafc3c2d9b21a1e8f1b05d64b85e8ba">bc0743ed</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/8884">#8884</a></li>
-<li>Avoid too many watch file handles causing the server to fail to start&quot; <a href="https://github.com/gohugoio/hugo/commit/ffa2fe61172aa0d892234b23d1497c77a6a7f5c4">ffa2fe61</a> <a href="https://github.com/bep">@bep</a></li>
+<li>Prevent minifier from removing quotes around post-processed attributes <a href="https://github.com/gohugoio/hugo/commit/bc0743ed8eafc3c2d9b21a1e8f1b05d64b85e8ba">bc0743ed</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/8884">#8884</a></li>
+<li>Avoid too many watch file handles causing the server to fail to start <a href="https://github.com/gohugoio/hugo/commit/ffa2fe61172aa0d892234b23d1497c77a6a7f5c4">ffa2fe61</a> <a href="https://github.com/bep">@bep</a></li>
 <li>Remove some pygments references <a href="https://github.com/gohugoio/hugo/commit/d966f5d08d7f75f1ae9acd94e292bf61de2adf0d">d966f5d0</a> <a href="https://github.com/helfper">@helfper</a></li>
 <li>Avoid too many watch file handles causing the server to fail to start <a href="https://github.com/gohugoio/hugo/commit/3f38c785b7208440e2a9dd9a80cb39d4ae23e676">3f38c785</a> <a href="https://github.com/wzshiming">@wzshiming</a> <a href="https://github.com/gohugoio/hugo/issues/8904">#8904</a></li>
 <li>bump github.com/getkin/kin-openapi from 0.68.0 to 0.74.0 <a href="https://github.com/gohugoio/hugo/commit/24589c0814bc5d21565470bec6215ee792f1655e">24589c08</a> <a href="https://github.com/apps/dependabot">@dependabot[bot]</a></li>
@@ -318,7 +319,7 @@ which has received <strong>9 contributions by 6 contributors</strong>. A special
     
 
       <div class="gray f6 mv6">
-        Last Update: October 6, 2021 <br>
+        Last Update: November 2, 2021 <br>
         <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/news/0.88.0-relnotes/index.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 ">Improve this page</a>

@@ -100,16 +100,6 @@ Assumptions   Working familiarity with Git for version control A Bitbucket accou
     </item>
     
     <item>
-      <title>Deployment with Wercker</title>
-      <link>https://gohugo.io/hosting-and-deployment/deployment-with-wercker/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://gohugo.io/hosting-and-deployment/deployment-with-wercker/</guid>
-      <description>Goals  By the end of this guide, you will have completed the following:
- Creating a basic Hugo project and website Version controlling your project with Git Adding your project to GitHub Automating site deployments with a free tool called Wercker Deploying your website to GitHub Pages for free hosting  Assumptions   You have a working familiarity with using Git for version control You have a GitHub account You have already created a basic Hugo project  If you do not meet these assumptions, the GitHub help section has an explanation of how to install and use git.</description>
-    </item>
-    
-    <item>
       <title>Deployment with Rsync</title>
       <link>https://gohugo.io/hosting-and-deployment/deployment-with-rsync/</link>
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>

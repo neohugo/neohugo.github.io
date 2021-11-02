@@ -89,7 +89,6 @@
 /themes/customizing/               	/hugo-modules/theme-components/
 /overview/source-directory/        	/getting-started/directory-structure/
 /content/types                     	/content-management/types/
-/tutorials/automated-deployments/  	/hosting-and-deployment/deployment-with-wercker/
 /layout/content/                   	/templates/single-page-templates/
 /meta/license                      	/about/license/
 /overview/source-directory/        	/getting-started/configuration/

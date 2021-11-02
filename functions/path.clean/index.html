@@ -10,10 +10,10 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Deployment with Wercker | Hugo</title>
+  <title>path.Clean | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.89.0-DEV" />
+  <meta name="generator" content="Hugo 0.90.0-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -32,7 +32,7 @@
   
 
   <meta name="description"
-  content="You can use a free tool called Wercker to automate deployments between your GitHub-hosted source and final website on GitHub pages.">
+  content="Replaces path separators with slashes (`/`) and removes extraneous separators.">
 
   
 
@@ -57,22 +57,22 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0594cb">
 <meta name="theme-color" content="#ffffff">
-<meta property="og:title" content="Deployment with Wercker" />
-<meta property="og:description" content="You can use a free tool called Wercker to automate deployments between your GitHub-hosted source and final website on GitHub pages." />
+<meta property="og:title" content="path.Clean" />
+<meta property="og:description" content="Replaces path separators with slashes (`/`) and removes extraneous separators." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gohugo.io/hosting-and-deployment/deployment-with-wercker/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="hosting-and-deployment" />
-<meta property="article:published_time" content="2017-02-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-10-06T23:36:46+07:00" />
+<meta property="og:url" content="https://gohugo.io/functions/path.clean/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="functions" />
+<meta property="article:published_time" content="2021-10-08T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-11-02T22:27:18+07:00" />
 
-<meta itemprop="name" content="Deployment with Wercker">
-<meta itemprop="description" content="You can use a free tool called Wercker to automate deployments between your GitHub-hosted source and final website on GitHub pages."><meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-10-06T23:36:46+07:00" />
-<meta itemprop="wordCount" content="1888"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="name" content="path.Clean">
+<meta itemprop="description" content="Replaces path separators with slashes (`/`) and removes extraneous separators."><meta itemprop="datePublished" content="2021-10-08T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-11-02T22:27:18+07:00" />
+<meta itemprop="wordCount" content="41"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
 
-<meta name="twitter:title" content="Deployment with Wercker"/>
-<meta name="twitter:description" content="You can use a free tool called Wercker to automate deployments between your GitHub-hosted source and final website on GitHub pages."/>
+<meta name="twitter:title" content="path.Clean"/>
+<meta name="twitter:description" content="Replaces path separators with slashes (`/`) and removes extraneous separators."/>
 <meta name="twitter:site" content="@GoHugoIO"/>
 
 
@@ -196,33 +196,12 @@
       <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
 	
-		<p class="b">What's on this Page</p>
-  	<nav id="TableOfContents">
-  <ul>
-    <li><a href="#goals">Goals</a></li>
-    <li><a href="#assumptions">Assumptions</a></li>
-    <li><a href="#create-a-basic-hugo-site">Create a Basic Hugo Site</a></li>
-    <li><a href="#set-up-version-control-in-git">Set up Version Control in Git</a></li>
-    <li><a href="#add-the-project-to-github">Add the Project to GitHub</a></li>
-    <li><a href="#set-up-wercker">Set Up Wercker</a></li>
-    <li><a href="#conclusion">Conclusion</a></li>
-  </ul>
-</nav>
-	
 
 	<div date-pref>
 		
-			<a href="https://gohugo.io/hosting-and-deployment/hosting-on-bitbucket/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Host on Bitbucket ">
-				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
-    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
-</svg>
-
-			</a>
-		
 
 		
-			<a href="https://gohugo.io/hosting-and-deployment/deployment-with-rsync/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Deployment with Rsync">
+			<a href="https://gohugo.io/functions/lang/" class="dib f6 pr1 hover-bg-light-gray br-100" title="lang">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -242,18 +221,18 @@
           <header class="flex-none w-100">
   
     
-      <a href="/categories/hosting-and-deployment" class="f6 fw8 mb0 link mid-gray dim mr3">
-        HOSTING AND DEPLOYMENT
+      <a href="/categories/functions" class="f6 fw8 mb0 link mid-gray dim mr3">
+        FUNCTIONS
       </a>
     
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Deployment with Wercker</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">path.Clean</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      You can use a free tool called Wercker to automate deployments between your GitHub-hosted source and final website on GitHub pages.
+      Replaces path separators with slashes (<code>/</code>) and removes extraneous separators.
     </div>
   
 
@@ -263,358 +242,15 @@
 
 
 <div class="prose" id="prose">
+    <h2 class="minor mb1 pt4 primary-color-dark">Syntax</h2>
+      <pre class="f5 mb4 ph3 pv2 bg-light-gray" style="border-left:4px solid #0594CB;">path.Clean PATH</pre>
 
-<h2 id="goals">Goals <a class="header-link" href="#goals"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>By the end of this guide, you will have completed the following:</p>
-<ul>
-<li>Creating a basic Hugo project and website</li>
-<li>Version controlling your project with Git</li>
-<li>Adding your project to GitHub</li>
-<li>Automating site deployments with a free tool called Wercker</li>
-<li>Deploying your website to GitHub Pages for free hosting</li>
-</ul>
-<h2 id="assumptions">Assumptions <a class="header-link" href="#assumptions"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<ol>
-<li>You have a working familiarity with using Git for version control</li>
-<li>You have a GitHub account</li>
-<li>You have already created a basic Hugo project</li>
-</ol>
-<p>If you do not meet these assumptions, the <a href="https://help.github.com/articles/set-up-git/">GitHub help section</a> has an explanation of how to install and use git. <a href="https://github.com/join">Signing up for a GitHub</a> account is free as well. If you are completely unfamiliar with creating a new Hugo website, visit the <a href="/getting-started/quick-start/">Hugo Quick Start</a>.</p>
-<h2 id="create-a-basic-hugo-site">Create a Basic Hugo Site <a class="header-link" href="#create-a-basic-hugo-site"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-
-<aside class="admonition note">
-	<div class="note-icon">
-		
-	</div>
-	
-	
-	<div class="admonition-content"><p>All the work for setting up a Hugo project and using this guide is done via the Hugo CLI&rsquo;s most basic commands. See the <a href="/commands/">command line reference page</a> for a more exhaustive account of the CLI&rsquo;s features.</p>
-</div>
-</aside>
-
-<p>First, create your new Hugo website using the <a href="/getting-started/usage/"><code>hugo new site</code> command</a> and change into the newly created directory for the project. In this guide, we are calling our new project <code>hugo-wercker-example</code>:</p>
-
-
-
-
-
-
-
-
-<div class="code relative" id="hugo-new-site.sh"><div class="filename san-serif f6 dib lh-solid pl2 pv2">hugo-new-site.sh</div>
-		<button class="needs-js copy bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-		</button>
-		
-	
-	<div class="code-copy-content nt3" >
-		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">hugo new site hugo-wercker-example
-<span class="nb">cd</span> hugo-wercker-example</code></pre></div>
-	</div>
-
-</div>
-
-<p>We will use the <a href="https://github.com/spf13/herring-cove">Herring Cove theme</a> by first cloning the theme into the <code>themes</code> directory.</p>
-
-
-
-
-
-
-
-
-<div class="code relative" id="clone-herring-cove-theme.sh"><div class="filename san-serif f6 dib lh-solid pl2 pv2">clone-herring-cove-theme.sh</div>
-		<button class="needs-js copy bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-		</button>
-		
-	
-	<div class="code-copy-content nt3" >
-		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">cd</span> themes
-git clone https://github.com/spf13/herring-cove.git</code></pre></div>
-	</div>
-
-</div>
-
-<p>Cloning the project from the command line will conflict with our own version control. So, we need to remove the external git configuration that came with the clone of Herring Cove:</p>
-
-
-
-
-
-
-
-
-<div class="code relative" id="remove-herring-cove-git.sh"><div class="filename san-serif f6 dib lh-solid pl2 pv2">remove-herring-cove-git.sh</div>
-		<button class="needs-js copy bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-		</button>
-		
-	
-	<div class="code-copy-content nt3" >
-		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">rm -rf herring-cove/.git</code></pre></div>
-	</div>
-
-</div>
-
-<p>We need content for Hugo to build. Let&rsquo;s add a quick <code>/about</code> page:</p>
-<pre tabindex="0"><code>hugo new about.md
+<p><code>path.Clean</code> replaces path separators with slashes (<code>/</code>) and removes extraneous separators, including trailing separators.</p>
+<pre tabindex="0"><code>{{ path.Clean &quot;foo//bar&quot; }} → &quot;foo/bar&quot;
+{{ path.Clean &quot;/foo/bar/&quot; }} → &quot;/foo/bar&quot;
+</code></pre><p>On a Windows system, if <code>.File.Path</code> is <code>foo\bar.md</code>, then:</p>
+<pre tabindex="0"><code>{{ path.Clean .File.Path }} → &quot;foo/bar.md&quot;
 </code></pre>
-<aside class="admonition note">
-	<div class="note-icon">
-		
-	</div>
-	
-	
-	<div class="admonition-content"><p>The preceding example for the about page leverages archetypes to scaffold a new content file with preconfigured front matter. <a href="/content-management/archetypes/">Find out more about Hugo&rsquo;s archetypes</a>.</p>
-</div>
-</aside>
-
-<p>Now you can edit <code>contents/about.md</code> in your text editor of choice, but this is not necessary for the purposes of this guide. Running the following command will build your Hugo site into the <code>public</code> directory.</p>
-<p>Once the website is build, it&rsquo;s a good idea to run the following command to start a local server and ensure you&rsquo;re changes have been implemented:</p>
-<pre tabindex="0"><code>hugo server --theme=herring-cove
-</code></pre><p>If everything is fine, you should see something similar to the image below when you go to <a href="http://localhost:1313">http://localhost:1313</a> in your browser.</p>
-<p><img src="/images/hosting-and-deployment/deployment-with-wercker/creating-a-basic-hugo-site.png" alt=""></p>
-<h2 id="set-up-version-control-in-git">Set up Version Control in Git <a class="header-link" href="#set-up-version-control-in-git"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>Adding Git to your project is done by running the <code>git init</code> command from the root directory of your project.</p>
-<pre tabindex="0"><code>git init
-</code></pre><p>Running <code>git status</code> at this point will show you the following entries: the <code>config.toml</code> file, the <code>themes</code> directory, the <code>contents</code> directory, and the <code>public</code> directory. However, we don&rsquo;t want the <code>public</code> directory version controlled because Wercker is responsible for generating the finished website later on. Therefore, we&rsquo;ll add a <code>.gitignore</code> file to our project that will exclude the <code>/public</code> directory from being tracked by Git:</p>
-
-
-
-
-
-
-
-
-<div class="code relative" id="gitignore.sh"><div class="filename san-serif f6 dib lh-solid pl2 pv2">gitignore.sh</div>
-		<button class="needs-js copy bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-		</button>
-		
-	
-	<div class="code-copy-content nt3" >
-		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">echo</span> <span class="s2">&#34;/public&#34;</span> &gt;&gt; .gitignore</code></pre></div>
-	</div>
-
-</div>
-
-<p>Wercker might complain when we try to build the site later on because we currently do not have any static files outside of the <code>themes</code> directory. We simply have to add <em>any</em> file to the static folder to prevent Wercker from complaining. To keep this guide simple, let&rsquo;s add a <code>robots.txt</code>. The following command creates the file in <code>/static</code>. The contents of the <code>robots.txt</code> lets search engines know they have full access to crawl the published website:</p>
-
-
-
-
-
-
-
-
-<div class="code relative" id="addrobotstxt.sh"><div class="filename san-serif f6 dib lh-solid pl2 pv2">addrobotstxt.sh</div>
-		<button class="needs-js copy bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-		</button>
-		
-	
-	<div class="code-copy-content nt3" >
-		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">echo</span> <span class="s2">&#34;User-agent: *\nDisallow:&#34;</span> &gt; static/robots.txt</code></pre></div>
-	</div>
-
-</div>
-
-<p>Now we need to add (i.e., <a href="https://git-scm.com/book/en/v2/Getting-Started-Git-Basics">stage [see Git documentation]</a>) and commit all of our changes in the repository into Git:</p>
-<pre tabindex="0"><code>git commit -a -m &quot;Initial commit&quot;
-</code></pre><h2 id="add-the-project-to-github">Add the Project to GitHub <a class="header-link" href="#add-the-project-to-github"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>Now we need to create a new repository on GitHub. Once you are signed in to GitHub, you can add a new repository by clicking on the <strong>+▼</strong> dropdown at the top right or by going to <a href="https://github.com">https://github.com/new</a>..</p>
-<p>We then choose a name for the project (<code>hugo-wercker-example</code>). When clicking on create repository GitHub displays the commands for adding an existing project to the site. The commands shown below are the ones used for this site, if you&rsquo;re following along you will need to use the ones shown by GitHub. Once we&rsquo;ve run those commands the project is in GitHub and we can move on to setting up the Wercker configuration. Be sure to replace <code>YourUserName</code> with your GitHub account/username:</p>
-
-
-
-
-
-
-
-
-<div class="code relative" id="setup-gh-repo.sh"><div class="filename san-serif f6 dib lh-solid pl2 pv2">setup-gh-repo.sh</div>
-		<button class="needs-js copy bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-		</button>
-		
-	
-	<div class="code-copy-content nt3" >
-		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">git remote add origin git@github.com:YourUsername/hugo-wercker-example.git
-git push -u origin master</code></pre></div>
-	</div>
-
-</div>
-
-<p><img src="/images/hosting-and-deployment/deployment-with-wercker/adding-the-project-to-github.png" alt=""></p>
-<h2 id="set-up-wercker">Set Up Wercker <a class="header-link" href="#set-up-wercker"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>To sign up for a free Wercker account, go to <a href="https://www.wercker.com">https://www.wercker.com</a> and click the <strong>Sign Up</strong> button on the top right of the home screen.</p>
-<p><img src="/images/hosting-and-deployment/deployment-with-wercker/wercker-sign-up.png" alt=""></p>
-<h3 id="register-for-wercker-with-your-github-account">Register for Wercker with Your GitHub Account <a class="header-link" href="#register-for-wercker-with-your-github-account"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>Sign up for Wercker using your GitHub credentials. If you don&rsquo;t have a GitHub account, or don&rsquo;t want to use it for your account, you have the option to register with a username and password as well. However, the second half of this guide&mdash;devoted to hosting your website on GitHub pages&mdash;will no longer be of interest to you.</p>
-<p><img src="/images/hosting-and-deployment/deployment-with-wercker/wercker-sign-up-page.png" alt=""></p>
-<h3 id="connect-github-or-bitbucket">Connect GitHub or Bitbucket <a class="header-link" href="#connect-github-or-bitbucket"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>After you are registered, you will need to link your GitHub or Bitbucket account to Wercker. You can link your account by navigating to your profile settings and then selecting &ldquo;Git connections.&rdquo;</p>
-<p><img src="/images/hosting-and-deployment/deployment-with-wercker/wercker-account-settings.png" alt=""></p>
-<p>If you registered for Wercker using GitHub, it will most likely look like the following image. To connect a missing service, click the <strong>Connect</strong> button, which may send you to either GitHub or Bitbucket to sign into your respective account.</p>
-<p><img src="/images/hosting-and-deployment/deployment-with-wercker/wercker-git-connections.png" alt=""></p>
-<h3 id="add-your-project">Add Your Project <a class="header-link" href="#add-your-project"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>Now that we&rsquo;ve got all the preliminaries out of the way, it&rsquo;s time to set up our application. For this we click on the <strong>+ Create</strong> button next to Applications and choose GitHub as our provider.</p>
-<p><img src="/images/hosting-and-deployment/deployment-with-wercker/wercker-add-app.png" alt=""></p>
-<h3 id="select-a-repository">Select a Repository <a class="header-link" href="#select-a-repository"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>When selecting GitHub, Wercker will show all your GitHub repositories. You have the option to filter repositories using the search input at the top of the repositories list. Once you have your repository selected, click the <strong>Use selected repo</strong> button.</p>
-<p><img src="/images/hosting-and-deployment/deployment-with-wercker/wercker-select-repository.png" alt=""></p>
-<h3 id="select-the-repository-owner">Select the Repository Owner <a class="header-link" href="#select-the-repository-owner"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>In the next step, Wercker asks you to select the repository owner. Select your GitHub account and continue.</p>
-<p><img src="/images/hosting-and-deployment/deployment-with-wercker/wercker-select-owner.png" alt=""></p>
-<h3 id="configure-access">Configure Access <a class="header-link" href="#configure-access"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-
-<aside class="admonition note">
-	<div class="note-icon">
-		
-	</div>
-	
-	
-	<div class="admonition-content"><p>This guide assumes you are using a public GitHub repository and understand that the <a href="https://help.github.com/articles/what-is-github-pages/#usage-limits">published GitHub Pages website will be available to everyone</a>.</p>
-</div>
-</aside>
-
-<p>This step can be slightly tricky. Wercker does not have privileges to check out your private projects by default and therefore needs your permission to add a deploy key to your repository. By selecting the first option, you&rsquo;re simply allowing Wercker to check out the code via the same methods available to anyone visiting the project on GitHub.</p>
-<p><img src="/images/hosting-and-deployment/deployment-with-wercker/wercker-access.png" alt=""></p>
-<h3 id="werckeryml">Wercker.yml <a class="header-link" href="#werckeryml"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>Wercker will now attempt to create an initial <code>wercker.yml</code> file for you. More specifically, it will create a code block within the Wercker interface that you can copy to your finished file. Wercker gives us a <code>debian</code> box because our project does not have any special requirements.</p>
-<p>Now we need to create a <em>wercker.yml</em> file in the root of our project. This file will contain our Wercker app&rsquo;s configuration. After we finish setting up our app, we will expand the contents of this file to build and deploy our website.</p>
-<p><img src="/images/hosting-and-deployment/deployment-with-wercker/werckeryml.png" alt=""></p>
-<h3 id="public-or-private">Public or Private <a class="header-link" href="#public-or-private"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>This is a personal choice. You can make an app public so that everyone can see more details about it. Keeping it private or public does not provide any overt benefits for you as the creator of the app. That said, <a href="https://app.wercker.com/#applications/5586dcbdaf7de9c51b02b0d5">the app we are currently creating has been made public</a> to facilitate easier usage of this hosting and deployment guide.</p>
-<p><img src="/images/hosting-and-deployment/deployment-with-wercker/public-or-not.png" alt=""></p>
-<h4 id="app-successfully-created">App Successfully Created <a class="header-link" href="#app-successfully-created"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
-<p>The application is now added and Wercker will offer you the chance to trigger a build. However, we will decline the offer because we haven&rsquo;t yet pushed our <code>wercker.yml</code> file to our GitHub repository.</p>
-<p><img src="/images/hosting-and-deployment/deployment-with-wercker/and-we-ve-got-an-app.png" alt=""></p>
-<h3 id="add-the-hugo-build-step">Add the Hugo-build Step <a class="header-link" href="#add-the-hugo-build-step"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>Now we need to add the Wercker steps to our build process. First, we go to the &ldquo;Registry&rdquo; action in the top menu. When in the registry, we can search for &ldquo;hugo build&rdquo;. Select the &ldquo;Hugo-Build by <strong>arjen</strong>&rdquo; step.</p>
-<p><img src="/images/hosting-and-deployment/deployment-with-wercker/wercker-search.png" alt=""></p>
-<h3 id="use-the-hugo-build-step">Use the Hugo-build Step <a class="header-link" href="#use-the-hugo-build-step"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>A summary of very basic usage is available at the top of the details for the Hugo-Build step. Below the basic usage is the contents of the <code>README.md</code> file associated with the step&rsquo;s repository. <code>README.md</code>&rsquo;s on Wercker usually contain more details about the advanced options and examples of usage.</p>
-<p>We&rsquo;re not going to use any of the advanced features of Hugo-Build in this guide. Let&rsquo;s return to our project and add the first section of details we need to our <code>wercker.yml</code>.</p>
-
-<aside class="admonition warning">
-	<div class="admonition-icon">
-		
-	</div>
-	
-	
-	<div class="admonition-content"><p>The docs are a work in progress. As such, the <code>version</code> represented in this guide may not represent the version you&rsquo;ve been using for local development. Be sure to use the appropriate Hugo version for your build step.</p>
-</div>
-</aside>
-
-
-
-
-
-
-
-
-
-<div class="code relative" id="wercker-build-step.yml"><div class="filename san-serif f6 dib lh-solid pl2 pv2">wercker-build-step.yml</div>
-		<button class="needs-js copy bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-		</button>
-		
-	
-	<div class="code-copy-content nt3" >
-		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">box</span><span class="p">:</span><span class="w"> </span><span class="l">debian</span><span class="w">
-</span><span class="w"></span><span class="nt">build</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">steps</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span>- <span class="nt">arjen/hugo-build</span><span class="p">:</span><span class="w">
-</span><span class="w">        </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;0.17&#34;</span><span class="w">
-</span><span class="w">        </span><span class="nt">theme</span><span class="p">:</span><span class="w"> </span><span class="l">herring-cove</span><span class="w">
-</span><span class="w">        </span><span class="nt">flags</span><span class="p">:</span><span class="w"> </span>--<span class="l">buildDrafts=true</span></code></pre></div>
-	</div>
-
-</div>
-
-<p>We can conclude this first step by pushing our <code>wercker.yml</code> to our GitHub repository and then seeing the magic at work within Wercker&rsquo;s interface.</p>
-
-
-
-
-
-
-
-
-<div class="code relative" id="push-wecker-to-gh.sh"><div class="filename san-serif f6 dib lh-solid pl2 pv2">push-wecker-to-gh.sh</div>
-		<button class="needs-js copy bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-		</button>
-		
-	
-	<div class="code-copy-content nt3" >
-		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">git commit -a -m <span class="s2">&#34;Add wercker.yml&#34;</span>
-git push origin master</code></pre></div>
-	</div>
-
-</div>
-
-<p>If completed and successful, a green check mark should appear in the commit column of your first build. However, this is only the build step. We still need to deploy the website to our free hosting on GitHub Pages. If you would like more details about the build, you can click the commit hash.</p>
-<p><img src="/images/hosting-and-deployment/deployment-with-wercker/using-hugo-build.png" alt=""></p>
-<h3 id="add-a-github-pages-deploy-step-to-werckeryml">Add a GitHub Pages Deploy Step to <code>wercker.yml</code> <a class="header-link" href="#add-a-github-pages-deploy-step-to-werckeryml"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>In order to deploy to GitHub Pages, we need to add a deploy step to our <code>wercker.yml</code>. We are going to add <code>lukevevier/gh-pages</code>, the most popular GitHub Pages step in the Wercker Steps repository. Additionally, we need to ensure the box Wercker uses for our deployments has git and ssh installed. We can do this using the <code>install-packages</code> command. Here is our <em>final</em> <code>wercker.yml</code> file:</p>
-
-
-
-
-
-
-
-
-<div class="code relative" id="wercker.yml"><div class="filename san-serif f6 dib lh-solid pl2 pv2">wercker.yml</div>
-		<button class="needs-js copy bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-		</button>
-		
-	
-	<div class="code-copy-content nt3" >
-		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">box</span><span class="p">:</span><span class="w"> </span><span class="l">debian</span><span class="w">
-</span><span class="w"></span><span class="nt">build</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">steps</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span>- <span class="nt">arjen/hugo-build</span><span class="p">:</span><span class="w">
-</span><span class="w">        </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;0.17&#34;</span><span class="w">
-</span><span class="w">        </span><span class="nt">theme</span><span class="p">:</span><span class="w"> </span><span class="l">herring-cove</span><span class="w">
-</span><span class="w">        </span><span class="nt">flags</span><span class="p">:</span><span class="w"> </span>--<span class="l">buildDrafts=true</span><span class="w">
-</span><span class="w"></span><span class="nt">deploy</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">steps</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span>- <span class="nt">install-packages</span><span class="p">:</span><span class="w">
-</span><span class="w">        </span><span class="nt">packages</span><span class="p">:</span><span class="w"> </span><span class="l">git ssh-client</span><span class="w">
-</span><span class="w">    </span>- <span class="nt">lukevivier/gh-pages@0.2.1</span><span class="p">:</span><span class="w">
-</span><span class="w">        </span><span class="nt">token</span><span class="p">:</span><span class="w"> </span><span class="l">$GIT_TOKEN</span><span class="w">
-</span><span class="w">        </span><span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="l">hugo-wercker.ig.nore.me</span><span class="w">
-</span><span class="w">        </span><span class="nt">basedir</span><span class="p">:</span><span class="w"> </span><span class="l">public</span></code></pre></div>
-	</div>
-
-</div>
-
-<h3 id="how-does-the-github-pages-configuration-work">How does the GitHub Pages Configuration Work? <a class="header-link" href="#how-does-the-github-pages-configuration-work"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>We&rsquo;ve provided a some important information in our <code>wercker.yml</code>. First, we&rsquo;ve added the domain we want to use for our published website. Configuring the domain here will ensure that GitHub Pages is aware of the domain we want to use.</p>
-<p>Secondly, we&rsquo;ve configured the <code>basedir</code> to <code>public</code>. This is the directory that will be used as the website on GitHub Pages. <code>public</code> is also the default publishing directory in Hugo. (For more information, see <a href="/getting-started/configuration/">hugo&rsquo;s configuration docs</a>).</p>
-<p>Lastly, you&rsquo;ll notice a <code>$GIT_TOKEN</code> variable. This is used for pushing our changes to GitHub. We will need to configure this token before Wercker can build our website.</p>
-<h3 id="set-the-apps-deploy-target">Set the App&rsquo;s Deploy Target <a class="header-link" href="#set-the-apps-deploy-target"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>We can set our deploy target by going to our app&rsquo;s settings and clicking on <strong>Deploy targets</strong>. Now select <strong>Add deploy target</strong> and then <strong>Custom deploy</strong>.</p>
-<p><img src="/images/hosting-and-deployment/deployment-with-wercker/adding-a-github-pages-step.png" alt=""></p>
-<h3 id="configure-the-deploy-step-in-wercker">Configure the Deploy Step in Wercker <a class="header-link" href="#configure-the-deploy-step-in-wercker"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>The next screen requires you fill in the deploy target name.</p>
-<ol>
-<li>Make sure you enable <strong>auto deploy</strong> from the <strong>master</strong> branch.</li>
-<li>Add a variable for the <strong>GIT_TOKEN</strong>. You&rsquo;ll need to create an access token in GitHub. Follow the directions in <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use/">GitHub help</a>.</li>
-<li>With the deploy step configured in Wercker, we can push the updated wercker.yml file to GitHub and it will create the GitHub pages site for us.</li>
-</ol>
-<p>The website described in this guide is available at <a href="http://hugo-wercker.ig.nore.me">http://hugo-wercker.ig.nore.me</a>.</p>
-<p><img src="/images/hosting-and-deployment/deployment-with-wercker/configure-the-deploy-step.png" alt=""></p>
-<h2 id="conclusion">Conclusion <a class="header-link" href="#conclusion"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>Once this workflow is established, you can update your website automatically by pushing any content changes to your GitHub repository.</p>
-<h3 id="code-for-the-wercker-deployment-guide">Code for the Wercker Deployment Guide <a class="header-link" href="#code-for-the-wercker-deployment-guide"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p><a href="https://github.com/ArjenSchwarz/hugo-wercker-example">The source code for the site used in this guide is available on GitHub</a>, as is the <a href="https://github.com/ArjenSchwarz/wercker-step-hugo-build">Wercker Hugo Build step</a>.</p>
-
 </div>
 
           
@@ -622,15 +258,15 @@ git push origin master</code></pre></div>
 <h2>See Also</h2>
 <ul>
 	
-	<li><a href="/hosting-and-deployment/hosting-on-github/">Host on GitHub</a></li>
+	<li><a href="/functions/path.base/">path.Base</a></li>
 	
-	<li><a href="/hosting-and-deployment/hosting-on-gitlab/">Host on GitLab</a></li>
+	<li><a href="/functions/path.dir/">path.Dir</a></li>
 	
-	<li><a href="/hosting-and-deployment/hosting-on-keycdn/">Hosting on KeyCDN</a></li>
+	<li><a href="/functions/path.ext/">path.Ext</a></li>
 	
-	<li><a href="/hosting-and-deployment/deployment-with-nanobox/">Host-Agnostic Deploys with Nanobox</a></li>
+	<li><a href="/functions/path.join/">path.Join</a></li>
 	
-	<li><a href="/variables/git/">Git Info Variables</a></li>
+	<li><a href="/functions/path.split/">path.Split</a></li>
 	
 </ul>
 
@@ -998,8 +634,8 @@ git push origin master</code></pre></div>
       </li>
       
       <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".functions">Functions</a>
-        <ul class="functions desktopmenu animated fadeIn list pl0 bg-light-gray dn">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2  primary-color" data-target=".functions">Functions</a>
+        <ul class="functions desktopmenu animated fadeIn list pl0 bg-light-gray db">
           <li class="f6 fw4">
             <a href="/functions/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Functions Quick Reference
@@ -1348,6 +984,11 @@ git push origin master</code></pre></div>
           <li class="f6 fw4">
             <a href="/functions/path.base/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               path.Base
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/path.clean/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 primary-color ">
+              path.Clean
             </a>
           </li>
           <li class="f6 fw4">
@@ -1857,8 +1498,8 @@ git push origin master</code></pre></div>
       </li>
       
       <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
-        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2  primary-color" data-target=".hosting-and-deployment">Hosting &amp; Deployment</a>
-        <ul class="hosting-and-deployment desktopmenu animated fadeIn list pl0 bg-light-gray db">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".hosting-and-deployment">Hosting &amp; Deployment</a>
+        <ul class="hosting-and-deployment desktopmenu animated fadeIn list pl0 bg-light-gray dn">
           <li class="f6 fw4">
             <a href="/hosting-and-deployment/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Hosting &amp; Deployment Overview
@@ -1915,11 +1556,6 @@ git push origin master</code></pre></div>
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/hosting-and-deployment/deployment-with-wercker/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 primary-color ">
-              Deployment with Wercker
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/hosting-and-deployment/deployment-with-rsync/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Deployment with Rsync
             </a>
@@ -1967,14 +1603,14 @@ git push origin master</code></pre></div>
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f4 dark-gray mb2">
-  <a href="https://gohugo.io/hosting-and-deployment/deployment-with-wercker/" class="hide-child link primary-color">
+  <a href="https://gohugo.io/functions/path.clean/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “Deployment with Wercker”
-  </a> was last updated: October 6, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/279ca7e2ea9fd0fe0449023b5d47862bce6e0564">Merge pull request #81 from blackb1rd/main (279ca7e)</a>
+    “path.Clean”
+  </a> was last updated: November 2, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/0a01ce77daa3cd05a7c00ca2ecbc9e02a77aec53">Merge pull request #82 from blackb1rd/hugo/v0.89.0 (0a01ce7)</a>
 </h6>
 
-      <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/hosting-and-deployment/deployment-with-wercker.md" class="
+      <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/functions/path.Clean.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 ">Improve this page</a>
 

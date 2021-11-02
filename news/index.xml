@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://gohugo.io/news/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hugo 0.88.1: A couple of Bug Fixes</title>
+      <title>0.89.0</title>
+      <link>https://gohugo.io/news/0.89.0-relnotes/</link>
+      <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/news/0.89.0-relnotes/</guid>
+      <description>This release is a dependency refresh (the new Goldmark verion comes with a lot of bug fixes, as one example), many bug fixes, but also some nice new features:
+We have added the configuration settings includeFiles and excludeFiles to the mount configuration. This allows fine grained control over what files to include, and it works for all of Hugo&amp;rsquo;s file systems (including /static).
+We have also reimplemented archetypes. The old implementation had some issues, mostly related to the context (e.</description>
+    </item>
+    
+    <item>
+      <title>Hugo 0.88.1: One Fix</title>
       <link>https://gohugo.io/news/0.88.1-relnotes/</link>
       <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
       
@@ -17,21 +28,22 @@
     </item>
     
     <item>
-      <title>0.88.0</title>
+      <title>Go 1.17 Update</title>
       <link>https://gohugo.io/news/0.88.0-relnotes/</link>
       <pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/news/0.88.0-relnotes/</guid>
-      <description>The most important piece in this release is the Go 1.17 update. This release is built with that new Go version, but also and more importantly, the Hugo Modules logic has been updated to support Go&#39;s new way of (lazy) loading transitive dependencies. If you already have Go 1.17 installed, building existing Hugo Modules backed projects have not been an issue, but `hugo mod init` for a new project could give you _too new_ versions of transitive dependencies.</description>
+      <description>The most important piece in this release is the Go 1.17 update. This release is built with that new Go version, but also and more importantly, the Hugo Modules logic has been updated to support Go&amp;rsquo;s new way of (lazy) loading transitive dependencies. If you already have Go 1.17 installed, building existing Hugo Modules backed projects have not been an issue, but hugo mod init for a new project could give you too new versions of transitive dependencies.</description>
     </item>
     
     <item>
-      <title>0.87.0</title>
+      <title>Localized Time and Dates and Numbers</title>
       <link>https://gohugo.io/news/0.87.0-relnotes/</link>
       <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/news/0.87.0-relnotes/</guid>
-      <description>Hugo `0.87` brings two long sought-after features: Default time zone support (per language if needed) for dates without zone offset or location info, and localized time and dates and numbers (backed by [CLDR](https://en.wikipedia.org/wiki/Common_Locale_Data_Repository)).  For more information, see:
+      <description>Hugo 0.87 brings two long sought-after features: Default time zone support (per language if needed) for dates without zone offset or location info, and localized time and dates and numbers (backed by CLDR).
+For more information, see:
  The time zone config documentation. The time.Format documentation. This function will now give you localized dates (with weekdays and months in the current language). It supports all of Go&amp;rsquo;s layout syntax, but also some predefined constants, e.</description>
     </item>
     
@@ -1404,18 +1416,6 @@ This release represents 37 contributions by 9 contributors to the main Hugo code
       <guid>https://gohugo.io/news/0.26-relnotes/</guid>
       <description>This release brings a choice of AP Style or Chicago Style Title Case (8fb594bf #989). You can also now configure Blackfriday to render « French Guillemets » (cb9dfc26 #3725). To enable French Guillemets:
 config.  yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  blackfriday:angledQuotes:truesmartypantsQuotesNBSP:true   [blackfriday] angledQuotes = true smartypantsQuotesNBSP = true    { &amp;#34;blackfriday&amp;#34;: { &amp;#34;angledQuotes&amp;#34;: true, &amp;#34;smartypantsQuotesNBSP&amp;#34;: true } }      Oh, and this release also fixes it so you should see no ugly long crashes no more when you step wrong in your templates (794ea21e).</description>
-    </item>
-    
-    <item>
-      <title>HTTP/2 Server Push in Hugo</title>
-      <link>https://gohugo.io/news/http2-server-push-in-hugo/</link>
-      <pubDate>Mon, 24 Jul 2017 18:36:00 +0200</pubDate>
-      
-      <guid>https://gohugo.io/news/http2-server-push-in-hugo/</guid>
-      <description>Netlify recently announced support for HTTP/2 server push, and we have now added it to the gohugo.io sites for the main CSS and JS bundles, along with server-side 301 redirect support.
-If you navigate to https://gohugo.io and look in the Chrome developer network console, you should now see Push as the new source (&amp;ldquo;Initiator&amp;rdquo;) for the CSS and JSS:
- Network log for https://gohugo.io
-  Setting up this in Hugo was easy:</description>
     </item>
     
     <item>

@@ -16,7 +16,107 @@
     
     
     <item>
-      <title>News: Hugo 0.88.1: A couple of Bug Fixes</title>
+      <title>News: 0.89.0</title>
+      <link>https://gohugo.io/news/0.89.0-relnotes/</link>
+      <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/news/0.89.0-relnotes/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This release is a dependency refresh (the new Goldmark verion comes with a lot of bug fixes, as one example), many bug fixes, but also some nice new features:&lt;/p&gt;
+&lt;p&gt;We have added the &lt;a href=&#34;https://gohugo.io/hugo-modules/configuration/#module-config-mounts&#34;&gt;configuration settings&lt;/a&gt; &lt;strong&gt;includeFiles&lt;/strong&gt; and &lt;strong&gt;excludeFiles&lt;/strong&gt; to the mount configuration. This allows fine grained control over what files to include, and it works for all of Hugo&amp;rsquo;s file systems (including &lt;code&gt;/static&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;We have also &lt;a href=&#34;https://github.com/gohugoio/hugo/pull/9045&#34;&gt;reimplemented archetypes&lt;/a&gt;. The old implementation had some issues, mostly related to the context (e.g. name, file paths) passed to the template. This new implementation is using the exact same code path for evaluating the pages as in a regular build. This also makes it more robust and easier to reason about in a multilingual setup. Now, if you are explicit about the target path, Hugo will now always pick the correct mount and language:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo new content/en/posts/my-first-post.md
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This release represents &lt;strong&gt;50 contributions by 13 contributors&lt;/strong&gt; to the main Hugo code base.&lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; leads the Hugo development with a significant amount of contributions, but also a big shoutout to &lt;a href=&#34;https://github.com/apps/dependabot&#34;&gt;@dependabot[bot]&lt;/a&gt;, &lt;a href=&#34;https://github.com/jmooring&#34;&gt;@jmooring&lt;/a&gt;, and &lt;a href=&#34;https://github.com/anthonyfok&#34;&gt;@anthonyfok&lt;/a&gt; for their ongoing contributions.
+And thanks to &lt;a href=&#34;https://github.com/digitalcraftsman&#34;&gt;@digitalcraftsman&lt;/a&gt; for his ongoing work on keeping the themes site in pristine condition.&lt;/p&gt;
+&lt;p&gt;Many have also been busy writing and fixing the documentation in &lt;a href=&#34;https://github.com/gohugoio/hugoDocs&#34;&gt;hugoDocs&lt;/a&gt;,
+which has received &lt;strong&gt;23 contributions by 9 contributors&lt;/strong&gt;. A special thanks to &lt;a href=&#34;https://github.com/jmooring&#34;&gt;@jmooring&lt;/a&gt;, &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;, &lt;a href=&#34;https://github.com/coliff&#34;&gt;@coliff&lt;/a&gt;, and &lt;a href=&#34;https://github.com/vipkr&#34;&gt;@vipkr&lt;/a&gt; for their work on the documentation site.&lt;/p&gt;
+&lt;p&gt;Hugo now has:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;54999+ &lt;a href=&#34;https://github.com/gohugoio/hugo/stargazers&#34;&gt;stars&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;430+ &lt;a href=&#34;https://github.com/gohugoio/hugo/graphs/contributors&#34;&gt;contributors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;413+ &lt;a href=&#34;http://themes.gohugo.io/&#34;&gt;themes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;notes&#34;&gt;Notes &lt;a class=&#34;header-link&#34; href=&#34;#notes&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Hugo now writes an empty file named &lt;code&gt;.hugo_build.lock&lt;/code&gt; to the root of the project when building (also when doing &lt;code&gt;hugo new mypost.md&lt;/code&gt; and other commands that requires a build). We recommend you just leave this file alone. Put it in &lt;code&gt;.gitignore&lt;/code&gt; or similar if you don&amp;rsquo;t want the file in your source repository.&lt;/li&gt;
+&lt;li&gt;We have updated to ESBuild &lt;code&gt;v0.13.12&lt;/code&gt;. The release notes for &lt;a href=&#34;https://github.com/evanw/esbuild/releases/tag/v0.13.0&#34;&gt;v0.13.0&lt;/a&gt; mentions a potential breaking change.&lt;/li&gt;
+&lt;li&gt;We now only build AMD64 release binaries (see &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9102&#34;&gt;this issue&lt;/a&gt;) for the Unix OSes (e.g. NetBSD). If need, say, a binary for ARM64, you need to build it yourself.&lt;/li&gt;
+&lt;li&gt;We now build only one release binary/archive for MacOS, see &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9035&#34;&gt;this issue&lt;/a&gt; that works on both Intel and the new Arm M1 systems.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.File.ContentBaseName&lt;/code&gt; now returns the owning directory name for all bundles (branch an leaf). This is a bug fix, but worth mentioning. See &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9112&#34;&gt;this issue&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;We have updated the Twitter shortcode to use Twitter&amp;rsquo;s new API. See [thiss issue] for details.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;enhancements&#34;&gt;Enhancements &lt;a class=&#34;header-link&#34; href=&#34;#enhancements&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;templates&#34;&gt;Templates &lt;a class=&#34;header-link&#34; href=&#34;#templates&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Use configured location when date passed to Format is string &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/e82cbd746fd4b07e40fedacc4247b9cd50ef70e7&#34;&gt;e82cbd74&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9084&#34;&gt;#9084&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add path.Clean &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/e55466ce70363418309d465a0f2aa6c7ada1e51d&#34;&gt;e55466ce&lt;/a&gt; &lt;a href=&#34;https://github.com/bradcypert&#34;&gt;@bradcypert&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/8885&#34;&gt;#8885&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;other&#34;&gt;Other &lt;a class=&#34;header-link&#34; href=&#34;#other&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Regen CLI docs &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/f503b6395707f8e576af734efab83092d62fae37&#34;&gt;f503b639&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Make ContentBaseName() return the directory for branch bundles &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/30aba7fb099678363b0a4828936ed28e740e00e2&#34;&gt;30aba7fb&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9112&#34;&gt;#9112&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Update Twitter shortcode oEmbed endpoint &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/0cc39af68232f1a4981aae2e72cf65da762b5768&#34;&gt;0cc39af6&lt;/a&gt; &lt;a href=&#34;https://github.com/jmooring&#34;&gt;@jmooring&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/8130&#34;&gt;#8130&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;bump github.com/evanw/esbuild from 0.13.10 to 0.13.12 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/7fa66425aa0a918b4bf5eb9a21f6e567e0a7e876&#34;&gt;7fa66425&lt;/a&gt; &lt;a href=&#34;https://github.com/apps/dependabot&#34;&gt;@dependabot[bot]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;bump github.com/yuin/goldmark from 1.4.1 to 1.4.2 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/69210cfdf341d1faef23f4e9290d51448dd5e0c6&#34;&gt;69210cfd&lt;/a&gt; &lt;a href=&#34;https://github.com/apps/dependabot&#34;&gt;@dependabot[bot]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;bump github.com/aws/aws-sdk-go from 1.40.8 to 1.41.14 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/3339c2bb618c29bb3ad442c71fe1542ad7195971&#34;&gt;3339c2bb&lt;/a&gt; &lt;a href=&#34;https://github.com/apps/dependabot&#34;&gt;@dependabot[bot]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;bump github.com/getkin/kin-openapi from 0.79.0 to 0.80.0 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/03bbdba8be19929cb6a14243b690372fbfbc6aa6&#34;&gt;03bbdba8&lt;/a&gt; &lt;a href=&#34;https://github.com/apps/dependabot&#34;&gt;@dependabot[bot]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;bump github.com/evanw/esbuild from 0.13.8 to 0.13.10 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/a772b8fc3833e010553c412dd5daa0175e6ccead&#34;&gt;a772b8fc&lt;/a&gt; &lt;a href=&#34;https://github.com/apps/dependabot&#34;&gt;@dependabot[bot]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Rename excepted filenames for image golden testdata &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/dce49d13336f3dbadaa1359322a277ad4cb55679&#34;&gt;dce49d13&lt;/a&gt; &lt;a href=&#34;https://github.com/anthonyfok&#34;&gt;@anthonyfok&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/6387&#34;&gt;#6387&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;bump github.com/frankban/quicktest from 1.13.1 to 1.14.0 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/61c5b7a2e623255be99da7adf200f0591c9a1195&#34;&gt;61c5b7a2&lt;/a&gt; &lt;a href=&#34;https://github.com/apps/dependabot&#34;&gt;@dependabot[bot]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Validate the target path in hugo new &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/75c9b893d98961a504cff9ed3c89055d16e315d6&#34;&gt;75c9b893&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9072&#34;&gt;#9072&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Set zone of datetime from from &lt;code&gt;go-toml&lt;/code&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/b959ecbc8175e2bf260f10b08965531bce9bcb7e&#34;&gt;b959ecbc&lt;/a&gt; &lt;a href=&#34;https://github.com/satotake&#34;&gt;@satotake&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/8895&#34;&gt;#8895&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Added nodesource apt repository to snap package &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/70e454812ef684d02ffa881becf0f8ce6a1b5f8c&#34;&gt;70e45481&lt;/a&gt; &lt;a href=&#34;https://github.com/sergiogarciadev&#34;&gt;@sergiogarciadev&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Set HUGO_ENABLEGITINFO=false override in Set_in_string &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/355ff83e74f6e27c79033b8dfb899e3a3b529049&#34;&gt;355ff83e&lt;/a&gt; &lt;a href=&#34;https://github.com/anthonyfok&#34;&gt;@anthonyfok&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add includeFiles and excludeFiles to mount configuration &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/471ed91c60cd36645794925cb4892cc820eae626&#34;&gt;471ed91c&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9042&#34;&gt;#9042&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;bump github.com/mitchellh/mapstructure from 1.4.1 to 1.4.2 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/94a5bac5b29bbba1ca4809752fe3fd04a58547b6&#34;&gt;94a5bac5&lt;/a&gt; &lt;a href=&#34;https://github.com/apps/dependabot&#34;&gt;@dependabot[bot]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Always preserve the original transform error &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/9830ca9e319f6ce313f4e542a202bd0d0469a9ed&#34;&gt;9830ca9e&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add hyperlink to the banner &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/b64fd0577b0fb222bea22ae347acb5dd17b2aa04&#34;&gt;b64fd057&lt;/a&gt; &lt;a href=&#34;https://github.com/itsAftabAlam&#34;&gt;@itsAftabAlam&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;bump github.com/getkin/kin-openapi from 0.78.0 to 0.79.0 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/2706437a7d593b66b0fbad0235dbaf917593971b&#34;&gt;2706437a&lt;/a&gt; &lt;a href=&#34;https://github.com/apps/dependabot&#34;&gt;@dependabot[bot]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;github.com/evanw/esbuild v0.13.5 =&amp;gt; v0.13.8 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/ec7c993cfe216b8a3c6fbac85669cefef59778dd&#34;&gt;ec7c993c&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Return error on no content dirs &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/32c6f656d93ecf4308f7c30848b13b4c6f157436&#34;&gt;32c6f656&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9056&#34;&gt;#9056&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add a cross process build lock and use it in the archetype content builder &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/ba35e69856900b6fc92681aa841cdcaefbb4b121&#34;&gt;ba35e698&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9048&#34;&gt;#9048&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;github.com/alecthomas/chroma v0.9.2 =&amp;gt; v0.9.4 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/bb053770337e214f41bc1c524d458ba7fbe1fc08&#34;&gt;bb053770&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/8532&#34;&gt;#8532&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Reimplement archetypes &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/9185e11effa682ea1ef7dc98f2943743671023a6&#34;&gt;9185e11e&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9032&#34;&gt;#9032&lt;/a&gt;&lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7589&#34;&gt;#7589&lt;/a&gt;&lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9043&#34;&gt;#9043&lt;/a&gt;&lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9046&#34;&gt;#9046&lt;/a&gt;&lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9047&#34;&gt;#9047&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;bump github.com/tdewolff/minify/v2 from 2.9.21 to 2.9.22 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/168a3aab4622786ccd0943137fce3912707f2a46&#34;&gt;168a3aab&lt;/a&gt; &lt;a href=&#34;https://github.com/apps/dependabot&#34;&gt;@dependabot[bot]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Update github.com/evanw/esbuild v0.13.5 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/8bcfa3bdf65492329da8093d841dd04c7a5a10c8&#34;&gt;8bcfa3bd&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;bump github.com/mattn/go-isatty from 0.0.13 to 0.0.14 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/cd4e67af182a1b3aa19db7609c7581c424e9310f&#34;&gt;cd4e67af&lt;/a&gt; &lt;a href=&#34;https://github.com/apps/dependabot&#34;&gt;@dependabot[bot]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;bump github.com/getkin/kin-openapi from 0.75.0 to 0.78.0 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/e6ad1f0e763ee891bf4d71df0168b6949369c793&#34;&gt;e6ad1f0e&lt;/a&gt; &lt;a href=&#34;https://github.com/apps/dependabot&#34;&gt;@dependabot[bot]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Allow multiple plugins in the PostCSS options map &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/64abc83fc4b70c70458c582ae2cf67fc9c67bb3f&#34;&gt;64abc83f&lt;/a&gt; &lt;a href=&#34;https://github.com/jmooring&#34;&gt;@jmooring&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9015&#34;&gt;#9015&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Create path.Clean documentation &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/f8d132d731cf8e27c8c17931597fd975e8a7c3cc&#34;&gt;f8d132d7&lt;/a&gt; &lt;a href=&#34;https://github.com/jmooring&#34;&gt;@jmooring&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Skip a test assertion on CI &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/26f1919ae0cf57d754bb029270c20e76cc32cf4d&#34;&gt;26f1919a&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove tracking image &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/ecf025f006f22061728e78f2cf50257dde2225ee&#34;&gt;ecf025f0&lt;/a&gt; &lt;a href=&#34;https://github.com/kambojshalabh35&#34;&gt;@kambojshalabh35&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Revert &amp;ldquo;Remove credit from release notes&amp;rdquo; &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/fab1e43de59f3a7596ab23347387d846139bc3a3&#34;&gt;fab1e43d&lt;/a&gt; &lt;a href=&#34;https://github.com/digitalcraftsman&#34;&gt;@digitalcraftsman&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pass minification errors to the user &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/e03f82eef2679ec8963894d0b911363eef40941a&#34;&gt;e03f82ee&lt;/a&gt; &lt;a href=&#34;https://github.com/ptgott&#34;&gt;@ptgott&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/8954&#34;&gt;#8954&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Clarify &amp;ldquo;precision&amp;rdquo; in currency format functions &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/a864ffe9acf295034bb38e789a0efa62906b2ae4&#34;&gt;a864ffe9&lt;/a&gt; &lt;a href=&#34;https://github.com/ptgott&#34;&gt;@ptgott&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;bump github.com/evanw/esbuild from 0.12.24 to 0.12.29 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/b49da33280cb01795ce833e70c2b7b78cca1867e&#34;&gt;b49da332&lt;/a&gt; &lt;a href=&#34;https://github.com/apps/dependabot&#34;&gt;@dependabot[bot]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use default math/rand.Source for concurrency safety &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/7c21eca74f95b61d6813d0c0b155bf07c9aa8575&#34;&gt;7c21eca7&lt;/a&gt; &lt;a href=&#34;https://github.com/odeke-em&#34;&gt;@odeke-em&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/8981&#34;&gt;#8981&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Make the error handling for the mod commands more lenient &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/13ad8408fc6b645b12898fb8053388fc4848dfbd&#34;&gt;13ad8408&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add some help text to the &amp;lsquo;unknown revision&amp;rsquo; error &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/1cabf61ddf96b89c95c3ba77a985168184920feb&#34;&gt;1cabf61d&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/6825&#34;&gt;#6825&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Update github.com/yuin/goldmark v1.4.0 =&amp;gt; v1.4.1 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/268e3069f37df01a5a58b615844652fb75b8503a&#34;&gt;268e3069&lt;/a&gt; &lt;a href=&#34;https://github.com/jmooring&#34;&gt;@jmooring&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/8855&#34;&gt;#8855&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;fixes&#34;&gt;Fixes &lt;a class=&#34;header-link&#34; href=&#34;#fixes&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;templates-1&#34;&gt;Templates &lt;a class=&#34;header-link&#34; href=&#34;#templates-1&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix time.Format with Go layouts &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/ed6fd26ce884c49b02497728a99e90b92dd65f1f&#34;&gt;ed6fd26c&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9107&#34;&gt;#9107&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;other-1&#34;&gt;Other &lt;a class=&#34;header-link&#34; href=&#34;#other-1&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix description of lang.FormatNumberCustom &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/04a3b45db4cd28b4821b5c98cd67dfbf1d098957&#34;&gt;04a3b45d&lt;/a&gt; &lt;a href=&#34;https://github.com/jmooring&#34;&gt;@jmooring&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix typo in error message &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/1d60bd1efa943349636edad3dd8c5427312ab0f1&#34;&gt;1d60bd1e&lt;/a&gt; &lt;a href=&#34;https://github.com/jmooring&#34;&gt;@jmooring&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix panic when specifying multiple excludeFiles directives &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/64e1613fb390bd893900dc0596e5c3f3c8e1cd8c&#34;&gt;64e1613f&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9076&#34;&gt;#9076&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix file permissions in new archetype implementation &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/e02e0727e57f123f9a8de506e9c098bb374f7a23&#34;&gt;e02e0727&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9057&#34;&gt;#9057&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix the &amp;ldquo;page picker&amp;rdquo; logic in &amp;ndash;navigateToChanged &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/096f5e19217e985bccbf6c539e1b220541ffa6f6&#34;&gt;096f5e19&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9051&#34;&gt;#9051&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix a typo on OpenBSD &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/c7957c90e83ff2b2cc958bd61486a244f0fd8891&#34;&gt;c7957c90&lt;/a&gt; &lt;a href=&#34;https://github.com/nabbisen&#34;&gt;@nabbisen&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix value of useResourceCacheWhen in TestResourceChainPostCSS &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/e6e44b7c41a9b517ffc3775ea0a6aec2b1d4591b&#34;&gt;e6e44b7c&lt;/a&gt; &lt;a href=&#34;https://github.com/jmooring&#34;&gt;@jmooring&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>News: Hugo 0.88.1: One Fix</title>
       <link>https://gohugo.io/news/0.88.1-relnotes/</link>
       <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
       
@@ -33,7 +133,7 @@
     </item>
     
     <item>
-      <title>News: 0.88.0</title>
+      <title>News: Go 1.17 Update</title>
       <link>https://gohugo.io/news/0.88.0-relnotes/</link>
       <pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate>
       
@@ -41,8 +141,10 @@
       <description>
         
         
-        &lt;pre&gt;&lt;code&gt;The most important piece in this release is the Go 1.17 update. This release is built with that new Go version, but also and more importantly, the Hugo Modules logic has been updated to support Go&#39;s new way of (lazy) loading transitive dependencies. If you already have Go 1.17 installed, building existing Hugo Modules backed projects have not been an issue, but `hugo mod init` for a new project could give you _too new_ versions of transitive dependencies. Hugo 0.88 fixes this.
-&lt;/code&gt;&lt;/pre&gt;
+        
+        <![CDATA[<img src="https://gohugo.io/news/0.88.0-relnotes/featured_hubd2e74572b88af11154b43148569d005_87331_640x0_resize_catmullrom_3.png" width="640" height="320"/>]]>
+        
+        &lt;p&gt;The most important piece in this release is the Go 1.17 update. This release is built with that new Go version, but also and more importantly, the Hugo Modules logic has been updated to support Go&amp;rsquo;s new way of (lazy) loading transitive dependencies. If you already have Go 1.17 installed, building existing Hugo Modules backed projects have not been an issue, but &lt;code&gt;hugo mod init&lt;/code&gt; for a new project could give you &lt;em&gt;too new&lt;/em&gt; versions of transitive dependencies. Hugo 0.88 fixes this.&lt;/p&gt;
 &lt;p&gt;This release represents &lt;strong&gt;26 contributions by 6 contributors&lt;/strong&gt; to the main Hugo code base.&lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; leads the Hugo development with a significant amount of contributions, but also a big shoutout to &lt;a href=&#34;https://github.com/apps/dependabot&#34;&gt;@dependabot[bot]&lt;/a&gt;, &lt;a href=&#34;https://github.com/helfper&#34;&gt;@helfper&lt;/a&gt;, and &lt;a href=&#34;https://github.com/wzshiming&#34;&gt;@wzshiming&lt;/a&gt; for their ongoing contributions.&lt;/p&gt;
 &lt;p&gt;Many have also been busy writing and fixing the documentation in &lt;a href=&#34;https://github.com/gohugoio/hugoDocs&#34;&gt;hugoDocs&lt;/a&gt;,
 which has received &lt;strong&gt;9 contributions by 6 contributors&lt;/strong&gt;. A special thanks to &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;, &lt;a href=&#34;https://github.com/jmooring&#34;&gt;@jmooring&lt;/a&gt;, &lt;a href=&#34;https://github.com/StevenMaude&#34;&gt;@StevenMaude&lt;/a&gt;, and &lt;a href=&#34;https://github.com/coliff&#34;&gt;@coliff&lt;/a&gt; for their work on the documentation site.&lt;/p&gt;
@@ -59,7 +161,7 @@ which has received &lt;strong&gt;9 contributions by 6 contributors&lt;/strong&gt
 &lt;h2 id=&#34;enhancements&#34;&gt;Enhancements &lt;a class=&#34;header-link&#34; href=&#34;#enhancements&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;templates&#34;&gt;Templates &lt;a class=&#34;header-link&#34; href=&#34;#templates&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Handle nil values in time.AsTime&amp;quot; &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/abd969a670852f9ed57c1a26434445aa985706fe&#34;&gt;abd969a6&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Handle nil values in time.AsTime &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/abd969a670852f9ed57c1a26434445aa985706fe&#34;&gt;abd969a6&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Handle nil values in time.AsTime &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/3e11072892ca31bb76980ee38890a4bd92d83dfd&#34;&gt;3e110728&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/8865&#34;&gt;#8865&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;other&#34;&gt;Other &lt;a class=&#34;header-link&#34; href=&#34;#other&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
@@ -72,13 +174,13 @@ which has received &lt;strong&gt;9 contributions by 6 contributors&lt;/strong&gt
 &lt;li&gt;Avoid failing with &amp;ldquo;module not found&amp;rdquo; for hugo mod init and similar &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/a0489c2dfd3ceb4d0702de0da7a4af3eabce05e5&#34;&gt;a0489c2d&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/8940&#34;&gt;#8940&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Update to Go 1.17 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/0fc2ce9e4bf0524994a861b7300e4332f6f8d390&#34;&gt;0fc2ce9e&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/8930&#34;&gt;#8930&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Remove Pygments from snapcraft.yml &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/32569285c181c8798ef594c12d3cfd7f9a252a04&#34;&gt;32569285&lt;/a&gt; &lt;a href=&#34;https://github.com/anthonyfok&#34;&gt;@anthonyfok&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;bump github.com/fsnotify/fsnotify from 1.4.9 to 1.5.0&amp;quot; &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/5a46eefbc6da3463b796ada8d15902be197455a3&#34;&gt;5a46eefb&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/8920&#34;&gt;#8920&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;bump github.com/fsnotify/fsnotify from 1.4.9 to 1.5.0 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/5a46eefbc6da3463b796ada8d15902be197455a3&#34;&gt;5a46eefb&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/8920&#34;&gt;#8920&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Add tabindex when code is not highlighted &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/7a15edafe240471c072d3548b72ccda0271ffd8f&#34;&gt;7a15edaf&lt;/a&gt; &lt;a href=&#34;https://github.com/helfper&#34;&gt;@helfper&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;bump github.com/evanw/esbuild from 0.12.17 to 0.12.22 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/2f0945bafe501103abe97b2f2b5566b28ec48e52&#34;&gt;2f0945ba&lt;/a&gt; &lt;a href=&#34;https://github.com/apps/dependabot&#34;&gt;@dependabot[bot]&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;bump golang.org/x/text from 0.3.6 to 0.3.7 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/7ba3f3d201e386cb9c7c15df5a6cc1c4b46473bd&#34;&gt;7ba3f3d2&lt;/a&gt; &lt;a href=&#34;https://github.com/apps/dependabot&#34;&gt;@dependabot[bot]&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;bump github.com/fsnotify/fsnotify from 1.4.9 to 1.5.0 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/f70165242b98e3ee182fbac08bf2893a7f09e961&#34;&gt;f7016524&lt;/a&gt; &lt;a href=&#34;https://github.com/apps/dependabot&#34;&gt;@dependabot[bot]&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Prevent minifier from removing quoutes around post-processed attributes &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/bc0743ed8eafc3c2d9b21a1e8f1b05d64b85e8ba&#34;&gt;bc0743ed&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/8884&#34;&gt;#8884&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Avoid too many watch file handles causing the server to fail to start&amp;quot; &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/ffa2fe61172aa0d892234b23d1497c77a6a7f5c4&#34;&gt;ffa2fe61&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Prevent minifier from removing quotes around post-processed attributes &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/bc0743ed8eafc3c2d9b21a1e8f1b05d64b85e8ba&#34;&gt;bc0743ed&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/8884&#34;&gt;#8884&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Avoid too many watch file handles causing the server to fail to start &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/ffa2fe61172aa0d892234b23d1497c77a6a7f5c4&#34;&gt;ffa2fe61&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Remove some pygments references &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/d966f5d08d7f75f1ae9acd94e292bf61de2adf0d&#34;&gt;d966f5d0&lt;/a&gt; &lt;a href=&#34;https://github.com/helfper&#34;&gt;@helfper&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Avoid too many watch file handles causing the server to fail to start &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/3f38c785b7208440e2a9dd9a80cb39d4ae23e676&#34;&gt;3f38c785&lt;/a&gt; &lt;a href=&#34;https://github.com/wzshiming&#34;&gt;@wzshiming&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/8904&#34;&gt;#8904&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;bump github.com/getkin/kin-openapi from 0.68.0 to 0.74.0 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/24589c0814bc5d21565470bec6215ee792f1655e&#34;&gt;24589c08&lt;/a&gt; &lt;a href=&#34;https://github.com/apps/dependabot&#34;&gt;@dependabot[bot]&lt;/a&gt;&lt;/li&gt;
@@ -98,7 +200,7 @@ which has received &lt;strong&gt;9 contributions by 6 contributors&lt;/strong&gt
     </item>
     
     <item>
-      <title>News: 0.87.0</title>
+      <title>News: Localized Time and Dates and Numbers</title>
       <link>https://gohugo.io/news/0.87.0-relnotes/</link>
       <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
       
@@ -106,13 +208,15 @@ which has received &lt;strong&gt;9 contributions by 6 contributors&lt;/strong&gt
       <description>
         
         
-        &lt;pre&gt;&lt;code&gt;Hugo `0.87` brings two long sought-after features: Default time zone support (per language if needed) for dates without zone offset or location info, and localized time and dates and numbers (backed by [CLDR](https://en.wikipedia.org/wiki/Common_Locale_Data_Repository)).
-&lt;/code&gt;&lt;/pre&gt;
+        
+        <![CDATA[<img src="https://gohugo.io/news/0.87.0-relnotes/featured_hud7315cc4b84c00922361254b17154b9c_104936_640x0_resize_catmullrom_3.png" width="640" height="320"/>]]>
+        
+        &lt;p&gt;Hugo &lt;code&gt;0.87&lt;/code&gt; brings two long sought-after features: Default time zone support (per language if needed) for dates without zone offset or location info, and localized time and dates and numbers (backed by &lt;a href=&#34;https://en.wikipedia.org/wiki/Common_Locale_Data_Repository&#34;&gt;CLDR&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;For more information, see:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The &lt;a href=&#34;https://gohugo.io/getting-started/configuration/#timezone&#34;&gt;time zone config&lt;/a&gt; documentation.&lt;/li&gt;
 &lt;li&gt;The &lt;a href=&#34;https://gohugo.io/functions/dateformat/&#34;&gt;time.Format&lt;/a&gt; documentation. This function will now give you localized dates (with weekdays and months in the current language). It supports all of Go&amp;rsquo;s layout syntax, but also some predefined constants, e.g. &lt;code&gt;{{ .Date | time.Format &amp;quot;:date_long&amp;quot; }}&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;A set of new &lt;a href=&#34;https://gohugo.io/functions/lang/&#34;&gt;localized number formatting &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A set of new &lt;a href=&#34;https://gohugo.io/functions/lang/&#34;&gt;localized number formatting &lt;/a&gt; functions.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Also in this release, we have switched to using &lt;a href=&#34;https://github.com/pelletier/go-toml&#34;&gt;go-toml&lt;/a&gt; for all things TOML in Hugo. A big thanks to &lt;a href=&#34;https://github.com/pelletier&#34;&gt;@pelletier&lt;/a&gt; for his work on the &lt;code&gt;v2&lt;/code&gt; version. It&amp;rsquo;s both faster than what we had and &lt;a href=&#34;https://toml.io/en/v1.0.0&#34;&gt;TOML v1.0.0&lt;/a&gt; compliant.&lt;/p&gt;
 &lt;p&gt;This release represents &lt;strong&gt;40 contributions by 4 contributors&lt;/strong&gt; to the main Hugo code base.&lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; leads the Hugo development with a significant amount of contributions, but also a big shoutout to &lt;a href=&#34;https://github.com/apps/dependabot&#34;&gt;@dependabot[bot]&lt;/a&gt;, &lt;a href=&#34;https://github.com/digitalcraftsman&#34;&gt;@digitalcraftsman&lt;/a&gt;, and &lt;a href=&#34;https://github.com/jmooring&#34;&gt;@jmooring&lt;/a&gt; for their ongoing contributions.&lt;/p&gt;
@@ -11575,23 +11679,6 @@ which has received &lt;strong&gt;14 contributions by 7 contributors&lt;/strong&g
         &lt;p&gt;This is a bug-fix release with one important fix.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Fix cache reset for a page&amp;rsquo;s collections on server live reload &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/cfa73050a49b2646fe3557cefa0ed31989b0eeeb&#34;&gt;cfa73050&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7085&#34;&gt;#7085&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>News: Hugo 0.68.1: 1 bug fix</title>
-      <link>https://gohugo.io/news/0.68.1-relnotes/</link>
-      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://gohugo.io/news/0.68.1-relnotes/</guid>
-      <description>
-        
-        
-        &lt;p&gt;This is a bug-fix release with one important fix.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Revert &amp;ldquo;resources: Add data context to the key in ExecuteAsTemplate&amp;rdquo; &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/c9dc316ad160e78c9dff4e75313db4cac8ea6414&#34;&gt;c9dc316a&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7064&#34;&gt;#7064&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>

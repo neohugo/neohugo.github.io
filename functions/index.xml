@@ -8,6 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 01 Feb 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://gohugo.io/functions/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>path.Clean</title>
+      <link>https://gohugo.io/functions/path.clean/</link>
+      <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/functions/path.clean/</guid>
+      <description>path.Clean replaces path separators with slashes (/) and removes extraneous separators, including trailing separators.
+{{ path.Clean &amp;quot;foo//bar&amp;quot; }} → &amp;quot;foo/bar&amp;quot; {{ path.Clean &amp;quot;/foo/bar/&amp;quot; }} → &amp;quot;/foo/bar&amp;quot; On a Windows system, if .File.Path is foo\bar.md, then:
+{{ path.Clean .File.Path }} → &amp;quot;foo/bar.md&amp;quot; </description>
+    </item>
+    
+    <item>
       <title>lang</title>
       <link>https://gohugo.io/functions/lang/</link>
       <pubDate>Wed, 28 Jul 2021 00:00:00 +0000</pubDate>
@@ -766,7 +777,8 @@ In addition, in can also check if a substring exists in a string.
       <guid>https://gohugo.io/functions/index-function/</guid>
       <description>The index functions returns the result of indexing its first argument by the following arguments. Each indexed item must be a map or a slice, e.g.:
 {{$slice:=slice&amp;#34;a&amp;#34;&amp;#34;b&amp;#34;&amp;#34;c&amp;#34;}}{{index$slice1}}=&amp;gt; b {{$map:=dict&amp;#34;a&amp;#34;100&amp;#34;b&amp;#34;200}}{{index$map&amp;#34;b&amp;#34;}}=&amp;gt; 200 The function takes multiple indices as arguments, and this can be used to get nested values, e.g.:
-{{$map:=dict&amp;#34;a&amp;#34;100&amp;#34;b&amp;#34;200&amp;#34;c&amp;#34;(slice102030)}}{{index$map&amp;#34;c&amp;#34;1}}=&amp;gt; 20 {{$map:=dict&amp;#34;a&amp;#34;100&amp;#34;b&amp;#34;200&amp;#34;c&amp;#34;(dict&amp;#34;d&amp;#34;10&amp;#34;e&amp;#34;20)}}{{index$map&amp;#34;c&amp;#34;&amp;#34;e&amp;#34;}}=&amp;gt; 20 Example: Load Data from a Path Based on Front Matter Params  Assume you want to add a location = &amp;quot;&amp;quot; field to your front matter for every article written in content/vacations/.</description>
+{{$map:=dict&amp;#34;a&amp;#34;100&amp;#34;b&amp;#34;200&amp;#34;c&amp;#34;(slice102030)}}{{index$map&amp;#34;c&amp;#34;1}}=&amp;gt; 20 {{$map:=dict&amp;#34;a&amp;#34;100&amp;#34;b&amp;#34;200&amp;#34;c&amp;#34;(dict&amp;#34;d&amp;#34;10&amp;#34;e&amp;#34;20)}}{{index$map&amp;#34;c&amp;#34;&amp;#34;e&amp;#34;}}=&amp;gt; 20 You may write multiple indices as a slice:
+{{$map:=dict&amp;#34;a&amp;#34;100&amp;#34;b&amp;#34;200&amp;#34;c&amp;#34;(dict&amp;#34;d&amp;#34;10&amp;#34;e&amp;#34;20)}}{{$slice:=slice&amp;#34;c&amp;#34;&amp;#34;e&amp;#34;}}{{index$map$slice}}=&amp;gt; 20 Example: Load Data from a Path Based on Front Matter Params  Assume you want to add a location = &amp;quot;&amp;quot; field to your front matter for every article written in content/vacations/.</description>
     </item>
     
     <item>
@@ -1209,7 +1221,7 @@ slice.html  {{delimit(slice&amp;#34;foo&amp;#34;&amp;#34;bar&amp;#34;&amp;#34;bu
       
       <guid>https://gohugo.io/functions/strings.trimprefix/</guid>
       <description>Given the string &amp;quot;aabbaa&amp;quot;, the specified prefix is only removed if &amp;quot;aabbaa&amp;quot; starts with it:
-{{ strings.TrimPrefix &amp;quot;a&amp;quot; &amp;quot;aabbaa&amp;quot; }} → &amp;quot;abbaa&amp;quot; {{ strings.TrimPrefix &amp;quot;aa&amp;quot; &amp;quot;aabbaa&amp;quot; }} → &amp;quot;bbaa&amp;quot; {{ strings.TrimPrefix &amp;quot;aaa&amp;quot; &amp;quot;aabbaa&amp;quot; }} → &amp;quot;aabbaa&amp;quot; </description>
+{{ strings.TrimPrefix &amp;quot;a&amp;quot; &amp;quot;aabbaa&amp;quot; }} → &amp;quot;abbaa&amp;quot; {{ strings.TrimPrefix &amp;quot;aa&amp;quot; &amp;quot;aabbaa&amp;quot; }} → &amp;quot;bbaa&amp;quot; {{ strings.TrimPrefix &amp;quot;aaa&amp;quot; &amp;quot;aabbaa&amp;quot; }} → &amp;quot;aabbaa&amp;quot;  </description>
     </item>
     
     <item>
@@ -1230,7 +1242,7 @@ slice.html  {{delimit(slice&amp;#34;foo&amp;#34;&amp;#34;bar&amp;#34;&amp;#34;bu
       
       <guid>https://gohugo.io/functions/strings.trimsuffix/</guid>
       <description>Given the string &amp;quot;aabbaa&amp;quot;, the specified suffix is only removed if &amp;quot;aabbaa&amp;quot; ends with it:
-{{ strings.TrimSuffix &amp;quot;a&amp;quot; &amp;quot;aabbaa&amp;quot; }} → &amp;quot;aabba&amp;quot; {{ strings.TrimSuffix &amp;quot;aa&amp;quot; &amp;quot;aabbaa&amp;quot; }} → &amp;quot;aabb&amp;quot; {{ strings.TrimSuffix &amp;quot;aaa&amp;quot; &amp;quot;aabbaa&amp;quot; }} → &amp;quot;aabbaa&amp;quot; </description>
+{{ strings.TrimSuffix &amp;quot;a&amp;quot; &amp;quot;aabbaa&amp;quot; }} → &amp;quot;aabba&amp;quot; {{ strings.TrimSuffix &amp;quot;aa&amp;quot; &amp;quot;aabbaa&amp;quot; }} → &amp;quot;aabb&amp;quot; {{ strings.TrimSuffix &amp;quot;aaa&amp;quot; &amp;quot;aabbaa&amp;quot; }} → &amp;quot;aabbaa&amp;quot;  </description>
     </item>
     
     <item>
@@ -1261,7 +1273,7 @@ In addition, borrowing from the extended behavior described at https://php.net s
       
       <guid>https://gohugo.io/functions/dateformat/</guid>
       <description>time.Format (alias dateFormat) converts either a time.Time object (e.g. .Date) or a timestamp string INPUT into the format specified by the LAYOUT string.
-{{time.Format&amp;#34;Monday, Jan 2, 2006&amp;#34;&amp;#34;2015-01-21&amp;#34;}} → &amp;#34;Wednesday, Jan 21, 2015&amp;#34; Note that since Hugo 0.87.0, time.Format will return a localized string for the currrent language. New in v0.87.0 
+{{time.Format&amp;#34;Monday, Jan 2, 2006&amp;#34;&amp;#34;2015-01-21&amp;#34;}} → &amp;#34;Wednesday, Jan 21, 2015&amp;#34; Note that since Hugo 0.87.0, time.Format will return a localized string for the current language. New in v0.87.0 
 The LAYOUT string can be either:
  Go’s Layout String to learn about how the LAYOUT string has to be formatted.</description>
     </item>
