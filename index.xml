@@ -16,6 +16,42 @@
     
     
     <item>
+      <title>News: Hugo 0.89.2: A couple of Bug Fixes</title>
+      <link>https://gohugo.io/news/0.89.2-relnotes/</link>
+      <pubDate>Mon, 08 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/news/0.89.2-relnotes/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This is a bug-fix release with a couple of important fixes.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix path resolution in hugo new &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/2b01c85d14102353015cf6860d30be3d92964495&#34;&gt;2b01c85d&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9129&#34;&gt;#9129&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;deps: Upgrade github.com/yuin/goldmark v1.4.2 =&amp;gt; v1.4.3 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/c09f5c5fd35c03de0444928ada3ce1c5a214b321&#34;&gt;c09f5c5f&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9137&#34;&gt;#9137&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>News: Hugo 0.89.1: A couple of Bug Fixes</title>
+      <link>https://gohugo.io/news/0.89.1-relnotes/</link>
+      <pubDate>Fri, 05 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/news/0.89.1-relnotes/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This is a bug-fix release with a couple of important fixes.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;create: Make sure the build lock is released before we open editor &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/166862a096e1d920f46b18c600e8dadcb478b839&#34;&gt;166862a0&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9121&#34;&gt;#9121&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;readme: Update dependency list &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/82c33c7105a4d0c0e097f0d074c02995cb2b4d20&#34;&gt;82c33c71&lt;/a&gt; &lt;a href=&#34;https://github.com/deining&#34;&gt;@deining&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>News: 0.89.0</title>
       <link>https://gohugo.io/news/0.89.0-relnotes/</link>
       <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
@@ -11644,40 +11680,6 @@ which has received &lt;strong&gt;14 contributions by 7 contributors&lt;/strong&g
 &lt;li&gt;Fix IsDescendant/IsAncestor for overlapping section names &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/4a39564efe7b02a685598ae9dbae95e2326c0230&#34;&gt;4a39564e&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7096&#34;&gt;#7096&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;fix typo in getting started &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/b6e097cfe65ecd1d47c805969082e6805563612b&#34;&gt;b6e097cf&lt;/a&gt; &lt;a href=&#34;https://github.com/matrixise&#34;&gt;@matrixise&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Fix _build.list.local logic &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/523d51948fc20e2afb4721b43203c5ab696ae220&#34;&gt;523d5194&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7089&#34;&gt;#7089&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Fix cache reset for a page&amp;rsquo;s collections on server live reload &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/cfa73050a49b2646fe3557cefa0ed31989b0eeeb&#34;&gt;cfa73050&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7085&#34;&gt;#7085&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>News: Hugo 0.68.3: A couple of Bug Fixes</title>
-      <link>https://gohugo.io/news/0.68.3-relnotes/</link>
-      <pubDate>Tue, 24 Mar 2020 13:00:00 -0500</pubDate>
-      
-      <guid>https://gohugo.io/news/0.68.3-relnotes/</guid>
-      <description>
-        
-        
-        &lt;p&gt;This is a bug-fix release with one important fix.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Fix _build.list.local logic &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/523d51948fc20e2afb4721b43203c5ab696ae220&#34;&gt;523d5194&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7089&#34;&gt;#7089&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>News: Hugo 0.68.2: A couple of Bug Fixes</title>
-      <link>https://gohugo.io/news/0.68.2-relnotes/</link>
-      <pubDate>Tue, 24 Mar 2020 12:00:00 -0500</pubDate>
-      
-      <guid>https://gohugo.io/news/0.68.2-relnotes/</guid>
-      <description>
-        
-        
-        &lt;p&gt;This is a bug-fix release with one important fix.&lt;/p&gt;
-&lt;ul&gt;
 &lt;li&gt;Fix cache reset for a page&amp;rsquo;s collections on server live reload &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/cfa73050a49b2646fe3557cefa0ed31989b0eeeb&#34;&gt;cfa73050&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7085&#34;&gt;#7085&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 

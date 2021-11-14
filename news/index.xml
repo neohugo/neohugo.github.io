@@ -7,6 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://gohugo.io/news/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Hugo 0.89.2: A couple of Bug Fixes</title>
+      <link>https://gohugo.io/news/0.89.2-relnotes/</link>
+      <pubDate>Mon, 08 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/news/0.89.2-relnotes/</guid>
+      <description>This is a bug-fix release with a couple of important fixes.
+ Fix path resolution in hugo new 2b01c85d @bep #9129 deps: Upgrade github.com/yuin/goldmark v1.4.2 =&amp;gt; v1.4.3 c09f5c5f @bep #9137  </description>
+    </item>
+    
+    <item>
+      <title>Hugo 0.89.1: A couple of Bug Fixes</title>
+      <link>https://gohugo.io/news/0.89.1-relnotes/</link>
+      <pubDate>Fri, 05 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/news/0.89.1-relnotes/</guid>
+      <description>This is a bug-fix release with a couple of important fixes.
+ create: Make sure the build lock is released before we open editor 166862a0 @bep #9121 readme: Update dependency list 82c33c71 @deining  </description>
+    </item>
+    
+    <item>
       <title>0.89.0</title>
       <link>https://gohugo.io/news/0.89.0-relnotes/</link>
       <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
