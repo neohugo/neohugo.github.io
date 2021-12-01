@@ -6,7 +6,27 @@
     <description>Recent content in Releases on Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://gohugo.io/categories/releases/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://gohugo.io/categories/releases/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 0.89.4: A couple of Bug Fixes</title>
+      <link>https://gohugo.io/news/0.89.4-relnotes/</link>
+      <pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/news/0.89.4-relnotes/</guid>
+      <description>This is a bug-fix release with one important fix.
+ Fix content dir resolution when main project is a Hugo Module 2e70f61f @bep #9177  </description>
+    </item>
+    
+    <item>
+      <title>Hugo 0.89.3: A couple of Bug Fixes</title>
+      <link>https://gohugo.io/news/0.89.3-relnotes/</link>
+      <pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/news/0.89.3-relnotes/</guid>
+      <description>This is a bug-fix release with a couple of important fixes.
+ Improve error when we cannot determine content directory in &amp;ldquo;hugo new&amp;rdquo; b8155452 @bep #9166 deps: Upgrade github.com/yuin/goldmark v1.4.3 =&amp;gt; v1.4.4 08552a7a @jmooring #9159 commands: Make sure pollInterval is always set fdad91fd @bep #9165 create: Improve archetype directory discovery and tests 5f3f6089 @bep #9146 create: Add a log statement when archetype is a directory 057d02de @bep #9157 create: Always print &amp;ldquo;Content &amp;hellip; created&amp;rdquo; 43ac59da @bep #9157 commands: Fix missing file locking in server partial render ab5c6990 @bep #9162 modules: Improve error message 9369d13e @davidsneighbour  </description>
+    </item>
+    
     <item>
       <title>Hugo 0.89.2: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.89.2-relnotes/</link>
