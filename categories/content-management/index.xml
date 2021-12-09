@@ -24,7 +24,7 @@
       <guid>https://gohugo.io/content-management/organization/</guid>
       <description>Page Bundles  Hugo 0.32 announced page-relative images and other resources packaged into Page Bundles.
 These terms are connected, and you also need to read about Page Resources and Image Processing to get the full picture.
-  The illustration shows 3 bundles. Note that the home page bundle cannot contain other content pages, but other files (images etc.) are fine.     The bundle documentation is work in progress.</description>
+  The illustration shows three bundles. Note that the home page bundle cannot contain other content pages, although other files (images etc.) are allowed.     The bundle documentation is a work in progress.</description>
     </item>
     
     <item>

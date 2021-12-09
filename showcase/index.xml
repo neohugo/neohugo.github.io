@@ -39,16 +39,6 @@ Why we chose Hugo  Before our migration to Hugo our website was powered by a PHP
     </item>
     
     <item>
-      <title>Aether</title>
-      <link>https://gohugo.io/showcase/aether/</link>
-      <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://gohugo.io/showcase/aether/</guid>
-      <description>To say that this website, our main online presence, needed to do a lot would be an understatement.
-Our site is home to both Aether and Aether Pro, our knowledgebase for each product, a server for static assets that we use in our emails, the interactive sign-up flows, payments client, downloads provider, and even a mechanism for delivering auto-update notifications to our native clients. We are using a single Hugo site for all these — it&amp;rsquo;s not a static site generator for us, it&amp;rsquo;s the core framework at the heart of our entire web front-end.</description>
-    </item>
-    
-    <item>
       <title>Hapticmedia Blog</title>
       <link>https://gohugo.io/showcase/hapticmedia/</link>
       <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
@@ -98,17 +88,6 @@ We wanted to optimise the site as much as possible, so we opted for using Cloudi
       <guid>https://gohugo.io/showcase/over/</guid>
       <description>At Over we&amp;rsquo;re into creativity, and technology should not get in the way. We want it to be easy for everyone to create, and Hugo does the same for us. That&amp;rsquo;s one of the reasons many of us are fond of using it.
 People from all disciplines contribute to our website, be it legal documentation, layout and design, recruiting, marketing and of course… engineering. Hugo allows us to do this with as little friction as possible.</description>
-    </item>
-    
-    <item>
-      <title>Cocoon &amp; Cosy</title>
-      <link>https://gohugo.io/showcase/arolla-cocoon/</link>
-      <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://gohugo.io/showcase/arolla-cocoon/</guid>
-      <description>Swiss Arolla campsite runs the highest campsite in Europe and I&amp;rsquo;m completely re-doing their actual Website with Hugo.
-But they just launch a brand new offer (luxury tents with bed and fire oven), and we couldn&amp;rsquo;t wait for the proper new website for having this promoted: we needed the website up and running within 24h!
-So we decided to quickly launch a dedicated independent web site using all the powerful tools included with gohugo.</description>
     </item>
     
     <item>
@@ -202,16 +181,6 @@ Hugo solved a lot of our growing pains with features like shortcodes, customizab
       <guid>https://gohugo.io/showcase/hartwell-insurance/</guid>
       <description>We’ve just launched a shiny new website for Hartwell Insurance – I’m really proud of it. It was tackled in a different way to most previous Tomango site builds, using some fancy new tools and some vintage web standards.
 It’s a multi-page, single-page (!) website written in Hugo, a static site generator built with performance as a first-class feature. I’ve outlined a load of benefits to Hugo &amp;amp; static sites here, in case you’re interested.</description>
-    </item>
-    
-    <item>
-      <title>Pace Revenue Management</title>
-      <link>https://gohugo.io/showcase/pace-revenue-management/</link>
-      <pubDate>Thu, 08 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://gohugo.io/showcase/pace-revenue-management/</guid>
-      <description>From the beginning, at Pace, we were focused on solving customer needs and didn&amp;rsquo;t want to over-engineer our marketing or sales. At the same time we didn&amp;rsquo;t want to lock ourselves into a WordPress, Squarespace or the like.
-The ideal was a fast, simple, static site builder. When we came across Hugo we were blown away. Being a European company we wanted to be multi-lingual from the get-go and allow multiple team-members to collaborate and own their content.</description>
     </item>
     
     <item>

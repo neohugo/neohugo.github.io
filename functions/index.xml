@@ -263,8 +263,8 @@ Since the defaultMarkdownHandler and this template function use the same sanitiz
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/functions/os.stat/</guid>
-      <description>If your current project working directory has a single file named README.txt (30 bytes):
-{{ $stat := os.Stat &amp;quot;README.txt&amp;quot; }} {{ $stat.Name }} → &amp;quot;README.txt&amp;quot; {{ $stat.Size }} → 30 Function os.Stat returns os.FileInfo. For further information of os.FileInfo, see golang page.</description>
+      <description>The os.Stat function attempts to resolve the path relative to the root of your project directory. If a matching file or directory is not found, it will attempt to resolve the path relative to the contentDir. A leading path separator (/) is optional.
+{{$f:=os.Stat&amp;#34;README.md&amp;#34;}} {{$f.IsDir}} --&amp;gt; false (bool) {{$f.ModTime}} --&amp;gt; 2021-11-25 10:06:49.315429236 -0800 PST (time.Time) {{$f.Name}} --&amp;gt; README.md (string) {{$f.Size}} --&amp;gt; 241 (int64) {{$d:=os.Stat&amp;#34;content&amp;#34;}} {{$d.IsDir}} --&amp;gt; true (bool) Details of the FileInfo structure are available in the Go documentation.</description>
     </item>
     
     <item>
@@ -349,8 +349,10 @@ Example:
       <pubDate>Thu, 31 Aug 2017 22:38:22 +0200</pubDate>
       
       <guid>https://gohugo.io/functions/fileexists/</guid>
-      <description>fileExists allows you to check if a file exists under a given path, e.g. before inserting code into a template:
-{{ if (fileExists &amp;quot;static/img/banner.jpg&amp;quot;) -}} &amp;lt;img src=&amp;quot;{{ &amp;quot;img/banner.jpg&amp;quot; | absURL }}&amp;quot; /&amp;gt; {{- end }} In the example above, a banner from the static folder should be shown if the given path points to an existing file.</description>
+      <description>The os.FileExists function attempts to resolve the path relative to the root of your project directory. If a matching file or directory is not found, it will attempt to resolve the path relative to the contentDir. A leading path separator (/) is optional.
+With this directory structure:
+content/ ├── about.md ├── contact.md └── news/ ├── article-1.md └── article-2.md The function returns these values:
+{{os.FileExists&amp;#34;content&amp;#34;}} --&amp;gt; true {{os.FileExists&amp;#34;content/news&amp;#34;}} --&amp;gt; true {{os.FileExists&amp;#34;content/news/article-1&amp;#34;}} --&amp;gt; false {{os.</description>
     </item>
     
     <item>
@@ -500,8 +502,8 @@ This example could render a piece of content using the content view located at /
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/functions/unix/</guid>
-      <description>Example: Time Passed Since Last Modification  This very simple one-liner uses now.Unix to calculate the amount of time that has passed between the .LastMod for the current page and the last build of the current page.
-time-passed.html  {{div(subnow.Unix.Lastmod.Unix)86400}}   Since both values are integers, they can be subtracted and then divided by the number of seconds in a day (i.e., 60 * 60 * 24 == 86400).</description>
+      <description>The Milli, Micro, and Nano variants return the number of milliseconds, microseconds, and nanoseconds (respectively) elapsed since the Unix epoch.
+.Date.Unix --&amp;gt; 1637259694 .ExpiryDate.Unix --&amp;gt; 1672559999 .Lastmod.Unix --&amp;gt; 1637361786 .PublishDate.Unix --&amp;gt; 1637421261 (&amp;#34;1970-01-01T00:00:00-00:00&amp;#34; | time.AsTime).Unix --&amp;gt; 0 (&amp;#34;1970-01-01T00:00:42-00:00&amp;#34; | time.AsTime).Unix --&amp;gt; 42 (&amp;#34;1970-04-11T01:48:29-08:00&amp;#34; | time.AsTime).Unix --&amp;gt; 8675309 (&amp;#34;2026-05-02T20:09:31-07:00&amp;#34; | time.AsTime).Unix --&amp;gt; 1777777771 now.Unix --&amp;gt; 1637447841 now.UnixMilli --&amp;gt; 1637447841347 now.UnixMicro --&amp;gt; 1637447841347378 now.UnixNano --&amp;gt; 1637447841347378799 </description>
     </item>
     
     <item>
@@ -615,7 +617,7 @@ To maintain a consistent output order, maps will be sorted by keys and only a sl
       
       <guid>https://gohugo.io/functions/dict/</guid>
       <description>dict is especially useful for passing more than one value to a partial template.
-Note that the key can be either a string or a string slice. The latter is useful to create a deply nested structure, e.g.:
+Note that the key can be either a string or a string slice. The latter is useful to create a deeply nested structure, e.g.:
 {{$m:=dict(slice&amp;#34;a&amp;#34;&amp;#34;b&amp;#34;&amp;#34;c&amp;#34;)&amp;#34;value&amp;#34;}}Example: Using dict to pass multiple values to a partial  The partial below creates a SVG and expects fill, height and width from the caller:
 Partial definition
 layouts/partials/svgs/external-links.svg  &amp;lt;svg version=&amp;#34;1.1&amp;#34; xmlns=&amp;#34;http://www.</description>
@@ -680,9 +682,10 @@ first and where Together  Using first and where together can be very powerful.</
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/functions/getenv/</guid>
-      <description>Takes a string containing the name of the variable as input. Returns an empty string if the variable is not set, otherwise returns the value of the variable.
-{{ getenv &amp;quot;HOME&amp;quot; }}   In Unix-like environments, the variable must also be exported in order to be seen by hugo.
-  </description>
+      <description>Examples:
+{{os.Getenv&amp;#34;HOME&amp;#34;}} --&amp;gt; /home/victor {{os.Getenv&amp;#34;USER&amp;#34;}} --&amp;gt; victor You can pass values when building your site:
+MY_VAR1=foo MY_VAR2=bar hugo OR export MY_VAR1=foo export MY_VAR2=bar hugo And then retrieve the values within a template:
+{{os.Getenv&amp;#34;MY_VAR1&amp;#34;}} --&amp;gt; foo {{os.Getenv&amp;#34;MY_VAR2&amp;#34;}} --&amp;gt; bar </description>
     </item>
     
     <item>
@@ -700,7 +703,9 @@ first and where Together  Using first and where together can be very powerful.</
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/functions/highlight/</guid>
-      <description>highlight is used in Hugo&amp;rsquo;s built-in highlight shortcode.</description>
+      <description>The highlight function uses the Chroma syntax highlighter, supporting over 200 languages with more than 40 available styles.
+Parameters   INPUT The code to highlight. LANG The language of the code to highlight. Choose from one of the supported languages. Case-insensitive. OPTIONS An optional, comma-separated list of zero or more options. Set default values in site configuration.  Options   lineNos Boolean. Default is false.
+Display a number at the beginning of each line.</description>
     </item>
     
     <item>
@@ -755,7 +760,7 @@ Remember to pass the output of this to safeHTML if fully un-escaped characters a
 Overlay  New in v0.80.0  Overlay creates a filter that overlays the source image at position x y, e.g:
 {{$logoFilter:=(images.Overlay$logo5050)}} {{$img:=$img|images.Filter$logoFilter}} A shorter version of the above, if you only need to apply the filter once:
 {{$img:=$img.Filter(images.Overlay$logo5050)}} The above will overlay $logo in the upper left corner of $img (at position x=50, y=50).
-Brightness  Brightness creates a filter that changes the brightness of an image.</description>
+Text  New in v0.</description>
     </item>
     
     <item>
@@ -984,8 +989,12 @@ range is fundamental to templating in Hugo. (See the Introduction to Hugo Templa
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/functions/readdir/</guid>
-      <description>If your current project working directory has a single file named README.txt:
-{{ range (readDir &amp;quot;.&amp;quot;) }}{{ .Name }}{{ end }} → &amp;quot;README.txt&amp;quot; For more information on using readDir and readFile in your templates, see Local File Templates.</description>
+      <description>The os.ReadDir function resolves the path relative to the root of your project directory. A leading path separator (/) is optional.
+With this directory structure:
+content/ ├── about.md ├── contact.md └── news/ ├── article-1.md └── article-2.md This template code:
+{{rangeos.ReadDir&amp;#34;content&amp;#34;}} {{.Name}} --&amp;gt; {{.IsDir}} {{end}} Produces:
+about.md --&amp;gt; false contact.md --&amp;gt; false news --&amp;gt; true Note that os.ReadDir is not recursive.
+Details of the FileInfo structure are available in the Go documentation.</description>
     </item>
     
     <item>
@@ -994,9 +1003,11 @@ range is fundamental to templating in Hugo. (See the Introduction to Hugo Templa
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/functions/readfile/</guid>
-      <description>Note that the filename must be relative to the current project working directory, or the project&amp;rsquo;s /content folder.
-So, if you have a file with the name README.txt in the root of your project with the content Hugo Rocks!:
-{{readFile &amp;quot;README.txt&amp;quot;}} → &amp;quot;Hugo Rocks!&amp;quot; If you receive a &amp;ldquo;file doesn&amp;rsquo;t exist&amp;rdquo; error with a path listed, do take note that the path is the last one checked by the function, and may not accurately reflect your target.</description>
+      <description>The os.ReadFile function attempts to resolve the path relative to the root of your project directory. If a matching file is not found, it will attempt to resolve the path relative to the contentDir. A leading path separator (/) is optional.
+With a file named README.md in the root of your project directory:
+This is **bold** text. This template code:
+{{os.ReadFile&amp;#34;README.md&amp;#34;}} Produces:
+This is **bold** text. Note that os.ReadFile returns raw (uninterpreted) content.</description>
     </item>
     
     <item>
@@ -1253,7 +1264,8 @@ slice.html  {{delimit(slice&amp;#34;foo&amp;#34;&amp;#34;bar&amp;#34;&amp;#34;bu
       <guid>https://gohugo.io/functions/substr/</guid>
       <description>It normally takes two parameters: start and length. It can also take one parameter: start, i.e. length is omitted, in which case the substring starting from start until the end of the string will be returned.
 To extract characters from the end of the string, use a negative start number.
-In addition, borrowing from the extended behavior described at https://php.net substr, if length is given and is negative, that number of characters will be omitted from the end of string.</description>
+If length is given and is negative, that number of characters will be omitted from the end of string.
+{{ substr &amp;quot;abcdef&amp;quot; 0 }} → &amp;quot;abcdef&amp;quot; {{ substr &amp;quot;abcdef&amp;quot; 1 }} → &amp;quot;bcdef&amp;quot; {{ substr &amp;quot;abcdef&amp;quot; 0 1 }} → &amp;quot;a&amp;quot; {{ substr &amp;quot;abcdef&amp;quot; 1 1 }} → &amp;quot;b&amp;quot; {{ substr &amp;quot;abcdef&amp;quot; 0 -1 }} → &amp;quot;abcde&amp;quot; {{ substr &amp;quot;abcdef&amp;quot; 1 -1 }} → &amp;quot;bcde&amp;quot; {{ substr &amp;quot;abcdef&amp;quot; -1 }} → &amp;quot;f&amp;quot; {{ substr &amp;quot;abcdef&amp;quot; -2 }} → &amp;quot;ef&amp;quot; {{ substr &amp;quot;abcdef&amp;quot; -1 1 }} → &amp;quot;f&amp;quot; {{ substr &amp;quot;abcdef&amp;quot; -2 1 }} → &amp;quot;e&amp;quot; {{ substr &amp;quot;abcdef&amp;quot; -3 -1 }} → &amp;quot;de&amp;quot; {{ substr &amp;quot;abcdef&amp;quot; -3 -2 }} → &amp;quot;d&amp;quot; </description>
     </item>
     
     <item>

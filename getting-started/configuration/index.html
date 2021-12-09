@@ -13,7 +13,7 @@
   <title>Configure Hugo | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.11.3-DEV" />
+  <meta name="generator" content="Hugo 0.13-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,12 +62,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/getting-started/configuration/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="getting-started" />
 <meta property="article:published_time" content="2017-01-02T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-12-01T22:25:45+07:00" />
+<meta property="article:modified_time" content="2021-12-09T20:34:27+07:00" />
 
 <meta itemprop="name" content="Configure Hugo">
 <meta itemprop="description" content="How to configure your Hugo site."><meta itemprop="datePublished" content="2017-01-02T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-12-01T22:25:45+07:00" />
-<meta itemprop="wordCount" content="3581"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="dateModified" content="2021-12-09T20:34:27+07:00" />
+<meta itemprop="wordCount" content="3683"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
 
@@ -222,7 +222,7 @@
 
 	<div date-pref>
 		
-			<a href="https://gohugo.io/getting-started/code-toggle/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Code Toggle ">
+			<a href="https://gohugo.io/getting-started/directory-structure/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Directory Structure ">
 				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -345,7 +345,6 @@ hugo --config a.toml,b.toml,c.toml
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">Params</span><span class="p">]</span>
   <span class="nx">foo</span> <span class="p">=</span> <span class="s1">&#39;bar&#39;</span>
-
 </code></pre></div>
       </div>
       
@@ -367,7 +366,7 @@ hugo --config a.toml,b.toml,c.toml
       
     
   </div>
-  
+
 </div>
 
 
@@ -428,7 +427,7 @@ hugo --config a.toml,b.toml,c.toml
       
     
   </div>
-  
+
 </div>
 
 <ul>
@@ -562,64 +561,44 @@ hugo --config a.toml,b.toml,c.toml
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">build</span><span class="p">]</span>
   <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-
 <span class="p">[</span><span class="nx">caches</span><span class="p">]</span>
   <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-
 <span class="p">[</span><span class="nx">cascade</span><span class="p">]</span>
   <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-
 <span class="p">[</span><span class="nx">frontmatter</span><span class="p">]</span>
   <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-
 <span class="p">[</span><span class="nx">imaging</span><span class="p">]</span>
   <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-
 <span class="p">[</span><span class="nx">languages</span><span class="p">]</span>
   <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
   <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">]</span>
     <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
     <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">menus</span><span class="p">]</span>
       <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;shallow&#39;</span>
-
     <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">params</span><span class="p">]</span>
       <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;deep&#39;</span>
-
-
-
 <span class="p">[</span><span class="nx">markup</span><span class="p">]</span>
   <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-
 <span class="p">[</span><span class="nx">mediatypes</span><span class="p">]</span>
   <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;shallow&#39;</span>
-
 <span class="p">[</span><span class="nx">menus</span><span class="p">]</span>
   <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;shallow&#39;</span>
-
 <span class="p">[</span><span class="nx">minify</span><span class="p">]</span>
   <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-
 <span class="p">[</span><span class="nx">module</span><span class="p">]</span>
   <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-
 <span class="p">[</span><span class="nx">outputformats</span><span class="p">]</span>
   <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;shallow&#39;</span>
-
 <span class="p">[</span><span class="nx">params</span><span class="p">]</span>
   <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;deep&#39;</span>
-
 <span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
   <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-
 <span class="p">[</span><span class="nx">related</span><span class="p">]</span>
   <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-
 <span class="p">[</span><span class="nx">sitemap</span><span class="p">]</span>
   <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-
 <span class="p">[</span><span class="nx">taxonomies</span><span class="p">]</span>
   <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-
 </code></pre></div>
       </div>
       
@@ -698,7 +677,7 @@ hugo --config a.toml,b.toml,c.toml
       
     
   </div>
-  
+
 </div>
 
 <h2 id="all-configuration-settings">All Configuration Settings <a class="header-link" href="#all-configuration-settings"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
@@ -742,6 +721,9 @@ config file(s).</p>
 <h3 id="contentdir">contentDir <a class="header-link" href="#contentdir"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p><strong>Default value:</strong> &ldquo;content&rdquo;</p>
 <p>The directory from where Hugo reads content files. Also see <a href="/hugo-modules/configuration/#module-config-mounts">Module Mounts Config</a> for an alternative way to configure this directory (from Hugo 0.56).</p>
+<h3 id="copyright">copyright <a class="header-link" href="#copyright"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<p><strong>Default value:</strong> &quot;&quot;</p>
+<p>Copyright notice for your site, typically displayed in the footer.</p>
 <h3 id="datadir">dataDir <a class="header-link" href="#datadir"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p><strong>Default value:</strong> &ldquo;data&rdquo;</p>
 <p>The directory from where Hugo reads data files. Also see <a href="/hugo-modules/configuration/#module-config-mounts">Module Mounts Config</a> for an alternative way to configure this directory (from Hugo 0.56).</p>
@@ -801,6 +783,9 @@ config file(s).</p>
 <p>If true, auto-detect Chinese/Japanese/Korean Languages in the content. This will make <code>.Summary</code> and <code>.WordCount</code> behave correctly for CJK languages.</p>
 <h3 id="imaging">imaging <a class="header-link" href="#imaging"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>See <a href="/content-management/image-processing/#image-processing-config">Image Processing Config</a>.</p>
+<h3 id="languagecode">languageCode <a class="header-link" href="#languagecode"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<p><strong>Default value:</strong>  &quot;&quot;</p>
+<p>A language tag as defined by <a href="https://datatracker.ietf.org/doc/html/rfc5646">RFC 5646</a>. The internal <a href="https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/_default/rss.xml">RSS template</a> populates its <code>&lt;language&gt;</code> element with this value. The value is not used elsewhere.</p>
 <h3 id="languages">languages <a class="header-link" href="#languages"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>See <a href="/content-management/multilingual/#configure-languages">Configure Languages</a>.</p>
 <h3 id="disablelanguages">disableLanguages <a class="header-link" href="#disablelanguages"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
@@ -861,7 +846,11 @@ config file(s).</p>
 <p>When using <code>ref</code> or <code>relref</code> to resolve page links and a link cannot resolved, it will be logged with this log level. Valid values are <code>ERROR</code> (default) or <code>WARNING</code>. Any <code>ERROR</code> will fail the build (<code>exit -1</code>).</p>
 <h3 id="reflinksnotfoundurl">refLinksNotFoundURL <a class="header-link" href="#reflinksnotfoundurl"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>URL to be used as a placeholder when a page reference cannot be found in <code>ref</code> or <code>relref</code>. Is used as-is.</p>
-<h3 id="rsslimit">rssLimit <a class="header-link" href="#rsslimit"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<h3 id="removepathaccents">removePathAccents <a class="header-link" href="#removepathaccents"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<p><strong>Default value:</strong> false</p>
+<p>Removes <a href="https://www.compart.com/en/unicode/category/Mn">non-spacing marks</a> from <a href="https://en.wikipedia.org/wiki/Precomposed_character">composite characters</a> in content paths.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">content/post/hügó.md --&gt; https://example.org/post/hugo/
+</code></pre></div><h3 id="rsslimit">rssLimit <a class="header-link" href="#rsslimit"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>Maximum number of items in the RSS feed.</p>
 <h3 id="sectionpagesmenu">sectionPagesMenu <a class="header-link" href="#sectionpagesmenu"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>See <a href="/templates/menu-templates/#section-menu-for-lazy-bloggers">&ldquo;Section Menu for Lazy Bloggers&rdquo;</a>.</p>
@@ -878,8 +867,8 @@ config file(s).</p>
 <p><strong>Default value:</strong>  &ldquo;themes&rdquo;</p>
 <p>The directory where Hugo reads the themes from.</p>
 <h3 id="timeout">timeout <a class="header-link" href="#timeout"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p><strong>Default value:</strong> 10000</p>
-<p>Timeout for generating page contents, in milliseconds (defaults to 10 seconds). <em>Note:</em> this is used to bail out of recursive content generation, if your pages are slow to generate (e.g., because they require large image processing or depend on remote contents) you might need to raise this limit.</p>
+<p><strong>Default value:</strong> &ldquo;30s&rdquo;</p>
+<p>Timeout for generating page contents, specified as a <a href="https://pkg.go.dev/time#Duration">duration</a> or in milliseconds. <em>Note:</em> this is used to bail out of recursive content generation. You might need to raise this limit if your pages are slow to generate (e.g., because they require large image processing or depend on remote contents).</p>
 <h3 id="timezone">timeZone <a class="header-link" href="#timezone"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 
 
@@ -965,7 +954,6 @@ hugo config | grep emoji
   <span class="nx">noJSConfigInAssets</span> <span class="p">=</span> <span class="kc">false</span>
   <span class="nx">useResourceCacheWhen</span> <span class="p">=</span> <span class="s1">&#39;fallback&#39;</span>
   <span class="nx">writeStats</span> <span class="p">=</span> <span class="kc">false</span>
-
 </code></pre></div>
       </div>
       
@@ -989,7 +977,7 @@ hugo config | grep emoji
       
     
   </div>
-  
+
 </div>
 
 <dl>
@@ -1052,7 +1040,7 @@ hugo config | grep emoji
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">server</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">headers</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- <span class="nt">for</span><span class="p">:</span><span class="w"> </span><span class="l">/**.html</span><span class="w">
+</span><span class="w">  </span>- <span class="nt">for</span><span class="p">:</span><span class="w"> </span><span class="l">/**</span><span class="w">
 </span><span class="w">    </span><span class="nt">values</span><span class="p">:</span><span class="w">
 </span><span class="w">      </span><span class="nt">Content-Security-Policy</span><span class="p">:</span><span class="w"> </span><span class="l">script-src localhost:1313</span><span class="w">
 </span><span class="w">      </span><span class="nt">Referrer-Policy</span><span class="p">:</span><span class="w"> </span><span class="l">strict-origin-when-cross-origin</span><span class="w">
@@ -1069,16 +1057,13 @@ hugo config | grep emoji
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">server</span><span class="p">]</span>
 <span class="p">[[</span><span class="nx">server</span><span class="p">.</span><span class="nx">headers</span><span class="p">]]</span>
-  <span class="nx">for</span> <span class="p">=</span> <span class="s1">&#39;/**.html&#39;</span>
+  <span class="nx">for</span> <span class="p">=</span> <span class="s1">&#39;/**&#39;</span>
   <span class="p">[</span><span class="nx">server</span><span class="p">.</span><span class="nx">headers</span><span class="p">.</span><span class="nx">values</span><span class="p">]</span>
     <span class="nx">Content-Security-Policy</span> <span class="p">=</span> <span class="s1">&#39;script-src localhost:1313&#39;</span>
     <span class="nx">Referrer-Policy</span> <span class="p">=</span> <span class="s1">&#39;strict-origin-when-cross-origin&#39;</span>
     <span class="nx">X-Content-Type-Options</span> <span class="p">=</span> <span class="s1">&#39;nosniff&#39;</span>
     <span class="nx">X-Frame-Options</span> <span class="p">=</span> <span class="s1">&#39;DENY&#39;</span>
     <span class="nx">X-XSS-Protection</span> <span class="p">=</span> <span class="s1">&#39;1; mode=block&#39;</span>
-
-
-
 </code></pre></div>
       </div>
       
@@ -1091,7 +1076,7 @@ hugo config | grep emoji
    <span class="nt">&#34;server&#34;</span><span class="p">:</span> <span class="p">{</span>
       <span class="nt">&#34;headers&#34;</span><span class="p">:</span> <span class="p">[</span>
          <span class="p">{</span>
-            <span class="nt">&#34;for&#34;</span><span class="p">:</span> <span class="s2">&#34;/**.html&#34;</span><span class="p">,</span>
+            <span class="nt">&#34;for&#34;</span><span class="p">:</span> <span class="s2">&#34;/**&#34;</span><span class="p">,</span>
             <span class="nt">&#34;values&#34;</span><span class="p">:</span> <span class="p">{</span>
                <span class="nt">&#34;Content-Security-Policy&#34;</span><span class="p">:</span> <span class="s2">&#34;script-src localhost:1313&#34;</span><span class="p">,</span>
                <span class="nt">&#34;Referrer-Policy&#34;</span><span class="p">:</span> <span class="s2">&#34;strict-origin-when-cross-origin&#34;</span><span class="p">,</span>
@@ -1111,7 +1096,7 @@ hugo config | grep emoji
       
     
   </div>
-  
+
 </div>
 
 <p>Since this is is &ldquo;development only&rdquo;, it may make sense to put it below the <code>development</code> environment:</p>
@@ -1145,7 +1130,7 @@ hugo config | grep emoji
     
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">headers</span><span class="p">:</span><span class="w">
-</span><span class="w"></span>- <span class="nt">for</span><span class="p">:</span><span class="w"> </span><span class="l">/**.html</span><span class="w">
+</span><span class="w"></span>- <span class="nt">for</span><span class="p">:</span><span class="w"> </span><span class="l">/**</span><span class="w">
 </span><span class="w">  </span><span class="nt">values</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">Content-Security-Policy</span><span class="p">:</span><span class="w"> </span><span class="l">script-src localhost:1313</span><span class="w">
 </span><span class="w">    </span><span class="nt">Referrer-Policy</span><span class="p">:</span><span class="w"> </span><span class="l">strict-origin-when-cross-origin</span><span class="w">
@@ -1161,15 +1146,13 @@ hugo config | grep emoji
     
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[[</span><span class="nx">headers</span><span class="p">]]</span>
-<span class="nx">for</span> <span class="p">=</span> <span class="s1">&#39;/**.html&#39;</span>
+<span class="nx">for</span> <span class="p">=</span> <span class="s1">&#39;/**&#39;</span>
 <span class="p">[</span><span class="nx">headers</span><span class="p">.</span><span class="nx">values</span><span class="p">]</span>
   <span class="nx">Content-Security-Policy</span> <span class="p">=</span> <span class="s1">&#39;script-src localhost:1313&#39;</span>
   <span class="nx">Referrer-Policy</span> <span class="p">=</span> <span class="s1">&#39;strict-origin-when-cross-origin&#39;</span>
   <span class="nx">X-Content-Type-Options</span> <span class="p">=</span> <span class="s1">&#39;nosniff&#39;</span>
   <span class="nx">X-Frame-Options</span> <span class="p">=</span> <span class="s1">&#39;DENY&#39;</span>
   <span class="nx">X-XSS-Protection</span> <span class="p">=</span> <span class="s1">&#39;1; mode=block&#39;</span>
-
-
 </code></pre></div>
       </div>
       
@@ -1181,7 +1164,7 @@ hugo config | grep emoji
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;headers&#34;</span><span class="p">:</span> <span class="p">[</span>
       <span class="p">{</span>
-         <span class="nt">&#34;for&#34;</span><span class="p">:</span> <span class="s2">&#34;/**.html&#34;</span><span class="p">,</span>
+         <span class="nt">&#34;for&#34;</span><span class="p">:</span> <span class="s2">&#34;/**&#34;</span><span class="p">,</span>
          <span class="nt">&#34;values&#34;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&#34;Content-Security-Policy&#34;</span><span class="p">:</span> <span class="s2">&#34;script-src localhost:1313&#34;</span><span class="p">,</span>
             <span class="nt">&#34;Referrer-Policy&#34;</span><span class="p">:</span> <span class="s2">&#34;strict-origin-when-cross-origin&#34;</span><span class="p">,</span>
@@ -1200,7 +1183,7 @@ hugo config | grep emoji
       
     
   </div>
-  
+
 </div>
 
 
@@ -1258,7 +1241,6 @@ hugo config | grep emoji
 <span class="nx">from</span> <span class="p">=</span> <span class="s1">&#39;/myspa/**&#39;</span>
 <span class="nx">status</span> <span class="p">=</span> <span class="mi">200</span>
 <span class="nx">to</span> <span class="p">=</span> <span class="s1">&#39;/myspa/&#39;</span>
-
 </code></pre></div>
       </div>
       
@@ -1285,7 +1267,7 @@ hugo config | grep emoji
       
     
   </div>
-  
+
 </div>
 
 <p>
@@ -1370,10 +1352,8 @@ hugo config | grep emoji
   <span class="nx">ListOfFoo</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;foo1&#39;</span><span class="p">,</span> <span class="s1">&#39;foo2&#39;</span><span class="p">]</span>
   <span class="nx">SidebarRecentLimit</span> <span class="p">=</span> <span class="mi">5</span>
   <span class="nx">Subtitle</span> <span class="p">=</span> <span class="s1">&#39;Hugo is Absurdly Fast!&#39;</span>
-
 <span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
   <span class="nx">posts</span> <span class="p">=</span> <span class="s1">&#39;/:year/:month/:title/&#39;</span>
-
 </code></pre></div>
       </div>
       
@@ -1408,7 +1388,7 @@ hugo config | grep emoji
       
     
   </div>
-  
+
 </div>
 
 <h2 id="configure-with-environment-variables">Configure with Environment Variables <a class="header-link" href="#configure-with-environment-variables"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
@@ -1436,8 +1416,8 @@ hugo config | grep emoji
 </button> If you are using snake_cased variable names, the above will not work, so since Hugo 0.79.0 Hugo determines the delimiter to use by the first character after <code>HUGO</code>. This allows you to define environment variables on the form <code>HUGOxPARAMSxAPI_KEY=abcdefgh</code>, using any <a href="https://stackoverflow.com/questions/2821043/allowed-characters-in-linux-environment-variable-names#:~:text=So%20names%20may%20contain%20any,not%20begin%20with%20a%20digit.">allowed</a> delimiter.</p>
 
 <h2 id="ignore-content-and-data-files-when-rendering">Ignore Content and Data Files when Rendering <a class="header-link" href="#ignore-content-and-data-files-when-rendering"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>To exclude specific files from the content and data directories when rendering your site, set <code>ignoreFiles</code> to one or more regular expressions.</p>
-<p>For example, to ignore content and data files ending with <code>.foo</code> and <code>.boo</code>:</p>
+<p>To exclude specific files from the <code>content</code> and <code>data</code> directories when rendering your site, set <code>ignoreFiles</code> to one or more regular expressions to match against the absolute file path.</p>
+<p>To ignore files ending with <code>.foo</code> or <code>.boo</code>:</p>
 
 
 
@@ -1471,17 +1451,11 @@ hugo config | grep emoji
 </span></code></pre></div>
       </div>
       
-        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
     
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">ignoreFiles</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;\.foo$&#39;</span><span class="p">,</span> <span class="s1">&#39;\.boo$&#39;</span><span class="p">]</span>
 </code></pre></div>
       </div>
-      
-        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
       
     
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
@@ -1494,12 +1468,63 @@ hugo config | grep emoji
 </code></pre></div>
       </div>
       
-        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
+    
+  </div>
+
+</div>
+
+<p>To ignore a file using the absolute file path:</p>
+
+
+
+  
+
+
+<div class="code relative" >
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
+        yaml
+      </button>
+      &nbsp;
+    
+      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        toml
+      </button>
+      &nbsp;
+    
+      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        json
+      </button>
+      &nbsp;
+    
+  </div>
+  <div class="tab-content">
+    
+      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">ignoreFiles</span><span class="p">:</span><span class="w">
+</span><span class="w"></span>- <span class="l">^/home/user/project/content/test\.md$</span><span class="w">
+</span></code></pre></div>
+      </div>
+      
+    
+      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">ignoreFiles</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;^/home/user/project/content/test\.md$&#39;</span><span class="p">]</span>
+</code></pre></div>
+      </div>
+      
+    
+      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+   <span class="nt">&#34;ignoreFiles&#34;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&#34;^/home/user/project/content/test\\.md$&#34;</span>
+   <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+      </div>
       
     
   </div>
-  
+
 </div>
 
 <h2 id="configure-front-matter">Configure Front Matter <a class="header-link" href="#configure-front-matter"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
@@ -1563,7 +1588,6 @@ hugo config | grep emoji
   <span class="nx">expiryDate</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;expiryDate&#39;</span><span class="p">]</span>
   <span class="nx">lastmod</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;:git&#39;</span><span class="p">,</span> <span class="s1">&#39;lastmod&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;publishDate&#39;</span><span class="p">]</span>
   <span class="nx">publishDate</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;publishDate&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">]</span>
-
 </code></pre></div>
       </div>
       
@@ -1602,7 +1626,7 @@ hugo config | grep emoji
       
     
   </div>
-  
+
 </div>
 
 <p>If you, as an example, have a non-standard date parameter in some of your content, you can override the setting for <code>date</code>:</p>
@@ -1649,7 +1673,6 @@ hugo config | grep emoji
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">frontmatter</span><span class="p">]</span>
   <span class="nx">date</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;myDate&#39;</span><span class="p">,</span> <span class="s1">&#39;:default&#39;</span><span class="p">]</span>
-
 </code></pre></div>
       </div>
       
@@ -1674,7 +1697,7 @@ hugo config | grep emoji
       
     
   </div>
-  
+
 </div>
 
 <p>The <code>:default</code> is a shortcut to the default settings. The above will set <code>.Date</code> to the date value in <code>myDate</code> if present, if not we will look in <code>date</code>,<code>publishDate</code>, <code>lastmod</code> and pick the first valid date.</p>
@@ -1729,7 +1752,6 @@ hugo config | grep emoji
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">frontmatter</span><span class="p">]</span>
   <span class="nx">lastmod</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;lastmod&#39;</span><span class="p">,</span> <span class="s1">&#39;:fileModTime&#39;</span><span class="p">,</span> <span class="s1">&#39;:default&#39;</span><span class="p">]</span>
-
 </code></pre></div>
       </div>
       
@@ -1755,7 +1777,7 @@ hugo config | grep emoji
       
     
   </div>
-  
+
 </div>
 
 <p>The above will try first to extract the value for <code>.Lastmod</code> starting with the <code>lastmod</code> front matter parameter, then the content file&rsquo;s modification timestamp. The last, <code>:default</code> should not be needed here, but Hugo will finally look for a valid date in <code>:git</code>, <code>date</code> and then <code>publishDate</code>.</p>
@@ -1807,7 +1829,6 @@ hugo config | grep emoji
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">frontmatter</span><span class="p">]</span>
   <span class="nx">date</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;:filename&#39;</span><span class="p">,</span> <span class="s1">&#39;:default&#39;</span><span class="p">]</span>
-
 </code></pre></div>
       </div>
       
@@ -1832,7 +1853,7 @@ hugo config | grep emoji
       
     
   </div>
-  
+
 </div>
 
 <p>The above will try first to extract the value for <code>.Date</code> from the filename, then it will look in front matter parameters <code>date</code>, <code>publishDate</code> and lastly <code>lastmod</code>.</p>
@@ -1933,7 +1954,6 @@ hugo config | grep emoji
     <span class="p">[</span><span class="nx">minify</span><span class="p">.</span><span class="nx">tdewolff</span><span class="p">.</span><span class="nx">css</span><span class="p">]</span>
       <span class="nx">keepCSS2</span> <span class="p">=</span> <span class="kc">true</span>
       <span class="nx">precision</span> <span class="p">=</span> <span class="mi">0</span>
-
     <span class="p">[</span><span class="nx">minify</span><span class="p">.</span><span class="nx">tdewolff</span><span class="p">.</span><span class="nx">html</span><span class="p">]</span>
       <span class="nx">keepComments</span> <span class="p">=</span> <span class="kc">false</span>
       <span class="nx">keepConditionalComments</span> <span class="p">=</span> <span class="kc">true</span>
@@ -1942,23 +1962,16 @@ hugo config | grep emoji
       <span class="nx">keepEndTags</span> <span class="p">=</span> <span class="kc">true</span>
       <span class="nx">keepQuotes</span> <span class="p">=</span> <span class="kc">false</span>
       <span class="nx">keepWhitespace</span> <span class="p">=</span> <span class="kc">true</span>
-
     <span class="p">[</span><span class="nx">minify</span><span class="p">.</span><span class="nx">tdewolff</span><span class="p">.</span><span class="nx">js</span><span class="p">]</span>
       <span class="nx">keepVarNames</span> <span class="p">=</span> <span class="kc">false</span>
       <span class="nx">precision</span> <span class="p">=</span> <span class="mi">0</span>
-
     <span class="p">[</span><span class="nx">minify</span><span class="p">.</span><span class="nx">tdewolff</span><span class="p">.</span><span class="nx">json</span><span class="p">]</span>
       <span class="nx">keepNumbers</span> <span class="p">=</span> <span class="kc">false</span>
       <span class="nx">precision</span> <span class="p">=</span> <span class="mi">0</span>
-
     <span class="p">[</span><span class="nx">minify</span><span class="p">.</span><span class="nx">tdewolff</span><span class="p">.</span><span class="nx">svg</span><span class="p">]</span>
       <span class="nx">precision</span> <span class="p">=</span> <span class="mi">0</span>
-
     <span class="p">[</span><span class="nx">minify</span><span class="p">.</span><span class="nx">tdewolff</span><span class="p">.</span><span class="nx">xml</span><span class="p">]</span>
       <span class="nx">keepWhitespace</span> <span class="p">=</span> <span class="kc">false</span>
-
-
-
 </code></pre></div>
       </div>
       
@@ -2015,7 +2028,7 @@ hugo config | grep emoji
       
     
   </div>
-  
+
 </div>
 
 <h2 id="configure-file-caches">Configure File Caches <a class="header-link" href="#configure-file-caches"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
@@ -2057,6 +2070,9 @@ hugo config | grep emoji
 </span><span class="w">  </span><span class="nt">getjson</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">dir</span><span class="p">:</span><span class="w"> </span><span class="p">:</span><span class="l">cacheDir/:project</span><span class="w">
 </span><span class="w">    </span><span class="nt">maxAge</span><span class="p">:</span><span class="w"> </span>-<span class="m">1</span><span class="w">
+</span><span class="w">  </span><span class="nt">getresource</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">dir</span><span class="p">:</span><span class="w"> </span><span class="p">:</span><span class="l">cacheDir/:project</span><span class="w">
+</span><span class="w">    </span><span class="nt">maxAge</span><span class="p">:</span><span class="w"> </span>-<span class="m">1</span><span class="w">
 </span><span class="w">  </span><span class="nt">images</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">dir</span><span class="p">:</span><span class="w"> </span><span class="p">:</span><span class="l">resourceDir/_gen</span><span class="w">
 </span><span class="w">    </span><span class="nt">maxAge</span><span class="p">:</span><span class="w"> </span>-<span class="m">1</span><span class="w">
@@ -2075,24 +2091,21 @@ hugo config | grep emoji
   <span class="p">[</span><span class="nx">caches</span><span class="p">.</span><span class="nx">assets</span><span class="p">]</span>
     <span class="nx">dir</span> <span class="p">=</span> <span class="s1">&#39;:resourceDir/_gen&#39;</span>
     <span class="nx">maxAge</span> <span class="p">=</span> <span class="mi">-1</span>
-
   <span class="p">[</span><span class="nx">caches</span><span class="p">.</span><span class="nx">getcsv</span><span class="p">]</span>
     <span class="nx">dir</span> <span class="p">=</span> <span class="s1">&#39;:cacheDir/:project&#39;</span>
     <span class="nx">maxAge</span> <span class="p">=</span> <span class="mi">-1</span>
-
   <span class="p">[</span><span class="nx">caches</span><span class="p">.</span><span class="nx">getjson</span><span class="p">]</span>
     <span class="nx">dir</span> <span class="p">=</span> <span class="s1">&#39;:cacheDir/:project&#39;</span>
     <span class="nx">maxAge</span> <span class="p">=</span> <span class="mi">-1</span>
-
+  <span class="p">[</span><span class="nx">caches</span><span class="p">.</span><span class="nx">getresource</span><span class="p">]</span>
+    <span class="nx">dir</span> <span class="p">=</span> <span class="s1">&#39;:cacheDir/:project&#39;</span>
+    <span class="nx">maxAge</span> <span class="p">=</span> <span class="mi">-1</span>
   <span class="p">[</span><span class="nx">caches</span><span class="p">.</span><span class="nx">images</span><span class="p">]</span>
     <span class="nx">dir</span> <span class="p">=</span> <span class="s1">&#39;:resourceDir/_gen&#39;</span>
     <span class="nx">maxAge</span> <span class="p">=</span> <span class="mi">-1</span>
-
   <span class="p">[</span><span class="nx">caches</span><span class="p">.</span><span class="nx">modules</span><span class="p">]</span>
     <span class="nx">dir</span> <span class="p">=</span> <span class="s1">&#39;:cacheDir/modules&#39;</span>
     <span class="nx">maxAge</span> <span class="p">=</span> <span class="mi">-1</span>
-
-
 </code></pre></div>
       </div>
       
@@ -2115,6 +2128,10 @@ hugo config | grep emoji
          <span class="nt">&#34;dir&#34;</span><span class="p">:</span> <span class="s2">&#34;:cacheDir/:project&#34;</span><span class="p">,</span>
          <span class="nt">&#34;maxAge&#34;</span><span class="p">:</span> <span class="mi">-1</span>
       <span class="p">},</span>
+      <span class="nt">&#34;getresource&#34;</span><span class="p">:</span> <span class="p">{</span>
+         <span class="nt">&#34;dir&#34;</span><span class="p">:</span> <span class="s2">&#34;:cacheDir/:project&#34;</span><span class="p">,</span>
+         <span class="nt">&#34;maxAge&#34;</span><span class="p">:</span> <span class="mi">-1</span>
+      <span class="p">},</span>
       <span class="nt">&#34;images&#34;</span><span class="p">:</span> <span class="p">{</span>
          <span class="nt">&#34;dir&#34;</span><span class="p">:</span> <span class="s2">&#34;:resourceDir/_gen&#34;</span><span class="p">,</span>
          <span class="nt">&#34;maxAge&#34;</span><span class="p">:</span> <span class="mi">-1</span>
@@ -2133,7 +2150,7 @@ hugo config | grep emoji
       
     
   </div>
-  
+
 </div>
 
 <p>You can override any of these cache settings in your own <code>config.toml</code>.</p>
@@ -2163,8 +2180,6 @@ hugo config | grep emoji
 
 <h2>See Also</h2>
 <ul>
-	
-	<li><a href="/getting-started/code-toggle/">Code Toggle</a></li>
 	
 	<li><a href="/templates/data-templates/">Data Templates</a></li>
 	
@@ -3513,7 +3528,7 @@ hugo config | grep emoji
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “Configure Hugo”
-  </a> was last updated: December 1, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/788a6080f6541eee9a87e58f803b489316c1396f">Merge pull request #96 from blackb1rd/hugo/v0.89.4 (788a608)</a>
+  </a> was last updated: December 9, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/8ee6bb505c1182e337d4fe293ebb6b853fce71e6">Merge pull request #97 from blackb1rd/hugo/v0.90.0 (8ee6bb5)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/getting-started/configuration.md" class="

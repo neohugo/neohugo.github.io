@@ -13,7 +13,7 @@
   <title>.Unix | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.11.3-DEV" />
+  <meta name="generator" content="Hugo 0.13-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -32,7 +32,7 @@
   
 
   <meta name="description"
-  content=".Unix returns the local Time corresponding to the given Unix time, sec seconds and nsec nanoseconds since January 1, 1970 UTC.">
+  content="Converts a time.Time value to the number of seconds elapsed since the Unix epoch, excluding leap seconds. The Unix epoch is 00:00:00&amp;nbsp;UTC on 1 January 1970.">
 
   
 
@@ -58,21 +58,21 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0594cb">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:title" content=".Unix" />
-<meta property="og:description" content=".Unix returns the local Time corresponding to the given Unix time, sec seconds and nsec nanoseconds since January 1, 1970 UTC." />
+<meta property="og:description" content="Converts a time.Time value to the number of seconds elapsed since the Unix epoch, excluding leap seconds. The Unix epoch is 00:00:00&amp;nbsp;UTC on 1 January 1970." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/functions/unix/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="functions" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-12-01T22:25:45+07:00" />
+<meta property="article:modified_time" content="2021-12-09T20:34:27+07:00" />
 
 <meta itemprop="name" content=".Unix">
-<meta itemprop="description" content=".Unix returns the local Time corresponding to the given Unix time, sec seconds and nsec nanoseconds since January 1, 1970 UTC."><meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-12-01T22:25:45+07:00" />
-<meta itemprop="wordCount" content="85"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="description" content="Converts a time.Time value to the number of seconds elapsed since the Unix epoch, excluding leap seconds. The Unix epoch is 00:00:00&amp;nbsp;UTC on 1 January 1970."><meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-12-09T20:34:27+07:00" />
+<meta itemprop="wordCount" content="64"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
 
 <meta name="twitter:title" content=".Unix"/>
-<meta name="twitter:description" content=".Unix returns the local Time corresponding to the given Unix time, sec seconds and nsec nanoseconds since January 1, 1970 UTC."/>
+<meta name="twitter:description" content="Converts a time.Time value to the number of seconds elapsed since the Unix epoch, excluding leap seconds. The Unix epoch is 00:00:00&amp;nbsp;UTC on 1 January 1970."/>
 <meta name="twitter:site" content="@GoHugoIO"/>
 
 
@@ -240,7 +240,7 @@
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      .Unix returns the local Time corresponding to the given Unix time, sec seconds and nsec nanoseconds since January 1, 1970 UTC.
+      Converts a time.Time value to the number of seconds elapsed since the Unix epoch, excluding leap seconds. The Unix epoch is 00:00:00 UTC on 1 January 1970.
     </div>
   
 
@@ -252,44 +252,26 @@
 <div class="prose" id="prose">
     <h2 class="minor mb1 pt4 primary-color-dark">Syntax</h2>
       <pre class="f5 mb4 ph3 pv2 bg-light-gray" style="border-left:4px solid #0594CB;">.Unix</pre>
+      <pre class="f5 mb4 ph3 pv2 bg-light-gray" style="border-left:4px solid #0594CB;">.UnixMilli</pre>
+      <pre class="f5 mb4 ph3 pv2 bg-light-gray" style="border-left:4px solid #0594CB;">.UnixMicro</pre>
+      <pre class="f5 mb4 ph3 pv2 bg-light-gray" style="border-left:4px solid #0594CB;">.UnixNano</pre>
 
-<h2 id="example-time-passed-since-last-modification">Example: Time Passed Since Last Modification <a class="header-link" href="#example-time-passed-since-last-modification"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>This very simple one-liner uses <code>now.Unix</code> to calculate the amount of time that has passed between the <code>.LastMod</code> for the current page and the last build of the current page.</p>
+<p>The <code>Milli</code>, <code>Micro</code>, and <code>Nano</code> variants return the number of milliseconds, microseconds, and nanoseconds (respectively) elapsed since the Unix epoch.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template">.Date.Unix        --&gt; 1637259694
+.ExpiryDate.Unix  --&gt; 1672559999
+.Lastmod.Unix     --&gt; 1637361786
+.PublishDate.Unix --&gt; 1637421261
 
+(&#34;1970-01-01T00:00:00-00:00&#34; | time.AsTime).Unix --&gt; 0
+(&#34;1970-01-01T00:00:42-00:00&#34; | time.AsTime).Unix --&gt; 42
+(&#34;1970-04-11T01:48:29-08:00&#34; | time.AsTime).Unix --&gt; 8675309
+(&#34;2026-05-02T20:09:31-07:00&#34; | time.AsTime).Unix --&gt; 1777777771
 
-
-
-
-
-
-
-
-
-<div class="code relative" id="time-passed.html"><div class="filename san-serif f6 dib lh-solid pl2 pv2">time-passed.html</div>
-		<button class="needs-js copy bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-		</button>
-		
-	
-	<div class="code-copy-content nt3" >
-		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">div</span><span class="w"> </span><span class="o">(</span><span class="nx">sub</span><span class="w"> </span><span class="nx">now</span><span class="na">.Unix</span><span class="w"> </span><span class="na">.Lastmod.Unix</span><span class="o">)</span><span class="w"> </span><span class="nx">86400</span><span class="w"> </span><span class="cp">}}</span></code></pre></div>
-	</div>
-
-</div>
-
-<p>Since both values are integers, they can be subtracted and then divided by the number of seconds in a day (i.e., <code>60 * 60 * 24 == 86400</code>).</p>
-
-<aside class="admonition note">
-	<div class="note-icon">
-		
-	</div>
-	
-	
-	<div class="admonition-content"><p>Hugo&rsquo;s output is <em>static</em>. For the example above to be realistic, the site needs to be built every day.</p>
-</div>
-</aside>
-
-
+now.Unix      --&gt; 1637447841
+now.UnixMilli --&gt; 1637447841347
+now.UnixMicro --&gt; 1637447841347378
+now.UnixNano  --&gt; 1637447841347378799
+</code></pre></div>
 </div>
 
           
@@ -1646,7 +1628,7 @@
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “.Unix”
-  </a> was last updated: December 1, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/788a6080f6541eee9a87e58f803b489316c1396f">Merge pull request #96 from blackb1rd/hugo/v0.89.4 (788a608)</a>
+  </a> was last updated: December 9, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/8ee6bb505c1182e337d4fe293ebb6b853fce71e6">Merge pull request #97 from blackb1rd/hugo/v0.90.0 (8ee6bb5)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/functions/unix.md" class="

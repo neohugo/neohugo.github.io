@@ -13,7 +13,7 @@
   <title>Data Templates | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.11.3-DEV" />
+  <meta name="generator" content="Hugo 0.13-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,12 +62,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/templates/data-templates/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="templates" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-12-01T22:25:45+07:00" />
+<meta property="article:modified_time" content="2021-12-09T20:34:27+07:00" />
 
 <meta itemprop="name" content="Data Templates">
 <meta itemprop="description" content="In addition to Hugo&#39;s built-in variables, you can specify your own custom data in templates or shortcodes that pull from both local and dynamic sources."><meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-12-01T22:25:45+07:00" />
-<meta itemprop="wordCount" content="1452"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="dateModified" content="2021-12-09T20:34:27+07:00" />
+<meta itemprop="wordCount" content="1457"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
 
@@ -267,7 +267,7 @@
 <div class="prose" id="prose">
 
 <!-- raw HTML omitted -->
-<p>Hugo supports loading data from YAML, JSON, and TOML files located in the <code>data</code> directory in the root of your Hugo project.</p>
+<p>Hugo supports loading data from YAML, JSON, XML, and TOML files located in the <code>data</code> directory in the root of your Hugo project.</p>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/FyPgSuwIMWQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
@@ -275,7 +275,7 @@
 
 <h2 id="the-data-folder">The Data Folder <a class="header-link" href="#the-data-folder"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>The <code>data</code> folder is where you can store additional data for Hugo to use when generating your site. Data files aren&rsquo;t used to generate standalone pages; rather, they&rsquo;re meant to be supplemental to content files. This feature can extend the content in case your front matter fields grow out of control. Or perhaps you want to show a larger dataset in a template (see example below). In both cases, it&rsquo;s a good idea to outsource the data in their own files.</p>
-<p>These files must be YAML, JSON, or TOML files (using the <code>.yml</code>, <code>.yaml</code>, <code>.json</code>, or <code>.toml</code> extension). The data will be accessible as a <code>map</code> in the <code>.Site.Data</code> variable.</p>
+<p>These files must be YAML, JSON, XML, or TOML files (using the <code>.yml</code>, <code>.yaml</code>, <code>.json</code>, <code>.xml</code>, or <code>.toml</code> extension). The data will be accessible as a <code>map</code> in the <code>.Site.Data</code> variable.</p>
 <h2 id="data-files-in-themes">Data Files in Themes <a class="header-link" href="#data-files-in-themes"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Data Files can also be used in <a href="/themes/">Hugo themes</a> but note that theme data files follow the same logic as other template files in the <a href="/templates/lookup-order/">Hugo lookup order</a> (i.e., given two files with the same name and relative path, the file in the root project <code>data</code> directory will override the file in the <code>themes/&lt;THEME&gt;/data</code> directory).</p>
 <p>Therefore, theme authors should take care to not include data files that could be easily overwritten by a user who decides to <a href="/themes/customizing/">customize a theme</a>. For theme-specific data items that shouldn&rsquo;t be overridden, it can be wise to prefix the folder structure with a namespace; e.g. <code>mytheme/data/&lt;THEME&gt;/somekey/...</code>. To check if any such duplicate exists, run hugo with the <code>-v</code> flag.</p>
@@ -378,7 +378,7 @@
       
     
   </div>
-  
+
 </div>
 
 <p>The list of bass players can be accessed via <code>.Site.Data.jazz.bass</code>, a single bass player by adding the filename without the suffix, e.g. <code>.Site.Data.jazz.bass.jacopastorius</code>.</p>
@@ -394,7 +394,7 @@
 &lt;/ul&gt;
 </code></pre><p>Discover a new favorite bass player? Just add another <code>.toml</code> file in the same directory.</p>
 <h2 id="example-accessing-named-values-in-a-data-file">Example: Accessing Named Values in a Data File <a class="header-link" href="#example-accessing-named-values-in-a-data-file"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>Assume you have the following data structure in your <code>User0123.[yml|toml|json]</code> data file located directly in <code>data/</code>:</p>
+<p>Assume you have the following data structure in your <code>User0123.[yml|toml|xml|json]</code> data file located directly in <code>data/</code>:</p>
 
 
 
@@ -466,7 +466,7 @@
       
     
   </div>
-  
+
 </div>
 
 <p>You can use the following code to render the <code>Short Description</code> in your layout:</p>
@@ -584,6 +584,7 @@
 <li><a href="https://yaml.org/spec/">YAML Spec</a></li>
 <li><a href="https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf" title="Specification for JSON, JavaScript Object Notation">JSON Spec</a></li>
 <li><a href="https://tools.ietf.org/html/rfc4180">CSV Spec</a></li>
+<li><a href="https://www.w3.org/XML/">XML Spec</a></li>
 </ul>
 
 </div>
@@ -595,9 +596,11 @@
 	
 	<li><a href="/content-management/front-matter/">Front Matter</a></li>
 	
-	<li><a href="/getting-started/code-toggle/">Code Toggle</a></li>
-	
 	<li><a href="/getting-started/configuration/">Configure Hugo</a></li>
+	
+	<li><a href="/templates/rss/">RSS Templates</a></li>
+	
+	<li><a href="/templates/sitemap-template/">Sitemap Template</a></li>
 	
 	<li><a href="/functions/jsonify/">jsonify</a></li>
 	
@@ -1940,7 +1943,7 @@
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “Data Templates”
-  </a> was last updated: December 1, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/788a6080f6541eee9a87e58f803b489316c1396f">Merge pull request #96 from blackb1rd/hugo/v0.89.4 (788a608)</a>
+  </a> was last updated: December 9, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/8ee6bb505c1182e337d4fe293ebb6b853fce71e6">Merge pull request #97 from blackb1rd/hugo/v0.90.0 (8ee6bb5)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/templates/data-templates.md" class="

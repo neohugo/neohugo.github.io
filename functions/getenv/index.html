@@ -13,7 +13,7 @@
   <title>getenv | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.11.3-DEV" />
+  <meta name="generator" content="Hugo 0.13-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -32,7 +32,7 @@
   
 
   <meta name="description"
-  content="Returns the value of an environment variable.">
+  content="Returns the value of an environment variable, or an empty string if the environment variable is not set.">
 
   
 
@@ -58,21 +58,21 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0594cb">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:title" content="getenv" />
-<meta property="og:description" content="Returns the value of an environment variable." />
+<meta property="og:description" content="Returns the value of an environment variable, or an empty string if the environment variable is not set." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/functions/getenv/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="functions" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-12-01T22:25:45+07:00" />
+<meta property="article:modified_time" content="2021-12-09T20:34:27+07:00" />
 
 <meta itemprop="name" content="getenv">
-<meta itemprop="description" content="Returns the value of an environment variable."><meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-12-01T22:25:45+07:00" />
-<meta itemprop="wordCount" content="48"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="description" content="Returns the value of an environment variable, or an empty string if the environment variable is not set."><meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-12-09T20:34:27+07:00" />
+<meta itemprop="wordCount" content="38"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
 
 <meta name="twitter:title" content="getenv"/>
-<meta name="twitter:description" content="Returns the value of an environment variable."/>
+<meta name="twitter:description" content="Returns the value of an environment variable, or an empty string if the environment variable is not set."/>
 <meta name="twitter:site" content="@GoHugoIO"/>
 
 
@@ -240,7 +240,7 @@
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      Returns the value of an environment variable.
+      Returns the value of an environment variable, or an empty string if the environment variable is not set.
     </div>
   
 
@@ -251,24 +251,24 @@
 
 <div class="prose" id="prose">
     <h2 class="minor mb1 pt4 primary-color-dark">Syntax</h2>
+      <pre class="f5 mb4 ph3 pv2 bg-light-gray" style="border-left:4px solid #0594CB;">os.Getenv VARIABLE</pre>
       <pre class="f5 mb4 ph3 pv2 bg-light-gray" style="border-left:4px solid #0594CB;">getenv VARIABLE</pre>
 
-<p>Takes a string containing the name of the variable as input. Returns
-an empty string if the variable is not set, otherwise returns the
-value of the variable.</p>
-<pre tabindex="0"><code>{{ getenv &quot;HOME&quot; }}
-</code></pre>
-<aside class="admonition note">
-	<div class="note-icon">
-		
-	</div>
-	
-	
-	<div class="admonition-content"><p>In Unix-like environments, the variable must also be exported in order to be seen by <code>hugo</code>.</p>
-</div>
-</aside>
+<p>Examples:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">os</span><span class="na">.Getenv</span><span class="w"> </span><span class="s">&#34;HOME&#34;</span><span class="w"> </span><span class="cp">}}</span> --&gt; /home/victor
+<span class="cp">{{</span><span class="w"> </span><span class="nx">os</span><span class="na">.Getenv</span><span class="w"> </span><span class="s">&#34;USER&#34;</span><span class="w"> </span><span class="cp">}}</span> --&gt; victor
+</code></pre></div><p>You can pass values when building your site:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">MY_VAR1</span><span class="o">=</span>foo <span class="nv">MY_VAR2</span><span class="o">=</span>bar hugo
 
+OR
 
+<span class="nb">export</span> <span class="nv">MY_VAR1</span><span class="o">=</span>foo
+<span class="nb">export</span> <span class="nv">MY_VAR2</span><span class="o">=</span>bar
+hugo
+</code></pre></div><p>And then retrieve the values within a template:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">os</span><span class="na">.Getenv</span><span class="w"> </span><span class="s">&#34;MY_VAR1&#34;</span><span class="w"> </span><span class="cp">}}</span> --&gt; foo
+<span class="cp">{{</span><span class="w"> </span><span class="nx">os</span><span class="na">.Getenv</span><span class="w"> </span><span class="s">&#34;MY_VAR2&#34;</span><span class="w"> </span><span class="cp">}}</span> --&gt; bar
+</code></pre></div>
 </div>
 
           
@@ -1610,7 +1610,7 @@ value of the variable.</p>
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “getenv”
-  </a> was last updated: December 1, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/788a6080f6541eee9a87e58f803b489316c1396f">Merge pull request #96 from blackb1rd/hugo/v0.89.4 (788a608)</a>
+  </a> was last updated: December 9, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/8ee6bb505c1182e337d4fe293ebb6b853fce71e6">Merge pull request #97 from blackb1rd/hugo/v0.90.0 (8ee6bb5)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/functions/getenv.md" class="

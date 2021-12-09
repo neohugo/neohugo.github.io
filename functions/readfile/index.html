@@ -13,7 +13,7 @@
   <title>readFile | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.11.3-DEV" />
+  <meta name="generator" content="Hugo 0.13-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -32,7 +32,7 @@
   
 
   <meta name="description"
-  content="Reads a file from disk relative to the current project working directory and returns a string.">
+  content="Returns the contents of a file.">
 
   
 
@@ -58,21 +58,21 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0594cb">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:title" content="readFile" />
-<meta property="og:description" content="Reads a file from disk relative to the current project working directory and returns a string." />
+<meta property="og:description" content="Returns the contents of a file." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/functions/readfile/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="functions" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-12-01T22:25:45+07:00" />
+<meta property="article:modified_time" content="2021-12-09T20:34:27+07:00" />
 
 <meta itemprop="name" content="readFile">
-<meta itemprop="description" content="Reads a file from disk relative to the current project working directory and returns a string."><meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-12-01T22:25:45+07:00" />
-<meta itemprop="wordCount" content="100"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="description" content="Returns the contents of a file."><meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-12-09T20:34:27+07:00" />
+<meta itemprop="wordCount" content="88"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
 
 <meta name="twitter:title" content="readFile"/>
-<meta name="twitter:description" content="Reads a file from disk relative to the current project working directory and returns a string."/>
+<meta name="twitter:description" content="Returns the contents of a file."/>
 <meta name="twitter:site" content="@GoHugoIO"/>
 
 
@@ -240,7 +240,7 @@
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      Reads a file from disk relative to the current project working directory and returns a string.
+      Returns the contents of a file.
     </div>
   
 
@@ -251,12 +251,17 @@
 
 <div class="prose" id="prose">
     <h2 class="minor mb1 pt4 primary-color-dark">Syntax</h2>
+      <pre class="f5 mb4 ph3 pv2 bg-light-gray" style="border-left:4px solid #0594CB;">os.ReadFile PATH</pre>
       <pre class="f5 mb4 ph3 pv2 bg-light-gray" style="border-left:4px solid #0594CB;">readFile PATH</pre>
 
-<p>Note that the filename must be relative to the current project working directory, or the project&rsquo;s <code>/content</code> folder.</p>
-<p>So, if you have a file with the name <code>README.txt</code> in the root of your project with the content <code>Hugo Rocks!</code>:</p>
-<pre tabindex="0"><code>{{readFile &quot;README.txt&quot;}} → &quot;Hugo Rocks!&quot;
-</code></pre><p>If you receive a &ldquo;file doesn&rsquo;t exist&rdquo; error with a path listed, do take note that the path is the last one checked by the function, and may not accurately reflect your target. You should generally double-check your path for mistakes.</p>
+<p>The <code>os.ReadFile</code> function attempts to resolve the path relative to the root of your project directory. If a matching file is not found, it will attempt to resolve the path relative to the <a href="/getting-started/configuration/#contentdir"><code>contentDir</code></a>. A leading path separator (<code>/</code>) is optional.</p>
+<p>With a file named README.md in the root of your project directory:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">This is **bold** text.
+</code></pre></div><p>This template code:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">os</span><span class="na">.ReadFile</span><span class="w"> </span><span class="s">&#34;README.md&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</code></pre></div><p>Produces:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">This is **bold** text.
+</code></pre></div><p>Note that <code>os.ReadFile</code> returns raw (uninterpreted) content.</p>
 <p>For more information on using <code>readDir</code> and <code>readFile</code> in your templates, see <a href="/templates/files/">Local File Templates</a>.</p>
 
 </div>
@@ -1613,7 +1618,7 @@
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “readFile”
-  </a> was last updated: December 1, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/788a6080f6541eee9a87e58f803b489316c1396f">Merge pull request #96 from blackb1rd/hugo/v0.89.4 (788a608)</a>
+  </a> was last updated: December 9, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/8ee6bb505c1182e337d4fe293ebb6b853fce71e6">Merge pull request #97 from blackb1rd/hugo/v0.90.0 (8ee6bb5)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/functions/readfile.md" class="

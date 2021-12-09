@@ -16,7 +16,7 @@
     
     
     <item>
-      <title>News: Hugo 0.89.4: A couple of Bug Fixes</title>
+      <title>News: Hugo 0.89.4: One Bug Fix</title>
       <link>https://gohugo.io/news/0.89.4-relnotes/</link>
       <pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate>
       
@@ -24,7 +24,7 @@
       <description>
         
         
-        &lt;p&gt;This is a bug-fix release with one important fix.&lt;/p&gt;
+        &lt;p&gt;This is a bug-fix release with one important fix for people using &lt;code&gt;hugo new&lt;/code&gt; to create new content:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Fix content dir resolution when main project is a Hugo Module &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/2e70f61fb04cea08ef6598728a57637ae2cc199c&#34;&gt;2e70f61f&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9177&#34;&gt;#9177&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -93,7 +93,7 @@
     </item>
     
     <item>
-      <title>News: 0.89.0</title>
+      <title>News: Fine Grained File Filters</title>
       <link>https://gohugo.io/news/0.89.0-relnotes/</link>
       <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
       
@@ -101,11 +101,14 @@
       <description>
         
         
-        &lt;p&gt;This release is a dependency refresh (the new Goldmark verion comes with a lot of bug fixes, as one example), many bug fixes, but also some nice new features:&lt;/p&gt;
+        
+        <![CDATA[<img src="https://gohugo.io/news/0.89.0-relnotes/featured_hu8f869189eb2dd98af38fbcfa6bc2c5e7_104046_640x0_resize_catmullrom_3.png" width="640" height="320"/>]]>
+        
+        &lt;p&gt;This release is a dependency refresh (the new Goldmark version comes with a lot of bug fixes, as one example), many bug fixes, but also some nice new features:&lt;/p&gt;
 &lt;p&gt;We have added the &lt;a href=&#34;https://gohugo.io/hugo-modules/configuration/#module-config-mounts&#34;&gt;configuration settings&lt;/a&gt; &lt;strong&gt;includeFiles&lt;/strong&gt; and &lt;strong&gt;excludeFiles&lt;/strong&gt; to the mount configuration. This allows fine grained control over what files to include, and it works for all of Hugo&amp;rsquo;s file systems (including &lt;code&gt;/static&lt;/code&gt;).&lt;/p&gt;
 &lt;p&gt;We have also &lt;a href=&#34;https://github.com/gohugoio/hugo/pull/9045&#34;&gt;reimplemented archetypes&lt;/a&gt;. The old implementation had some issues, mostly related to the context (e.g. name, file paths) passed to the template. This new implementation is using the exact same code path for evaluating the pages as in a regular build. This also makes it more robust and easier to reason about in a multilingual setup. Now, if you are explicit about the target path, Hugo will now always pick the correct mount and language:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo new content/en/posts/my-first-post.md
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This release represents &lt;strong&gt;50 contributions by 13 contributors&lt;/strong&gt; to the main Hugo code base.&lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; leads the Hugo development with a significant amount of contributions, but also a big shoutout to &lt;a href=&#34;https://github.com/apps/dependabot&#34;&gt;@dependabot[bot]&lt;/a&gt;, &lt;a href=&#34;https://github.com/jmooring&#34;&gt;@jmooring&lt;/a&gt;, and &lt;a href=&#34;https://github.com/anthonyfok&#34;&gt;@anthonyfok&lt;/a&gt; for their ongoing contributions.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This release represents &lt;strong&gt;50 contributions by 13 contributors&lt;/strong&gt; to the main Hugo code base. &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; leads the Hugo development with a significant amount of contributions, but also a big shoutout to &lt;a href=&#34;https://github.com/apps/dependabot&#34;&gt;@dependabot[bot]&lt;/a&gt;, &lt;a href=&#34;https://github.com/jmooring&#34;&gt;@jmooring&lt;/a&gt;, and &lt;a href=&#34;https://github.com/anthonyfok&#34;&gt;@anthonyfok&lt;/a&gt; for their ongoing contributions.
 And thanks to &lt;a href=&#34;https://github.com/digitalcraftsman&#34;&gt;@digitalcraftsman&lt;/a&gt; for his ongoing work on keeping the themes site in pristine condition.&lt;/p&gt;
 &lt;p&gt;Many have also been busy writing and fixing the documentation in &lt;a href=&#34;https://github.com/gohugoio/hugoDocs&#34;&gt;hugoDocs&lt;/a&gt;,
 which has received &lt;strong&gt;23 contributions by 9 contributors&lt;/strong&gt;. A special thanks to &lt;a href=&#34;https://github.com/jmooring&#34;&gt;@jmooring&lt;/a&gt;, &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;, &lt;a href=&#34;https://github.com/coliff&#34;&gt;@coliff&lt;/a&gt;, and &lt;a href=&#34;https://github.com/vipkr&#34;&gt;@vipkr&lt;/a&gt; for their work on the documentation site.&lt;/p&gt;
@@ -119,10 +122,10 @@ which has received &lt;strong&gt;23 contributions by 9 contributors&lt;/strong&g
 &lt;ul&gt;
 &lt;li&gt;Hugo now writes an empty file named &lt;code&gt;.hugo_build.lock&lt;/code&gt; to the root of the project when building (also when doing &lt;code&gt;hugo new mypost.md&lt;/code&gt; and other commands that requires a build). We recommend you just leave this file alone. Put it in &lt;code&gt;.gitignore&lt;/code&gt; or similar if you don&amp;rsquo;t want the file in your source repository.&lt;/li&gt;
 &lt;li&gt;We have updated to ESBuild &lt;code&gt;v0.13.12&lt;/code&gt;. The release notes for &lt;a href=&#34;https://github.com/evanw/esbuild/releases/tag/v0.13.0&#34;&gt;v0.13.0&lt;/a&gt; mentions a potential breaking change.&lt;/li&gt;
-&lt;li&gt;We now only build AMD64 release binaries (see &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9102&#34;&gt;this issue&lt;/a&gt;) for the Unix OSes (e.g. NetBSD). If need, say, a binary for ARM64, you need to build it yourself.&lt;/li&gt;
-&lt;li&gt;We now build only one release binary/archive for MacOS, see &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9035&#34;&gt;this issue&lt;/a&gt; that works on both Intel and the new Arm M1 systems.&lt;/li&gt;
+&lt;li&gt;We now only build AMD64 release binaries (see &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9102&#34;&gt;this issue&lt;/a&gt;) for the Unix OSes (e.g. NetBSD). If you need, say, a binary for ARM64, you need to build it yourself.&lt;/li&gt;
+&lt;li&gt;We now build only one release binary/archive for MacOS (see &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9035&#34;&gt;this issue&lt;/a&gt;) that works on both Intel and the new Arm M1 systems.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;.File.ContentBaseName&lt;/code&gt; now returns the owning directory name for all bundles (branch an leaf). This is a bug fix, but worth mentioning. See &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/9112&#34;&gt;this issue&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;We have updated the Twitter shortcode to use Twitter&amp;rsquo;s new API. See [thiss issue] for details.&lt;/li&gt;
+&lt;li&gt;We have updated the Twitter shortcode to use Twitter&amp;rsquo;s new API. See &lt;a href=&#34;https://github.com/gohugoio/hugo/pull/9106&#34;&gt;this issue&lt;/a&gt; for details.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;enhancements&#34;&gt;Enhancements &lt;a class=&#34;header-link&#34; href=&#34;#enhancements&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;templates&#34;&gt;Templates &lt;a class=&#34;header-link&#34; href=&#34;#templates&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
@@ -1094,9 +1097,6 @@ SiteNew/Regular_List_terms-16                53.5k ± 0%     53.4k ± 0%   -0.18
   &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;minify&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;tdewolff&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;minify&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;tdewolff&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
       &lt;span class=&#34;nx&#34;&gt;keepComments&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
-
-
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       &lt;/div&gt;
       
@@ -1122,7 +1122,7 @@ SiteNew/Regular_List_terms-16                53.5k ± 0%     53.4k ± 0%   -0.18
       
     
   &lt;/div&gt;
-  
+
 &lt;/div&gt;
 
 &lt;p&gt;The default value for this setting is &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
@@ -10897,7 +10897,6 @@ which has received &lt;strong&gt;11 contributions by 6 contributors&lt;/strong&g
 &lt;span class=&#34;nx&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/myspa/**&amp;#39;&lt;/span&gt;
 &lt;span class=&#34;nx&#34;&gt;status&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;200&lt;/span&gt;
 &lt;span class=&#34;nx&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/myspa/&amp;#39;&lt;/span&gt;
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       &lt;/div&gt;
       
@@ -10924,7 +10923,7 @@ which has received &lt;strong&gt;11 contributions by 6 contributors&lt;/strong&g
       
     
   &lt;/div&gt;
-  
+
 &lt;/div&gt;
 
 &lt;h2 id=&#34;enhancements&#34;&gt;Enhancements &lt;a class=&#34;header-link&#34; href=&#34;#enhancements&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;

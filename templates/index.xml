@@ -37,7 +37,7 @@ Basic Syntax  Go Templates are HTML files with the addition of variables and fun
       <description>This page describes how to properly configure your site with the media types and output formats, as well as where to create your templates for your custom outputs.
 Media Types  A media type (also known as MIME type and content type) is a two-part identifier for file formats and format contents transmitted on the Internet.
 This is the full set of built-in media types in Hugo:
- type suffixes   application/javascript [js]   application/json [json]   application/manifest&amp;#43;json [webmanifest]   application/octet-stream []   application/rss&amp;#43;xml [xml]   application/toml [toml]   application/typescript [ts]   application/xml [xml]   application/yaml [yaml yml]   image/jpeg [jpg jpeg]   image/png [png]   image/svg&amp;#43;xml [svg]   image/webp [webp]   text/calendar [ics]   text/css [css]   text/csv [csv]   text/html [html]   text/jsx [jsx]   text/plain [txt]   text/tsx [tsx]   text/x-sass [sass]   text/x-scss [scss]   video/3gpp [3gpp 3gp]   video/mp4 [mp4]   video/mpeg [mpg mpeg]   video/ogg [ogv]   video/webm [webm]   video/x-msvideo [avi]   Note:</description>
+ type suffixes   application/javascript [js]   application/json [json]   application/manifest&amp;#43;json [webmanifest]   application/octet-stream []   application/rss&amp;#43;xml [xml rss]   application/toml [toml]   application/typescript [ts]   application/xml [xml]   application/yaml [yaml yml]   image/jpeg [jpg jpeg]   image/png [png]   image/svg&amp;#43;xml [svg]   image/webp [webp]   text/calendar [ics]   text/css [css]   text/csv [csv]   text/html [html]   text/jsx [jsx]   text/plain [txt]   text/tsx [tsx]   text/x-sass [sass]   text/x-scss [scss]   video/3gpp [3gpp 3gp]   video/mp4 [mp4]   video/mpeg [mpg mpeg]   video/ogg [ogv]   video/webm [webm]   video/x-msvideo [avi]   Note:</description>
     </item>
     
     <item>
@@ -125,7 +125,7 @@ The following are common use cases for content views:
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/templates/data-templates/</guid>
-      <description>Hugo supports loading data from YAML, JSON, and TOML files located in the data directory in the root of your Hugo project.
+      <description>Hugo supports loading data from YAML, JSON, XML, and TOML files located in the data directory in the root of your Hugo project.
   The Data Folder  The data folder is where you can store additional data for Hugo to use when generating your site. Data files aren&amp;rsquo;t used to generate standalone pages; rather, they&amp;rsquo;re meant to be supplemental to content files. This feature can extend the content in case your front matter fields grow out of control.</description>
     </item>
     

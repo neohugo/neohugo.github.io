@@ -26,7 +26,7 @@ Basic Syntax  Go Templates are HTML files with the addition of variables and fun
       <guid>https://gohugo.io/content-management/organization/</guid>
       <description>Page Bundles  Hugo 0.32 announced page-relative images and other resources packaged into Page Bundles.
 These terms are connected, and you also need to read about Page Resources and Image Processing to get the full picture.
-  The illustration shows 3 bundles. Note that the home page bundle cannot contain other content pages, but other files (images etc.) are fine.     The bundle documentation is work in progress.</description>
+  The illustration shows three bundles. Note that the home page bundle cannot contain other content pages, although other files (images etc.) are allowed.     The bundle documentation is a work in progress.</description>
     </item>
     
     <item>
@@ -72,15 +72,6 @@ Hugo currently provides pre-built binaries for the following:
       <description>New Site Scaffolding    Running the hugo new site generator from the command line will create a directory structure with the following elements:
 . ├── archetypes ├── config.toml ├── content ├── data ├── layouts ├── static └── themes Directory Structure Explained  The following is a high-level overview of each of the directories with links to each of their respective sections within the Hugo docs.
  archetypes You can create new content files in Hugo using the hugo new command.</description>
-    </item>
-    
-    <item>
-      <title>Code Toggle</title>
-      <link>https://gohugo.io/getting-started/code-toggle/</link>
-      <pubDate>Fri, 16 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://gohugo.io/getting-started/code-toggle/</guid>
-      <description>The Config Toggler!  This is an example for the Config Toggle shortcode. Its purpose is to let users choose a Config language by clicking on its corresponding tab. Upon doing so, every Code toggler on the page will be switched to the target language. Also, target language will be saved in user&amp;rsquo;s localStorage so when they go to a different pages, Code Toggler display their last &amp;ldquo;toggled&amp;rdquo; config language.</description>
     </item>
     
     <item>

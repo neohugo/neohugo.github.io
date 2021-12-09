@@ -13,7 +13,7 @@
   <title>Functions Quick Reference | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.11.3-DEV" />
+  <meta name="generator" content="Hugo 0.13-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -1770,7 +1770,7 @@
 
     <div class="lh-copy links">
       
-          <code>transform.Unmarshal</code> (alias <code>unmarshal</code>) parses the input and converts it into a map or an array. Supported formats are JSON, TOML, YAML and CSV.
+          <code>transform.Unmarshal</code> (alias <code>unmarshal</code>) parses the input and converts it into a map or an array. Supported formats are JSON, TOML, YAML, XML and CSV.
         
 
         <a href="/functions/transform.unmarshal/" class="f6 mt2 db link primary-color dim">
@@ -2120,7 +2120,7 @@
 
     <div class="lh-copy links">
       
-          Gets a file information of a given path.
+          Returns a FileInfo structure describing a file or directory.
         
 
         <a href="/functions/os.stat/" class="f6 mt2 db link primary-color dim">
@@ -2320,7 +2320,7 @@
 
     <div class="lh-copy links">
       
-          Checks whether a file exists under the given path.
+          Checks for file or directory existence.
         
 
         <a href="/functions/fileexists/" class="f6 mt2 db link primary-color dim">
@@ -2698,7 +2698,7 @@ You can find its example use in menu templates.
 
     <div class="lh-copy links">
       
-          .Unix returns the local Time corresponding to the given Unix time, sec seconds and nsec nanoseconds since January 1, 1970 UTC.
+          Converts a time.Time value to the number of seconds elapsed since the Unix epoch, excluding leap seconds. The Unix epoch is 00:00:00 UTC on 1 January 1970.
         
 
         <a href="/functions/unix/" class="f6 mt2 db link primary-color dim">
@@ -3123,7 +3123,7 @@ You can find its example use in menu templates.
 
     <div class="lh-copy links">
       
-          Returns the value of an environment variable.
+          Returns the value of an environment variable, or an empty string if the environment variable is not set.
         
 
         <a href="/functions/getenv/" class="f6 mt2 db link primary-color dim">
@@ -3173,7 +3173,7 @@ You can find its example use in menu templates.
 
     <div class="lh-copy links">
       
-          Takes a string of code and language declaration and uses Chroma to return syntax-highlighted HTML.
+          Renders code with a syntax highlighter.
         
 
         <a href="/functions/highlight/" class="f6 mt2 db link primary-color dim">
@@ -3848,7 +3848,7 @@ You can find its example use in menu templates.
 
     <div class="lh-copy links">
       
-          Gets a directory listing from a directory relative to the current working directory.
+          Returns an array of FileInfo structures sorted by filename, one element for each directory entry.
         
 
         <a href="/functions/readdir/" class="f6 mt2 db link primary-color dim">
@@ -3873,7 +3873,7 @@ You can find its example use in menu templates.
 
     <div class="lh-copy links">
       
-          Reads a file from disk relative to the current project working directory and returns a string.
+          Returns the contents of a file.
         
 
         <a href="/functions/readfile/" class="f6 mt2 db link primary-color dim">

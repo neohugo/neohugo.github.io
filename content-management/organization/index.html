@@ -13,7 +13,7 @@
   <title>Content Organization | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.11.3-DEV" />
+  <meta name="generator" content="Hugo 0.13-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,12 +62,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/content-management/organization/" /><meta property="og:image" content="https://gohugo.io/content-management/organization/1-featured-content-bundles.png"/><meta property="article:section" content="content-management" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-12-01T22:25:45+07:00" />
+<meta property="article:modified_time" content="2021-12-09T20:34:27+07:00" />
 
 <meta itemprop="name" content="Content Organization">
 <meta itemprop="description" content="Hugo assumes that the same structure that works to organize your source content is used to organize the rendered site."><meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-12-01T22:25:45+07:00" />
-<meta itemprop="wordCount" content="1039"><meta itemprop="image" content="https://gohugo.io/content-management/organization/1-featured-content-bundles.png">
+<meta itemprop="dateModified" content="2021-12-09T20:34:27+07:00" />
+<meta itemprop="wordCount" content="1045"><meta itemprop="image" content="https://gohugo.io/content-management/organization/1-featured-content-bundles.png">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/content-management/organization/1-featured-content-bundles.png"/>
 <meta name="twitter:title" content="Content Organization"/>
@@ -273,7 +273,7 @@
 	<small>
 	
 	
-The illustration shows 3 bundles. Note that the home page bundle cannot contain other content pages, but other files (images etc.) are fine.
+The illustration shows three bundles. Note that the home page bundle cannot contain other content pages, although other files (images etc.) are allowed.
 
 	
 	</small>
@@ -286,14 +286,14 @@ The illustration shows 3 bundles. Note that the home page bundle cannot contain 
 	</div>
 	
 	
-	<div class="admonition-content"><p>The bundle documentation is <strong>work in progress</strong>. We will publish more comprehensive docs about this soon.</p>
+	<div class="admonition-content"><p>The bundle documentation is a <strong>work in progress</strong>. We will publish more comprehensive docs about this soon.</p>
 </div>
 </aside>
 
 <h2 id="organization-of-content-source">Organization of Content Source <a class="header-link" href="#organization-of-content-source"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>In Hugo, your content should be organized in a manner that reflects the rendered website.</p>
 <p>While Hugo supports content nested at any level, the top levels (i.e. <code>content/&lt;DIRECTORIES&gt;</code>) are special in Hugo and are considered the content type used to determine layouts etc. To read more about sections, including how to nest them, see <a href="/content-management/sections/">sections</a>.</p>
-<p>Without any additional configuration, the following will just work:</p>
+<p>Without any additional configuration, the following will automatically work:</p>
 <pre tabindex="0"><code>.
 └── content
     └── about
@@ -321,7 +321,7 @@ The illustration shows 3 bundles. Note that the home page bundle cannot contain 
 </div>
 </aside>
 
-<p>You can keep one <code>_index.md</code> for your homepage and one in each of your content sections, taxonomies, and taxonomy terms. The following shows typical placement of an <code>_index.md</code> that would contain content and front matter for a <code>posts</code> section list page on a Hugo website:</p>
+<p>You can create one <code>_index.md</code> for your homepage and one in each of your content sections, taxonomies, and taxonomy terms. The following shows typical placement of an <code>_index.md</code> that would contain content and front matter for a <code>posts</code> section list page on a Hugo website:</p>
 <pre tabindex="0"><code>.         url
 .       ⊢--^-⊣
 .        path    slug
@@ -338,15 +338,15 @@ content/posts/_index.md
         permalink
 ⊢----------^-------------⊣
 https://example.com/posts/index.html
-</code></pre><p>The <a href="/content-management/sections/">sections</a> can be nested as deeply as you need. The important part to understand is, that to make the section tree fully navigational, at least the lower-most section needs a content file. (i.e. <code>_index.md</code>).</p>
+</code></pre><p>The <a href="/content-management/sections/">sections</a> can be nested as deeply as you want. The important thing to understand is that to make the section tree fully navigational, at least the lower-most section must include a content file. (i.e. <code>_index.md</code>).</p>
 <h3 id="single-pages-in-sections">Single Pages in Sections <a class="header-link" href="#single-pages-in-sections"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>Single content files in each of your sections are going to be rendered as <a href="/templates/single-page-templates/">single page templates</a>. Here is an example of a single <code>post</code> within <code>posts</code>:</p>
+<p>Single content files in each of your sections will be rendered as <a href="/templates/single-page-templates/">single page templates</a>. Here is an example of a single <code>post</code> within <code>posts</code>:</p>
 <pre tabindex="0"><code>                   path (&quot;posts/my-first-hugo-post.md&quot;)
 .       ⊢-----------^------------⊣
 .      section        slug
 .       ⊢-^-⊣⊢--------^----------⊣
 content/posts/my-first-hugo-post.md
-</code></pre><p>When Hugo builds your site, the content will be outputted to the following destination:</p>
+</code></pre><p>When Hugo builds your site, the content will be output to the following destination:</p>
 <pre tabindex="0"><code>
                                url (&quot;/posts/my-first-hugo-post/&quot;)
                    ⊢------------^----------⊣
@@ -356,9 +356,9 @@ content/posts/my-first-hugo-post.md
 ⊢--------------------^---------------------⊣
 https://example.com/posts/my-first-hugo-post/index.html
 </code></pre><h2 id="paths-explained">Paths Explained <a class="header-link" href="#paths-explained"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>The following concepts will provide more insight into the relationship between your project&rsquo;s organization and the default behaviors of Hugo when building the output website.</p>
+<p>The following concepts provide more insight into the relationship between your project&rsquo;s organization and the default Hugo behavior when building output for the website.</p>
 <h3 id="section"><code>section</code> <a class="header-link" href="#section"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>A default content type is determined by a piece of content&rsquo;s section. <code>section</code> is determined by the location within the project&rsquo;s <code>content</code> directory. <code>section</code> <em>cannot</em> be specified or overridden in front matter.</p>
+<p>A default content type is determined by the section in which a content item is stored. <code>section</code> is determined by the location within the project&rsquo;s <code>content</code> directory. <code>section</code> <em>cannot</em> be specified or overridden in front matter.</p>
 <h3 id="slug"><code>slug</code> <a class="header-link" href="#slug"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>A content&rsquo;s <code>slug</code> is either <code>name.extension</code> or <code>name/</code>. The value for <code>slug</code> is determined by</p>
 <ul>
@@ -374,17 +374,17 @@ https://example.com/posts/my-first-hugo-post/index.html
 <h3 id="url"><code>url</code> <a class="header-link" href="#url"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>The <code>url</code> is the relative URL for the piece of content. The <code>url</code></p>
 <ul>
-<li>is based on the content&rsquo;s location within the directory structure OR</li>
-<li>is defined in front matter and <em>overrides all the above</em></li>
+<li>is based on the content item&rsquo;s location within the directory structure OR</li>
+<li>is defined in front matter, in which case it <em>overrides all the above</em></li>
 </ul>
 <h2 id="override-destination-paths-via-front-matter">Override Destination Paths via Front Matter <a class="header-link" href="#override-destination-paths-via-front-matter"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>Hugo believes that you organize your content with a purpose. The same structure that works to organize your source content is used to organize the rendered site. As displayed above, the organization of the source content will be mirrored in the destination.</p>
-<p>There are times where you may need more control over your content. In these cases, there are fields that can be specified in the front matter to determine the destination of a specific piece of content.</p>
-<p>The following items are defined in this order for a specific reason: items explained further down in the list will override earlier items, and not all of these items can be defined in front matter:</p>
+<p>Hugo assumes that your content is organized with a purpose. The same structure that you use to organize your source content is used to organize the rendered site. As displayed above, the organization of the source content will be mirrored at the destination.</p>
+<p>There are times when you may need more fine-grained control over the content organization. In such cases, the front matter field can be used to determine the destination of a specific piece of content.</p>
+<p>The following items are defined in a specific order for a reason: items explained lower down in the list override higher items. Note that not all items can be defined in front matter.</p>
 <h3 id="filename"><code>filename</code> <a class="header-link" href="#filename"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>This isn&rsquo;t in the front matter, but is the actual name of the file minus the extension. This will be the name of the file in the destination (e.g., <code>content/posts/my-post.md</code> becomes <code>example.com/posts/my-post/</code>).</p>
+<p><code>filename</code> is not a front matter field. It is the actual file name, minus the extension. This will be the name of the file in the destination (e.g., <code>content/posts/my-post.md</code> becomes <code>example.com/posts/my-post/</code>).</p>
 <h3 id="slug-1"><code>slug</code> <a class="header-link" href="#slug-1"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>When defined in the front matter, the <code>slug</code> can take the place of the filename for the destination.</p>
+<p>When defined in the front matter, the <code>slug</code> can take the place of the filename in the destination.</p>
 
 
 
@@ -411,9 +411,9 @@ slug: &#34;new-post&#34;
 <p>This will render to the following destination according to Hugo&rsquo;s default behavior:</p>
 <pre tabindex="0"><code>example.com/posts/new-post/
 </code></pre><h3 id="section-1"><code>section</code> <a class="header-link" href="#section-1"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p><code>section</code> is determined by a content&rsquo;s location on disk and <em>cannot</em> be specified in the front matter. See <a href="/content-management/sections/">sections</a> for more information.</p>
+<p><code>section</code> is determined by a content item&rsquo;s location on disk and <em>cannot</em> be specified in the front matter. See <a href="/content-management/sections/">sections</a> for more information.</p>
 <h3 id="type"><code>type</code> <a class="header-link" href="#type"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>A content&rsquo;s <code>type</code> is also determined by its location on disk but, unlike <code>section</code>, it <em>can</em> be specified in the front matter. See <a href="/content-management/types/">types</a>. This can come in especially handy when you want a piece of content to render using a different layout. In the following example, you can create a layout at <code>layouts/new/mylayout.html</code> that Hugo will use to render this piece of content, even in the midst of many other posts.</p>
+<p>A content item&rsquo;s <code>type</code> is also determined by its location on disk but, unlike <code>section</code>, it <em>can</em> be specified in the front matter. See <a href="/content-management/types/">types</a>. This can come in especially handy when you want a piece of content to render using a different layout. In the following example, you can create a layout at <code>layouts/new/mylayout.html</code> that Hugo will use to render this piece of content, even in the midst of many other posts.</p>
 
 
 
@@ -442,7 +442,7 @@ layout: mylayout
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <h3 id="url-1"><code>url</code> <a class="header-link" href="#url-1"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>A complete URL can be provided. This will override all the above as it pertains to the end destination. This must be the path from the baseURL (starting with a <code>/</code>). <code>url</code> will be used exactly as it provided in the front matter and will ignore the <code>--uglyURLs</code> setting in your site configuration:</p>
+<p>A complete URL can be provided. This will override all the above as it pertains to the end destination. This must be the path from the baseURL (starting with a <code>/</code>). <code>url</code> will be used exactly as it is defined in the front matter, and will ignore the <code>--uglyURLs</code> setting in your site configuration:</p>
 
 
 
@@ -1826,7 +1826,7 @@ url: /blog/new-url/
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
     “Content Organization”
-  </a> was last updated: December 1, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/788a6080f6541eee9a87e58f803b489316c1396f">Merge pull request #96 from blackb1rd/hugo/v0.89.4 (788a608)</a>
+  </a> was last updated: December 9, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/8ee6bb505c1182e337d4fe293ebb6b853fce71e6">Merge pull request #97 from blackb1rd/hugo/v0.90.0 (8ee6bb5)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/content-management/organization/index.md" class="

@@ -54,15 +54,6 @@ hugo help The output you see in your console should be similar to the following:
     </item>
     
     <item>
-      <title>Code Toggle</title>
-      <link>https://gohugo.io/getting-started/code-toggle/</link>
-      <pubDate>Fri, 16 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://gohugo.io/getting-started/code-toggle/</guid>
-      <description>The Config Toggler!  This is an example for the Config Toggle shortcode. Its purpose is to let users choose a Config language by clicking on its corresponding tab. Upon doing so, every Code toggler on the page will be switched to the target language. Also, target language will be saved in user&amp;rsquo;s localStorage so when they go to a different pages, Code Toggler display their last &amp;ldquo;toggled&amp;rdquo; config language.</description>
-    </item>
-    
-    <item>
       <title>Configure Hugo</title>
       <link>https://gohugo.io/getting-started/configuration/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
