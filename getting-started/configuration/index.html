@@ -13,7 +13,7 @@
   <title>Configure Hugo | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.13-DEV" />
+  <meta name="generator" content="Hugo 0.14-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -60,17 +60,15 @@
 <meta property="og:title" content="Configure Hugo" />
 <meta property="og:description" content="How to configure your Hugo site." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gohugo.io/getting-started/configuration/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="getting-started" />
+<meta property="og:url" content="https://gohugo.io/getting-started/configuration/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_10905119886565882197.png"/><meta property="article:section" content="getting-started" />
 <meta property="article:published_time" content="2017-01-02T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-12-09T20:34:27+07:00" />
-
+<meta property="article:modified_time" content="2021-12-19T19:59:23+07:00" />
 <meta itemprop="name" content="Configure Hugo">
 <meta itemprop="description" content="How to configure your Hugo site."><meta itemprop="datePublished" content="2017-01-02T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-12-09T20:34:27+07:00" />
-<meta itemprop="wordCount" content="3683"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="dateModified" content="2021-12-19T19:59:23+07:00" />
+<meta itemprop="wordCount" content="3705"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
-
+<meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_10905119886565882197.png"/>
 <meta name="twitter:title" content="Configure Hugo"/>
 <meta name="twitter:description" content="How to configure your Hugo site."/>
 <meta name="twitter:site" content="@GoHugoIO"/>
@@ -172,7 +170,8 @@
     <label class="clip" for="search-input">Search</label>
     <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: url('/images/icon-search.png') 5px 11px/16px 16px no-repeat; background-color: rgba(255,255,255,0);">
   </fieldset>
-</form></div>
+</form>
+</div>
 
     <span class="absolute mt1 mt2-l pr3 right-0 top-0">
 
@@ -305,53 +304,35 @@ hugo --config a.toml,b.toml,c.toml
 <li>Each file&rsquo;s content must be top-level, for example:</li>
 </ul>
 
-
-
-  
-
-
 <div class="code relative" id="config">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        config.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">Params</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">foo</span><span class="p">:</span><span class="w"> </span><span class="l">bar</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">Params</span><span class="p">]</span>
   <span class="nx">foo</span> <span class="p">=</span> <span class="s1">&#39;bar&#39;</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;Params&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -360,74 +341,46 @@ hugo --config a.toml,b.toml,c.toml
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 
-
-
-  
-
-
 <div class="code relative" id="params">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        params.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">params.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">foo</span><span class="p">:</span><span class="w"> </span><span class="l">bar</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">foo</span> <span class="p">=</span> <span class="s1">&#39;bar&#39;</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;foo&#34;</span><span class="p">:</span> <span class="s2">&#34;bar&#34;</span>
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <ul>
@@ -477,39 +430,23 @@ hugo --config a.toml,b.toml,c.toml
 </dl>
 <p>Note that you don&rsquo;t need to be so verbose as in the default setup below; a <code>_merge</code> value higher up will be inherited if not set.</p>
 
-
-
-  
-  
-  
-  
-  
-    
-  
-
-
 <div class="code relative" id="config">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        config.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">build</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
@@ -545,7 +482,11 @@ hugo --config a.toml,b.toml,c.toml
 </span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">deep</span><span class="w">
 </span><span class="w"></span><span class="nt">permalinks</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
+</span><span class="w"></span><span class="nt">privacy</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
 </span><span class="w"></span><span class="nt">related</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
+</span><span class="w"></span><span class="nt">security</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
 </span><span class="w"></span><span class="nt">sitemap</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
@@ -553,11 +494,7 @@ hugo --config a.toml,b.toml,c.toml
 </span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">build</span><span class="p">]</span>
   <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
@@ -593,7 +530,11 @@ hugo --config a.toml,b.toml,c.toml
   <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;deep&#39;</span>
 <span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
   <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
+<span class="p">[</span><span class="nx">privacy</span><span class="p">]</span>
+  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
 <span class="p">[</span><span class="nx">related</span><span class="p">]</span>
+  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
+<span class="p">[</span><span class="nx">security</span><span class="p">]</span>
   <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
 <span class="p">[</span><span class="nx">sitemap</span><span class="p">]</span>
   <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
@@ -601,11 +542,7 @@ hugo --config a.toml,b.toml,c.toml
   <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -659,7 +596,13 @@ hugo --config a.toml,b.toml,c.toml
    <span class="nt">&#34;permalinks&#34;</span><span class="p">:</span> <span class="p">{</span>
       <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
    <span class="p">},</span>
+   <span class="nt">&#34;privacy&#34;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
+   <span class="p">},</span>
    <span class="nt">&#34;related&#34;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
+   <span class="p">},</span>
+   <span class="nt">&#34;security&#34;</span><span class="p">:</span> <span class="p">{</span>
       <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
    <span class="p">},</span>
    <span class="nt">&#34;sitemap&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -671,13 +614,8 @@ hugo --config a.toml,b.toml,c.toml
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <h2 id="all-configuration-settings">All Configuration Settings <a class="header-link" href="#all-configuration-settings"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
@@ -854,6 +792,8 @@ config file(s).</p>
 <p>Maximum number of items in the RSS feed.</p>
 <h3 id="sectionpagesmenu">sectionPagesMenu <a class="header-link" href="#sectionpagesmenu"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>See <a href="/templates/menu-templates/#section-menu-for-lazy-bloggers">&ldquo;Section Menu for Lazy Bloggers&rdquo;</a>.</p>
+<h3 id="security">security <a class="header-link" href="#security"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<p>See <a href="/about/security-model/#security-policy">Security Policy</a></p>
 <h3 id="sitemap">sitemap <a class="header-link" href="#sitemap"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>Default <a href="/templates/sitemap-template/#configure-sitemapxml">sitemap configuration</a>.</p>
 <h3 id="summarylength">summaryLength <a class="header-link" href="#summarylength"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
@@ -910,33 +850,23 @@ hugo config | grep emoji
 </button>
 <p>The <code>build</code> configuration section contains global build-related configuration options.</p>
 
-
-
-  
-
-
 <div class="code relative" id="config">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        config.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">build</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">noJSConfigInAssets</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
@@ -944,11 +874,7 @@ hugo config | grep emoji
 </span><span class="w">  </span><span class="nt">writeStats</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">build</span><span class="p">]</span>
   <span class="nx">noJSConfigInAssets</span> <span class="p">=</span> <span class="kc">false</span>
@@ -956,11 +882,7 @@ hugo config | grep emoji
   <span class="nx">writeStats</span> <span class="p">=</span> <span class="kc">false</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -971,13 +893,8 @@ hugo config | grep emoji
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <dl>
@@ -1010,33 +927,23 @@ hugo config | grep emoji
 </button>
 <p>This is only relevant when running <code>hugo server</code>, and it allows to set HTTP headers during development, which allows you to test out your Content Security Policy and similar. The configuration format matches <a href="https://docs.netlify.com/routing/headers/#syntax-for-the-netlify-configuration-file">Netlify&rsquo;s</a> with slightly more powerful <a href="https://github.com/gobwas/glob">Glob matching</a>:</p>
 
-
-
-  
-
-
 <div class="code relative" id="config">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        config.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">server</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">headers</span><span class="p">:</span><span class="w">
@@ -1049,11 +956,7 @@ hugo config | grep emoji
 </span><span class="w">      </span><span class="nt">X-XSS-Protection</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="l">; mode=block</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">server</span><span class="p">]</span>
 <span class="p">[[</span><span class="nx">server</span><span class="p">.</span><span class="nx">headers</span><span class="p">]]</span>
@@ -1066,11 +969,7 @@ hugo config | grep emoji
     <span class="nx">X-XSS-Protection</span> <span class="p">=</span> <span class="s1">&#39;1; mode=block&#39;</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;server&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -1090,44 +989,29 @@ hugo config | grep emoji
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <p>Since this is is &ldquo;development only&rdquo;, it may make sense to put it below the <code>development</code> environment:</p>
 
-
-
-  
-
-
 <div class="code relative" id="config/development/server">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        config/development/server.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config/development/server.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">headers</span><span class="p">:</span><span class="w">
 </span><span class="w"></span>- <span class="nt">for</span><span class="p">:</span><span class="w"> </span><span class="l">/**</span><span class="w">
@@ -1139,11 +1023,7 @@ hugo config | grep emoji
 </span><span class="w">    </span><span class="nt">X-XSS-Protection</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="l">; mode=block</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[[</span><span class="nx">headers</span><span class="p">]]</span>
 <span class="nx">for</span> <span class="p">=</span> <span class="s1">&#39;/**&#39;</span>
@@ -1155,11 +1035,7 @@ hugo config | grep emoji
   <span class="nx">X-XSS-Protection</span> <span class="p">=</span> <span class="s1">&#39;1; mode=block&#39;</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;headers&#34;</span><span class="p">:</span> <span class="p">[</span>
@@ -1177,13 +1053,8 @@ hugo config | grep emoji
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 
@@ -1195,33 +1066,23 @@ hugo config | grep emoji
 <p>You can also specify simple redirects rules for the server. The syntax is again similar to Netlify&rsquo;s.</p>
 <p>Note that a <code>status</code> code of 200 will trigger a <a href="https://docs.netlify.com/routing/redirects/rewrites-proxies/">URL rewrite</a>, which is what you want in SPA situations, e.g:</p>
 
-
-
-  
-
-
 <div class="code relative" id="config/development/server">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        config/development/server.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config/development/server.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">redirects</span><span class="p">:</span><span class="w">
 </span><span class="w"></span>- <span class="nt">force</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
@@ -1230,11 +1091,7 @@ hugo config | grep emoji
 </span><span class="w">  </span><span class="nt">to</span><span class="p">:</span><span class="w"> </span><span class="l">/myspa/</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[[</span><span class="nx">redirects</span><span class="p">]]</span>
 <span class="nx">force</span> <span class="p">=</span> <span class="kc">false</span>
@@ -1243,11 +1100,7 @@ hugo config | grep emoji
 <span class="nx">to</span> <span class="p">=</span> <span class="s1">&#39;/myspa/&#39;</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;redirects&#34;</span><span class="p">:</span> <span class="p">[</span>
@@ -1261,13 +1114,8 @@ hugo config | grep emoji
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <p>
@@ -1294,33 +1142,23 @@ hugo config | grep emoji
 <h2 id="example-configuration">Example Configuration <a class="header-link" href="#example-configuration"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>The following is a typical example of a configuration file. The values nested under <code>params:</code> will populate the <a href="/variables/site/"><code>.Site.Params</code></a> variable for use in <a href="/templates/">templates</a>:</p>
 
-
-
-  
-
-
 <div class="code relative" id="config">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        config.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">baseURL</span><span class="p">:</span><span class="w"> </span><span class="l">https://yoursite.example.com/</span><span class="w">
 </span><span class="w"></span><span class="nt">footnoteReturnLinkContents</span><span class="p">:</span><span class="w"> </span><span class="l">↩</span><span class="w">
@@ -1337,11 +1175,7 @@ hugo config | grep emoji
 </span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">My Hugo Site</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s1">&#39;https://yoursite.example.com/&#39;</span>
 <span class="nx">footnoteReturnLinkContents</span> <span class="p">=</span> <span class="s1">&#39;↩&#39;</span>
@@ -1356,11 +1190,7 @@ hugo config | grep emoji
   <span class="nx">posts</span> <span class="p">=</span> <span class="s1">&#39;/:year/:month/:title/&#39;</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;baseURL&#34;</span><span class="p">:</span> <span class="s2">&#34;https://yoursite.example.com/&#34;</span><span class="p">,</span>
@@ -1382,13 +1212,8 @@ hugo config | grep emoji
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <h2 id="configure-with-environment-variables">Configure with Environment Variables <a class="header-link" href="#configure-with-environment-variables"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
@@ -1419,45 +1244,32 @@ hugo config | grep emoji
 <p>To exclude specific files from the <code>content</code> and <code>data</code> directories when rendering your site, set <code>ignoreFiles</code> to one or more regular expressions to match against the absolute file path.</p>
 <p>To ignore files ending with <code>.foo</code> or <code>.boo</code>:</p>
 
-
-
-  
-
-
 <div class="code relative" >
   <div class="code-nav flex flex-nowrap items-stretch">
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">ignoreFiles</span><span class="p">:</span><span class="w">
 </span><span class="w"></span>- <span class="l">\.foo$</span><span class="w">
 </span><span class="w"></span>- <span class="l">\.boo$</span><span class="w">
 </span></code></pre></div>
       </div>
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">ignoreFiles</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;\.foo$&#39;</span><span class="p">,</span> <span class="s1">&#39;\.boo$&#39;</span><span class="p">]</span>
 </code></pre></div>
       </div>
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;ignoreFiles&#34;</span><span class="p">:</span> <span class="p">[</span>
@@ -1467,18 +1279,10 @@ hugo config | grep emoji
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
-    
   </div>
-
 </div>
 
 <p>To ignore a file using the absolute file path:</p>
-
-
-
-  
-
 
 <div class="code relative" >
   <div class="code-nav flex flex-nowrap items-stretch">
@@ -1486,33 +1290,25 @@ hugo config | grep emoji
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">ignoreFiles</span><span class="p">:</span><span class="w">
 </span><span class="w"></span>- <span class="l">^/home/user/project/content/test\.md$</span><span class="w">
 </span></code></pre></div>
       </div>
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">ignoreFiles</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;^/home/user/project/content/test\.md$&#39;</span><span class="p">]</span>
 </code></pre></div>
       </div>
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;ignoreFiles&#34;</span><span class="p">:</span> <span class="p">[</span>
@@ -1521,10 +1317,7 @@ hugo config | grep emoji
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
-    
   </div>
-
 </div>
 
 <h2 id="configure-front-matter">Configure Front Matter <a class="header-link" href="#configure-front-matter"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
@@ -1532,33 +1325,23 @@ hugo config | grep emoji
 <p>Dates are important in Hugo, and you can configure how Hugo assigns dates to your content pages. You do this by adding a <code>frontmatter</code> section to your <code>config.toml</code>.</p>
 <p>The default configuration is:</p>
 
-
-
-  
-
-
 <div class="code relative" id="config">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        config.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">frontmatter</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">date</span><span class="p">:</span><span class="w">
@@ -1577,11 +1360,7 @@ hugo config | grep emoji
 </span><span class="w">  </span>- <span class="l">date</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">frontmatter</span><span class="p">]</span>
   <span class="nx">date</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;publishDate&#39;</span><span class="p">,</span> <span class="s1">&#39;lastmod&#39;</span><span class="p">]</span>
@@ -1590,11 +1369,7 @@ hugo config | grep emoji
   <span class="nx">publishDate</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;publishDate&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">]</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;frontmatter&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -1620,44 +1395,29 @@ hugo config | grep emoji
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <p>If you, as an example, have a non-standard date parameter in some of your content, you can override the setting for <code>date</code>:</p>
 
-
-
-  
-
-
 <div class="code relative" id="config">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        config.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">frontmatter</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">date</span><span class="p">:</span><span class="w">
@@ -1665,21 +1425,13 @@ hugo config | grep emoji
 </span><span class="w">  </span>- <span class="p">:</span><span class="l">default</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">frontmatter</span><span class="p">]</span>
   <span class="nx">date</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;myDate&#39;</span><span class="p">,</span> <span class="s1">&#39;:default&#39;</span><span class="p">]</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;frontmatter&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -1691,13 +1443,8 @@ hugo config | grep emoji
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <p>The <code>:default</code> is a shortcut to the default settings. The above will set <code>.Date</code> to the date value in <code>myDate</code> if present, if not we will look in <code>date</code>,<code>publishDate</code>, <code>lastmod</code> and pick the first valid date.</p>
@@ -1709,33 +1456,23 @@ hugo config | grep emoji
 </dl>
 <p>An example:</p>
 
-
-
-  
-
-
 <div class="code relative" id="config">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        config.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">frontmatter</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">lastmod</span><span class="p">:</span><span class="w">
@@ -1744,21 +1481,13 @@ hugo config | grep emoji
 </span><span class="w">  </span>- <span class="p">:</span><span class="l">default</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">frontmatter</span><span class="p">]</span>
   <span class="nx">lastmod</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;lastmod&#39;</span><span class="p">,</span> <span class="s1">&#39;:fileModTime&#39;</span><span class="p">,</span> <span class="s1">&#39;:default&#39;</span><span class="p">]</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;frontmatter&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -1771,13 +1500,8 @@ hugo config | grep emoji
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <p>The above will try first to extract the value for <code>.Lastmod</code> starting with the <code>lastmod</code> front matter parameter, then the content file&rsquo;s modification timestamp. The last, <code>:default</code> should not be needed here, but Hugo will finally look for a valid date in <code>:git</code>, <code>date</code> and then <code>publishDate</code>.</p>
@@ -1787,33 +1511,23 @@ hugo config | grep emoji
 </dl>
 <p>An example:</p>
 
-
-
-  
-
-
 <div class="code relative" id="config">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        config.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">frontmatter</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">date</span><span class="p">:</span><span class="w">
@@ -1821,21 +1535,13 @@ hugo config | grep emoji
 </span><span class="w">  </span>- <span class="p">:</span><span class="l">default</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">frontmatter</span><span class="p">]</span>
   <span class="nx">date</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;:filename&#39;</span><span class="p">,</span> <span class="s1">&#39;:default&#39;</span><span class="p">]</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;frontmatter&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -1847,13 +1553,8 @@ hugo config | grep emoji
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <p>The above will try first to extract the value for <code>.Date</code> from the filename, then it will look in front matter parameters <code>date</code>, <code>publishDate</code> and lastly <code>lastmod</code>.</p>
@@ -1872,37 +1573,23 @@ hugo config | grep emoji
 </button>
 <p>Default configuration:</p>
 
-
-
-  
-  
-  
-  
-  
-
-
 <div class="code relative" id="config">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        config.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">minify</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">disableCSS</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
@@ -1936,11 +1623,7 @@ hugo config | grep emoji
 </span><span class="w">      </span><span class="nt">keepWhitespace</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">minify</span><span class="p">]</span>
   <span class="nx">disableCSS</span> <span class="p">=</span> <span class="kc">false</span>
@@ -1974,11 +1657,7 @@ hugo config | grep emoji
       <span class="nx">keepWhitespace</span> <span class="p">=</span> <span class="kc">false</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;minify&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -2022,22 +1701,12 @@ hugo config | grep emoji
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <h2 id="configure-file-caches">Configure File Caches <a class="header-link" href="#configure-file-caches"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Since Hugo 0.52 you can configure more than just the <code>cacheDir</code>. This is the default configuration:</p>
-
-
-
-  
-
 
 <div class="code relative" >
   <div class="code-nav flex flex-nowrap items-stretch">
@@ -2045,20 +1714,16 @@ hugo config | grep emoji
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">caches</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">assets</span><span class="p">:</span><span class="w">
@@ -2081,11 +1746,7 @@ hugo config | grep emoji
 </span><span class="w">    </span><span class="nt">maxAge</span><span class="p">:</span><span class="w"> </span>-<span class="m">1</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">caches</span><span class="p">]</span>
   <span class="p">[</span><span class="nx">caches</span><span class="p">.</span><span class="nx">assets</span><span class="p">]</span>
@@ -2108,11 +1769,7 @@ hugo config | grep emoji
     <span class="nx">maxAge</span> <span class="p">=</span> <span class="mi">-1</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;caches&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -2144,13 +1801,8 @@ hugo config | grep emoji
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <p>You can override any of these cache settings in your own <code>config.toml</code>.</p>
@@ -2417,7 +2069,7 @@ hugo config | grep emoji
           </li>
           <li class="f6 fw4">
             <a href="/content-management/multilingual/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Multilingual and i18n
+              Multilingual
             </a>
           </li>
           <li class="f6 fw4">
@@ -2438,7 +2090,7 @@ hugo config | grep emoji
           </li>
           <li class="f6 fw4">
             <a href="/templates/introduction/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Introduction
+              Templating
             </a>
           </li>
           <li class="f6 fw4">
@@ -2458,7 +2110,7 @@ hugo config | grep emoji
           </li>
           <li class="f6 fw4">
             <a href="/templates/lists/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              List Page Templates
+              List Templates
             </a>
           </li>
           <li class="f6 fw4">
@@ -2794,7 +2446,7 @@ hugo config | grep emoji
           </li>
           <li class="f6 fw4">
             <a href="/functions/images/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Image Functions
+              Image Filters
             </a>
           </li>
           <li class="f6 fw4">
@@ -3296,7 +2948,7 @@ hugo config | grep emoji
           </li>
           <li class="f6 fw4">
             <a href="/hugo-pipes/introduction/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hugo Pipes Introduction
+              Hugo Pipes
             </a>
           </li>
           <li class="f6 fw4">
@@ -3523,12 +3175,8 @@ hugo config | grep emoji
 
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
-      <h6 class="f4 dark-gray mb2">
-  <a href="https://gohugo.io/getting-started/configuration/" class="hide-child link primary-color">
-  <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
-</span>
-    “Configure Hugo”
-  </a> was last updated: December 9, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/8ee6bb505c1182e337d4fe293ebb6b853fce71e6">Merge pull request #97 from blackb1rd/hugo/v0.90.0 (8ee6bb5)</a>
+      <h6 class="f6 dark-gray mb2">
+  Last updated: December 19, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/5f99b0f14c7f3f53d5b1f9407244ec883256c74d">Merge pull request #98 from blackb1rd/hugo/v0.91.0 (5f99b0f)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/getting-started/configuration.md" class="
@@ -3631,10 +3279,10 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 
     <img src="/images/gopher-side_color.svg" alt="" class="absolute-l bottom-0 dn db-l h4 right-0 z-999"/>
 
-    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 w-100"><div  class="globalmenu mobilemenu pb3 dn">
+    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100"><div  class="globalmenu mobilemenu pb1 dn">
     
 
-<ul class="list hidden dib ph0 ma0 scrolling-touch tc">
+<ul class="list hidden dib ph0 scrolling-touch tc">
   
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/news/" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
@@ -3675,10 +3323,10 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </ul>
 
 </div>
-<div  class="docsmenu mobilemenu pb3 dn">
+<div  class="docsmenu mobilemenu pb1 dn">
     
 
-<ul class="list dib ph0 ma0 scrolling-touch tc">
+<ul class="list dib ph0 scrolling-touch tc">
   
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/about/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
@@ -3769,9 +3417,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 <div class="flex dn-l justify-between">
-  <button class="js-toggle flex-auto dib dn-l f6 tc db mt4-ns ph3 pv2 link mr2 white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".globalmenu">Menu</button>
+  <button class="js-toggle flex-auto dib dn-l f6 tc db ph3 pv2 link mr2 white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".globalmenu">Menu</button>
 
-  <button class="js-toggle flex-auto dib dn-l f6 tc db mt4-ns ph3 pv2 link white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".docsmenu">Docs Menu</button>
+  <button class="js-toggle flex-auto dib dn-l f6 tc db ph3 pv2 link white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".docsmenu">Docs Menu</button>
 </div>
 </div>
 

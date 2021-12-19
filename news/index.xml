@@ -568,7 +568,7 @@ This release represents 17 contributions by 6 contributors to the main Hugo code
       <guid>https://gohugo.io/news/0.67.0-relnotes/</guid>
       <description>The two main items in Hugo 0.67.0 is custom HTTP header support in hugo server and include/exclude filters for Hugo Deploy.
 Being able to configure HTTP headers in your development server means that you can now verify how your site behaves with the intended Content Security Policy settings etc., e.g.:
-config.  yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  server:headers:- for:/**.htmlvalues:Content-Security-Policy:script-src localhost:1313Referrer-Policy:strict-origin-when-cross-originX-Content-Type-Options:nosniffX-Frame-Options:DENYX-XSS-Protection:1; mode=block   [server] [[server.headers]] for = &amp;#39;/**.</description>
+config. yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  server:headers:- for:/**.htmlvalues:Content-Security-Policy:script-src localhost:1313Referrer-Policy:strict-origin-when-cross-originX-Content-Type-Options:nosniffX-Frame-Options:DENYX-XSS-Protection:1; mode=block   [server] [[server.headers]] for = &amp;#39;/**.</description>
     </item>
     
     <item>
@@ -578,7 +578,7 @@ config.  yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  server:headers:- fo
       
       <guid>https://gohugo.io/news/0.66.0-relnotes/</guid>
       <description>This release adds inline @import support to resources.PostCSS, with imports relative to Hugo&amp;rsquo;s virtual, composable file system. Another useful addition is the new build configuration section. As an example:
-config.  yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  build:useResourceCacheWhen:always   [build] useResourceCacheWhen = &amp;#39;always&amp;#39;    { &amp;#34;build&amp;#34;: { &amp;#34;useResourceCacheWhen&amp;#34;: &amp;#34;always&amp;#34; } }      The above will tell Hugo to always use the cached build resources inside resources/_gen for the build steps requiring a non-standard dependency (PostCSS and SCSS/SASS).</description>
+config. yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  build:useResourceCacheWhen:always   [build] useResourceCacheWhen = &amp;#39;always&amp;#39;    { &amp;#34;build&amp;#34;: { &amp;#34;useResourceCacheWhen&amp;#34;: &amp;#34;always&amp;#34; } }      The above will tell Hugo to always use the cached build resources inside resources/_gen for the build steps requiring a non-standard dependency (PostCSS and SCSS/SASS).</description>
     </item>
     
     <item>
@@ -832,7 +832,7 @@ title:&amp;#34;My Blog&amp;#34;icon:&amp;#34;world.png&amp;#34;cascade:icon:&amp
       <guid>https://gohugo.io/news/0.56.3-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes. After getting feedback about the new Hugo Modules feature, this release also adds some minor improvements:
 It adds support for overlapping file mounts, even for the filesystems where we walk down the directory structure. One relevant example that is fixed by this release:
-config.  yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  module:mounts:- source:content1target:content- source:content2target:content/docs   [module] [[module.</description>
+config. yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  module:mounts:- source:content1target:content- source:content2target:content/docs   [module] [[module.</description>
     </item>
     
     <item>
@@ -1455,7 +1455,7 @@ This release represents 37 contributions by 9 contributors to the main Hugo code
       
       <guid>https://gohugo.io/news/0.26-relnotes/</guid>
       <description>This release brings a choice of AP Style or Chicago Style Title Case (8fb594bf #989). You can also now configure Blackfriday to render « French Guillemets » (cb9dfc26 #3725). To enable French Guillemets:
-config.  yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  blackfriday:angledQuotes:truesmartypantsQuotesNBSP:true   [blackfriday] angledQuotes = true smartypantsQuotesNBSP = true    { &amp;#34;blackfriday&amp;#34;: { &amp;#34;angledQuotes&amp;#34;: true, &amp;#34;smartypantsQuotesNBSP&amp;#34;: true } }      Oh, and this release also fixes it so you should see no ugly long crashes no more when you step wrong in your templates (794ea21e).</description>
+config. yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  blackfriday:angledQuotes:truesmartypantsQuotesNBSP:true   [blackfriday] angledQuotes = true smartypantsQuotesNBSP = true    { &amp;#34;blackfriday&amp;#34;: { &amp;#34;angledQuotes&amp;#34;: true, &amp;#34;smartypantsQuotesNBSP&amp;#34;: true } }      Oh, and this release also fixes it so you should see no ugly long crashes no more when you step wrong in your templates (794ea21e).</description>
     </item>
     
     <item>

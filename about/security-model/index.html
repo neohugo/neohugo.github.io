@@ -13,7 +13,7 @@
   <title>Hugo&#39;s Security Model | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.13-DEV" />
+  <meta name="generator" content="Hugo 0.14-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,12 +62,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/about/security-model/" /><meta property="og:image" content="https://gohugo.io/about/security-model/hugo-security-model-featured.png"/><meta property="article:section" content="about" />
 <meta property="article:published_time" content="2019-10-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-12-09T20:34:27+07:00" />
-
+<meta property="article:modified_time" content="2021-12-19T19:59:23+07:00" />
 <meta itemprop="name" content="Hugo&#39;s Security Model">
 <meta itemprop="description" content="A summary of Hugo&#39;s security model."><meta itemprop="datePublished" content="2019-10-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-12-09T20:34:27+07:00" />
-<meta itemprop="wordCount" content="395"><meta itemprop="image" content="https://gohugo.io/about/security-model/hugo-security-model-featured.png">
+<meta itemprop="dateModified" content="2021-12-19T19:59:23+07:00" />
+<meta itemprop="wordCount" content="561"><meta itemprop="image" content="https://gohugo.io/about/security-model/hugo-security-model-featured.png">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/about/security-model/hugo-security-model-featured.png"/>
 <meta name="twitter:title" content="Hugo&#39;s Security Model"/>
@@ -171,7 +170,8 @@
     <label class="clip" for="search-input">Search</label>
     <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: url('/images/icon-search.png') 5px 11px/16px 16px no-repeat; background-color: rgba(255,255,255,0);">
   </fieldset>
-</form></div>
+</form>
+</div>
 
     <span class="absolute mt1 mt2-l pr3 right-0 top-0">
 
@@ -199,6 +199,7 @@
   	<nav id="TableOfContents">
   <ul>
     <li><a href="#runtime-security">Runtime Security</a></li>
+    <li><a href="#security-policy">Security Policy</a></li>
     <li><a href="#dependency-security">Dependency Security</a></li>
     <li><a href="#web-application-security">Web Application Security</a></li>
   </ul>
@@ -248,15 +249,115 @@
 <h2 id="runtime-security">Runtime Security <a class="header-link" href="#runtime-security"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Hugo produces static output, so once built, the runtime is the browser (assuming the output is HTML) and any server (API) that you integrate with.</p>
 <p>But when developing and building your site, the runtime is the <code>hugo</code> executable. Securing a runtime can be <a href="https://blog.logrocket.com/how-to-protect-your-node-js-applications-from-malicious-dependencies-5f2e60ea08f9/">a real challenge</a>.</p>
-<p><strong>Hugo&rsquo;s main approach is that of sandboxing:</strong></p>
+<p><strong>Hugo&rsquo;s main approach is that of sandboxing and a security policy with strict defaults:</strong></p>
 <ul>
 <li>Hugo has a virtual file system and only the main project (not third-party components) is allowed to mount directories or files outside the project root.</li>
 <li>Only the main project can walk symbolic links.</li>
 <li>User-defined components have only read-access to the filesystem.</li>
-<li>We shell out to some external binaries to support <a href="/content-management/formats/#list-of-content-formats">Asciidoctor</a> and similar, but those binaries and their flags are predefined. General functions to run arbitrary external OS commands have been <a href="https://github.com/gohugoio/hugo/issues/796">discussed</a>, but not implemented because of security concerns.</li>
+<li>We shell out to some external binaries to support <a href="/content-management/formats/#list-of-content-formats">Asciidoctor</a> and similar, but those binaries and their flags are predefined and disabled by default (see <a href="#security-policy">Security Policy</a>). General functions to run arbitrary external OS commands have been <a href="https://github.com/gohugoio/hugo/issues/796">discussed</a>, but not implemented because of security concerns.</li>
 </ul>
-<p>Hugo will soon introduce a concept of <em>Content Source Plugins</em> (AKA <em>Pages from Data</em>), but the above will still hold true.</p>
-<h2 id="dependency-security">Dependency Security <a class="header-link" href="#dependency-security"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<h2 id="security-policy">Security Policy <a class="header-link" href="#security-policy"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+
+
+
+<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
+    <a href="https://gohugo.io/news/0.91.0-relnotes/" target="_blank">New in v0.91.0</a>
+</button>
+<p>Hugo has a built-in security policy that restricts access to <a href="https://pkg.go.dev/os/exec">os/exec</a>, remote communication and similar.</p>
+<p>The defdault configuration is listed below. And build using features not whitelisted in the security policy will faill with a detailed message about what needs to be done. Most of these settings are whitelists (string or slice, <a href="https://pkg.go.dev/regexp">Regular Expressions</a> or <code>none</code> which matches nothing).</p>
+
+<div class="code relative" id="config">
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
+      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
+        yaml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        toml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        json
+      </button>
+      &nbsp;
+  </div>
+  <div class="tab-content">
+      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">security</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">enableInlineShortcodes</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="w">  </span><span class="nt">exec</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">allow</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="l">^dart-sass-embedded$</span><span class="w">
+</span><span class="w">    </span>- <span class="l">^go$</span><span class="w">
+</span><span class="w">    </span>- <span class="l">^npx$</span><span class="w">
+</span><span class="w">    </span>- <span class="l">^postcss$</span><span class="w">
+</span><span class="w">    </span><span class="nt">osEnv</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="l">(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$</span><span class="w">
+</span><span class="w">  </span><span class="nt">funcs</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">getenv</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="l">^HUGO_</span><span class="w">
+</span><span class="w">  </span><span class="nt">http</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">methods</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="l">(?i)GET|POST</span><span class="w">
+</span><span class="w">    </span><span class="nt">urls</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="l">.*</span><span class="w">
+</span></code></pre></div>
+      </div>
+        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
+      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">security</span><span class="p">]</span>
+  <span class="nx">enableInlineShortcodes</span> <span class="p">=</span> <span class="kc">false</span>
+  <span class="p">[</span><span class="nx">security</span><span class="p">.</span><span class="nx">exec</span><span class="p">]</span>
+    <span class="nx">allow</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;^dart-sass-embedded$&#39;</span><span class="p">,</span> <span class="s1">&#39;^go$&#39;</span><span class="p">,</span> <span class="s1">&#39;^npx$&#39;</span><span class="p">,</span> <span class="s1">&#39;^postcss$&#39;</span><span class="p">]</span>
+    <span class="nx">osEnv</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$&#39;</span><span class="p">]</span>
+  <span class="p">[</span><span class="nx">security</span><span class="p">.</span><span class="nx">funcs</span><span class="p">]</span>
+    <span class="nx">getenv</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;^HUGO_&#39;</span><span class="p">]</span>
+  <span class="p">[</span><span class="nx">security</span><span class="p">.</span><span class="nx">http</span><span class="p">]</span>
+    <span class="nx">methods</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;(?i)GET|POST&#39;</span><span class="p">]</span>
+    <span class="nx">urls</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;.*&#39;</span><span class="p">]</span>
+</code></pre></div>
+      </div>
+        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
+      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+   <span class="nt">&#34;security&#34;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&#34;enableInlineShortcodes&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&#34;exec&#34;</span><span class="p">:</span> <span class="p">{</span>
+         <span class="nt">&#34;allow&#34;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&#34;^dart-sass-embedded$&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;^go$&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;^npx$&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;^postcss$&#34;</span>
+         <span class="p">],</span>
+         <span class="nt">&#34;osEnv&#34;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&#34;(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$&#34;</span>
+         <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="nt">&#34;funcs&#34;</span><span class="p">:</span> <span class="p">{</span>
+         <span class="nt">&#34;getenv&#34;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&#34;^HUGO_&#34;</span>
+         <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="nt">&#34;http&#34;</span><span class="p">:</span> <span class="p">{</span>
+         <span class="nt">&#34;methods&#34;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&#34;(?i)GET|POST&#34;</span>
+         <span class="p">],</span>
+         <span class="nt">&#34;urls&#34;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&#34;.*&#34;</span>
+         <span class="p">]</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+      </div>
+        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
+  </div>
+</div>
+
+<p>Note that these and other config settings in Hugo can be overridden by the OS environment. If you want to block all remote HTTP fetching of data:</p>
+<pre tabindex="0"><code>HUGO_SECURITY_HTTP_URLS=none hugo 
+</code></pre><h2 id="dependency-security">Dependency Security <a class="header-link" href="#dependency-security"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Hugo builds as a static binary using <a href="https://github.com/golang/go/wiki/Modules">Go Modules</a> to manage its dependencies. Go Modules have several safeguards, one of them being the <code>go.sum</code> file. This is a database of the expected cryptographic checksums of all of your dependencies, including any transitive.</p>
 <p><a href="/hugo-modules/">Hugo Modules</a> is built on top of Go Modules functionality, and a Hugo project using Hugo Modules will have a <code>go.sum</code> file. We recommend that you commit this file to your version control system. The Hugo build will fail if there is a checksum mismatch, which would be an indication of <a href="https://julienrenaux.fr/2019/12/20/github-actions-security-risk/">dependency tampering</a>.</p>
 <h2 id="web-application-security">Web Application Security <a class="header-link" href="#web-application-security"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
@@ -507,7 +608,7 @@ It may be worth adding that Hugo is a static site generator with no concept of d
           </li>
           <li class="f6 fw4">
             <a href="/content-management/multilingual/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Multilingual and i18n
+              Multilingual
             </a>
           </li>
           <li class="f6 fw4">
@@ -528,7 +629,7 @@ It may be worth adding that Hugo is a static site generator with no concept of d
           </li>
           <li class="f6 fw4">
             <a href="/templates/introduction/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Introduction
+              Templating
             </a>
           </li>
           <li class="f6 fw4">
@@ -548,7 +649,7 @@ It may be worth adding that Hugo is a static site generator with no concept of d
           </li>
           <li class="f6 fw4">
             <a href="/templates/lists/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              List Page Templates
+              List Templates
             </a>
           </li>
           <li class="f6 fw4">
@@ -884,7 +985,7 @@ It may be worth adding that Hugo is a static site generator with no concept of d
           </li>
           <li class="f6 fw4">
             <a href="/functions/images/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Image Functions
+              Image Filters
             </a>
           </li>
           <li class="f6 fw4">
@@ -1386,7 +1487,7 @@ It may be worth adding that Hugo is a static site generator with no concept of d
           </li>
           <li class="f6 fw4">
             <a href="/hugo-pipes/introduction/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hugo Pipes Introduction
+              Hugo Pipes
             </a>
           </li>
           <li class="f6 fw4">
@@ -1613,12 +1714,8 @@ It may be worth adding that Hugo is a static site generator with no concept of d
 
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
-      <h6 class="f4 dark-gray mb2">
-  <a href="https://gohugo.io/about/security-model/" class="hide-child link primary-color">
-  <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
-</span>
-    “Hugo&#39;s Security Model”
-  </a> was last updated: December 9, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/8ee6bb505c1182e337d4fe293ebb6b853fce71e6">Merge pull request #97 from blackb1rd/hugo/v0.90.0 (8ee6bb5)</a>
+      <h6 class="f6 dark-gray mb2">
+  Last updated: December 19, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/5f99b0f14c7f3f53d5b1f9407244ec883256c74d">Merge pull request #98 from blackb1rd/hugo/v0.91.0 (5f99b0f)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/about/security-model/index.md" class="
@@ -1721,10 +1818,10 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 
     <img src="/images/gopher-side_color.svg" alt="" class="absolute-l bottom-0 dn db-l h4 right-0 z-999"/>
 
-    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 w-100"><div  class="globalmenu mobilemenu pb3 dn">
+    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100"><div  class="globalmenu mobilemenu pb1 dn">
     
 
-<ul class="list hidden dib ph0 ma0 scrolling-touch tc">
+<ul class="list hidden dib ph0 scrolling-touch tc">
   
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/news/" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
@@ -1765,10 +1862,10 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </ul>
 
 </div>
-<div  class="docsmenu mobilemenu pb3 dn">
+<div  class="docsmenu mobilemenu pb1 dn">
     
 
-<ul class="list dib ph0 ma0 scrolling-touch tc">
+<ul class="list dib ph0 scrolling-touch tc">
   
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/about/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
@@ -1859,9 +1956,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 <div class="flex dn-l justify-between">
-  <button class="js-toggle flex-auto dib dn-l f6 tc db mt4-ns ph3 pv2 link mr2 white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".globalmenu">Menu</button>
+  <button class="js-toggle flex-auto dib dn-l f6 tc db ph3 pv2 link mr2 white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".globalmenu">Menu</button>
 
-  <button class="js-toggle flex-auto dib dn-l f6 tc db mt4-ns ph3 pv2 link white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".docsmenu">Docs Menu</button>
+  <button class="js-toggle flex-auto dib dn-l f6 tc db ph3 pv2 link white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".docsmenu">Docs Menu</button>
 </div>
 </div>
 

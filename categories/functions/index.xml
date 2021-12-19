@@ -408,7 +408,7 @@ content/ ├── about.md ├── contact.md └── news/ ├── artic
       <guid>https://gohugo.io/functions/adddate/</guid>
       <description>The AddDate function takes three arguments in logical order of years, months, and days.
 Example: Randomized Tweets from the Last 2 Years  Let&amp;rsquo;s assume you have a file at data/tweets.toml that contains a list of Tweets to display on your site&amp;rsquo;s homepage. The file is filled with [[tweet]] blocks; e.g.&amp;mdash;
-data/tweets.  yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  tweet:- date:&amp;#34;2017-01-07T00:00:00Z&amp;#34;link:https://twitter.com/spf13name:Steve Franciaquote:&amp;#39;I&amp;#39;&amp;#39;m creator of Hugo. #metadocreference&amp;#39;twitter_handle:&amp;#39;@spf13&amp;#39;   [[tweet]] date = &amp;#39;2017-01-07T00:00:00Z&amp;#39; link = &amp;#39;https://twitter.</description>
+data/tweets. yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  tweet:- date:&amp;#34;2017-01-07T00:00:00Z&amp;#34;link:https://twitter.com/spf13name:Steve Franciaquote:&amp;#39;I&amp;#39;&amp;#39;m creator of Hugo. #metadocreference&amp;#39;twitter_handle:&amp;#39;@spf13&amp;#39;   [[tweet]] date = &amp;#39;2017-01-07T00:00:00Z&amp;#39; link = &amp;#39;https://twitter.</description>
     </item>
     
     <item>
@@ -751,16 +751,16 @@ Remember to pass the output of this to safeHTML if fully un-escaped characters a
     </item>
     
     <item>
-      <title>Image Functions</title>
+      <title>Image Filters</title>
       <link>https://gohugo.io/functions/images/</link>
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/functions/images/</guid>
-      <description>Image Filters  See images.Filter for how to apply these filters to an image.
+      <description>See images.Filter for how to apply these filters to an image.
 Overlay  New in v0.80.0  Overlay creates a filter that overlays the source image at position x y, e.g:
 {{$logoFilter:=(images.Overlay$logo5050)}} {{$img:=$img|images.Filter$logoFilter}} A shorter version of the above, if you only need to apply the filter once:
 {{$img:=$img.Filter(images.Overlay$logo5050)}} The above will overlay $logo in the upper left corner of $img (at position x=50, y=50).
-Text  New in v0.</description>
+Text  New in v0.90.0  Using the Text filter, you can add text to an image.</description>
     </item>
     
     <item>
@@ -1090,7 +1090,7 @@ So for a site baseURL set to https://example.com/hugo/ and the current language 
       <guid>https://gohugo.io/functions/safehtml/</guid>
       <description>It should not be used for HTML from a third-party, or HTML with unclosed tags or comments.
 Given a site-wide config.toml with the following copyright value:
-config.  yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  copyright:© 2015 Jane Doe. &amp;lt;a href=&amp;#34;https://creativecommons.org/licenses/by/4.0/&amp;#34;&amp;gt;Somerights reserved&amp;lt;/a&amp;gt;.   copyright = &amp;#39;© 2015 Jane Doe. &amp;lt;a href=&amp;#34;https://creativecommons.org/licenses/by/4.0/&amp;#34;&amp;gt;Some rights reserved&amp;lt;/a&amp;gt;.&amp;#39;    { &amp;#34;copyright&amp;#34;: &amp;#34;© 2015 Jane Doe. \u003ca href=\&amp;#34;https://creativecommons.org/licenses/by/4.0/\&amp;#34;\u003eSome rights reserved\u003c/a\u003e.&amp;#34; }      {{ .</description>
+config. yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  copyright:© 2015 Jane Doe. &amp;lt;a href=&amp;#34;https://creativecommons.org/licenses/by/4.0/&amp;#34;&amp;gt;Somerights reserved&amp;lt;/a&amp;gt;.   copyright = &amp;#39;© 2015 Jane Doe. &amp;lt;a href=&amp;#34;https://creativecommons.org/licenses/by/4.0/&amp;#34;&amp;gt;Some rights reserved&amp;lt;/a&amp;gt;.&amp;#39;    { &amp;#34;copyright&amp;#34;: &amp;#34;© 2015 Jane Doe. \u003ca href=\&amp;#34;https://creativecommons.org/licenses/by/4.0/\&amp;#34;\u003eSome rights reserved\u003c/a\u003e.&amp;#34; }      {{ .</description>
     </item>
     
     <item>
@@ -1100,7 +1100,7 @@ config.  yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  copyright:© 2015 J
       
       <guid>https://gohugo.io/functions/safehtmlattr/</guid>
       <description>Example: Given a site-wide config.toml that contains this menu entry:
-config.  yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  menu:main:- name: &amp;#39;IRC:#golang at freenode&amp;#39;url:irc://irc.freenode.net/#golang   [menu] [[menu.main]] name = &amp;#39;IRC: #golang at freenode&amp;#39; url = &amp;#39;irc://irc.freenode.net/#golang&amp;#39;    { &amp;#34;menu&amp;#34;: { &amp;#34;main&amp;#34;: [ { &amp;#34;name&amp;#34;: &amp;#34;IRC: #golang at freenode&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;irc://irc.freenode.net/#golang&amp;#34; } ] } }       &amp;lt;a href=&amp;quot;{{ .URL }}&amp;quot;&amp;gt; → &amp;lt;a href=&amp;quot;#ZgotmplZ&amp;quot;&amp;gt; &amp;lt;a {{ printf &amp;quot;href=%q&amp;quot; .</description>
+config. yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  menu:main:- name: &amp;#39;IRC:#golang at freenode&amp;#39;url:irc://irc.freenode.net/#golang   [menu] [[menu.main]] name = &amp;#39;IRC: #golang at freenode&amp;#39; url = &amp;#39;irc://irc.freenode.net/#golang&amp;#39;    { &amp;#34;menu&amp;#34;: { &amp;#34;main&amp;#34;: [ { &amp;#34;name&amp;#34;: &amp;#34;IRC: #golang at freenode&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;irc://irc.freenode.net/#golang&amp;#34; } ] } }       &amp;lt;a href=&amp;quot;{{ .URL }}&amp;quot;&amp;gt; → &amp;lt;a href=&amp;quot;#ZgotmplZ&amp;quot;&amp;gt; &amp;lt;a {{ printf &amp;quot;href=%q&amp;quot; .</description>
     </item>
     
     <item>

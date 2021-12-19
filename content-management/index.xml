@@ -210,7 +210,7 @@ Add Disqus  Hugo comes with all the code you need to load Disqus into your templ
       <description>You should define the available languages in a languages section in your site configuration.
  Also See Hugo Multilingual Part 1: Content translation
  Configure Languages  The following is an example of a site configuration for a multilingual Hugo project:
-config.  yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  copyright:Everything is minedefaultContentLanguage:enlanguages:ar:languagedirection:rtltitle:مدونتيweight:2en:params:linkedin:https://linkedin.com/whoevertitle:My blogweight:1fr:params:linkedin:https://linkedin.com/fr/whoevernavigation:help:Aidetitle:Mon blogueweight:2pt-pt:title:O meu blogweight:3params:navigation:help:Help   copyright = &amp;#39;Everything is mine&amp;#39; defaultContentLanguage = &amp;#39;en&amp;#39; [languages] [languages.</description>
+config. yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  copyright:Everything is minedefaultContentLanguage:enlanguages:ar:languagedirection:rtltitle:مدونتيweight:2en:params:linkedin:https://linkedin.com/whoevertitle:My blogweight:1fr:params:linkedin:https://linkedin.com/fr/whoevernavigation:help:Aidetitle:Mon blogueweight:2pt-pt:title:O meu blogweight:3params:navigation:help:Help   copyright = &amp;#39;Everything is mine&amp;#39; defaultContentLanguage = &amp;#39;en&amp;#39; [languages] [languages.</description>
     </item>
     
     <item>

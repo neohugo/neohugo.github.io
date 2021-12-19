@@ -8,17 +8,6 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 15 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://gohugo.io/categories/fundamentals/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Introduction to Hugo Templating</title>
-      <link>https://gohugo.io/templates/introduction/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://gohugo.io/templates/introduction/</guid>
-      <description>The following is only a primer on Go Templates. For an in-depth look into Go Templates, check the official Go docs.
-  Go Templates provide an extremely simple template language that adheres to the belief that only the most basic of logic belongs in the template or view layer.
-Basic Syntax  Go Templates are HTML files with the addition of variables and functions. Go Template variables and functions are accessible within {{ }}.</description>
-    </item>
-    
-    <item>
       <title>Content Organization</title>
       <link>https://gohugo.io/content-management/organization/</link>
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
@@ -27,6 +16,17 @@ Basic Syntax  Go Templates are HTML files with the addition of variables and fun
       <description>Page Bundles  Hugo 0.32 announced page-relative images and other resources packaged into Page Bundles.
 These terms are connected, and you also need to read about Page Resources and Image Processing to get the full picture.
   The illustration shows three bundles. Note that the home page bundle cannot contain other content pages, although other files (images etc.) are allowed.     The bundle documentation is a work in progress.</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Hugo Templating</title>
+      <link>https://gohugo.io/templates/introduction/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/templates/introduction/</guid>
+      <description>The following is only a primer on Go Templates. For an in-depth look into Go Templates, check the official Go docs.
+  Go Templates provide an extremely simple template language that adheres to the belief that only the most basic of logic belongs in the template or view layer.
+Basic Syntax  Go Templates are HTML files with the addition of variables and functions. Go Template variables and functions are accessible within {{ }}.</description>
     </item>
     
     <item>
@@ -95,7 +95,7 @@ hugo --config debugconfig.toml hugo --config a.toml,b.toml,c.toml   Multiple sit
       <guid>https://gohugo.io/getting-started/configuration-markup/</guid>
       <description>Configure Markup  New in v0.60.0  See Goldmark for settings related to the default Markdown handler in Hugo.
 Below are all markup related configuration in Hugo with their default settings:
-config.  yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  markup:asciidocExt:attributes:{}backend:html5extensions:[]failureLevel:fatalnoHeaderOrFooter:truepreserveTOC:falsesafeMode:unsafesectionNumbers:falsetrace:falseverbose:falseworkingFolderCurrent:falseblackFriday:angledQuotes:falseextensions:nullextensionsMask:nullfootnoteAnchorPrefix:&amp;#34;&amp;#34;footnoteReturnLinkContents:&amp;#34;&amp;#34;fractions:truehrefTargetBlank:falselatexDashes:truenofollowLinks:falsenoreferrerLinks:falseplainIDAnchors:trueskipHTML:falsesmartDashes:truesmartypants:truesmartypantsQuotesNBSP:falsetaskLists:truedefaultMarkdownHandler:goldmarkgoldmark:extensions:definitionList:truefootnote:truelinkify:truestrikethrough:truetable:truetaskList:truetypographer:trueparser:attribute:block:falsetitle:trueautoHeadingID:trueautoHeadingIDType:githubrenderer:hardWraps:falseunsafe:falsexhtml:falsehighlight:anchorLineNos:falsecodeFences:trueguessSyntax:falsehl_Lines:&amp;#34;&amp;#34;lineAnchors:&amp;#34;&amp;#34;lineNoStart:1lineNos:falselineNumbersInTable:truenoClasses:truestyle:monokaitabWidth:4tableOfContents:endLevel:3ordered:falsestartLevel:2   [markup] defaultMarkdownHandler = &amp;#39;goldmark&amp;#39; [markup.asciidocExt] backend = &amp;#39;html5&amp;#39; extensions = [] failureLevel = &amp;#39;fatal&amp;#39; noHeaderOrFooter = true preserveTOC = false safeMode = &amp;#39;unsafe&amp;#39; sectionNumbers = false trace = false verbose = false workingFolderCurrent = false [markup.</description>
+config. yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  markup:asciidocExt:attributes:{}backend:html5extensions:[]failureLevel:fatalnoHeaderOrFooter:truepreserveTOC:falsesafeMode:unsafesectionNumbers:falsetrace:falseverbose:falseworkingFolderCurrent:falseblackFriday:angledQuotes:falseextensions:nullextensionsMask:nullfootnoteAnchorPrefix:&amp;#34;&amp;#34;footnoteReturnLinkContents:&amp;#34;&amp;#34;fractions:truehrefTargetBlank:falselatexDashes:truenofollowLinks:falsenoreferrerLinks:falseplainIDAnchors:trueskipHTML:falsesmartDashes:truesmartypants:truesmartypantsQuotesNBSP:falsetaskLists:truedefaultMarkdownHandler:goldmarkgoldmark:extensions:definitionList:truefootnote:truelinkify:truestrikethrough:truetable:truetaskList:truetypographer:trueparser:attribute:block:falsetitle:trueautoHeadingID:trueautoHeadingIDType:githubrenderer:hardWraps:falseunsafe:falsexhtml:falsehighlight:anchorLineNos:falsecodeFences:trueguessSyntax:falsehl_Lines:&amp;#34;&amp;#34;lineAnchors:&amp;#34;&amp;#34;lineNoStart:1lineNos:falselineNumbersInTable:truenoClasses:truestyle:monokaitabWidth:4tableOfContents:endLevel:3ordered:falsestartLevel:2   [markup] defaultMarkdownHandler = &amp;#39;goldmark&amp;#39; [markup.asciidocExt] backend = &amp;#39;html5&amp;#39; extensions = [] failureLevel = &amp;#39;fatal&amp;#39; noHeaderOrFooter = true preserveTOC = false safeMode = &amp;#39;unsafe&amp;#39; sectionNumbers = false trace = false verbose = false workingFolderCurrent = false [markup.</description>
     </item>
     
     <item>

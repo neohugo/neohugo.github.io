@@ -13,7 +13,7 @@
   <title>Multilingual Mode | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.13-DEV" />
+  <meta name="generator" content="Hugo 0.14-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -60,17 +60,15 @@
 <meta property="og:title" content="Multilingual Mode" />
 <meta property="og:description" content="Hugo supports the creation of websites with multiple languages side by side." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gohugo.io/content-management/multilingual/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="content-management" />
+<meta property="og:url" content="https://gohugo.io/content-management/multilingual/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_9299210639095042647.png"/><meta property="article:section" content="content-management" />
 <meta property="article:published_time" content="2017-01-10T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-12-09T20:34:27+07:00" />
-
+<meta property="article:modified_time" content="2021-12-19T19:59:23+07:00" />
 <meta itemprop="name" content="Multilingual Mode">
 <meta itemprop="description" content="Hugo supports the creation of websites with multiple languages side by side."><meta itemprop="datePublished" content="2017-01-10T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-12-09T20:34:27+07:00" />
+<meta itemprop="dateModified" content="2021-12-19T19:59:23+07:00" />
 <meta itemprop="wordCount" content="2534"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
-
+<meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_9299210639095042647.png"/>
 <meta name="twitter:title" content="Multilingual Mode"/>
 <meta name="twitter:description" content="Hugo supports the creation of websites with multiple languages side by side."/>
 <meta name="twitter:site" content="@GoHugoIO"/>
@@ -172,7 +170,8 @@
     <label class="clip" for="search-input">Search</label>
     <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: url('/images/icon-search.png') 5px 11px/16px 16px no-repeat; background-color: rgba(255,255,255,0);">
   </fieldset>
-</form></div>
+</form>
+</div>
 
     <span class="absolute mt1 mt2-l pr3 right-0 top-0">
 
@@ -272,33 +271,23 @@
 <h2 id="configure-languages">Configure Languages <a class="header-link" href="#configure-languages"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>The following is an example of a site configuration for a multilingual Hugo project:</p>
 
-
-
-  
-
-
 <div class="code relative" id="config">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        config.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">copyright</span><span class="p">:</span><span class="w"> </span><span class="l">Everything is mine</span><span class="w">
 </span><span class="w"></span><span class="nt">defaultContentLanguage</span><span class="p">:</span><span class="w"> </span><span class="l">en</span><span class="w">
@@ -327,11 +316,7 @@
 </span><span class="w">    </span><span class="nt">help</span><span class="p">:</span><span class="w"> </span><span class="l">Help</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">copyright</span> <span class="p">=</span> <span class="s1">&#39;Everything is mine&#39;</span>
 <span class="nx">defaultContentLanguage</span> <span class="p">=</span> <span class="s1">&#39;en&#39;</span>
@@ -360,11 +345,7 @@
     <span class="nx">help</span> <span class="p">=</span> <span class="s1">&#39;Help&#39;</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;copyright&#34;</span><span class="p">:</span> <span class="s2">&#34;Everything is mine&#34;</span><span class="p">,</span>
@@ -405,13 +386,8 @@
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <p>Anything not defined in a <code>languages</code> block will fall back to the global value for that key (e.g., <code>copyright</code> for the English <code>en</code> language). This also works for <code>params</code>, as demonstrated with <code>help</code> above: You will get the value <code>Aide</code> in French and <code>Help</code> in all the languages without this parameter set.</p>
@@ -425,53 +401,35 @@ and taxonomy pages will be rendered below <code>/</code> in English (your defaul
 <h3 id="disable-a-language">Disable a Language <a class="header-link" href="#disable-a-language"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>You can disable one or more languages. This can be useful when working on a new translation.</p>
 
-
-
-  
-
-
 <div class="code relative" id="config">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        config.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">disableLanguages</span><span class="p">:</span><span class="w">
 </span><span class="w"></span>- <span class="l">fr</span><span class="w">
 </span><span class="w"></span>- <span class="l">ja</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">disableLanguages</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;fr&#39;</span><span class="p">,</span> <span class="s1">&#39;ja&#39;</span><span class="p">]</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;disableLanguages&#34;</span><span class="p">:</span> <span class="p">[</span>
@@ -481,13 +439,8 @@ and taxonomy pages will be rendered below <code>/</code> in English (your defaul
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <p>Note that you cannot disable the default content language.</p>
@@ -503,33 +456,23 @@ and taxonomy pages will be rendered below <code>/</code> in English (your defaul
 </blockquote>
 <p>Example:</p>
 
-
-
-  
-
-
 <div class="code relative" id="config">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        config.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">languages</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">en</span><span class="p">:</span><span class="w">
@@ -544,11 +487,7 @@ and taxonomy pages will be rendered below <code>/</code> in English (your defaul
 </span><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">languages</span><span class="p">]</span>
   <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">]</span>
@@ -563,11 +502,7 @@ and taxonomy pages will be rendered below <code>/</code> in English (your defaul
     <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;languages&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -587,13 +522,8 @@ and taxonomy pages will be rendered below <code>/</code> in English (your defaul
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <p>With the above, the two sites will be generated into <code>public</code> with their own root:</p>
@@ -609,33 +539,23 @@ Press Ctrl+C to stop
 <h3 id="taxonomies-and-blackfriday">Taxonomies and Blackfriday <a class="header-link" href="#taxonomies-and-blackfriday"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>Taxonomies and <a href="/getting-started/configuration/">Blackfriday configuration</a> can also be set per language:</p>
 
-
-
-  
-
-
 <div class="code relative" id="config">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        config.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">Taxonomies</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l">tags</span><span class="w">
@@ -655,11 +575,7 @@ Press Ctrl+C to stop
 </span><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">Taxonomies</span><span class="p">]</span>
   <span class="nx">tag</span> <span class="p">=</span> <span class="s1">&#39;tags&#39;</span>
@@ -679,11 +595,7 @@ Press Ctrl+C to stop
       <span class="nx">plaque</span> <span class="p">=</span> <span class="s1">&#39;plaques&#39;</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;Taxonomies&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -712,13 +624,8 @@ Press Ctrl+C to stop
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <h2 id="translate-your-content">Translate Your Content <a class="header-link" href="#translate-your-content"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
@@ -748,33 +655,23 @@ If a file has no language code, it will be assigned the default language.
 <h3 id="translation-by-content-directory">Translation by content directory <a class="header-link" href="#translation-by-content-directory"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>This system uses different content directories for each of the languages. Each language&rsquo;s content directory is set using the <code>contentDir</code> param.</p>
 
-
-
-  
-
-
 <div class="code relative" id="config">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        config.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">languages</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">en</span><span class="p">:</span><span class="w">
@@ -787,11 +684,7 @@ If a file has no language code, it will be assigned the default language.
 </span><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">20</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">languages</span><span class="p">]</span>
   <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">]</span>
@@ -804,11 +697,7 @@ If a file has no language code, it will be assigned the default language.
     <span class="nx">weight</span> <span class="p">=</span> <span class="mi">20</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;languages&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -826,13 +715,8 @@ If a file has no language code, it will be assigned the default language.
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <p>The value of <code>contentDir</code> can be any valid path &ndash; even absolute path references. The only restriction is that the content directories cannot overlap.</p>
@@ -854,62 +738,40 @@ The second file is assigned the French language and is linked to the first.</p>
 <li><code>/content/presentation/a-propos.fr.md</code></li>
 </ol>
 
-
-
-  
-
-
 <div class="code relative" >
   <div class="code-nav flex flex-nowrap items-stretch">
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">translationKey</span><span class="p">:</span><span class="w"> </span><span class="l">about</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">translationKey</span> <span class="p">=</span> <span class="s1">&#39;about&#39;</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;translationKey&#34;</span><span class="p">:</span> <span class="s2">&#34;about&#34;</span>
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <p>By setting the <code>translationKey</code> front matter param to <code>about</code> in all three pages, they will be <strong>linked</strong> as translated pages.</p>
@@ -918,51 +780,34 @@ The second file is assigned the French language and is linked to the first.</p>
 <p>To localize the URLs, the <a href="https://gohugo.io/content-management/organization/#slug"><code>slug</code></a> or <a href="https://gohugo.io/content-management/organization/#url"><code>url</code></a> front matter param can be set in any of the non-default language file.</p>
 <p>For example, a French translation (<code>content/about.fr.md</code>) can have its own localized slug.</p>
 
-
-
-  
-
-
 <div class="code relative" >
   <div class="code-nav flex flex-nowrap items-stretch">
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">Title</span><span class="p">:</span><span class="w"> </span><span class="l">A Propos</span><span class="w">
 </span><span class="w"></span><span class="nt">slug</span><span class="p">:</span><span class="w"> </span><span class="l">a-propos</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">Title</span> <span class="p">=</span> <span class="s1">&#39;A Propos&#39;</span>
 <span class="nx">slug</span> <span class="p">=</span> <span class="s1">&#39;a-propos&#39;</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;Title&#34;</span><span class="p">:</span> <span class="s2">&#34;A Propos&#34;</span><span class="p">,</span>
@@ -970,13 +815,8 @@ The second file is assigned the French language and is linked to the first.</p>
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <p>At render, Hugo will build both <code>/about/</code> and <code>/fr/a-propos/</code> while maintaining their translation linking.</p>
@@ -1085,53 +925,35 @@ hugolang
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">i18n</span><span class="w"> </span><span class="s">&#34;home&#34;</span><span class="w"> </span><span class="cp">}}</span>
 </code></pre></div><p>The function will search for the <code>&quot;home&quot;</code> id:</p>
 
-
-
-  
-
-
 <div class="code relative" id="i18n/en-us">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        i18n/en-US.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">i18n/en-US.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">home</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">other</span><span class="p">:</span><span class="w"> </span><span class="l">Home</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">home</span><span class="p">]</span>
   <span class="nx">other</span> <span class="p">=</span> <span class="s1">&#39;Home&#39;</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;home&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -1140,13 +962,8 @@ hugolang
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <p>The result will be</p>
@@ -1156,53 +973,35 @@ hugolang
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">i18n</span><span class="w"> </span><span class="s">&#34;wordCount&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
 </code></pre></div><p>The function will pass the <code>.</code> context to the <code>&quot;wordCount&quot;</code> id:</p>
 
-
-
-  
-
-
 <div class="code relative" id="i18n/en-us">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        i18n/en-US.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">i18n/en-US.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">wordCount</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">other</span><span class="p">:</span><span class="w"> </span><span class="l">This article has {{ .WordCount }} words.</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">wordCount</span><span class="p">]</span>
   <span class="nx">other</span> <span class="p">=</span> <span class="s1">&#39;This article has {{ .WordCount }} words.&#39;</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;wordCount&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -1211,13 +1010,8 @@ hugolang
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <p>Assume <code>.WordCount</code> in the context has value is 101. The result will be:</p>
@@ -1227,55 +1021,37 @@ hugolang
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">i18n</span><span class="w"> </span><span class="s">&#34;readingTime&#34;</span><span class="w"> </span><span class="na">.ReadingTime</span><span class="w"> </span><span class="cp">}}</span>
 </code></pre></div><p>The function will read <code>.Count</code> from <code>.ReadingTime</code> and evaluate where the number is singular (<code>one</code>) or plural (<code>other</code>). After that, it will pass to <code>readingTime</code> id:</p>
 
-
-
-  
-
-
 <div class="code relative" id="i18n/en-us">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        i18n/en-US.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">i18n/en-US.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">readingTime</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">one</span><span class="p">:</span><span class="w"> </span><span class="l">One minute to read</span><span class="w">
 </span><span class="w">  </span><span class="nt">other</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;{{.Count}} minutes to read&#39;</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">readingTime</span><span class="p">]</span>
   <span class="nx">one</span> <span class="p">=</span> <span class="s1">&#39;One minute to read&#39;</span>
   <span class="nx">other</span> <span class="p">=</span> <span class="s1">&#39;{{.Count}} minutes to read&#39;</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;readingTime&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -1285,13 +1061,8 @@ hugolang
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <p>Assume <code>.ReadingTime.Count</code> in the context has value of 525600. The result will be:</p>
@@ -1303,33 +1074,23 @@ hugolang
 </code></pre></div><h2 id="localization">Localization <a class="header-link" href="#localization"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>The following localization examples assume your site&rsquo;s primary language is English, with translations to French and German.</p>
 
-
-
-  
-
-
 <div class="code relative" id="config">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        config.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">defaultContentLang</span><span class="p">:</span><span class="w"> </span><span class="l">en</span><span class="w">
 </span><span class="w"></span><span class="nt">languages</span><span class="p">:</span><span class="w">
@@ -1347,11 +1108,7 @@ hugolang
 </span><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">defaultContentLang</span> <span class="p">=</span> <span class="s1">&#39;en&#39;</span>
 <span class="p">[</span><span class="nx">languages</span><span class="p">]</span>
@@ -1369,11 +1126,7 @@ hugolang
     <span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;defaultContentLang&#34;</span><span class="p">:</span> <span class="s2">&#34;en&#34;</span><span class="p">,</span>
@@ -1397,22 +1150,12 @@ hugolang
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <h3 id="dates">Dates <a class="header-link" href="#dates"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>With this front matter:</p>
-
-
-
-  
-
 
 <div class="code relative" >
   <div class="code-nav flex flex-nowrap items-stretch">
@@ -1420,51 +1163,34 @@ hugolang
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="ld">2021-11-03T12:34:56</span><span class="m">+01</span><span class="p">:</span><span class="m">00</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">date</span> <span class="p">=</span> <span class="ld">2021-11-03T12:34:56+01:00</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;date&#34;</span><span class="p">:</span> <span class="s2">&#34;2021-11-03T12:34:56+01:00&#34;</span>
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <p>And this template code:</p>
@@ -1577,33 +1303,23 @@ hugolang
 <h2 id="menus">Menus <a class="header-link" href="#menus"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>You can define your menus for each language independently. Creating multilingual menus works just like <a href="/content-management/menus/">creating regular menus</a>, except they&rsquo;re defined in language-specific blocks in the configuration file:</p>
 
-
-
-  
-
-
 <div class="code relative" id="config">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        config.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">defaultContentLanguage</span><span class="p">:</span><span class="w"> </span><span class="l">en</span><span class="w">
 </span><span class="w"></span><span class="nt">languages</span><span class="p">:</span><span class="w">
@@ -1625,11 +1341,7 @@ hugolang
 </span><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">defaultContentLanguage</span> <span class="p">=</span> <span class="s1">&#39;en&#39;</span>
 <span class="p">[</span><span class="nx">languages</span><span class="p">]</span>
@@ -1651,11 +1363,7 @@ hugolang
       <span class="nx">weight</span> <span class="p">=</span> <span class="mi">0</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;defaultContentLanguage&#34;</span><span class="p">:</span> <span class="s2">&#34;en&#34;</span><span class="p">,</span>
@@ -1690,13 +1398,8 @@ hugolang
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <p>The rendering of the main navigation works as usual. <code>.Site.Menus</code> will just contain the menu in the current language. Note that <code>absLangURL</code> below will link to the correct locale of your website. Without it, menu entries in all languages would link to the English version, since it&rsquo;s the default content language that resides in the root directory.</p>
@@ -1979,7 +1682,7 @@ i18n<span class="p">|</span>MISSING_TRANSLATION<span class="p">|</span>en<span c
           </li>
           <li class="f6 fw4">
             <a href="/content-management/multilingual/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 primary-color ">
-              Multilingual and i18n
+              Multilingual
             </a>
           </li>
           <li class="f6 fw4">
@@ -2000,7 +1703,7 @@ i18n<span class="p">|</span>MISSING_TRANSLATION<span class="p">|</span>en<span c
           </li>
           <li class="f6 fw4">
             <a href="/templates/introduction/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Introduction
+              Templating
             </a>
           </li>
           <li class="f6 fw4">
@@ -2020,7 +1723,7 @@ i18n<span class="p">|</span>MISSING_TRANSLATION<span class="p">|</span>en<span c
           </li>
           <li class="f6 fw4">
             <a href="/templates/lists/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              List Page Templates
+              List Templates
             </a>
           </li>
           <li class="f6 fw4">
@@ -2356,7 +2059,7 @@ i18n<span class="p">|</span>MISSING_TRANSLATION<span class="p">|</span>en<span c
           </li>
           <li class="f6 fw4">
             <a href="/functions/images/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Image Functions
+              Image Filters
             </a>
           </li>
           <li class="f6 fw4">
@@ -2858,7 +2561,7 @@ i18n<span class="p">|</span>MISSING_TRANSLATION<span class="p">|</span>en<span c
           </li>
           <li class="f6 fw4">
             <a href="/hugo-pipes/introduction/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hugo Pipes Introduction
+              Hugo Pipes
             </a>
           </li>
           <li class="f6 fw4">
@@ -3085,12 +2788,8 @@ i18n<span class="p">|</span>MISSING_TRANSLATION<span class="p">|</span>en<span c
 
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
-      <h6 class="f4 dark-gray mb2">
-  <a href="https://gohugo.io/content-management/multilingual/" class="hide-child link primary-color">
-  <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
-</span>
-    “Multilingual Mode”
-  </a> was last updated: December 9, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/8ee6bb505c1182e337d4fe293ebb6b853fce71e6">Merge pull request #97 from blackb1rd/hugo/v0.90.0 (8ee6bb5)</a>
+      <h6 class="f6 dark-gray mb2">
+  Last updated: December 19, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/5f99b0f14c7f3f53d5b1f9407244ec883256c74d">Merge pull request #98 from blackb1rd/hugo/v0.91.0 (5f99b0f)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/content-management/multilingual.md" class="
@@ -3193,10 +2892,10 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 
     <img src="/images/gopher-side_color.svg" alt="" class="absolute-l bottom-0 dn db-l h4 right-0 z-999"/>
 
-    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 w-100"><div  class="globalmenu mobilemenu pb3 dn">
+    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100"><div  class="globalmenu mobilemenu pb1 dn">
     
 
-<ul class="list hidden dib ph0 ma0 scrolling-touch tc">
+<ul class="list hidden dib ph0 scrolling-touch tc">
   
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/news/" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
@@ -3237,10 +2936,10 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </ul>
 
 </div>
-<div  class="docsmenu mobilemenu pb3 dn">
+<div  class="docsmenu mobilemenu pb1 dn">
     
 
-<ul class="list dib ph0 ma0 scrolling-touch tc">
+<ul class="list dib ph0 scrolling-touch tc">
   
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/about/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
@@ -3331,9 +3030,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 <div class="flex dn-l justify-between">
-  <button class="js-toggle flex-auto dib dn-l f6 tc db mt4-ns ph3 pv2 link mr2 white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".globalmenu">Menu</button>
+  <button class="js-toggle flex-auto dib dn-l f6 tc db ph3 pv2 link mr2 white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".globalmenu">Menu</button>
 
-  <button class="js-toggle flex-auto dib dn-l f6 tc db mt4-ns ph3 pv2 link white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".docsmenu">Docs Menu</button>
+  <button class="js-toggle flex-auto dib dn-l f6 tc db ph3 pv2 link white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".docsmenu">Docs Menu</button>
 </div>
 </div>
 

@@ -22,13 +22,13 @@
 /privacy/                          	/about/hugo-and-gdpr/
 /gdpr/                             	/about/hugo-and-gdpr/
 /tutorials/deployment-with-nanobox/	/hosting-and-deployment/deployment-with-nanobox/
-/layouts/introduction/             	/templates/introduction/
-/layout/introduction/              	/templates/introduction/
-/templates/go-templates/           	/templates/introduction/
 /developer-tools/migrations/       	/tools/migrations/
 /developer-tools/migrated/         	/tools/migrations/
 /content/sections/                 	/content-management/organization/
 /variables/site-variables/         	/variables/site/
+/layouts/introduction/             	/templates/introduction/
+/layout/introduction/              	/templates/introduction/
+/templates/go-templates/           	/templates/introduction/
 /overview/introduction/            	/about/what-is-hugo/
 /about/why-i-built-hugo/           	/about/what-is-hugo/
 /quickstart/                       	/getting-started/quick-start/

@@ -15,7 +15,7 @@
       <guid>https://gohugo.io/about/security-model/</guid>
       <description>Runtime Security  Hugo produces static output, so once built, the runtime is the browser (assuming the output is HTML) and any server (API) that you integrate with.
 But when developing and building your site, the runtime is the hugo executable. Securing a runtime can be a real challenge.
-Hugo&amp;rsquo;s main approach is that of sandboxing:
+Hugo&amp;rsquo;s main approach is that of sandboxing and a security policy with strict defaults:
  Hugo has a virtual file system and only the main project (not third-party components) is allowed to mount directories or files outside the project root.</description>
     </item>
     

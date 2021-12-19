@@ -13,8 +13,9 @@
       <pubDate>Sat, 14 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/hugo-pipes/introduction/</guid>
-      <description>Asset directory  Asset files must be stored in the asset directory. This is /assets by default, but can be configured via the configuration file&amp;rsquo;s assetDir key.
-From file or URL to resource  In order to process an asset with Hugo Pipes, it must be retrieved as a resource using resources.Get. The first argument can be the filepath of the file relative to the asset directory or the URL of the file.</description>
+      <description>Get Resource with resources.Get  In order to process an asset with Hugo Pipes, it must be retrieved as a Resource using resources.Get. The first argument can be either a local the path to file relative to the asset directory/directories or a remote URL.
+{{$local:=resources.Get&amp;#34;sass/main.scss&amp;#34;}} {{$remote:=resources.Get&amp;#34;https://www.example.com/styles.scss&amp;#34;}} resources.Get will always return nil if the resource could not be found.
+Error Handling  New in v0.90.1  The return value from resources.Get includes an .</description>
     </item>
     
     <item>

@@ -13,7 +13,7 @@
   <title>Hugo Pipes Introduction | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.13-DEV" />
+  <meta name="generator" content="Hugo 0.14-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -60,17 +60,15 @@
 <meta property="og:title" content="Hugo Pipes Introduction" />
 <meta property="og:description" content="Hugo Pipes is Hugo&#39;s asset processing set of functions." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gohugo.io/hugo-pipes/introduction/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="hugo-pipes" />
+<meta property="og:url" content="https://gohugo.io/hugo-pipes/introduction/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_3431511264709384207.png"/><meta property="article:section" content="hugo-pipes" />
 <meta property="article:published_time" content="2018-07-14T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-12-09T20:34:27+07:00" />
-
+<meta property="article:modified_time" content="2021-12-19T19:59:23+07:00" />
 <meta itemprop="name" content="Hugo Pipes Introduction">
 <meta itemprop="description" content="Hugo Pipes is Hugo&#39;s asset processing set of functions."><meta itemprop="datePublished" content="2018-07-14T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-12-09T20:34:27+07:00" />
-<meta itemprop="wordCount" content="377"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="dateModified" content="2021-12-19T19:59:23+07:00" />
+<meta itemprop="wordCount" content="381"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
-
+<meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_3431511264709384207.png"/>
 <meta name="twitter:title" content="Hugo Pipes Introduction"/>
 <meta name="twitter:description" content="Hugo Pipes is Hugo&#39;s asset processing set of functions."/>
 <meta name="twitter:site" content="@GoHugoIO"/>
@@ -172,7 +170,8 @@
     <label class="clip" for="search-input">Search</label>
     <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: url('/images/icon-search.png') 5px 11px/16px 16px no-repeat; background-color: rgba(255,255,255,0);">
   </fieldset>
-</form></div>
+</form>
+</div>
 
     <span class="absolute mt1 mt2-l pr3 right-0 top-0">
 
@@ -195,6 +194,17 @@
 
       <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
 <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
+	
+		<p class="b">What's on this Page</p>
+  	<nav id="TableOfContents">
+  <ul>
+    <li><a href="#get-resource-with-resourcesget">Get Resource with resources.Get</a></li>
+    <li><a href="#asset-directory">Asset directory</a></li>
+    <li><a href="#go-pipes">Go Pipes</a></li>
+    <li><a href="#method-aliases">Method aliases</a></li>
+    <li><a href="#caching">Caching</a></li>
+  </ul>
+</nav>
 	
 
 	<div date-pref>
@@ -243,43 +253,57 @@
 
 <div class="prose" id="prose">
 
-<h3 id="asset-directory">Asset directory <a class="header-link" href="#asset-directory"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<h2 id="get-resource-with-resourcesget">Get Resource with resources.Get <a class="header-link" href="#get-resource-with-resourcesget"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<p>In order to process an asset with Hugo Pipes, it must be retrieved as a <code>Resource</code> using <code>resources.Get</code>. The first argument can be either a local the path to file relative to the <code>asset</code> directory/directories or a remote URL.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">$local</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">resources</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;sass/main.scss&#34;</span><span class="w"> </span><span class="cp">}}</span>
+<span class="cp">{{</span><span class="w"> </span><span class="nx">$remote</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">resources</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;https://www.example.com/styles.scss&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</code></pre></div><p><code>resources.Get</code> will always return <code>nil</code> if the resource could not be found.</p>
+<h3 id="error-handling">Error Handling <a class="header-link" href="#error-handling"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+
+
+
+<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
+    <a href="https://gohugo.io/news/0.90.1-relnotes/" target="_blank">New in v0.90.1</a>
+</button>
+<p>The return value from <code>resources.Get</code> includes an <code>.Err</code> method that will return an error if the call failed. If you want to just log any error as a <code>WARNING</code> you can use a construct similar to the one below.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nx">resources</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;https://gohugo.io/images/gohugoio-card-1.png&#34;</span><span class="w"> </span><span class="cp">}}</span>
+  <span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.Err</span><span class="w"> </span><span class="cp">}}</span>
+    <span class="cp">{{</span><span class="w"> </span><span class="nx">warnf</span><span class="w"> </span><span class="s">&#34;%s&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
+  <span class="cp">{{</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="cp">}}</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.RelPermalink</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Width</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Height</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>
+  <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</code></pre></div><p>Note that if you do not handle <code>.Err</code> yourself, Hugo will fail the build the first time you start using the <code>Resource</code> object.</p>
+<h3 id="remote-options">Remote Options <a class="header-link" href="#remote-options"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<p>When fetching a remote <code>Resource</code>, <code>resources.Get</code> takes an optional options map as the last argument, e.g.:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">$resource</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">resources</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;https://example.org/api&#34;</span><span class="w"> </span><span class="o">(</span><span class="nx">dict</span><span class="w"> </span><span class="s">&#34;headers&#34;</span><span class="w"> </span><span class="o">(</span><span class="nx">dict</span><span class="w"> </span><span class="s">&#34;Authorization&#34;</span><span class="w"> </span><span class="s">&#34;Bearer abcd&#34;</span><span class="o">))</span><span class="w">  </span><span class="cp">}}</span>
+</code></pre></div><p>If you need multiple values for the same header key, use a slice:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">$resource</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">resources</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;https://example.org/api&#34;</span><span class="w">  </span><span class="o">(</span><span class="nx">dict</span><span class="w"> </span><span class="s">&#34;headers&#34;</span><span class="w"> </span><span class="o">(</span><span class="nx">dict</span><span class="w"> </span><span class="s">&#34;X-List&#34;</span><span class="w"> </span><span class="o">(</span><span class="nx">slice</span><span class="w"> </span><span class="s">&#34;a&#34;</span><span class="w"> </span><span class="s">&#34;b&#34;</span><span class="w"> </span><span class="s">&#34;c&#34;</span><span class="o">)))</span><span class="w">  </span><span class="cp">}}</span>
+</code></pre></div><p>You can also change the request method and set the request body:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">$postResponse</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">resources</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;https://example.org/api&#34;</span><span class="w">  </span><span class="o">(</span><span class="nx">dict</span><span class="w"> 
+</span><span class="w">    </span><span class="s">&#34;method&#34;</span><span class="w"> </span><span class="s">&#34;post&#34;</span><span class="w">
+</span><span class="w">    </span><span class="s">&#34;body&#34;</span><span class="w"> </span><span class="s">`{&#34;complete&#34;: true}`</span><span class="w"> 
+</span><span class="w">    </span><span class="s">&#34;headers&#34;</span><span class="w"> </span><span class="o">(</span><span class="nx">dict</span><span class="w"> 
+</span><span class="w">        </span><span class="s">&#34;Content-Type&#34;</span><span class="w"> </span><span class="s">&#34;application/json&#34;</span><span class="w">
+</span><span class="w">    </span><span class="o">)</span><span class="w">
+</span><span class="w"></span><span class="o">)</span><span class="cp">}}</span>
+</code></pre></div><h3 id="caching-of-remote-resources">Caching of Remote Resources <a class="header-link" href="#caching-of-remote-resources"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<p>Remote resources fetched with <code>resources.Get</code> will be cached on disk. See <a href="/getting-started/configuration/#configure-file-caches">Configure File Caches</a> for details.</p>
+<h2 id="asset-directory">Asset directory <a class="header-link" href="#asset-directory"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Asset files must be stored in the asset directory. This is <code>/assets</code> by default, but can be configured via the configuration file&rsquo;s <code>assetDir</code> key.</p>
-<h3 id="from-file-or-url-to-resource">From file or URL to resource <a class="header-link" href="#from-file-or-url-to-resource"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>In order to process an asset with Hugo Pipes, it must be retrieved as a resource using <code>resources.Get</code>. The first argument can be the filepath of the file relative to the asset directory or the URL of the file.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">$style</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">resources</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;sass/main.scss&#34;</span><span class="w"> </span><span class="cp">}}</span>
-<span class="cp">{{</span><span class="w"> </span><span class="nx">$remoteStyle</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">resources</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;https://www.example.com/styles.scss&#34;</span><span class="w"> </span><span class="cp">}}</span>
-</code></pre></div><h4 id="request-options">Request options <a class="header-link" href="#request-options"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
-<p>When using an URL, the <code>resources.Get</code> function takes an optional options map as the last argument, e.g.:</p>
-<pre tabindex="0"><code>{{ $resource := resources.Get &quot;https://example.org/api&quot; (dict &quot;headers&quot; (dict &quot;Authorization&quot; &quot;Bearer abcd&quot;))  }}
-</code></pre><p>If you need multiple values for the same header key, use a slice:</p>
-<pre tabindex="0"><code>{{ $resource := resources.Get &quot;https://example.org/api&quot;  (dict &quot;headers&quot; (dict &quot;X-List&quot; (slice &quot;a&quot; &quot;b&quot; &quot;c&quot;)))  }}
-</code></pre><p>You can also change the request method and set the request body:</p>
-<pre tabindex="0"><code>{{ $postResponse := resources.Get &quot;https://example.org/api&quot;  (dict 
-    &quot;method&quot; &quot;post&quot;
-    &quot;body&quot; `{&quot;complete&quot;: true}` 
-    &quot;headers&quot; (dict 
-        &quot;Content-Type&quot; &quot;application/json&quot;
-    )
-)}}
-</code></pre><h4 id="cache-of-remote-resources">Cache of remote resources <a class="header-link" href="#cache-of-remote-resources"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
-<p>Each downloaded URL will be cached in the default folder <code>$TMPDIR/hugo_cache/</code>. The variable <code>$TMPDIR</code> will be resolved to your system-dependent temporary directory.</p>
-<p>With the command-line flag <code>--cacheDir</code>, you can specify any folder on your system as a caching directory.</p>
-<p>You can also set <code>cacheDir</code> or <code>caches.getresource</code> in the [main configuration file][config].</p>
-<p>If you don&rsquo;t like caching at all, you can fully disable caching with the command line flag <code>--ignoreCache</code>.</p>
-<h3 id="asset-publishing">Asset publishing <a class="header-link" href="#asset-publishing"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>Assets will only be published (to <code>/public</code>) if <code>.Permalink</code> or <code>.RelPermalink</code> is used.</p>
-<h3 id="go-pipes">Go Pipes <a class="header-link" href="#go-pipes"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<h3 id="asset-publishing">Asset Publishing <a class="header-link" href="#asset-publishing"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<p>Assets will only be published (to <code>/public</code>) if <code>.Permalink</code> or <code>.RelPermalink</code> is used. You can use <code>.Content</code> to inline the asset.</p>
+<h2 id="go-pipes">Go Pipes <a class="header-link" href="#go-pipes"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>For improved readability, the Hugo Pipes examples of this documentation will be written using <a href="/templates/introduction/#pipes">Go Pipes</a>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">$style</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">resources</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;sass/main.scss&#34;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">resources</span><span class="na">.ToCSS</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">resources</span><span class="na">.Minify</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">resources</span><span class="na">.Fingerprint</span><span class="w"> </span><span class="cp">}}</span>
 <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="nx">$style</span><span class="na">.Permalink</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span>
-</code></pre></div><h3 id="method-aliases">Method aliases <a class="header-link" href="#method-aliases"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+</code></pre></div><h2 id="method-aliases">Method aliases <a class="header-link" href="#method-aliases"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Each Hugo Pipes <code>resources</code> transformation method uses a <strong>camelCased</strong> alias (<code>toCSS</code> for <code>resources.ToCSS</code>).
 Non-transformation methods deprived of such aliases are <code>resources.Get</code>, <code>resources.FromString</code>, <code>resources.ExecuteAsTemplate</code> and <code>resources.Concat</code>.</p>
 <p>The example above can therefore also be written as follows:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">$style</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">resources</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;sass/main.scss&#34;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">toCSS</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">minify</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">fingerprint</span><span class="w"> </span><span class="cp">}}</span>
 <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="nx">$style</span><span class="na">.Permalink</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span>
-</code></pre></div><h3 id="caching">Caching <a class="header-link" href="#caching"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+</code></pre></div><h2 id="caching">Caching <a class="header-link" href="#caching"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Hugo Pipes invocations are cached based on the entire <em>pipe chain</em>.</p>
 <p>An example of a pipe chain is:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">$mainJs</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">resources</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;js/main.js&#34;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">js</span><span class="na">.Build</span><span class="w"> </span><span class="s">&#34;main.js&#34;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">minify</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">fingerprint</span><span class="w"> </span><span class="cp">}}</span>
@@ -515,7 +539,7 @@ Non-transformation methods deprived of such aliases are <code>resources.Get</cod
           </li>
           <li class="f6 fw4">
             <a href="/content-management/multilingual/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Multilingual and i18n
+              Multilingual
             </a>
           </li>
           <li class="f6 fw4">
@@ -536,7 +560,7 @@ Non-transformation methods deprived of such aliases are <code>resources.Get</cod
           </li>
           <li class="f6 fw4">
             <a href="/templates/introduction/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Introduction
+              Templating
             </a>
           </li>
           <li class="f6 fw4">
@@ -556,7 +580,7 @@ Non-transformation methods deprived of such aliases are <code>resources.Get</cod
           </li>
           <li class="f6 fw4">
             <a href="/templates/lists/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              List Page Templates
+              List Templates
             </a>
           </li>
           <li class="f6 fw4">
@@ -892,7 +916,7 @@ Non-transformation methods deprived of such aliases are <code>resources.Get</cod
           </li>
           <li class="f6 fw4">
             <a href="/functions/images/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Image Functions
+              Image Filters
             </a>
           </li>
           <li class="f6 fw4">
@@ -1394,7 +1418,7 @@ Non-transformation methods deprived of such aliases are <code>resources.Get</cod
           </li>
           <li class="f6 fw4">
             <a href="/hugo-pipes/introduction/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 primary-color ">
-              Hugo Pipes Introduction
+              Hugo Pipes
             </a>
           </li>
           <li class="f6 fw4">
@@ -1621,12 +1645,8 @@ Non-transformation methods deprived of such aliases are <code>resources.Get</cod
 
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
-      <h6 class="f4 dark-gray mb2">
-  <a href="https://gohugo.io/hugo-pipes/introduction/" class="hide-child link primary-color">
-  <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
-</span>
-    “Hugo Pipes Introduction”
-  </a> was last updated: December 9, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/8ee6bb505c1182e337d4fe293ebb6b853fce71e6">Merge pull request #97 from blackb1rd/hugo/v0.90.0 (8ee6bb5)</a>
+      <h6 class="f6 dark-gray mb2">
+  Last updated: December 19, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/5f99b0f14c7f3f53d5b1f9407244ec883256c74d">Merge pull request #98 from blackb1rd/hugo/v0.91.0 (5f99b0f)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/hugo-pipes/introduction.md" class="
@@ -1729,10 +1749,10 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 
     <img src="/images/gopher-side_color.svg" alt="" class="absolute-l bottom-0 dn db-l h4 right-0 z-999"/>
 
-    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 w-100"><div  class="globalmenu mobilemenu pb3 dn">
+    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100"><div  class="globalmenu mobilemenu pb1 dn">
     
 
-<ul class="list hidden dib ph0 ma0 scrolling-touch tc">
+<ul class="list hidden dib ph0 scrolling-touch tc">
   
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/news/" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
@@ -1773,10 +1793,10 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </ul>
 
 </div>
-<div  class="docsmenu mobilemenu pb3 dn">
+<div  class="docsmenu mobilemenu pb1 dn">
     
 
-<ul class="list dib ph0 ma0 scrolling-touch tc">
+<ul class="list dib ph0 scrolling-touch tc">
   
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/about/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
@@ -1867,9 +1887,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 <div class="flex dn-l justify-between">
-  <button class="js-toggle flex-auto dib dn-l f6 tc db mt4-ns ph3 pv2 link mr2 white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".globalmenu">Menu</button>
+  <button class="js-toggle flex-auto dib dn-l f6 tc db ph3 pv2 link mr2 white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".globalmenu">Menu</button>
 
-  <button class="js-toggle flex-auto dib dn-l f6 tc db mt4-ns ph3 pv2 link white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".docsmenu">Docs Menu</button>
+  <button class="js-toggle flex-auto dib dn-l f6 tc db ph3 pv2 link white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".docsmenu">Docs Menu</button>
 </div>
 </div>
 

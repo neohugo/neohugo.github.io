@@ -46,7 +46,7 @@ Basic Syntax  Go Templates are HTML files with the addition of variables and fun
       <description>This page describes how to properly configure your site with the media types and output formats, as well as where to create your templates for your custom outputs.
 Media Types  A media type (also known as MIME type and content type) is a two-part identifier for file formats and format contents transmitted on the Internet.
 This is the full set of built-in media types in Hugo:
- type suffixes   application/javascript [js]   application/json [json]   application/manifest&amp;#43;json [webmanifest]   application/octet-stream []   application/rss&amp;#43;xml [xml rss]   application/toml [toml]   application/typescript [ts]   application/xml [xml]   application/yaml [yaml yml]   image/jpeg [jpg jpeg]   image/png [png]   image/svg&amp;#43;xml [svg]   image/webp [webp]   text/calendar [ics]   text/css [css]   text/csv [csv]   text/html [html]   text/jsx [jsx]   text/plain [txt]   text/tsx [tsx]   text/x-sass [sass]   text/x-scss [scss]   video/3gpp [3gpp 3gp]   video/mp4 [mp4]   video/mpeg [mpg mpeg]   video/ogg [ogv]   video/webm [webm]   video/x-msvideo [avi]   Note:</description>
+ type suffixes   application/javascript [js]   application/json [json]   application/manifest&amp;#43;json [webmanifest]   application/octet-stream []   application/rss&amp;#43;xml [xml rss]   application/toml [toml]   application/typescript [ts]   application/xml [xml]   application/yaml [yaml yml]   font/otf [otf]   font/ttf [ttf]   image/jpeg [jpg jpeg jpe jif jfif]   image/png [png]   image/svg&amp;#43;xml [svg]   image/webp [webp]   text/calendar [ics]   text/css [css]   text/csv [csv]   text/html [html]   text/jsx [jsx]   text/plain [txt]   text/tsx [tsx]   text/x-sass [sass]   text/x-scss [scss]   video/3gpp [3gpp 3gp]   video/mp4 [mp4]   video/mpeg [mpg mpeg]   video/ogg [ogv]   video/webm [webm]   video/x-msvideo [avi]   Note:</description>
     </item>
     
     <item>
@@ -235,7 +235,7 @@ A sitemap is a Page and therefore has all the page variables available to use in
       
       <guid>https://gohugo.io/templates/robots/</guid>
       <description>To generate a robots.txt file from a template, change the site configuration:
-config.  yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  enableRobotsTXT:true   enableRobotsTXT = true    { &amp;#34;enableRobotsTXT&amp;#34;: true }      By default, Hugo generates robots.txt using an internal template.
+config. yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  enableRobotsTXT:true   enableRobotsTXT = true    { &amp;#34;enableRobotsTXT&amp;#34;: true }      By default, Hugo generates robots.txt using an internal template.
 User-agent: * Search engines that honor the Robots Exclusion Protocol will interpret this as permission to crawl everything on the site.</description>
     </item>
     
@@ -248,7 +248,7 @@ User-agent: * Search engines that honor the Robots Exclusion Protocol will inter
       <description>While the following internal templates are called similar to partials, they do not observe the partial template lookup order.
   Google Analytics  Hugo ships with internal templates for Google Analytics tracking, including both synchronous and asynchronous tracking codes. As well as support for both v3 and v4 of Google Analytics.
 Configure Google Analytics  Provide your tracking id in your configuration file:
-Google Analytics v3 (analytics.js) config.  yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  googleAnalytics:UA-PROPERTY_ID   googleAnalytics = &amp;#39;UA-PROPERTY_ID&amp;#39;    { &amp;#34;googleAnalytics&amp;#34;: &amp;#34;UA-PROPERTY_ID&amp;#34; }      Google Analytics v4 (gtag.</description>
+Google Analytics v3 (analytics.js) config. yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  googleAnalytics:UA-PROPERTY_ID   googleAnalytics = &amp;#39;UA-PROPERTY_ID&amp;#39;    { &amp;#34;googleAnalytics&amp;#34;: &amp;#34;UA-PROPERTY_ID&amp;#34; }      Google Analytics v4 (gtag.</description>
     </item>
     
     <item>

@@ -13,7 +13,7 @@
   <title>Hugo and the  General Data Protection Regulation (GDPR) | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.13-DEV" />
+  <meta name="generator" content="Hugo 0.14-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -60,17 +60,15 @@
 <meta property="og:title" content="Hugo and the  General Data Protection Regulation (GDPR)" />
 <meta property="og:description" content="About how to configure your Hugo site to meet the new regulations." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gohugo.io/about/hugo-and-gdpr/" /><meta property="og:image" content="https://gohugo.io/images/gohugoio-card.png"/><meta property="article:section" content="about" />
+<meta property="og:url" content="https://gohugo.io/about/hugo-and-gdpr/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_5439095356174412199.png"/><meta property="article:section" content="about" />
 <meta property="article:published_time" content="2018-05-25T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-12-09T20:34:27+07:00" />
-
+<meta property="article:modified_time" content="2021-12-19T19:59:23+07:00" />
 <meta itemprop="name" content="Hugo and the  General Data Protection Regulation (GDPR)">
 <meta itemprop="description" content="About how to configure your Hugo site to meet the new regulations."><meta itemprop="datePublished" content="2018-05-25T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-12-09T20:34:27+07:00" />
+<meta itemprop="dateModified" content="2021-12-19T19:59:23+07:00" />
 <meta itemprop="wordCount" content="726"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://gohugo.io/images/gohugoio-card.png"/>
-
+<meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_5439095356174412199.png"/>
 <meta name="twitter:title" content="Hugo and the  General Data Protection Regulation (GDPR)"/>
 <meta name="twitter:description" content="About how to configure your Hugo site to meet the new regulations."/>
 <meta name="twitter:site" content="@GoHugoIO"/>
@@ -172,7 +170,8 @@
     <label class="clip" for="search-input">Search</label>
     <input type="search" id="search-input" class="needs-js bg-left bn f5 input-reset lh-solid mt3 mt0-ns pl4 pv2 w5 white" placeholder="Search the Docs" name="search-input" value="" style="background: url('/images/icon-search.png') 5px 11px/16px 16px no-repeat; background-color: rgba(255,255,255,0);">
   </fieldset>
-</form></div>
+</form>
+</div>
 
     <span class="absolute mt1 mt2-l pr3 right-0 top-0">
 
@@ -266,33 +265,23 @@
 <h2 id="all-privacy-settings">All Privacy Settings <a class="header-link" href="#all-privacy-settings"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Below are all privacy settings and their default value. These settings need to be put in your site config (e.g. <code>config.toml</code>).</p>
 
-
-
-  
-
-
 <div class="code relative" id="config">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        config.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">privacy</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">disqus</span><span class="p">:</span><span class="w">
@@ -318,11 +307,7 @@
 </span><span class="w">    </span><span class="nt">privacyEnhanced</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">privacy</span><span class="p">]</span>
   <span class="p">[</span><span class="nx">privacy</span><span class="p">.</span><span class="nx">disqus</span><span class="p">]</span>
@@ -348,11 +333,7 @@
     <span class="nx">privacyEnhanced</span> <span class="p">=</span> <span class="kc">false</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;privacy&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -387,45 +368,30 @@
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <h2 id="disable-all-services">Disable All Services <a class="header-link" href="#disable-all-services"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>An example Privacy Config that disables all the relevant services in Hugo. With this configuration, the other settings will not matter.</p>
 
-
-
-  
-
-
 <div class="code relative" id="config">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        config.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">privacy</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">disqus</span><span class="p">:</span><span class="w">
@@ -442,11 +408,7 @@
 </span><span class="w">    </span><span class="nt">disable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">privacy</span><span class="p">]</span>
   <span class="p">[</span><span class="nx">privacy</span><span class="p">.</span><span class="nx">disqus</span><span class="p">]</span>
@@ -463,11 +425,7 @@
     <span class="nx">disable</span> <span class="p">=</span> <span class="kc">true</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;privacy&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -493,13 +451,8 @@
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <h2 id="the-privacy-settings-explained">The Privacy Settings Explained <a class="header-link" href="#the-privacy-settings-explained"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
@@ -530,55 +483,37 @@
 </dl>
 <p><strong>Note:</strong> If you use the <em>simple mode</em> for Instagram and a site styled with Bootstrap 4, you may want to disable the inline styles provided by Hugo:</p>
 
-
-
-  
-
-
 <div class="code relative" id="config">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        config.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">services</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">instagram</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">disableInlineCSS</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">services</span><span class="p">]</span>
   <span class="p">[</span><span class="nx">services</span><span class="p">.</span><span class="nx">instagram</span><span class="p">]</span>
     <span class="nx">disableInlineCSS</span> <span class="p">=</span> <span class="kc">true</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;services&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -589,13 +524,8 @@
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <h3 id="twitter">Twitter <a class="header-link" href="#twitter"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
@@ -607,55 +537,37 @@
 </dl>
 <p><strong>Note:</strong> If you use the <em>simple mode</em> for Twitter, you may want to disable the inlines styles provided by Hugo:</p>
 
-
-
-  
-
-
 <div class="code relative" id="config">
-  <div class="code-nav flex flex-nowrap items-stretch"><div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
-        config.
-      </div>
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         toml
       </button>
       &nbsp;
-    
       <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
         json
       </button>
       &nbsp;
-    
   </div>
   <div class="tab-content">
-    
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">services</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">twitter</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">disableInlineCSS</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span></code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">services</span><span class="p">]</span>
   <span class="p">[</span><span class="nx">services</span><span class="p">.</span><span class="nx">twitter</span><span class="p">]</span>
     <span class="nx">disableInlineCSS</span> <span class="p">=</span> <span class="kc">true</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;services&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -666,13 +578,8 @@
 <span class="p">}</span>
 </code></pre></div>
       </div>
-      
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-        
-      
-    
   </div>
-
 </div>
 
 <h3 id="youtube">YouTube <a class="header-link" href="#youtube"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
@@ -925,7 +832,7 @@
           </li>
           <li class="f6 fw4">
             <a href="/content-management/multilingual/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Multilingual and i18n
+              Multilingual
             </a>
           </li>
           <li class="f6 fw4">
@@ -946,7 +853,7 @@
           </li>
           <li class="f6 fw4">
             <a href="/templates/introduction/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Introduction
+              Templating
             </a>
           </li>
           <li class="f6 fw4">
@@ -966,7 +873,7 @@
           </li>
           <li class="f6 fw4">
             <a href="/templates/lists/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              List Page Templates
+              List Templates
             </a>
           </li>
           <li class="f6 fw4">
@@ -1302,7 +1209,7 @@
           </li>
           <li class="f6 fw4">
             <a href="/functions/images/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Image Functions
+              Image Filters
             </a>
           </li>
           <li class="f6 fw4">
@@ -1804,7 +1711,7 @@
           </li>
           <li class="f6 fw4">
             <a href="/hugo-pipes/introduction/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hugo Pipes Introduction
+              Hugo Pipes
             </a>
           </li>
           <li class="f6 fw4">
@@ -2031,12 +1938,8 @@
 
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
-      <h6 class="f4 dark-gray mb2">
-  <a href="https://gohugo.io/about/hugo-and-gdpr/" class="hide-child link primary-color">
-  <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
-</span>
-    “Hugo and the  General Data Protection Regulation (GDPR)”
-  </a> was last updated: December 9, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/8ee6bb505c1182e337d4fe293ebb6b853fce71e6">Merge pull request #97 from blackb1rd/hugo/v0.90.0 (8ee6bb5)</a>
+      <h6 class="f6 dark-gray mb2">
+  Last updated: December 19, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/5f99b0f14c7f3f53d5b1f9407244ec883256c74d">Merge pull request #98 from blackb1rd/hugo/v0.91.0 (5f99b0f)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/about/hugo-and-gdpr.md" class="
@@ -2139,10 +2042,10 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 
     <img src="/images/gopher-side_color.svg" alt="" class="absolute-l bottom-0 dn db-l h4 right-0 z-999"/>
 
-    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 w-100"><div  class="globalmenu mobilemenu pb3 dn">
+    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100"><div  class="globalmenu mobilemenu pb1 dn">
     
 
-<ul class="list hidden dib ph0 ma0 scrolling-touch tc">
+<ul class="list hidden dib ph0 scrolling-touch tc">
   
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/news/" class="ttu f6 link primary-color-light overflow hover-white db brand-font  ma0 w-100 pv3 ph4">
@@ -2183,10 +2086,10 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </ul>
 
 </div>
-<div  class="docsmenu mobilemenu pb3 dn">
+<div  class="docsmenu mobilemenu pb1 dn">
     
 
-<ul class="list dib ph0 ma0 scrolling-touch tc">
+<ul class="list dib ph0 scrolling-touch tc">
   
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/about/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
@@ -2277,9 +2180,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 <div class="flex dn-l justify-between">
-  <button class="js-toggle flex-auto dib dn-l f6 tc db mt4-ns ph3 pv2 link mr2 white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".globalmenu">Menu</button>
+  <button class="js-toggle flex-auto dib dn-l f6 tc db ph3 pv2 link mr2 white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".globalmenu">Menu</button>
 
-  <button class="js-toggle flex-auto dib dn-l f6 tc db mt4-ns ph3 pv2 link white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".docsmenu">Docs Menu</button>
+  <button class="js-toggle flex-auto dib dn-l f6 tc db ph3 pv2 link white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".docsmenu">Docs Menu</button>
 </div>
 </div>
 
