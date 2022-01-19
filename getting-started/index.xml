@@ -6,11 +6,11 @@
     <description>Recent content in Get Started on Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Feb 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://gohugo.io/getting-started/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Feb 2017 00:00:00 +0100</lastBuildDate><atom:link href="https://gohugo.io/getting-started/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Quick Start</title>
       <link>https://gohugo.io/getting-started/quick-start/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/getting-started/quick-start/</guid>
       <description>This quick start uses macOS in the examples. For instructions about how to install Hugo on other operating systems, see install.
@@ -22,7 +22,7 @@ For other approaches to learning Hugo (like books or video tutorials), refer to 
     <item>
       <title>Install Hugo</title>
       <link>https://gohugo.io/getting-started/installing/</link>
-      <pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 01 Nov 2016 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/getting-started/installing/</guid>
       <description>There is lots of talk about &amp;ldquo;Hugo being written in Go&amp;rdquo;, but you don&amp;rsquo;t need to install Go to enjoy Hugo. Just grab a precompiled binary!
@@ -34,7 +34,7 @@ Hugo currently provides pre-built binaries for the following:
     <item>
       <title>Basic Usage</title>
       <link>https://gohugo.io/getting-started/usage/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/getting-started/usage/</guid>
       <description>The following is a description of the most common commands you will use while developing your Hugo project. See the Command Line Reference for a comprehensive view of Hugo&amp;rsquo;s CLI.
@@ -45,7 +45,7 @@ hugo help The output you see in your console should be similar to the following:
     <item>
       <title>Directory Structure</title>
       <link>https://gohugo.io/getting-started/directory-structure/</link>
-      <pubDate>Mon, 02 Jan 2017 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 02 Jan 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/getting-started/directory-structure/</guid>
       <description>New Site Scaffolding    Running the hugo new site generator from the command line will create a directory structure with the following elements:
@@ -56,7 +56,7 @@ hugo help The output you see in your console should be similar to the following:
     <item>
       <title>Configure Hugo</title>
       <link>https://gohugo.io/getting-started/configuration/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/getting-started/configuration/</guid>
       <description>Configuration File  Hugo uses the config.toml, config.yaml, or config.json (if found in the site root) as the default site config file.
@@ -69,7 +69,7 @@ hugo --config debugconfig.toml hugo --config a.toml,b.toml,c.toml   Multiple sit
     <item>
       <title>Configure Markup</title>
       <link>https://gohugo.io/getting-started/configuration-markup/</link>
-      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/getting-started/configuration-markup/</guid>
       <description>Configure Markup  New in v0.60.0  See Goldmark for settings related to the default Markdown handler in Hugo.
@@ -80,7 +80,7 @@ config. yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  markup:asciidocExt:a
     <item>
       <title>External Learning Resources</title>
       <link>https://gohugo.io/getting-started/external-learning-resources/</link>
-      <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 20 Oct 2019 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/getting-started/external-learning-resources/</guid>
       <description>Books  Hugo In Action  

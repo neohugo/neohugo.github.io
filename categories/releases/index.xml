@@ -6,11 +6,11 @@
     <description>Recent content in Releases on Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://gohugo.io/categories/releases/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Nov 2021 00:00:00 +0100</lastBuildDate><atom:link href="https://gohugo.io/categories/releases/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo 0.89.4: One Bug Fix</title>
       <link>https://gohugo.io/news/0.89.4-relnotes/</link>
-      <pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 17 Nov 2021 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.89.4-relnotes/</guid>
       <description>This is a bug-fix release with one important fix for people using hugo new to create new content:
@@ -20,7 +20,7 @@
     <item>
       <title>Hugo 0.89.3: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.89.3-relnotes/</link>
-      <pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 15 Nov 2021 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.89.3-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -30,7 +30,7 @@
     <item>
       <title>Hugo 0.89.2: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.89.2-relnotes/</link>
-      <pubDate>Mon, 08 Nov 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 08 Nov 2021 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.89.2-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -40,7 +40,7 @@
     <item>
       <title>Hugo 0.89.1: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.89.1-relnotes/</link>
-      <pubDate>Fri, 05 Nov 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 05 Nov 2021 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.89.1-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -50,7 +50,7 @@
     <item>
       <title>Fine Grained File Filters</title>
       <link>https://gohugo.io/news/0.89.0-relnotes/</link>
-      <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 02 Nov 2021 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.89.0-relnotes/</guid>
       <description>This release is a dependency refresh (the new Goldmark version comes with a lot of bug fixes, as one example), many bug fixes, but also some nice new features:
@@ -61,7 +61,7 @@ We have also reimplemented archetypes. The old implementation had some issues, m
     <item>
       <title>Hugo 0.88.1: One Fix</title>
       <link>https://gohugo.io/news/0.88.1-relnotes/</link>
-      <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 04 Sep 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.88.1-relnotes/</guid>
       <description>This is a bug-fix release with one important fix.
@@ -71,7 +71,7 @@ We have also reimplemented archetypes. The old implementation had some issues, m
     <item>
       <title>Go 1.17 Update</title>
       <link>https://gohugo.io/news/0.88.0-relnotes/</link>
-      <pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 02 Sep 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.88.0-relnotes/</guid>
       <description>The most important piece in this release is the Go 1.17 update. This release is built with that new Go version, but also and more importantly, the Hugo Modules logic has been updated to support Go&amp;rsquo;s new way of (lazy) loading transitive dependencies. If you already have Go 1.17 installed, building existing Hugo Modules backed projects have not been an issue, but hugo mod init for a new project could give you too new versions of transitive dependencies.</description>
@@ -80,7 +80,7 @@ We have also reimplemented archetypes. The old implementation had some issues, m
     <item>
       <title>Localized Time and Dates and Numbers</title>
       <link>https://gohugo.io/news/0.87.0-relnotes/</link>
-      <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 03 Aug 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.87.0-relnotes/</guid>
       <description>Hugo 0.87 brings two long sought-after features: Default time zone support (per language if needed) for dates without zone offset or location info, and localized time and dates and numbers (backed by CLDR).
@@ -91,7 +91,7 @@ For more information, see:
     <item>
       <title>Hugo 0.86.1: One Bug Fix</title>
       <link>https://gohugo.io/news/0.86.1-relnotes/</link>
-      <pubDate>Fri, 30 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 30 Jul 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.86.1-relnotes/</guid>
       <description>This is a bug-fix release with one important fix.
@@ -101,7 +101,7 @@ For more information, see:
     <item>
       <title>Hugo 0.86.0: Cascade in Config</title>
       <link>https://gohugo.io/news/0.86.0-relnotes/</link>
-      <pubDate>Wed, 21 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 21 Jul 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.86.0-relnotes/</guid>
       <description>This release is a set of smaller fixes and improvements. Some of the more notable:
@@ -112,7 +112,7 @@ Hugo&amp;rsquo;s Menu system works well, but hasn&amp;rsquo;t been particularly 
     <item>
       <title>Poll based watching</title>
       <link>https://gohugo.io/news/0.85.0-relnotes/</link>
-      <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 05 Jul 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.85.0-relnotes/</guid>
       <description>Hugo 0.85.0 is on the smaller side of releases, but the main new thing it brings should be important to those who need it: Poll based watching the filesystem for changes.
@@ -122,7 +122,7 @@ Hugo uses Fsnotify to provide native file system notifications. This is still th
     <item>
       <title>Hugo 0.84.4: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.84.4-relnotes/</link>
-      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.84.4-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -132,7 +132,7 @@ Hugo uses Fsnotify to provide native file system notifications. This is still th
     <item>
       <title>Hugo 0.84.3: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.84.3-relnotes/</link>
-      <pubDate>Tue, 29 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 29 Jun 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.84.3-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -142,7 +142,7 @@ Hugo uses Fsnotify to provide native file system notifications. This is still th
     <item>
       <title>Hugo 0.84.2: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.84.2-relnotes/</link>
-      <pubDate>Mon, 28 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 28 Jun 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.84.2-relnotes/</guid>
       <description>This is mostly a bug fix release, but it also contains some minor modules related improvements. Most notable you now get some more information in  hugo config mounts, and even more so when typing  hugo config mounts -v.
@@ -152,7 +152,7 @@ Hugo uses Fsnotify to provide native file system notifications. This is still th
     <item>
       <title>Hugo 0.84.1: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.84.1-relnotes/</link>
-      <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 24 Jun 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.84.1-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -162,7 +162,7 @@ Hugo uses Fsnotify to provide native file system notifications. This is still th
     <item>
       <title>Config Revamp</title>
       <link>https://gohugo.io/news/0.84.0-relnotes/</link>
-      <pubDate>Fri, 18 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Jun 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.84.0-relnotes/</guid>
       <description>This release brings several configuration fixes and improvements that will be especially useful for themes.
@@ -174,7 +174,7 @@ With that, given this example from a theme configuration:
     <item>
       <title>Hugo 0.83.1: One Bug Fix</title>
       <link>https://gohugo.io/news/0.83.1-relnotes/</link>
-      <pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 02 May 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.83.1-relnotes/</guid>
       <description>This is a bug-fix release with one important fix.
@@ -184,7 +184,7 @@ With that, given this example from a theme configuration:
     <item>
       <title>Hugo 0.83: WebP Support!</title>
       <link>https://gohugo.io/news/0.83.0-relnotes/</link>
-      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.83.0-relnotes/</guid>
       <description>Note: If you use i18n, there is an unfortunate regression bug in this release (see issue). A patch release coming Sunday.
@@ -196,7 +196,7 @@ Hugo 0.83 finally brings WebP image processing support. Note that you need the e
     <item>
       <title>Hugo 0.82.1: One Bug Fix</title>
       <link>https://gohugo.io/news/0.82.1-relnotes/</link>
-      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.82.1-relnotes/</guid>
       <description>This is a bug-fix release with one important fix.
@@ -206,7 +206,7 @@ Hugo 0.83 finally brings WebP image processing support. Note that you need the e
     <item>
       <title>Hugo 0.82: Mostly bugfixes</title>
       <link>https://gohugo.io/news/0.82.0-relnotes/</link>
-      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.82.0-relnotes/</guid>
       <description>This is a small release, mostly a maintainance/bugfix release. But also notable is that you can now add custom Markdown attributes (e.g. CSS classes) to code fences (aed7df62 @bep #8278) and that you can use the attribute lists in title render hooks (.Attributes; see cd0c5d7e @bep #8270).
@@ -216,7 +216,7 @@ This release represents 28 contributions by 8 contributors to the main Hugo code
     <item>
       <title>Hugo 0.81.0: The Smorgasbord Edition</title>
       <link>https://gohugo.io/news/0.81.0-relnotes/</link>
-      <pubDate>Fri, 19 Feb 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 19 Feb 2021 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.81.0-relnotes/</guid>
       <description>Hugo 0.81.0 is the first release of this decade, it is the fastest to date, and it&amp;rsquo;s packed with useful new features.
@@ -228,7 +228,7 @@ Attribute Lists after Markdown Blocks  Hugo already supports adding attribute li
     <item>
       <title>Hugo 0.80: Last Release of 2020!</title>
       <link>https://gohugo.io/news/0.80.0-relnotes/</link>
-      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.80.0-relnotes/</guid>
       <description>The last Hugo release of the year brings a new images.Overlay filter to overlay an image on top of another, e.g. for watermarking, and Dart Sass support.
@@ -238,7 +238,7 @@ This release represents 29 contributions by 12 contributors to the main Hugo cod
     <item>
       <title>Hugo 0.79.1: One Security Patch for Hugo on Windows</title>
       <link>https://gohugo.io/news/0.79.1-relnotes/</link>
-      <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 19 Dec 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.79.1-relnotes/</guid>
       <description>Hugo depends on Go&amp;rsquo;s os/exec for certain features, e.g. for rendering of Pandoc documents if these binaries are found in the system %PATH% on Windows. However, if a malicious file with the same name (exe or bat) was found in the current working directory at the time of running hugo, the malicious command would be invoked instead of the system one.
@@ -248,7 +248,7 @@ Windows users who ran hugo inside untrusted Hugo sites were affected.</descripti
     <item>
       <title>Hugo 0.79.0: Black Friday Edition</title>
       <link>https://gohugo.io/news/0.79.0-relnotes/</link>
-      <pubDate>Fri, 27 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 27 Nov 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.79.0-relnotes/</guid>
       <description>Hugo 0.79.0 is a small, but useful release. You can now set custom .Params in your menu configuration, and you can now also override deeply nested snake_cased configuration variables with OS environment variables. Other than that we have refreshed all the core upstream dependencies. A special thanks to @alecthomas (some new Chroma lexers and fixes) and @evanw (ESBuild).
@@ -258,7 +258,7 @@ This release represents 33 contributions by 8 contributors to the main Hugo code
     <item>
       <title>Hugo 0.78.2: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.78.2-relnotes/</link>
-      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.78.2-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -268,7 +268,7 @@ This release represents 33 contributions by 8 contributors to the main Hugo code
     <item>
       <title>Hugo 0.78.1: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.78.1-relnotes/</link>
-      <pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 05 Nov 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.78.1-relnotes/</guid>
       <description>The main fix in this release is that of dependency resolution for package.json/node_modules in theme components. See the documentation for more information.
@@ -278,7 +278,7 @@ This release represents 33 contributions by 8 contributors to the main Hugo code
     <item>
       <title>Hugo 0.78.0: Full Hugo Modules Support in js.Build</title>
       <link>https://gohugo.io/news/0.78.0-relnotes/</link>
-      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.78.0-relnotes/</guid>
       <description>This release finally brings full Hugo Modules support to js.Build, curtsy of he new plugin API in the really, really fast ESBuild by @evanw.
@@ -289,7 +289,7 @@ Some notes on the improvements in this release:
     <item>
       <title>Hugo 0.77.0: Hugo Modules Improvements and More </title>
       <link>https://gohugo.io/news/0.77.0-relnotes/</link>
-      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.77.0-relnotes/</guid>
       <description>Hugo 0.77.0 is a small, but useful release. Some notable updates are:
@@ -300,7 +300,7 @@ Some notes on the improvements in this release:
     <item>
       <title>Hugo 0.76.5: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.76.5-relnotes/</link>
-      <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 14 Oct 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.76.5-relnotes/</guid>
       <description>This is a bug-fix release with one important fix.
@@ -310,7 +310,7 @@ Some notes on the improvements in this release:
     <item>
       <title>Hugo 0.76.4: One Bug Fix</title>
       <link>https://gohugo.io/news/0.76.4-relnotes/</link>
-      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.76.4-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -320,7 +320,7 @@ Some notes on the improvements in this release:
     <item>
       <title>Hugo 0.76.3: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.76.3-relnotes/</link>
-      <pubDate>Thu, 08 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 08 Oct 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.76.3-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -330,7 +330,7 @@ Some notes on the improvements in this release:
     <item>
       <title>Hugo 0.76.1: One Bug Fix</title>
       <link>https://gohugo.io/news/0.76.1-relnotes/</link>
-      <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 07 Oct 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.76.1-relnotes/</guid>
       <description>With this, we should finally have proper plural numerals in Russian etc.:
@@ -340,7 +340,7 @@ Some notes on the improvements in this release:
     <item>
       <title>Hugo 0.76.2: One Bug Fix</title>
       <link>https://gohugo.io/news/0.76.2-relnotes/</link>
-      <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 07 Oct 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.76.2-relnotes/</guid>
       <description>This is a bug-fix release with one important fix.
@@ -350,7 +350,7 @@ Some notes on the improvements in this release:
     <item>
       <title>Multiple Cascades With Page Filters</title>
       <link>https://gohugo.io/news/0.76.0-relnotes/</link>
-      <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 06 Oct 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.76.0-relnotes/</guid>
       <description>In Hugo 0.76.0 you can now have a list of cascade blocks per page and a new _target keyword where you can select which pages to cascade upon using Glob patterns for a Page&amp;rsquo;s Kind, Lang and/or Path:
@@ -360,7 +360,7 @@ title =&amp;#34;Blog&amp;#34; [[cascade]] background = &amp;#34;yosemite.jpg&amp
     <item>
       <title>Hugo 0.75.1: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.75.1-relnotes/</link>
-      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.75.1-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -370,7 +370,7 @@ title =&amp;#34;Blog&amp;#34; [[cascade]] background = &amp;#34;yosemite.jpg&amp
     <item>
       <title>NPM Pack</title>
       <link>https://gohugo.io/news/0.75.0-relnotes/</link>
-      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 14 Sep 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.75.0-relnotes/</guid>
       <description>Hugo 0.75.0 brings several improvements to Hugo Modules, a new CLI command to bridge the JavaScript dependencies into Hugo, a refresh of the versions of the most important upstream dependencies, and more. There are also some good bug fixes in this release. One notable one is covered by this commit &amp;ndash; which covers a &amp;ldquo;stale content scenario in server&amp;rdquo; when you include content or page data via GetPage from a shortcode.</description>
@@ -379,7 +379,7 @@ title =&amp;#34;Blog&amp;#34; [[cascade]] background = &amp;#34;yosemite.jpg&amp
     <item>
       <title>Hugo 0.74.3: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.74.3-relnotes/</link>
-      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 23 Jul 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.74.3-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -389,7 +389,7 @@ title =&amp;#34;Blog&amp;#34; [[cascade]] background = &amp;#34;yosemite.jpg&amp
     <item>
       <title>Hugo 0.74.2: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.74.2-relnotes/</link>
-      <pubDate>Fri, 17 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 17 Jul 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.74.2-relnotes/</guid>
       <description>Add .Defines to js.Build options 35011bcb @bep #7489
@@ -400,7 +400,7 @@ This is needed to import react as a library, e.g.:
     <item>
       <title>Hugo 0.74.1: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.74.1-relnotes/</link>
-      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.74.1-relnotes/</guid>
       <description>This is a bug-fix release with one important fix.
@@ -410,7 +410,7 @@ This is needed to import react as a library, e.g.:
     <item>
       <title>Native JS Bundler, Open API Support, Inline Partials</title>
       <link>https://gohugo.io/news/0.74.0-relnotes/</link>
-      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.74.0-relnotes/</guid>
       <description>Note: The documentation site isn&amp;rsquo;t updated with all of the main new things below. We will get to it soon. See https://github.com/gohugoio/hugoDocs/issues/1171
@@ -420,7 +420,7 @@ This release comes with native JavaScript bundling (and minifier), with import s
     <item>
       <title>Summer Breeze</title>
       <link>https://gohugo.io/news/0.73.0-relnotes/</link>
-      <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 23 Jun 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.73.0-relnotes/</guid>
       <description>Again, a release on the small side. Some new features &amp;ndash; one example is that we now support hook templates per section/type, see #7349 &amp;ndash; and some important bug fixes.
@@ -430,7 +430,7 @@ But the most important part of this release is that we have now finally cleaned 
     <item>
       <title>URL rewrites in dev server</title>
       <link>https://gohugo.io/news/0.72.0-relnotes/</link>
-      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 31 May 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.72.0-relnotes/</guid>
       <description>This is a rather small release, its probably main motivation being the fixes in Goldmark&amp;rsquo;s Typographer extension.
@@ -442,7 +442,7 @@ Many have also been busy writing and fixing the documentation in hugoDocs, which
     <item>
       <title>Hugo 0.71.1: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.71.1-relnotes/</link>
-      <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 25 May 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.71.1-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -452,7 +452,7 @@ Many have also been busy writing and fixing the documentation in hugoDocs, which
     <item>
       <title>Markdown Render Hooks for Headings</title>
       <link>https://gohugo.io/news/0.71.0-relnotes/</link>
-      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.71.0-relnotes/</guid>
       <description>Hugo 0.71 brings Markdown render hooks for headings, a set of bug fixes and more.
@@ -463,7 +463,7 @@ And a big thanks to @digitalcraftsman and @onedrawingperday for their relentless
     <item>
       <title>JavaScript Transpiler</title>
       <link>https://gohugo.io/news/0.70.0-relnotes/</link>
-      <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 06 May 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.70.0-relnotes/</guid>
       <description>This is a small release, and the main new feature is that you can now use Babel to transpile JavaScript.
@@ -473,7 +473,7 @@ This release represents 22 contributions by 12 contributors to the main Hugo cod
     <item>
       <title>Hugo 0.69.2: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.69.2-relnotes/</link>
-      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 24 Apr 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.69.2-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -483,7 +483,7 @@ This release represents 22 contributions by 12 contributors to the main Hugo cod
     <item>
       <title>Hugo 0.69.1: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.69.1-relnotes/</link>
-      <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 22 Apr 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.69.1-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -493,7 +493,7 @@ This release represents 22 contributions by 12 contributors to the main Hugo cod
     <item>
       <title>Post Build Resource Transformations</title>
       <link>https://gohugo.io/news/0.69.0-relnotes/</link>
-      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.69.0-relnotes/</guid>
       <description>It&amp;rsquo;s Eeaster, a time for mysteries and puzzles. And at first glance, this Hugo release looks a little mysterious. The core of if is a mind-twister:
@@ -523,7 +523,7 @@ This release represents 22 contributions by 12 contributors to the main Hugo cod
     <item>
       <title>Hugo 0.68.1: 1 bug fix</title>
       <link>https://gohugo.io/news/0.68.1-relnotes/</link>
-      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.68.1-relnotes/</guid>
       <description>This is a bug-fix release with one important fix.
@@ -533,7 +533,7 @@ This release represents 22 contributions by 12 contributors to the main Hugo cod
     <item>
       <title>Minify config and more!</title>
       <link>https://gohugo.io/news/0.68.0-relnotes/</link>
-      <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 21 Mar 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.68.0-relnotes/</guid>
       <description>This release (finally) brings minify configuration, a big thanks to @satotake for that contribution. See Configure Minify for details.
@@ -544,7 +544,7 @@ This release represents 17 contributions by 6 contributors to the main Hugo code
     <item>
       <title>Hugo 0.67.1: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.67.1-relnotes/</link>
-      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.67.1-relnotes/</guid>
       <description>Some minor fixes:
@@ -554,7 +554,7 @@ This release represents 17 contributions by 6 contributors to the main Hugo code
     <item>
       <title>Hugo 0.67.0: Custom HTTP headers</title>
       <link>https://gohugo.io/news/0.67.0-relnotes/</link>
-      <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 09 Mar 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.67.0-relnotes/</guid>
       <description>The two main items in Hugo 0.67.0 is custom HTTP header support in hugo server and include/exclude filters for Hugo Deploy.
@@ -565,7 +565,7 @@ config. yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  server:headers:- for
     <item>
       <title>Hugo 0.66.0: PostCSS Edition</title>
       <link>https://gohugo.io/news/0.66.0-relnotes/</link>
-      <pubDate>Tue, 03 Mar 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 03 Mar 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.66.0-relnotes/</guid>
       <description>This release adds inline @import support to resources.PostCSS, with imports relative to Hugo&amp;rsquo;s virtual, composable file system. Another useful addition is the new build configuration section. As an example:
@@ -575,7 +575,7 @@ config. yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  build:useResourceCac
     <item>
       <title>Hugo 0.65.3: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.65.3-relnotes/</link>
-      <pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 23 Feb 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.65.3-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -585,7 +585,7 @@ config. yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  build:useResourceCac
     <item>
       <title>Hugo 0.65.2: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.65.2-relnotes/</link>
-      <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 21 Feb 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.65.2-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -595,7 +595,7 @@ config. yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  build:useResourceCac
     <item>
       <title>0.65.0: Hugo Reloaded!</title>
       <link>https://gohugo.io/news/0.65.0-relnotes/</link>
-      <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 20 Feb 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.65.0-relnotes/</guid>
       <description>Hugo 0.65 generalizes how a page is packaged and published to be applicable to any page. This should solve some of the most common issues we see people ask and talk about on the issue tracker and on the forum.
@@ -606,7 +606,7 @@ List pages (sections and the home page) can now be added to taxonomies.</descrip
     <item>
       <title>Hugo 0.65.1: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.65.1-relnotes/</link>
-      <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 20 Feb 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.65.1-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -616,7 +616,7 @@ List pages (sections and the home page) can now be added to taxonomies.</descrip
     <item>
       <title>Hugo 0.64.1: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.64.1-relnotes/</link>
-      <pubDate>Sun, 09 Feb 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 09 Feb 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.64.1-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -626,7 +626,7 @@ List pages (sections and the home page) can now be added to taxonomies.</descrip
     <item>
       <title>Mostly bugfixes …</title>
       <link>https://gohugo.io/news/0.64.0-relnotes/</link>
-      <pubDate>Tue, 04 Feb 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 04 Feb 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.64.0-relnotes/</guid>
       <description>Hugo 0.64.0 is mostly a bugfix-release, but well worth the download. The main reason this release comes so soon after the previous is my (me being @bep) ongoing work on getting solid support for third-party libraries in Hugo Modules. In particular, this release makes the Hugo server&amp;rsquo;s live-reload work with Turbolinks and similar. Also worth mentioning is that hugo mod get -u (without any path) now correctly updates every module imported in config.</description>
@@ -635,7 +635,7 @@ List pages (sections and the home page) can now be added to taxonomies.</descrip
     <item>
       <title>Hugo 0.63.2: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.63.2-relnotes/</link>
-      <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 27 Jan 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.63.2-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -645,7 +645,7 @@ List pages (sections and the home page) can now be added to taxonomies.</descrip
     <item>
       <title>Hugo 0.63.1: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.63.1-relnotes/</link>
-      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.63.1-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -655,7 +655,7 @@ List pages (sections and the home page) can now be added to taxonomies.</descrip
     <item>
       <title>Improved base templates, and faster!</title>
       <link>https://gohugo.io/news/0.63.0-relnotes/</link>
-      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.63.0-relnotes/</guid>
       <description>Note: There is already a patch release with some fixes.
@@ -665,7 +665,7 @@ Hugo 0.63 is, in general, considerably faster and more memory effective (see the
     <item>
       <title>Hugo 0.62.2: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.62.2-relnotes/</link>
-      <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 05 Jan 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.62.2-relnotes/</guid>
       <description>The main driving force behind these patch releases in the new year has been getting a good story with portable links between GitHub and Hugo, using the new render hooks introduced in Hugo 0.62.0. And all was mostly well until a Hugo user asked about anchor links. Which is, when you look into it, a slightly sad Markdown story. They have been talking about anchors in Markdown over at the CommonMark forum for the last six years, but it has come to nothing.</description>
@@ -674,7 +674,7 @@ Hugo 0.63 is, in general, considerably faster and more memory effective (see the
     <item>
       <title>Hugo 0.62.1: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.62.1-relnotes/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.62.1-relnotes/</guid>
       <description>This release is mainly motivated by getting this demo site up and running. It demonstrates truly portable Markdown links and images, whether browsed on GitHub or deployed as a Hugo site.
@@ -684,7 +684,7 @@ Hugo 0.63 is, in general, considerably faster and more memory effective (see the
     <item>
       <title>Hugo Christmas Edition!</title>
       <link>https://gohugo.io/news/0.62.0-relnotes/</link>
-      <pubDate>Mon, 23 Dec 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 23 Dec 2019 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.62.0-relnotes/</guid>
       <description>From all of us to all of you, a very Merry Christmas &amp;ndash; and Hugo 0.62.0! This version brings Markdown Render Hooks. This gives you full control over how links and images in Markdown are rendered without using any shortcodes. With this, you can get Markdown links that work on both GitHub and Hugo, resize images etc. It is a very long sought after feature, that has been hard to tackle until we got Goldmark, the new Markdown engine, by @yuin.</description>
@@ -693,7 +693,7 @@ Hugo 0.63 is, in general, considerably faster and more memory effective (see the
     <item>
       <title>40K GitHub Stars Edition</title>
       <link>https://gohugo.io/news/0.61.0-relnotes/</link>
-      <pubDate>Wed, 11 Dec 2019 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 11 Dec 2019 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.61.0-relnotes/</guid>
       <description>This is the 40K GitHub Stars Edition. It&amp;rsquo;s mostly a bug fix release, and an important note is the deprecation of Amber and Ace as template engines. See #6609 for more information.
@@ -704,7 +704,7 @@ Many have also been busy writing and fixing the documentation in hugoDocs, which
     <item>
       <title>Hugo 0.60.1: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.60.1-relnotes/</link>
-      <pubDate>Fri, 29 Nov 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 29 Nov 2019 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.60.1-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -714,7 +714,7 @@ Many have also been busy writing and fixing the documentation in hugoDocs, which
     <item>
       <title>Now CommonMark Compliant!</title>
       <link>https://gohugo.io/news/0.60.0-relnotes/</link>
-      <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 27 Nov 2019 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.60.0-relnotes/</guid>
       <description>Goldmark by @yuin is now the new default library used for Markdown in Hugo. It&amp;rsquo;s CommonMark compliant and GitHub flavored, and both fast and flexible. Blackfriday, the old default, has served us well, but there have been formatting and portability issues that were hard to work around. The &amp;ldquo;CommonMark compliant&amp;rdquo; part is the main selling feature of Goldmark, but with that you also get attribute syntax on headers and code blocks (for code blocks you can turn on/off line numbers and highlight line ranges), strikethrough support and an improved and configurable implementation of TableOfContents.</description>
@@ -723,7 +723,7 @@ Many have also been busy writing and fixing the documentation in hugoDocs, which
     <item>
       <title>Hugo 0.59.1: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.59.1-relnotes/</link>
-      <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 31 Oct 2019 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.59.1-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -733,7 +733,7 @@ Many have also been busy writing and fixing the documentation in hugoDocs, which
     <item>
       <title>Hugo 0.59.0</title>
       <link>https://gohugo.io/news/0.59.0-relnotes/</link>
-      <pubDate>Mon, 21 Oct 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 21 Oct 2019 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.59.0-relnotes/</guid>
       <description>The timing of this release is motivated by getting the copies of the docs repositories in synch, now fully &amp;ldquo;Hugo Modularized&amp;rdquo;. But it also comes with some very nice additions:
@@ -745,7 +745,7 @@ Another useful addon is the $pages.Next and $pages.Prev methods on the core page
     <item>
       <title>Hugo 0.58.3: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.58.3-relnotes/</link>
-      <pubDate>Thu, 19 Sep 2019 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 19 Sep 2019 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.58.3-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -755,7 +755,7 @@ Another useful addon is the $pages.Next and $pages.Prev methods on the core page
     <item>
       <title>Hugo 0.58.2: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.58.2-relnotes/</link>
-      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 13 Sep 2019 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.58.2-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -765,7 +765,7 @@ Another useful addon is the $pages.Next and $pages.Prev methods on the core page
     <item>
       <title>Hugo 0.58.1: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.58.1-relnotes/</link>
-      <pubDate>Fri, 06 Sep 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 06 Sep 2019 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.58.1-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -775,7 +775,7 @@ Another useful addon is the $pages.Next and $pages.Prev methods on the core page
     <item>
       <title>Image Processing Galore!</title>
       <link>https://gohugo.io/news/0.58.0-relnotes/</link>
-      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 04 Sep 2019 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.58.0-relnotes/</guid>
       <description>Hugo 0.58 adds the long sought after Exif (docs) method on image and a bunch of useful image filters (docs), courtesy of @disintegration&amp;rsquo;s great Gift image library.
@@ -786,7 +786,7 @@ This means that you now can do variations of this:
     <item>
       <title>Hugo 0.57.2: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.57.2-relnotes/</link>
-      <pubDate>Sat, 17 Aug 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 17 Aug 2019 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.57.2-relnotes/</guid>
       <description>Hugo 0.57.0 had some well-intended breaking changes. And while they made a lot of sense, one of them made a little too much noise.
@@ -797,7 +797,7 @@ In short, .Page home will from 0.58 only return its immediate children (sections
     <item>
       <title>Hugo 0.57.1: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.57.1-relnotes/</link>
-      <pubDate>Thu, 15 Aug 2019 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 15 Aug 2019 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.57.1-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -807,7 +807,7 @@ In short, .Page home will from 0.58 only return its immediate children (sections
     <item>
       <title>Hugo 0.57: The Cascading Edition</title>
       <link>https://gohugo.io/news/0.57.0-relnotes/</link>
-      <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 14 Aug 2019 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.57.0-relnotes/</guid>
       <description>Hugo 0.57 brings Cascading Front Matter, Alphabetical Sorting, Resources Loading from Assets with Wildcards. And more.
@@ -818,7 +818,7 @@ title:&amp;#34;My Blog&amp;#34;icon:&amp;#34;world.png&amp;#34;cascade:icon:&amp
     <item>
       <title>Hugo 0.56.3: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.56.3-relnotes/</link>
-      <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 31 Jul 2019 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.56.3-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes. After getting feedback about the new Hugo Modules feature, this release also adds some minor improvements:
@@ -829,7 +829,7 @@ config. yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  module:mounts:- sour
     <item>
       <title>Hugo 0.56.2: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.56.2-relnotes/</link>
-      <pubDate>Tue, 30 Jul 2019 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 Jul 2019 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.56.2-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -839,7 +839,7 @@ config. yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  module:mounts:- sour
     <item>
       <title>0.56.1: Two Bug Fixes</title>
       <link>https://gohugo.io/news/0.56.1-relnotes/</link>
-      <pubDate>Sun, 28 Jul 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 28 Jul 2019 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.56.1-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -849,7 +849,7 @@ config. yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  module:mounts:- sour
     <item>
       <title>Hugo 0.56.0: Hugo Modules and Deployment</title>
       <link>https://gohugo.io/news/0.56.0-relnotes/</link>
-      <pubDate>Thu, 25 Jul 2019 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 25 Jul 2019 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.56.0-relnotes/</guid>
       <description>Hugo 0.56.0 is filled with improvements, but there are two main headliners: Hugo Modules and Hugo Deploy.
@@ -860,7 +860,7 @@ Hugo Modules is very much a community effort on the design and specification sid
     <item>
       <title>Hugo 0.55.6: One Bug Fix!</title>
       <link>https://gohugo.io/news/0.55.6-relnotes/</link>
-      <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 18 May 2019 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.55.6-relnotes/</guid>
       <description>This is a bug-fix release with one important fix. There have been reports about infrequent paginator crashes when running the Hugo server since 0.55.0. The reason have been narrowed down to that of parallel rebuilds. This isn&amp;rsquo;t a new thing, but the changes in 0.55.0 made it extra important to serialize the page initialization. This release fixes that by protecting the Build method with a lock when running in server mode.</description>
@@ -869,7 +869,7 @@ Hugo Modules is very much a community effort on the design and specification sid
     <item>
       <title>Hugo 0.55.5: Take Five!</title>
       <link>https://gohugo.io/news/0.55.5-relnotes/</link>
-      <pubDate>Thu, 02 May 2019 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 02 May 2019 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.55.5-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -880,7 +880,7 @@ Hugo now has:
     <item>
       <title>Hugo 0.55.4: Some Bug Fixes</title>
       <link>https://gohugo.io/news/0.55.4-relnotes/</link>
-      <pubDate>Thu, 25 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 25 Apr 2019 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.55.4-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -891,7 +891,7 @@ Hugo now has:
     <item>
       <title>Hugo 0.55.3: A Few More Bug Fixes!</title>
       <link>https://gohugo.io/news/0.55.3-relnotes/</link>
-      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.55.3-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -902,7 +902,7 @@ Hugo now has:
     <item>
       <title>Hugo 0.55.2: Some Important Bug Fixes</title>
       <link>https://gohugo.io/news/0.55.2-relnotes/</link>
-      <pubDate>Wed, 17 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 17 Apr 2019 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.55.2-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -913,7 +913,7 @@ Hugo now has:
     <item>
       <title>0.55.1: 3 Bug Fixes</title>
       <link>https://gohugo.io/news/0.55.1-relnotes/</link>
-      <pubDate>Fri, 12 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 12 Apr 2019 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.55.1-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes.
@@ -924,7 +924,7 @@ Hugo now has:
     <item>
       <title>Hugo 0.55.0: The early Easter Egg Edition!</title>
       <link>https://gohugo.io/news/0.55.0-relnotes/</link>
-      <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 08 Apr 2019 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.55.0-relnotes/</guid>
       <description>Hugo 0.55 is the early Easter Egg Edition with lots of great improvements and fixes. The original motivation for this release was to prepare for Issue #5074, but the structural changes needed for that paved the way for lots of others. Please study the list of changes below, and especially the Notes section, but some headlines include:
@@ -934,7 +934,7 @@ Virtualized Output Formats  Custom Output Formats has been a really useful featu
     <item>
       <title>0.54.0:  Mostly Bugfixes</title>
       <link>https://gohugo.io/news/0.54.0-relnotes/</link>
-      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.54.0-relnotes/</guid>
       <description>This release represents 27 contributions by 7 contributors to the main Hugo code base. @bep leads the Hugo development with a significant amount of contributions, but also a big shoutout to @tryzniak, @anthonyfok, and @mywaiting for their ongoing contributions. And a big thanks to @digitalcraftsman and @onedrawingperday for their relentless work on keeping the themes site in pristine condition and to @kaushalmodi for his great work on the documentation site.</description>
@@ -943,7 +943,7 @@ Virtualized Output Formats  Custom Output Formats has been a really useful featu
     <item>
       <title>Hugo Christmas Edition</title>
       <link>https://gohugo.io/news/0.53-relnotes/</link>
-      <pubDate>Mon, 24 Dec 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 24 Dec 2018 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.53-relnotes/</guid>
       <description>From all of us to all of you, a very Merry Christmas &amp;ndash; and Hugo 0.53!
@@ -954,7 +954,7 @@ Config Dir: You can now split your configuration sections into directories per e
     <item>
       <title>And Now: Hugo 0.52</title>
       <link>https://gohugo.io/news/0.52-relnotes/</link>
-      <pubDate>Wed, 28 Nov 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 28 Nov 2018 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.52-relnotes/</guid>
       <description>The two big new items in this release is Inline Shortcodes and Consolidated File Caches. In Hugo we really care about build speed, and caching is important. With this release, you get much better control over your cache configuration, which is especially useful when building on a Continuous Integration server (Netlify, CircleCI or similar). Inline Shortcodes was implemented to help the Bootstrap project move their documentation site to Hugo. Note that this feature is disabled by default.</description>
@@ -963,7 +963,7 @@ Config Dir: You can now split your configuration sections into directories per e
     <item>
       <title>Hugo 0.51: The 30K Stars Edition!</title>
       <link>https://gohugo.io/news/0.51-relnotes/</link>
-      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.51-relnotes/</guid>
       <description>Hugo reached 30 000 stars on GitHub this week, which is a good occasion to do a follow-up release of the great Hugo 0.50. This is mostly a bug fix release, but it also adds some useful new functionality, two examples are the new template funcs complement and symdiff. This release also continues the work on improving Hugo&amp;rsquo;s error messages. And with .Position now available on shortcodes, you can also improve your own error messages inside your custom shortcodes:</description>
@@ -972,7 +972,7 @@ Config Dir: You can now split your configuration sections into directories per e
     <item>
       <title>Hugo 0.50: Errors so Good, You’ll Want to Fail!</title>
       <link>https://gohugo.io/news/0.50-relnotes/</link>
-      <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 29 Oct 2018 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.50-relnotes/</guid>
       <description>Hugo 0.50 brings greatly improved error messages, and we now also show them in the browser. Having error messages with filename, line- and column number greatly simplify troubleshooting. Many editors (like VS Code) even let you click and navigate directly to the problematic line. If your editor requires a different log format, you can set it via the HUGO_FILE_LOG_FORMAT OS environment variable:
@@ -982,7 +982,7 @@ env HUGO_FILE_LOG_FORMAT=&amp;#34;\&amp;#34;:file::line::col\&amp;#34;&amp;#34; 
     <item>
       <title>Hugo 0.49.2: One Bug Fix</title>
       <link>https://gohugo.io/news/0.49.2-relnotes/</link>
-      <pubDate>Thu, 11 Oct 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 11 Oct 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.49.2-relnotes/</guid>
       <description>This fixes one regression from Hugo 0.42.1:
@@ -992,7 +992,7 @@ env HUGO_FILE_LOG_FORMAT=&amp;#34;\&amp;#34;:file::line::col\&amp;#34;&amp;#34; 
     <item>
       <title>Hugo 0.49.1: Bug Fix</title>
       <link>https://gohugo.io/news/0.49.1-relnotes/</link>
-      <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 10 Oct 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.49.1-relnotes/</guid>
       <description>This is a bug-fix release with 2 related fixes. This was introduced in Hugo 0.49. The most notable error situation was that resources.Concat could fail in some situations.
@@ -1004,7 +1004,7 @@ env HUGO_FILE_LOG_FORMAT=&amp;#34;\&amp;#34;:file::line::col\&amp;#34;&amp;#34; 
     <item>
       <title>Hugo 0.49: Directory Based Archetypes</title>
       <link>https://gohugo.io/news/0.49-relnotes/</link>
-      <pubDate>Mon, 24 Sep 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 24 Sep 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.49-relnotes/</guid>
       <description>Hugo 0.49 brings directory based archetypes and also improves the language handling in hugo new. This should simplify working with page bundles. One example of this would be how you now can create a new showcase for the Hugo web site.
@@ -1014,7 +1014,7 @@ But this release is also about collections. Go 1.11 gave us variable overwrite s
     <item>
       <title>This One Goes to 11!</title>
       <link>https://gohugo.io/news/0.48-relnotes/</link>
-      <pubDate>Wed, 29 Aug 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 29 Aug 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.48-relnotes/</guid>
       <description>Hugo 0.48 is built with the brand new Go 1.11. On the technical side this means that Hugo now uses Go Modules for the build. The big new functional thing in Go 1.11 for Hugo is added support for variable overwrites. This means that you can now do this and get the expected result:
@@ -1024,7 +1024,7 @@ But this release is also about collections. Go 1.11 gave us variable overwrite s
     <item>
       <title>Two Bug Fixes</title>
       <link>https://gohugo.io/news/0.47.1-relnotes/</link>
-      <pubDate>Mon, 20 Aug 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 20 Aug 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.47.1-relnotes/</guid>
       <description>This is a bug-fix release with two fixes.  Fixes  Fix .Site.Params case regression fdff0d3a @bep #5094 Do not strip IE conditional statements 5a0ee2b9 @bep #5089  Updates to Linux Snap build   Remove unused files from Git, Perl, etc. 834617f9 @anthonyfok Add nodejs to allow PostCSS to work ef20ec1f @anthonyfok  </description>
@@ -1033,7 +1033,7 @@ But this release is also about collections. Go 1.11 gave us variable overwrite s
     <item>
       <title>Output Minification, Live-Reload Fixes and More</title>
       <link>https://gohugo.io/news/0.47-relnotes/</link>
-      <pubDate>Fri, 17 Aug 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 17 Aug 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.47-relnotes/</guid>
       <description>Hugo 0.47 is named Hugo Reloaded. It adds minification support for the final rendered output (run hugo --minify), but it is mostly a bug fix release. And most notably, it fixes a set of issues with live-reloading/partial rebuilds when running hugo server. Working with bundles should now be a more pleasant experience, to pick one example.
@@ -1043,7 +1043,7 @@ This release represents 35 contributions by 6 contributors to the main Hugo code
     <item>
       <title>The Summer of Hugo</title>
       <link>https://gohugo.io/news/0.46-relnotes/</link>
-      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.46-relnotes/</guid>
       <description>Hugo 0.46 is the closing credits to The Summer of Hugo. While most people have been relaxing on the beach, Hugo has been really busy:
@@ -1053,7 +1053,7 @@ This release represents 35 contributions by 6 contributors to the main Hugo code
     <item>
       <title>Hugo 0.45.1: Two Bug Fixes</title>
       <link>https://gohugo.io/news/0.45.1-relnotes/</link>
-      <pubDate>Wed, 25 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 25 Jul 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.45.1-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes (and one enhancement).  Enhancements   Add Page.FirstSection 016dd4a6 @bep  Fixes   Fix .Site.GetPage regression 04d4c08d @bep #4989 Fix &amp;ldquo;borrow content from another language&amp;rdquo; issue c6b599a0 @bep #4986  </description>
@@ -1062,7 +1062,7 @@ This release represents 35 contributions by 6 contributors to the main Hugo code
     <item>
       <title>Hugo 0.45: Revival of ref, relref and GetPage</title>
       <link>https://gohugo.io/news/0.45-relnotes/</link>
-      <pubDate>Sun, 22 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 22 Jul 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.45-relnotes/</guid>
       <description>Hugo 0.45 is the revival of ref, relref and GetPage. @vassudanagunta and @bep have done some great work improving the API and implementation for the helper functions used to get one page. Before this release, the API was a little bit clumsy and the result potentially ambiguous in some situations.
@@ -1074,7 +1074,7 @@ Now you can simply do:
     <item>
       <title>Hugo 0.44: Friday the 13th Edition</title>
       <link>https://gohugo.io/news/0.44-relnotes/</link>
-      <pubDate>Fri, 13 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 13 Jul 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.44-relnotes/</guid>
       <description>Hugo 0.44 is the follow-up release, or The Sequel, of the very well received 0.43 only days ago. That release added Hugo Pipes, with SCSS/SASS support, assets bundling and minification, ad-hoc image processing and much more.
@@ -1085,7 +1085,7 @@ Many complained that their SVG images vanished when browsed from the hugo server
     <item>
       <title>And Now: Hugo Pipes!</title>
       <link>https://gohugo.io/news/0.43-relnotes/</link>
-      <pubDate>Mon, 09 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 09 Jul 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.43-relnotes/</guid>
       <description>Hugo 0.43 adds a powerful and very simple to use Assets Pipeline with SASS and SCSS with source map support, PostCSS and minification and fingerprinting and Subresource Integrity and &amp;hellip; much more. Oh, did we mention that you can now do ad-hoc image processing and execute text resources as Go templates?
@@ -1096,7 +1096,7 @@ An example pipeline:
     <item>
       <title>Hugo 0.42.2: One Bug Fix</title>
       <link>https://gohugo.io/news/0.42.2-relnotes/</link>
-      <pubDate>Thu, 28 Jun 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.42.2-relnotes/</guid>
       <description>This release fixes broken server-reload on config changes. This is a regression from Hugo 0.42. 3a7706b0 @bep #4878</description>
@@ -1105,7 +1105,7 @@ An example pipeline:
     <item>
       <title>Hugo 0.42.1: Two Bug Fixes</title>
       <link>https://gohugo.io/news/0.42.1-relnotes/</link>
-      <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 13 Jun 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.42.1-relnotes/</guid>
       <description>This is a bug-fix release with two fixes:
@@ -1115,7 +1115,7 @@ An example pipeline:
     <item>
       <title>Hugo 0.42: Theme Composition and Inheritance!</title>
       <link>https://gohugo.io/news/0.42-relnotes/</link>
-      <pubDate>Tue, 12 Jun 2018 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 12 Jun 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.42-relnotes/</guid>
       <description>Hugo `0.42` adds **Theme Components**. This is a really powerful new way of building your Hugo sites with reusable components. This is both **Theme Composition** and **Theme Inheritance**.   Read more about Theme Components in the Hugo Documentation.
@@ -1125,7 +1125,7 @@ An example pipeline:
     <item>
       <title>Hugo 0.41: Privacy Configuration for GDPR</title>
       <link>https://gohugo.io/news/0.41-relnotes/</link>
-      <pubDate>Fri, 25 May 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 25 May 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.41-relnotes/</guid>
       <description>In Hugo 0.41 we add a new Privacy Configuration section to meet the new regulations in the new General Data Protection Regulation (GDPR). Many have contributed work on this project, but a special thanks to @onedrawingperday, @jhabdas, and @it-gro.
@@ -1137,7 +1137,7 @@ An example pipeline:
     <item>
       <title>Hugo 0.40.3: One Bug Fix</title>
       <link>https://gohugo.io/news/0.40.3-relnotes/</link>
-      <pubDate>Wed, 09 May 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 09 May 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.40.3-relnotes/</guid>
       <description>Hugo `0.40.3` fixes a possible `.Content` truncation issue introduced in `0.40.1` [90d0d830](https://github.com/gohugoio/hugo/commit/90d0d83097a20a3f521ffc1f5a54a2fbfaf14ce2) [@bep](https://github.com/bep) [#4706](https://github.com/gohugoio/hugo/issues/4706). This should be very rare. It has been reported by only one user on a synthetic site. We have tested a number of big sites that does not show this problem with `0.40.2`, but this is serious enough to warrant a patch release.  </description>
@@ -1146,7 +1146,7 @@ An example pipeline:
     <item>
       <title>Hugo 0.40.2: Two Bug fixes</title>
       <link>https://gohugo.io/news/0.40.2-relnotes/</link>
-      <pubDate>Mon, 30 Apr 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 30 Apr 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.40.2-relnotes/</guid>
       <description>This release fixes some regressions introduced in Hugo 0.40. See the milestone for an issue list.
@@ -1156,7 +1156,7 @@ An example pipeline:
     <item>
       <title>Hugo 0.40.1: One Bug Fix</title>
       <link>https://gohugo.io/news/0.40.1-relnotes/</link>
-      <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 25 Apr 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.40.1-relnotes/</guid>
       <description>This release fixes some shortcode vs .Content corner cases introduced in Hugo 0.40 288c3964 @bep #4632#4664.</description>
@@ -1165,7 +1165,7 @@ An example pipeline:
     <item>
       <title>Hugo 0.40: The Revival of the Shortcodes</title>
       <link>https://gohugo.io/news/0.40-relnotes/</link>
-      <pubDate>Mon, 23 Apr 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 23 Apr 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.40-relnotes/</guid>
       <description>Hugo 0.40 is The Revival of the Shortcodes. Shortcodes is one of the prime features in Hugo. Really useful, but it has had some known shortcomings. @bep has been really busy the last week to address those.
@@ -1176,7 +1176,7 @@ In summary:
     <item>
       <title>Hugo 0.39: The Nat King Cole Stabilizer Edition</title>
       <link>https://gohugo.io/news/0.39-relnotes/</link>
-      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 16 Apr 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.39-relnotes/</guid>
       <description>Nat King Cole was a fantastic American jazz pianist. When his bass player had visited the bar a little too often, he started with his percussive	piano playing to keep the tempo flowing. Oscar Peterson called it &amp;ldquo;Nat&amp;rsquo;s stabilizers&amp;rdquo;. This release is the software equivalent of that. We have been doing frequent main releases this year, but looking back, the patch releases that followed them seemed unneeded. And looking at the regressions, most of them stem from the commands package, a package that before this release was filled with globals and high coupling.</description>
@@ -1185,7 +1185,7 @@ In summary:
     <item>
       <title>Hugo 0.38.2: Two Bugfixes</title>
       <link>https://gohugo.io/news/0.38.2-relnotes/</link>
-      <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 09 Apr 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.38.2-relnotes/</guid>
       <description>This is a bug-fix release with a couple of important fixes:
@@ -1196,7 +1196,7 @@ In summary:
     <item>
       <title>Hugo 0.38.1: Some Live Reload Fixes</title>
       <link>https://gohugo.io/news/0.38.1-relnotes/</link>
-      <pubDate>Thu, 05 Apr 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 05 Apr 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.38.1-relnotes/</guid>
       <description>This is a bug-fix that is mainly motivated by some issues with server live reloading introduced in Hugo 0.38.
@@ -1206,7 +1206,7 @@ In summary:
     <item>
       <title>Hugo 0.38: The Easter Egg Edition</title>
       <link>https://gohugo.io/news/0.38-relnotes/</link>
-      <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 02 Apr 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.38-relnotes/</guid>
       <description>Hugo 0.38 is an Easter egg filled with good stuff. We now support fetching date and slug from the content filename, making the move from Jekyll even easier. And you can now set contentDir per language with intelligent merging, and themes can now provide configuration &amp;hellip; Also worth mentioning is several improvements in the Chroma highlighter, most notable support for Go templates.
@@ -1216,7 +1216,7 @@ We are working hard to get the documentation up-to-date with the new features, b
     <item>
       <title>Hugo 0.37.1: One Bugfix</title>
       <link>https://gohugo.io/news/0.37.1-relnotes/</link>
-      <pubDate>Wed, 07 Mar 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 07 Mar 2018 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.37.1-relnotes/</guid>
       <description>This is a bug-fix release with a one important fix:
@@ -1226,7 +1226,7 @@ Image content such as SVG cannot be scaled with the built-in image processing me
     <item>
       <title>Hugo 0.37: Preserve PNG Colour Palette</title>
       <link>https://gohugo.io/news/0.37-relnotes/</link>
-      <pubDate>Tue, 27 Feb 2018 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 27 Feb 2018 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.37-relnotes/</guid>
       <description>The main item in Hugo 0.37 is that we now properly preserve the colour palette when processing PNG images. We got reports from users experiencing their PNG images getting bigger in file size when scaled down. Now, if you, as an example, start out with a carefully chosen 8 bit colour palette (i.e. PNG-8), this is now what you will end up with. A special thanks to @aitva for doing the investigative work finding a proper fix for this issue.</description>
@@ -1235,7 +1235,7 @@ Image content such as SVG cannot be scaled with the built-in image processing me
     <item>
       <title>Hugo 0.36.1: One Bugfix</title>
       <link>https://gohugo.io/news/0.36.1-relnotes/</link>
-      <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 15 Feb 2018 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.36.1-relnotes/</guid>
       <description>This release fixes a multi-thread issue when reprocessing and reusing images across pages. When doing something like this with the same image from a partial used in, say, both the home page and the single page:  {{ with $img }} {{ $big := .Fill &amp;#34;1024x512 top&amp;#34; }} {{ $small := $big.Resize &amp;#34;512x&amp;#34; }} {{ end }} There would be timing issues making Hugo in some cases trying to process the same image twice at the same time.</description>
@@ -1244,7 +1244,7 @@ Image content such as SVG cannot be scaled with the built-in image processing me
     <item>
       <title>Hugo 0.36: Smart Image Cropping!</title>
       <link>https://gohugo.io/news/0.36-relnotes/</link>
-      <pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 05 Feb 2018 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.36-relnotes/</guid>
       <description>Hugo 0.36 announces smart cropping of images, using the library created by muesli. We will work with him to improve this even more in the future, but this is now the default used when cropping images in Hugo.
@@ -1256,7 +1256,7 @@ Many have also been busy writing and fixing the documentation in hugoDocs, which
     <item>
       <title>Hugo 0.35: Headless Bundles!</title>
       <link>https://gohugo.io/news/0.35-relnotes/</link>
-      <pubDate>Wed, 31 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 31 Jan 2018 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.35-relnotes/</guid>
       <description>The most notable new feature in Hugo 0.35 is perhaps Headless Bundles.
@@ -1270,7 +1270,7 @@ headless:trueAnd
     <item>
       <title>Hugo 0.34: Pattern matching to filter images and other resources</title>
       <link>https://gohugo.io/news/0.34-relnotes/</link>
-      <pubDate>Mon, 22 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 22 Jan 2018 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.34-relnotes/</guid>
       <description>Hugo 0.34 is a small release. It contains a few smaller bug-fixes, but more important is an overhaul of the API used to find images and other resources in your page bundles.
@@ -1281,7 +1281,7 @@ We have added two simple methods on the Resources object:
     <item>
       <title>Hugo 0.33: The New Kinder Surprise!</title>
       <link>https://gohugo.io/news/0.33-relnotes/</link>
-      <pubDate>Thu, 18 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 18 Jan 2018 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.33-relnotes/</guid>
       <description>Hugo `0.33` is the first main Hugo release of the new year, and it is safe to say that [@bep](https://github.com/bep) has turned off his lazy Christmas mode 😃  This is a full makeover of the layout selection logic with full custom layout and type support (many have asked for this). Also, Hugo now respects the url value in front matter for all page types, including sections. Also, you can now configure uglyURLs per section.</description>
@@ -1290,7 +1290,7 @@ We have added two simple methods on the Resources object:
     <item>
       <title>Hugo 0.32.4: Two bugfixes</title>
       <link>https://gohugo.io/news/0.32.4-relnotes/</link>
-      <pubDate>Thu, 11 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 11 Jan 2018 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.32.4-relnotes/</guid>
       <description>This is a bug-fix release with two of important fixes.
@@ -1300,7 +1300,7 @@ We have added two simple methods on the Resources object:
     <item>
       <title>Hugo 0.32.3: Some important bug fixes</title>
       <link>https://gohugo.io/news/0.32.3-relnotes/</link>
-      <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 08 Jan 2018 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.32.3-relnotes/</guid>
       <description>Hugo 0.32 was a big and really cool release, and the Hugo Forum has been filled with questions from people wanting to upgrade their Hugo sites to be able to use the new image processing feature etc.
@@ -1311,7 +1311,7 @@ And with that we have discovered some issues, which this release should fix, mos
     <item>
       <title>Hugo 0.32.2: One bugfix</title>
       <link>https://gohugo.io/news/0.32.2-relnotes/</link>
-      <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 03 Jan 2018 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.32.2-relnotes/</guid>
       <description>This is a bug-fix release with one important fix.
@@ -1321,7 +1321,7 @@ And with that we have discovered some issues, which this release should fix, mos
     <item>
       <title>Hugo 0.32.1: Two bugfixes</title>
       <link>https://gohugo.io/news/0.32.1-relnotes/</link>
-      <pubDate>Tue, 02 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 02 Jan 2018 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.32.1-relnotes/</guid>
       <description>This fixes 2 bugs from the Hugo 0.32 release.
@@ -1331,7 +1331,7 @@ And with that we have discovered some issues, which this release should fix, mos
     <item>
       <title>Hugo 0.32: Page Bundles and Image Processing!</title>
       <link>https://gohugo.io/news/0.32-relnotes/</link>
-      <pubDate>Sun, 31 Dec 2017 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 31 Dec 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.32-relnotes/</guid>
       <description>Hugo `0.32` features **Page Bundles and Image Processing** by [@bep](https://github.com/bep), which is very cool and useful on so many levels. Read about it in more detail in the [Hugo documentation](https://gohugo.io/about/new-in-032/), but some of the highlights include:   Automatic bundling of a content page with its resources. Resources can be anything: Images, JSON files &amp;hellip; and also other content pages. A Resource will have its RelPermalink and Permalink relative to the &amp;ldquo;owning page&amp;rdquo;.</description>
@@ -1340,7 +1340,7 @@ And with that we have discovered some issues, which this release should fix, mos
     <item>
       <title>Hugo 0.31.1: One Bugfix!</title>
       <link>https://gohugo.io/news/0.31.1-relnotes/</link>
-      <pubDate>Mon, 27 Nov 2017 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 27 Nov 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.31.1-relnotes/</guid>
       <description>This is a bug-fix release with one important bug fix:
@@ -1350,7 +1350,7 @@ And with that we have discovered some issues, which this release should fix, mos
     <item>
       <title>Hugo 0.31: Language Multihost Edition!</title>
       <link>https://gohugo.io/news/0.31-relnotes/</link>
-      <pubDate>Mon, 20 Nov 2017 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 20 Nov 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.31-relnotes/</guid>
       <description>Hugo `0.31` is the **Language Multihost Edition!**   The Multihost feature is sponsored by eSolia, @rickcogley&amp;rsquo;s company.
@@ -1380,7 +1380,7 @@ And with that we have discovered some issues, which this release should fix, mos
     <item>
       <title>Hugo 0.30: Race Car Edition!</title>
       <link>https://gohugo.io/news/0.30-relnotes/</link>
-      <pubDate>Mon, 16 Oct 2017 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 16 Oct 2017 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.30-relnotes/</guid>
       <description>Hugo 0.30 is the Race Car Edition. Hugo is already very very fast, but wants much more. So we added Fast Render Mode. It is hard to explain, so start the Hugo development server with hugo server and start editing. Live reloads just got so much faster! The &amp;ldquo;how and what&amp;rdquo; is discussed at length in other places, but the short version is that we now re-render only the parts of the site that you are working on.</description>
@@ -1389,7 +1389,7 @@ And with that we have discovered some issues, which this release should fix, mos
     <item>
       <title>Hugo 0.29: Template Metrics</title>
       <link>https://gohugo.io/news/0.29-relnotes/</link>
-      <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 26 Sep 2017 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.29-relnotes/</guid>
       <description>Hugo 0.29 brings Template Metrics by @moorereason. Hugo is very fast, but it is still possible to write ineffective templates. Now these should be easy to identify. Just run:
@@ -1399,7 +1399,7 @@ hugo --templateMetrics Now, that was the tasty carrot. The real reason this rele
     <item>
       <title>Hugo 0.28: High-speed Syntax Highlighting!</title>
       <link>https://gohugo.io/news/0.28-relnotes/</link>
-      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.28-relnotes/</guid>
       <description>Hugo `0.28` brings **blistering fast and native syntax highlighting** from [Chroma](https://github.com/alecthomas/chroma) ([fb33d828](https://github.com/gohugoio/hugo/commit/fb33d8286d78a78a74deb44355b621852a1c4033) [@bep](https://github.com/bep) [#3888](https://github.com/gohugoio/hugo/issues/3888)). A big thank you to [Alec Thomas](https://github.com/alecthomas) for taking on this massive task of porting the popular python highlighter Pygments to Go.  Hugo has been caching the highlighter output to disk, so for repeated builds it has been fine, but this little snippet, showing a build of the gohugo.io site without cache and with both Pygments and Chroma, should illustrate the improvement:</description>
@@ -1408,7 +1408,7 @@ hugo --templateMetrics Now, that was the tasty carrot. The real reason this rele
     <item>
       <title>Hugo 0.27.1: One bugfix</title>
       <link>https://gohugo.io/news/0.27.1-relnotes/</link>
-      <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 13 Sep 2017 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.27.1-relnotes/</guid>
       <description>This fixes a regression introduced in Go 1.9 which lead to HTML in shortcodes in multi output Hugo sites being wrongly escaped in some cases.
@@ -1420,7 +1420,7 @@ hugo --templateMetrics Now, that was the tasty carrot. The real reason this rele
     <item>
       <title>Hugo 0.27: Fast and Flexible Related Content!</title>
       <link>https://gohugo.io/news/0.27-relnotes/</link>
-      <pubDate>Mon, 11 Sep 2017 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 11 Sep 2017 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.27-relnotes/</guid>
       <description>Hugo 0.27comes with fast and flexible Related Content (3b4f17bb @bep #98). To add this to your site, put something like this in your single page template:
@@ -1431,7 +1431,7 @@ This release represents 37 contributions by 9 contributors to the main Hugo code
     <item>
       <title>Hugo 0.26: Language Style Edition</title>
       <link>https://gohugo.io/news/0.26-relnotes/</link>
-      <pubDate>Mon, 07 Aug 2017 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 07 Aug 2017 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.26-relnotes/</guid>
       <description>This release brings a choice of AP Style or Chicago Style Title Case (8fb594bf #989). You can also now configure Blackfriday to render « French Guillemets » (cb9dfc26 #3725). To enable French Guillemets:

@@ -16,9 +16,41 @@
     
     
     <item>
+      <title>News: Fixes the “Stuck on Build” Bug</title>
+      <link>https://gohugo.io/news/2021/0.91.2-relnotes/</link>
+      <pubDate>Thu, 23 Dec 2021 17:47:41 +0100</pubDate>
+      
+      <guid>https://gohugo.io/news/2021/0.91.2-relnotes/</guid>
+      <description>
+        
+        
+        
+        <![CDATA[<img src="https://gohugo.io/news/2021/0.91.2-relnotes/featured_hu1a082cce6117d0ce509615af7506f46a_131575_640x0_resize_catmullrom_3.png" width="640" height="320"/>]]>
+        
+        &lt;p&gt;Read the full change log on &lt;a href=&#34;https://github.com/gohugoio/hugo/releases/tag/v0.91.2&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Merry Christmas to all of you!&lt;/strong&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>News: Release Notes now on GitHub Only</title>
+      <link>https://gohugo.io/news/no-more-releasenotes-here/</link>
+      <pubDate>Fri, 17 Dec 2021 12:22:47 +0100</pubDate>
+      
+      <guid>https://gohugo.io/news/no-more-releasenotes-here/</guid>
+      <description>
+        
+        
+        &lt;p&gt;For details about release notes, you need to go here: &lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34;&gt;https://github.com/gohugoio/hugo/releases&lt;/a&gt; &amp;ndash; see this for an Atom feed: &lt;a href=&#34;https://github.com/gohugoio/hugo/releases.atom&#34;&gt;https://github.com/gohugoio/hugo/releases.atom&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>News: Hugo 0.89.4: One Bug Fix</title>
       <link>https://gohugo.io/news/0.89.4-relnotes/</link>
-      <pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 17 Nov 2021 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.89.4-relnotes/</guid>
       <description>
@@ -35,7 +67,7 @@
     <item>
       <title>News: Hugo 0.89.3: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.89.3-relnotes/</link>
-      <pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 15 Nov 2021 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.89.3-relnotes/</guid>
       <description>
@@ -59,7 +91,7 @@
     <item>
       <title>News: Hugo 0.89.2: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.89.2-relnotes/</link>
-      <pubDate>Mon, 08 Nov 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 08 Nov 2021 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.89.2-relnotes/</guid>
       <description>
@@ -77,7 +109,7 @@
     <item>
       <title>News: Hugo 0.89.1: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.89.1-relnotes/</link>
-      <pubDate>Fri, 05 Nov 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 05 Nov 2021 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.89.1-relnotes/</guid>
       <description>
@@ -95,7 +127,7 @@
     <item>
       <title>News: Fine Grained File Filters</title>
       <link>https://gohugo.io/news/0.89.0-relnotes/</link>
-      <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 02 Nov 2021 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.89.0-relnotes/</guid>
       <description>
@@ -198,7 +230,7 @@ which has received &lt;strong&gt;23 contributions by 9 contributors&lt;/strong&g
     <item>
       <title>News: Hugo 0.88.1: One Fix</title>
       <link>https://gohugo.io/news/0.88.1-relnotes/</link>
-      <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 04 Sep 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.88.1-relnotes/</guid>
       <description>
@@ -215,7 +247,7 @@ which has received &lt;strong&gt;23 contributions by 9 contributors&lt;/strong&g
     <item>
       <title>News: Go 1.17 Update</title>
       <link>https://gohugo.io/news/0.88.0-relnotes/</link>
-      <pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 02 Sep 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.88.0-relnotes/</guid>
       <description>
@@ -282,7 +314,7 @@ which has received &lt;strong&gt;9 contributions by 6 contributors&lt;/strong&gt
     <item>
       <title>News: Localized Time and Dates and Numbers</title>
       <link>https://gohugo.io/news/0.87.0-relnotes/</link>
-      <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 03 Aug 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.87.0-relnotes/</guid>
       <description>
@@ -369,7 +401,7 @@ which has received &lt;strong&gt;1 contributions by 1 contributors&lt;/strong&gt
     <item>
       <title>News: Hugo 0.86.1: One Bug Fix</title>
       <link>https://gohugo.io/news/0.86.1-relnotes/</link>
-      <pubDate>Fri, 30 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 30 Jul 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.86.1-relnotes/</guid>
       <description>
@@ -386,7 +418,7 @@ which has received &lt;strong&gt;1 contributions by 1 contributors&lt;/strong&gt
     <item>
       <title>News: Hugo 0.86.0: Cascade in Config</title>
       <link>https://gohugo.io/news/0.86.0-relnotes/</link>
-      <pubDate>Wed, 21 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 21 Jul 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.86.0-relnotes/</guid>
       <description>
@@ -441,7 +473,7 @@ which has received &lt;strong&gt;1 contributions by 1 contributors&lt;/strong&gt
     <item>
       <title>News: Poll based watching</title>
       <link>https://gohugo.io/news/0.85.0-relnotes/</link>
-      <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 05 Jul 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.85.0-relnotes/</guid>
       <description>
@@ -502,7 +534,7 @@ which has received &lt;strong&gt;1 contributions by 1 contributors&lt;/strong&gt
     <item>
       <title>News: Hugo 0.84.4: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.84.4-relnotes/</link>
-      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.84.4-relnotes/</guid>
       <description>
@@ -520,7 +552,7 @@ which has received &lt;strong&gt;1 contributions by 1 contributors&lt;/strong&gt
     <item>
       <title>News: Hugo 0.84.3: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.84.3-relnotes/</link>
-      <pubDate>Tue, 29 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 29 Jun 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.84.3-relnotes/</guid>
       <description>
@@ -538,7 +570,7 @@ which has received &lt;strong&gt;1 contributions by 1 contributors&lt;/strong&gt
     <item>
       <title>News: Hugo 0.84.2: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.84.2-relnotes/</link>
-      <pubDate>Mon, 28 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 28 Jun 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.84.2-relnotes/</guid>
       <description>
@@ -562,7 +594,7 @@ which has received &lt;strong&gt;1 contributions by 1 contributors&lt;/strong&gt
     <item>
       <title>News: Hugo 0.84.1: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.84.1-relnotes/</link>
-      <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 24 Jun 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.84.1-relnotes/</guid>
       <description>
@@ -581,7 +613,7 @@ which has received &lt;strong&gt;1 contributions by 1 contributors&lt;/strong&gt
     <item>
       <title>News: Config Revamp</title>
       <link>https://gohugo.io/news/0.84.0-relnotes/</link>
-      <pubDate>Fri, 18 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Jun 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.84.0-relnotes/</guid>
       <description>
@@ -708,7 +740,7 @@ which has received &lt;strong&gt;20 contributions by 10 contributors&lt;/strong&
     <item>
       <title>News: Hugo 0.83.1: One Bug Fix</title>
       <link>https://gohugo.io/news/0.83.1-relnotes/</link>
-      <pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 02 May 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.83.1-relnotes/</guid>
       <description>
@@ -725,7 +757,7 @@ which has received &lt;strong&gt;20 contributions by 10 contributors&lt;/strong&
     <item>
       <title>News: Hugo 0.83: WebP Support!</title>
       <link>https://gohugo.io/news/0.83.0-relnotes/</link>
-      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.83.0-relnotes/</guid>
       <description>
@@ -854,7 +886,7 @@ which has received &lt;strong&gt;10 contributions by 5 contributors&lt;/strong&g
     <item>
       <title>News: Hugo 0.82.1: One Bug Fix</title>
       <link>https://gohugo.io/news/0.82.1-relnotes/</link>
-      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.82.1-relnotes/</guid>
       <description>
@@ -871,7 +903,7 @@ which has received &lt;strong&gt;10 contributions by 5 contributors&lt;/strong&g
     <item>
       <title>News: Hugo 0.82: Mostly bugfixes</title>
       <link>https://gohugo.io/news/0.82.0-relnotes/</link>
-      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.82.0-relnotes/</guid>
       <description>
@@ -947,7 +979,7 @@ which has received &lt;strong&gt;20 contributions by 12 contributors&lt;/strong&
     <item>
       <title>News: Hugo 0.81.0: The Smorgasbord Edition</title>
       <link>https://gohugo.io/news/0.81.0-relnotes/</link>
-      <pubDate>Fri, 19 Feb 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 19 Feb 2021 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.81.0-relnotes/</guid>
       <description>
@@ -1187,7 +1219,7 @@ which has received &lt;strong&gt;20 contributions by 13 contributors&lt;/strong&
     <item>
       <title>Showcase: Godot Tutorials</title>
       <link>https://gohugo.io/showcase/godot-tutorials/</link>
-      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/showcase/godot-tutorials/</guid>
       <description>
@@ -1209,7 +1241,7 @@ my videos and &lt;strong&gt;less time maintaining and fixing&lt;/strong&gt; my w
     <item>
       <title>News: Hugo 0.80: Last Release of 2020!</title>
       <link>https://gohugo.io/news/0.80.0-relnotes/</link>
-      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.80.0-relnotes/</guid>
       <description>
@@ -1286,7 +1318,7 @@ which has received &lt;strong&gt;22 contributions by 6 contributors&lt;/strong&g
     <item>
       <title>News: Hugo 0.79.1: One Security Patch for Hugo on Windows</title>
       <link>https://gohugo.io/news/0.79.1-relnotes/</link>
-      <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 19 Dec 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.79.1-relnotes/</guid>
       <description>
@@ -1304,7 +1336,7 @@ which has received &lt;strong&gt;22 contributions by 6 contributors&lt;/strong&g
     <item>
       <title>News: Hugo on Apple M1</title>
       <link>https://gohugo.io/news/hugo-macos-intel-vs-arm/</link>
-      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/hugo-macos-intel-vs-arm/</guid>
       <description>
@@ -10454,7 +10486,7 @@ which has received &lt;strong&gt;22 contributions by 6 contributors&lt;/strong&g
     <item>
       <title>News: Hugo 0.79.0: Black Friday Edition</title>
       <link>https://gohugo.io/news/0.79.0-relnotes/</link>
-      <pubDate>Fri, 27 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 27 Nov 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.79.0-relnotes/</guid>
       <description>
@@ -10524,7 +10556,7 @@ which has received &lt;strong&gt;13 contributions by 11 contributors&lt;/strong&
     <item>
       <title>News: Hugo 0.78.2: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.78.2-relnotes/</link>
-      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.78.2-relnotes/</guid>
       <description>
@@ -10550,7 +10582,7 @@ which has received &lt;strong&gt;13 contributions by 11 contributors&lt;/strong&
     <item>
       <title>News: Hugo 0.78.1: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.78.1-relnotes/</link>
-      <pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 05 Nov 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.78.1-relnotes/</guid>
       <description>
@@ -10570,7 +10602,7 @@ which has received &lt;strong&gt;13 contributions by 11 contributors&lt;/strong&
     <item>
       <title>News: Hugo 0.78.0: Full Hugo Modules Support in js.Build</title>
       <link>https://gohugo.io/news/0.78.0-relnotes/</link>
-      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.78.0-relnotes/</guid>
       <description>
@@ -10613,7 +10645,7 @@ which has received &lt;strong&gt;13 contributions by 11 contributors&lt;/strong&
     <item>
       <title>News: Hugo 0.77.0: Hugo Modules Improvements and More </title>
       <link>https://gohugo.io/news/0.77.0-relnotes/</link>
-      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.77.0-relnotes/</guid>
       <description>
@@ -10702,7 +10734,7 @@ which has received &lt;strong&gt;3 contributions by 3 contributors&lt;/strong&gt
     <item>
       <title>News: Hugo 0.76.5: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.76.5-relnotes/</link>
-      <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 14 Oct 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.76.5-relnotes/</guid>
       <description>
@@ -10719,7 +10751,7 @@ which has received &lt;strong&gt;3 contributions by 3 contributors&lt;/strong&gt
     <item>
       <title>News: Hugo 0.76.4: One Bug Fix</title>
       <link>https://gohugo.io/news/0.76.4-relnotes/</link>
-      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.76.4-relnotes/</guid>
       <description>
@@ -10739,7 +10771,7 @@ which has received &lt;strong&gt;3 contributions by 3 contributors&lt;/strong&gt
     <item>
       <title>News: Hugo 0.76.3: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.76.3-relnotes/</link>
-      <pubDate>Thu, 08 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 08 Oct 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.76.3-relnotes/</guid>
       <description>
@@ -10757,7 +10789,7 @@ which has received &lt;strong&gt;3 contributions by 3 contributors&lt;/strong&gt
     <item>
       <title>News: Hugo 0.76.1: One Bug Fix</title>
       <link>https://gohugo.io/news/0.76.1-relnotes/</link>
-      <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 07 Oct 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.76.1-relnotes/</guid>
       <description>
@@ -10774,7 +10806,7 @@ which has received &lt;strong&gt;3 contributions by 3 contributors&lt;/strong&gt
     <item>
       <title>News: Hugo 0.76.2: One Bug Fix</title>
       <link>https://gohugo.io/news/0.76.2-relnotes/</link>
-      <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 07 Oct 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.76.2-relnotes/</guid>
       <description>
@@ -10791,7 +10823,7 @@ which has received &lt;strong&gt;3 contributions by 3 contributors&lt;/strong&gt
     <item>
       <title>News: Multiple Cascades With Page Filters</title>
       <link>https://gohugo.io/news/0.76.0-relnotes/</link>
-      <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 06 Oct 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.76.0-relnotes/</guid>
       <description>
@@ -10936,7 +10968,7 @@ which has received &lt;strong&gt;11 contributions by 6 contributors&lt;/strong&g
     <item>
       <title>News: Hugo 0.75.1: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.75.1-relnotes/</link>
-      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.75.1-relnotes/</guid>
       <description>
@@ -10955,7 +10987,7 @@ which has received &lt;strong&gt;11 contributions by 6 contributors&lt;/strong&g
     <item>
       <title>News: NPM Pack</title>
       <link>https://gohugo.io/news/0.75.0-relnotes/</link>
-      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 14 Sep 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.75.0-relnotes/</guid>
       <description>
@@ -11109,7 +11141,7 @@ which has received &lt;strong&gt;24 contributions by 15 contributors&lt;/strong&
     <item>
       <title>News: Hugo 0.74.3: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.74.3-relnotes/</link>
-      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 23 Jul 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.74.3-relnotes/</guid>
       <description>
@@ -11133,7 +11165,7 @@ which has received &lt;strong&gt;24 contributions by 15 contributors&lt;/strong&
     <item>
       <title>News: Hugo 0.74.2: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.74.2-relnotes/</link>
-      <pubDate>Fri, 17 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 17 Jul 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.74.2-relnotes/</guid>
       <description>
@@ -11151,7 +11183,7 @@ which has received &lt;strong&gt;24 contributions by 15 contributors&lt;/strong&
     <item>
       <title>News: Hugo 0.74.1: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.74.1-relnotes/</link>
-      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.74.1-relnotes/</guid>
       <description>
@@ -11168,7 +11200,7 @@ which has received &lt;strong&gt;24 contributions by 15 contributors&lt;/strong&
     <item>
       <title>News: Native JS Bundler, Open API Support, Inline Partials</title>
       <link>https://gohugo.io/news/0.74.0-relnotes/</link>
-      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.74.0-relnotes/</guid>
       <description>
@@ -11242,7 +11274,7 @@ which has received &lt;strong&gt;8 contributions by 7 contributors&lt;/strong&gt
     <item>
       <title>News: Summer Breeze</title>
       <link>https://gohugo.io/news/0.73.0-relnotes/</link>
-      <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 23 Jun 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.73.0-relnotes/</guid>
       <description>
@@ -11303,7 +11335,7 @@ which has received &lt;strong&gt;30 contributions by 14 contributors&lt;/strong&
     <item>
       <title>News: URL rewrites in dev server</title>
       <link>https://gohugo.io/news/0.72.0-relnotes/</link>
-      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 31 May 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.72.0-relnotes/</guid>
       <description>
@@ -11343,7 +11375,7 @@ which has received &lt;strong&gt;9 contributions by 6 contributors&lt;/strong&gt
     <item>
       <title>News: Hugo 0.71.1: A couple of Bug Fixes</title>
       <link>https://gohugo.io/news/0.71.1-relnotes/</link>
-      <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 25 May 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.71.1-relnotes/</guid>
       <description>
@@ -11366,7 +11398,7 @@ which has received &lt;strong&gt;9 contributions by 6 contributors&lt;/strong&gt
     <item>
       <title>News: Markdown Render Hooks for Headings</title>
       <link>https://gohugo.io/news/0.71.0-relnotes/</link>
-      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.71.0-relnotes/</guid>
       <description>
@@ -11413,7 +11445,7 @@ which has received &lt;strong&gt;8 contributions by 7 contributors&lt;/strong&gt
     <item>
       <title>News: JavaScript Transpiler</title>
       <link>https://gohugo.io/news/0.70.0-relnotes/</link>
-      <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 06 May 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/news/0.70.0-relnotes/</guid>
       <description>
@@ -11479,7 +11511,7 @@ which has received &lt;strong&gt;6 contributions by 4 contributors&lt;/strong&gt
     <item>
       <title>Showcase: Digital.gov</title>
       <link>https://gohugo.io/showcase/digitalgov/</link>
-      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/showcase/digitalgov/</guid>
       <description>
@@ -11532,52 +11564,6 @@ Built in 32.427 seconds
 &lt;li&gt;&lt;a href=&#34;https://digital.gov/services/u-s-digital-registry/&#34;&gt;U.S. Digital Registry&lt;/a&gt;  — A resource for confirming the official status of government social media accounts, mobile apps, and mobile websites.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Questions or feedback?&lt;/strong&gt; &lt;a href=&#34;https://github.com/GSA/digitalgov.gov/issues&#34;&gt;Submit an issue&lt;/a&gt; or send us an email to &lt;a href=&#34;mailto:digitalgov@gsa.gov&#34;&gt;digitalgov@gsa.gov&lt;/a&gt; ❤️&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>News: Hugo 0.69.2: A couple of Bug Fixes</title>
-      <link>https://gohugo.io/news/0.69.2-relnotes/</link>
-      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://gohugo.io/news/0.69.2-relnotes/</guid>
-      <description>
-        
-        
-        &lt;p&gt;This is a bug-fix release with a couple of important fixes.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Fix IsAncestor and IsDescendant when the same page is passed &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/8d5766d417d6564a1aa1cbe8f9a29ab9bba22371&#34;&gt;8d5766d4&lt;/a&gt; &lt;a href=&#34;https://github.com/tekezo&#34;&gt;@tekezo&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;deps: Update goldmark-highlighting &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/5c41f41ad4b14e48aea64687a7600f5ad231e879&#34;&gt;5c41f41a&lt;/a&gt; &lt;a href=&#34;https://github.com/satotake&#34;&gt;@satotake&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7027&#34;&gt;#7027&lt;/a&gt;&lt;a href=&#34;https://github.com/gohugoio/hugo/issues/6596&#34;&gt;#6596&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Fix IsAncestor and IsDescendant under subsection &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/27a4c4410cd9592249925fb14b32605fb961c597&#34;&gt;27a4c441&lt;/a&gt; &lt;a href=&#34;https://github.com/tekezo&#34;&gt;@tekezo&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>News: Hugo 0.69.1: A couple of Bug Fixes</title>
-      <link>https://gohugo.io/news/0.69.1-relnotes/</link>
-      <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://gohugo.io/news/0.69.1-relnotes/</guid>
-      <description>
-        
-        
-        &lt;p&gt;This is a bug-fix release with a couple of important fixes.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;hugolib/filesystems: Fix typo in test suite &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/49e6c8cb4ed83e20f1e0ac164e91c38854177b99&#34;&gt;49e6c8cb&lt;/a&gt; &lt;a href=&#34;https://github.com/panakour&#34;&gt;@panakour&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Fix class collector when running with &amp;ndash;minify &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/f37e77f2d338cf876cfa637a662acd76f0f2009b&#34;&gt;f37e77f2&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7161&#34;&gt;#7161&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;related: Fix toLower &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/27af5a339a4d3c5712b5ed946a636a8c21916039&#34;&gt;27af5a33&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7198&#34;&gt;#7198&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Fix broken test &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/b3c825756f3251f8b26e53262f9d6f484aecf750&#34;&gt;b3c82575&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;tpl/tmplimpl/template: Change defer RLock to RUnlock &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/5146dc614fc45df698ebf890af06421dea988c96&#34;&gt;5146dc61&lt;/a&gt; &lt;a href=&#34;https://github.com/BurtonQin&#34;&gt;@BurtonQin&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;hugolib: Add Unlock before panic &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/736f84b2d539857f7fdd0e42353af80b4dccfe8d&#34;&gt;736f84b2&lt;/a&gt; &lt;a href=&#34;https://github.com/BurtonQin&#34;&gt;@BurtonQin&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;docs: Fix typo in Hugo&amp;rsquo;s Security Model &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/cd4d8202016bd3eb5ed9144c8945edaba73c8cf4&#34;&gt;cd4d8202&lt;/a&gt; &lt;a href=&#34;https://github.com/sensimevanidus&#34;&gt;@sensimevanidus&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;deps: Update go-org to v1.1.0 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/2b28e5a9cb79af2a8d70c80036f52bcf5399b9df&#34;&gt;2b28e5a9&lt;/a&gt; &lt;a href=&#34;https://github.com/niklasfasching&#34;&gt;@niklasfasching&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;commands: Modify gen chromastyles to output all CSS classes &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/102ec2da7adcc4afb7050b17989f0486f8379679&#34;&gt;102ec2da&lt;/a&gt; &lt;a href=&#34;https://github.com/acahir&#34;&gt;@acahir&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7167&#34;&gt;#7167&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;deps: Update to goldmark v1.1.28 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/feaa582cbe950e82969da5e99e3fb9a3947025df&#34;&gt;feaa582c&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7113&#34;&gt;#7113&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Fix query parameter handling in server fast render mode &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/ee67dbeff5bae6941facaaa39cb995a1ee6def03&#34;&gt;ee67dbef&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7163&#34;&gt;#7163&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 
       </description>
     </item>

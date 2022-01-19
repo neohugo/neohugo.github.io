@@ -6,11 +6,11 @@
     <description>Recent content in troubleshooting on Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Feb 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://gohugo.io/categories/troubleshooting/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Feb 2018 00:00:00 +0100</lastBuildDate><atom:link href="https://gohugo.io/categories/troubleshooting/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Frequently Asked Questions</title>
       <link>https://gohugo.io/troubleshooting/faq/</link>
-      <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 10 Feb 2018 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/troubleshooting/faq/</guid>
       <description>Note: The answers/solutions presented below are short, and may not be enough to solve your problem. Visit Hugo Discourse and use the search. It that does not help, start a new topic and ask your questions.
@@ -21,7 +21,7 @@ Can I set configuration variables via OS environment?</description>
     <item>
       <title>Build Performance</title>
       <link>https://gohugo.io/troubleshooting/build-performance/</link>
-      <pubDate>Sun, 12 Mar 2017 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 12 Mar 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/troubleshooting/build-performance/</guid>
       <description>The example site used below is from https://github.com/gohugoio/hugo/tree/master/examples/blog

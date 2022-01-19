@@ -6,11 +6,11 @@
     <description>Recent content in Templates on Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Feb 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://gohugo.io/templates/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Feb 2017 00:00:00 +0100</lastBuildDate><atom:link href="https://gohugo.io/templates/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction to Hugo Templating</title>
       <link>https://gohugo.io/templates/introduction/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/introduction/</guid>
       <description>The following is only a primer on Go Templates. For an in-depth look into Go Templates, check the official Go docs.
@@ -21,7 +21,7 @@ Basic Syntax  Go Templates are HTML files with the addition of variables and fun
     <item>
       <title>Hugo&#39;s Lookup Order</title>
       <link>https://gohugo.io/templates/lookup-order/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/lookup-order/</guid>
       <description>Hugo Layouts Lookup Rules  Hugo takes the parameters listed below into consideration when choosing a layout for a given page. They are listed in a priority order. This should feel natural, but look at the table below for concrete examples of the different parameter variations.
@@ -31,19 +31,19 @@ Basic Syntax  Go Templates are HTML files with the addition of variables and fun
     <item>
       <title>Custom Output Formats</title>
       <link>https://gohugo.io/templates/output-formats/</link>
-      <pubDate>Wed, 22 Mar 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 22 Mar 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/output-formats/</guid>
       <description>This page describes how to properly configure your site with the media types and output formats, as well as where to create your templates for your custom outputs.
 Media Types  A media type (also known as MIME type and content type) is a two-part identifier for file formats and format contents transmitted on the Internet.
 This is the full set of built-in media types in Hugo:
- type suffixes   application/javascript [js]   application/json [json]   application/manifest&amp;#43;json [webmanifest]   application/octet-stream []   application/rss&amp;#43;xml [xml rss]   application/toml [toml]   application/typescript [ts]   application/xml [xml]   application/yaml [yaml yml]   font/otf [otf]   font/ttf [ttf]   image/jpeg [jpg jpeg jpe jif jfif]   image/png [png]   image/svg&amp;#43;xml [svg]   image/webp [webp]   text/calendar [ics]   text/css [css]   text/csv [csv]   text/html [html]   text/jsx [jsx]   text/plain [txt]   text/tsx [tsx]   text/x-sass [sass]   text/x-scss [scss]   video/3gpp [3gpp 3gp]   video/mp4 [mp4]   video/mpeg [mpg mpeg]   video/ogg [ogv]   video/webm [webm]   video/x-msvideo [avi]   Note:</description>
+ type suffixes   application/javascript [js]   application/json [json]   application/manifest&amp;#43;json [webmanifest]   application/octet-stream []   application/pdf [pdf]   application/rss&amp;#43;xml [xml rss]   application/toml [toml]   application/typescript [ts]   application/xml [xml]   application/yaml [yaml yml]   font/otf [otf]   font/ttf [ttf]   image/bmp [bmp]   image/gif [gif]   image/jpeg [jpg jpeg jpe jif jfif]   image/png [png]   image/svg&amp;#43;xml [svg]   image/webp [webp]   text/calendar [ics]   text/css [css]   text/csv [csv]   text/html [html]   text/jsx [jsx]   text/plain [txt]   text/tsx [tsx]   text/x-sass [sass]   text/x-scss [scss]   video/3gpp [3gpp 3gp]   video/mp4 [mp4]   video/mpeg [mpg mpeg]   video/ogg [ogv]   video/webm [webm]   video/x-msvideo [avi]   Note:</description>
     </item>
     
     <item>
       <title>Base Templates and Blocks</title>
       <link>https://gohugo.io/templates/base/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/base/</guid>
       <description>The block keyword allows you to define the outer shell of your pages&#39; one or more master template(s) and then fill in or override portions as necessary.
@@ -55,7 +55,7 @@ Define the Base Template  The following defines a simple base template at _defau
     <item>
       <title>Lists of Content in Hugo</title>
       <link>https://gohugo.io/templates/lists/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/lists/</guid>
       <description>What is a List Page Template?    A list page template is a template used to render multiple pieces of content in a single HTML page. The exception to this rule is the homepage, which is still a list but has its own dedicated template.
@@ -65,7 +65,7 @@ Hugo uses the term list in its truest sense; i.e. a sequential arrangement of ma
     <item>
       <title>Homepage Template</title>
       <link>https://gohugo.io/templates/homepage/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/homepage/</guid>
       <description>Homepage is a Page and therefore has all the page variables and site variables available for use.
@@ -77,7 +77,7 @@ Add Content and Front Matter to the Homepage  The homepage, similar to other lis
     <item>
       <title>Section Page Templates</title>
       <link>https://gohugo.io/templates/section-templates/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/section-templates/</guid>
       <description>Add Content and Front Matter to Section Templates  To effectively leverage section page templates, you should first understand Hugo&amp;rsquo;s content organization and, specifically, the purpose of _index.md for adding content and front matter to section and other list pages.
@@ -89,7 +89,7 @@ Page Kinds  Every Page in Hugo has a .Kind attribute.
     <item>
       <title>Taxonomy Templates</title>
       <link>https://gohugo.io/templates/taxonomy-templates/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/taxonomy-templates/</guid>
       <description>Hugo includes support for user-defined groupings of content called taxonomies. Taxonomies are classifications that demonstrate logical relationships between content. See Taxonomies under Content Management if you are unfamiliar with how Hugo leverages this powerful feature.
@@ -100,7 +100,7 @@ Hugo provides multiple ways to use taxonomies throughout your project templates:
     <item>
       <title>Single Page Templates</title>
       <link>https://gohugo.io/templates/single-page-templates/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/single-page-templates/</guid>
       <description>Single Page Template Lookup Order  See Template Lookup.
@@ -111,7 +111,7 @@ posts/single.html  This single page template makes use of Hugo base templates, t
     <item>
       <title>Content View Templates</title>
       <link>https://gohugo.io/templates/views/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/views/</guid>
       <description>These alternative content views are especially useful in list templates.
@@ -122,7 +122,7 @@ The following are common use cases for content views:
     <item>
       <title>Data Templates</title>
       <link>https://gohugo.io/templates/data-templates/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/data-templates/</guid>
       <description>Hugo supports loading data from YAML, JSON, XML, and TOML files located in the data directory in the root of your Hugo project.
@@ -132,7 +132,7 @@ The following are common use cases for content views:
     <item>
       <title>Partial Templates</title>
       <link>https://gohugo.io/templates/partials/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/partials/</guid>
       <description>Partial Template Lookup Order  Partial templates&amp;mdash;like single page templates and list page templates&amp;mdash;have a specific lookup order. However, partials are simpler in that Hugo will only check in two places:
@@ -143,7 +143,7 @@ Use Partials in your Templates  All partials for your Hugo project are located i
     <item>
       <title>Create Your Own Shortcodes</title>
       <link>https://gohugo.io/templates/shortcode-templates/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/shortcode-templates/</guid>
       <description>Shortcodes are a means to consolidate templating into small, reusable snippets that you can embed directly inside of your content. In this sense, you can think of shortcodes as the intermediary between page and list templates and basic content files.
@@ -154,7 +154,7 @@ Use Partials in your Templates  All partials for your Hugo project are located i
     <item>
       <title>Local File Templates</title>
       <link>https://gohugo.io/templates/files/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/files/</guid>
       <description>Traverse Local Files  With Hugo&amp;rsquo;s readDir and readFile template functions, you can traverse your website&amp;rsquo;s files on your server.
@@ -165,7 +165,7 @@ Whether the path is absolute or relative does not matter because&amp;mdash;at le
     <item>
       <title>Custom 404 Page</title>
       <link>https://gohugo.io/templates/404/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/404/</guid>
       <description>When using Hugo with GitHub Pages, you can provide your own template for a custom 404 error page by creating a 404.html template file in your /layouts folder. When Hugo generates your site, the 404.html file will be placed in the root.
@@ -176,7 +176,7 @@ In addition to the standard page variables, the 404 page has access to all site 
     <item>
       <title>Menu Templates</title>
       <link>https://gohugo.io/templates/menu-templates/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/menu-templates/</guid>
       <description>Hugo makes no assumptions about how your rendered HTML will be structured. Instead, it provides all of the functions you will need to be able to build your menu however you want.
@@ -187,7 +187,7 @@ layouts/partials/sidebar.html  &amp;lt;!-- sidebar start --&amp;gt; &amp;lt;asid
     <item>
       <title>Pagination</title>
       <link>https://gohugo.io/templates/pagination/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/pagination/</guid>
       <description>The real power of Hugo pagination shines when combined with the where function and its SQL-like operators: first, last, and after. You can even order the content the way you&amp;rsquo;ve become used to with Hugo.
@@ -198,7 +198,7 @@ Configure Pagination  Pagination can be configured in your site configuration:
     <item>
       <title>RSS Templates</title>
       <link>https://gohugo.io/templates/rss/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/rss/</guid>
       <description>RSS Template Lookup Order  See Template Lookup Order for the complete reference.
@@ -211,7 +211,7 @@ Hugo provides the ability for you to define any RSS type you wish and can have d
     <item>
       <title>Sitemap Template</title>
       <link>https://gohugo.io/templates/sitemap-template/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/sitemap-template/</guid>
       <description>A single Sitemap template is used to generate the sitemap.xml file. Hugo automatically comes with this template file. No work is needed on the users&#39; part unless they want to customize sitemap.xml.
@@ -222,7 +222,7 @@ A sitemap is a Page and therefore has all the page variables available to use in
     <item>
       <title>Robots.txt File</title>
       <link>https://gohugo.io/templates/robots/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/robots/</guid>
       <description>To generate a robots.txt file from a template, change the site configuration:
@@ -233,7 +233,7 @@ User-agent: * Search engines that honor the Robots Exclusion Protocol will inter
     <item>
       <title>Internal Templates</title>
       <link>https://gohugo.io/templates/internal/</link>
-      <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 06 Mar 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/internal/</guid>
       <description>While the following internal templates are called similar to partials, they do not observe the partial template lookup order.
@@ -245,7 +245,7 @@ Google Analytics v3 (analytics.js) config. yaml  &amp;nbsp; toml  &amp;nbsp; jso
     <item>
       <title>DEPRECATED - Alternative Templating Languages</title>
       <link>https://gohugo.io/templates/alternatives/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/alternatives/</guid>
       <description>Support for Amber and Ace templates has been removed since Hugo 0.62 per issue #6609.</description>
@@ -254,7 +254,7 @@ Google Analytics v3 (analytics.js) config. yaml  &amp;nbsp; toml  &amp;nbsp; jso
     <item>
       <title>Template Debugging</title>
       <link>https://gohugo.io/templates/template-debugging/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/template-debugging/</guid>
       <description>Here are some snippets you can add to your template to answer some common questions.

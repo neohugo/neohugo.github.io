@@ -6,11 +6,11 @@
     <description>Recent content in Content Management on Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Feb 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://gohugo.io/content-management/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Feb 2017 00:00:00 +0100</lastBuildDate><atom:link href="https://gohugo.io/content-management/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Content Organization</title>
       <link>https://gohugo.io/content-management/organization/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/content-management/organization/</guid>
       <description>Page Bundles  Hugo 0.32 announced page-relative images and other resources packaged into Page Bundles.
@@ -21,7 +21,7 @@ These terms are connected, and you also need to read about Page Resources and Im
     <item>
       <title>Syntax Highlighting</title>
       <link>https://gohugo.io/content-management/syntax-highlighting/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/content-management/syntax-highlighting/</guid>
       <description>Hugo uses Chroma as its code highlighter; it is built in Go and is really, really fast &amp;ndash; and for the most important parts compatible with Pygments we used before.
@@ -34,7 +34,7 @@ hugo gen chromastyles --style=monokai &amp;gt; syntax.css Run hugo gen chromasty
     <item>
       <title>Content Formats</title>
       <link>https://gohugo.io/content-management/formats/</link>
-      <pubDate>Tue, 10 Jan 2017 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Jan 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/content-management/formats/</guid>
       <description>You can put any file type into your /content directories, but Hugo uses the markup front matter value if set or the file extension (see Markup identifiers in the table below) to determine if the markup needs to be processed, e.g.:
@@ -45,7 +45,7 @@ hugo gen chromastyles --style=monokai &amp;gt; syntax.css Run hugo gen chromasty
     <item>
       <title>Related Content</title>
       <link>https://gohugo.io/content-management/related/</link>
-      <pubDate>Tue, 05 Sep 2017 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 05 Sep 2017 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/content-management/related/</guid>
       <description>Hugo uses a set of factors to identify a page&amp;rsquo;s related content based on Front Matter parameters. This can be tuned to the desired set of indices and parameters or left to Hugo&amp;rsquo;s default Related Content configuration.
@@ -55,7 +55,7 @@ List Related Content  To list up to 5 related pages (which share the same date o
     <item>
       <title>Front Matter</title>
       <link>https://gohugo.io/content-management/front-matter/</link>
-      <pubDate>Mon, 09 Jan 2017 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 09 Jan 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/content-management/front-matter/</guid>
       <description>Front matter allows you to keep metadata attached to an instance of a content type&amp;mdash;i.e., embedded inside a content file&amp;mdash;and is one of the many features that gives Hugo its strength.
@@ -66,7 +66,7 @@ List Related Content  To list up to 5 related pages (which share the same date o
     <item>
       <title>Build Options</title>
       <link>https://gohugo.io/content-management/build-options/</link>
-      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/content-management/build-options/</guid>
       <description>They are stored in a reserved Front Matter object named _build with the following defaults:
@@ -78,7 +78,7 @@ _build:render:alwayslist:alwayspublishResources:truerender  If always, the page 
     <item>
       <title>Shortcodes</title>
       <link>https://gohugo.io/content-management/shortcodes/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/content-management/shortcodes/</guid>
       <description>What a Shortcode is  Hugo loves Markdown because of its simple content format, but there are times when Markdown falls short. Often, content authors are forced to add raw HTML (e.g., video &amp;lt;iframe&amp;gt;&amp;rsquo;s) to Markdown content. We think this contradicts the beautiful simplicity of Markdown&amp;rsquo;s syntax.
@@ -89,7 +89,7 @@ A shortcode is a simple snippet inside a content file that Hugo will render usin
     <item>
       <title>Content Sections</title>
       <link>https://gohugo.io/content-management/sections/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/content-management/sections/</guid>
       <description>A Section is a collection of pages that gets defined based on the organization structure under the content/ directory.
@@ -100,7 +100,7 @@ If a user needs to define a section foo at a deeper level, they need to create a
     <item>
       <title>Content Types</title>
       <link>https://gohugo.io/content-management/types/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/content-management/types/</guid>
       <description>A content type is a way to organize your content. Hugo resolves the content type from either the type in front matter or, if not set, the first directory in the file path. E.g. content/blog/my-first-event.md will be of type blog if no type set.
@@ -111,7 +111,7 @@ A content type is used to
     <item>
       <title>Archetypes</title>
       <link>https://gohugo.io/content-management/archetypes/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/content-management/archetypes/</guid>
       <description>What are Archetypes?  Archetypes are content template files in the archetypes directory of your project that contain preconfigured front matter and possibly also a content disposition for your website&amp;rsquo;s content types. These will be used when you run hugo new.
@@ -121,7 +121,7 @@ The hugo new uses the content-section to find the most suitable archetype templa
     <item>
       <title>Taxonomies</title>
       <link>https://gohugo.io/content-management/taxonomies/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/content-management/taxonomies/</guid>
       <description>What is a Taxonomy?  Hugo includes support for user-defined groupings of content called taxonomies. Taxonomies are classifications of logical relationships between content.
@@ -131,7 +131,7 @@ Definitions   Taxonomy a categorization that can be used to classify content Ter
     <item>
       <title>Content Summaries</title>
       <link>https://gohugo.io/content-management/summaries/</link>
-      <pubDate>Tue, 10 Jan 2017 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Jan 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/content-management/summaries/</guid>
       <description>With the use of the .Summary page variable, Hugo generates summaries of content to use as a short version in summary views.
@@ -141,7 +141,7 @@ Summary Splitting Options   Automatic Summary Split Manual Summary Split Front M
     <item>
       <title>Links and Cross References</title>
       <link>https://gohugo.io/content-management/cross-references/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/content-management/cross-references/</guid>
       <description>The ref and relref shortcodes display the absolute and relative permalinks to a document, respectively.
@@ -152,7 +152,7 @@ Use ref and relref  {{&amp;lt;ref&amp;#34;document&amp;#34;&amp;gt;}} {{&amp;lt;
     <item>
       <title>URL Management</title>
       <link>https://gohugo.io/content-management/urls/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/content-management/urls/</guid>
       <description>Permalinks  The default Hugo target directory for your built website is public/. However, you can change this value by specifying a different publishDir in your site configuration. The directories created at build time for a section reflect the position of the content&amp;rsquo;s directory within the content folder and namespace matching its layout within the contentdir hierarchy.
@@ -162,7 +162,7 @@ The permalinks option in your site configuration allows you to adjust the direct
     <item>
       <title>Menus</title>
       <link>https://gohugo.io/content-management/menus/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/content-management/menus/</guid>
       <description>If all you want is a simple menu for your sections, see the &amp;ldquo;Section Menu for Lazy Bloggers&amp;rdquo; in Menu Templates.
@@ -173,7 +173,7 @@ The permalinks option in your site configuration allows you to adjust the direct
     <item>
       <title>Static Files</title>
       <link>https://gohugo.io/content-management/static-files/</link>
-      <pubDate>Sat, 18 Nov 2017 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 18 Nov 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/content-management/static-files/</guid>
       <description>By default, the static/ directory in the site project is used for all static files (e.g. stylesheets, JavaScript, images). The static files are served on the site root path (eg. if you have the file static/image.png you can access it using http://{server-url}/image.png, to include it in a document you can use ![Example image](/image.png) ).
@@ -183,7 +183,7 @@ Hugo can be configured to look into a different directory, or even multiple dire
     <item>
       <title>Table of Contents</title>
       <link>https://gohugo.io/content-management/toc/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/content-management/toc/</guid>
       <description>Previously, there was no out-of-the-box way to specify which heading levels you want the TOC to render. See the related GitHub discussion (#1778). As such, the resulting &amp;lt;nav id=&amp;quot;TableOfContents&amp;quot;&amp;gt;&amp;lt;ul&amp;gt;&amp;lt;/ul&amp;gt;&amp;lt;/nav&amp;gt; was going to start at &amp;lt;h1&amp;gt; when pulling from {{.Content}}.
@@ -193,7 +193,7 @@ Hugo v0.60.0 made a switch to Goldmark as the default library for Markdown which
     <item>
       <title>Comments</title>
       <link>https://gohugo.io/content-management/comments/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/content-management/comments/</guid>
       <description>Hugo ships with support for Disqus, a third-party service that provides comment and community capabilities to websites via JavaScript.
@@ -204,7 +204,7 @@ Add Disqus  Hugo comes with all the code you need to load Disqus into your templ
     <item>
       <title>Multilingual Mode</title>
       <link>https://gohugo.io/content-management/multilingual/</link>
-      <pubDate>Tue, 10 Jan 2017 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Jan 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/content-management/multilingual/</guid>
       <description>You should define the available languages in a languages section in your site configuration.
@@ -216,7 +216,7 @@ config. yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  copyright:Everything
     <item>
       <title>Page Resources</title>
       <link>https://gohugo.io/content-management/page-resources/</link>
-      <pubDate>Wed, 24 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 24 Jan 2018 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/content-management/page-resources/</guid>
       <description>Page resources are only accessible from page bundles, those directories with index.md or _index.md files at their root. Page resources are only available to the page with which they are bundled.

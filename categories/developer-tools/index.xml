@@ -6,11 +6,11 @@
     <description>Recent content in developer tools on Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Feb 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://gohugo.io/categories/developer-tools/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Feb 2017 00:00:00 +0100</lastBuildDate><atom:link href="https://gohugo.io/categories/developer-tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Developer Tools</title>
       <link>https://gohugo.io/tools/</link>
-      <pubDate>Mon, 05 Dec 2016 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 05 Dec 2016 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/tools/</guid>
       <description>One of Hugo&amp;rsquo;s greatest strengths is its passionate&amp;mdash;and always evolving&amp;mdash;developer community. With the exception of the highlight shortcode mentioned in Syntax Highlighting, the tools and other projects featured in this section are offerings from both commercial services and open-source projects, many of which are developed by Hugo developers just like you.
@@ -20,7 +20,7 @@ See the popularity of Hugo compared with other static site generators.</descript
     <item>
       <title>Frontend Interfaces with Hugo</title>
       <link>https://gohugo.io/tools/frontends/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/tools/frontends/</guid>
       <description>enwrite. Enwrite enables evernote-powered, statically generated blogs and websites. Now posting to your blog or updating your website is as easy as writing a new note in Evernote! Lipi. Lipi is a native GUI frontend written in Java to manage your Hugo websites. Netlify CMS. Netlify CMS is an open source, serverless solution for managing Git based content in static sites, and it works on any platform that can host static sites.</description>
@@ -29,7 +29,7 @@ See the popularity of Hugo compared with other static site generators.</descript
     <item>
       <title>Editor Plug-ins for Hugo</title>
       <link>https://gohugo.io/tools/editors/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/tools/editors/</guid>
       <description>The Hugo community uses a wide range of preferred tools and has developed plug-ins for some of the most popular text editors to help automate parts of your workflow.
@@ -39,7 +39,7 @@ Sublime Text   Hugofy. Hugofy is a plugin for Sublime Text 3 to make life easier
     <item>
       <title>Search for your Hugo Website</title>
       <link>https://gohugo.io/tools/search/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/tools/search/</guid>
       <description>A static website with a dynamic search function? Yes, Hugo provides an alternative to embeddable scripts from Google or other search engines for static websites. Hugo allows you to provide your visitors with a custom search function by indexing your content files directly.
@@ -49,7 +49,7 @@ Sublime Text   Hugofy. Hugofy is a plugin for Sublime Text 3 to make life easier
     <item>
       <title>Other Hugo Community Projects</title>
       <link>https://gohugo.io/tools/other/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/tools/other/</guid>
       <description>And for all the other small things around Hugo:

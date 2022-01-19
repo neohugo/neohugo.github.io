@@ -6,22 +6,24 @@
     <description>Recent content in asset management on Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://gohugo.io/categories/asset-management/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Jul 2020 00:00:00 +0200</lastBuildDate><atom:link href="https://gohugo.io/categories/asset-management/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo Pipes Introduction</title>
       <link>https://gohugo.io/hugo-pipes/introduction/</link>
-      <pubDate>Sat, 14 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 14 Jul 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/hugo-pipes/introduction/</guid>
-      <description>Get Resource with resources.Get  In order to process an asset with Hugo Pipes, it must be retrieved as a Resource using resources.Get. The first argument can be either a local the path to file relative to the asset directory/directories or a remote URL.
-{{$local:=resources.Get&amp;#34;sass/main.scss&amp;#34;}} {{$remote:=resources.Get&amp;#34;https://www.example.com/styles.scss&amp;#34;}} resources.Get will always return nil if the resource could not be found.
-Error Handling  New in v0.90.1  The return value from resources.Get includes an .</description>
+      <description>Get Resource with resources.Get and resources.GetRemote  In order to process an asset with Hugo Pipes, it must be retrieved as a Resource using resources.Get or resources.GetRemote.
+With resources.Get, the first argument is a local path relative to the assets directory/directories:
+{{$local:=resources.Get&amp;#34;sass/main.scss&amp;#34;}} With resources.GetRemote, the first argument is a remote URL:
+{{$remote:=resources.GetRemote&amp;#34;https://www.example.com/styles.scss&amp;#34;}} resources.Get and resources.GetRemote return nil if the resource is not found.
+Error Handling  New in v0.91.0  The return value from resources.</description>
     </item>
     
     <item>
       <title>SASS / SCSS</title>
       <link>https://gohugo.io/hugo-pipes/scss-sass/</link>
-      <pubDate>Sat, 14 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 14 Jul 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/hugo-pipes/scss-sass/</guid>
       <description>Any SASS or SCSS file can be transformed into a CSS file using resources.ToCSS which takes two arguments, the resource object and a map of options listed below.
@@ -31,7 +33,7 @@ Error Handling  New in v0.90.1  The return value from resources.Get includes an 
     <item>
       <title>Hugo Pipes Overview</title>
       <link>https://gohugo.io/hugo-pipes/</link>
-      <pubDate>Sat, 14 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 14 Jul 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/hugo-pipes/</guid>
       <description></description>
@@ -40,7 +42,7 @@ Error Handling  New in v0.90.1  The return value from resources.Get includes an 
     <item>
       <title>PostProcess</title>
       <link>https://gohugo.io/hugo-pipes/postprocess/</link>
-      <pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 09 Apr 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/hugo-pipes/postprocess/</guid>
       <description>Marking a resource with resources.PostProcess delays any transformations to after the build, typically because one or more of the steps in the transformation chain depends on the result of the build (e.g. files in public). New in v0.69.0 
@@ -52,7 +54,7 @@ There are currently two limitations to this:
     <item>
       <title>PostCSS</title>
       <link>https://gohugo.io/hugo-pipes/postcss/</link>
-      <pubDate>Sat, 14 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 14 Jul 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/hugo-pipes/postcss/</guid>
       <description>Any asset file can be processed using resources.PostCSS which takes for argument the resource object and a slice of options listed below.
@@ -63,7 +65,7 @@ The resource will be processed using the project&amp;rsquo;s or theme&amp;rsquo;
     <item>
       <title>JavaScript Building</title>
       <link>https://gohugo.io/hugo-pipes/js/</link>
-      <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 20 Jul 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/hugo-pipes/js/</guid>
       <description>Any JavaScript resource file can be transpiled and &amp;ldquo;tree shaken&amp;rdquo; using js.Build which takes for argument either a string for the filepath or a dict of options listed below.
@@ -73,7 +75,7 @@ Options   targetPath [string] If not set, the source path will be used as the ba
     <item>
       <title>Babel</title>
       <link>https://gohugo.io/hugo-pipes/babel/</link>
-      <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 21 Mar 2019 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/hugo-pipes/babel/</guid>
       <description>Any JavaScript resource file can be transpiled to another JavaScript version using resources.Babel which takes for argument the resource object and an optional dict of options listed below. Babel uses the babel cli.
@@ -83,7 +85,7 @@ Options   targetPath [string] If not set, the source path will be used as the ba
     <item>
       <title>Asset minification</title>
       <link>https://gohugo.io/hugo-pipes/minification/</link>
-      <pubDate>Sat, 14 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 14 Jul 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/hugo-pipes/minification/</guid>
       <description>Any resource of the aforementioned types can be minified using resources.Minify which takes for argument the resource object.
@@ -93,7 +95,7 @@ Options   targetPath [string] If not set, the source path will be used as the ba
     <item>
       <title>Asset bundling</title>
       <link>https://gohugo.io/hugo-pipes/bundling/</link>
-      <pubDate>Sat, 14 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 14 Jul 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/hugo-pipes/bundling/</guid>
       <description>Asset files of the same MIME type can be bundled into one resource using resources.Concat which takes two arguments, a target path and a slice of resource objects.
@@ -103,7 +105,7 @@ Options   targetPath [string] If not set, the source path will be used as the ba
     <item>
       <title>Fingerprinting and SRI</title>
       <link>https://gohugo.io/hugo-pipes/fingerprint/</link>
-      <pubDate>Sat, 14 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 14 Jul 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/hugo-pipes/fingerprint/</guid>
       <description>Fingerprinting and SRI can be applied to any asset file using resources.Fingerprint which takes two arguments, the resource object and a hash function.
@@ -114,7 +116,7 @@ Any so processed asset will bear a .Data.Integrity property containing an integr
     <item>
       <title>Creating a resource from template</title>
       <link>https://gohugo.io/hugo-pipes/resource-from-template/</link>
-      <pubDate>Sat, 14 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 14 Jul 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/hugo-pipes/resource-from-template/</guid>
       <description>In order to use Hugo Pipes function on an asset file containing Go Template magic the function resources.ExecuteAsTemplate must be used.
@@ -125,7 +127,7 @@ The function takes three arguments: the resource target path, the template conte
     <item>
       <title>Creating a resource from a string</title>
       <link>https://gohugo.io/hugo-pipes/resource-from-string/</link>
-      <pubDate>Sat, 14 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 14 Jul 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/hugo-pipes/resource-from-string/</guid>
       <description>It is possible to create a resource directly from the template using resources.FromString which takes two arguments, the given string and the resource target path.

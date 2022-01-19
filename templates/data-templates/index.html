@@ -13,7 +13,7 @@
   <title>Data Templates | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.14-DEV" />
+  <meta name="generator" content="Hugo 0.15-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -61,11 +61,11 @@
 <meta property="og:description" content="In addition to Hugo&#39;s built-in variables, you can specify your own custom data in templates or shortcodes that pull from both local and dynamic sources." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/templates/data-templates/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_9975776730536255476.png"/><meta property="article:section" content="templates" />
-<meta property="article:published_time" content="2017-02-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-12-19T19:59:23+07:00" />
+<meta property="article:published_time" content="2017-02-01T00:00:00+01:00" />
+<meta property="article:modified_time" content="2022-01-19T19:45:46+07:00" />
 <meta itemprop="name" content="Data Templates">
-<meta itemprop="description" content="In addition to Hugo&#39;s built-in variables, you can specify your own custom data in templates or shortcodes that pull from both local and dynamic sources."><meta itemprop="datePublished" content="2017-02-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-12-19T19:59:23+07:00" />
+<meta itemprop="description" content="In addition to Hugo&#39;s built-in variables, you can specify your own custom data in templates or shortcodes that pull from both local and dynamic sources."><meta itemprop="datePublished" content="2017-02-01T00:00:00+01:00" />
+<meta itemprop="dateModified" content="2022-01-19T19:45:46+07:00" />
 <meta itemprop="wordCount" content="1457"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_9975776730536255476.png"/>
@@ -308,8 +308,8 @@
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">discography</span><span class="p">:</span><span class="w">
-</span><span class="w"></span>- <span class="m">1974</span><span class="w"> </span><span class="l">– Modern American Music … Period! The Criteria Sessions</span><span class="w">
-</span><span class="w"></span>- <span class="m">1974</span><span class="w"> </span><span class="l">– Jaco</span><span class="w">
+</span><span class="w"></span>- <span class="m">1974</span><span class="w"> </span>- <span class="l">Modern American Music … Period! The Criteria Sessions</span><span class="w">
+</span><span class="w"></span>- <span class="m">1974</span><span class="w"> </span>- <span class="l">Jaco</span><span class="w">
 </span><span class="w"></span>- <span class="m">1976</span><span class="w"> </span>- <span class="l">Jaco Pastorius</span><span class="w">
 </span><span class="w"></span>- <span class="m">1981</span><span class="w"> </span>- <span class="l">Word of Mouth</span><span class="w">
 </span><span class="w"></span>- <span class="m">1981</span><span class="w"> </span>- <span class="l">The Birthday Concert (released in 1995)</span><span class="w">
@@ -327,15 +327,15 @@
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">discography</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;1974 – Modern American Music … Period! The Criteria Sessions&#39;</span><span class="p">,</span> <span class="s1">&#39;1974 – Jaco&#39;</span><span class="p">,</span> <span class="s1">&#39;1976 - Jaco Pastorius&#39;</span><span class="p">,</span> <span class="s1">&#39;1981 - Word of Mouth&#39;</span><span class="p">,</span> <span class="s1">&#39;1981 - The Birthday Concert (released in 1995)&#39;</span><span class="p">,</span> <span class="s1">&#39;1982 - Twins I &amp; II (released in 1999)&#39;</span><span class="p">,</span> <span class="s1">&#39;1983 - Invitation&#39;</span><span class="p">,</span> <span class="s1">&#39;1986 - Broadway Blues (released in 1998)&#39;</span><span class="p">,</span> <span class="s1">&#39;1986 - Honestly Solo Live (released in 1990)&#39;</span><span class="p">,</span> <span class="s1">&#39;1986 - Live In Italy (released in 1991)&#39;</span><span class="p">,</span> <span class="s2">&#34;1986 - Heavy&#39;n Jazz (released in 1992)&#34;</span><span class="p">,</span> <span class="s1">&#39;1991 - Live In New York City, Volumes 1-7.&#39;</span><span class="p">,</span> <span class="s1">&#39;1999 - Rare Collection (compilation)&#39;</span><span class="p">,</span> <span class="s1">&#39;2003 - Punk Jazz: The Jaco Pastorius Anthology (compilation)&#39;</span><span class="p">,</span> <span class="s1">&#39;2007 - The Essential Jaco Pastorius (compilation)&#39;</span><span class="p">]</span>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">discography</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;1974 - Modern American Music … Period! The Criteria Sessions&#39;</span><span class="p">,</span> <span class="s1">&#39;1974 - Jaco&#39;</span><span class="p">,</span> <span class="s1">&#39;1976 - Jaco Pastorius&#39;</span><span class="p">,</span> <span class="s1">&#39;1981 - Word of Mouth&#39;</span><span class="p">,</span> <span class="s1">&#39;1981 - The Birthday Concert (released in 1995)&#39;</span><span class="p">,</span> <span class="s1">&#39;1982 - Twins I &amp; II (released in 1999)&#39;</span><span class="p">,</span> <span class="s1">&#39;1983 - Invitation&#39;</span><span class="p">,</span> <span class="s1">&#39;1986 - Broadway Blues (released in 1998)&#39;</span><span class="p">,</span> <span class="s1">&#39;1986 - Honestly Solo Live (released in 1990)&#39;</span><span class="p">,</span> <span class="s1">&#39;1986 - Live In Italy (released in 1991)&#39;</span><span class="p">,</span> <span class="s2">&#34;1986 - Heavy&#39;n Jazz (released in 1992)&#34;</span><span class="p">,</span> <span class="s1">&#39;1991 - Live In New York City, Volumes 1-7.&#39;</span><span class="p">,</span> <span class="s1">&#39;1999 - Rare Collection (compilation)&#39;</span><span class="p">,</span> <span class="s1">&#39;2003 - Punk Jazz: The Jaco Pastorius Anthology (compilation)&#39;</span><span class="p">,</span> <span class="s1">&#39;2007 - The Essential Jaco Pastorius (compilation)&#39;</span><span class="p">]</span>
 </code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
    <span class="nt">&#34;discography&#34;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="s2">&#34;1974 – Modern American Music … Period! The Criteria Sessions&#34;</span><span class="p">,</span>
-      <span class="s2">&#34;1974 – Jaco&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;1974 - Modern American Music … Period! The Criteria Sessions&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;1974 - Jaco&#34;</span><span class="p">,</span>
       <span class="s2">&#34;1976 - Jaco Pastorius&#34;</span><span class="p">,</span>
       <span class="s2">&#34;1981 - Word of Mouth&#34;</span><span class="p">,</span>
       <span class="s2">&#34;1981 - The Birthday Concert (released in 1995)&#34;</span><span class="p">,</span>
@@ -1892,7 +1892,7 @@
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: December 19, 2021: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/5f99b0f14c7f3f53d5b1f9407244ec883256c74d">Merge pull request #98 from blackb1rd/hugo/v0.91.0 (5f99b0f)</a>
+  Last updated: January 19, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/2b0e45e5b62fdd2f8d9e30b126e63cf59566c2f1">Merge pull request #100 from blackb1rd/hugo/v0.92.0 (2b0e45e)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/templates/data-templates.md" class="
@@ -1989,7 +1989,7 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     </div>
 
     <div class="f7 gray mb5 mb0-ns ph3 w-100"> 
-      <p class="dib mr4">The Hugo logos are copyright © Steve Francia 2013–2021.</p>
+      <p class="dib mr4">The Hugo logos are copyright © Steve Francia 2013–2022.</p>
       <p class="dib">The Hugo Gopher is based on an original work by Renée French.</p>
     </div>
 
