@@ -13,7 +13,7 @@
   <title>Babel | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.15-DEV" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,10 +62,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/hugo-pipes/babel/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_17789403537549673915.png"/><meta property="article:section" content="hugo-pipes" />
 <meta property="article:published_time" content="2019-03-21T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-02-12T14:25:46+07:00" />
+<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="name" content="Babel">
 <meta itemprop="description" content="Hugo Pipes can process JS files with Babel."><meta itemprop="datePublished" content="2019-03-21T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-02-12T14:25:46+07:00" />
+<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="wordCount" content="269"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_17789403537549673915.png"/>
@@ -271,18 +271,18 @@
     <a href="https://gohugo.io/news/0.75.0-relnotes/" target="_blank">New in v0.75.0</a>
 </button>
 <p>In Hugo <code>v0.75</code> we improved the way we resolve JS configuration and dependencies. One of them is that we now add the main project&rsquo;s <code>node_modules</code> to <code>NODE_PATH</code> when running Babel and similar tools. There are some known <a href="https://github.com/babel/babel/issues/5618">issues</a> with Babel in this area, so if you have a <code>babel.config.js</code> living in a Hugo Module (and not in the project itself), we recommend using <code>require</code> to load the presets/plugins, e.g.:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="nx">presets</span><span class="o">:</span> <span class="p">[</span>
-                <span class="p">[</span>
-                        <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@babel/preset-env&#39;</span><span class="p">),</span>
-                        <span class="p">{</span>
-                                <span class="nx">useBuiltIns</span><span class="o">:</span> <span class="s1">&#39;entry&#39;</span><span class="p">,</span>
-                                <span class="nx">corejs</span><span class="o">:</span> <span class="mi">3</span>
-                        <span class="p">}</span>
-                <span class="p">]</span>
-        <span class="p">]</span>
-<span class="p">};</span>
-</code></pre></div><h3 id="options">Options <a class="header-link" href="#options"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">presets</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@babel/preset-env&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                                <span class="nx">useBuiltIns</span><span class="o">:</span> <span class="s1">&#39;entry&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                <span class="nx">corejs</span><span class="o">:</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">                        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><h3 id="options">Options <a class="header-link" href="#options"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <dl>
 <dt>config [string]</dt>
 <dd>Path to the Babel configuration file. Hugo will, by default, look for a <code>babel.config.js</code> in your project. More information on these configuration files can be found here: <a href="https://babeljs.io/docs/en/configuration">babel configuration</a>.</dd>
@@ -296,11 +296,11 @@
 <dd>Log everything</dd>
 </dl>
 <h3 id="examples">Examples <a class="header-link" href="#examples"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{-</span><span class="w"> </span><span class="nx">$transpiled</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">resources</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;scripts/main.js&#34;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">babel</span><span class="w">  </span><span class="cp">-}}</span>
-</code></pre></div><p>Or with options:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">$opts</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">dict</span><span class="w"> </span><span class="s">&#34;noComments&#34;</span><span class="w"> </span><span class="k">true</span><span class="w"> </span><span class="cp">}}</span>
-<span class="cp">{{-</span><span class="w"> </span><span class="nx">$transpiled</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">resources</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;scripts/main.js&#34;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">babel</span><span class="w"> </span><span class="nx">$opts</span><span class="w"> </span><span class="cp">-}}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{-</span><span class="w"> </span><span class="nx">$transpiled</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">resources</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;scripts/main.js&#34;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">babel</span><span class="w">  </span><span class="cp">-}}</span>
+</span></span></code></pre></div><p>Or with options:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$opts</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">dict</span><span class="w"> </span><span class="s">&#34;noComments&#34;</span><span class="w"> </span><span class="k">true</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{-</span><span class="w"> </span><span class="nx">$transpiled</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">resources</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;scripts/main.js&#34;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">babel</span><span class="w"> </span><span class="nx">$opts</span><span class="w"> </span><span class="cp">-}}</span>
+</span></span></code></pre></div>
 </div>
 
           
@@ -442,6 +442,11 @@
           <li class="f6 fw4">
             <a href="/content-management/formats/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Content Formats
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/content-management/diagrams/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Diagrams
             </a>
           </li>
           <li class="f6 fw4">
@@ -1383,11 +1388,6 @@
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/variables/hugo/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hugo Variables
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/variables/git/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Git Variables
             </a>
@@ -1638,7 +1638,7 @@
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: February 12, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b162c296b7f2066827adadc6ebff61028366790d">Merge pull request #102 from blackb1rd/hugo/v0.92.2 (b162c29)</a>
+  Last updated: March 6, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/bc2bc7c8dd3645fdf6a0da2ecb9bb182571b08b3">Merge pull request #103 from blackb1rd/hugo/v0.93.2 (bc2bc7c)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/hugo-pipes/babel.md" class="
@@ -1886,6 +1886,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 </footer>
+
+
+  
 
 
 </body>

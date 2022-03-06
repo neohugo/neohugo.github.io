@@ -13,7 +13,7 @@
   <title>Template Debugging | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.15-DEV" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,10 +62,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/templates/template-debugging/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_3703215842164053106.png"/><meta property="article:section" content="templates" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-02-12T14:25:46+07:00" />
+<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="name" content="Template Debugging">
 <meta itemprop="description" content="You can use Go templates&#39; `printf` function to debug your Hugo  templates. These snippets provide a quick and easy visualization of the variables available to you in different contexts."><meta itemprop="datePublished" content="2017-02-01T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-02-12T14:25:46+07:00" />
+<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="wordCount" content="234"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_3703215842164053106.png"/>
@@ -231,7 +231,7 @@
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      You can use Go templates' <code>printf</code> function to debug your Hugo  templates. These snippets provide a quick and easy visualization of the variables available to you in different contexts.
+      You can use Go templates&rsquo; <code>printf</code> function to debug your Hugo  templates. These snippets provide a quick and easy visualization of the variables available to you in different contexts.
     </div>
   
 
@@ -246,22 +246,22 @@
 <p>These snippets use the <code>printf</code> function available in all Go templates.  This function is an alias to the Go function, <a href="https://golang.org/pkg/fmt/">fmt.Printf</a>.</p>
 <h2 id="what-variables-are-available-in-this-context">What Variables are Available in this Context? <a class="header-link" href="#what-variables-are-available-in-this-context"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>You can use the template syntax, <code>$.</code>, to get the top-level template context from anywhere in your template. This will print out all the values under, <code>.Site</code>.</p>
-<pre tabindex="0"><code>{{ printf &quot;%#v&quot; $.Site }}
+<pre tabindex="0"><code>{{ printf &#34;%#v&#34; $.Site }}
 </code></pre><p>This will print out the value of <code>.Permalink</code>:</p>
-<pre tabindex="0"><code>{{ printf &quot;%#v&quot; .Permalink }}
+<pre tabindex="0"><code>{{ printf &#34;%#v&#34; .Permalink }}
 </code></pre><p>This will print out a list of all the variables scoped to the current context
 (<code>.</code>, aka <a href="/templates/introduction/">&ldquo;the dot&rdquo;</a>).</p>
-<pre tabindex="0"><code>{{ printf &quot;%#v&quot; . }}
+<pre tabindex="0"><code>{{ printf &#34;%#v&#34; . }}
 </code></pre><p>When developing a <a href="/templates/homepage/">homepage</a>, what does one of the pages you&rsquo;re looping through look like?</p>
 <pre tabindex="0"><code>{{ range .Pages }}
-    {{/* The context, &quot;.&quot;, is now each one of the pages as it goes through the loop */}}
-    {{ printf &quot;%#v&quot; . }}
+    {{/* The context, &#34;.&#34;, is now each one of the pages as it goes through the loop */}}
+    {{ printf &#34;%#v&#34; . }}
 {{ end }}
 </code></pre><h2 id="why-am-i-showing-no-defined-variables">Why Am I Showing No Defined Variables? <a class="header-link" href="#why-am-i-showing-no-defined-variables"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Check that you are passing variables in the <code>partial</code> function:</p>
-<pre tabindex="0"><code>{{ partial &quot;header&quot; }}
+<pre tabindex="0"><code>{{ partial &#34;header&#34; }}
 </code></pre><p>This example will render the header partial, but the header partial will not have access to any contextual variables. You need to pass variables explicitly. For example, note the addition of <a href="/templates/introduction/">&ldquo;the dot&rdquo;</a>.</p>
-<pre tabindex="0"><code>{{ partial &quot;header&quot; . }}
+<pre tabindex="0"><code>{{ partial &#34;header&#34; . }}
 </code></pre><p>The dot (<code>.</code>) is considered fundamental to understanding Hugo templating. For more information, see <a href="/templates/introduction/">Introduction to Hugo Templating</a>.</p>
 
 </div>
@@ -405,6 +405,11 @@
           <li class="f6 fw4">
             <a href="/content-management/formats/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Content Formats
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/content-management/diagrams/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Diagrams
             </a>
           </li>
           <li class="f6 fw4">
@@ -1346,11 +1351,6 @@
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/variables/hugo/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hugo Variables
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/variables/git/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Git Variables
             </a>
@@ -1601,7 +1601,7 @@
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: February 12, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b162c296b7f2066827adadc6ebff61028366790d">Merge pull request #102 from blackb1rd/hugo/v0.92.2 (b162c29)</a>
+  Last updated: March 6, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/bc2bc7c8dd3645fdf6a0da2ecb9bb182571b08b3">Merge pull request #103 from blackb1rd/hugo/v0.93.2 (bc2bc7c)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/templates/template-debugging.md" class="
@@ -1849,6 +1849,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 </footer>
+
+
+  
 
 
 </body>

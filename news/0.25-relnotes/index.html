@@ -13,7 +13,7 @@
   <title>Hugo 0.25 | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.15-DEV" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,10 +62,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/news/0.25-relnotes/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_6907276014212460205.png"/><meta property="article:section" content="news" />
 <meta property="article:published_time" content="2017-07-07T17:53:58-04:00" />
-<meta property="article:modified_time" content="2022-02-12T14:25:46+07:00" />
+<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="name" content="Hugo 0.25">
 <meta itemprop="description" content="Hugo 0.25 automatically opens the page you&amp;#39;re working on in the browser"><meta itemprop="datePublished" content="2017-07-07T17:53:58-04:00" />
-<meta itemprop="dateModified" content="2022-02-12T14:25:46+07:00" />
+<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="wordCount" content="449"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_6907276014212460205.png"/>
@@ -263,9 +263,9 @@
 <p><img src="https://cdn-standard5.discourse.org/uploads/gohugo/optimized/2X/6/622088d4a8eacaf62bbbaa27dab19d789e10fe09_1_690x345.gif" alt="Hugo Open on Save" title="Hugo Open on Save"></p>
 <p>If you start with <code>hugo server --navigateToChanged</code>, Hugo will navigate to the relevant page on save (see animated GIF). This is extremely useful for site-wide edits. Another very useful feature in this version is the added support for <code>AND</code> (<code>intersect</code>)  and <code>OR</code> (<code>union</code>)  filters when combined with <code>where</code>.</p>
 <p>Example:</p>
-<pre tabindex="0"><code>{{ $pages := where .Site.RegularPages &quot;Type&quot; &quot;not in&quot; (slice &quot;page&quot; &quot;about&quot;) }}
-{{ $pages := $pages | union (where .Site.RegularPages &quot;Params.pinned&quot; true) }}
-{{ $pages := $pages | intersect (where .Site.RegularPages &quot;Params.images&quot; &quot;!=&quot; nil) }}
+<pre tabindex="0"><code>{{ $pages := where .Site.RegularPages &#34;Type&#34; &#34;not in&#34; (slice &#34;page&#34; &#34;about&#34;) }}
+{{ $pages := $pages | union (where .Site.RegularPages &#34;Params.pinned&#34; true) }}
+{{ $pages := $pages | intersect (where .Site.RegularPages &#34;Params.images&#34; &#34;!=&#34; nil) }}
 </code></pre><p>The above fetches regular pages not of <code>page</code> or <code>about</code> type unless they are pinned. And finally, we exclude all pages with no <code>images</code> set in Page params.</p>
 <p>This release represents <strong>36 contributions by 12 contributors</strong> to the main Hugo code base. <a href="https://github.com/bep">@bep</a> still leads the Hugo development with his witty Norwegian humor, and once again contributed a significant amount of additions. But also a big shoutout to <a href="https://github.com/yihui">@yihui</a>, <a href="https://github.com/anthonyfok">@anthonyfok</a>, and <a href="https://github.com/kropp">@kropp</a> for their ongoing contributions. And as always a big thanks to <a href="https://github.com/digitalcraftsman">@digitalcraftsman</a> for his relentless work on keeping the documentation and the themes site in pristine condition.</p>
 <p>Hugo now has:</p>
@@ -322,7 +322,7 @@
     
 
       <div class="gray f6 mv6">
-        Last Update: February 12, 2022 <br>
+        Last Update: March 6, 2022 <br>
         <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/news/0.25-relnotes/index.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 ">Improve this page</a>
@@ -567,6 +567,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 </footer>
+
+
+  
 
 
 </body>

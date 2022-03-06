@@ -13,7 +13,7 @@
   <title>.Unix | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.15-DEV" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,10 +62,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/functions/unix/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_3309159137912010052.png"/><meta property="article:section" content="functions" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-02-12T14:25:46+07:00" />
+<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="name" content=".Unix">
 <meta itemprop="description" content="Converts a time.Time value to the number of seconds elapsed since the Unix epoch, excluding leap seconds. The Unix epoch is 00:00:00&amp;nbsp;UTC on 1 January 1970."><meta itemprop="datePublished" content="2017-02-01T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-02-12T14:25:46+07:00" />
+<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="wordCount" content="64"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_3309159137912010052.png"/>
@@ -256,21 +256,21 @@
       <pre class="f5 mb4 ph3 pv2 bg-light-gray" style="border-left:4px solid #0594CB;">.UnixNano</pre>
 
 <p>The <code>Milli</code>, <code>Micro</code>, and <code>Nano</code> variants return the number of milliseconds, microseconds, and nanoseconds (respectively) elapsed since the Unix epoch.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template">.Date.Unix        --&gt; 1637259694
-.ExpiryDate.Unix  --&gt; 1672559999
-.Lastmod.Unix     --&gt; 1637361786
-.PublishDate.Unix --&gt; 1637421261
-
-(&#34;1970-01-01T00:00:00-00:00&#34; | time.AsTime).Unix --&gt; 0
-(&#34;1970-01-01T00:00:42-00:00&#34; | time.AsTime).Unix --&gt; 42
-(&#34;1970-04-11T01:48:29-08:00&#34; | time.AsTime).Unix --&gt; 8675309
-(&#34;2026-05-02T20:09:31-07:00&#34; | time.AsTime).Unix --&gt; 1777777771
-
-now.Unix      --&gt; 1637447841
-now.UnixMilli --&gt; 1637447841347
-now.UnixMicro --&gt; 1637447841347378
-now.UnixNano  --&gt; 1637447841347378799
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl">.Date.Unix        --&gt; 1637259694
+</span></span><span class="line"><span class="cl">.ExpiryDate.Unix  --&gt; 1672559999
+</span></span><span class="line"><span class="cl">.Lastmod.Unix     --&gt; 1637361786
+</span></span><span class="line"><span class="cl">.PublishDate.Unix --&gt; 1637421261
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">(&#34;1970-01-01T00:00:00-00:00&#34; | time.AsTime).Unix --&gt; 0
+</span></span><span class="line"><span class="cl">(&#34;1970-01-01T00:00:42-00:00&#34; | time.AsTime).Unix --&gt; 42
+</span></span><span class="line"><span class="cl">(&#34;1970-04-11T01:48:29-08:00&#34; | time.AsTime).Unix --&gt; 8675309
+</span></span><span class="line"><span class="cl">(&#34;2026-05-02T20:09:31-07:00&#34; | time.AsTime).Unix --&gt; 1777777771
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">now.Unix      --&gt; 1637447841
+</span></span><span class="line"><span class="cl">now.UnixMilli --&gt; 1637447841347
+</span></span><span class="line"><span class="cl">now.UnixMicro --&gt; 1637447841347378
+</span></span><span class="line"><span class="cl">now.UnixNano  --&gt; 1637447841347378799
+</span></span></code></pre></div>
 </div>
 
           
@@ -427,6 +427,11 @@ now.UnixNano  --&gt; 1637447841347378799
           <li class="f6 fw4">
             <a href="/content-management/formats/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Content Formats
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/content-management/diagrams/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Diagrams
             </a>
           </li>
           <li class="f6 fw4">
@@ -1368,11 +1373,6 @@ now.UnixNano  --&gt; 1637447841347378799
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/variables/hugo/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hugo Variables
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/variables/git/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Git Variables
             </a>
@@ -1623,7 +1623,7 @@ now.UnixNano  --&gt; 1637447841347378799
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: February 12, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b162c296b7f2066827adadc6ebff61028366790d">Merge pull request #102 from blackb1rd/hugo/v0.92.2 (b162c29)</a>
+  Last updated: March 6, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/bc2bc7c8dd3645fdf6a0da2ecb9bb182571b08b3">Merge pull request #103 from blackb1rd/hugo/v0.93.2 (bc2bc7c)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/functions/unix.md" class="
@@ -1871,6 +1871,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 </footer>
+
+
+  
 
 
 </body>

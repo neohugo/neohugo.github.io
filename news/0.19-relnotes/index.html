@@ -13,7 +13,7 @@
   <title>Hugo 0.19 | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.15-DEV" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,10 +62,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/news/0.19-relnotes/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_5365556698325189446.png"/><meta property="article:section" content="news" />
 <meta property="article:published_time" content="2017-02-27T13:53:58-04:00" />
-<meta property="article:modified_time" content="2022-02-12T14:25:46+07:00" />
+<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="name" content="Hugo 0.19">
 <meta itemprop="description" content="Hugo 0.19 brings native Emacs Org-mode content support, and Hugo has its own Twitter account"><meta itemprop="datePublished" content="2017-02-27T13:53:58-04:00" />
-<meta itemprop="dateModified" content="2022-02-12T14:25:46+07:00" />
+<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="wordCount" content="621"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_5365556698325189446.png"/>
@@ -338,39 +338,39 @@ for his work on revising the <code>params</code> handling in Hugo, and
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">disableKinds</span><span class="p">:</span><span class="w">
-</span><span class="w"></span>- <span class="l">page</span><span class="w">
-</span><span class="w"></span>- <span class="l">home</span><span class="w">
-</span><span class="w"></span>- <span class="l">section</span><span class="w">
-</span><span class="w"></span>- <span class="l">taxonomy</span><span class="w">
-</span><span class="w"></span>- <span class="l">taxonomyTerm</span><span class="w">
-</span><span class="w"></span>- <span class="l">RSS</span><span class="w">
-</span><span class="w"></span>- <span class="l">sitemap</span><span class="w">
-</span><span class="w"></span>- <span class="l">robotsTXT</span><span class="w">
-</span><span class="w"></span>- <span class="s2">&#34;404&#34;</span><span class="w">
-</span></code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">disableKinds</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">page</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">home</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">section</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">taxonomy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">taxonomyTerm</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">RSS</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">sitemap</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">robotsTXT</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="s2">&#34;404&#34;</span><span class="w">
+</span></span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">disableKinds</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;page&#39;</span><span class="p">,</span> <span class="s1">&#39;home&#39;</span><span class="p">,</span> <span class="s1">&#39;section&#39;</span><span class="p">,</span> <span class="s1">&#39;taxonomy&#39;</span><span class="p">,</span> <span class="s1">&#39;taxonomyTerm&#39;</span><span class="p">,</span> <span class="s1">&#39;RSS&#39;</span><span class="p">,</span> <span class="s1">&#39;sitemap&#39;</span><span class="p">,</span> <span class="s1">&#39;robotsTXT&#39;</span><span class="p">,</span> <span class="s1">&#39;404&#39;</span><span class="p">]</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">disableKinds</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;page&#39;</span><span class="p">,</span> <span class="s1">&#39;home&#39;</span><span class="p">,</span> <span class="s1">&#39;section&#39;</span><span class="p">,</span> <span class="s1">&#39;taxonomy&#39;</span><span class="p">,</span> <span class="s1">&#39;taxonomyTerm&#39;</span><span class="p">,</span> <span class="s1">&#39;RSS&#39;</span><span class="p">,</span> <span class="s1">&#39;sitemap&#39;</span><span class="p">,</span> <span class="s1">&#39;robotsTXT&#39;</span><span class="p">,</span> <span class="s1">&#39;404&#39;</span><span class="p">]</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;disableKinds&#34;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="s2">&#34;page&#34;</span><span class="p">,</span>
-      <span class="s2">&#34;home&#34;</span><span class="p">,</span>
-      <span class="s2">&#34;section&#34;</span><span class="p">,</span>
-      <span class="s2">&#34;taxonomy&#34;</span><span class="p">,</span>
-      <span class="s2">&#34;taxonomyTerm&#34;</span><span class="p">,</span>
-      <span class="s2">&#34;RSS&#34;</span><span class="p">,</span>
-      <span class="s2">&#34;sitemap&#34;</span><span class="p">,</span>
-      <span class="s2">&#34;robotsTXT&#34;</span><span class="p">,</span>
-      <span class="s2">&#34;404&#34;</span>
-   <span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;disableKinds&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;page&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;home&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;section&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;taxonomy&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;taxonomyTerm&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;RSS&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;sitemap&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;robotsTXT&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;404&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
   </div>
@@ -572,7 +572,7 @@ for his work on revising the <code>params</code> handling in Hugo, and
     
 
       <div class="gray f6 mv6">
-        Last Update: February 12, 2022 <br>
+        Last Update: March 6, 2022 <br>
         <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/news/0.19-relnotes/index.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 ">Improve this page</a>
@@ -817,6 +817,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 </footer>
+
+
+  
 
 
 </body>

@@ -94,8 +94,8 @@ Assumptions   You have Git 2.8 or greater installed on your machine. You have a 
       <pubDate>Thu, 23 Jun 2016 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/hosting-and-deployment/hosting-on-gitlab/</guid>
-      <description>GitLab makes it incredibly easy to build, deploy, and host your Hugo website via their free GitLab Pages service, which provides native support for Hugo, as well as numerous other static site generators.
-Assumptions   Working familiarity with Git for version control Completion of the Hugo Quick Start A GitLab account A Hugo website on your local machine that you are ready to publish  Create .gitlab-ci.yml  cd your-hugo-site In the root directory of your Hugo site, create a .</description>
+      <description>Assumptions   Working familiarity with Git for version control Completion of the Hugo Quick Start A GitLab account A Hugo website on your local machine that you are ready to publish  BaseURL  The baseURL in your site configuration must reflect the full URL of your GitLab pages repository if you are using the default GitLab Pages URL (e.g., https://&amp;lt;YourUsername&amp;gt;.gitlab.io/&amp;lt;your-hugo-site&amp;gt;/) and not a custom domain.
+Configure GitLab CI/CD  Define your CI/CD jobs by creating a .</description>
     </item>
     
     <item>

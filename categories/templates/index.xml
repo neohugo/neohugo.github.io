@@ -46,7 +46,7 @@ Basic Syntax  Go Templates are HTML files with the addition of variables and fun
       <description>This page describes how to properly configure your site with the media types and output formats, as well as where to create your templates for your custom outputs.
 Media Types  A media type (also known as MIME type and content type) is a two-part identifier for file formats and format contents transmitted on the Internet.
 This is the full set of built-in media types in Hugo:
- type suffixes   application/javascript [js]   application/json [json]   application/manifest&amp;#43;json [webmanifest]   application/octet-stream []   application/pdf [pdf]   application/rss&amp;#43;xml [xml rss]   application/toml [toml]   application/typescript [ts]   application/xml [xml]   application/yaml [yaml yml]   font/otf [otf]   font/ttf [ttf]   image/bmp [bmp]   image/gif [gif]   image/jpeg [jpg jpeg jpe jif jfif]   image/png [png]   image/svg&amp;#43;xml [svg]   image/webp [webp]   text/calendar [ics]   text/css [css]   text/csv [csv]   text/html [html]   text/jsx [jsx]   text/plain [txt]   text/tsx [tsx]   text/x-sass [sass]   text/x-scss [scss]   video/3gpp [3gpp 3gp]   video/mp4 [mp4]   video/mpeg [mpg mpeg]   video/ogg [ogv]   video/webm [webm]   video/x-msvideo [avi]   Note:</description>
+ type suffixes   application/javascript [js jsm mjs]   application/json [json]   application/manifest&amp;#43;json [webmanifest]   application/octet-stream []   application/pdf [pdf]   application/rss&amp;#43;xml [xml rss]   application/toml [toml]   application/typescript [ts]   application/xml [xml]   application/yaml [yaml yml]   font/otf [otf]   font/ttf [ttf]   image/bmp [bmp]   image/gif [gif]   image/jpeg [jpg jpeg jpe jif jfif]   image/png [png]   image/svg&amp;#43;xml [svg]   image/webp [webp]   text/calendar [ics]   text/css [css]   text/csv [csv]   text/html [html]   text/jsx [jsx]   text/plain [txt]   text/tsx [tsx]   text/x-sass [sass]   text/x-scss [scss]   video/3gpp [3gpp 3gp]   video/mp4 [mp4]   video/mpeg [mpg mpeg]   video/ogg [ogv]   video/webm [webm]   video/x-msvideo [avi]   Note:</description>
     </item>
     
     <item>
@@ -55,7 +55,7 @@ This is the full set of built-in media types in Hugo:
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/base/</guid>
-      <description>The block keyword allows you to define the outer shell of your pages&#39; one or more master template(s) and then fill in or override portions as necessary.
+      <description>The block keyword allows you to define the outer shell of your pages&amp;rsquo; one or more master template(s) and then fill in or override portions as necessary.
   Base Template Lookup Order   New in v0.63.0  Since Hugo v0.63, the base template lookup order closely follows that of the template it applies to (e.g. _default/list.html).
 See Template Lookup Order for details and examples.
 Define the Base Template  The following defines a simple base template at _default/baseof.</description>
@@ -223,7 +223,7 @@ Hugo provides the ability for you to define any RSS type you wish and can have d
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/sitemap-template/</guid>
-      <description>A single Sitemap template is used to generate the sitemap.xml file. Hugo automatically comes with this template file. No work is needed on the users&#39; part unless they want to customize sitemap.xml.
+      <description>A single Sitemap template is used to generate the sitemap.xml file. Hugo automatically comes with this template file. No work is needed on the users&amp;rsquo; part unless they want to customize sitemap.xml.
 A sitemap is a Page and therefore has all the page variables available to use in this template along with Sitemap-specific ones:
  .Sitemap.ChangeFreq The page change frequency .Sitemap.Priority The priority of the page .Sitemap.Filename The sitemap filename  If provided, Hugo will use /layouts/sitemap.</description>
     </item>

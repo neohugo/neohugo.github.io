@@ -13,7 +13,7 @@
   <title>Archetypes | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.15-DEV" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,10 +62,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/content-management/archetypes/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_8147936727325134924.png"/><meta property="article:section" content="content-management" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-02-12T14:25:46+07:00" />
+<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="name" content="Archetypes">
 <meta itemprop="description" content="Archetypes are templates used when creating new content."><meta itemprop="datePublished" content="2017-02-01T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-02-12T14:25:46+07:00" />
+<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="wordCount" content="347"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_8147936727325134924.png"/>
@@ -277,7 +277,7 @@
 	
 	<div class="code-copy-content nt3" >
 		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">hugo new posts/my-first-post.md</code></pre></div>
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">hugo new posts/my-first-post.md</span></span></code></pre></div>
 	</div>
 
 </div>
@@ -307,39 +307,39 @@
 	
 	<div class="code-copy-content nt3" >
 		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md">---
-title: &#34;{{ replace .Name &#34;-&#34; &#34; &#34; | title }}&#34;
-date: {{ .Date }}
-draft: true
----
-
-<span class="gs">**Insert Lead paragraph here.**</span>
-
-<span class="gu">## New Cool Posts
-</span><span class="gu"></span>
-{{ range first 10 ( where .Site.RegularPages &#34;Type&#34; &#34;cool&#34; ) }}
-<span class="k">*</span> {{ .Title }}
-{{ end }}</code></pre></div>
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">title: &#34;{{ replace .Name &#34;-&#34; &#34; &#34; | title }}&#34;
+</span></span><span class="line"><span class="cl">date: {{ .Date }}
+</span></span><span class="line"><span class="cl">draft: true
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gs">**Insert Lead paragraph here.**</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">## New Cool Posts
+</span></span></span><span class="line"><span class="cl"><span class="gu"></span>
+</span></span><span class="line"><span class="cl">{{ range first 10 ( where .Site.RegularPages &#34;Type&#34; &#34;cool&#34; ) }}
+</span></span><span class="line"><span class="cl"><span class="k">*</span> {{ .Title }}
+</span></span><span class="line"><span class="cl">{{ end }}</span></span></code></pre></div>
 	</div>
 
 </div>
 
 <p>When you create a new newsletter with:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hugo new newsletter/the-latest-cool.stuff.md
-</code></pre></div><p>It will create a new newsletter type of content file based on the archetype template.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new newsletter/the-latest-cool.stuff.md
+</span></span></code></pre></div><p>It will create a new newsletter type of content file based on the archetype template.</p>
 <p><strong>Note:</strong> the site will only be built if the <code>.Site</code> is in use in the archetype file, and this can be time consuming for big sites.</p>
 <p>The above <em>newsletter type archetype</em> illustrates the possibilities: The full Hugo <code>.Site</code> and all of Hugo's template funcs can be used in the archetype file.</p>
 <h2 id="directory-based-archetypes">Directory based archetypes <a class="header-link" href="#directory-based-archetypes"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Since Hugo <code>0.49</code> you can use complete directories as archetype templates. Given this archetype directory:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">archetypes
-├── default.md
-└── post-bundle
-    ├── bio.md
-    ├── images
-    │   └── featured.jpg
-    └── index.md
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hugo new --kind post-bundle posts/my-post
-</code></pre></div><p>Will create a new folder in <code>/content/posts/my-post</code> with the same set of files as in the <code>post-bundle</code> archetypes folder. All content files (<code>index.md</code> etc.) can contain template logic, and will receive the correct <code>.Site</code> for the content&rsquo;s language.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">archetypes
+</span></span><span class="line"><span class="cl">├── default.md
+</span></span><span class="line"><span class="cl">└── post-bundle
+</span></span><span class="line"><span class="cl">    ├── bio.md
+</span></span><span class="line"><span class="cl">    ├── images
+</span></span><span class="line"><span class="cl">    │   └── featured.jpg
+</span></span><span class="line"><span class="cl">    └── index.md
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new --kind post-bundle posts/my-post
+</span></span></code></pre></div><p>Will create a new folder in <code>/content/posts/my-post</code> with the same set of files as in the <code>post-bundle</code> archetypes folder. All content files (<code>index.md</code> etc.) can contain template logic, and will receive the correct <code>.Site</code> for the content&rsquo;s language.</p>
 
 </div>
 
@@ -497,6 +497,11 @@ draft: true
           <li class="f6 fw4">
             <a href="/content-management/formats/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Content Formats
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/content-management/diagrams/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Diagrams
             </a>
           </li>
           <li class="f6 fw4">
@@ -1438,11 +1443,6 @@ draft: true
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/variables/hugo/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hugo Variables
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/variables/git/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Git Variables
             </a>
@@ -1693,7 +1693,7 @@ draft: true
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: February 12, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b162c296b7f2066827adadc6ebff61028366790d">Merge pull request #102 from blackb1rd/hugo/v0.92.2 (b162c29)</a>
+  Last updated: March 6, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/bc2bc7c8dd3645fdf6a0da2ecb9bb182571b08b3">Merge pull request #103 from blackb1rd/hugo/v0.93.2 (bc2bc7c)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/content-management/archetypes.md" class="
@@ -1941,6 +1941,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 </footer>
+
+
+  
 
 
 </body>

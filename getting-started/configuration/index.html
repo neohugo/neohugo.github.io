@@ -13,7 +13,7 @@
   <title>Configure Hugo | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.15-DEV" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,11 +62,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/getting-started/configuration/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_10905119886565882197.png"/><meta property="article:section" content="getting-started" />
 <meta property="article:published_time" content="2017-01-02T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-02-12T14:25:46+07:00" />
+<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="name" content="Configure Hugo">
 <meta itemprop="description" content="How to configure your Hugo site."><meta itemprop="datePublished" content="2017-01-02T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-02-12T14:25:46+07:00" />
-<meta itemprop="wordCount" content="3705"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
+<meta itemprop="wordCount" content="3710"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_10905119886565882197.png"/>
 <meta name="twitter:title" content="Configure Hugo"/>
@@ -322,24 +322,24 @@ hugo --config a.toml,b.toml,c.toml
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">Params</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">foo</span><span class="p">:</span><span class="w"> </span><span class="l">bar</span><span class="w">
-</span></code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">Params</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">foo</span><span class="p">:</span><span class="w"> </span><span class="l">bar</span><span class="w">
+</span></span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">Params</span><span class="p">]</span>
-  <span class="nx">foo</span> <span class="p">=</span> <span class="s1">&#39;bar&#39;</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">Params</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">foo</span> <span class="p">=</span> <span class="s1">&#39;bar&#39;</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;Params&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;foo&#34;</span><span class="p">:</span> <span class="s2">&#34;bar&#34;</span>
-   <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;Params&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;foo&#34;</span><span class="p">:</span> <span class="s2">&#34;bar&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
   </div>
@@ -364,20 +364,20 @@ hugo --config a.toml,b.toml,c.toml
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">foo</span><span class="p">:</span><span class="w"> </span><span class="l">bar</span><span class="w">
-</span></code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">foo</span><span class="p">:</span><span class="w"> </span><span class="l">bar</span><span class="w">
+</span></span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">foo</span> <span class="p">=</span> <span class="s1">&#39;bar&#39;</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">foo</span> <span class="p">=</span> <span class="s1">&#39;bar&#39;</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;foo&#34;</span><span class="p">:</span> <span class="s2">&#34;bar&#34;</span>
-<span class="p">}</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;foo&#34;</span><span class="p">:</span> <span class="s2">&#34;bar&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
   </div>
@@ -448,171 +448,171 @@ hugo --config a.toml,b.toml,c.toml
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">build</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
-</span><span class="w"></span><span class="nt">caches</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
-</span><span class="w"></span><span class="nt">cascade</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
-</span><span class="w"></span><span class="nt">frontmatter</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
-</span><span class="w"></span><span class="nt">imaging</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
-</span><span class="w"></span><span class="nt">languages</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
-</span><span class="w">  </span><span class="nt">en</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
-</span><span class="w">    </span><span class="nt">menus</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">shallow</span><span class="w">
-</span><span class="w">    </span><span class="nt">params</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">deep</span><span class="w">
-</span><span class="w"></span><span class="nt">markup</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
-</span><span class="w"></span><span class="nt">mediatypes</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">shallow</span><span class="w">
-</span><span class="w"></span><span class="nt">menus</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">shallow</span><span class="w">
-</span><span class="w"></span><span class="nt">minify</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
-</span><span class="w"></span><span class="nt">module</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
-</span><span class="w"></span><span class="nt">outputformats</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">shallow</span><span class="w">
-</span><span class="w"></span><span class="nt">params</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">deep</span><span class="w">
-</span><span class="w"></span><span class="nt">permalinks</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
-</span><span class="w"></span><span class="nt">privacy</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
-</span><span class="w"></span><span class="nt">related</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
-</span><span class="w"></span><span class="nt">security</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
-</span><span class="w"></span><span class="nt">sitemap</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
-</span><span class="w"></span><span class="nt">taxonomies</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
-</span></code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">build</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">caches</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">cascade</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">frontmatter</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">imaging</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">languages</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">en</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">menus</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">shallow</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">params</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">deep</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">markup</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">mediatypes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">shallow</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">menus</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">shallow</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">minify</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">module</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">outputformats</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">shallow</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">params</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">deep</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">permalinks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">privacy</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">related</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">security</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">sitemap</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">taxonomies</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">_merge</span><span class="p">:</span><span class="w"> </span><span class="l">none</span><span class="w">
+</span></span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">build</span><span class="p">]</span>
-  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-<span class="p">[</span><span class="nx">caches</span><span class="p">]</span>
-  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-<span class="p">[</span><span class="nx">cascade</span><span class="p">]</span>
-  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-<span class="p">[</span><span class="nx">frontmatter</span><span class="p">]</span>
-  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-<span class="p">[</span><span class="nx">imaging</span><span class="p">]</span>
-  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-<span class="p">[</span><span class="nx">languages</span><span class="p">]</span>
-  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">]</span>
-    <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-    <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">menus</span><span class="p">]</span>
-      <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;shallow&#39;</span>
-    <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">params</span><span class="p">]</span>
-      <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;deep&#39;</span>
-<span class="p">[</span><span class="nx">markup</span><span class="p">]</span>
-  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-<span class="p">[</span><span class="nx">mediatypes</span><span class="p">]</span>
-  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;shallow&#39;</span>
-<span class="p">[</span><span class="nx">menus</span><span class="p">]</span>
-  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;shallow&#39;</span>
-<span class="p">[</span><span class="nx">minify</span><span class="p">]</span>
-  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-<span class="p">[</span><span class="nx">module</span><span class="p">]</span>
-  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-<span class="p">[</span><span class="nx">outputformats</span><span class="p">]</span>
-  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;shallow&#39;</span>
-<span class="p">[</span><span class="nx">params</span><span class="p">]</span>
-  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;deep&#39;</span>
-<span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
-  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-<span class="p">[</span><span class="nx">privacy</span><span class="p">]</span>
-  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-<span class="p">[</span><span class="nx">related</span><span class="p">]</span>
-  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-<span class="p">[</span><span class="nx">security</span><span class="p">]</span>
-  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-<span class="p">[</span><span class="nx">sitemap</span><span class="p">]</span>
-  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-<span class="p">[</span><span class="nx">taxonomies</span><span class="p">]</span>
-  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">build</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">caches</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">cascade</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">frontmatter</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">imaging</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">languages</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">menus</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;shallow&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">params</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;deep&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">markup</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">mediatypes</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;shallow&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">menus</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;shallow&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">minify</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">module</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">outputformats</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;shallow&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;deep&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">privacy</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">related</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">security</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">sitemap</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">taxonomies</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">_merge</span> <span class="p">=</span> <span class="s1">&#39;none&#39;</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
-   <span class="p">},</span>
-   <span class="nt">&#34;caches&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
-   <span class="p">},</span>
-   <span class="nt">&#34;cascade&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
-   <span class="p">},</span>
-   <span class="nt">&#34;frontmatter&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
-   <span class="p">},</span>
-   <span class="nt">&#34;imaging&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
-   <span class="p">},</span>
-   <span class="nt">&#34;languages&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span><span class="p">,</span>
-      <span class="nt">&#34;en&#34;</span><span class="p">:</span> <span class="p">{</span>
-         <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;menus&#34;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;shallow&#34;</span>
-         <span class="p">},</span>
-         <span class="nt">&#34;params&#34;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;deep&#34;</span>
-         <span class="p">}</span>
-      <span class="p">}</span>
-   <span class="p">},</span>
-   <span class="nt">&#34;markup&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
-   <span class="p">},</span>
-   <span class="nt">&#34;mediatypes&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;shallow&#34;</span>
-   <span class="p">},</span>
-   <span class="nt">&#34;menus&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;shallow&#34;</span>
-   <span class="p">},</span>
-   <span class="nt">&#34;minify&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
-   <span class="p">},</span>
-   <span class="nt">&#34;module&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
-   <span class="p">},</span>
-   <span class="nt">&#34;outputformats&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;shallow&#34;</span>
-   <span class="p">},</span>
-   <span class="nt">&#34;params&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;deep&#34;</span>
-   <span class="p">},</span>
-   <span class="nt">&#34;permalinks&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
-   <span class="p">},</span>
-   <span class="nt">&#34;privacy&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
-   <span class="p">},</span>
-   <span class="nt">&#34;related&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
-   <span class="p">},</span>
-   <span class="nt">&#34;security&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
-   <span class="p">},</span>
-   <span class="nt">&#34;sitemap&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
-   <span class="p">},</span>
-   <span class="nt">&#34;taxonomies&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
-   <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">},</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;caches&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">},</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;cascade&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">},</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;frontmatter&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">},</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;imaging&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">},</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;languages&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;en&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;menus&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;shallow&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="p">},</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;params&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;deep&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">   <span class="p">},</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;markup&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">},</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;mediatypes&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;shallow&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">},</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;menus&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;shallow&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">},</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;minify&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">},</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;module&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">},</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;outputformats&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;shallow&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">},</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;params&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;deep&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">},</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;permalinks&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">},</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;privacy&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">},</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;related&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">},</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;security&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">},</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;sitemap&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">},</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;taxonomies&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;_merge&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
   </div>
@@ -787,8 +787,8 @@ config file(s).</p>
 <h3 id="removepathaccents">removePathAccents <a class="header-link" href="#removepathaccents"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p><strong>Default value:</strong> false</p>
 <p>Removes <a href="https://www.compart.com/en/unicode/category/Mn">non-spacing marks</a> from <a href="https://en.wikipedia.org/wiki/Precomposed_character">composite characters</a> in content paths.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">content/post/hügó.md --&gt; https://example.org/post/hugo/
-</code></pre></div><h3 id="rsslimit">rssLimit <a class="header-link" href="#rsslimit"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">content/post/hügó.md --&gt; https://example.org/post/hugo/
+</span></span></code></pre></div><h3 id="rsslimit">rssLimit <a class="header-link" href="#rsslimit"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>Maximum number of items in the RSS feed.</p>
 <h3 id="sectionpagesmenu">sectionPagesMenu <a class="header-link" href="#sectionpagesmenu"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>See <a href="/templates/menu-templates/#section-menu-for-lazy-bloggers">&ldquo;Section Menu for Lazy Bloggers&rdquo;</a>.</p>
@@ -868,30 +868,30 @@ hugo config | grep emoji
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">build</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">noJSConfigInAssets</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span><span class="w">  </span><span class="nt">useResourceCacheWhen</span><span class="p">:</span><span class="w"> </span><span class="l">fallback</span><span class="w">
-</span><span class="w">  </span><span class="nt">writeStats</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span></code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">build</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">noJSConfigInAssets</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">useResourceCacheWhen</span><span class="p">:</span><span class="w"> </span><span class="l">fallback</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">writeStats</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">build</span><span class="p">]</span>
-  <span class="nx">noJSConfigInAssets</span> <span class="p">=</span> <span class="kc">false</span>
-  <span class="nx">useResourceCacheWhen</span> <span class="p">=</span> <span class="s1">&#39;fallback&#39;</span>
-  <span class="nx">writeStats</span> <span class="p">=</span> <span class="kc">false</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">build</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">noJSConfigInAssets</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">useResourceCacheWhen</span> <span class="p">=</span> <span class="s1">&#39;fallback&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">writeStats</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;noJSConfigInAssets&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-      <span class="nt">&#34;useResourceCacheWhen&#34;</span><span class="p">:</span> <span class="s2">&#34;fallback&#34;</span><span class="p">,</span>
-      <span class="nt">&#34;writeStats&#34;</span><span class="p">:</span> <span class="kc">false</span>
-   <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;noJSConfigInAssets&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;useResourceCacheWhen&#34;</span><span class="p">:</span> <span class="s2">&#34;fallback&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;writeStats&#34;</span><span class="p">:</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
   </div>
@@ -945,49 +945,49 @@ hugo config | grep emoji
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">server</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">headers</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- <span class="nt">for</span><span class="p">:</span><span class="w"> </span><span class="l">/**</span><span class="w">
-</span><span class="w">    </span><span class="nt">values</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span><span class="nt">Content-Security-Policy</span><span class="p">:</span><span class="w"> </span><span class="l">script-src localhost:1313</span><span class="w">
-</span><span class="w">      </span><span class="nt">Referrer-Policy</span><span class="p">:</span><span class="w"> </span><span class="l">strict-origin-when-cross-origin</span><span class="w">
-</span><span class="w">      </span><span class="nt">X-Content-Type-Options</span><span class="p">:</span><span class="w"> </span><span class="l">nosniff</span><span class="w">
-</span><span class="w">      </span><span class="nt">X-Frame-Options</span><span class="p">:</span><span class="w"> </span><span class="l">DENY</span><span class="w">
-</span><span class="w">      </span><span class="nt">X-XSS-Protection</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="l">; mode=block</span><span class="w">
-</span></code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">server</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">headers</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">for</span><span class="p">:</span><span class="w"> </span><span class="l">/**</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">values</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">Content-Security-Policy</span><span class="p">:</span><span class="w"> </span><span class="l">script-src localhost:1313</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">Referrer-Policy</span><span class="p">:</span><span class="w"> </span><span class="l">strict-origin-when-cross-origin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">X-Content-Type-Options</span><span class="p">:</span><span class="w"> </span><span class="l">nosniff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">X-Frame-Options</span><span class="p">:</span><span class="w"> </span><span class="l">DENY</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">X-XSS-Protection</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="l">; mode=block</span><span class="w">
+</span></span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">server</span><span class="p">]</span>
-<span class="p">[[</span><span class="nx">server</span><span class="p">.</span><span class="nx">headers</span><span class="p">]]</span>
-  <span class="nx">for</span> <span class="p">=</span> <span class="s1">&#39;/**&#39;</span>
-  <span class="p">[</span><span class="nx">server</span><span class="p">.</span><span class="nx">headers</span><span class="p">.</span><span class="nx">values</span><span class="p">]</span>
-    <span class="nx">Content-Security-Policy</span> <span class="p">=</span> <span class="s1">&#39;script-src localhost:1313&#39;</span>
-    <span class="nx">Referrer-Policy</span> <span class="p">=</span> <span class="s1">&#39;strict-origin-when-cross-origin&#39;</span>
-    <span class="nx">X-Content-Type-Options</span> <span class="p">=</span> <span class="s1">&#39;nosniff&#39;</span>
-    <span class="nx">X-Frame-Options</span> <span class="p">=</span> <span class="s1">&#39;DENY&#39;</span>
-    <span class="nx">X-XSS-Protection</span> <span class="p">=</span> <span class="s1">&#39;1; mode=block&#39;</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">server</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">server</span><span class="p">.</span><span class="nx">headers</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">for</span> <span class="p">=</span> <span class="s1">&#39;/**&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">server</span><span class="p">.</span><span class="nx">headers</span><span class="p">.</span><span class="nx">values</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Content-Security-Policy</span> <span class="p">=</span> <span class="s1">&#39;script-src localhost:1313&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Referrer-Policy</span> <span class="p">=</span> <span class="s1">&#39;strict-origin-when-cross-origin&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">X-Content-Type-Options</span> <span class="p">=</span> <span class="s1">&#39;nosniff&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">X-Frame-Options</span> <span class="p">=</span> <span class="s1">&#39;DENY&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">X-XSS-Protection</span> <span class="p">=</span> <span class="s1">&#39;1; mode=block&#39;</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;server&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;headers&#34;</span><span class="p">:</span> <span class="p">[</span>
-         <span class="p">{</span>
-            <span class="nt">&#34;for&#34;</span><span class="p">:</span> <span class="s2">&#34;/**&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;values&#34;</span><span class="p">:</span> <span class="p">{</span>
-               <span class="nt">&#34;Content-Security-Policy&#34;</span><span class="p">:</span> <span class="s2">&#34;script-src localhost:1313&#34;</span><span class="p">,</span>
-               <span class="nt">&#34;Referrer-Policy&#34;</span><span class="p">:</span> <span class="s2">&#34;strict-origin-when-cross-origin&#34;</span><span class="p">,</span>
-               <span class="nt">&#34;X-Content-Type-Options&#34;</span><span class="p">:</span> <span class="s2">&#34;nosniff&#34;</span><span class="p">,</span>
-               <span class="nt">&#34;X-Frame-Options&#34;</span><span class="p">:</span> <span class="s2">&#34;DENY&#34;</span><span class="p">,</span>
-               <span class="nt">&#34;X-XSS-Protection&#34;</span><span class="p">:</span> <span class="s2">&#34;1; mode=block&#34;</span>
-            <span class="p">}</span>
-         <span class="p">}</span>
-      <span class="p">]</span>
-   <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;server&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;headers&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">         <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;for&#34;</span><span class="p">:</span> <span class="s2">&#34;/**&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;values&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">               <span class="nt">&#34;Content-Security-Policy&#34;</span><span class="p">:</span> <span class="s2">&#34;script-src localhost:1313&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">               <span class="nt">&#34;Referrer-Policy&#34;</span><span class="p">:</span> <span class="s2">&#34;strict-origin-when-cross-origin&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">               <span class="nt">&#34;X-Content-Type-Options&#34;</span><span class="p">:</span> <span class="s2">&#34;nosniff&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">               <span class="nt">&#34;X-Frame-Options&#34;</span><span class="p">:</span> <span class="s2">&#34;DENY&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">               <span class="nt">&#34;X-XSS-Protection&#34;</span><span class="p">:</span> <span class="s2">&#34;1; mode=block&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">         <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">]</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
   </div>
@@ -1013,45 +1013,45 @@ hugo config | grep emoji
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">headers</span><span class="p">:</span><span class="w">
-</span><span class="w"></span>- <span class="nt">for</span><span class="p">:</span><span class="w"> </span><span class="l">/**</span><span class="w">
-</span><span class="w">  </span><span class="nt">values</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">Content-Security-Policy</span><span class="p">:</span><span class="w"> </span><span class="l">script-src localhost:1313</span><span class="w">
-</span><span class="w">    </span><span class="nt">Referrer-Policy</span><span class="p">:</span><span class="w"> </span><span class="l">strict-origin-when-cross-origin</span><span class="w">
-</span><span class="w">    </span><span class="nt">X-Content-Type-Options</span><span class="p">:</span><span class="w"> </span><span class="l">nosniff</span><span class="w">
-</span><span class="w">    </span><span class="nt">X-Frame-Options</span><span class="p">:</span><span class="w"> </span><span class="l">DENY</span><span class="w">
-</span><span class="w">    </span><span class="nt">X-XSS-Protection</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="l">; mode=block</span><span class="w">
-</span></code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">headers</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">for</span><span class="p">:</span><span class="w"> </span><span class="l">/**</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">values</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">Content-Security-Policy</span><span class="p">:</span><span class="w"> </span><span class="l">script-src localhost:1313</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">Referrer-Policy</span><span class="p">:</span><span class="w"> </span><span class="l">strict-origin-when-cross-origin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">X-Content-Type-Options</span><span class="p">:</span><span class="w"> </span><span class="l">nosniff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">X-Frame-Options</span><span class="p">:</span><span class="w"> </span><span class="l">DENY</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">X-XSS-Protection</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="l">; mode=block</span><span class="w">
+</span></span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[[</span><span class="nx">headers</span><span class="p">]]</span>
-<span class="nx">for</span> <span class="p">=</span> <span class="s1">&#39;/**&#39;</span>
-<span class="p">[</span><span class="nx">headers</span><span class="p">.</span><span class="nx">values</span><span class="p">]</span>
-  <span class="nx">Content-Security-Policy</span> <span class="p">=</span> <span class="s1">&#39;script-src localhost:1313&#39;</span>
-  <span class="nx">Referrer-Policy</span> <span class="p">=</span> <span class="s1">&#39;strict-origin-when-cross-origin&#39;</span>
-  <span class="nx">X-Content-Type-Options</span> <span class="p">=</span> <span class="s1">&#39;nosniff&#39;</span>
-  <span class="nx">X-Frame-Options</span> <span class="p">=</span> <span class="s1">&#39;DENY&#39;</span>
-  <span class="nx">X-XSS-Protection</span> <span class="p">=</span> <span class="s1">&#39;1; mode=block&#39;</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">headers</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">for</span> <span class="p">=</span> <span class="s1">&#39;/**&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">headers</span><span class="p">.</span><span class="nx">values</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">Content-Security-Policy</span> <span class="p">=</span> <span class="s1">&#39;script-src localhost:1313&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">Referrer-Policy</span> <span class="p">=</span> <span class="s1">&#39;strict-origin-when-cross-origin&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">X-Content-Type-Options</span> <span class="p">=</span> <span class="s1">&#39;nosniff&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">X-Frame-Options</span> <span class="p">=</span> <span class="s1">&#39;DENY&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">X-XSS-Protection</span> <span class="p">=</span> <span class="s1">&#39;1; mode=block&#39;</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;headers&#34;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-         <span class="nt">&#34;for&#34;</span><span class="p">:</span> <span class="s2">&#34;/**&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;values&#34;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&#34;Content-Security-Policy&#34;</span><span class="p">:</span> <span class="s2">&#34;script-src localhost:1313&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;Referrer-Policy&#34;</span><span class="p">:</span> <span class="s2">&#34;strict-origin-when-cross-origin&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;X-Content-Type-Options&#34;</span><span class="p">:</span> <span class="s2">&#34;nosniff&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;X-Frame-Options&#34;</span><span class="p">:</span> <span class="s2">&#34;DENY&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;X-XSS-Protection&#34;</span><span class="p">:</span> <span class="s2">&#34;1; mode=block&#34;</span>
-         <span class="p">}</span>
-      <span class="p">}</span>
-   <span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;headers&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;for&#34;</span><span class="p">:</span> <span class="s2">&#34;/**&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;values&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Content-Security-Policy&#34;</span><span class="p">:</span> <span class="s2">&#34;script-src localhost:1313&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Referrer-Policy&#34;</span><span class="p">:</span> <span class="s2">&#34;strict-origin-when-cross-origin&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;X-Content-Type-Options&#34;</span><span class="p">:</span> <span class="s2">&#34;nosniff&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;X-Frame-Options&#34;</span><span class="p">:</span> <span class="s2">&#34;DENY&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;X-XSS-Protection&#34;</span><span class="p">:</span> <span class="s2">&#34;1; mode=block&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">   <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
   </div>
@@ -1084,35 +1084,35 @@ hugo config | grep emoji
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">redirects</span><span class="p">:</span><span class="w">
-</span><span class="w"></span>- <span class="nt">force</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span><span class="w">  </span><span class="nt">from</span><span class="p">:</span><span class="w"> </span><span class="l">/myspa/**</span><span class="w">
-</span><span class="w">  </span><span class="nt">status</span><span class="p">:</span><span class="w"> </span><span class="m">200</span><span class="w">
-</span><span class="w">  </span><span class="nt">to</span><span class="p">:</span><span class="w"> </span><span class="l">/myspa/</span><span class="w">
-</span></code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">redirects</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">force</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">from</span><span class="p">:</span><span class="w"> </span><span class="l">/myspa/**</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">status</span><span class="p">:</span><span class="w"> </span><span class="m">200</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">to</span><span class="p">:</span><span class="w"> </span><span class="l">/myspa/</span><span class="w">
+</span></span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[[</span><span class="nx">redirects</span><span class="p">]]</span>
-<span class="nx">force</span> <span class="p">=</span> <span class="kc">false</span>
-<span class="nx">from</span> <span class="p">=</span> <span class="s1">&#39;/myspa/**&#39;</span>
-<span class="nx">status</span> <span class="p">=</span> <span class="mi">200</span>
-<span class="nx">to</span> <span class="p">=</span> <span class="s1">&#39;/myspa/&#39;</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">redirects</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">force</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl"><span class="nx">from</span> <span class="p">=</span> <span class="s1">&#39;/myspa/**&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">status</span> <span class="p">=</span> <span class="mi">200</span>
+</span></span><span class="line"><span class="cl"><span class="nx">to</span> <span class="p">=</span> <span class="s1">&#39;/myspa/&#39;</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;redirects&#34;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-         <span class="nt">&#34;force&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-         <span class="nt">&#34;from&#34;</span><span class="p">:</span> <span class="s2">&#34;/myspa/**&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;status&#34;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
-         <span class="nt">&#34;to&#34;</span><span class="p">:</span> <span class="s2">&#34;/myspa/&#34;</span>
-      <span class="p">}</span>
-   <span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;redirects&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;force&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;from&#34;</span><span class="p">:</span> <span class="s2">&#34;/myspa/**&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;status&#34;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;to&#34;</span><span class="p">:</span> <span class="s2">&#34;/myspa/&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">   <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
   </div>
@@ -1160,57 +1160,57 @@ hugo config | grep emoji
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">baseURL</span><span class="p">:</span><span class="w"> </span><span class="l">https://yoursite.example.com/</span><span class="w">
-</span><span class="w"></span><span class="nt">footnoteReturnLinkContents</span><span class="p">:</span><span class="w"> </span><span class="l">↩</span><span class="w">
-</span><span class="w"></span><span class="nt">params</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">AuthorName</span><span class="p">:</span><span class="w"> </span><span class="l">Jon Doe</span><span class="w">
-</span><span class="w">  </span><span class="nt">GitHubUser</span><span class="p">:</span><span class="w"> </span><span class="l">spf13</span><span class="w">
-</span><span class="w">  </span><span class="nt">ListOfFoo</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- <span class="l">foo1</span><span class="w">
-</span><span class="w">  </span>- <span class="l">foo2</span><span class="w">
-</span><span class="w">  </span><span class="nt">SidebarRecentLimit</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="w">
-</span><span class="w">  </span><span class="nt">Subtitle</span><span class="p">:</span><span class="w"> </span><span class="l">Hugo is Absurdly Fast!</span><span class="w">
-</span><span class="w"></span><span class="nt">permalinks</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">posts</span><span class="p">:</span><span class="w"> </span><span class="l">/:year/:month/:title/</span><span class="w">
-</span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">My Hugo Site</span><span class="w">
-</span></code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">baseURL</span><span class="p">:</span><span class="w"> </span><span class="l">https://yoursite.example.com/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">footnoteReturnLinkContents</span><span class="p">:</span><span class="w"> </span><span class="l">↩</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">params</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">AuthorName</span><span class="p">:</span><span class="w"> </span><span class="l">Jon Doe</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">GitHubUser</span><span class="p">:</span><span class="w"> </span><span class="l">spf13</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">ListOfFoo</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">foo1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">foo2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">SidebarRecentLimit</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">Subtitle</span><span class="p">:</span><span class="w"> </span><span class="l">Hugo is Absurdly Fast!</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">permalinks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">posts</span><span class="p">:</span><span class="w"> </span><span class="l">/:year/:month/:title/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">My Hugo Site</span><span class="w">
+</span></span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s1">&#39;https://yoursite.example.com/&#39;</span>
-<span class="nx">footnoteReturnLinkContents</span> <span class="p">=</span> <span class="s1">&#39;↩&#39;</span>
-<span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;My Hugo Site&#39;</span>
-<span class="p">[</span><span class="nx">params</span><span class="p">]</span>
-  <span class="nx">AuthorName</span> <span class="p">=</span> <span class="s1">&#39;Jon Doe&#39;</span>
-  <span class="nx">GitHubUser</span> <span class="p">=</span> <span class="s1">&#39;spf13&#39;</span>
-  <span class="nx">ListOfFoo</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;foo1&#39;</span><span class="p">,</span> <span class="s1">&#39;foo2&#39;</span><span class="p">]</span>
-  <span class="nx">SidebarRecentLimit</span> <span class="p">=</span> <span class="mi">5</span>
-  <span class="nx">Subtitle</span> <span class="p">=</span> <span class="s1">&#39;Hugo is Absurdly Fast!&#39;</span>
-<span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
-  <span class="nx">posts</span> <span class="p">=</span> <span class="s1">&#39;/:year/:month/:title/&#39;</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s1">&#39;https://yoursite.example.com/&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">footnoteReturnLinkContents</span> <span class="p">=</span> <span class="s1">&#39;↩&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;My Hugo Site&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">AuthorName</span> <span class="p">=</span> <span class="s1">&#39;Jon Doe&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">GitHubUser</span> <span class="p">=</span> <span class="s1">&#39;spf13&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">ListOfFoo</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;foo1&#39;</span><span class="p">,</span> <span class="s1">&#39;foo2&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SidebarRecentLimit</span> <span class="p">=</span> <span class="mi">5</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">Subtitle</span> <span class="p">=</span> <span class="s1">&#39;Hugo is Absurdly Fast!&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">posts</span> <span class="p">=</span> <span class="s1">&#39;/:year/:month/:title/&#39;</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;baseURL&#34;</span><span class="p">:</span> <span class="s2">&#34;https://yoursite.example.com/&#34;</span><span class="p">,</span>
-   <span class="nt">&#34;footnoteReturnLinkContents&#34;</span><span class="p">:</span> <span class="s2">&#34;↩&#34;</span><span class="p">,</span>
-   <span class="nt">&#34;params&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;AuthorName&#34;</span><span class="p">:</span> <span class="s2">&#34;Jon Doe&#34;</span><span class="p">,</span>
-      <span class="nt">&#34;GitHubUser&#34;</span><span class="p">:</span> <span class="s2">&#34;spf13&#34;</span><span class="p">,</span>
-      <span class="nt">&#34;ListOfFoo&#34;</span><span class="p">:</span> <span class="p">[</span>
-         <span class="s2">&#34;foo1&#34;</span><span class="p">,</span>
-         <span class="s2">&#34;foo2&#34;</span>
-      <span class="p">],</span>
-      <span class="nt">&#34;SidebarRecentLimit&#34;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
-      <span class="nt">&#34;Subtitle&#34;</span><span class="p">:</span> <span class="s2">&#34;Hugo is Absurdly Fast!&#34;</span>
-   <span class="p">},</span>
-   <span class="nt">&#34;permalinks&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;posts&#34;</span><span class="p">:</span> <span class="s2">&#34;/:year/:month/:title/&#34;</span>
-   <span class="p">},</span>
-   <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;My Hugo Site&#34;</span>
-<span class="p">}</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;baseURL&#34;</span><span class="p">:</span> <span class="s2">&#34;https://yoursite.example.com/&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;footnoteReturnLinkContents&#34;</span><span class="p">:</span> <span class="s2">&#34;↩&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;params&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;AuthorName&#34;</span><span class="p">:</span> <span class="s2">&#34;Jon Doe&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;GitHubUser&#34;</span><span class="p">:</span> <span class="s2">&#34;spf13&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;ListOfFoo&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;foo1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;foo2&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">],</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;SidebarRecentLimit&#34;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Subtitle&#34;</span><span class="p">:</span> <span class="s2">&#34;Hugo is Absurdly Fast!&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">},</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;permalinks&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;posts&#34;</span><span class="p">:</span> <span class="s2">&#34;/:year/:month/:title/&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">},</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;My Hugo Site&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
   </div>
@@ -1219,7 +1219,7 @@ hugo config | grep emoji
 <h2 id="configure-with-environment-variables">Configure with Environment Variables <a class="header-link" href="#configure-with-environment-variables"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>In addition to the 3 config options already mentioned, configuration key-values can be defined through operating system environment variables.</p>
 <p>For example, the following command will effectively set a website&rsquo;s title on Unix-like systems:</p>
-<pre tabindex="0"><code>$ env HUGO_TITLE=&quot;Some Title&quot; hugo
+<pre tabindex="0"><code>$ env HUGO_TITLE=&#34;Some Title&#34; hugo
 </code></pre><p>This is really useful if you use a service such as Netlify to deploy your site. Look at the Hugo docs <a href="https://github.com/gohugoio/hugoDocs/blob/master/netlify.toml">Netlify configuration file</a> for an example.</p>
 
 <aside class="admonition note">
@@ -1261,23 +1261,23 @@ hugo config | grep emoji
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">ignoreFiles</span><span class="p">:</span><span class="w">
-</span><span class="w"></span>- <span class="l">\.foo$</span><span class="w">
-</span><span class="w"></span>- <span class="l">\.boo$</span><span class="w">
-</span></code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">ignoreFiles</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">\.foo$</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">\.boo$</span><span class="w">
+</span></span></span></code></pre></div>
       </div>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">ignoreFiles</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;\.foo$&#39;</span><span class="p">,</span> <span class="s1">&#39;\.boo$&#39;</span><span class="p">]</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">ignoreFiles</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;\.foo$&#39;</span><span class="p">,</span> <span class="s1">&#39;\.boo$&#39;</span><span class="p">]</span>
+</span></span></code></pre></div>
       </div>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;ignoreFiles&#34;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="s2">&#34;\\.foo$&#34;</span><span class="p">,</span>
-      <span class="s2">&#34;\\.boo$&#34;</span>
-   <span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;ignoreFiles&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;\\.foo$&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;\\.boo$&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
       </div>
   </div>
 </div>
@@ -1301,21 +1301,21 @@ hugo config | grep emoji
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">ignoreFiles</span><span class="p">:</span><span class="w">
-</span><span class="w"></span>- <span class="l">^/home/user/project/content/test\.md$</span><span class="w">
-</span></code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">ignoreFiles</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">^/home/user/project/content/test\.md$</span><span class="w">
+</span></span></span></code></pre></div>
       </div>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">ignoreFiles</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;^/home/user/project/content/test\.md$&#39;</span><span class="p">]</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">ignoreFiles</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;^/home/user/project/content/test\.md$&#39;</span><span class="p">]</span>
+</span></span></code></pre></div>
       </div>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;ignoreFiles&#34;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="s2">&#34;^/home/user/project/content/test\\.md$&#34;</span>
-   <span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;ignoreFiles&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;^/home/user/project/content/test\\.md$&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
       </div>
   </div>
 </div>
@@ -1343,57 +1343,57 @@ hugo config | grep emoji
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">frontmatter</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">date</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- <span class="l">date</span><span class="w">
-</span><span class="w">  </span>- <span class="l">publishDate</span><span class="w">
-</span><span class="w">  </span>- <span class="l">lastmod</span><span class="w">
-</span><span class="w">  </span><span class="nt">expiryDate</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- <span class="l">expiryDate</span><span class="w">
-</span><span class="w">  </span><span class="nt">lastmod</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- <span class="p">:</span><span class="l">git</span><span class="w">
-</span><span class="w">  </span>- <span class="l">lastmod</span><span class="w">
-</span><span class="w">  </span>- <span class="l">date</span><span class="w">
-</span><span class="w">  </span>- <span class="l">publishDate</span><span class="w">
-</span><span class="w">  </span><span class="nt">publishDate</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- <span class="l">publishDate</span><span class="w">
-</span><span class="w">  </span>- <span class="l">date</span><span class="w">
-</span></code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">frontmatter</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">date</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">date</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">publishDate</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">lastmod</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">expiryDate</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">expiryDate</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">lastmod</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="p">:</span><span class="l">git</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">lastmod</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">date</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">publishDate</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">publishDate</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">publishDate</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">date</span><span class="w">
+</span></span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">frontmatter</span><span class="p">]</span>
-  <span class="nx">date</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;publishDate&#39;</span><span class="p">,</span> <span class="s1">&#39;lastmod&#39;</span><span class="p">]</span>
-  <span class="nx">expiryDate</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;expiryDate&#39;</span><span class="p">]</span>
-  <span class="nx">lastmod</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;:git&#39;</span><span class="p">,</span> <span class="s1">&#39;lastmod&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;publishDate&#39;</span><span class="p">]</span>
-  <span class="nx">publishDate</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;publishDate&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">]</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">frontmatter</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">date</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;publishDate&#39;</span><span class="p">,</span> <span class="s1">&#39;lastmod&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">expiryDate</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;expiryDate&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">lastmod</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;:git&#39;</span><span class="p">,</span> <span class="s1">&#39;lastmod&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;publishDate&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">publishDate</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;publishDate&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">]</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;frontmatter&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;date&#34;</span><span class="p">:</span> <span class="p">[</span>
-         <span class="s2">&#34;date&#34;</span><span class="p">,</span>
-         <span class="s2">&#34;publishDate&#34;</span><span class="p">,</span>
-         <span class="s2">&#34;lastmod&#34;</span>
-      <span class="p">],</span>
-      <span class="nt">&#34;expiryDate&#34;</span><span class="p">:</span> <span class="p">[</span>
-         <span class="s2">&#34;expiryDate&#34;</span>
-      <span class="p">],</span>
-      <span class="nt">&#34;lastmod&#34;</span><span class="p">:</span> <span class="p">[</span>
-         <span class="s2">&#34;:git&#34;</span><span class="p">,</span>
-         <span class="s2">&#34;lastmod&#34;</span><span class="p">,</span>
-         <span class="s2">&#34;date&#34;</span><span class="p">,</span>
-         <span class="s2">&#34;publishDate&#34;</span>
-      <span class="p">],</span>
-      <span class="nt">&#34;publishDate&#34;</span><span class="p">:</span> <span class="p">[</span>
-         <span class="s2">&#34;publishDate&#34;</span><span class="p">,</span>
-         <span class="s2">&#34;date&#34;</span>
-      <span class="p">]</span>
-   <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;frontmatter&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;date&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;date&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;publishDate&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;lastmod&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">],</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;expiryDate&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;expiryDate&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">],</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;lastmod&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;:git&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;lastmod&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;date&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;publishDate&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">],</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;publishDate&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;publishDate&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;date&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">]</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
   </div>
@@ -1419,29 +1419,29 @@ hugo config | grep emoji
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">frontmatter</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">date</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- <span class="l">myDate</span><span class="w">
-</span><span class="w">  </span>- <span class="p">:</span><span class="l">default</span><span class="w">
-</span></code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">frontmatter</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">date</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">myDate</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="p">:</span><span class="l">default</span><span class="w">
+</span></span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">frontmatter</span><span class="p">]</span>
-  <span class="nx">date</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;myDate&#39;</span><span class="p">,</span> <span class="s1">&#39;:default&#39;</span><span class="p">]</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">frontmatter</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">date</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;myDate&#39;</span><span class="p">,</span> <span class="s1">&#39;:default&#39;</span><span class="p">]</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;frontmatter&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;date&#34;</span><span class="p">:</span> <span class="p">[</span>
-         <span class="s2">&#34;myDate&#34;</span><span class="p">,</span>
-         <span class="s2">&#34;:default&#34;</span>
-      <span class="p">]</span>
-   <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;frontmatter&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;date&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;myDate&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;:default&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">]</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
   </div>
@@ -1474,31 +1474,31 @@ hugo config | grep emoji
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">frontmatter</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">lastmod</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- <span class="l">lastmod</span><span class="w">
-</span><span class="w">  </span>- <span class="p">:</span><span class="l">fileModTime</span><span class="w">
-</span><span class="w">  </span>- <span class="p">:</span><span class="l">default</span><span class="w">
-</span></code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">frontmatter</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">lastmod</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">lastmod</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="p">:</span><span class="l">fileModTime</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="p">:</span><span class="l">default</span><span class="w">
+</span></span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">frontmatter</span><span class="p">]</span>
-  <span class="nx">lastmod</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;lastmod&#39;</span><span class="p">,</span> <span class="s1">&#39;:fileModTime&#39;</span><span class="p">,</span> <span class="s1">&#39;:default&#39;</span><span class="p">]</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">frontmatter</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">lastmod</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;lastmod&#39;</span><span class="p">,</span> <span class="s1">&#39;:fileModTime&#39;</span><span class="p">,</span> <span class="s1">&#39;:default&#39;</span><span class="p">]</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;frontmatter&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;lastmod&#34;</span><span class="p">:</span> <span class="p">[</span>
-         <span class="s2">&#34;lastmod&#34;</span><span class="p">,</span>
-         <span class="s2">&#34;:fileModTime&#34;</span><span class="p">,</span>
-         <span class="s2">&#34;:default&#34;</span>
-      <span class="p">]</span>
-   <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;frontmatter&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;lastmod&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;lastmod&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;:fileModTime&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;:default&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">]</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
   </div>
@@ -1529,29 +1529,29 @@ hugo config | grep emoji
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">frontmatter</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">date</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- <span class="p">:</span><span class="l">filename</span><span class="w">
-</span><span class="w">  </span>- <span class="p">:</span><span class="l">default</span><span class="w">
-</span></code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">frontmatter</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">date</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="p">:</span><span class="l">filename</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="p">:</span><span class="l">default</span><span class="w">
+</span></span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">frontmatter</span><span class="p">]</span>
-  <span class="nx">date</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;:filename&#39;</span><span class="p">,</span> <span class="s1">&#39;:default&#39;</span><span class="p">]</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">frontmatter</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">date</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;:filename&#39;</span><span class="p">,</span> <span class="s1">&#39;:default&#39;</span><span class="p">]</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;frontmatter&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;date&#34;</span><span class="p">:</span> <span class="p">[</span>
-         <span class="s2">&#34;:filename&#34;</span><span class="p">,</span>
-         <span class="s2">&#34;:default&#34;</span>
-      <span class="p">]</span>
-   <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;frontmatter&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;date&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;:filename&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;:default&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">]</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
   </div>
@@ -1591,115 +1591,118 @@ hugo config | grep emoji
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">minify</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">disableCSS</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span><span class="w">  </span><span class="nt">disableHTML</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span><span class="w">  </span><span class="nt">disableJS</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span><span class="w">  </span><span class="nt">disableJSON</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span><span class="w">  </span><span class="nt">disableSVG</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span><span class="w">  </span><span class="nt">disableXML</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span><span class="w">  </span><span class="nt">minifyOutput</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span><span class="w">  </span><span class="nt">tdewolff</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">css</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span><span class="nt">keepCSS2</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span><span class="w">      </span><span class="nt">precision</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
-</span><span class="w">    </span><span class="nt">html</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span><span class="nt">keepComments</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span><span class="w">      </span><span class="nt">keepConditionalComments</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span><span class="w">      </span><span class="nt">keepDefaultAttrVals</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span><span class="w">      </span><span class="nt">keepDocumentTags</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span><span class="w">      </span><span class="nt">keepEndTags</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span><span class="w">      </span><span class="nt">keepQuotes</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span><span class="w">      </span><span class="nt">keepWhitespace</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span><span class="w">    </span><span class="nt">js</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span><span class="nt">keepVarNames</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span><span class="w">      </span><span class="nt">precision</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
-</span><span class="w">    </span><span class="nt">json</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span><span class="nt">keepNumbers</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span><span class="w">      </span><span class="nt">precision</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
-</span><span class="w">    </span><span class="nt">svg</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span><span class="nt">precision</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
-</span><span class="w">    </span><span class="nt">xml</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span><span class="nt">keepWhitespace</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span></code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">minify</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">disableCSS</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">disableHTML</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">disableJS</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">disableJSON</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">disableSVG</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">disableXML</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">minifyOutput</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">tdewolff</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">css</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">keepCSS2</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">precision</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">html</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">keepComments</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">keepConditionalComments</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">keepDefaultAttrVals</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">keepDocumentTags</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">keepEndTags</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">keepQuotes</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">keepWhitespace</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">js</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">keepVarNames</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">noNullishOperator</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">precision</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">json</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">keepNumbers</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">precision</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">svg</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">precision</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">xml</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">keepWhitespace</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">minify</span><span class="p">]</span>
-  <span class="nx">disableCSS</span> <span class="p">=</span> <span class="kc">false</span>
-  <span class="nx">disableHTML</span> <span class="p">=</span> <span class="kc">false</span>
-  <span class="nx">disableJS</span> <span class="p">=</span> <span class="kc">false</span>
-  <span class="nx">disableJSON</span> <span class="p">=</span> <span class="kc">false</span>
-  <span class="nx">disableSVG</span> <span class="p">=</span> <span class="kc">false</span>
-  <span class="nx">disableXML</span> <span class="p">=</span> <span class="kc">false</span>
-  <span class="nx">minifyOutput</span> <span class="p">=</span> <span class="kc">false</span>
-  <span class="p">[</span><span class="nx">minify</span><span class="p">.</span><span class="nx">tdewolff</span><span class="p">]</span>
-    <span class="p">[</span><span class="nx">minify</span><span class="p">.</span><span class="nx">tdewolff</span><span class="p">.</span><span class="nx">css</span><span class="p">]</span>
-      <span class="nx">keepCSS2</span> <span class="p">=</span> <span class="kc">true</span>
-      <span class="nx">precision</span> <span class="p">=</span> <span class="mi">0</span>
-    <span class="p">[</span><span class="nx">minify</span><span class="p">.</span><span class="nx">tdewolff</span><span class="p">.</span><span class="nx">html</span><span class="p">]</span>
-      <span class="nx">keepComments</span> <span class="p">=</span> <span class="kc">false</span>
-      <span class="nx">keepConditionalComments</span> <span class="p">=</span> <span class="kc">true</span>
-      <span class="nx">keepDefaultAttrVals</span> <span class="p">=</span> <span class="kc">true</span>
-      <span class="nx">keepDocumentTags</span> <span class="p">=</span> <span class="kc">true</span>
-      <span class="nx">keepEndTags</span> <span class="p">=</span> <span class="kc">true</span>
-      <span class="nx">keepQuotes</span> <span class="p">=</span> <span class="kc">false</span>
-      <span class="nx">keepWhitespace</span> <span class="p">=</span> <span class="kc">true</span>
-    <span class="p">[</span><span class="nx">minify</span><span class="p">.</span><span class="nx">tdewolff</span><span class="p">.</span><span class="nx">js</span><span class="p">]</span>
-      <span class="nx">keepVarNames</span> <span class="p">=</span> <span class="kc">false</span>
-      <span class="nx">precision</span> <span class="p">=</span> <span class="mi">0</span>
-    <span class="p">[</span><span class="nx">minify</span><span class="p">.</span><span class="nx">tdewolff</span><span class="p">.</span><span class="nx">json</span><span class="p">]</span>
-      <span class="nx">keepNumbers</span> <span class="p">=</span> <span class="kc">false</span>
-      <span class="nx">precision</span> <span class="p">=</span> <span class="mi">0</span>
-    <span class="p">[</span><span class="nx">minify</span><span class="p">.</span><span class="nx">tdewolff</span><span class="p">.</span><span class="nx">svg</span><span class="p">]</span>
-      <span class="nx">precision</span> <span class="p">=</span> <span class="mi">0</span>
-    <span class="p">[</span><span class="nx">minify</span><span class="p">.</span><span class="nx">tdewolff</span><span class="p">.</span><span class="nx">xml</span><span class="p">]</span>
-      <span class="nx">keepWhitespace</span> <span class="p">=</span> <span class="kc">false</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">minify</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">disableCSS</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">disableHTML</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">disableJS</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">disableJSON</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">disableSVG</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">disableXML</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">minifyOutput</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">minify</span><span class="p">.</span><span class="nx">tdewolff</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">minify</span><span class="p">.</span><span class="nx">tdewolff</span><span class="p">.</span><span class="nx">css</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">keepCSS2</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">precision</span> <span class="p">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">minify</span><span class="p">.</span><span class="nx">tdewolff</span><span class="p">.</span><span class="nx">html</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">keepComments</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">keepConditionalComments</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">keepDefaultAttrVals</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">keepDocumentTags</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">keepEndTags</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">keepQuotes</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">keepWhitespace</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">minify</span><span class="p">.</span><span class="nx">tdewolff</span><span class="p">.</span><span class="nx">js</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">keepVarNames</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">noNullishOperator</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">precision</span> <span class="p">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">minify</span><span class="p">.</span><span class="nx">tdewolff</span><span class="p">.</span><span class="nx">json</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">keepNumbers</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">precision</span> <span class="p">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">minify</span><span class="p">.</span><span class="nx">tdewolff</span><span class="p">.</span><span class="nx">svg</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">precision</span> <span class="p">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">minify</span><span class="p">.</span><span class="nx">tdewolff</span><span class="p">.</span><span class="nx">xml</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">keepWhitespace</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;minify&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;disableCSS&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-      <span class="nt">&#34;disableHTML&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-      <span class="nt">&#34;disableJS&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-      <span class="nt">&#34;disableJSON&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-      <span class="nt">&#34;disableSVG&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-      <span class="nt">&#34;disableXML&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-      <span class="nt">&#34;minifyOutput&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-      <span class="nt">&#34;tdewolff&#34;</span><span class="p">:</span> <span class="p">{</span>
-         <span class="nt">&#34;css&#34;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&#34;keepCSS2&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="nt">&#34;precision&#34;</span><span class="p">:</span> <span class="mi">0</span>
-         <span class="p">},</span>
-         <span class="nt">&#34;html&#34;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&#34;keepComments&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-            <span class="nt">&#34;keepConditionalComments&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="nt">&#34;keepDefaultAttrVals&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="nt">&#34;keepDocumentTags&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="nt">&#34;keepEndTags&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="nt">&#34;keepQuotes&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-            <span class="nt">&#34;keepWhitespace&#34;</span><span class="p">:</span> <span class="kc">true</span>
-         <span class="p">},</span>
-         <span class="nt">&#34;js&#34;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&#34;keepVarNames&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-            <span class="nt">&#34;precision&#34;</span><span class="p">:</span> <span class="mi">0</span>
-         <span class="p">},</span>
-         <span class="nt">&#34;json&#34;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&#34;keepNumbers&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-            <span class="nt">&#34;precision&#34;</span><span class="p">:</span> <span class="mi">0</span>
-         <span class="p">},</span>
-         <span class="nt">&#34;svg&#34;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&#34;precision&#34;</span><span class="p">:</span> <span class="mi">0</span>
-         <span class="p">},</span>
-         <span class="nt">&#34;xml&#34;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&#34;keepWhitespace&#34;</span><span class="p">:</span> <span class="kc">false</span>
-         <span class="p">}</span>
-      <span class="p">}</span>
-   <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;minify&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;disableCSS&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;disableHTML&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;disableJS&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;disableJSON&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;disableSVG&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;disableXML&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;minifyOutput&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;tdewolff&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;css&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;keepCSS2&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;precision&#34;</span><span class="p">:</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">         <span class="p">},</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;html&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;keepComments&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;keepConditionalComments&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;keepDefaultAttrVals&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;keepDocumentTags&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;keepEndTags&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;keepQuotes&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;keepWhitespace&#34;</span><span class="p">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">         <span class="p">},</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;js&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;keepVarNames&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;noNullishOperator&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;precision&#34;</span><span class="p">:</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">         <span class="p">},</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;json&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;keepNumbers&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;precision&#34;</span><span class="p">:</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">         <span class="p">},</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;svg&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;precision&#34;</span><span class="p">:</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">         <span class="p">},</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;xml&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;keepWhitespace&#34;</span><span class="p">:</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">         <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
   </div>
@@ -1725,81 +1728,81 @@ hugo config | grep emoji
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">caches</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">assets</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">dir</span><span class="p">:</span><span class="w"> </span><span class="p">:</span><span class="l">resourceDir/_gen</span><span class="w">
-</span><span class="w">    </span><span class="nt">maxAge</span><span class="p">:</span><span class="w"> </span>-<span class="m">1</span><span class="w">
-</span><span class="w">  </span><span class="nt">getcsv</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">dir</span><span class="p">:</span><span class="w"> </span><span class="p">:</span><span class="l">cacheDir/:project</span><span class="w">
-</span><span class="w">    </span><span class="nt">maxAge</span><span class="p">:</span><span class="w"> </span>-<span class="m">1</span><span class="w">
-</span><span class="w">  </span><span class="nt">getjson</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">dir</span><span class="p">:</span><span class="w"> </span><span class="p">:</span><span class="l">cacheDir/:project</span><span class="w">
-</span><span class="w">    </span><span class="nt">maxAge</span><span class="p">:</span><span class="w"> </span>-<span class="m">1</span><span class="w">
-</span><span class="w">  </span><span class="nt">getresource</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">dir</span><span class="p">:</span><span class="w"> </span><span class="p">:</span><span class="l">cacheDir/:project</span><span class="w">
-</span><span class="w">    </span><span class="nt">maxAge</span><span class="p">:</span><span class="w"> </span>-<span class="m">1</span><span class="w">
-</span><span class="w">  </span><span class="nt">images</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">dir</span><span class="p">:</span><span class="w"> </span><span class="p">:</span><span class="l">resourceDir/_gen</span><span class="w">
-</span><span class="w">    </span><span class="nt">maxAge</span><span class="p">:</span><span class="w"> </span>-<span class="m">1</span><span class="w">
-</span><span class="w">  </span><span class="nt">modules</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">dir</span><span class="p">:</span><span class="w"> </span><span class="p">:</span><span class="l">cacheDir/modules</span><span class="w">
-</span><span class="w">    </span><span class="nt">maxAge</span><span class="p">:</span><span class="w"> </span>-<span class="m">1</span><span class="w">
-</span></code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">caches</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">assets</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">dir</span><span class="p">:</span><span class="w"> </span><span class="p">:</span><span class="l">resourceDir/_gen</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">maxAge</span><span class="p">:</span><span class="w"> </span>-<span class="m">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">getcsv</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">dir</span><span class="p">:</span><span class="w"> </span><span class="p">:</span><span class="l">cacheDir/:project</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">maxAge</span><span class="p">:</span><span class="w"> </span>-<span class="m">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">getjson</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">dir</span><span class="p">:</span><span class="w"> </span><span class="p">:</span><span class="l">cacheDir/:project</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">maxAge</span><span class="p">:</span><span class="w"> </span>-<span class="m">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">getresource</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">dir</span><span class="p">:</span><span class="w"> </span><span class="p">:</span><span class="l">cacheDir/:project</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">maxAge</span><span class="p">:</span><span class="w"> </span>-<span class="m">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">images</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">dir</span><span class="p">:</span><span class="w"> </span><span class="p">:</span><span class="l">resourceDir/_gen</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">maxAge</span><span class="p">:</span><span class="w"> </span>-<span class="m">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">modules</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">dir</span><span class="p">:</span><span class="w"> </span><span class="p">:</span><span class="l">cacheDir/modules</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">maxAge</span><span class="p">:</span><span class="w"> </span>-<span class="m">1</span><span class="w">
+</span></span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">caches</span><span class="p">]</span>
-  <span class="p">[</span><span class="nx">caches</span><span class="p">.</span><span class="nx">assets</span><span class="p">]</span>
-    <span class="nx">dir</span> <span class="p">=</span> <span class="s1">&#39;:resourceDir/_gen&#39;</span>
-    <span class="nx">maxAge</span> <span class="p">=</span> <span class="mi">-1</span>
-  <span class="p">[</span><span class="nx">caches</span><span class="p">.</span><span class="nx">getcsv</span><span class="p">]</span>
-    <span class="nx">dir</span> <span class="p">=</span> <span class="s1">&#39;:cacheDir/:project&#39;</span>
-    <span class="nx">maxAge</span> <span class="p">=</span> <span class="mi">-1</span>
-  <span class="p">[</span><span class="nx">caches</span><span class="p">.</span><span class="nx">getjson</span><span class="p">]</span>
-    <span class="nx">dir</span> <span class="p">=</span> <span class="s1">&#39;:cacheDir/:project&#39;</span>
-    <span class="nx">maxAge</span> <span class="p">=</span> <span class="mi">-1</span>
-  <span class="p">[</span><span class="nx">caches</span><span class="p">.</span><span class="nx">getresource</span><span class="p">]</span>
-    <span class="nx">dir</span> <span class="p">=</span> <span class="s1">&#39;:cacheDir/:project&#39;</span>
-    <span class="nx">maxAge</span> <span class="p">=</span> <span class="mi">-1</span>
-  <span class="p">[</span><span class="nx">caches</span><span class="p">.</span><span class="nx">images</span><span class="p">]</span>
-    <span class="nx">dir</span> <span class="p">=</span> <span class="s1">&#39;:resourceDir/_gen&#39;</span>
-    <span class="nx">maxAge</span> <span class="p">=</span> <span class="mi">-1</span>
-  <span class="p">[</span><span class="nx">caches</span><span class="p">.</span><span class="nx">modules</span><span class="p">]</span>
-    <span class="nx">dir</span> <span class="p">=</span> <span class="s1">&#39;:cacheDir/modules&#39;</span>
-    <span class="nx">maxAge</span> <span class="p">=</span> <span class="mi">-1</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">caches</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">caches</span><span class="p">.</span><span class="nx">assets</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">dir</span> <span class="p">=</span> <span class="s1">&#39;:resourceDir/_gen&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">maxAge</span> <span class="p">=</span> <span class="mi">-1</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">caches</span><span class="p">.</span><span class="nx">getcsv</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">dir</span> <span class="p">=</span> <span class="s1">&#39;:cacheDir/:project&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">maxAge</span> <span class="p">=</span> <span class="mi">-1</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">caches</span><span class="p">.</span><span class="nx">getjson</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">dir</span> <span class="p">=</span> <span class="s1">&#39;:cacheDir/:project&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">maxAge</span> <span class="p">=</span> <span class="mi">-1</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">caches</span><span class="p">.</span><span class="nx">getresource</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">dir</span> <span class="p">=</span> <span class="s1">&#39;:cacheDir/:project&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">maxAge</span> <span class="p">=</span> <span class="mi">-1</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">caches</span><span class="p">.</span><span class="nx">images</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">dir</span> <span class="p">=</span> <span class="s1">&#39;:resourceDir/_gen&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">maxAge</span> <span class="p">=</span> <span class="mi">-1</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">caches</span><span class="p">.</span><span class="nx">modules</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">dir</span> <span class="p">=</span> <span class="s1">&#39;:cacheDir/modules&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">maxAge</span> <span class="p">=</span> <span class="mi">-1</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;caches&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;assets&#34;</span><span class="p">:</span> <span class="p">{</span>
-         <span class="nt">&#34;dir&#34;</span><span class="p">:</span> <span class="s2">&#34;:resourceDir/_gen&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;maxAge&#34;</span><span class="p">:</span> <span class="mi">-1</span>
-      <span class="p">},</span>
-      <span class="nt">&#34;getcsv&#34;</span><span class="p">:</span> <span class="p">{</span>
-         <span class="nt">&#34;dir&#34;</span><span class="p">:</span> <span class="s2">&#34;:cacheDir/:project&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;maxAge&#34;</span><span class="p">:</span> <span class="mi">-1</span>
-      <span class="p">},</span>
-      <span class="nt">&#34;getjson&#34;</span><span class="p">:</span> <span class="p">{</span>
-         <span class="nt">&#34;dir&#34;</span><span class="p">:</span> <span class="s2">&#34;:cacheDir/:project&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;maxAge&#34;</span><span class="p">:</span> <span class="mi">-1</span>
-      <span class="p">},</span>
-      <span class="nt">&#34;getresource&#34;</span><span class="p">:</span> <span class="p">{</span>
-         <span class="nt">&#34;dir&#34;</span><span class="p">:</span> <span class="s2">&#34;:cacheDir/:project&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;maxAge&#34;</span><span class="p">:</span> <span class="mi">-1</span>
-      <span class="p">},</span>
-      <span class="nt">&#34;images&#34;</span><span class="p">:</span> <span class="p">{</span>
-         <span class="nt">&#34;dir&#34;</span><span class="p">:</span> <span class="s2">&#34;:resourceDir/_gen&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;maxAge&#34;</span><span class="p">:</span> <span class="mi">-1</span>
-      <span class="p">},</span>
-      <span class="nt">&#34;modules&#34;</span><span class="p">:</span> <span class="p">{</span>
-         <span class="nt">&#34;dir&#34;</span><span class="p">:</span> <span class="s2">&#34;:cacheDir/modules&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;maxAge&#34;</span><span class="p">:</span> <span class="mi">-1</span>
-      <span class="p">}</span>
-   <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;caches&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;assets&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;dir&#34;</span><span class="p">:</span> <span class="s2">&#34;:resourceDir/_gen&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;maxAge&#34;</span><span class="p">:</span> <span class="mi">-1</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;getcsv&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;dir&#34;</span><span class="p">:</span> <span class="s2">&#34;:cacheDir/:project&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;maxAge&#34;</span><span class="p">:</span> <span class="mi">-1</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;getjson&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;dir&#34;</span><span class="p">:</span> <span class="s2">&#34;:cacheDir/:project&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;maxAge&#34;</span><span class="p">:</span> <span class="mi">-1</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;getresource&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;dir&#34;</span><span class="p">:</span> <span class="s2">&#34;:cacheDir/:project&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;maxAge&#34;</span><span class="p">:</span> <span class="mi">-1</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;images&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;dir&#34;</span><span class="p">:</span> <span class="s2">&#34;:resourceDir/_gen&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;maxAge&#34;</span><span class="p">:</span> <span class="mi">-1</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;modules&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;dir&#34;</span><span class="p">:</span> <span class="s2">&#34;:cacheDir/modules&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;maxAge&#34;</span><span class="p">:</span> <span class="mi">-1</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
   </div>
@@ -1980,6 +1983,11 @@ hugo config | grep emoji
           <li class="f6 fw4">
             <a href="/content-management/formats/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Content Formats
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/content-management/diagrams/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Diagrams
             </a>
           </li>
           <li class="f6 fw4">
@@ -2921,11 +2929,6 @@ hugo config | grep emoji
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/variables/hugo/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hugo Variables
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/variables/git/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Git Variables
             </a>
@@ -3176,7 +3179,7 @@ hugo config | grep emoji
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: February 12, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b162c296b7f2066827adadc6ebff61028366790d">Merge pull request #102 from blackb1rd/hugo/v0.92.2 (b162c29)</a>
+  Last updated: March 6, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/bc2bc7c8dd3645fdf6a0da2ecb9bb182571b08b3">Merge pull request #103 from blackb1rd/hugo/v0.93.2 (bc2bc7c)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/getting-started/configuration.md" class="
@@ -3424,6 +3427,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 </footer>
+
+
+  
 
 
 </body>

@@ -43,6 +43,15 @@ hugo gen chromastyles --style=monokai &amp;gt; syntax.css Run hugo gen chromasty
     </item>
     
     <item>
+      <title>Diagrams</title>
+      <link>https://gohugo.io/content-management/diagrams/</link>
+      <pubDate>Sun, 20 Feb 2022 00:00:00 +0100</pubDate>
+      
+      <guid>https://gohugo.io/content-management/diagrams/</guid>
+      <description>Mermaid Diagrams  sequenceDiagram participant Alice participant Bob Alice-John: Hello John, how are you? loop Healthcheck John-John: Fight against hypochondria end Note right of John: Rational thoughts prevail! John--Alice: Great! John-Bob: How about you? Bob--John: Jolly good!  Goat Ascii Diagram Examples  Graphics                                                                     1 5 0 4 2 6 3 7 + z + y + x v 1 v P 0 X v 3 E y v e 2 R e f r a c t i o n R e f l e c t i o n    Complex                                                                                                                                                                                                                                            &amp;amp; A M S i o i q f b B x u j o e a ( - x d r a &amp;gt; e f R &amp;gt; c o C n u o b ( n r ) ) d n e e J d r o s i n N o R D t o i u a a n g d d l o i t n e D i a g o n a l s C V u e r r v t e i d c a l n o t A N C : o u l d r r i A a / I v n s i n e e h s t d - e - t r l B i h i i s i o n &#39; s r e q n .</description>
+    </item>
+    
+    <item>
       <title>Related Content</title>
       <link>https://gohugo.io/content-management/related/</link>
       <pubDate>Tue, 05 Sep 2017 00:00:00 +0200</pubDate>
@@ -103,7 +112,7 @@ If a user needs to define a section foo at a deeper level, they need to create a
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/content-management/types/</guid>
-      <description>A content type is a way to organize your content. Hugo resolves the content type from either the type in front matter or, if not set, the first directory in the file path. E.g. content/blog/my-first-event.md will be of type blog if no type set.
+      <description>A content type is a way to organize your content. Hugo resolves the content type from either the type in front matter or, if not set, the first directory in the file path. E.g. content/blog/my-first-event.md will be of type blog if no type is set.
 A content type is used to
  Determine how the content is rendered. See Template Lookup Order and Content Views for more. Determine which archetype template to use for new content.</description>
     </item>
@@ -232,7 +241,7 @@ In this example, first-post is a page bundle with access to 10 page resources in
       <description>The Image Page Resource  The image is a Page Resource, and the processing methods listed below do not work on images inside your /static folder.
 To print all images paths in a Page Bundle:
 {{with.Resources.ByType&amp;#34;image&amp;#34;}} {{range.}} {{.RelPermalink}} {{end}} {{end}} The Image Resource  The image resource can also be retrieved from a global resource
-{{-$image:=resources.Get&amp;#34;images/logo.jpg&amp;#34;-}} Image Processing Methods  The image resource implements the Resize, Fit, Fill, and Filter methods, each returning a transformed image using the specified dimensions and processing options.</description>
+{{-$image:=resources.Get&amp;#34;images/logo.jpg&amp;#34;-}} Image Processing Methods  The image resource implements the Resize, Fit, Fill, Crop, and Filter methods, each returning a transformed image using the specified dimensions and processing options.</description>
     </item>
     
     <item>

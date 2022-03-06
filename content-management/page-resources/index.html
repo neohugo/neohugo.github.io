@@ -13,7 +13,7 @@
   <title>Page Resources | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.15-DEV" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,10 +62,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/content-management/page-resources/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_12877339477763567377.png"/><meta property="article:section" content="content-management" />
 <meta property="article:published_time" content="2018-01-24T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-02-12T14:25:46+07:00" />
+<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="name" content="Page Resources">
 <meta itemprop="description" content="Page resources -- images, other pages, documents, etc. -- have page-relative URLs and their own metadata."><meta itemprop="datePublished" content="2018-01-24T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-02-12T14:25:46+07:00" />
+<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="wordCount" content="949"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_12877339477763567377.png"/>
@@ -263,24 +263,24 @@
 <code>_index.md</code> files at their root. Page resources are only available to the
 page with which they are bundled.</p>
 <p>In this example, <code>first-post</code> is a page bundle with access to 10 page resources including audio, data, documents, images, and video. Although <code>second-post</code> is also a page bundle, it has no page resources and is unable to directly access the page resources associated with <code>first-post</code>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">content
-└── post
-    ├── first-post
-    │   ├── images
-    │   │   ├── a.jpg
-    │   │   ├── b.jpg
-    │   │   └── c.jpg
-    │   ├── index.md (root of page bundle)
-    │   ├── latest.html
-    │   ├── manual.json
-    │   ├── notice.md
-    │   ├── office.mp3
-    │   ├── pocket.mp4
-    │   ├── rating.pdf
-    │   └── safety.txt
-    └── second-post
-        └── index.md (root of page bundle)
-</code></pre></div><h2 id="properties">Properties <a class="header-link" href="#properties"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">content
+</span></span><span class="line"><span class="cl">└── post
+</span></span><span class="line"><span class="cl">    ├── first-post
+</span></span><span class="line"><span class="cl">    │   ├── images
+</span></span><span class="line"><span class="cl">    │   │   ├── a.jpg
+</span></span><span class="line"><span class="cl">    │   │   ├── b.jpg
+</span></span><span class="line"><span class="cl">    │   │   └── c.jpg
+</span></span><span class="line"><span class="cl">    │   ├── index.md (root of page bundle)
+</span></span><span class="line"><span class="cl">    │   ├── latest.html
+</span></span><span class="line"><span class="cl">    │   ├── manual.json
+</span></span><span class="line"><span class="cl">    │   ├── notice.md
+</span></span><span class="line"><span class="cl">    │   ├── office.mp3
+</span></span><span class="line"><span class="cl">    │   ├── pocket.mp4
+</span></span><span class="line"><span class="cl">    │   ├── rating.pdf
+</span></span><span class="line"><span class="cl">    │   └── safety.txt
+</span></span><span class="line"><span class="cl">    └── second-post
+</span></span><span class="line"><span class="cl">        └── index.md (root of page bundle)
+</span></span></code></pre></div><h2 id="properties">Properties <a class="header-link" href="#properties"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <dl>
 <dt>ResourceType</dt>
 <dd>The main type of the resource&rsquo;s <a href="/templates/output-formats/#media-types">Media Type</a>. For example, a file of MIME type <code>image/jpeg</code> has the ResourceType <code>image</code>. A <code>Page</code> will have <code>ResourceType</code> with value <code>page</code>.</dd>
@@ -304,18 +304,18 @@ page with which they are bundled.</p>
 <dd>The content of the resource itself. For most resources, this returns a string
 with the contents of the file. Use this to create inline resources.</dd>
 </dl>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.Resources.GetMatch</span><span class="w"> </span><span class="s">&#34;script.js&#34;</span><span class="w"> </span><span class="cp">}}</span>
-  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Content</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">safeJS</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-
-<span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.Resources.GetMatch</span><span class="w"> </span><span class="s">&#34;style.css&#34;</span><span class="w"> </span><span class="cp">}}</span>
-  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Content</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">safeCSS</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-
-<span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.Resources.GetMatch</span><span class="w"> </span><span class="s">&#34;img.png&#34;</span><span class="w"> </span><span class="cp">}}</span>
-  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;data:</span><span class="cp">{{</span><span class="w"> </span><span class="na">.MediaType</span><span class="w"> </span><span class="cp">}}</span><span class="s">;base64,</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Content</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">base64Encode</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-</code></pre></div><dl>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.Resources.GetMatch</span><span class="w"> </span><span class="s">&#34;script.js&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Content</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">safeJS</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.Resources.GetMatch</span><span class="w"> </span><span class="s">&#34;style.css&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Content</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">safeCSS</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.Resources.GetMatch</span><span class="w"> </span><span class="s">&#34;img.png&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;data:</span><span class="cp">{{</span><span class="w"> </span><span class="na">.MediaType</span><span class="w"> </span><span class="cp">}}</span><span class="s">;base64,</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Content</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">base64Encode</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><dl>
 <dt>MediaType</dt>
 <dd>The MIME type of the resource, such as <code>image/jpeg</code>.</dd>
 <dt>MediaType.MainType</dt>
@@ -330,28 +330,27 @@ with the contents of the file. Use this to create inline resources.</dd>
 <dt>ByType</dt>
 <dd>Returns the page resources of the given type.</dd>
 </dl>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="p">{{</span> <span class="p">.</span><span class="nx">Resources</span><span class="p">.</span><span class="nx">ByType</span> <span class="s">&#34;image&#34;</span> <span class="p">}}</span>
-</code></pre></div><dl>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span> <span class="p">.</span><span class="nx">Resources</span><span class="p">.</span><span class="nx">ByType</span> <span class="s">&#34;image&#34;</span> <span class="p">}}</span>
+</span></span></code></pre></div><dl>
 <dt>Match</dt>
 <dd>Returns all the page resources (as a slice) whose <code>Name</code> matches the given Glob pattern (<a href="https://github.com/gobwas/glob/blob/master/readme.md">examples</a>). The matching is case-insensitive.</dd>
 </dl>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="p">{{</span> <span class="p">.</span><span class="nx">Resources</span><span class="p">.</span><span class="nx">Match</span> <span class="s">&#34;images/*&#34;</span> <span class="p">}}</span>
-</code></pre></div><dl>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span> <span class="p">.</span><span class="nx">Resources</span><span class="p">.</span><span class="nx">Match</span> <span class="s">&#34;images/*&#34;</span> <span class="p">}}</span>
+</span></span></code></pre></div><dl>
 <dt>GetMatch</dt>
 <dd>Same as <code>Match</code> but will return the first match.</dd>
 </dl>
 <h3 id="pattern-matching">Pattern Matching <a class="header-link" href="#pattern-matching"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Using Match/GetMatch to find this images/sunset.jpg ?
-</span><span class="c1"></span><span class="p">.</span><span class="nx">Resources</span><span class="p">.</span><span class="nx">Match</span> <span class="s">&#34;images/sun*&#34;</span> <span class="err">✅</span>
-<span class="p">.</span><span class="nx">Resources</span><span class="p">.</span><span class="nx">Match</span> <span class="s">&#34;**/sunset.jpg&#34;</span> <span class="err">✅</span>
-<span class="p">.</span><span class="nx">Resources</span><span class="p">.</span><span class="nx">Match</span> <span class="s">&#34;images/*.jpg&#34;</span> <span class="err">✅</span>
-<span class="p">.</span><span class="nx">Resources</span><span class="p">.</span><span class="nx">Match</span> <span class="s">&#34;**.jpg&#34;</span> <span class="err">✅</span>
-<span class="p">.</span><span class="nx">Resources</span><span class="p">.</span><span class="nx">Match</span> <span class="s">&#34;*&#34;</span> <span class="err">🚫</span>
-<span class="p">.</span><span class="nx">Resources</span><span class="p">.</span><span class="nx">Match</span> <span class="s">&#34;sunset.jpg&#34;</span> <span class="err">🚫</span>
-<span class="p">.</span><span class="nx">Resources</span><span class="p">.</span><span class="nx">Match</span> <span class="s">&#34;*sunset.jpg&#34;</span> <span class="err">🚫</span>
-
-</code></pre></div><h2 id="page-resources-metadata">Page Resources Metadata <a class="header-link" href="#page-resources-metadata"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>The page resources' metadata is managed from the corresponding page&rsquo;s front matter with an array/table parameter named <code>resources</code>. You can batch assign values using <a href="https://tldp.org/LDP/GNU-Linux-Tools-Summary/html/x11655.htm">wildcards</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// Using Match/GetMatch to find this images/sunset.jpg ?
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">.</span><span class="nx">Resources</span><span class="p">.</span><span class="nx">Match</span> <span class="s">&#34;images/sun*&#34;</span> <span class="err">✅</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nx">Resources</span><span class="p">.</span><span class="nx">Match</span> <span class="s">&#34;**/sunset.jpg&#34;</span> <span class="err">✅</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nx">Resources</span><span class="p">.</span><span class="nx">Match</span> <span class="s">&#34;images/*.jpg&#34;</span> <span class="err">✅</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nx">Resources</span><span class="p">.</span><span class="nx">Match</span> <span class="s">&#34;**.jpg&#34;</span> <span class="err">✅</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nx">Resources</span><span class="p">.</span><span class="nx">Match</span> <span class="s">&#34;*&#34;</span> <span class="err">🚫</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nx">Resources</span><span class="p">.</span><span class="nx">Match</span> <span class="s">&#34;sunset.jpg&#34;</span> <span class="err">🚫</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nx">Resources</span><span class="p">.</span><span class="nx">Match</span> <span class="s">&#34;*sunset.jpg&#34;</span> <span class="err">🚫</span>
+</span></span></code></pre></div><h2 id="page-resources-metadata">Page Resources Metadata <a class="header-link" href="#page-resources-metadata"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<p>The page resources&rsquo; metadata is managed from the corresponding page&rsquo;s front matter with an array/table parameter named <code>resources</code>. You can batch assign values using <a href="https://tldp.org/LDP/GNU-Linux-Tools-Summary/html/x11655.htm">wildcards</a>.</p>
 
 <aside class="admonition note">
 	<div class="note-icon">
@@ -403,105 +402,105 @@ with the contents of the file. Use this to create inline resources.</dd>
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;2018-01-25&#34;</span><span class="w">
-</span><span class="w"></span><span class="nt">resources</span><span class="p">:</span><span class="w">
-</span><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">header</span><span class="w">
-</span><span class="w">  </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l">images/sunset.jpg</span><span class="w">
-</span><span class="w"></span>- <span class="nt">params</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l">photo</span><span class="w">
-</span><span class="w">  </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l">documents/photo_specs.pdf</span><span class="w">
-</span><span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">Photo Specifications</span><span class="w">
-</span><span class="w"></span>- <span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l">documents/guide.pdf</span><span class="w">
-</span><span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">Instruction Guide</span><span class="w">
-</span><span class="w"></span>- <span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l">documents/checklist.pdf</span><span class="w">
-</span><span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">Document Checklist</span><span class="w">
-</span><span class="w"></span>- <span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l">documents/payment.docx</span><span class="w">
-</span><span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">Proof of Payment</span><span class="w">
-</span><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">pdf-file-:counter</span><span class="w">
-</span><span class="w">  </span><span class="nt">params</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l">pdf</span><span class="w">
-</span><span class="w">  </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;**.pdf&#39;</span><span class="w">
-</span><span class="w"></span>- <span class="nt">params</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l">word</span><span class="w">
-</span><span class="w">  </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;**.docx&#39;</span><span class="w">
-</span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">Application</span><span class="w">
-</span></code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;2018-01-25&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">resources</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">header</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l">images/sunset.jpg</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">params</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l">photo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l">documents/photo_specs.pdf</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">Photo Specifications</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l">documents/guide.pdf</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">Instruction Guide</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l">documents/checklist.pdf</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">Document Checklist</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l">documents/payment.docx</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">Proof of Payment</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">pdf-file-:counter</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">params</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l">pdf</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;**.pdf&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">params</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l">word</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;**.docx&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">Application</span><span class="w">
+</span></span></span></code></pre></div>
       </div>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">date</span> <span class="p">=</span> <span class="s1">&#39;2018-01-25&#39;</span>
-<span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;Application&#39;</span>
-<span class="p">[[</span><span class="nx">resources</span><span class="p">]]</span>
-<span class="nx">name</span> <span class="p">=</span> <span class="s1">&#39;header&#39;</span>
-<span class="nx">src</span> <span class="p">=</span> <span class="s1">&#39;images/sunset.jpg&#39;</span>
-<span class="p">[[</span><span class="nx">resources</span><span class="p">]]</span>
-<span class="nx">src</span> <span class="p">=</span> <span class="s1">&#39;documents/photo_specs.pdf&#39;</span>
-<span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;Photo Specifications&#39;</span>
-<span class="p">[</span><span class="nx">resources</span><span class="p">.</span><span class="nx">params</span><span class="p">]</span>
-  <span class="nx">icon</span> <span class="p">=</span> <span class="s1">&#39;photo&#39;</span>
-<span class="p">[[</span><span class="nx">resources</span><span class="p">]]</span>
-<span class="nx">src</span> <span class="p">=</span> <span class="s1">&#39;documents/guide.pdf&#39;</span>
-<span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;Instruction Guide&#39;</span>
-<span class="p">[[</span><span class="nx">resources</span><span class="p">]]</span>
-<span class="nx">src</span> <span class="p">=</span> <span class="s1">&#39;documents/checklist.pdf&#39;</span>
-<span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;Document Checklist&#39;</span>
-<span class="p">[[</span><span class="nx">resources</span><span class="p">]]</span>
-<span class="nx">src</span> <span class="p">=</span> <span class="s1">&#39;documents/payment.docx&#39;</span>
-<span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;Proof of Payment&#39;</span>
-<span class="p">[[</span><span class="nx">resources</span><span class="p">]]</span>
-<span class="nx">name</span> <span class="p">=</span> <span class="s1">&#39;pdf-file-:counter&#39;</span>
-<span class="nx">src</span> <span class="p">=</span> <span class="s1">&#39;**.pdf&#39;</span>
-<span class="p">[</span><span class="nx">resources</span><span class="p">.</span><span class="nx">params</span><span class="p">]</span>
-  <span class="nx">icon</span> <span class="p">=</span> <span class="s1">&#39;pdf&#39;</span>
-<span class="p">[[</span><span class="nx">resources</span><span class="p">]]</span>
-<span class="nx">src</span> <span class="p">=</span> <span class="s1">&#39;**.docx&#39;</span>
-<span class="p">[</span><span class="nx">resources</span><span class="p">.</span><span class="nx">params</span><span class="p">]</span>
-  <span class="nx">icon</span> <span class="p">=</span> <span class="s1">&#39;word&#39;</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">date</span> <span class="p">=</span> <span class="s1">&#39;2018-01-25&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;Application&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">resources</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s1">&#39;header&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">src</span> <span class="p">=</span> <span class="s1">&#39;images/sunset.jpg&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">resources</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">src</span> <span class="p">=</span> <span class="s1">&#39;documents/photo_specs.pdf&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;Photo Specifications&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">resources</span><span class="p">.</span><span class="nx">params</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">icon</span> <span class="p">=</span> <span class="s1">&#39;photo&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">resources</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">src</span> <span class="p">=</span> <span class="s1">&#39;documents/guide.pdf&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;Instruction Guide&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">resources</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">src</span> <span class="p">=</span> <span class="s1">&#39;documents/checklist.pdf&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;Document Checklist&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">resources</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">src</span> <span class="p">=</span> <span class="s1">&#39;documents/payment.docx&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;Proof of Payment&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">resources</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s1">&#39;pdf-file-:counter&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">src</span> <span class="p">=</span> <span class="s1">&#39;**.pdf&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">resources</span><span class="p">.</span><span class="nx">params</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">icon</span> <span class="p">=</span> <span class="s1">&#39;pdf&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">resources</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">src</span> <span class="p">=</span> <span class="s1">&#39;**.docx&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">resources</span><span class="p">.</span><span class="nx">params</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">icon</span> <span class="p">=</span> <span class="s1">&#39;word&#39;</span>
+</span></span></code></pre></div>
       </div>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;date&#34;</span><span class="p">:</span> <span class="s2">&#34;2018-01-25&#34;</span><span class="p">,</span>
-   <span class="nt">&#34;resources&#34;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-         <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;header&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;src&#34;</span><span class="p">:</span> <span class="s2">&#34;images/sunset.jpg&#34;</span>
-      <span class="p">},</span>
-      <span class="p">{</span>
-         <span class="nt">&#34;params&#34;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&#34;icon&#34;</span><span class="p">:</span> <span class="s2">&#34;photo&#34;</span>
-         <span class="p">},</span>
-         <span class="nt">&#34;src&#34;</span><span class="p">:</span> <span class="s2">&#34;documents/photo_specs.pdf&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;Photo Specifications&#34;</span>
-      <span class="p">},</span>
-      <span class="p">{</span>
-         <span class="nt">&#34;src&#34;</span><span class="p">:</span> <span class="s2">&#34;documents/guide.pdf&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;Instruction Guide&#34;</span>
-      <span class="p">},</span>
-      <span class="p">{</span>
-         <span class="nt">&#34;src&#34;</span><span class="p">:</span> <span class="s2">&#34;documents/checklist.pdf&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;Document Checklist&#34;</span>
-      <span class="p">},</span>
-      <span class="p">{</span>
-         <span class="nt">&#34;src&#34;</span><span class="p">:</span> <span class="s2">&#34;documents/payment.docx&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;Proof of Payment&#34;</span>
-      <span class="p">},</span>
-      <span class="p">{</span>
-         <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;pdf-file-:counter&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;params&#34;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&#34;icon&#34;</span><span class="p">:</span> <span class="s2">&#34;pdf&#34;</span>
-         <span class="p">},</span>
-         <span class="nt">&#34;src&#34;</span><span class="p">:</span> <span class="s2">&#34;**.pdf&#34;</span>
-      <span class="p">},</span>
-      <span class="p">{</span>
-         <span class="nt">&#34;params&#34;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&#34;icon&#34;</span><span class="p">:</span> <span class="s2">&#34;word&#34;</span>
-         <span class="p">},</span>
-         <span class="nt">&#34;src&#34;</span><span class="p">:</span> <span class="s2">&#34;**.docx&#34;</span>
-      <span class="p">}</span>
-   <span class="p">],</span>
-   <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;Application&#34;</span>
-<span class="p">}</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;date&#34;</span><span class="p">:</span> <span class="s2">&#34;2018-01-25&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;resources&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;header&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;src&#34;</span><span class="p">:</span> <span class="s2">&#34;images/sunset.jpg&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;params&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;icon&#34;</span><span class="p">:</span> <span class="s2">&#34;photo&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="p">},</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;src&#34;</span><span class="p">:</span> <span class="s2">&#34;documents/photo_specs.pdf&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;Photo Specifications&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;src&#34;</span><span class="p">:</span> <span class="s2">&#34;documents/guide.pdf&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;Instruction Guide&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;src&#34;</span><span class="p">:</span> <span class="s2">&#34;documents/checklist.pdf&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;Document Checklist&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;src&#34;</span><span class="p">:</span> <span class="s2">&#34;documents/payment.docx&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;Proof of Payment&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;pdf-file-:counter&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;params&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;icon&#34;</span><span class="p">:</span> <span class="s2">&#34;pdf&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="p">},</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;src&#34;</span><span class="p">:</span> <span class="s2">&#34;**.pdf&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;params&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;icon&#34;</span><span class="p">:</span> <span class="s2">&#34;word&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="p">},</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;src&#34;</span><span class="p">:</span> <span class="s2">&#34;**.docx&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">   <span class="p">],</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;Application&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
       </div>
   </div>
 </div>
@@ -548,36 +547,36 @@ with the contents of the file. Use this to create inline resources.</dd>
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">resources</span><span class="p">:</span><span class="w">
-</span><span class="w"></span>- <span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;*specs.pdf&#39;</span><span class="w">
-</span><span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;Specification #:counter&#39;</span><span class="w">
-</span><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">pdf-file-:counter</span><span class="w">
-</span><span class="w">  </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;**.pdf&#39;</span><span class="w">
-</span></code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">resources</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;*specs.pdf&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;Specification #:counter&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">pdf-file-:counter</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;**.pdf&#39;</span><span class="w">
+</span></span></span></code></pre></div>
       </div>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[[</span><span class="nx">resources</span><span class="p">]]</span>
-<span class="nx">src</span> <span class="p">=</span> <span class="s1">&#39;*specs.pdf&#39;</span>
-<span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;Specification #:counter&#39;</span>
-<span class="p">[[</span><span class="nx">resources</span><span class="p">]]</span>
-<span class="nx">name</span> <span class="p">=</span> <span class="s1">&#39;pdf-file-:counter&#39;</span>
-<span class="nx">src</span> <span class="p">=</span> <span class="s1">&#39;**.pdf&#39;</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">resources</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">src</span> <span class="p">=</span> <span class="s1">&#39;*specs.pdf&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;Specification #:counter&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">resources</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s1">&#39;pdf-file-:counter&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">src</span> <span class="p">=</span> <span class="s1">&#39;**.pdf&#39;</span>
+</span></span></code></pre></div>
       </div>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;resources&#34;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-         <span class="nt">&#34;src&#34;</span><span class="p">:</span> <span class="s2">&#34;*specs.pdf&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;Specification #:counter&#34;</span>
-      <span class="p">},</span>
-      <span class="p">{</span>
-         <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;pdf-file-:counter&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;src&#34;</span><span class="p">:</span> <span class="s2">&#34;**.pdf&#34;</span>
-      <span class="p">}</span>
-   <span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;resources&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;src&#34;</span><span class="p">:</span> <span class="s2">&#34;*specs.pdf&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;Specification #:counter&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;pdf-file-:counter&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;src&#34;</span><span class="p">:</span> <span class="s2">&#34;**.pdf&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">   <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
       </div>
   </div>
 </div>
@@ -771,6 +770,11 @@ with the contents of the file. Use this to create inline resources.</dd>
           <li class="f6 fw4">
             <a href="/content-management/formats/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Content Formats
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/content-management/diagrams/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Diagrams
             </a>
           </li>
           <li class="f6 fw4">
@@ -1712,11 +1716,6 @@ with the contents of the file. Use this to create inline resources.</dd>
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/variables/hugo/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hugo Variables
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/variables/git/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Git Variables
             </a>
@@ -1967,7 +1966,7 @@ with the contents of the file. Use this to create inline resources.</dd>
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: February 12, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b162c296b7f2066827adadc6ebff61028366790d">Merge pull request #102 from blackb1rd/hugo/v0.92.2 (b162c29)</a>
+  Last updated: March 6, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/bc2bc7c8dd3645fdf6a0da2ecb9bb182571b08b3">Merge pull request #103 from blackb1rd/hugo/v0.93.2 (bc2bc7c)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/content-management/page-resources.md" class="
@@ -2215,6 +2214,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 </footer>
+
+
+  
 
 
 </body>

@@ -394,7 +394,7 @@ title =&amp;#34;Blog&amp;#34; [[cascade]] background = &amp;#34;yosemite.jpg&amp
       <guid>https://gohugo.io/news/0.74.2-relnotes/</guid>
       <description>Add .Defines to js.Build options 35011bcb @bep #7489
 This is needed to import react as a library, e.g.:
-{{ $jsx := resources.Get &amp;quot;index.jsx&amp;quot; }} {{ $options := dict &amp;quot;defines&amp;quot; (dict &amp;quot;process.env.NODE_ENV&amp;quot; &amp;quot;\&amp;quot;development\&amp;quot;&amp;quot;) }} {{ $js := $jsx | js.Build $options }} </description>
+{{ $jsx := resources.Get &amp;#34;index.jsx&amp;#34; }} {{ $options := dict &amp;#34;defines&amp;#34; (dict &amp;#34;process.env.NODE_ENV&amp;#34; &amp;#34;\&amp;#34;development\&amp;#34;&amp;#34;) }} {{ $js := $jsx | js.Build $options }} </description>
     </item>
     
     <item>
@@ -738,7 +738,7 @@ Many have also been busy writing and fixing the documentation in hugoDocs, which
       <guid>https://gohugo.io/news/0.59.0-relnotes/</guid>
       <description>The timing of this release is motivated by getting the copies of the docs repositories in synch, now fully &amp;ldquo;Hugo Modularized&amp;rdquo;. But it also comes with some very nice additions:
 It is now possible to set the target format and the background fill color when processing images, e.g.:
-{{ $image.Resize &amp;quot;600x jpg #b31280&amp;quot; }} See Image Processing Options.
+{{ $image.Resize &amp;#34;600x jpg #b31280&amp;#34; }} See Image Processing Options.
 Another useful addon is the $pages.Next and $pages.Prev methods on the core page collections in Hugo.</description>
     </item>
     
@@ -1503,8 +1503,8 @@ Hugo now has:
 Also, we forgot to adapt the permalink settings with support for nested sections, which made that feature less useful than it could be.
 With this release you can configure permalinks with sections like this:
 First level only:
-[permalinks] blog = &amp;quot;:section/:title&amp;quot; Nested (all levels):
-[permalinks] blog = &amp;quot;:sections/:title&amp;quot; Fixes   Fix section logic for root folders with subfolders a30023f5 @bep #3586 Support sub-sections in permalink settings 1f26420d @bep #3580 Adjust rlimit to 64000 ff54b6bd @bep #3582 Make error on setting rlimit a warning only 629e1439 @bep #3582 Revert: Remove the rlimit tweaking on macOS 26aa06a3 @bep #3582  </description>
+[permalinks] blog = &amp;#34;:section/:title&amp;#34; Nested (all levels):
+[permalinks] blog = &amp;#34;:sections/:title&amp;#34; Fixes   Fix section logic for root folders with subfolders a30023f5 @bep #3586 Support sub-sections in permalink settings 1f26420d @bep #3580 Adjust rlimit to 64000 ff54b6bd @bep #3582 Make error on setting rlimit a warning only 629e1439 @bep #3582 Revert: Remove the rlimit tweaking on macOS 26aa06a3 @bep #3582  </description>
     </item>
     
     <item>

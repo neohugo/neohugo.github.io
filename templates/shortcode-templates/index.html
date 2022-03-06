@@ -13,7 +13,7 @@
   <title>Create Your Own Shortcodes | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.15-DEV" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,10 +62,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/templates/shortcode-templates/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_17073483402089907998.png"/><meta property="article:section" content="templates" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-02-12T14:25:46+07:00" />
+<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="name" content="Create Your Own Shortcodes">
 <meta itemprop="description" content="You can extend Hugo&#39;s built-in shortcodes by creating your own using the same templating syntax as that for single and list pages."><meta itemprop="datePublished" content="2017-02-01T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-02-12T14:25:46+07:00" />
+<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="wordCount" content="1773"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_17073483402089907998.png"/>
@@ -304,16 +304,16 @@
 <h3 id="access-parameters">Access Parameters <a class="header-link" href="#access-parameters"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>All shortcode parameters can be accessed via the <code>.Get</code> method. Whether you pass a key (i.e., string) or a number to the <code>.Get</code> method depends on whether you are accessing a named or positional parameter, respectively.</p>
 <p>To access a parameter by name, use the <code>.Get</code> method followed by the named parameter as a quoted string:</p>
-<pre tabindex="0"><code>{{ .Get &quot;class&quot; }}
+<pre tabindex="0"><code>{{ .Get &#34;class&#34; }}
 </code></pre><p>To access a parameter by position, use the <code>.Get</code> followed by a numeric position, keeping in mind that positional parameters are zero-indexed:</p>
 <pre tabindex="0"><code>{{ .Get 0 }}
 </code></pre><p>For the second position, you would just use:</p>
 <pre tabindex="0"><code>{{ .Get 1 }}
 </code></pre><p><code>with</code> is great when the output depends on a parameter being set:</p>
-<pre tabindex="0"><code>{{ with .Get &quot;class&quot; }} class=&quot;{{ . }}&quot;{{ end }}
+<pre tabindex="0"><code>{{ with .Get &#34;class&#34; }} class=&#34;{{ . }}&#34;{{ end }}
 </code></pre><p><code>.Get</code> can also be used to check if a parameter has been provided. This is
 most helpful when the condition depends on either of the values, or both:</p>
-<pre tabindex="0"><code>{{ if or (.Get &quot;title&quot;) (.Get &quot;alt&quot;) }} alt=&quot;{{ with .Get &quot;alt&quot; }}{{ . }}{{ else }}{{ .Get &quot;title&quot; }}{{ end }}&quot;{{ end }}
+<pre tabindex="0"><code>{{ if or (.Get &#34;title&#34;) (.Get &#34;alt&#34;) }} alt=&#34;{{ with .Get &#34;alt&#34; }}{{ . }}{{ else }}{{ .Get &#34;title&#34; }}{{ end }}&#34;{{ end }}
 </code></pre><h4 id="inner"><code>.Inner</code> <a class="header-link" href="#inner"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
 <p>If a closing shortcode is used, the <code>.Inner</code> variable will be populated with all of the content between the opening and closing shortcodes. If a closing shortcode is required, you can check the length of <code>.Inner</code> as an indicator of its existence.</p>
 <p>A shortcode with content declared via the <code>.Inner</code> variable can also be declared without the
@@ -333,12 +333,12 @@ by using the self-closing syntax:</p>
 <h4 id="isnamedparams"><code>.IsNamedParams</code> <a class="header-link" href="#isnamedparams"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
 <p>The <code>.IsNamedParams</code> variable checks whether the shortcode declaration uses named parameters and returns a boolean value.</p>
 <p>For example, you could create an <code>image</code> shortcode that can take either a <code>src</code> named parameter or the first positional parameter, depending on the preference of the content&rsquo;s author. Let&rsquo;s assume the <code>image</code> shortcode is called as follows:</p>
-<pre tabindex="0"><code>{{&lt; image src=&quot;images/my-image.jpg&quot; &gt;}}
+<pre tabindex="0"><code>{{&lt; image src=&#34;images/my-image.jpg&#34; &gt;}}
 </code></pre><p>You could then include the following as part of your shortcode templating:</p>
 <pre tabindex="0"><code>{{ if .IsNamedParams }}
-&lt;img src=&quot;{{ .Get &quot;src&quot; }}&quot; alt=&quot;&quot;&gt;
+&lt;img src=&#34;{{ .Get &#34;src&#34; }}&#34; alt=&#34;&#34;&gt;
 {{ else }}
-&lt;img src=&quot;{{ .Get 0 }}&quot; alt=&quot;&quot;&gt;
+&lt;img src=&#34;{{ .Get 0 }}&#34; alt=&#34;&#34;&gt;
 {{ end }}
 </code></pre><p>See the <a href="#single-flexible-example-vimeo">example Vimeo shortcode</a> below for <code>.IsNamedParams</code> in action.</p>
 
@@ -378,7 +378,7 @@ by using the self-closing syntax:</p>
 	
 	<div class="code-copy-content nt3" >
 		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">now</span><span class="na">.Format</span><span class="w"> </span><span class="s">&#34;2006&#34;</span><span class="w"> </span><span class="cp">}}</span></code></pre></div>
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">now</span><span class="na">.Format</span><span class="w"> </span><span class="s">&#34;2006&#34;</span><span class="w"> </span><span class="cp">}}</span></span></span></code></pre></div>
 	</div>
 
 </div>
@@ -404,10 +404,10 @@ by using the self-closing syntax:</p>
 	
 	<div class="code-copy-content nt3" >
 		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;embed video-player&#34;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;youtube-player&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/html&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;640&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;385&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://www.youtube.com/embed/</span><span class="cp">{{</span><span class="w"> </span><span class="k">index</span><span class="w"> </span><span class="na">.Params</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span> <span class="na">allowfullscreen</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&#34;0&#34;</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;embed video-player&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;youtube-player&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/html&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;640&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;385&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://www.youtube.com/embed/</span><span class="cp">{{</span><span class="w"> </span><span class="k">index</span><span class="w"> </span><span class="na">.Params</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span> <span class="na">allowfullscreen</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&#34;0&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 	</div>
 
 </div>
@@ -425,13 +425,13 @@ by using the self-closing syntax:</p>
 <div class="code relative" id="youtube-embed.html"><div class="filename san-serif f6 dib lh-solid pl2 pv2">youtube-embed.html</div>
 	<div class="code-copy-content nt3" >
 		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;embed video-player&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;youtube-player&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/html&#34;</span>
-        <span class="na">width</span><span class="o">=</span><span class="s">&#34;640&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;385&#34;</span>
-        <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://www.youtube.com/embed/09jf3ow9jfw&#34;</span>
-        <span class="na">allowfullscreen</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&#34;0&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;embed video-player&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;youtube-player&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/html&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">width</span><span class="o">=</span><span class="s">&#34;640&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;385&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://www.youtube.com/embed/09jf3ow9jfw&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">allowfullscreen</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&#34;0&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 	</div>
 
 </div>
@@ -453,7 +453,7 @@ by using the self-closing syntax:</p>
 	
 	<div class="code-copy-content nt3" >
 		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md">{{<span class="p">&lt;</span> <span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/media/spf13.jpg&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Steve Francia&#34;</span> <span class="p">&gt;</span>}}</code></pre></div>
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/media/spf13.jpg&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Steve Francia&#34;</span> <span class="p">&gt;</span>}}</span></span></code></pre></div>
 	</div>
 
 </div>
@@ -476,24 +476,24 @@ by using the self-closing syntax:</p>
 	
 	<div class="code-copy-content nt3" >
 		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="c">&lt;!-- image --&gt;</span>
-<span class="p">&lt;</span><span class="nt">figure</span> <span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;class&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="na">class</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="na">.</span><span class="cp">}}</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span><span class="p">&gt;</span>
-    <span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;link&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;src&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span> <span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="o">(</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;alt&#34;</span><span class="o">)</span><span class="w"> </span><span class="o">(</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;caption&#34;</span><span class="o">)</span><span class="w"> </span><span class="cp">}}</span><span class="na">alt</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;alt&#34;</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;caption&#34;</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span> <span class="p">/&gt;</span>
-    <span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;link&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-    <span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="o">(</span><span class="k">or</span><span class="w"> </span><span class="o">(</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;title&#34;</span><span class="o">)</span><span class="w"> </span><span class="o">(</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;caption&#34;</span><span class="o">))</span><span class="w"> </span><span class="o">(</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;attr&#34;</span><span class="o">)</span><span class="w"> </span><span class="cp">}}</span>
-    <span class="p">&lt;</span><span class="nt">figcaption</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">isset</span><span class="w"> </span><span class="na">.Params</span><span class="w"> </span><span class="s">&#34;title&#34;</span><span class="w"> </span><span class="cp">}}</span>
-        <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;title&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-        <span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="o">(</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;caption&#34;</span><span class="o">)</span><span class="w"> </span><span class="o">(</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;attr&#34;</span><span class="o">)</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
-        <span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;caption&#34;</span><span class="w"> </span><span class="cp">}}</span>
-        <span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;attrlink&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span> <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-            <span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;attr&#34;</span><span class="w"> </span><span class="cp">}}</span>
-        <span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;attrlink&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-        <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span> <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-    <span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
-    <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-<span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
-<span class="c">&lt;!-- image --&gt;</span></code></pre></div>
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="c">&lt;!-- image --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">figure</span> <span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;class&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="na">class</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="na">.</span><span class="cp">}}</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;link&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;src&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span> <span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="o">(</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;alt&#34;</span><span class="o">)</span><span class="w"> </span><span class="o">(</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;caption&#34;</span><span class="o">)</span><span class="w"> </span><span class="cp">}}</span><span class="na">alt</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;alt&#34;</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;caption&#34;</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;link&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">    <span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="o">(</span><span class="k">or</span><span class="w"> </span><span class="o">(</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;title&#34;</span><span class="o">)</span><span class="w"> </span><span class="o">(</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;caption&#34;</span><span class="o">))</span><span class="w"> </span><span class="o">(</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;attr&#34;</span><span class="o">)</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">figcaption</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">isset</span><span class="w"> </span><span class="na">.Params</span><span class="w"> </span><span class="s">&#34;title&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;title&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">        <span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="o">(</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;caption&#34;</span><span class="o">)</span><span class="w"> </span><span class="o">(</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;attr&#34;</span><span class="o">)</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;caption&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">        <span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;attrlink&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span> <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">            <span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;attr&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">        <span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;attrlink&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span> <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- image --&gt;</span></span></span></code></pre></div>
 	</div>
 
 </div>
@@ -512,19 +512,19 @@ by using the self-closing syntax:</p>
 <div class="code relative" id="img-output.html"><div class="filename san-serif f6 dib lh-solid pl2 pv2">img-output.html</div>
 	<div class="code-copy-content nt3" >
 		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/media/spf13.jpg&#34;</span>  <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">figcaption</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>Steve Francia<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span></code></pre></div>
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/media/spf13.jpg&#34;</span>  <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>Steve Francia<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span></span></span></code></pre></div>
 	</div>
 
 </div>
 
 <h3 id="single-flexible-example-vimeo">Single Flexible Example: <code>vimeo</code> <a class="header-link" href="#single-flexible-example-vimeo"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <pre tabindex="0"><code>{{&lt; vimeo 49718712 &gt;}}
-{{&lt; vimeo id=&quot;49718712&quot; class=&quot;flex-video&quot; &gt;}}
+{{&lt; vimeo id=&#34;49718712&#34; class=&#34;flex-video&#34; &gt;}}
 </code></pre><p>Would load the template found at <code>/layouts/shortcodes/vimeo.html</code>:</p>
 
 
@@ -543,15 +543,15 @@ by using the self-closing syntax:</p>
 	
 	<div class="code-copy-content nt3" >
 		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="na">.IsNamedParams</span><span class="w"> </span><span class="cp">}}</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;class&#34;</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;class&#34;</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="cp">}}</span><span class="s">vimeo-container</span><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://player.vimeo.com/video/</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;id&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="cp">}}</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">len</span><span class="w"> </span><span class="na">.Params</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">eq</span><span class="w"> </span><span class="nx">2</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="nx">1</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="cp">}}</span><span class="s">vimeo-container</span><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://player.vimeo.com/video/</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span></code></pre></div>
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="na">.IsNamedParams</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;class&#34;</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;class&#34;</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="cp">}}</span><span class="s">vimeo-container</span><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://player.vimeo.com/video/</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;id&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">len</span><span class="w"> </span><span class="na">.Params</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">eq</span><span class="w"> </span><span class="nx">2</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="nx">1</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="cp">}}</span><span class="s">vimeo-container</span><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://player.vimeo.com/video/</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span></span></span></code></pre></div>
 	</div>
 
 </div>
@@ -570,12 +570,12 @@ by using the self-closing syntax:</p>
 <div class="code relative" id="vimeo-iframes.html"><div class="filename san-serif f6 dib lh-solid pl2 pv2">vimeo-iframes.html</div>
 	<div class="code-copy-content nt3" >
 		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;vimeo-container&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://player.vimeo.com/video/49718712&#34;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;flex-video&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://player.vimeo.com/video/49718712&#34;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;vimeo-container&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://player.vimeo.com/video/49718712&#34;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;flex-video&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://player.vimeo.com/video/49718712&#34;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 	</div>
 
 </div>
@@ -597,11 +597,11 @@ by using the self-closing syntax:</p>
 	
 	<div class="code-copy-content nt3" >
 		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md">{{<span class="p">&lt;</span> <span class="nt">highlight</span> <span class="na">html</span> <span class="p">&gt;</span>}}
-  <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span> This HTML <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-{{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">highlight</span> <span class="p">&gt;</span>}}</code></pre></div>
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="nt">highlight</span> <span class="na">html</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span> This HTML <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">highlight</span> <span class="p">&gt;</span>}}</span></span></code></pre></div>
 	</div>
 
 </div>
@@ -622,10 +622,10 @@ by using the self-closing syntax:</p>
 <div class="code relative" id="syntax-highlighted.html"><div class="filename san-serif f6 dib lh-solid pl2 pv2">syntax-highlighted.html</div>
 	<div class="code-copy-content nt3" >
 		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;highlight&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;background: #272822&#34;</span><span class="p">&gt;&lt;</span><span class="nt">pre</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;line-height: 125%&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;color: #f92672&#34;</span><span class="p">&gt;</span><span class="ni">&amp;lt;</span>html<span class="ni">&amp;gt;</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;color: #f92672&#34;</span><span class="p">&gt;</span><span class="ni">&amp;lt;</span>body<span class="ni">&amp;gt;</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> This HTML <span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;color: #f92672&#34;</span><span class="p">&gt;</span><span class="ni">&amp;lt;</span>/body<span class="ni">&amp;gt;</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;color: #f92672&#34;</span><span class="p">&gt;</span><span class="ni">&amp;lt;</span>/html<span class="ni">&amp;gt;</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;highlight&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;background: #272822&#34;</span><span class="p">&gt;&lt;</span><span class="nt">pre</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;line-height: 125%&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;color: #f92672&#34;</span><span class="p">&gt;</span><span class="ni">&amp;lt;</span>html<span class="ni">&amp;gt;</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;color: #f92672&#34;</span><span class="p">&gt;</span><span class="ni">&amp;lt;</span>body<span class="ni">&amp;gt;</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> This HTML <span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;color: #f92672&#34;</span><span class="p">&gt;</span><span class="ni">&amp;lt;</span>/body<span class="ni">&amp;gt;</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;color: #f92672&#34;</span><span class="p">&gt;</span><span class="ni">&amp;lt;</span>/html<span class="ni">&amp;gt;</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 	</div>
 
 </div>
@@ -650,9 +650,9 @@ by using the self-closing syntax:</p>
 	
 	<div class="code-copy-content nt3" >
 		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;class&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span>
-  <span class="cp">{{</span><span class="w"> </span><span class="na">.Inner</span><span class="w"> </span><span class="cp">}}</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;class&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="cp">{{</span><span class="w"> </span><span class="na">.Inner</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 	</div>
 
 </div>
@@ -675,37 +675,37 @@ by using the self-closing syntax:</p>
 	
 	<div class="code-copy-content nt3" >
 		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{-</span><span class="w"> </span><span class="nx">$src</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;src&#34;</span><span class="w"> </span><span class="cp">-}}</span>
-<span class="cp">{{-</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.Parent</span><span class="w"> </span><span class="cp">-}}</span>
-  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="nx">$src</span><span class="cp">}}</span><span class="s">&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;class&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="s">-image&#34;</span><span class="p">&gt;</span>
-<span class="cp">{{-</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="cp">-}}</span>
-  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="nx">$src</span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span>
-<span class="cp">{{-</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">-}}</span></code></pre></div>
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{-</span><span class="w"> </span><span class="nx">$src</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;src&#34;</span><span class="w"> </span><span class="cp">-}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{-</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.Parent</span><span class="w"> </span><span class="cp">-}}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="nx">$src</span><span class="cp">}}</span><span class="s">&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;class&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="s">-image&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{-</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="cp">-}}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="nx">$src</span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{-</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">-}}</span></span></span></code></pre></div>
 	</div>
 
 </div>
 
 <p>You can then call your shortcode in your content as follows:</p>
-<pre tabindex="0"><code>{{&lt; gallery class=&quot;content-gallery&quot; &gt;}}
-  {{&lt; img src=&quot;/images/one.jpg&quot; &gt;}}
-  {{&lt; img src=&quot;/images/two.jpg&quot; &gt;}}
+<pre tabindex="0"><code>{{&lt; gallery class=&#34;content-gallery&#34; &gt;}}
+  {{&lt; img src=&#34;/images/one.jpg&#34; &gt;}}
+  {{&lt; img src=&#34;/images/two.jpg&#34; &gt;}}
 {{&lt; /gallery &gt;}}
-{{&lt; img src=&quot;/images/three.jpg&quot; &gt;}}
+{{&lt; img src=&#34;/images/three.jpg&#34; &gt;}}
 </code></pre><p>This will output the following HTML. Note how the first two <code>img</code> shortcodes inherit the <code>class</code> value of <code>content-gallery</code> set with the call to the parent <code>gallery</code>, whereas the third <code>img</code> only uses <code>src</code>:</p>
-<pre tabindex="0"><code>&lt;div class=&quot;content-gallery&quot;&gt;
-    &lt;img src=&quot;/images/one.jpg&quot; class=&quot;content-gallery-image&quot;&gt;
-    &lt;img src=&quot;/images/two.jpg&quot; class=&quot;content-gallery-image&quot;&gt;
+<pre tabindex="0"><code>&lt;div class=&#34;content-gallery&#34;&gt;
+    &lt;img src=&#34;/images/one.jpg&#34; class=&#34;content-gallery-image&#34;&gt;
+    &lt;img src=&#34;/images/two.jpg&#34; class=&#34;content-gallery-image&#34;&gt;
 &lt;/div&gt;
-&lt;img src=&quot;/images/three.jpg&quot;&gt;
+&lt;img src=&#34;/images/three.jpg&#34;&gt;
 </code></pre><h2 id="error-handling-in-shortcodes">Error Handling in Shortcodes <a class="header-link" href="#error-handling-in-shortcodes"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Use the <a href="/functions/errorf">errorf</a> template func and <a href="/variables/shortcodes/">.Position</a> variable to get useful error messages in shortcodes:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="o">{{</span> with .Get <span class="s2">&#34;name&#34;</span> <span class="o">}}</span>
-<span class="o">{{</span> <span class="k">else</span> <span class="o">}}</span>
-<span class="o">{{</span> errorf <span class="s2">&#34;missing value for param &#39;name&#39;: %s&#34;</span> .Position <span class="o">}}</span>
-<span class="o">{{</span> end <span class="o">}}</span>
-</code></pre></div><p>When the above fails, you will see an <code>ERROR</code> log similar to the below:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">ERROR 2018/11/07 10:05:55 missing value <span class="k">for</span> param name: <span class="s2">&#34;/Users/bep/dev/go/gohugoio/hugo/docs/content/en/variables/shortcodes.md:32:1&#34;</span>
-</code></pre></div><h2 id="more-shortcode-examples">More Shortcode Examples <a class="header-link" href="#more-shortcode-examples"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">{{</span> with .Get <span class="s2">&#34;name&#34;</span> <span class="o">}}</span>
+</span></span><span class="line"><span class="cl"><span class="o">{{</span> <span class="k">else</span> <span class="o">}}</span>
+</span></span><span class="line"><span class="cl"><span class="o">{{</span> errorf <span class="s2">&#34;missing value for param &#39;name&#39;: %s&#34;</span> .Position <span class="o">}}</span>
+</span></span><span class="line"><span class="cl"><span class="o">{{</span> end <span class="o">}}</span>
+</span></span></code></pre></div><p>When the above fails, you will see an <code>ERROR</code> log similar to the below:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ERROR 2018/11/07 10:05:55 missing value <span class="k">for</span> param name: <span class="s2">&#34;/Users/bep/dev/go/gohugoio/hugo/docs/content/en/variables/shortcodes.md:32:1&#34;</span>
+</span></span></code></pre></div><h2 id="more-shortcode-examples">More Shortcode Examples <a class="header-link" href="#more-shortcode-examples"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>More shortcode examples can be found in the <a href="https://github.com/spf13/spf13.com/tree/master/layouts/shortcodes" title="See more examples of shortcodes by visiting the shortcode directory of the source for spf13.com, the blog of Hugo's creator, Steve Francia.">shortcodes directory for spf13.com</a> and the <a href="https://github.com/gohugoio/hugo/tree/master/docs/layouts/shortcodes" title="See the shortcode source directory for the documentation site you're currently reading.">shortcodes directory for the Hugo docs</a>.</p>
 <h2 id="inline-shortcodes">Inline Shortcodes <a class="header-link" href="#inline-shortcodes"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 
@@ -735,20 +735,20 @@ by using the self-closing syntax:</p>
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">enableInlineShortcodes</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">enableInlineShortcodes</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">enableInlineShortcodes</span> <span class="p">=</span> <span class="kc">true</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">enableInlineShortcodes</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;enableInlineShortcodes&#34;</span><span class="p">:</span> <span class="kc">true</span>
-<span class="p">}</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;enableInlineShortcodes&#34;</span><span class="p">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
   </div>
@@ -756,13 +756,13 @@ by using the self-closing syntax:</p>
 
 <p>It is disabled by default for security reasons. The security model used by Hugo&rsquo;s template handling assumes that template authors are trusted, but that the content files are not, so the templates are injection-safe from malformed input data. But in most situations you have full control over the content, too, and then <code>enableInlineShortcodes = true</code> would be considered safe. But it&rsquo;s something to be aware of: It allows ad-hoc <a href="https://golang.org/pkg/text/template/">Go Text templates</a> to be executed from the content files.</p>
 <p>And once enabled, you can do this in your content files:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-text-template" data-lang="go-text-template"><span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">time</span><span class="na">.inline</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}{{</span><span class="w"> </span><span class="nx">now</span><span class="w"> </span><span class="cp">}}{{</span><span class="err">&lt;</span><span class="w"> </span><span class="err">/</span><span class="nx">time</span><span class="na">.inline</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span><span class="x">
-</span></code></pre></div><p>The above will print the current date and time.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-text-template" data-lang="go-text-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">time</span><span class="na">.inline</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}{{</span><span class="w"> </span><span class="nx">now</span><span class="w"> </span><span class="cp">}}{{</span><span class="err">&lt;</span><span class="w"> </span><span class="err">/</span><span class="nx">time</span><span class="na">.inline</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span><span class="x">
+</span></span></span></code></pre></div><p>The above will print the current date and time.</p>
 <p>Note that an inline shortcode&rsquo;s inner content is parsed and executed as a Go text template with the same context as a regular shortcode template.</p>
 <p>This means that the current page can be accessed via <code>.Page.Title</code> etc. This also means that there are no concept of &ldquo;nested inline shortcodes&rdquo;.</p>
 <p>The same inline shortcode can be reused later in the same content file, with different params if needed, using the self-closing syntax:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-text-template" data-lang="go-text-template"><span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">time</span><span class="na">.inline</span><span class="w"> </span><span class="err">/&gt;</span><span class="cp">}}</span><span class="x">
-</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-text-template" data-lang="go-text-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">time</span><span class="na">.inline</span><span class="w"> </span><span class="err">/&gt;</span><span class="cp">}}</span><span class="x">
+</span></span></span></code></pre></div>
 </div>
 
           
@@ -919,6 +919,11 @@ by using the self-closing syntax:</p>
           <li class="f6 fw4">
             <a href="/content-management/formats/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Content Formats
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/content-management/diagrams/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Diagrams
             </a>
           </li>
           <li class="f6 fw4">
@@ -1860,11 +1865,6 @@ by using the self-closing syntax:</p>
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/variables/hugo/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hugo Variables
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/variables/git/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Git Variables
             </a>
@@ -2115,7 +2115,7 @@ by using the self-closing syntax:</p>
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: February 12, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b162c296b7f2066827adadc6ebff61028366790d">Merge pull request #102 from blackb1rd/hugo/v0.92.2 (b162c29)</a>
+  Last updated: March 6, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/bc2bc7c8dd3645fdf6a0da2ecb9bb182571b08b3">Merge pull request #103 from blackb1rd/hugo/v0.93.2 (bc2bc7c)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/templates/shortcode-templates.md" class="
@@ -2363,6 +2363,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 </footer>
+
+
+  
 
 
 </body>

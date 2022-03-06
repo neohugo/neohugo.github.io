@@ -13,7 +13,7 @@
   <title>Hugo Deploy | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.15-DEV" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,10 +62,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/hosting-and-deployment/hugo-deploy/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_11551428109277559587.png"/><meta property="article:section" content="hosting-and-deployment" />
 <meta property="article:published_time" content="2019-05-30T00:00:00+02:00" />
-<meta property="article:modified_time" content="2022-02-12T14:25:46+07:00" />
+<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="name" content="Hugo Deploy">
 <meta itemprop="description" content="You can upload your site to GCS, S3, or Azure using the Hugo CLI."><meta itemprop="datePublished" content="2019-05-30T00:00:00+02:00" />
-<meta itemprop="dateModified" content="2022-02-12T14:25:46+07:00" />
+<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="wordCount" content="618"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_11551428109277559587.png"/>
@@ -279,75 +279,75 @@ public, be sure to configure the bucket to be publicly readable.</p>
 <p>In the configuration file for your site, add a <code>[deployment]</code> section with one
 or more <code>[[deployment.targets]]</code> section, one for each deployment target. Here&rsquo;s
 a detailed example:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">deployment</span><span class="p">]</span>
-<span class="c"># By default, files are uploaded in an arbitrary order.</span>
-<span class="c"># Files that match the regular expressions in the &#34;Order&#34; list</span>
-<span class="c"># will be uploaded first, in the listed order.</span>
-<span class="nx">order</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;.jpg$&#34;</span><span class="p">,</span> <span class="s2">&#34;.gif$&#34;</span><span class="p">]</span>
-
-
-<span class="p">[[</span><span class="nx">deployment</span><span class="p">.</span><span class="nx">targets</span><span class="p">]]</span>
-<span class="c"># An arbitrary name for this target.</span>
-<span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;mydeployment&#34;</span>
-<span class="c"># The Go Cloud Development Kit URL to deploy to. Examples:</span>
-<span class="c"># GCS; see https://gocloud.dev/howto/blob/#gcs</span>
-<span class="c"># URL = &#34;gs://&lt;Bucket Name&gt;&#34;</span>
-
-<span class="c"># S3; see https://gocloud.dev/howto/blob/#s3</span>
-<span class="c"># For S3-compatible endpoints, see https://gocloud.dev/howto/blob/#s3-compatible</span>
-<span class="c"># URL = &#34;s3://&lt;Bucket Name&gt;?region=&lt;AWS region&gt;&#34;</span>
-
-<span class="c"># Azure Blob Storage; see https://gocloud.dev/howto/blob/#azure</span>
-<span class="c"># URL = &#34;azblob://$web&#34;</span>
-
-<span class="c"># You can use a &#34;prefix=&#34; query parameter to target a subfolder of the bucket:</span>
-<span class="c"># URL = &#34;gs://&lt;Bucket Name&gt;?prefix=a/subfolder/&#34;</span>
-
-<span class="c"># If you are using a CloudFront CDN, deploy will invalidate the cache as needed.</span>
-<span class="nx">cloudFrontDistributionID</span> <span class="p">=</span> <span class="err">&lt;</span><span class="nx">ID</span><span class="err">&gt;</span>
-
-<span class="c"># Optionally, you can include or exclude specific files.</span>
-<span class="c"># See https://godoc.org/github.com/gobwas/glob#Glob for the glob pattern syntax.</span>
-<span class="c"># If non-empty, the pattern is matched against the local path.</span>
-<span class="c"># All paths are matched against in their filepath.ToSlash form.</span>
-<span class="c"># If exclude is non-empty, and a local or remote file&#39;s path matches it, that file is not synced.</span>
-<span class="c"># If include is non-empty, and a local or remote file&#39;s path does not match it, that file is not synced.</span>
-<span class="c"># As a result, local files that don&#39;t pass the include/exclude filters are not uploaded to remote,</span>
-<span class="c"># and remote files that don&#39;t pass the include/exclude filters are not deleted.</span>
-<span class="c"># include = &#34;**.html&#34; # would only include files with &#34;.html&#34; suffix</span>
-<span class="c"># exclude = &#34;**.{jpg, png}&#34; # would exclude files with &#34;.jpg&#34; or &#34;.png&#34; suffix</span>
-
-
-<span class="c"># [[deployment.matchers]] configure behavior for files that match the Pattern.</span>
-<span class="c"># See https://golang.org/pkg/regexp/syntax/ for pattern syntax.</span>
-<span class="c"># Pattern searching is stopped on first match.</span>
-
-<span class="c"># Samples:</span>
-
-<span class="p">[[</span><span class="nx">deployment</span><span class="p">.</span><span class="nx">matchers</span><span class="p">]]</span>
-<span class="c"># Cache static assets for 1 year.</span>
-<span class="nx">pattern</span> <span class="p">=</span> <span class="s2">&#34;^.+\\.(js|css|svg|ttf)$&#34;</span>
-<span class="nx">cacheControl</span> <span class="p">=</span> <span class="s2">&#34;max-age=31536000, no-transform, public&#34;</span>
-<span class="nx">gzip</span> <span class="p">=</span> <span class="kc">true</span>
-
-<span class="p">[[</span><span class="nx">deployment</span><span class="p">.</span><span class="nx">matchers</span><span class="p">]]</span>
-<span class="nx">pattern</span> <span class="p">=</span> <span class="s2">&#34;^.+\\.(png|jpg)$&#34;</span>
-<span class="nx">cacheControl</span> <span class="p">=</span> <span class="s2">&#34;max-age=31536000, no-transform, public&#34;</span>
-<span class="nx">gzip</span> <span class="p">=</span> <span class="kc">false</span>
-
-<span class="p">[[</span><span class="nx">deployment</span><span class="p">.</span><span class="nx">matchers</span><span class="p">]]</span>
-<span class="c"># Set custom content type for /sitemap.xml</span>
-<span class="nx">pattern</span> <span class="p">=</span> <span class="s2">&#34;^sitemap\\.xml$&#34;</span>
-<span class="nx">contentType</span> <span class="p">=</span> <span class="s2">&#34;application/xml&#34;</span>
-<span class="nx">gzip</span> <span class="p">=</span> <span class="kc">true</span>
-
-<span class="p">[[</span><span class="nx">deployment</span><span class="p">.</span><span class="nx">matchers</span><span class="p">]]</span>
-<span class="nx">pattern</span> <span class="p">=</span> <span class="s2">&#34;^.+\\.(html|xml|json)$&#34;</span>
-<span class="nx">gzip</span> <span class="p">=</span> <span class="kc">true</span>
-</code></pre></div><h2 id="deploy">Deploy <a class="header-link" href="#deploy"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">deployment</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="c"># By default, files are uploaded in an arbitrary order.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Files that match the regular expressions in the &#34;Order&#34; list</span>
+</span></span><span class="line"><span class="cl"><span class="c"># will be uploaded first, in the listed order.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">order</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;.jpg$&#34;</span><span class="p">,</span> <span class="s2">&#34;.gif$&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">deployment</span><span class="p">.</span><span class="nx">targets</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="c"># An arbitrary name for this target.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;mydeployment&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c"># The Go Cloud Development Kit URL to deploy to. Examples:</span>
+</span></span><span class="line"><span class="cl"><span class="c"># GCS; see https://gocloud.dev/howto/blob/#gcs</span>
+</span></span><span class="line"><span class="cl"><span class="c"># URL = &#34;gs://&lt;Bucket Name&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># S3; see https://gocloud.dev/howto/blob/#s3</span>
+</span></span><span class="line"><span class="cl"><span class="c"># For S3-compatible endpoints, see https://gocloud.dev/howto/blob/#s3-compatible</span>
+</span></span><span class="line"><span class="cl"><span class="c"># URL = &#34;s3://&lt;Bucket Name&gt;?region=&lt;AWS region&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Azure Blob Storage; see https://gocloud.dev/howto/blob/#azure</span>
+</span></span><span class="line"><span class="cl"><span class="c"># URL = &#34;azblob://$web&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># You can use a &#34;prefix=&#34; query parameter to target a subfolder of the bucket:</span>
+</span></span><span class="line"><span class="cl"><span class="c"># URL = &#34;gs://&lt;Bucket Name&gt;?prefix=a/subfolder/&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># If you are using a CloudFront CDN, deploy will invalidate the cache as needed.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">cloudFrontDistributionID</span> <span class="p">=</span> <span class="err">&lt;</span><span class="nx">ID</span><span class="err">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Optionally, you can include or exclude specific files.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># See https://godoc.org/github.com/gobwas/glob#Glob for the glob pattern syntax.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If non-empty, the pattern is matched against the local path.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># All paths are matched against in their filepath.ToSlash form.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If exclude is non-empty, and a local or remote file&#39;s path matches it, that file is not synced.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># If include is non-empty, and a local or remote file&#39;s path does not match it, that file is not synced.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># As a result, local files that don&#39;t pass the include/exclude filters are not uploaded to remote,</span>
+</span></span><span class="line"><span class="cl"><span class="c"># and remote files that don&#39;t pass the include/exclude filters are not deleted.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># include = &#34;**.html&#34; # would only include files with &#34;.html&#34; suffix</span>
+</span></span><span class="line"><span class="cl"><span class="c"># exclude = &#34;**.{jpg, png}&#34; # would exclude files with &#34;.jpg&#34; or &#34;.png&#34; suffix</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># [[deployment.matchers]] configure behavior for files that match the Pattern.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># See https://golang.org/pkg/regexp/syntax/ for pattern syntax.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Pattern searching is stopped on first match.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Samples:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">deployment</span><span class="p">.</span><span class="nx">matchers</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Cache static assets for 1 year.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">pattern</span> <span class="p">=</span> <span class="s2">&#34;^.+\\.(js|css|svg|ttf)$&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">cacheControl</span> <span class="p">=</span> <span class="s2">&#34;max-age=31536000, no-transform, public&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">gzip</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">deployment</span><span class="p">.</span><span class="nx">matchers</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">pattern</span> <span class="p">=</span> <span class="s2">&#34;^.+\\.(png|jpg)$&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">cacheControl</span> <span class="p">=</span> <span class="s2">&#34;max-age=31536000, no-transform, public&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">gzip</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">deployment</span><span class="p">.</span><span class="nx">matchers</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Set custom content type for /sitemap.xml</span>
+</span></span><span class="line"><span class="cl"><span class="nx">pattern</span> <span class="p">=</span> <span class="s2">&#34;^sitemap\\.xml$&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">contentType</span> <span class="p">=</span> <span class="s2">&#34;application/xml&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">gzip</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">deployment</span><span class="p">.</span><span class="nx">matchers</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">pattern</span> <span class="p">=</span> <span class="s2">&#34;^.+\\.(html|xml|json)$&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">gzip</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span></code></pre></div><h2 id="deploy">Deploy <a class="header-link" href="#deploy"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>To deploy to a target:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hugo deploy <span class="o">[</span>--target<span class="o">=</span>&lt;target name&gt;, defaults to first target<span class="o">]</span>
-</code></pre></div><p>Hugo will identify and apply any local changes that need to be reflected to the
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo deploy <span class="o">[</span>--target<span class="o">=</span>&lt;target name&gt;, defaults to first target<span class="o">]</span>
+</span></span></code></pre></div><p>Hugo will identify and apply any local changes that need to be reflected to the
 remote target. You can use <code>--dryRun</code> to see the changes without applying them,
 or <code>--confirm</code> to be prompted before making changes.</p>
 <p>See <code>hugo help deploy</code> for more command-line options.</p>
@@ -508,6 +508,11 @@ or <code>--confirm</code> to be prompted before making changes.</p>
           <li class="f6 fw4">
             <a href="/content-management/formats/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Content Formats
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/content-management/diagrams/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Diagrams
             </a>
           </li>
           <li class="f6 fw4">
@@ -1449,11 +1454,6 @@ or <code>--confirm</code> to be prompted before making changes.</p>
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/variables/hugo/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hugo Variables
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/variables/git/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Git Variables
             </a>
@@ -1704,7 +1704,7 @@ or <code>--confirm</code> to be prompted before making changes.</p>
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: February 12, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b162c296b7f2066827adadc6ebff61028366790d">Merge pull request #102 from blackb1rd/hugo/v0.92.2 (b162c29)</a>
+  Last updated: March 6, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/bc2bc7c8dd3645fdf6a0da2ecb9bb182571b08b3">Merge pull request #103 from blackb1rd/hugo/v0.93.2 (bc2bc7c)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/hosting-and-deployment/hugo-deploy.md" class="
@@ -1952,6 +1952,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 </footer>
+
+
+  
 
 
 </body>

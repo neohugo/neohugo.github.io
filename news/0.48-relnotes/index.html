@@ -13,7 +13,7 @@
   <title>This One Goes to 11! | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.15-DEV" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,10 +62,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/news/0.48-relnotes/" /><meta property="og:image" content="https://gohugo.io/news/0.48-relnotes/featured-hugo-48-poster.png"/><meta property="article:section" content="news" />
 <meta property="article:published_time" content="2018-08-29T00:00:00+02:00" />
-<meta property="article:modified_time" content="2022-02-12T14:25:46+07:00" />
+<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="name" content="This One Goes to 11!">
 <meta itemprop="description" content="With Go 1.11, Hugo finally gets support for variable overwrites in templates!"><meta itemprop="datePublished" content="2018-08-29T00:00:00+02:00" />
-<meta itemprop="dateModified" content="2022-02-12T14:25:46+07:00" />
+<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="wordCount" content="340"><meta itemprop="image" content="https://gohugo.io/news/0.48-relnotes/featured-hugo-48-poster.png">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/news/0.48-relnotes/featured-hugo-48-poster.png"/>
@@ -263,12 +263,12 @@
           
           
         <p>Hugo <code>0.48</code> is built with the brand new Go 1.11. On the technical side this means that Hugo now uses <a href="https://github.com/golang/go/wiki/Modules">Go Modules</a> for the build. The big new functional thing in Go 1.11 for Hugo is added support for <a href="https://github.com/golang/go/issues/10608">variable overwrites</a>. This means that you can now do this and get the expected result:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">$var</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&#34;Hugo Page&#34;</span><span class="w"> </span><span class="cp">}}</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="na">.IsHome</span><span class="w"> </span><span class="cp">}}</span>
-	<span class="cp">{{</span><span class="w"> </span><span class="nx">$var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Hugo Home&#34;</span><span class="w"> </span><span class="cp">}}</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-Var is <span class="cp">{{</span><span class="w"> </span><span class="nx">$var</span><span class="w"> </span><span class="cp">}}</span>
-</code></pre></div><p>The above may look obvious, but has not been possible until now. In Hugo we have had <code>.Scratch</code> as a workaround for this, but Go 1.11 will help clean up a lot of templates.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$var</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&#34;Hugo Page&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="na">.IsHome</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">	<span class="cp">{{</span><span class="w"> </span><span class="nx">$var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Hugo Home&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">Var is <span class="cp">{{</span><span class="w"> </span><span class="nx">$var</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><p>The above may look obvious, but has not been possible until now. In Hugo we have had <code>.Scratch</code> as a workaround for this, but Go 1.11 will help clean up a lot of templates.</p>
 <p>This release represents <strong>23 contributions by 5 contributors</strong> to the main Hugo code base. <a href="https://github.com/bep">@bep</a> leads the Hugo development with a significant amount of contributions, but also a big shoutout to <a href="https://github.com/anthonyfok">@anthonyfok</a>, <a href="https://github.com/vsopvsop">@vsopvsop</a>, and <a href="https://github.com/moorereason">@moorereason</a> for their ongoing contributions. And a big thanks to <a href="https://github.com/digitalcraftsman">@digitalcraftsman</a> for his relentless work on keeping the themes site in pristine condition and to <a href="https://github.com/kaushalmodi">@kaushalmodi</a> for his great work on the documentation site.</p>
 <p>Many have also been busy writing and fixing the documentation in <a href="https://github.com/gohugoio/hugoDocs">hugoDocs</a>,
 which has received <strong>15 contributions by 12 contributors</strong>. A special thanks to <a href="https://github.com/bep">@bep</a>, <a href="https://github.com/kaushalmodi">@kaushalmodi</a>, <a href="https://github.com/regisphilibert">@regisphilibert</a>, and <a href="https://github.com/anthonyfok">@anthonyfok</a> for their work on the documentation site.</p>
@@ -305,7 +305,7 @@ which has received <strong>15 contributions by 12 contributors</strong>. A speci
     
 
       <div class="gray f6 mv6">
-        Last Update: February 12, 2022 <br>
+        Last Update: March 6, 2022 <br>
         <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/news/0.48-relnotes/index.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 ">Improve this page</a>
@@ -550,6 +550,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 </footer>
+
+
+  
 
 
 </body>

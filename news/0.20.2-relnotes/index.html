@@ -13,7 +13,7 @@
   <title>Hugo 0.20.2 | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.15-DEV" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,10 +62,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/news/0.20.2-relnotes/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_15945618869257955593.png"/><meta property="article:section" content="news" />
 <meta property="article:published_time" content="2017-04-16T13:53:58-04:00" />
-<meta property="article:modified_time" content="2022-02-12T14:25:46+07:00" />
+<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="name" content="Hugo 0.20.2">
 <meta itemprop="description" content="Hugo 0.20.2 adds support for plain text partials included into HTML templates"><meta itemprop="datePublished" content="2017-04-16T13:53:58-04:00" />
-<meta itemprop="dateModified" content="2022-02-12T14:25:46+07:00" />
+<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="wordCount" content="253"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_15945618869257955593.png"/>
@@ -287,31 +287,31 @@
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">params</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">colors</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">main</span><span class="p">:</span><span class="w"> </span><span class="l">green</span><span class="w">
-</span><span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l">blue</span><span class="w">
-</span></code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">colors</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">main</span><span class="p">:</span><span class="w"> </span><span class="l">green</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l">blue</span><span class="w">
+</span></span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
-  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">colors</span><span class="p">]</span>
-    <span class="nx">main</span> <span class="p">=</span> <span class="s1">&#39;green&#39;</span>
-    <span class="nx">text</span> <span class="p">=</span> <span class="s1">&#39;blue&#39;</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">colors</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">main</span> <span class="p">=</span> <span class="s1">&#39;green&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">text</span> <span class="p">=</span> <span class="s1">&#39;blue&#39;</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;params&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;colors&#34;</span><span class="p">:</span> <span class="p">{</span>
-         <span class="nt">&#34;main&#34;</span><span class="p">:</span> <span class="s2">&#34;green&#34;</span><span class="p">,</span>
-         <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;blue&#34;</span>
-      <span class="p">}</span>
-   <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;params&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;colors&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;main&#34;</span><span class="p">:</span> <span class="s2">&#34;green&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;blue&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
   </div>
@@ -335,7 +335,7 @@
     
 
       <div class="gray f6 mv6">
-        Last Update: February 12, 2022 <br>
+        Last Update: March 6, 2022 <br>
         <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/news/0.20.2-relnotes/index.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 ">Improve this page</a>
@@ -580,6 +580,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 </footer>
+
+
+  
 
 
 </body>

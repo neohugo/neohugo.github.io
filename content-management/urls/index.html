@@ -13,7 +13,7 @@
   <title>URL Management | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.15-DEV" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,10 +62,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/content-management/urls/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_8453457148814798693.png"/><meta property="article:section" content="content-management" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-02-12T14:25:46+07:00" />
+<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="name" content="URL Management">
 <meta itemprop="description" content="Hugo supports permalinks, aliases, link canonicalization, and multiple options for handling relative vs absolute URLs."><meta itemprop="datePublished" content="2017-02-01T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-02-12T14:25:46+07:00" />
+<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="wordCount" content="1678"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_8453457148814798693.png"/>
@@ -298,22 +298,22 @@
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">permalinks</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">posts</span><span class="p">:</span><span class="w"> </span><span class="l">/:year/:month/:title/</span><span class="w">
-</span></code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">permalinks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">posts</span><span class="p">:</span><span class="w"> </span><span class="l">/:year/:month/:title/</span><span class="w">
+</span></span></span></code></pre></div>
       </div>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
-  <span class="nx">posts</span> <span class="p">=</span> <span class="s1">&#39;/:year/:month/:title/&#39;</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">posts</span> <span class="p">=</span> <span class="s1">&#39;/:year/:month/:title/&#39;</span>
+</span></span></code></pre></div>
       </div>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;permalinks&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;posts&#34;</span><span class="p">:</span> <span class="s2">&#34;/:year/:month/:title/&#34;</span>
-   <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;permalinks&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;posts&#34;</span><span class="p">:</span> <span class="s2">&#34;/:year/:month/:title/&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
       </div>
   </div>
 </div>
@@ -339,22 +339,22 @@
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">permalinks</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">/</span><span class="p">:</span><span class="w"> </span><span class="l">/:year/:month/:filename/</span><span class="w">
-</span></code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">permalinks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">/</span><span class="p">:</span><span class="w"> </span><span class="l">/:year/:month/:filename/</span><span class="w">
+</span></span></span></code></pre></div>
       </div>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
-  <span class="s1">&#39;/&#39;</span> <span class="p">=</span> <span class="s1">&#39;/:year/:month/:filename/&#39;</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;/&#39;</span> <span class="p">=</span> <span class="s1">&#39;/:year/:month/:filename/&#39;</span>
+</span></span></code></pre></div>
       </div>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;permalinks&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;/&#34;</span><span class="p">:</span> <span class="s2">&#34;/:year/:month/:filename/&#34;</span>
-   <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;permalinks&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;/&#34;</span><span class="p">:</span> <span class="s2">&#34;/:year/:month/:filename/&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
       </div>
   </div>
 </div>
@@ -379,22 +379,22 @@
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">permalinks</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">posts</span><span class="p">:</span><span class="w"> </span><span class="l">/:06/:1/:2/:title/</span><span class="w">
-</span></code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">permalinks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">posts</span><span class="p">:</span><span class="w"> </span><span class="l">/:06/:1/:2/:title/</span><span class="w">
+</span></span></span></code></pre></div>
       </div>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
-  <span class="nx">posts</span> <span class="p">=</span> <span class="s1">&#39;/:06/:1/:2/:title/&#39;</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">posts</span> <span class="p">=</span> <span class="s1">&#39;/:06/:1/:2/:title/&#39;</span>
+</span></span></code></pre></div>
       </div>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;permalinks&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;posts&#34;</span><span class="p">:</span> <span class="s2">&#34;/:06/:1/:2/:title/&#34;</span>
-   <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;permalinks&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;posts&#34;</span><span class="p">:</span> <span class="s2">&#34;/:06/:1/:2/:title/&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
       </div>
   </div>
 </div>
@@ -455,12 +455,12 @@
 <div class="code relative" id="content/posts/my-awesome-post.md"><div class="filename san-serif f6 dib lh-solid pl2 pv2">content/posts/my-awesome-post.md</div>
 	<div class="code-copy-content nt3" >
 		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md">+++
-aliases = [
-    &#34;/posts/my-original-url/&#34;,
-    &#34;/2010/01/01/even-earlier-url.html&#34;
-]
-+++</code></pre></div>
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">+++
+</span></span><span class="line"><span class="cl">aliases = [
+</span></span><span class="line"><span class="cl">    &#34;/posts/my-original-url/&#34;,
+</span></span><span class="line"><span class="cl">    &#34;/2010/01/01/even-earlier-url.html&#34;
+</span></span><span class="line"><span class="cl">]
+</span></span><span class="line"><span class="cl">+++</span></span></code></pre></div>
 	</div>
 
 </div>
@@ -477,11 +477,11 @@ aliases = [
 <div class="code relative" id="content/posts/my-awesome-post.md"><div class="filename san-serif f6 dib lh-solid pl2 pv2">content/posts/my-awesome-post.md</div>
 	<div class="code-copy-content nt3" >
 		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md">---
-aliases:
-    <span class="k">-</span> /posts/my-original-url/
-    <span class="k">-</span> /2010/01/01/even-earlier-url.html
----</code></pre></div>
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">aliases:
+</span></span><span class="line"><span class="cl">    <span class="k">-</span> /posts/my-original-url/
+</span></span><span class="line"><span class="cl">    <span class="k">-</span> /2010/01/01/even-earlier-url.html
+</span></span><span class="line"><span class="cl">---</span></span></code></pre></div>
 	</div>
 
 </div>
@@ -507,10 +507,10 @@ aliases: [/posts/my-old-url/]
 &lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;https://example.com/posts/my-intended-url&lt;/title&gt;
-    &lt;link rel=&quot;canonical&quot; href=&quot;https://example.com/posts/my-intended-url&quot;/&gt;
-    &lt;meta name=&quot;robots&quot; content=&quot;noindex&quot;&gt;
-    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot;/&gt;
-    &lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; url=https://example.com/posts/my-intended-url&quot;/&gt;
+    &lt;link rel=&#34;canonical&#34; href=&#34;https://example.com/posts/my-intended-url&#34;/&gt;
+    &lt;meta name=&#34;robots&#34; content=&#34;noindex&#34;&gt;
+    &lt;meta http-equiv=&#34;content-type&#34; content=&#34;text/html; charset=utf-8&#34;/&gt;
+    &lt;meta http-equiv=&#34;refresh&#34; content=&#34;0; url=https://example.com/posts/my-intended-url&#34;/&gt;
   &lt;/head&gt;
 &lt;/html&gt;
 </code></pre><p>The <code>http-equiv=&quot;refresh&quot;</code> line is what performs the redirect, in 0 seconds in this case. If an end user of your website goes to <code>https://example.com/posts/my-old-url</code>, they will now be automatically redirected to the newer, correct URL. The addition of <code>&lt;meta name=&quot;robots&quot; content=&quot;noindex&quot;&gt;</code> lets search engine bots know that they should not crawl and index your new alias page.</p>
@@ -590,15 +590,15 @@ content/posts/post-1.md
 <p>In addition to specifying permalink values in your site configuration for different content sections, Hugo provides even more granular control for individual pieces of content.</p>
 <p>Both <code>slug</code> and <code>url</code> can be defined in individual front matter. For more information on content destinations at build time, see <a href="/content-management/organization/">Content Organization</a>.</p>
 <p>From Hugo 0.55, you can use URLs relative to the current site context (the language), which makes it simpler to maintain. For a Japanese translation, both of the following examples would get the same URL:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown">---
-title: &#34;Custom URL!&#34;
-url: &#34;/jp/custom/foo&#34;
----
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown">---
-title: &#34;Custom URL!&#34;
-url: &#34;custom/foo&#34;
----
-</code></pre></div><h2 id="relative-urls">Relative URLs <a class="header-link" href="#relative-urls"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">title: &#34;Custom URL!&#34;
+</span></span><span class="line"><span class="cl">url: &#34;/jp/custom/foo&#34;
+</span></span><span class="line"><span class="cl">---
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">title: &#34;Custom URL!&#34;
+</span></span><span class="line"><span class="cl">url: &#34;custom/foo&#34;
+</span></span><span class="line"><span class="cl">---
+</span></span></code></pre></div><h2 id="relative-urls">Relative URLs <a class="header-link" href="#relative-urls"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>By default, all relative URLs are left unchanged by Hugo, which can be problematic when you want to make your site browsable from a local file system.</p>
 <p>Setting <code>relativeURLs</code> to <code>true</code> in your <a href="/getting-started/configuration/">site configuration</a> will cause Hugo to rewrite all relative URLs to be relative to the current content.</p>
 <p>For example, if your <code>/posts/first/</code> page contains a link to <code>/about/</code>, Hugo will rewrite the URL to <code>../../about/</code>.</p>
@@ -759,6 +759,11 @@ url: &#34;custom/foo&#34;
           <li class="f6 fw4">
             <a href="/content-management/formats/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Content Formats
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/content-management/diagrams/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Diagrams
             </a>
           </li>
           <li class="f6 fw4">
@@ -1700,11 +1705,6 @@ url: &#34;custom/foo&#34;
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/variables/hugo/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hugo Variables
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/variables/git/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Git Variables
             </a>
@@ -1955,7 +1955,7 @@ url: &#34;custom/foo&#34;
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: February 12, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b162c296b7f2066827adadc6ebff61028366790d">Merge pull request #102 from blackb1rd/hugo/v0.92.2 (b162c29)</a>
+  Last updated: March 6, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/bc2bc7c8dd3645fdf6a0da2ecb9bb182571b08b3">Merge pull request #103 from blackb1rd/hugo/v0.93.2 (bc2bc7c)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/content-management/urls.md" class="
@@ -2203,6 +2203,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 </footer>
+
+
+  
 
 
 </body>

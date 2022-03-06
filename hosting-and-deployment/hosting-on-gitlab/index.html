@@ -13,7 +13,7 @@
   <title>Host on GitLab | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.15-DEV" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -32,7 +32,7 @@
   
 
   <meta name="description"
-  content="GitLab makes it incredibly easy to build, deploy, and host your Hugo website via their free GitLab Pages service, which provides native support for Hugo.">
+  content="GitLab makes it easy to build, deploy, and host your Hugo website via their free GitLab Pages service, which provides native support for Hugo.">
 
   
 
@@ -58,19 +58,19 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0594cb">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:title" content="Host on GitLab" />
-<meta property="og:description" content="GitLab makes it incredibly easy to build, deploy, and host your Hugo website via their free GitLab Pages service, which provides native support for Hugo." />
+<meta property="og:description" content="GitLab makes it easy to build, deploy, and host your Hugo website via their free GitLab Pages service, which provides native support for Hugo." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/hosting-and-deployment/hosting-on-gitlab/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_16132829179492622671.png"/><meta property="article:section" content="hosting-and-deployment" />
 <meta property="article:published_time" content="2016-06-23T00:00:00+02:00" />
-<meta property="article:modified_time" content="2022-02-12T14:25:46+07:00" />
+<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="name" content="Host on GitLab">
-<meta itemprop="description" content="GitLab makes it incredibly easy to build, deploy, and host your Hugo website via their free GitLab Pages service, which provides native support for Hugo."><meta itemprop="datePublished" content="2016-06-23T00:00:00+02:00" />
-<meta itemprop="dateModified" content="2022-02-12T14:25:46+07:00" />
-<meta itemprop="wordCount" content="293"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="description" content="GitLab makes it easy to build, deploy, and host your Hugo website via their free GitLab Pages service, which provides native support for Hugo."><meta itemprop="datePublished" content="2016-06-23T00:00:00+02:00" />
+<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
+<meta itemprop="wordCount" content="256"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_16132829179492622671.png"/>
 <meta name="twitter:title" content="Host on GitLab"/>
-<meta name="twitter:description" content="GitLab makes it incredibly easy to build, deploy, and host your Hugo website via their free GitLab Pages service, which provides native support for Hugo."/>
+<meta name="twitter:description" content="GitLab makes it easy to build, deploy, and host your Hugo website via their free GitLab Pages service, which provides native support for Hugo."/>
 <meta name="twitter:site" content="@GoHugoIO"/>
 
 
@@ -199,7 +199,8 @@
   	<nav id="TableOfContents">
   <ul>
     <li><a href="#assumptions">Assumptions</a></li>
-    <li><a href="#create-gitlab-ciyml">Create .gitlab-ci.yml</a></li>
+    <li><a href="#baseurl">BaseURL</a></li>
+    <li><a href="#configure-gitlab-cicd">Configure GitLab CI/CD</a></li>
     <li><a href="#push-your-hugo-website-to-gitlab">Push Your Hugo Website to GitLab</a></li>
     <li><a href="#wait-for-your-page-to-build">Wait for Your Page to Build</a></li>
     <li><a href="#next-steps">Next Steps</a></li>
@@ -250,7 +251,7 @@
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      GitLab makes it incredibly easy to build, deploy, and host your Hugo website via their free GitLab Pages service, which provides native support for Hugo.
+      GitLab makes it easy to build, deploy, and host your Hugo website via their free GitLab Pages service, which provides native support for Hugo.
     </div>
   
 
@@ -261,7 +262,6 @@
 
 <div class="prose" id="prose">
 
-<p><a href="https://gitlab.com/">GitLab</a> makes it incredibly easy to build, deploy, and host your Hugo website via their free GitLab Pages service, which provides <a href="https://gitlab.com/pages/hugo">native support for Hugo, as well as numerous other static site generators</a>.</p>
 <h2 id="assumptions">Assumptions <a class="header-link" href="#assumptions"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <ul>
 <li>Working familiarity with Git for version control</li>
@@ -269,9 +269,10 @@
 <li>A <a href="https://gitlab.com/users/sign_in">GitLab account</a></li>
 <li>A Hugo website on your local machine that you are ready to publish</li>
 </ul>
-<h2 id="create-gitlab-ciyml">Create .gitlab-ci.yml <a class="header-link" href="#create-gitlab-ciyml"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<pre tabindex="0"><code>cd your-hugo-site
-</code></pre><p>In the root directory of your Hugo site, create a <code>.gitlab-ci.yml</code> file. The <code>.gitlab-ci.yml</code> configures the GitLab CI on how to build your page. Simply add the content below.</p>
+<h2 id="baseurl">BaseURL <a class="header-link" href="#baseurl"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<p>The <code>baseURL</code> in your <a href="/getting-started/configuration/">site configuration</a> must reflect the full URL of your GitLab pages repository if you are using the default GitLab Pages URL (e.g., <code>https://&lt;YourUsername&gt;.gitlab.io/&lt;your-hugo-site&gt;/</code>) and not a custom domain.</p>
+<h2 id="configure-gitlab-cicd">Configure GitLab CI/CD <a class="header-link" href="#configure-gitlab-cicd"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<p>Define your <a href="https://docs.gitlab.com/ee/ci/quick_start/">CI/CD</a> jobs by creating a <code>.gitlab-ci.yml</code> file in the root of your project.</p>
 
 
 
@@ -287,19 +288,19 @@
 	
 	<div class="code-copy-content nt3" >
 		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">registry.gitlab.com/pages/hugo:latest</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="nt">variables</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">GIT_SUBMODULE_STRATEGY</span><span class="p">:</span><span class="w"> </span><span class="l">recursive</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="nt">pages</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">script</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- <span class="l">hugo</span><span class="w">
-</span><span class="w">  </span><span class="nt">artifacts</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">paths</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span>- <span class="l">public</span><span class="w">
-</span><span class="w">  </span><span class="nt">only</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- <span class="l">master</span></code></pre></div>
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">registry.gitlab.com/pages/hugo/hugo_extended:latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">variables</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">GIT_SUBMODULE_STRATEGY</span><span class="p">:</span><span class="w"> </span><span class="l">recursive</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">pages</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">script</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">hugo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">artifacts</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">paths</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">public</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">rules</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l">$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH</span></span></span></code></pre></div>
 	</div>
 
 </div>
@@ -311,37 +312,26 @@
 	</div>
 	
 	
-	<div class="admonition-content"><p>All available Hugo versions are listed <a href="https://gitlab.com/pages/hugo/container_registry">here</a></p>
+	<div class="admonition-content"><p>See <a href="https://gitlab.com/pages/hugo/container_registry">this list</a> if you wish to use a particular Hugo version to build your site.</p>
 </div>
 </aside>
 
 <h2 id="push-your-hugo-website-to-gitlab">Push Your Hugo Website to GitLab <a class="header-link" href="#push-your-hugo-website-to-gitlab"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Next, create a new repository on GitLab. It is <em>not</em> necessary to make the repository public. In addition, you might want to add <code>/public</code> to your .gitignore file, as there is no need to push compiled assets to GitLab or keep your output website in version control.</p>
-<pre tabindex="0"><code># initialize new git repository
-git init
-
-# add /public directory to our .gitignore file
-echo &quot;/public&quot; &gt;&gt; .gitignore
-
-# commit and push code to master branch
-git add .
-git commit -m &quot;Initial commit&quot;
-git remote add origin https://gitlab.com/YourUsername/your-hugo-site.git
-git push -u origin master
-</code></pre><h2 id="wait-for-your-page-to-build">Wait for Your Page to Build <a class="header-link" href="#wait-for-your-page-to-build"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># initialize new git repository</span>
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># add /public directory to our .gitignore file</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;/public&#34;</span> &gt;&gt; .gitignore
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># commit and push code to master branch</span>
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;Initial commit&#34;</span>
+</span></span><span class="line"><span class="cl">git remote add origin https://gitlab.com/YourUsername/your-hugo-site.git
+</span></span><span class="line"><span class="cl">git push -u origin master
+</span></span></code></pre></div><h2 id="wait-for-your-page-to-build">Wait for Your Page to Build <a class="header-link" href="#wait-for-your-page-to-build"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>That&rsquo;s it! You can now follow the CI agent building your page at <code>https://gitlab.com/&lt;YourUsername&gt;/&lt;your-hugo-site&gt;/pipelines</code>.</p>
 <p>After the build has passed, your new website is available at <code>https://&lt;YourUsername&gt;.gitlab.io/&lt;your-hugo-site&gt;/</code>.</p>
-
-<aside class="admonition note">
-	<div class="note-icon">
-		
-	</div>
-	
-	
-	<div class="admonition-content"><p>Make sure your <code>baseURL</code> key-value in your <a href="/getting-started/configuration/">site configuration</a> reflects the full URL of your GitLab pages repository if you&rsquo;re using the default GitLab Pages URL (e.g., <code>https://&lt;YourUsername&gt;.gitlab.io/&lt;your-hugo-site&gt;/</code>) and not a custom domain.</p>
-</div>
-</aside>
-
 <h2 id="next-steps">Next Steps <a class="header-link" href="#next-steps"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>GitLab supports using custom CNAME&rsquo;s and TLS certificates. For more details on GitLab Pages, see the <a href="https://about.gitlab.com/2016/04/07/gitlab-pages-setup/">GitLab Pages setup documentation</a>.</p>
 
@@ -501,6 +491,11 @@ git push -u origin master
           <li class="f6 fw4">
             <a href="/content-management/formats/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Content Formats
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/content-management/diagrams/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Diagrams
             </a>
           </li>
           <li class="f6 fw4">
@@ -1442,11 +1437,6 @@ git push -u origin master
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/variables/hugo/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hugo Variables
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/variables/git/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Git Variables
             </a>
@@ -1697,7 +1687,7 @@ git push -u origin master
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: February 12, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b162c296b7f2066827adadc6ebff61028366790d">Merge pull request #102 from blackb1rd/hugo/v0.92.2 (b162c29)</a>
+  Last updated: March 6, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/bc2bc7c8dd3645fdf6a0da2ecb9bb182571b08b3">Merge pull request #103 from blackb1rd/hugo/v0.93.2 (bc2bc7c)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/hosting-and-deployment/hosting-on-gitlab.md" class="
@@ -1945,6 +1935,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 </footer>
+
+
+  
 
 
 </body>

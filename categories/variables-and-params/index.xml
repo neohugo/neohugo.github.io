@@ -91,17 +91,6 @@ Menu Entry Variables   .Menu string Name of the menu that contains this menu ent
     </item>
     
     <item>
-      <title>Hugo-specific Variables</title>
-      <link>https://gohugo.io/variables/hugo/</link>
-      <pubDate>Sun, 12 Mar 2017 00:00:00 +0100</pubDate>
-      
-      <guid>https://gohugo.io/variables/hugo/</guid>
-      <description>Page&amp;rsquo;s .Hugo is deprecated and will be removed in a future release. Use the global hugo function. For example: hugo.Generator.
-  It contains the following fields:
- .Hugo.Generator &amp;lt;meta&amp;gt; tag for the version of Hugo that generated the site. .Hugo.Generator outputs a complete HTML tag; e.g. &amp;lt;meta name=&amp;quot;generator&amp;quot; content=&amp;quot;Hugo 0.18&amp;quot; /&amp;gt; .Hugo.Version the current version of the Hugo binary you are using e.g. 0.13-DEV .Hugo.Environment the current running environment as defined through the --environment cli tag.</description>
-    </item>
-    
-    <item>
       <title>Git Info Variables</title>
       <link>https://gohugo.io/variables/git/</link>
       <pubDate>Sun, 12 Mar 2017 00:00:00 +0100</pubDate>

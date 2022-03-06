@@ -13,7 +13,7 @@
   <title>Hugo 0.36.1: One Bugfix | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.15-DEV" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,10 +62,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/news/0.36.1-relnotes/" /><meta property="og:image" content="https://gohugo.io/images/blog/hugo-bug-poster.png" /><meta property="article:section" content="news" />
 <meta property="article:published_time" content="2018-02-15T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-02-12T14:25:46+07:00" />
+<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="name" content="Hugo 0.36.1: One Bugfix">
 <meta itemprop="description" content="Fixes a multi-thread image processing issue."><meta itemprop="datePublished" content="2018-02-15T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-02-12T14:25:46+07:00" />
+<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="wordCount" content="196"><meta itemprop="image" content="https://gohugo.io/images/blog/hugo-bug-poster.png">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/images/blog/hugo-bug-poster.png"/>
@@ -262,20 +262,20 @@
           
         <pre><code>This release fixes a multi-thread issue when reprocessing and reusing images across pages. When doing something like this with the same image from a partial used in, say, both the home page and the single page:
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="o">{{</span> with <span class="nv">$img</span> <span class="o">}}</span>
-<span class="o">{{</span> <span class="nv">$big</span> :<span class="o">=</span> .Fill <span class="s2">&#34;1024x512 top&#34;</span> <span class="o">}}</span>
-<span class="o">{{</span> <span class="nv">$small</span> :<span class="o">=</span> <span class="nv">$big</span>.Resize <span class="s2">&#34;512x&#34;</span> <span class="o">}}</span>
-<span class="o">{{</span> end <span class="o">}}</span>
-</code></pre></div><p>There would be timing issues making Hugo in some cases trying to process the same image twice at the same time.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">{{</span> with <span class="nv">$img</span> <span class="o">}}</span>
+</span></span><span class="line"><span class="cl"><span class="o">{{</span> <span class="nv">$big</span> :<span class="o">=</span> .Fill <span class="s2">&#34;1024x512 top&#34;</span> <span class="o">}}</span>
+</span></span><span class="line"><span class="cl"><span class="o">{{</span> <span class="nv">$small</span> :<span class="o">=</span> <span class="nv">$big</span>.Resize <span class="s2">&#34;512x&#34;</span> <span class="o">}}</span>
+</span></span><span class="line"><span class="cl"><span class="o">{{</span> end <span class="o">}}</span>
+</span></span></code></pre></div><p>There would be timing issues making Hugo in some cases trying to process the same image twice at the same time.</p>
 <p>You would experience errors of type:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">png: invalid format: not enough pixel data
-</code></pre></div><p>This commit fixes that by adding a mutex per image. This should also improve the performance, slightly, as it avoids duplicate work.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">png: invalid format: not enough pixel data
+</span></span></code></pre></div><p>This commit fixes that by adding a mutex per image. This should also improve the performance, slightly, as it avoids duplicate work.</p>
 <p>The current workaround before this fix is to always operate on the original:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="o">{{</span> with <span class="nv">$img</span> <span class="o">}}</span>
-<span class="o">{{</span> <span class="nv">$big</span> :<span class="o">=</span> .Fill <span class="s2">&#34;1024x512 top&#34;</span> <span class="o">}}</span>
-<span class="o">{{</span> <span class="nv">$small</span> :<span class="o">=</span> .Fill <span class="s2">&#34;512x256 top&#34;</span> <span class="o">}}</span>
-<span class="o">{{</span> end <span class="o">}}</span>
-</code></pre></div><p>This error was rare (no reports on GitHub or the discussion forum), but very hard to debug for the end user.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">{{</span> with <span class="nv">$img</span> <span class="o">}}</span>
+</span></span><span class="line"><span class="cl"><span class="o">{{</span> <span class="nv">$big</span> :<span class="o">=</span> .Fill <span class="s2">&#34;1024x512 top&#34;</span> <span class="o">}}</span>
+</span></span><span class="line"><span class="cl"><span class="o">{{</span> <span class="nv">$small</span> :<span class="o">=</span> .Fill <span class="s2">&#34;512x256 top&#34;</span> <span class="o">}}</span>
+</span></span><span class="line"><span class="cl"><span class="o">{{</span> end <span class="o">}}</span>
+</span></span></code></pre></div><p>This error was rare (no reports on GitHub or the discussion forum), but very hard to debug for the end user.</p>
 <ul>
 <li>Fix multi-threaded image processing issue <a href="https://github.com/gohugoio/hugo/commit/d8fdffb55268464d54558d6f9cd3874b612dc7c7">d8fdffb5</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/4404">#4404</a></li>
 <li>Improve error message in .Render <a href="https://github.com/gohugoio/hugo/commit/08521dac8323403933a8fd11acfd16930af5f17d">08521dac</a> <a href="https://github.com/bep">@bep</a></li>
@@ -288,7 +288,7 @@
     
 
       <div class="gray f6 mv6">
-        Last Update: February 12, 2022 <br>
+        Last Update: March 6, 2022 <br>
         <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/news/0.36.1-relnotes/index.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 ">Improve this page</a>
@@ -533,6 +533,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 </footer>
+
+
+  
 
 
 </body>

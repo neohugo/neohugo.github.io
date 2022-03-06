@@ -13,7 +13,7 @@
   <title>Hugo 0.22 | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.15-DEV" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,10 +62,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/news/0.22-relnotes/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_8359523892597306043.png"/><meta property="article:section" content="news" />
 <meta property="article:published_time" content="2017-06-12T17:53:58-04:00" />
-<meta property="article:modified_time" content="2022-02-12T14:25:46+07:00" />
+<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="name" content="Hugo 0.22">
 <meta itemprop="description" content="Hugo 0.22 brings nested sections, by popular demand and a long sought after feature"><meta itemprop="datePublished" content="2017-06-12T17:53:58-04:00" />
-<meta itemprop="dateModified" content="2022-02-12T14:25:46+07:00" />
+<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="wordCount" content="499"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_8359523892597306043.png"/>
@@ -270,7 +270,7 @@
 </ul>
 <h2 id="other-highlights">Other Highlights <a class="header-link" href="#other-highlights"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p><code>.Site.GetPage</code> can now also be used to get regular pages (<a href="https://github.com/gohugoio/hugo/issues/2844">#2844</a>):</p>
-<pre tabindex="0"><code>{{ (.Site.GetPage &quot;page&quot; &quot;blog&quot; &quot;mypost.md&quot; ).Title }}
+<pre tabindex="0"><code>{{ (.Site.GetPage &#34;page&#34; &#34;blog&#34; &#34;mypost.md&#34; ).Title }}
 </code></pre><p>Also, considerable work has been put into writing automated benchmark tests for the site builds, and we're happy to report that although this release comes with fundamental structural changes, this version is &ndash; in general &ndash; even faster than the previous. It’s quite a challenge to consistently add significant new functionality and simultaneously maintain the stellar performance Hugo is famous for.</p>
 <h2 id="notes">Notes <a class="header-link" href="#notes"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p><code>.Site.Sections</code> is replaced. We have reworked how sections work in Hugo, they can now be nested and are no longer taxonomies. If you use the old collection, you should get detailed upgrade instructions in the log when you run <code>hugo</code>. For more information, see this <a href="http://hugotest.bep.is/">demo site</a>.</p>
@@ -330,7 +330,7 @@
     
 
       <div class="gray f6 mv6">
-        Last Update: February 12, 2022 <br>
+        Last Update: March 6, 2022 <br>
         <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/news/0.22-relnotes/index.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 ">Improve this page</a>
@@ -575,6 +575,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 </footer>
+
+
+  
 
 
 </body>

@@ -25,9 +25,9 @@ hugo [flags] Options   -b, --baseURL string hostname (and path) to the root, e.g
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/commands/hugo_completion/</guid>
-      <description>hugo completion  generate the autocompletion script for the specified shell
+      <description>hugo completion  Generate the autocompletion script for the specified shell
 Synopsis  Generate the autocompletion script for hugo for the specified shell. See each sub-command&amp;rsquo;s help for details on how to use the generated script.
-Options   -h, --help help for completion Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;quot;config&amp;quot;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo	- hugo builds your site hugo completion bash	- generate the autocompletion script for bash hugo completion fish	- generate the autocompletion script for fish hugo completion powershell	- generate the autocompletion script for powershell hugo completion zsh	- generate the autocompletion script for zsh  </description>
+Options   -h, --help help for completion Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;#34;config&amp;#34;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo	- hugo builds your site hugo completion bash	- Generate the autocompletion script for bash hugo completion fish	- Generate the autocompletion script for fish hugo completion powershell	- Generate the autocompletion script for powershell hugo completion zsh	- Generate the autocompletion script for zsh  </description>
     </item>
     
     <item>
@@ -36,11 +36,12 @@ Options   -h, --help help for completion Options inherited from parent commands 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/commands/hugo_completion_bash/</guid>
-      <description>hugo completion bash  generate the autocompletion script for bash
+      <description>hugo completion bash  Generate the autocompletion script for bash
 Synopsis  Generate the autocompletion script for the bash shell.
 This script depends on the &amp;lsquo;bash-completion&amp;rsquo; package. If it is not installed already, you can install it via your OS&amp;rsquo;s package manager.
-To load completions in your current shell session: $ source &amp;lt;(hugo completion bash)
-To load completions for every new session, execute once: Linux: $ hugo completion bash &amp;gt; /etc/bash_completion.</description>
+To load completions in your current shell session:
+source &amp;lt;(hugo completion bash)  To load completions for every new session, execute once:
+Linux:  hugo completion bash &amp;gt; /etc/bash_completion.</description>
     </item>
     
     <item>
@@ -49,11 +50,11 @@ To load completions for every new session, execute once: Linux: $ hugo completio
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/commands/hugo_completion_fish/</guid>
-      <description>hugo completion fish  generate the autocompletion script for fish
+      <description>hugo completion fish  Generate the autocompletion script for fish
 Synopsis  Generate the autocompletion script for the fish shell.
-To load completions in your current shell session: $ hugo completion fish | source
-To load completions for every new session, execute once: $ hugo completion fish &amp;gt; ~/.config/fish/completions/hugo.fish
-You will need to start a new shell for this setup to take effect.
+To load completions in your current shell session:
+hugo completion fish | source  To load completions for every new session, execute once:
+hugo completion fish &amp;gt; ~/.config/fish/completions/hugo.fish  You will need to start a new shell for this setup to take effect.
 hugo completion fish [flags] Options   -h, --help help for fish --no-descriptions disable completion descriptions Options inherited from parent commands   --config string config file (default is path/config.</description>
     </item>
     
@@ -63,10 +64,10 @@ hugo completion fish [flags] Options   -h, --help help for fish --no-description
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/commands/hugo_completion_powershell/</guid>
-      <description>hugo completion powershell  generate the autocompletion script for powershell
+      <description>hugo completion powershell  Generate the autocompletion script for powershell
 Synopsis  Generate the autocompletion script for powershell.
-To load completions in your current shell session: PS C:&amp;gt; hugo completion powershell | Out-String | Invoke-Expression
-To load completions for every new session, add the output of the above command to your powershell profile.
+To load completions in your current shell session:
+hugo completion powershell | Out-String | Invoke-Expression  To load completions for every new session, add the output of the above command to your powershell profile.
 hugo completion powershell [flags] Options   -h, --help help for powershell --no-descriptions disable completion descriptions Options inherited from parent commands   --config string config file (default is path/config.</description>
     </item>
     
@@ -76,13 +77,11 @@ hugo completion powershell [flags] Options   -h, --help help for powershell --no
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/commands/hugo_completion_zsh/</guid>
-      <description>hugo completion zsh  generate the autocompletion script for zsh
+      <description>hugo completion zsh  Generate the autocompletion script for zsh
 Synopsis  Generate the autocompletion script for the zsh shell.
 If shell completion is not already enabled in your environment you will need to enable it. You can execute the following once:
-$ echo &amp;ldquo;autoload -U compinit; compinit&amp;rdquo; &amp;raquo; ~/.zshrc
-To load completions for every new session, execute once:
-Linux: $ hugo completion zsh &amp;gt; &amp;ldquo;${fpath[1]}/_hugo&amp;rdquo;
-macOS: $ hugo completion zsh &amp;gt; /usr/local/share/zsh/site-functions/_hugo</description>
+echo &amp;quot;autoload -U compinit; compinit&amp;quot; &amp;gt;&amp;gt; ~/.zshrc  To load completions for every new session, execute once:
+Linux:  hugo completion zsh &amp;gt; &amp;quot;${fpath[1]}/_hugo&amp;quot;  macOS:  hugo completion zsh &amp;gt; /usr/local/share/zsh/site-functions/_hugo  You will need to start a new shell for this setup to take effect.</description>
     </item>
     
     <item>
@@ -93,7 +92,7 @@ macOS: $ hugo completion zsh &amp;gt; /usr/local/share/zsh/site-functions/_hugo<
       <guid>https://gohugo.io/commands/hugo_config/</guid>
       <description>hugo config  Print the site configuration
 Synopsis  Print the site configuration, both default and custom settings.
-hugo config [flags] Options   -h, --help help for config Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;quot;config&amp;quot;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo	- hugo builds your site hugo config mounts	- Print the configured file mounts  </description>
+hugo config [flags] Options   -h, --help help for config Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;#34;config&amp;#34;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo	- hugo builds your site hugo config mounts	- Print the configured file mounts  </description>
     </item>
     
     <item>
@@ -103,7 +102,7 @@ hugo config [flags] Options   -h, --help help for config Options inherited from 
       
       <guid>https://gohugo.io/commands/hugo_config_mounts/</guid>
       <description>hugo config mounts  Print the configured file mounts
-hugo config mounts [flags] Options   -h, --help help for mounts Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;quot;config&amp;quot;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo config	- Print the site configuration  </description>
+hugo config mounts [flags] Options   -h, --help help for mounts Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;#34;config&amp;#34;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo config	- Print the site configuration  </description>
     </item>
     
     <item>
@@ -115,7 +114,7 @@ hugo config mounts [flags] Options   -h, --help help for mounts Options inherite
       <description>hugo convert  Convert your content to different formats
 Synopsis  Convert your content (e.g. front matter) to different formats.
 See convert&amp;rsquo;s subcommands toJSON, toTOML and toYAML for more information.
-Options   -h, --help help for convert -o, --output string filesystem path to write files to --unsafe enable less safe operations, please backup first Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;quot;config&amp;quot;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo	- hugo builds your site hugo convert toJSON	- Convert front matter to JSON hugo convert toTOML	- Convert front matter to TOML hugo convert toYAML	- Convert front matter to YAML  </description>
+Options   -h, --help help for convert -o, --output string filesystem path to write files to --unsafe enable less safe operations, please backup first Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;#34;config&amp;#34;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo	- hugo builds your site hugo convert toJSON	- Convert front matter to JSON hugo convert toTOML	- Convert front matter to TOML hugo convert toYAML	- Convert front matter to YAML  </description>
     </item>
     
     <item>
@@ -126,7 +125,7 @@ Options   -h, --help help for convert -o, --output string filesystem path to wri
       <guid>https://gohugo.io/commands/hugo_convert_tojson/</guid>
       <description>hugo convert toJSON  Convert front matter to JSON
 Synopsis  toJSON converts all front matter in the content directory to use JSON for the front matter.
-hugo convert toJSON [flags] Options   -h, --help help for toJSON Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;quot;config&amp;quot;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) -o, --output string filesystem path to write files to --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory --unsafe enable less safe operations, please backup first -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo convert	- Convert your content to different formats  </description>
+hugo convert toJSON [flags] Options   -h, --help help for toJSON Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;#34;config&amp;#34;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) -o, --output string filesystem path to write files to --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory --unsafe enable less safe operations, please backup first -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo convert	- Convert your content to different formats  </description>
     </item>
     
     <item>
@@ -137,7 +136,7 @@ hugo convert toJSON [flags] Options   -h, --help help for toJSON Options inherit
       <guid>https://gohugo.io/commands/hugo_convert_totoml/</guid>
       <description>hugo convert toTOML  Convert front matter to TOML
 Synopsis  toTOML converts all front matter in the content directory to use TOML for the front matter.
-hugo convert toTOML [flags] Options   -h, --help help for toTOML Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;quot;config&amp;quot;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) -o, --output string filesystem path to write files to --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory --unsafe enable less safe operations, please backup first -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo convert	- Convert your content to different formats  </description>
+hugo convert toTOML [flags] Options   -h, --help help for toTOML Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;#34;config&amp;#34;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) -o, --output string filesystem path to write files to --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory --unsafe enable less safe operations, please backup first -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo convert	- Convert your content to different formats  </description>
     </item>
     
     <item>
@@ -148,7 +147,7 @@ hugo convert toTOML [flags] Options   -h, --help help for toTOML Options inherit
       <guid>https://gohugo.io/commands/hugo_convert_toyaml/</guid>
       <description>hugo convert toYAML  Convert front matter to YAML
 Synopsis  toYAML converts all front matter in the content directory to use YAML for the front matter.
-hugo convert toYAML [flags] Options   -h, --help help for toYAML Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;quot;config&amp;quot;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) -o, --output string filesystem path to write files to --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory --unsafe enable less safe operations, please backup first -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo convert	- Convert your content to different formats  </description>
+hugo convert toYAML [flags] Options   -h, --help help for toYAML Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;#34;config&amp;#34;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) -o, --output string filesystem path to write files to --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory --unsafe enable less safe operations, please backup first -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo convert	- Convert your content to different formats  </description>
     </item>
     
     <item>
@@ -172,7 +171,7 @@ hugo deploy [flags] Options   --confirm ask for confirmation before making chang
       <description>hugo env  Print Hugo version and environment info
 Synopsis  Print Hugo version and environment info. This is useful in Hugo bug reports.
 If you add the -v flag, you will get a full dependency list.
-hugo env [flags] Options   -h, --help help for env Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;quot;config&amp;quot;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo	- hugo builds your site  </description>
+hugo env [flags] Options   -h, --help help for env Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;#34;config&amp;#34;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo	- hugo builds your site  </description>
     </item>
     
     <item>
@@ -182,7 +181,7 @@ hugo env [flags] Options   -h, --help help for env Options inherited from parent
       
       <guid>https://gohugo.io/commands/hugo_gen/</guid>
       <description>hugo gen  A collection of several useful generators.
-Options   -h, --help help for gen Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;quot;config&amp;quot;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo	- hugo builds your site hugo gen chromastyles	- Generate CSS stylesheet for the Chroma code highlighter hugo gen doc	- Generate Markdown documentation for the Hugo CLI.</description>
+Options   -h, --help help for gen Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;#34;config&amp;#34;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo	- hugo builds your site hugo gen chromastyles	- Generate CSS stylesheet for the Chroma code highlighter hugo gen doc	- Generate Markdown documentation for the Hugo CLI.</description>
     </item>
     
     <item>
@@ -194,7 +193,7 @@ Options   -h, --help help for gen Options inherited from parent commands   --con
       <description>hugo gen chromastyles  Generate CSS stylesheet for the Chroma code highlighter
 Synopsis  Generate CSS stylesheet for the Chroma code highlighter for a given style. This stylesheet is needed if markup.highlight.noClasses is disabled in config.
 See https://xyproto.github.io/splash/docs/all.html for a preview of the available styles
-hugo gen chromastyles [flags] Options   -h, --help help for chromastyles --highlightStyle string style used for highlighting lines (see https://github.com/alecthomas/chroma) (default &amp;quot;bg:#ffffcc&amp;quot;) --linesStyle string style used for line numbers (see https://github.</description>
+hugo gen chromastyles [flags] Options   -h, --help help for chromastyles --highlightStyle string style used for highlighting lines (see https://github.com/alecthomas/chroma) (default &amp;#34;bg:#ffffcc&amp;#34;) --linesStyle string style used for line numbers (see https://github.</description>
     </item>
     
     <item>
@@ -207,7 +206,7 @@ hugo gen chromastyles [flags] Options   -h, --help help for chromastyles --highl
 Synopsis  Generate Markdown documentation for the Hugo CLI.
 This command is, mostly, used to create up-to-date documentation of Hugo&amp;rsquo;s command-line interface for http://gohugo.io/.
 It creates one Markdown file per command with front matter suitable for rendering in Hugo.
-hugo gen doc [flags] Options   --dir string the directory to write the doc. (default &amp;quot;/tmp/hugodoc/&amp;quot;) -h, --help help for doc Options inherited from parent commands   --config string config file (default is path/config.</description>
+hugo gen doc [flags] Options   --dir string the directory to write the doc. (default &amp;#34;/tmp/hugodoc/&amp;#34;) -h, --help help for doc Options inherited from parent commands   --config string config file (default is path/config.</description>
     </item>
     
     <item>
@@ -218,7 +217,7 @@ hugo gen doc [flags] Options   --dir string the directory to write the doc. (def
       <guid>https://gohugo.io/commands/hugo_gen_man/</guid>
       <description>hugo gen man  Generate man pages for the Hugo CLI
 Synopsis  This command automatically generates up-to-date man pages of Hugo&amp;rsquo;s command-line interface. By default, it creates the man page files in the &amp;ldquo;man&amp;rdquo; directory under the current directory.
-hugo gen man [flags] Options   --dir string the directory to write the man pages. (default &amp;quot;man/&amp;quot;) -h, --help help for man Options inherited from parent commands   --config string config file (default is path/config.</description>
+hugo gen man [flags] Options   --dir string the directory to write the man pages. (default &amp;#34;man/&amp;#34;) -h, --help help for man Options inherited from parent commands   --config string config file (default is path/config.</description>
     </item>
     
     <item>
@@ -230,7 +229,7 @@ hugo gen man [flags] Options   --dir string the directory to write the man pages
       <description>hugo import  Import your site from others.
 Synopsis  Import your site from other web site generators like Jekyll.
 Import requires a subcommand, e.g. hugo import jekyll jekyll_root_path target_path.
-Options   -h, --help help for import Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;quot;config&amp;quot;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo	- hugo builds your site hugo import jekyll	- hugo import from Jekyll  </description>
+Options   -h, --help help for import Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;#34;config&amp;#34;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo	- hugo builds your site hugo import jekyll	- hugo import from Jekyll  </description>
     </item>
     
     <item>
@@ -242,7 +241,7 @@ Options   -h, --help help for import Options inherited from parent commands   --
       <description>hugo import jekyll  hugo import from Jekyll
 Synopsis  hugo import from Jekyll.
 Import from Jekyll requires two paths, e.g. hugo import jekyll jekyll_root_path target_path.
-hugo import jekyll [flags] Options   --force allow import into non-empty target directory -h, --help help for jekyll Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;quot;config&amp;quot;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo import	- Import your site from others.</description>
+hugo import jekyll [flags] Options   --force allow import into non-empty target directory -h, --help help for jekyll Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;#34;config&amp;#34;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo import	- Import your site from others.</description>
     </item>
     
     <item>
@@ -254,7 +253,7 @@ hugo import jekyll [flags] Options   --force allow import into non-empty target 
       <description>hugo list  Listing out various types of content
 Synopsis  Listing out various types of content.
 List requires a subcommand, e.g. hugo list drafts.
-Options   -h, --help help for list Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;quot;config&amp;quot;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo	- hugo builds your site hugo list all	- List all posts hugo list drafts	- List all drafts hugo list expired	- List all posts already expired hugo list future	- List all posts dated in the future  </description>
+Options   -h, --help help for list Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;#34;config&amp;#34;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo	- hugo builds your site hugo list all	- List all posts hugo list drafts	- List all drafts hugo list expired	- List all posts already expired hugo list future	- List all posts dated in the future  </description>
     </item>
     
     <item>
@@ -265,7 +264,7 @@ Options   -h, --help help for list Options inherited from parent commands   --co
       <guid>https://gohugo.io/commands/hugo_list_all/</guid>
       <description>hugo list all  List all posts
 Synopsis  List all of the posts in your content directory, include drafts, future and expired pages.
-hugo list all [flags] Options   -h, --help help for all Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;quot;config&amp;quot;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo list	- Listing out various types of content  </description>
+hugo list all [flags] Options   -h, --help help for all Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;#34;config&amp;#34;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo list	- Listing out various types of content  </description>
     </item>
     
     <item>
@@ -276,7 +275,7 @@ hugo list all [flags] Options   -h, --help help for all Options inherited from p
       <guid>https://gohugo.io/commands/hugo_list_drafts/</guid>
       <description>hugo list drafts  List all drafts
 Synopsis  List all of the drafts in your content directory.
-hugo list drafts [flags] Options   -h, --help help for drafts Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;quot;config&amp;quot;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo list	- Listing out various types of content  </description>
+hugo list drafts [flags] Options   -h, --help help for drafts Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;#34;config&amp;#34;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo list	- Listing out various types of content  </description>
     </item>
     
     <item>
@@ -287,7 +286,7 @@ hugo list drafts [flags] Options   -h, --help help for drafts Options inherited 
       <guid>https://gohugo.io/commands/hugo_list_expired/</guid>
       <description>hugo list expired  List all posts already expired
 Synopsis  List all of the posts in your content directory which has already expired.
-hugo list expired [flags] Options   -h, --help help for expired Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;quot;config&amp;quot;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo list	- Listing out various types of content  </description>
+hugo list expired [flags] Options   -h, --help help for expired Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;#34;config&amp;#34;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo list	- Listing out various types of content  </description>
     </item>
     
     <item>
@@ -298,7 +297,7 @@ hugo list expired [flags] Options   -h, --help help for expired Options inherite
       <guid>https://gohugo.io/commands/hugo_list_future/</guid>
       <description>hugo list future  List all posts dated in the future
 Synopsis  List all of the posts in your content directory which will be posted in the future.
-hugo list future [flags] Options   -h, --help help for future Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;quot;config&amp;quot;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo list	- Listing out various types of content  </description>
+hugo list future [flags] Options   -h, --help help for future Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;#34;config&amp;#34;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo list	- Listing out various types of content  </description>
     </item>
     
     <item>
@@ -349,7 +348,7 @@ hugo mod get -u hugo mod get -u ./... (recursive)  Run &amp;ldquo;go help get&am
       <guid>https://gohugo.io/commands/hugo_mod_graph/</guid>
       <description>hugo mod graph  Print a module dependency graph.
 Synopsis  Print a module dependency graph with information about module status (disabled, vendored). Note that for vendored modules, that is the version listed and not the one from go.mod.
-hugo mod graph [flags] Options   -h, --help help for graph Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;quot;config&amp;quot;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo mod	- Various Hugo Modules helpers.</description>
+hugo mod graph [flags] Options   -h, --help help for graph Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;#34;config&amp;#34;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo mod	- Various Hugo Modules helpers.</description>
     </item>
     
     <item>
@@ -372,7 +371,7 @@ hugo mod init [flags] Options   -h, --help help for init Options inherited from 
       <guid>https://gohugo.io/commands/hugo_mod_npm/</guid>
       <description>hugo mod npm  Various npm helpers.
 Synopsis  Various npm (Node package manager) helpers.
-hugo mod npm [flags] Options   -h, --help help for npm Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;quot;config&amp;quot;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo mod	- Various Hugo Modules helpers.</description>
+hugo mod npm [flags] Options   -h, --help help for npm Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;#34;config&amp;#34;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo mod	- Various Hugo Modules helpers.</description>
     </item>
     
     <item>
@@ -394,7 +393,7 @@ This set will be merged with all &amp;ldquo;package.hugo.json&amp;rdquo; files f
       
       <guid>https://gohugo.io/commands/hugo_mod_tidy/</guid>
       <description>hugo mod tidy  Remove unused entries in go.mod and go.sum.
-hugo mod tidy [flags] Options   -h, --help help for tidy Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;quot;config&amp;quot;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo mod	- Various Hugo Modules helpers.</description>
+hugo mod tidy [flags] Options   -h, --help help for tidy Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;#34;config&amp;#34;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo mod	- Various Hugo Modules helpers.</description>
     </item>
     
     <item>
@@ -406,7 +405,7 @@ hugo mod tidy [flags] Options   -h, --help help for tidy Options inherited from 
       <description>hugo mod vendor  Vendor all module dependencies into the _vendor directory.
 Synopsis  Vendor all module dependencies into the _vendor directory.
 If a module is vendored, that is where Hugo will look for it&amp;rsquo;s dependencies.
-hugo mod vendor [flags] Options   -h, --help help for vendor Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;quot;config&amp;quot;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo mod	- Various Hugo Modules helpers.</description>
+hugo mod vendor [flags] Options   -h, --help help for vendor Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;#34;config&amp;#34;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo mod	- Various Hugo Modules helpers.</description>
     </item>
     
     <item>
@@ -417,7 +416,7 @@ hugo mod vendor [flags] Options   -h, --help help for vendor Options inherited f
       <guid>https://gohugo.io/commands/hugo_mod_verify/</guid>
       <description>hugo mod verify  Verify dependencies.
 Synopsis  Verify checks that the dependencies of the current module, which are stored in a local downloaded source cache, have not been modified since being downloaded.
-hugo mod verify [flags] Options   --clean delete module cache for dependencies that fail verification -h, --help help for verify Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;quot;config&amp;quot;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo mod	- Various Hugo Modules helpers.</description>
+hugo mod verify [flags] Options   --clean delete module cache for dependencies that fail verification -h, --help help for verify Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;#34;config&amp;#34;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo mod	- Various Hugo Modules helpers.</description>
     </item>
     
     <item>
@@ -441,7 +440,7 @@ Ensure you run this within the root directory of your site.</description>
       <guid>https://gohugo.io/commands/hugo_new_site/</guid>
       <description>hugo new site  Create a new site (skeleton)
 Synopsis  Create a new site in the provided directory. The new site will have the correct structure, but no content or theme yet. Use hugo new [contentPath] to create new content.
-hugo new site [path] [flags] Options   --force init inside non-empty directory -f, --format string config file format (default &amp;quot;toml&amp;quot;) -h, --help help for site Options inherited from parent commands   --config string config file (default is path/config.</description>
+hugo new site [path] [flags] Options   --force init inside non-empty directory -f, --format string config file format (default &amp;#34;toml&amp;#34;) -h, --help help for site Options inherited from parent commands   --config string config file (default is path/config.</description>
     </item>
     
     <item>
@@ -474,7 +473,7 @@ Synopsis  Hugo provides its own webserver which builds and serves the site. Whil
       <guid>https://gohugo.io/commands/hugo_version/</guid>
       <description>hugo version  Print the version number of Hugo
 Synopsis  All software has versions. This is Hugo&amp;rsquo;s.
-hugo version [flags] Options   -h, --help help for version Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;quot;config&amp;quot;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo	- hugo builds your site  </description>
+hugo version [flags] Options   -h, --help help for version Options inherited from parent commands   --config string config file (default is path/config.yaml|json|toml) --configDir string config dir (default &amp;#34;config&amp;#34;) --debug debug output -e, --environment string build environment --ignoreVendorPaths string ignores any _vendor for module paths matching the given Glob pattern --log enable Logging --logFile string log File path (if set, logging enabled automatically) --quiet build in quiet mode -s, --source string filesystem path to read files relative from --themesDir string filesystem path to themes directory -v, --verbose verbose output --verboseLog verbose logging SEE ALSO   hugo	- hugo builds your site  </description>
     </item>
     
   </channel>

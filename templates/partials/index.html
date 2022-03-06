@@ -13,7 +13,7 @@
   <title>Partial Templates | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.15-DEV" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,11 +62,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/templates/partials/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_12255814153387182264.png"/><meta property="article:section" content="templates" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-02-12T14:25:46+07:00" />
+<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="name" content="Partial Templates">
 <meta itemprop="description" content="Partials are smaller, context-aware components in your list and page templates that can be used economically to keep your templating DRY."><meta itemprop="datePublished" content="2017-02-01T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-02-12T14:25:46+07:00" />
-<meta itemprop="wordCount" content="666"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
+<meta itemprop="wordCount" content="637"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_12255814153387182264.png"/>
 <meta name="twitter:title" content="Partial Templates"/>
@@ -201,7 +201,7 @@
     <li><a href="#partial-template-lookup-order">Partial Template Lookup Order</a></li>
     <li><a href="#use-partials-in-your-templates">Use Partials in your Templates</a></li>
     <li><a href="#returning-a-value-from-a-partial">Returning a value from a Partial</a></li>
-    <li><a href="#inline-partials">Inline partials</a></li>
+    <li><a href="#inline-partials">Inline Partials</a></li>
     <li><a href="#cached-partials">Cached Partials</a></li>
   </ul>
 </nav>
@@ -275,23 +275,22 @@
 <p>This allows a theme&rsquo;s end user to copy a partial&rsquo;s contents into a file of the same name for <a href="/themes/customizing/" title="Hugo provides easy means to customize themes as long as users are familiar with Hugo's template lookup order.">further customization</a>.</p>
 <h2 id="use-partials-in-your-templates">Use Partials in your Templates <a class="header-link" href="#use-partials-in-your-templates"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>All partials for your Hugo project are located in a single <code>layouts/partials</code> directory. For better organization, you can create multiple subdirectories within <code>partials</code> as well:</p>
-<pre tabindex="0"><code>.
-└── layouts
-    └── partials
-        ├── footer
-        │   ├── scripts.html
-        │   └── site-footer.html
-        ├── head
-        │   ├── favicons.html
-        │   ├── metadata.html
-        │   ├── prerender.html
-        │   └── twitter.html
-        └── header
-            ├── site-header.html
-            └── site-nav.html
-</code></pre><p>All partials are called within your templates using the following pattern:</p>
-<pre tabindex="0"><code>{{ partial &quot;&lt;PATH&gt;/&lt;PARTIAL&gt;.html&quot; . }}
-</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">layouts/
+</span></span><span class="line"><span class="cl">└── partials/
+</span></span><span class="line"><span class="cl">    ├── footer/
+</span></span><span class="line"><span class="cl">    │   ├── scripts.html
+</span></span><span class="line"><span class="cl">    │   └── site-footer.html
+</span></span><span class="line"><span class="cl">    ├── head/
+</span></span><span class="line"><span class="cl">    │   ├── favicons.html
+</span></span><span class="line"><span class="cl">    │   ├── metadata.html
+</span></span><span class="line"><span class="cl">    │   ├── prerender.html
+</span></span><span class="line"><span class="cl">    │   └── twitter.html
+</span></span><span class="line"><span class="cl">    └── header/
+</span></span><span class="line"><span class="cl">        ├── site-header.html
+</span></span><span class="line"><span class="cl">        └── site-nav.html
+</span></span></code></pre></div><p>All partials are called within your templates using the following pattern:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">partial</span><span class="w"> </span><span class="s">&#34;&lt;PATH&gt;/&lt;PARTIAL&gt;.html&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div>
 <aside class="admonition note">
 	<div class="note-icon">
 		
@@ -314,49 +313,35 @@
 </aside>
 
 <p>As shown in the above example directory structure, you can nest your directories within <code>partials</code> for better source organization. You only need to call the nested partial&rsquo;s path relative to the <code>partials</code> directory:</p>
-<pre tabindex="0"><code>{{ partial &quot;header/site-header.html&quot; . }}
-{{ partial &quot;footer/scripts.html&quot; . }}
-</code></pre><h3 id="variable-scoping">Variable Scoping <a class="header-link" href="#variable-scoping"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">partial</span><span class="w"> </span><span class="s">&#34;header/site-header.html&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">partial</span><span class="w"> </span><span class="s">&#34;footer/scripts.html&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><h3 id="variable-scoping">Variable Scoping <a class="header-link" href="#variable-scoping"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>The second argument in a partial call is the variable being passed down. The above examples are passing the <code>.</code>, which tells the template receiving the partial to apply the current <a href="/templates/introduction/" title="The most easily overlooked concept to understand about Go templating is how the dot always refers to the current context.">context</a>.</p>
 <p>This means the partial will <em>only</em> be able to access those variables. The partial is isolated and <em>has no access to the outer scope</em>. From within the partial, <code>$.Var</code> is equivalent to <code>.Var</code>.</p>
 <h2 id="returning-a-value-from-a-partial">Returning a value from a Partial <a class="header-link" href="#returning-a-value-from-a-partial"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>In addition to outputting markup, partials can be used to return a value of any type. In order to return a value, a partial must include a lone <code>return</code> statement.</p>
-<h2 id="inline-partials">Inline partials <a class="header-link" href="#inline-partials"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-
-
-
-<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
-    <a href="https://gohugo.io/news/0.74.0-relnotes/" target="_blank">New in v0.74.0</a>
-</button>
-<p>You can also define partials inline in the template. But remember that template namespace is global, so you need to make sure that the names are unique to avoid conflicts.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template">Value: <span class="cp">{{</span><span class="w"> </span><span class="nx">partial</span><span class="w"> </span><span class="s">&#34;my-inline-partial&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
-
-<span class="cp">{{</span><span class="w"> </span><span class="nx">define</span><span class="w"> </span><span class="s">&#34;partials/my-inline-partial&#34;</span><span class="w"> </span><span class="cp">}}</span>
-<span class="cp">{{</span><span class="w"> </span><span class="nx">$value</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">32</span><span class="w"> </span><span class="cp">}}</span>
-<span class="cp">{{</span><span class="w"> </span><span class="nx">return</span><span class="w"> </span><span class="nx">$value</span><span class="w"> </span><span class="cp">}}</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-</code></pre></div><h3 id="example-getfeatured">Example GetFeatured <a class="header-link" href="#example-getfeatured"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cm">{{/* layouts/partials/GetFeatured.html */}}</span>
-<span class="cp">{{</span><span class="w"> </span><span class="nx">return</span><span class="w"> </span><span class="nx">first</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="o">(</span><span class="nx">where</span><span class="w"> </span><span class="nx">site</span><span class="na">.RegularPages</span><span class="w"> </span><span class="s">&#34;Params.featured&#34;</span><span class="w"> </span><span class="k">true</span><span class="o">)</span><span class="w"> </span><span class="cp">}}</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cm">{{/* layouts/index.html */}}</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">partial</span><span class="w"> </span><span class="s">&#34;GetFeatured.html&#34;</span><span class="w"> </span><span class="nx">5</span><span class="w"> </span><span class="cp">}}</span>
-  [...]
-<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-</code></pre></div><h3 id="example-getimage">Example GetImage <a class="header-link" href="#example-getimage"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cm">{{/* layouts/partials/GetImage.html */}}</span>
-<span class="cp">{{</span><span class="w"> </span><span class="nx">$image</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">false</span><span class="w"> </span><span class="cp">}}</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.Params.gallery</span><span class="w"> </span><span class="cp">}}</span>
-  <span class="cp">{{</span><span class="w"> </span><span class="nx">$image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">index</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="cp">}}</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.Params.image</span><span class="w"> </span><span class="cp">}}</span>
-  <span class="cp">{{</span><span class="w"> </span><span class="nx">$image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-<span class="cp">{{</span><span class="w"> </span><span class="nx">return</span><span class="w"> </span><span class="nx">$image</span><span class="w"> </span><span class="cp">}}</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cm">{{/* layouts/_default/single.html */}}</span>
-<span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nx">partial</span><span class="w"> </span><span class="s">&#34;GetImage.html&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
-  [...]
-<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-</code></pre></div>
+<h3 id="example-getfeatured">Example GetFeatured <a class="header-link" href="#example-getfeatured"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cm">{{/* layouts/partials/GetFeatured.html */}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">return</span><span class="w"> </span><span class="nx">first</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="o">(</span><span class="nx">where</span><span class="w"> </span><span class="nx">site</span><span class="na">.RegularPages</span><span class="w"> </span><span class="s">&#34;Params.featured&#34;</span><span class="w"> </span><span class="k">true</span><span class="o">)</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cm">{{/* layouts/index.html */}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">partial</span><span class="w"> </span><span class="s">&#34;GetFeatured.html&#34;</span><span class="w"> </span><span class="nx">5</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">  [...]
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><h3 id="example-getimage">Example GetImage <a class="header-link" href="#example-getimage"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cm">{{/* layouts/partials/GetImage.html */}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$image</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">false</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.Params.gallery</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">  <span class="cp">{{</span><span class="w"> </span><span class="nx">$image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">index</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.Params.image</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">  <span class="cp">{{</span><span class="w"> </span><span class="nx">$image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">return</span><span class="w"> </span><span class="nx">$image</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cm">{{/* layouts/_default/single.html */}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nx">partial</span><span class="w"> </span><span class="s">&#34;GetImage.html&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">  [...]
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div>
 <aside class="admonition note">
 	<div class="note-icon">
 		
@@ -367,15 +352,29 @@
 </div>
 </aside>
 
-<h2 id="cached-partials">Cached Partials <a class="header-link" href="#cached-partials"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<h2 id="inline-partials">Inline Partials <a class="header-link" href="#inline-partials"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+
+
+
+<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
+    <a href="https://gohugo.io/news/0.74.0-relnotes/" target="_blank">New in v0.74.0</a>
+</button>
+<p>You can also define partials inline in the template. But remember that template namespace is global, so you need to make sure that the names are unique to avoid conflicts.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl">Value: <span class="cp">{{</span><span class="w"> </span><span class="nx">partial</span><span class="w"> </span><span class="s">&#34;my-inline-partial&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">define</span><span class="w"> </span><span class="s">&#34;partials/my-inline-partial&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$value</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">32</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">return</span><span class="w"> </span><span class="nx">$value</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><h2 id="cached-partials">Cached Partials <a class="header-link" href="#cached-partials"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>The <a href="/functions/partialcached/" title="Use the partial cached function to improve build times in cases where Hugo can cache partials that don't need to be rendered with every page."><code>partialCached</code> template function</a> can offer significant performance gains for complex templates that don&rsquo;t need to be re-rendered on every invocation. The simplest usage is as follows:</p>
-<pre tabindex="0"><code>{{ partialCached &quot;footer.html&quot; . }}
-</code></pre><p>You can also pass additional parameters to <code>partialCached</code> to create <em>variants</em> of the cached partial.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">partialCached</span><span class="w"> </span><span class="s">&#34;footer.html&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><p>You can also pass additional parameters to <code>partialCached</code> to create <em>variants</em> of the cached partial.</p>
 <p>For example, you can tell Hugo to only render the partial <code>footer.html</code> once per section:</p>
-<pre tabindex="0"><code>{{ partialCached &quot;footer.html&quot; . .Section }}
-</code></pre><p>If you need to pass additional parameters to create unique variants, you can pass as many variant parameters as you need:</p>
-<pre tabindex="0"><code>{{ partialCached &quot;footer.html&quot; . .Params.country .Params.province }}
-</code></pre><p>Note that the variant parameters are not made available to the underlying partial template. They are only use to create a unique cache key.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">partialCached</span><span class="w"> </span><span class="s">&#34;footer.html&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="na">.Section</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><p>If you need to pass additional parameters to create unique variants, you can pass as many variant parameters as you need:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">partialCached</span><span class="w"> </span><span class="s">&#34;footer.html&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="na">.Params.country</span><span class="w"> </span><span class="na">.Params.province</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><p>Note that the variant parameters are not made available to the underlying partial template. They are only use to create a unique cache key.</p>
 <h3 id="example-headerhtml">Example <code>header.html</code> <a class="header-link" href="#example-headerhtml"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>The following <code>header.html</code> partial template is used for <a href="https://spf13.com/">spf13.com</a>:</p>
 
@@ -395,20 +394,20 @@
 	
 	<div class="code-copy-content nt3" id="header.html">
 		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;no-js&#34;</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en-US&#34;</span> <span class="na">prefix</span><span class="o">=</span><span class="s">&#34;og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#&#34;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
-
-    <span class="cp">{{</span><span class="w"> </span><span class="nx">partial</span><span class="w"> </span><span class="s">&#34;meta.html&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
-
-    <span class="p">&lt;</span><span class="nt">base</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Site.BaseURL</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span> <span class="cp">{{</span><span class="w"> </span><span class="na">.Title</span><span class="w"> </span><span class="cp">}}</span> : spf13.com <span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;canonical&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Permalink</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span>
-    <span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="na">.RSSLink</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.RSSLink</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;alternate&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;application/rss+xml&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Title</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span> <span class="p">/&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-
-    <span class="cp">{{</span><span class="w"> </span><span class="nx">partial</span><span class="w"> </span><span class="s">&#34;head_includes.html&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
-<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span></code></pre></div>
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;no-js&#34;</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en-US&#34;</span> <span class="na">prefix</span><span class="o">=</span><span class="s">&#34;og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="cp">{{</span><span class="w"> </span><span class="nx">partial</span><span class="w"> </span><span class="s">&#34;meta.html&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">base</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Site.BaseURL</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span> <span class="cp">{{</span><span class="w"> </span><span class="na">.Title</span><span class="w"> </span><span class="cp">}}</span> : spf13.com <span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;canonical&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Permalink</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="na">.RSSLink</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.RSSLink</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;alternate&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;application/rss+xml&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Title</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span> <span class="p">/&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="cp">{{</span><span class="w"> </span><span class="nx">partial</span><span class="w"> </span><span class="s">&#34;head_includes.html&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span></span></span></code></pre></div>
 	</div>
 
 </div>
@@ -443,15 +442,15 @@
 	
 	<div class="code-copy-content nt3" id="footer.html">
 		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="ni">&amp;copy;</span> 2013-14 Steve Francia.
-    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://creativecommons.org/licenses/by/3.0/&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Creative Commons Attribution&#34;</span><span class="p">&gt;</span>Some rights reserved<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>;
-    please attribute properly and link back.
-    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span></code></pre></div>
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="ni">&amp;copy;</span> 2013-14 Steve Francia.
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://creativecommons.org/licenses/by/3.0/&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Creative Commons Attribution&#34;</span><span class="p">&gt;</span>Some rights reserved<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>;
+</span></span><span class="line"><span class="cl">    please attribute properly and link back.
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span></span></span></code></pre></div>
 	</div>
 
 </div>
@@ -613,6 +612,11 @@
           <li class="f6 fw4">
             <a href="/content-management/formats/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Content Formats
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/content-management/diagrams/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Diagrams
             </a>
           </li>
           <li class="f6 fw4">
@@ -1554,11 +1558,6 @@
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/variables/hugo/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hugo Variables
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/variables/git/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Git Variables
             </a>
@@ -1809,7 +1808,7 @@
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: February 12, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b162c296b7f2066827adadc6ebff61028366790d">Merge pull request #102 from blackb1rd/hugo/v0.92.2 (b162c29)</a>
+  Last updated: March 6, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/bc2bc7c8dd3645fdf6a0da2ecb9bb182571b08b3">Merge pull request #103 from blackb1rd/hugo/v0.93.2 (bc2bc7c)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/templates/partials.md" class="
@@ -2057,6 +2056,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 </footer>
+
+
+  
 
 
 </body>

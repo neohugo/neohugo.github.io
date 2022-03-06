@@ -13,7 +13,7 @@
   <title>highlight | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.15-DEV" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,10 +62,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/functions/highlight/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_13247602959777811381.png"/><meta property="article:section" content="functions" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-02-12T14:25:46+07:00" />
+<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="name" content="highlight">
 <meta itemprop="description" content="Renders code with a syntax highlighter."><meta itemprop="datePublished" content="2017-02-01T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-02-12T14:25:46+07:00" />
+<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="wordCount" content="396"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_13247602959777811381.png"/>
@@ -323,18 +323,18 @@ If the <code>LANG</code> parameter is blank or an unrecognized language, auto-de
 </aside>
 
 <h2 id="examples">Examples <a class="header-link" href="#examples"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">$input</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">`fmt.Println(&#34;Hello World!&#34;)`</span><span class="w"> </span><span class="cp">}}</span>
-<span class="cp">{{</span><span class="w"> </span><span class="nx">transform</span><span class="na">.Highlight</span><span class="w"> </span><span class="nx">$input</span><span class="w"> </span><span class="s">&#34;go&#34;</span><span class="w"> </span><span class="cp">}}</span>
-
-<span class="cp">{{</span><span class="w"> </span><span class="nx">$input</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">`console.log(&#39;Hello World!&#39;);`</span><span class="w"> </span><span class="cp">}}</span>
-<span class="cp">{{</span><span class="w"> </span><span class="nx">$lang</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&#34;js&#34;</span><span class="w"> </span><span class="cp">}}</span>
-<span class="cp">{{</span><span class="w"> </span><span class="nx">transform</span><span class="na">.Highlight</span><span class="w"> </span><span class="nx">$input</span><span class="w"> </span><span class="nx">$lang</span><span class="w"> </span><span class="s">&#34;lineNos=table, style=api&#34;</span><span class="w"> </span><span class="cp">}}</span>
-
-<span class="cp">{{</span><span class="w"> </span><span class="nx">$input</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">`echo &#34;Hello World!&#34;`</span><span class="w"> </span><span class="cp">}}</span>
-<span class="cp">{{</span><span class="w"> </span><span class="nx">$lang</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&#34;bash&#34;</span><span class="w"> </span><span class="cp">}}</span>
-<span class="cp">{{</span><span class="w"> </span><span class="nx">$options</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">slice</span><span class="w"> </span><span class="s">&#34;lineNos=table&#34;</span><span class="w"> </span><span class="s">&#34;style=dracula&#34;</span><span class="w"> </span><span class="cp">}}</span>
-<span class="cp">{{</span><span class="w"> </span><span class="nx">transform</span><span class="na">.Highlight</span><span class="w"> </span><span class="nx">$input</span><span class="w"> </span><span class="nx">$lang</span><span class="w"> </span><span class="o">(</span><span class="nx">delimit</span><span class="w"> </span><span class="nx">$options</span><span class="w"> </span><span class="s">&#34;,&#34;</span><span class="o">)</span><span class="w"> </span><span class="cp">}}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$input</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">`fmt.Println(&#34;Hello World!&#34;)`</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">transform</span><span class="na">.Highlight</span><span class="w"> </span><span class="nx">$input</span><span class="w"> </span><span class="s">&#34;go&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$input</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">`console.log(&#39;Hello World!&#39;);`</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$lang</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&#34;js&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">transform</span><span class="na">.Highlight</span><span class="w"> </span><span class="nx">$input</span><span class="w"> </span><span class="nx">$lang</span><span class="w"> </span><span class="s">&#34;lineNos=table, style=api&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$input</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">`echo &#34;Hello World!&#34;`</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$lang</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&#34;bash&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$options</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">slice</span><span class="w"> </span><span class="s">&#34;lineNos=table&#34;</span><span class="w"> </span><span class="s">&#34;style=dracula&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">transform</span><span class="na">.Highlight</span><span class="w"> </span><span class="nx">$input</span><span class="w"> </span><span class="nx">$lang</span><span class="w"> </span><span class="o">(</span><span class="nx">delimit</span><span class="w"> </span><span class="nx">$options</span><span class="w"> </span><span class="s">&#34;,&#34;</span><span class="o">)</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div>
 </div>
 
           
@@ -485,6 +485,11 @@ If the <code>LANG</code> parameter is blank or an unrecognized language, auto-de
           <li class="f6 fw4">
             <a href="/content-management/formats/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Content Formats
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/content-management/diagrams/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Diagrams
             </a>
           </li>
           <li class="f6 fw4">
@@ -1426,11 +1431,6 @@ If the <code>LANG</code> parameter is blank or an unrecognized language, auto-de
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/variables/hugo/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hugo Variables
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/variables/git/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Git Variables
             </a>
@@ -1681,7 +1681,7 @@ If the <code>LANG</code> parameter is blank or an unrecognized language, auto-de
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: February 12, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b162c296b7f2066827adadc6ebff61028366790d">Merge pull request #102 from blackb1rd/hugo/v0.92.2 (b162c29)</a>
+  Last updated: March 6, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/bc2bc7c8dd3645fdf6a0da2ecb9bb182571b08b3">Merge pull request #103 from blackb1rd/hugo/v0.93.2 (bc2bc7c)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/functions/highlight.md" class="
@@ -1929,6 +1929,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 </footer>
+
+
+  
 
 
 </body>

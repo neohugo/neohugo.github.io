@@ -13,7 +13,7 @@
   <title>sort | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.15-DEV" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,10 +62,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/functions/sort/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_1298237994720842708.png"/><meta property="article:section" content="functions" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-02-12T14:25:46+07:00" />
+<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="name" content="sort">
 <meta itemprop="description" content="Sorts maps, arrays, and slices and returns a sorted slice."><meta itemprop="datePublished" content="2017-02-01T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-02-12T14:25:46+07:00" />
+<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="wordCount" content="169"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_1298237994720842708.png"/>
@@ -252,21 +252,21 @@
 
 <p>A sorted array of map values will be returned with the keys eliminated. There are two optional arguments: <code>sortByField</code> and <code>sortAsc</code>. If left blank, sort will sort by keys (for maps) in ascending order as its default behavior.</p>
 <pre tabindex="0"><code>---
-tags: [&quot;tag3&quot;, &quot;tag1&quot;, &quot;tag2&quot;]
+tags: [&#34;tag3&#34;, &#34;tag1&#34;, &#34;tag2&#34;]
 ---
 
 // Site config
 +++
 [params.authors]
   [params.authors.Joe]
-    firstName = &quot;Joe&quot;
-    lastName  = &quot;Bergevin&quot;
+    firstName = &#34;Joe&#34;
+    lastName  = &#34;Bergevin&#34;
   [params.authors.Derek]
-    firstName = &quot;Derek&quot;
-    lastName  = &quot;Perkins&quot;
+    firstName = &#34;Derek&#34;
+    lastName  = &#34;Perkins&#34;
   [params.authors.Tanner]
-    firstName = &quot;Tanner&quot;
-    lastName  = &quot;Linsley&quot;
+    firstName = &#34;Tanner&#34;
+    lastName  = &#34;Linsley&#34;
 +++
 </code></pre><pre tabindex="0"><code>// Sort by value, ascending (default for lists)
 Tags: {{ range sort .Params.tags }}{{ . }} {{ end }}
@@ -274,7 +274,7 @@ Tags: {{ range sort .Params.tags }}{{ . }} {{ end }}
 → Outputs Tags: tag1 tag2 tag3
 
 // Sort by value, descending
-Tags: {{ range sort .Params.tags &quot;value&quot; &quot;desc&quot; }}{{ . }} {{ end }}
+Tags: {{ range sort .Params.tags &#34;value&#34; &#34;desc&#34; }}{{ . }} {{ end }}
 
 → Outputs Tags: tag3 tag2 tag1
 
@@ -284,7 +284,7 @@ Authors: {{ range sort .Site.Params.authors }}{{ .firstName }} {{ end }}
 → Outputs Authors: Derek Joe Tanner
 
 // Sort by field, descending
-Authors: {{ range sort .Site.Params.authors &quot;lastName&quot; &quot;desc&quot; }}{{ .lastName }} {{ end }}
+Authors: {{ range sort .Site.Params.authors &#34;lastName&#34; &#34;desc&#34; }}{{ .lastName }} {{ end }}
 
 → Outputs Authors: Perkins Linsley Bergevin
 </code></pre>
@@ -444,6 +444,11 @@ Authors: {{ range sort .Site.Params.authors &quot;lastName&quot; &quot;desc&quot
           <li class="f6 fw4">
             <a href="/content-management/formats/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Content Formats
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/content-management/diagrams/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Diagrams
             </a>
           </li>
           <li class="f6 fw4">
@@ -1385,11 +1390,6 @@ Authors: {{ range sort .Site.Params.authors &quot;lastName&quot; &quot;desc&quot
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/variables/hugo/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hugo Variables
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/variables/git/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Git Variables
             </a>
@@ -1640,7 +1640,7 @@ Authors: {{ range sort .Site.Params.authors &quot;lastName&quot; &quot;desc&quot
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: February 12, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b162c296b7f2066827adadc6ebff61028366790d">Merge pull request #102 from blackb1rd/hugo/v0.92.2 (b162c29)</a>
+  Last updated: March 6, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/bc2bc7c8dd3645fdf6a0da2ecb9bb182571b08b3">Merge pull request #103 from blackb1rd/hugo/v0.93.2 (bc2bc7c)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/functions/sort.md" class="
@@ -1888,6 +1888,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 </footer>
+
+
+  
 
 
 </body>

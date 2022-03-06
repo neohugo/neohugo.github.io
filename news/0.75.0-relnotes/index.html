@@ -13,7 +13,7 @@
   <title>NPM Pack | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.15-DEV" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,10 +62,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/news/0.75.0-relnotes/" /><meta property="og:image" content="https://gohugo.io/news/0.75.0-relnotes/featured.png"/><meta property="article:section" content="news" />
 <meta property="article:published_time" content="2020-09-14T00:00:00+02:00" />
-<meta property="article:modified_time" content="2022-02-12T14:25:46+07:00" />
+<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="name" content="NPM Pack">
 <meta itemprop="description" content="Hugo 0.75 comes with a new &#34;hugo mod npm pack&#34; command, several improvements re. Hugo Modules and the Node tools, and more."><meta itemprop="datePublished" content="2020-09-14T00:00:00+02:00" />
-<meta itemprop="dateModified" content="2022-02-12T14:25:46+07:00" />
+<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="wordCount" content="1386"><meta itemprop="image" content="https://gohugo.io/news/0.75.0-relnotes/featured.png">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/news/0.75.0-relnotes/featured.png"/>
@@ -266,13 +266,13 @@
 <h2 id="npm-pack">NPM Pack <a class="header-link" href="#npm-pack"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>The new CLI command is called <code>hugo mod npm pack</code>.  We have marked it as experimental. It works great, go ahead and use it, but we need to test this out in real projects to get a feel of it; it is likely that it will change/improve in the upcoming versions of Hugo. The command creates a consolidated <code>package.json</code> from the project and all of its <a href="https://gohugo.io/hugo-modules/theme-components/">theme components</a>. On version conflicts, the version closest to the project is selected. We may revise that strategy in the future (<a href="https://about.sourcegraph.com/blog/the-pain-that-minimal-version-selection-solves/">minimal version selection</a> maybe?), but this should give both control and the least amount of surprise for the site owner.</p>
 <p>So, why did we do this? JavaScript is often a background actor in a Hugo project, and it doesn&rsquo;t make sense to publish it to a NPM registry. The JS dependencies are mostly build tools (PostCSS, TailwindCSS, Babel), <code>devDependencies</code>. This has been working fine as long as you kept the JS config files (including <code>package.json</code>) in the project, adding duplication/work when using ready-to-use theme components. These tools work best when you have everything below a single file tree, which is very much different to how <a href="https://gohugo.io/hugo-modules/">Hugo Modules</a> work. An example of a module with TailwindCSS:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">tailwind-module
-├── assets
-│   └── css
-├── package.json
-├── postcss.config.js
-└── tailwind.config.js
-</code></pre></div><p>If you included <code>tailwind-module</code> in a Hugo project and processed it with <code>PostCSS</code>, this is what happened in earlier versions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tailwind-module
+</span></span><span class="line"><span class="cl">├── assets
+</span></span><span class="line"><span class="cl">│   └── css
+</span></span><span class="line"><span class="cl">├── package.json
+</span></span><span class="line"><span class="cl">├── postcss.config.js
+</span></span><span class="line"><span class="cl">└── tailwind.config.js
+</span></span></code></pre></div><p>If you included <code>tailwind-module</code> in a Hugo project and processed it with <code>PostCSS</code>, this is what happened in earlier versions:</p>
 <ul>
 <li>It used the directory where the <code>postcss.config.js</code> lives as a starting point to look  for any <code>require</code>&rsquo;d dependency.</li>
 <li>TailwindCSS would, on the other hand, load its configuration file relative to where <code>PostCSS</code> was invoked (the project directory).</li>
@@ -281,11 +281,11 @@
 <ul>
 <li>The new <code>hugo mod npm pack</code> creates a consolidated <code>package.json</code> based on files named <code>package.hugo.json</code> it finds in the dependency tree (one is created for you the first time you run this command). The end result will always be <code>package.json</code>, which works seamlessly with <code>npm install</code> invoked automatically by Netlify and other CI vendors.</li>
 <li>The main project&rsquo;s <code>node_modules</code> folder is added to <a href="https://medium.com/nafsadh/setting-up-node-path-for-using-global-packages-via-require-642eb711c725">NODE_PATH</a> when running <code>PostCSS</code>and <code>Babel</code>.</li>
-<li>We have introduced a new mount point <code>assets/_jsconfig</code> where we, by default, mount the JS configuration files that we&rsquo;re interested in. This is where Hugo will start looking for these files, and the files' filenames will also be available in the Node environment, so you can do:</li>
+<li>We have introduced a new mount point <code>assets/_jsconfig</code> where we, by default, mount the JS configuration files that we&rsquo;re interested in. This is where Hugo will start looking for these files, and the files&rsquo; filenames will also be available in the Node environment, so you can do:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">let</span> <span class="nx">tailwindConfig</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">HUGO_FILE_TAILWIND_CONFIG_JS</span> <span class="o">||</span> <span class="s1">&#39;./tailwind.config.js&#39;</span><span class="p">;</span>
-<span class="kr">const</span> <span class="nx">tailwind</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;tailwindcss&#39;</span><span class="p">)(</span><span class="nx">tailwindConfig</span><span class="p">);</span>
-</code></pre></div><h2 id="module-enhancements">Module Enhancements <a class="header-link" href="#module-enhancements"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">tailwindConfig</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">HUGO_FILE_TAILWIND_CONFIG_JS</span> <span class="o">||</span> <span class="s1">&#39;./tailwind.config.js&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">tailwind</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;tailwindcss&#39;</span><span class="p">)(</span><span class="nx">tailwindConfig</span><span class="p">);</span>
+</span></span></code></pre></div><h2 id="module-enhancements">Module Enhancements <a class="header-link" href="#module-enhancements"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <ul>
 <li>We have added a <code>noVendor</code> Glob pattern config to the module config <a href="https://github.com/gohugoio/hugo/commit/d4611c4322dabfd8d2520232be578388029867db">d4611c43</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/7647">#7647</a>. This allows you to only vendor a subset of your dependencies.</li>
 <li>We have added <code>ignoreImports</code> option to module imports config <a href="https://github.com/gohugoio/hugo/commit/20af9a078189ce1e92a1d2047c90fba2a4e91827">20af9a07</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/7646">#7646</a>, which allows you to import a module and load its config, but not follow its imports.</li>
@@ -305,7 +305,7 @@ which has received <strong>24 contributions by 15 contributors</strong>. A speci
 <h2 id="notes">Notes <a class="header-link" href="#notes"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <ul>
 <li>We now build with Go 1.15, which means that we no longer build release binaries for MacOS 32-bit.</li>
-<li>You may now get an error message about &ldquo;error calling partial: partials that returns a value needs a non-zero argument.&rdquo;. This error situation was not caught earlier, and comes from a limitation in Go&rsquo;s templates: If you use the <code>return</code> keyword in a partial, the argument you pass to that partial (e.g. the &ldquo;.&quot;) cannot be zero (and 0 and &quot;&rdquo; is considered a zero argument).</li>
+<li>You may now get an error message about &ldquo;error calling partial: partials that returns a value needs a non-zero argument.&rdquo;. This error situation was not caught earlier, and comes from a limitation in Go&rsquo;s templates: If you use the <code>return</code> keyword in a partial, the argument you pass to that partial (e.g. the &ldquo;.&rdquo;) cannot be zero (and 0 and &quot;&quot; is considered a zero argument).</li>
 </ul>
 <h2 id="enhancements">Enhancements <a class="header-link" href="#enhancements"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <h3 id="templates">Templates <a class="header-link" href="#templates"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
@@ -406,7 +406,7 @@ which has received <strong>24 contributions by 15 contributors</strong>. A speci
     
 
       <div class="gray f6 mv6">
-        Last Update: February 12, 2022 <br>
+        Last Update: March 6, 2022 <br>
         <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/news/0.75.0-relnotes/index.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 ">Improve this page</a>
@@ -651,6 +651,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 </footer>
+
+
+  
 
 
 </body>

@@ -13,7 +13,7 @@
   <title>complement | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.15-DEV" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,10 +62,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/functions/complement/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_11789049023219022993.png"/><meta property="article:section" content="functions" />
 <meta property="article:published_time" content="2018-11-07T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-02-12T14:25:46+07:00" />
+<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="name" content="complement">
 <meta itemprop="description" content="`collections.Complement` (alias `complement`) gives the elements of a collection that are not in any of the others."><meta itemprop="datePublished" content="2018-11-07T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-02-12T14:25:46+07:00" />
+<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="wordCount" content="54"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_11789049023219022993.png"/>
@@ -253,11 +253,11 @@
       <pre class="f5 mb4 ph3 pv2 bg-light-gray" style="border-left:4px solid #0594CB;">COLLECTION | complement COLLECTION [COLLECTION]...</pre>
 
 <p>Example:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="nx">$pages</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="na">.Site.RegularPages</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">first</span><span class="w"> </span><span class="nx">50</span><span class="w"> </span><span class="cp">}}</span>
-<span class="cp">{{</span><span class="w"> </span><span class="nx">$news</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">where</span><span class="w"> </span><span class="nx">$pages</span><span class="w"> </span><span class="s">&#34;Type&#34;</span><span class="w"> </span><span class="s">&#34;news&#34;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">first</span><span class="w"> </span><span class="nx">5</span><span class="w"> </span><span class="cp">}}</span>
-<span class="cp">{{</span><span class="w"> </span><span class="nx">$blog</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">where</span><span class="w"> </span><span class="nx">$pages</span><span class="w"> </span><span class="s">&#34;Type&#34;</span><span class="w"> </span><span class="s">&#34;blog&#34;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">first</span><span class="w"> </span><span class="nx">5</span><span class="w"> </span><span class="cp">}}</span>
-<span class="cp">{{</span><span class="w"> </span><span class="nx">$other</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">$pages</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">complement</span><span class="w"> </span><span class="nx">$news</span><span class="w"> </span><span class="nx">$blog</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">first</span><span class="w"> </span><span class="nx">10</span><span class="w"> </span><span class="cp">}}</span>
-</code></pre></div><p>The above is an imaginary use case for the home page where you want to display different page listings in sections/boxes on different places on the page: 5 from <code>news</code>, 5 from the <code>blog</code> and then 10 of the pages not shown in the other listings, to <em>complement</em> them.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$pages</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">site</span><span class="na">.RegularPages</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">first</span><span class="w"> </span><span class="nx">50</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$news</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">where</span><span class="w"> </span><span class="nx">$pages</span><span class="w"> </span><span class="s">&#34;Type&#34;</span><span class="w"> </span><span class="s">&#34;news&#34;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">first</span><span class="w"> </span><span class="nx">5</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$blog</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">where</span><span class="w"> </span><span class="nx">$pages</span><span class="w"> </span><span class="s">&#34;Type&#34;</span><span class="w"> </span><span class="s">&#34;blog&#34;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">first</span><span class="w"> </span><span class="nx">5</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$other</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">$pages</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">complement</span><span class="w"> </span><span class="nx">$news</span><span class="w"> </span><span class="nx">$blog</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">first</span><span class="w"> </span><span class="nx">10</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><p>The above is an imaginary use case for the home page where you want to display different page listings in sections/boxes on different places on the page: 5 from <code>news</code>, 5 from the <code>blog</code> and then 10 of the pages not shown in the other listings, to <em>complement</em> them.</p>
 
 </div>
 
@@ -269,6 +269,8 @@
 	<li><a href="/functions/symdiff/">symdiff</a></li>
 	
 	<li><a href="/functions/intersect/">intersect</a></li>
+	
+	<li><a href="/functions/union/">union</a></li>
 	
 	<li><a href="/functions/append/">append</a></li>
 	
@@ -413,6 +415,11 @@
           <li class="f6 fw4">
             <a href="/content-management/formats/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Content Formats
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/content-management/diagrams/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Diagrams
             </a>
           </li>
           <li class="f6 fw4">
@@ -1354,11 +1361,6 @@
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/variables/hugo/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hugo Variables
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/variables/git/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Git Variables
             </a>
@@ -1609,7 +1611,7 @@
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: February 12, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b162c296b7f2066827adadc6ebff61028366790d">Merge pull request #102 from blackb1rd/hugo/v0.92.2 (b162c29)</a>
+  Last updated: March 6, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/bc2bc7c8dd3645fdf6a0da2ecb9bb182571b08b3">Merge pull request #103 from blackb1rd/hugo/v0.93.2 (bc2bc7c)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/functions/complement.md" class="
@@ -1857,6 +1859,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 </footer>
+
+
+  
 
 
 </body>

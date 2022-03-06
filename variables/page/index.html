@@ -13,7 +13,7 @@
   <title>Page Variables | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.15-DEV" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,11 +62,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/variables/page/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_15385893396821012320.png"/><meta property="article:section" content="variables" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-02-12T14:25:46+07:00" />
+<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="name" content="Page Variables">
 <meta itemprop="description" content="Page-level variables are defined in a content file&#39;s front matter, derived from the content&#39;s file location, or extracted from the content body itself."><meta itemprop="datePublished" content="2017-02-01T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-02-12T14:25:46+07:00" />
-<meta itemprop="wordCount" content="1668"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
+<meta itemprop="wordCount" content="1599"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_15385893396821012320.png"/>
 <meta name="twitter:title" content="Page Variables"/>
@@ -288,8 +288,6 @@
 <dd>the date associated with the page; <code>.Date</code> pulls from the <code>date</code> field in a content&rsquo;s front matter. See also <code>.ExpiryDate</code>, <code>.PublishDate</code>, and <code>.Lastmod</code>.</dd>
 <dt>.Description</dt>
 <dd>the description for the page.</dd>
-<dt>.Dir</dt>
-<dd>the path of the folder containing this content file. The path is relative to the <code>content</code> folder.</dd>
 <dt>.Draft</dt>
 <dd>a boolean, <code>true</code> if the content is marked as a draft in the front matter.</dd>
 <dt>.ExpiryDate</dt>
@@ -298,8 +296,6 @@
 <dd>filesystem-related data for this content file. See also <a href="/variables/files/">File Variables</a>.</dd>
 <dt>.FuzzyWordCount</dt>
 <dd>the approximate number of words in the content.</dd>
-<dt>.Hugo</dt>
-<dd>see <a href="/variables/hugo/">Hugo Variables</a>.</dd>
 <dt>.IsHome</dt>
 <dd><code>true</code> in the context of the <a href="/templates/homepage/">homepage</a>.</dd>
 <dt>.IsNode</dt>
@@ -348,8 +344,6 @@ the context of regular content pages. See <a href="#pages"><code>.Pages</code></
 <dd>Points down to the previous <a href="/variables/site/#site-pages">regular page</a> below the same top level section (e.g. <code>/blog</code>). Pages are sorted by Hugo&rsquo;s <a href="/templates/lists#default-weight-date-linktitle-filepath">default sort</a>. Example: <code>{{if .PrevInSection}}{{.PrevInSection.Permalink}}{{end}}</code>.  Calling <code>.PrevInSection</code> from the last page returns <code>nil</code>.</dd>
 <dt>.PublishDate</dt>
 <dd>the date on which the content was or will be published; <code>.Publishdate</code> pulls from the <code>publishdate</code> field in a content&rsquo;s front matter. See also <code>.ExpiryDate</code>, <code>.Date</code>, and <code>.Lastmod</code>.</dd>
-<dt>.RSSLink (deprecated)</dt>
-<dd>link to the page&rsquo;s RSS feed. This is deprecated. You should instead do something like this: <code>{{ with .OutputFormats.Get &quot;RSS&quot; }}{{ .RelPermalink }}{{ end }}</code>.</dd>
 <dt>.RawContent</dt>
 <dd>raw markdown content without the front matter. Useful with <a href="https://remarkjs.com">remarkjs.com</a></dd>
 <dt>.ReadingTime</dt>
@@ -382,8 +376,6 @@ the context of regular content pages. See <a href="#pages"><code>.Pages</code></
 <dd>a boolean, <code>true</code> if the <code>.Summary</code> is truncated. Useful for showing a &ldquo;Read more&hellip;&rdquo; link only when necessary.  See <a href="/content-management/summaries/">Summaries</a> for more information.</dd>
 <dt>.Type</dt>
 <dd>the <a href="/content-management/types/">content type</a> of the content (e.g., <code>posts</code>).</dd>
-<dt>.UniqueID (deprecated)</dt>
-<dd>the MD5-checksum of the content file&rsquo;s path. This variable is deprecated and will be removed, use <code>.File.UniqueID</code> instead.</dd>
 <dt>.Weight</dt>
 <dd>assigned weight (in the front matter) to this content, used in sorting.</dd>
 <dt>.WordCount</dt>
@@ -485,8 +477,8 @@ tags: [two,three,four]
 <p>The <code>.Params</code> variable is particularly useful for the introduction of user-defined front matter fields in content files. For example, a Hugo website on book reviews could have the following front matter in <code>/content/review/book01.md</code>:</p>
 <pre tabindex="0"><code>---
 ...
-affiliatelink: &quot;http://www.my-book-link.here&quot;
-recommendedby: &quot;My Mother&quot;
+affiliatelink: &#34;http://www.my-book-link.here&#34;
+recommendedby: &#34;My Mother&#34;
 ...
 ---
 </code></pre><p>These fields would then be accessible to the <code>/themes/yourtheme/layouts/review/single.html</code> template through <code>.Params.affiliatelink</code> and <code>.Params.recommendedby</code>, respectively.</p>
@@ -508,8 +500,8 @@ recommendedby: &quot;My Mother&quot;
 	
 	<div class="code-copy-content nt3" >
 		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="cp">{{</span><span class="w"> </span><span class="k">printf</span><span class="w"> </span><span class="s">&#34;%s&#34;</span><span class="w"> </span><span class="na">$.Params.affiliatelink</span><span class="w"> </span><span class="cp">}}</span><span class="err">&gt;</span><span class="s">Buy</span> <span class="na">this</span> <span class="na">book</span><span class="err">&lt;/</span><span class="na">a</span><span class="p">&gt;&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>It was recommended by <span class="cp">{{</span><span class="w"> </span><span class="na">.Params.recommendedby</span><span class="w"> </span><span class="cp">}}</span>.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code></pre></div>
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="cp">{{</span><span class="w"> </span><span class="k">printf</span><span class="w"> </span><span class="s">&#34;%s&#34;</span><span class="w"> </span><span class="na">$.Params.affiliatelink</span><span class="w"> </span><span class="cp">}}</span><span class="err">&gt;</span><span class="s">Buy</span> <span class="na">this</span> <span class="na">book</span><span class="err">&lt;/</span><span class="na">a</span><span class="p">&gt;&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>It was recommended by <span class="cp">{{</span><span class="w"> </span><span class="na">.Params.recommendedby</span><span class="w"> </span><span class="cp">}}</span>.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></span></span></code></pre></div>
 	</div>
 
 </div>
@@ -539,7 +531,7 @@ recommendedby: &quot;My Mother&quot;
 
 <h3 id="the-param-method">The <code>.Param</code> Method <a class="header-link" href="#the-param-method"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>In Hugo, you can declare params in individual pages and globally for your entire website. A common use case is to have a general value for the site param and a more specific value for some of the pages (i.e., a header image):</p>
-<pre tabindex="0"><code>{{ $.Param &quot;header_image&quot; }}
+<pre tabindex="0"><code>{{ $.Param &#34;header_image&#34; }}
 </code></pre><p>The <code>.Param</code> method provides a way to resolve a single value according to it&rsquo;s definition in a page parameter (i.e. in the content&rsquo;s front matter) or a site parameter (i.e., in your <code>config</code>).</p>
 <h3 id="access-nested-fields-in-front-matter">Access Nested Fields in Front Matter <a class="header-link" href="#access-nested-fields-in-front-matter"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>When front matter contains nested fields like the following:</p>
@@ -550,7 +542,7 @@ author:
   display_name: John Feminella
 ---
 </code></pre><p><code>.Param</code> can access these fields by concatenating the field names together with a dot:</p>
-<pre tabindex="0"><code>{{ $.Param &quot;author.display_name&quot; }}
+<pre tabindex="0"><code>{{ $.Param &#34;author.display_name&#34; }}
 </code></pre><p>If your front matter contains a top-level key that is ambiguous with a nested key, as in the following case:</p>
 <pre tabindex="0"><code>---
 favorites.flavor: vanilla
@@ -558,7 +550,7 @@ favorites:
   flavor: chocolate
 ---
 </code></pre><p>The top-level key will be preferred. Therefore, the following method, when applied to the previous example, will print <code>vanilla</code> and not <code>chocolate</code>:</p>
-<pre tabindex="0"><code>{{ $.Param &quot;favorites.flavor&quot; }}
+<pre tabindex="0"><code>{{ $.Param &#34;favorites.flavor&#34; }}
 =&gt; vanilla
 </code></pre>
 </div>
@@ -709,6 +701,11 @@ favorites:
           <li class="f6 fw4">
             <a href="/content-management/formats/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Content Formats
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/content-management/diagrams/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Diagrams
             </a>
           </li>
           <li class="f6 fw4">
@@ -1650,11 +1647,6 @@ favorites:
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/variables/hugo/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hugo Variables
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/variables/git/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Git Variables
             </a>
@@ -1905,7 +1897,7 @@ favorites:
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: February 12, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b162c296b7f2066827adadc6ebff61028366790d">Merge pull request #102 from blackb1rd/hugo/v0.92.2 (b162c29)</a>
+  Last updated: March 6, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/bc2bc7c8dd3645fdf6a0da2ecb9bb182571b08b3">Merge pull request #103 from blackb1rd/hugo/v0.93.2 (bc2bc7c)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/variables/page.md" class="
@@ -2153,6 +2145,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 </footer>
+
+
+  
 
 
 </body>

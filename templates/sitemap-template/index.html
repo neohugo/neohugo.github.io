@@ -13,7 +13,7 @@
   <title>Sitemap Template | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.15-DEV" />
+  <meta name="generator" content="Hugo 0.16-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,10 +62,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/templates/sitemap-template/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_2165530627311158908.png"/><meta property="article:section" content="templates" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-02-12T14:25:46+07:00" />
+<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="name" content="Sitemap Template">
 <meta itemprop="description" content="Hugo ships with a built-in template file observing the v0.9 of the Sitemap Protocol, but you can override this template if needed."><meta itemprop="datePublished" content="2017-02-01T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-02-12T14:25:46+07:00" />
+<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
 <meta itemprop="wordCount" content="351"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_2165530627311158908.png"/>
@@ -252,7 +252,7 @@
 
 <p>A single Sitemap template is used to generate the <code>sitemap.xml</code> file.
 Hugo automatically comes with this template file. <em>No work is needed on
-the users' part unless they want to customize <code>sitemap.xml</code>.</em></p>
+the users&rsquo; part unless they want to customize <code>sitemap.xml</code>.</em></p>
 <p>A sitemap is a <code>Page</code> and therefore has all the <a href="/variables/page/">page variables</a> available to use in this template along with Sitemap-specific ones:</p>
 <dl>
 <dt><code>.Sitemap.ChangeFreq</code></dt>
@@ -268,42 +268,42 @@ the users' part unless they want to customize <code>sitemap.xml</code>.</em></p>
 <p>For multilingual sites, we also create a Sitemap index. You can provide a custom layout for that in either <code>layouts/sitemapindex.xml</code> or <code>layouts/_default/sitemapindex.xml</code>.</p>
 <h2 id="hugos-sitemapxml">Hugo’s sitemap.xml <a class="header-link" href="#hugos-sitemapxml"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>This template respects the version 0.9 of the <a href="https://www.sitemaps.org/protocol.html">Sitemap Protocol</a>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml">{{ printf &#34;<span class="cp">&lt;?xml version=\&#34;1.0\&#34; encoding=\&#34;utf-8\&#34; standalone=\&#34;yes\&#34; ?&gt;</span>&#34; | safeHTML }}
-<span class="nt">&lt;urlset</span> <span class="na">xmlns=</span><span class="s">&#34;http://www.sitemaps.org/schemas/sitemap/0.9&#34;</span>
-  <span class="na">xmlns:xhtml=</span><span class="s">&#34;http://www.w3.org/1999/xhtml&#34;</span><span class="nt">&gt;</span>
-  {{ range .Data.Pages }}
-  <span class="nt">&lt;url&gt;</span>
-    <span class="nt">&lt;loc&gt;</span>{{ .Permalink }}<span class="nt">&lt;/loc&gt;</span>{{ if not .Lastmod.IsZero }}
-    <span class="nt">&lt;lastmod&gt;</span>{{ safeHTML ( .Lastmod.Format &#34;2006-01-02T15:04:05-07:00&#34; ) }}<span class="nt">&lt;/lastmod&gt;</span>{{ end }}{{ with .Sitemap.ChangeFreq }}
-    <span class="nt">&lt;changefreq&gt;</span>{{ . }}<span class="nt">&lt;/changefreq&gt;</span>{{ end }}{{ if ge .Sitemap.Priority 0.0 }}
-    <span class="nt">&lt;priority&gt;</span>{{ .Sitemap.Priority }}<span class="nt">&lt;/priority&gt;</span>{{ end }}{{ if .IsTranslated }}{{ range .Translations }}
-    <span class="nt">&lt;xhtml:link</span>
-                <span class="na">rel=</span><span class="s">&#34;alternate&#34;</span>
-                <span class="na">hreflang=</span><span class="s">&#34;{{ .Lang }}&#34;</span>
-                <span class="na">href=</span><span class="s">&#34;{{ .Permalink }}&#34;</span>
-                <span class="nt">/&gt;</span>{{ end }}
-    <span class="nt">&lt;xhtml:link</span>
-                <span class="na">rel=</span><span class="s">&#34;alternate&#34;</span>
-                <span class="na">hreflang=</span><span class="s">&#34;{{ .Lang }}&#34;</span>
-                <span class="na">href=</span><span class="s">&#34;{{ .Permalink }}&#34;</span>
-                <span class="nt">/&gt;</span>{{ end }}
-  <span class="nt">&lt;/url&gt;</span>
-  {{ end }}
-<span class="nt">&lt;/urlset&gt;</span>
-</code></pre></div><h2 id="hugos-sitemapindexxml">Hugo&rsquo;s sitemapindex.xml <a class="header-link" href="#hugos-sitemapindexxml"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl">{{ printf &#34;<span class="cp">&lt;?xml version=\&#34;1.0\&#34; encoding=\&#34;utf-8\&#34; standalone=\&#34;yes\&#34; ?&gt;</span>&#34; | safeHTML }}
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;urlset</span> <span class="na">xmlns=</span><span class="s">&#34;http://www.sitemaps.org/schemas/sitemap/0.9&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">xmlns:xhtml=</span><span class="s">&#34;http://www.w3.org/1999/xhtml&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">  {{ range .Data.Pages }}
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;url&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;loc&gt;</span>{{ .Permalink }}<span class="nt">&lt;/loc&gt;</span>{{ if not .Lastmod.IsZero }}
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;lastmod&gt;</span>{{ safeHTML ( .Lastmod.Format &#34;2006-01-02T15:04:05-07:00&#34; ) }}<span class="nt">&lt;/lastmod&gt;</span>{{ end }}{{ with .Sitemap.ChangeFreq }}
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;changefreq&gt;</span>{{ . }}<span class="nt">&lt;/changefreq&gt;</span>{{ end }}{{ if ge .Sitemap.Priority 0.0 }}
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;priority&gt;</span>{{ .Sitemap.Priority }}<span class="nt">&lt;/priority&gt;</span>{{ end }}{{ if .IsTranslated }}{{ range .Translations }}
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;xhtml:link</span>
+</span></span><span class="line"><span class="cl">                <span class="na">rel=</span><span class="s">&#34;alternate&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="na">hreflang=</span><span class="s">&#34;{{ .Lang }}&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="na">href=</span><span class="s">&#34;{{ .Permalink }}&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">/&gt;</span>{{ end }}
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;xhtml:link</span>
+</span></span><span class="line"><span class="cl">                <span class="na">rel=</span><span class="s">&#34;alternate&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="na">hreflang=</span><span class="s">&#34;{{ .Lang }}&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="na">href=</span><span class="s">&#34;{{ .Permalink }}&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">/&gt;</span>{{ end }}
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/url&gt;</span>
+</span></span><span class="line"><span class="cl">  {{ end }}
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/urlset&gt;</span>
+</span></span></code></pre></div><h2 id="hugos-sitemapindexxml">Hugo&rsquo;s sitemapindex.xml <a class="header-link" href="#hugos-sitemapindexxml"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>This is used to create a Sitemap index in multilingual mode:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml">{{ printf &#34;<span class="cp">&lt;?xml version=\&#34;1.0\&#34; encoding=\&#34;utf-8\&#34; standalone=\&#34;yes\&#34; ?&gt;</span>&#34; | safeHTML }}
-<span class="nt">&lt;sitemapindex</span> <span class="na">xmlns=</span><span class="s">&#34;http://www.sitemaps.org/schemas/sitemap/0.9&#34;</span><span class="nt">&gt;</span>
-	{{ range . }}
-	<span class="nt">&lt;sitemap&gt;</span>
-	   	<span class="nt">&lt;loc&gt;</span>{{ .SitemapAbsURL }}<span class="nt">&lt;/loc&gt;</span>
-		{{ if not .LastChange.IsZero }}
-	   	<span class="nt">&lt;lastmod&gt;</span>{{ .LastChange.Format &#34;2006-01-02T15:04:05-07:00&#34; | safeHTML }}<span class="nt">&lt;/lastmod&gt;</span>
-		{{ end }}
-	<span class="nt">&lt;/sitemap&gt;</span>
-	{{ end }}
-<span class="nt">&lt;/sitemapindex&gt;</span>
-</code></pre></div><h2 id="configure-sitemapxml">Configure <code>sitemap.xml</code> <a class="header-link" href="#configure-sitemapxml"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl">{{ printf &#34;<span class="cp">&lt;?xml version=\&#34;1.0\&#34; encoding=\&#34;utf-8\&#34; standalone=\&#34;yes\&#34; ?&gt;</span>&#34; | safeHTML }}
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;sitemapindex</span> <span class="na">xmlns=</span><span class="s">&#34;http://www.sitemaps.org/schemas/sitemap/0.9&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">	{{ range . }}
+</span></span><span class="line"><span class="cl">	<span class="nt">&lt;sitemap&gt;</span>
+</span></span><span class="line"><span class="cl">	   	<span class="nt">&lt;loc&gt;</span>{{ .SitemapAbsURL }}<span class="nt">&lt;/loc&gt;</span>
+</span></span><span class="line"><span class="cl">		{{ if not .LastChange.IsZero }}
+</span></span><span class="line"><span class="cl">	   	<span class="nt">&lt;lastmod&gt;</span>{{ .LastChange.Format &#34;2006-01-02T15:04:05-07:00&#34; | safeHTML }}<span class="nt">&lt;/lastmod&gt;</span>
+</span></span><span class="line"><span class="cl">		{{ end }}
+</span></span><span class="line"><span class="cl">	<span class="nt">&lt;/sitemap&gt;</span>
+</span></span><span class="line"><span class="cl">	{{ end }}
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/sitemapindex&gt;</span>
+</span></span></code></pre></div><h2 id="configure-sitemapxml">Configure <code>sitemap.xml</code> <a class="header-link" href="#configure-sitemapxml"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Defaults for <code>&lt;changefreq&gt;</code>, <code>&lt;priority&gt;</code> and <code>filename</code> values can be set in the site&rsquo;s config file, e.g.:</p>
 
 <div class="code relative" id="config">
@@ -324,30 +324,30 @@ the users' part unless they want to customize <code>sitemap.xml</code>.</em></p>
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">sitemap</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">changefreq</span><span class="p">:</span><span class="w"> </span><span class="l">monthly</span><span class="w">
-</span><span class="w">  </span><span class="nt">filename</span><span class="p">:</span><span class="w"> </span><span class="l">sitemap.xml</span><span class="w">
-</span><span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="m">0.5</span><span class="w">
-</span></code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">sitemap</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">changefreq</span><span class="p">:</span><span class="w"> </span><span class="l">monthly</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">filename</span><span class="p">:</span><span class="w"> </span><span class="l">sitemap.xml</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="m">0.5</span><span class="w">
+</span></span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">sitemap</span><span class="p">]</span>
-  <span class="nx">changefreq</span> <span class="p">=</span> <span class="s1">&#39;monthly&#39;</span>
-  <span class="nx">filename</span> <span class="p">=</span> <span class="s1">&#39;sitemap.xml&#39;</span>
-  <span class="nx">priority</span> <span class="p">=</span> <span class="mf">0.5</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">sitemap</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">changefreq</span> <span class="p">=</span> <span class="s1">&#39;monthly&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">filename</span> <span class="p">=</span> <span class="s1">&#39;sitemap.xml&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">priority</span> <span class="p">=</span> <span class="mf">0.5</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-   <span class="nt">&#34;sitemap&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;changefreq&#34;</span><span class="p">:</span> <span class="s2">&#34;monthly&#34;</span><span class="p">,</span>
-      <span class="nt">&#34;filename&#34;</span><span class="p">:</span> <span class="s2">&#34;sitemap.xml&#34;</span><span class="p">,</span>
-      <span class="nt">&#34;priority&#34;</span><span class="p">:</span> <span class="mf">0.5</span>
-   <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;sitemap&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;changefreq&#34;</span><span class="p">:</span> <span class="s2">&#34;monthly&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;filename&#34;</span><span class="p">:</span> <span class="s2">&#34;sitemap.xml&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;priority&#34;</span><span class="p">:</span> <span class="mf">0.5</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
   </div>
@@ -511,6 +511,11 @@ the users' part unless they want to customize <code>sitemap.xml</code>.</em></p>
           <li class="f6 fw4">
             <a href="/content-management/formats/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Content Formats
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/content-management/diagrams/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Diagrams
             </a>
           </li>
           <li class="f6 fw4">
@@ -1452,11 +1457,6 @@ the users' part unless they want to customize <code>sitemap.xml</code>.</em></p>
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/variables/hugo/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hugo Variables
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/variables/git/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Git Variables
             </a>
@@ -1707,7 +1707,7 @@ the users' part unless they want to customize <code>sitemap.xml</code>.</em></p>
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: February 12, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b162c296b7f2066827adadc6ebff61028366790d">Merge pull request #102 from blackb1rd/hugo/v0.92.2 (b162c29)</a>
+  Last updated: March 6, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/bc2bc7c8dd3645fdf6a0da2ecb9bb182571b08b3">Merge pull request #103 from blackb1rd/hugo/v0.93.2 (bc2bc7c)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/templates/sitemap-template.md" class="
@@ -1955,6 +1955,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 </div>
 
 </footer>
+
+
+  
 
 
 </body>
