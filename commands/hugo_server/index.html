@@ -64,13 +64,13 @@ Synopsis  Hugo provides its own webserver which builds and serves the site. Whil
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/commands/hugo_server/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_11617278815930147771.png"/><meta property="article:section" content="commands" />
 
-<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
+<meta property="article:modified_time" content="2022-03-10T23:56:11+07:00" />
 <meta itemprop="name" content="hugo server">
 <meta itemprop="description" content="hugo server  A high performance webserver
 Synopsis  Hugo provides its own webserver which builds and serves the site. While hugo server is high performance, it is a webserver with limited options. Many run it in production, but the standard behavior is for people to use it in development and use a more full featured server such as Nginx or Caddy.
 &lsquo;hugo server&rsquo; will avoid writing the rendered and served content to disk, preferring to store it in memory.">
-<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
-<meta itemprop="wordCount" content="610"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="dateModified" content="2022-03-10T23:56:11+07:00" />
+<meta itemprop="wordCount" content="617"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_11617278815930147771.png"/>
 <meta name="twitter:title" content="hugo server"/>
@@ -84,6 +84,8 @@ Synopsis  Hugo provides its own webserver which builds and serves the site. Whil
 
 <body class="ma0 sans-serif bg-primary-color-light">
   
+
+  
 <nav class="bg-primary-color-dark pv4 w-100" role="navigation">
 
   <div class="center flex-ns flex-wrap items-center justify-start mw9">
@@ -93,7 +95,7 @@ Synopsis  Hugo provides its own webserver which builds and serves the site. Whil
          HUGO
       </a>
     </h1>
-    <ul class="list ma0 pa0 dn dib-l">
+    <ul class="list ma0 pa0 dn dib-l" role="menu">
       
         <li class="f5 dib mr4" role="menuitem">
             
@@ -296,7 +298,8 @@ of a second, you will be able to save and see your changes nearly instantly.</p>
       --printMemoryUsage       print memory usage to screen at intervals
       --printPathWarnings      print warnings on duplicate target paths etc.
       --printUnusedTemplates   print warnings on unused templates.
-      --renderToDisk           render to Destination path (default is render to memory &amp; serve from there)
+      --renderStaticToDisk     serve static files from disk and dynamic files from memory
+      --renderToDisk           serve all files from disk (default is from memory)
       --templateMetrics        display metrics about template executions
       --templateMetricsHints   calculate some improvement hints when combined with --templateMetrics
   -t, --theme strings          themes to use (located in /themes/THEMENAME/)
@@ -1565,11 +1568,6 @@ of a second, you will be able to save and see your changes nearly instantly.</p>
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/hosting-and-deployment/deployment-with-nanobox/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Host-Agnostic Deploys with Nanobox
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/hosting-and-deployment/hosting-on-aws-amplify/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Host on AWS Amplify
             </a>
@@ -1657,7 +1655,7 @@ of a second, you will be able to save and see your changes nearly instantly.</p>
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: March 6, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/bc2bc7c8dd3645fdf6a0da2ecb9bb182571b08b3">Merge pull request #103 from blackb1rd/hugo/v0.93.2 (bc2bc7c)</a>
+  Last updated: March 10, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b35cf80c57f9df140cd2d09b86317ee60fa94de5">Merge pull request #104 from blackb1rd/hugo/v0.94.0 (b35cf80)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/commands/hugo_server.md" class="
@@ -1906,6 +1904,10 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 
 </footer>
 
+  
+  
+
+  
 
   
 

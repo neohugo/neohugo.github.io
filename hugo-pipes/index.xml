@@ -13,11 +13,9 @@
       <pubDate>Sat, 14 Jul 2018 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/hugo-pipes/introduction/</guid>
-      <description>Get Resource with resources.Get and resources.GetRemote  In order to process an asset with Hugo Pipes, it must be retrieved as a Resource using resources.Get or resources.GetRemote.
-With resources.Get, the first argument is a local path relative to the assets directory/directories:
-{{$local:=resources.Get&amp;#34;sass/main.scss&amp;#34;}} With resources.GetRemote, the first argument is a remote URL:
-{{$remote:=resources.GetRemote&amp;#34;https://www.example.com/styles.scss&amp;#34;}} resources.Get and resources.GetRemote return nil if the resource is not found.
-Error Handling  New in v0.91.0  The return value from resources.</description>
+      <description>Find Resources in /assets  This is about the global Resources mounted inside /assets. For the .Page scoped Resources, see Page Resources.
+Note that you can mount any directory into Hugo&amp;rsquo;s virtual assets folder using the Mount Configuration.
+   Function Description     resources.Get Get locates the filename given in Hugo&amp;rsquo;s assets filesystem and creates a Resource object that can be used for further transformations. See Get Resource with resources.</description>
     </item>
     
     <item>
@@ -27,7 +25,7 @@ Error Handling  New in v0.91.0  The return value from resources.</description>
       
       <guid>https://gohugo.io/hugo-pipes/scss-sass/</guid>
       <description>Any SASS or SCSS file can be transformed into a CSS file using resources.ToCSS which takes two arguments, the resource object and a map of options listed below.
-{{$sass:=resources.Get&amp;#34;sass/main.scss&amp;#34;}} {{$style:=$sass|resources.ToCSS}} Options   transpiler [string] New in v0.80.0   The transpiler to use, valid values are libsass (default) and dartsass. Note that the Embedded Dart Sass project is still in beta. We will try to improve the installation process when it has stable releases, but if you want to use Hugo with Dart Sass you need to download a release binary from Embedded Dart Sass (Hugo after 0.</description>
+{{$sass:=resources.Get&amp;#34;sass/main.scss&amp;#34;}} {{$style:=$sass|resources.ToCSS}} Options   transpiler [string] New in v0.80.0    The transpiler to use, valid values are libsass (default) and dartsass. Note that the Embedded Dart Sass project is still in beta. We will try to improve the installation process when it has stable releases, but if you want to use Hugo with Dart Sass you need to download a release binary from Embedded Dart Sass (Hugo after 0.</description>
     </item>
     
     <item>
@@ -36,8 +34,7 @@ Error Handling  New in v0.91.0  The return value from resources.</description>
       <pubDate>Thu, 09 Apr 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/hugo-pipes/postprocess/</guid>
-      <description>Marking a resource with resources.PostProcess delays any transformations to after the build, typically because one or more of the steps in the transformation chain depends on the result of the build (e.g. files in public). New in v0.69.0 
-A prime use case for this is CSS purging with PostCSS.
+      <description>Marking a resource with resources.PostProcess delays any transformations to after the build, typically because one or more of the steps in the transformation chain depends on the result of the build (e.g. files in public). New in v0.69.0  A prime use case for this is CSS purging with PostCSS.
 There are currently two limitations to this:
   This only works in *.html templates (i.e. templates that produces HTML files).</description>
     </item>

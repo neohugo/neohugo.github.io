@@ -18,17 +18,6 @@ Assumptions   You have completed the Quick Start or have a Hugo website you are 
     </item>
     
     <item>
-      <title>Host-Agnostic Deploys with Nanobox</title>
-      <link>https://gohugo.io/hosting-and-deployment/deployment-with-nanobox/</link>
-      <pubDate>Thu, 24 Aug 2017 00:00:00 +0200</pubDate>
-      
-      <guid>https://gohugo.io/hosting-and-deployment/deployment-with-nanobox/</guid>
-      <description>Nanobox provides an entire end-to-end workflow for developing and deploying applications. Using Nanobox to deploy also means you&amp;rsquo;ll use it to develop your application.
- If you&amp;rsquo;re already using Nanobox and just need deployment instructions, you can skip to Deploying Hugo with Nanobox
-  What You&amp;rsquo;ll Need  With Nanobox you don&amp;rsquo;t need to worry about having Go or Hugo installed. They&amp;rsquo;ll be installed as part of the development environment created for you.</description>
-    </item>
-    
-    <item>
       <title>Host on Render</title>
       <link>https://gohugo.io/hosting-and-deployment/hosting-on-render/</link>
       <pubDate>Thu, 06 Jun 2019 00:00:00 +0200</pubDate>

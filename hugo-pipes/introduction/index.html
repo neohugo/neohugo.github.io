@@ -62,11 +62,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/hugo-pipes/introduction/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_3431511264709384207.png"/><meta property="article:section" content="hugo-pipes" />
 <meta property="article:published_time" content="2018-07-14T00:00:00+02:00" />
-<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
+<meta property="article:modified_time" content="2022-03-10T23:56:11+07:00" />
 <meta itemprop="name" content="Hugo Pipes Introduction">
 <meta itemprop="description" content="Hugo Pipes is Hugo&#39;s asset processing set of functions."><meta itemprop="datePublished" content="2018-07-14T00:00:00+02:00" />
-<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
-<meta itemprop="wordCount" content="390"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="dateModified" content="2022-03-10T23:56:11+07:00" />
+<meta itemprop="wordCount" content="627"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_3431511264709384207.png"/>
 <meta name="twitter:title" content="Hugo Pipes Introduction"/>
@@ -78,6 +78,8 @@
 
 <body class="ma0 sans-serif bg-primary-color-light">
   
+
+  
 <nav class="bg-primary-color-dark pv4 w-100" role="navigation">
 
   <div class="center flex-ns flex-wrap items-center justify-start mw9">
@@ -87,7 +89,7 @@
          HUGO
       </a>
     </h1>
-    <ul class="list ma0 pa0 dn dib-l">
+    <ul class="list ma0 pa0 dn dib-l" role="menu">
       
         <li class="f5 dib mr4" role="menuitem">
             
@@ -198,6 +200,7 @@
 		<p class="b">What's on this Page</p>
   	<nav id="TableOfContents">
   <ul>
+    <li><a href="#find-resources-in-assets">Find Resources in /assets</a></li>
     <li><a href="#get-resource-with-resourcesget-and-resourcesgetremote">Get Resource with resources.Get and resources.GetRemote</a></li>
     <li><a href="#asset-directory">Asset directory</a></li>
     <li><a href="#go-pipes">Go Pipes</a></li>
@@ -253,6 +256,36 @@
 
 <div class="prose" id="prose">
 
+<h2 id="find-resources-in-assets">Find Resources in /assets <a class="header-link" href="#find-resources-in-assets"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<p>This is about the global Resources mounted inside <code>/assets</code>. For the <code>.Page</code> scoped Resources, see <a href="/content-management/page-resources/">Page Resources</a>.</p>
+<p>Note that you can mount any directory into Hugo&rsquo;s virtual <code>assets</code> folder using the <a href="/hugo-modules/configuration/#module-config-mounts">Mount Configuration</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>resources.Get</code></td>
+<td>Get locates the filename given in Hugo&rsquo;s assets filesystem and creates a <code>Resource</code> object that can be used for further transformations. See <a href="#get-resource-with-resourcesget-and-resourcesgetremote">Get Resource with resources.Get and resources.GetRemote</a>.</td>
+</tr>
+<tr>
+<td><code>resources.GetRemote</code></td>
+<td>Same as <code>Get</code>, but it accepts remote URLs. See <a href="#get-resource-with-resourcesget-and-resourcesgetremote">Get Resource with resources.Get and resources.GetRemote</a>.</td>
+</tr>
+<tr>
+<td><code>resources.GetMatch</code></td>
+<td><code>GetMatch</code> finds the first Resource matching the given pattern, or nil if none found. See Match for a more complete explanation about the rules used.</td>
+</tr>
+<tr>
+<td><code>resources.Match</code></td>
+<td><code>Match</code> gets all resources matching the given base path prefix, e.g &ldquo;<em>.png&rdquo; will match all png files. The &ldquo;</em>&rdquo; does not match path delimiters (/), so if you organize your resources in sub-folders, you need to be explicit about it, e.g.: &ldquo;images/*.png&rdquo;. To match any PNG image anywhere in the bundle you can do &ldquo;**.png&rdquo;, and to match all PNG images below the images folder, use &ldquo;images/**.jpg&rdquo;. The matching is case insensitive. Match matches by using the files name with path relative to the file system root with Unix style slashes (/) and no leading slash, e.g. &ldquo;images/logo.png&rdquo;. See <a href="https://github.com/gobwas/glob">https://github.com/gobwas/glob</a> for the full rules set.</td>
+</tr>
+</tbody>
+</table>
+<p>See the <a href="https://pkg.go.dev/github.com/gohugoio/hugo@v0.93.1/tpl/resources">GoDoc Page</a> for the <code>resources</code> package for an up to date overview of all template functions in this namespace.</p>
 <h2 id="get-resource-with-resourcesget-and-resourcesgetremote">Get Resource with resources.Get and resources.GetRemote <a class="header-link" href="#get-resource-with-resourcesget-and-resourcesgetremote"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>In order to process an asset with Hugo Pipes, it must be retrieved as a <code>Resource</code> using <code>resources.Get</code> or <code>resources.GetRemote</code>.</p>
 <p>With <code>resources.Get</code>, the first argument is a local path relative to the <code>assets</code> directory/directories:</p>
@@ -265,8 +298,9 @@
 
 
 <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
-    <a href="https://gohugo.io/news/0.91.0-relnotes/" target="_blank">New in v0.91.0</a>
+    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.91.0" target="_blank">New in v0.91.0</a>
 </button>
+
 <p>The return value from <code>resources.GetRemote</code> includes an <code>.Err</code> method that will return an error if the call failed. If you want to just log any error as a <code>WARNING</code> you can use a construct similar to the one below.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nx">resources</span><span class="na">.GetRemote</span><span class="w"> </span><span class="s">&#34;https://gohugo.io/images/gohugoio-card-1.png&#34;</span><span class="w"> </span><span class="cp">}}</span>
 </span></span><span class="line"><span class="cl">  <span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.Err</span><span class="w"> </span><span class="cp">}}</span>
@@ -1556,11 +1590,6 @@ Non-transformation methods deprived of such aliases are <code>resources.Get</cod
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/hosting-and-deployment/deployment-with-nanobox/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Host-Agnostic Deploys with Nanobox
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/hosting-and-deployment/hosting-on-aws-amplify/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Host on AWS Amplify
             </a>
@@ -1648,7 +1677,7 @@ Non-transformation methods deprived of such aliases are <code>resources.Get</cod
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: March 6, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/bc2bc7c8dd3645fdf6a0da2ecb9bb182571b08b3">Merge pull request #103 from blackb1rd/hugo/v0.93.2 (bc2bc7c)</a>
+  Last updated: March 10, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b35cf80c57f9df140cd2d09b86317ee60fa94de5">Merge pull request #104 from blackb1rd/hugo/v0.94.0 (b35cf80)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/hugo-pipes/introduction.md" class="
@@ -1897,6 +1926,10 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 
 </footer>
 
+  
+  
+
+  
 
   
 

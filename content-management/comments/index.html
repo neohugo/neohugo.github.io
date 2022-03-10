@@ -62,10 +62,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/content-management/comments/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_16425904434257638181.png"/><meta property="article:section" content="content-management" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-03-06T19:02:37+07:00" />
+<meta property="article:modified_time" content="2022-03-10T23:56:11+07:00" />
 <meta itemprop="name" content="Comments">
 <meta itemprop="description" content="Hugo ships with an internal Disqus template, but this isn&#39;t the only commenting system that will work with your new Hugo website."><meta itemprop="datePublished" content="2017-02-01T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-03-06T19:02:37+07:00" />
+<meta itemprop="dateModified" content="2022-03-10T23:56:11+07:00" />
 <meta itemprop="wordCount" content="227"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_16425904434257638181.png"/>
@@ -78,6 +78,8 @@
 
 <body class="ma0 sans-serif bg-primary-color-light">
   
+
+  
 <nav class="bg-primary-color-dark pv4 w-100" role="navigation">
 
   <div class="center flex-ns flex-wrap items-center justify-start mw9">
@@ -87,7 +89,7 @@
          HUGO
       </a>
     </h1>
-    <ul class="list ma0 pa0 dn dib-l">
+    <ul class="list ma0 pa0 dn dib-l" role="menu">
       
         <li class="f5 dib mr4" role="menuitem">
             
@@ -286,16 +288,16 @@
   </div>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">disqusShortname</span><span class="p">:</span><span class="w"> </span><span class="l">yourdiscussshortname</span><span class="w">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">disqusShortname</span><span class="p">:</span><span class="w"> </span><span class="l">yourDisqusShortname</span><span class="w">
 </span></span></span></code></pre></div>
       </div>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">disqusShortname</span> <span class="p">=</span> <span class="s1">&#39;yourdiscussshortname&#39;</span>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">disqusShortname</span> <span class="p">=</span> <span class="s1">&#39;yourDisqusShortname&#39;</span>
 </span></span></code></pre></div>
       </div>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">   <span class="nt">&#34;disqusShortname&#34;</span><span class="p">:</span> <span class="s2">&#34;yourdiscussshortname&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;disqusShortname&#34;</span><span class="p">:</span> <span class="s2">&#34;yourDisqusShortname&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div>
       </div>
@@ -1587,11 +1589,6 @@
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/hosting-and-deployment/deployment-with-nanobox/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Host-Agnostic Deploys with Nanobox
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/hosting-and-deployment/hosting-on-aws-amplify/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Host on AWS Amplify
             </a>
@@ -1679,7 +1676,7 @@
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: March 6, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/bc2bc7c8dd3645fdf6a0da2ecb9bb182571b08b3">Merge pull request #103 from blackb1rd/hugo/v0.93.2 (bc2bc7c)</a>
+  Last updated: March 10, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b35cf80c57f9df140cd2d09b86317ee60fa94de5">Merge pull request #104 from blackb1rd/hugo/v0.94.0 (b35cf80)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/content-management/comments.md" class="
@@ -1928,6 +1925,10 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 
 </footer>
 
+  
+  
+
+  
 
   
 

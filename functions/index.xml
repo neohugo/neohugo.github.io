@@ -1286,8 +1286,7 @@ If length is given and is negative, that number of characters will be omitted fr
       
       <guid>https://gohugo.io/functions/dateformat/</guid>
       <description>time.Format (alias dateFormat) converts either a time.Time object (e.g. .Date) or a timestamp string INPUT into the format specified by the LAYOUT string.
-{{time.Format&amp;#34;Monday, Jan 2, 2006&amp;#34;&amp;#34;2015-01-21&amp;#34;}} → &amp;#34;Wednesday, Jan 21, 2015&amp;#34; Note that since Hugo 0.87.0, time.Format will return a localized string for the current language. New in v0.87.0 
-The LAYOUT string can be either:
+{{time.Format&amp;#34;Monday, Jan 2, 2006&amp;#34;&amp;#34;2015-01-21&amp;#34;}} → &amp;#34;Wednesday, Jan 21, 2015&amp;#34; Note that since Hugo 0.87.0, time.Format will return a localized string for the current language. New in v0.87.0  The LAYOUT string can be either:
  Go’s Layout String to learn about how the LAYOUT string has to be formatted.</description>
     </item>
     
