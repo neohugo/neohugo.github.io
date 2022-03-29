@@ -13,7 +13,7 @@
   <title>anchorize | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.17-DEV" />
+  <meta name="generator" content="Hugo 0.18-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,11 +62,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/functions/anchorize/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_6037553026733375604.png"/><meta property="article:section" content="functions" />
 <meta property="article:published_time" content="2018-10-13T00:00:00+02:00" />
-<meta property="article:modified_time" content="2022-03-19T09:48:52+07:00" />
+<meta property="article:modified_time" content="2022-03-29T23:56:53+07:00" />
 <meta itemprop="name" content="anchorize">
 <meta itemprop="description" content="Takes a string and sanitizes it the same way as the [`defaultMarkdownHandler`](https://gohugo.io/getting-started/configuration-markup#configure-markup) does for markdown headers."><meta itemprop="datePublished" content="2018-10-13T00:00:00+02:00" />
-<meta itemprop="dateModified" content="2022-03-19T09:48:52+07:00" />
-<meta itemprop="wordCount" content="105"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="dateModified" content="2022-03-29T23:56:53+07:00" />
+<meta itemprop="wordCount" content="99"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_6037553026733375604.png"/>
 <meta name="twitter:title" content="anchorize"/>
@@ -256,13 +256,13 @@
 
 <p>If <a href="https://gohugo.io/getting-started/configuration-markup#goldmark">Goldmark</a> is set as <code>defaultMarkdownHandler</code>, the sanitizing logic adheres to the setting <a href="https://gohugo.io/getting-started/configuration-markup#goldmark"><code>markup.goldmark.parser.autoHeadingIDType</code></a>. If <a href="https://gohugo.io/getting-started/configuration-markup#blackfriday">Blackfriday</a> is set as <code>defaultMarkdownHandler</code>, this template function uses the <a href="https://github.com/russross/blackfriday#sanitized-anchor-names"><code>SanitizedAnchorName</code> logic from Blackfriday</a> (the same applies when <code>markup.goldmark.parser.autoHeadingIDType</code> is set to <code>blackfriday</code>).</p>
 <p>Since the <code>defaultMarkdownHandler</code> and this template function use the same sanitizing logic, you can use the latter to determine the ID of a header for linking with anchor tags.</p>
-<pre tabindex="0"><code>{{anchorize &#34;This is a header&#34;}} → &#34;this-is-a-header&#34;
-{{anchorize &#34;This is also          a header&#34;}} → &#34;this-is-also-a-header&#34;
-{{anchorize &#34;main.go&#34;}} → &#34;main-go&#34;
-{{anchorize &#34;Article 123&#34;}} → &#34;article-123&#34;
-{{anchorize &#34;&lt;- Let&#39;s try this, shall we?&#34;}} → &#34;let-s-try-this-shall-we&#34;
-{{anchorize &#34;Hello, 世界&#34;}} → &#34;hello-世界&#34;
-</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">anchorize</span><span class="w"> </span><span class="s">&#34;This is a header&#34;</span><span class="w"> </span><span class="cp">}}</span> --&gt; &#34;this-is-a-header&#34;
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">anchorize</span><span class="w"> </span><span class="s">&#34;This is also    a header&#34;</span><span class="w"> </span><span class="cp">}}</span> --&gt; &#34;this-is-also----a-header&#34;
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">anchorize</span><span class="w"> </span><span class="s">&#34;main.go&#34;</span><span class="w"> </span><span class="cp">}}</span> --&gt; &#34;maingo&#34;
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">anchorize</span><span class="w"> </span><span class="s">&#34;Article 123&#34;</span><span class="w"> </span><span class="cp">}}</span> --&gt; &#34;article-123&#34;
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">anchorize</span><span class="w"> </span><span class="s">&#34;&lt;- Let&#39;s try this, shall we?&#34;</span><span class="w"> </span><span class="cp">}}</span> --&gt; &#34;--lets-try-this-shall-we&#34;
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">anchorize</span><span class="w"> </span><span class="s">&#34;Hello, 世界&#34;</span><span class="w"> </span><span class="cp">}}</span> --&gt; &#34;hello-世界&#34;
+</span></span></code></pre></div>
 </div>
 
           
@@ -550,6 +550,11 @@
           <li class="f6 fw4">
             <a href="/templates/base/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Base Templates and Blocks
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/templates/render-hooks/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Render Hooks
             </a>
           </li>
           <li class="f6 fw4">
@@ -1610,7 +1615,7 @@
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: March 19, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/9515342005c522c3591268491b1b9aaf70182796">Merge pull request #106 from blackb1rd/hugo/v0.95.0 (9515342)</a>
+  Last updated: March 29, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/ba373a21faaffba576a090ff4dbe9c09c6b416f5">Merge pull request #107 from blackb1rd/hugo/v0.96.0 (ba373a2)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/functions/anchorize.md" class="

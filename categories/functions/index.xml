@@ -43,7 +43,7 @@
       
       <guid>https://gohugo.io/functions/strings.count/</guid>
       <description> New in v0.74.0  If SUBSTR is an empty string, this function returns 1 plus the number of Unicode code points in STRING.
-   Example Result     `{{ &amp;ldquo;aaabaab&amp;rdquo; strings.Count &amp;ldquo;a&amp;rdquo; }}`   `{{ &amp;ldquo;aaabaab&amp;rdquo; strings.Count &amp;ldquo;aa&amp;rdquo; }}`   `{{ &amp;ldquo;aaabaab&amp;rdquo; strings.Count &amp;ldquo;aaa&amp;rdquo; }}`   `{{ &amp;ldquo;aaabaab&amp;rdquo; strings.Count &amp;quot;&amp;quot; }}`    </description>
+   Example Result     {{ &amp;quot;aaabaab&amp;quot; | strings.Count &amp;quot;a&amp;quot; }} 5   {{ &amp;quot;aaabaab&amp;quot; | strings.Count &amp;quot;aa&amp;quot; }} 2   {{ &amp;quot;aaabaab&amp;quot; | strings.Count &amp;quot;aaa&amp;quot; }} 1   {{ &amp;quot;aaabaab&amp;quot; | strings.Count &amp;quot;&amp;quot; }} 8    </description>
     </item>
     
     <item>
@@ -52,9 +52,9 @@
       <pubDate>Fri, 29 May 2020 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/functions/hmac/</guid>
-      <description>hmac returns a cryptographic hash that uses a key to sign a message.
-{{ hmac &amp;#34;sha256&amp;#34; &amp;#34;Secret key&amp;#34; &amp;#34;Hello world, gophers!&amp;#34;}}, &amp;lt;!-- returns the string &amp;#34;b6d11b6c53830b9d87036272ca9fe9d19306b8f9d8aa07b15da27d89e6e34f40&amp;#34; Supported hash functions:
- md5 sha1 sha256 sha512  </description>
+      <description>Set the HASH_TYPE argument to md5, sha1, sha256, or sha512.
+Set the optional ENCODING argument to either hex (default) or binary.
+{{hmac&amp;#34;sha256&amp;#34;&amp;#34;Secret key&amp;#34;&amp;#34;Secret message&amp;#34;}} 5cceb491f45f8b154e20f3b0a30ed3a6ff3027d373f85c78ffe8983180b03c84 {{hmac&amp;#34;sha256&amp;#34;&amp;#34;Secret key&amp;#34;&amp;#34;Secret message&amp;#34;&amp;#34;hex&amp;#34;}} 5cceb491f45f8b154e20f3b0a30ed3a6ff3027d373f85c78ffe8983180b03c84 {{hmac&amp;#34;sha256&amp;#34;&amp;#34;Secret key&amp;#34;&amp;#34;Secret message&amp;#34;&amp;#34;binary&amp;#34;|base64Encode}} XM60kfRfixVOIPOwow7Tpv8wJ9Nz+Fx4/+iYMYCwPIQ= </description>
     </item>
     
     <item>
@@ -235,7 +235,7 @@ The function is particularly handy with dynamic path. The following example ensu
       <guid>https://gohugo.io/functions/anchorize/</guid>
       <description>If Goldmark is set as defaultMarkdownHandler, the sanitizing logic adheres to the setting markup.goldmark.parser.autoHeadingIDType. If Blackfriday is set as defaultMarkdownHandler, this template function uses the SanitizedAnchorName logic from Blackfriday (the same applies when markup.goldmark.parser.autoHeadingIDType is set to blackfriday).
 Since the defaultMarkdownHandler and this template function use the same sanitizing logic, you can use the latter to determine the ID of a header for linking with anchor tags.
-{{anchorize &amp;#34;This is a header&amp;#34;}} → &amp;#34;this-is-a-header&amp;#34; {{anchorize &amp;#34;This is also a header&amp;#34;}} → &amp;#34;this-is-also-a-header&amp;#34; {{anchorize &amp;#34;main.</description>
+{{anchorize&amp;#34;This is a header&amp;#34;}} --&amp;gt; &amp;#34;this-is-a-header&amp;#34; {{anchorize&amp;#34;This is also a header&amp;#34;}} --&amp;gt; &amp;#34;this-is-also----a-header&amp;#34; {{anchorize&amp;#34;main.</description>
     </item>
     
     <item>

@@ -15,8 +15,8 @@
       <description>hugo  hugo builds your site
 Synopsis  hugo is the main command, used to build your Hugo site.
 Hugo is a Fast and Flexible Static Site Generator built with love by spf13 and friends in Go.
-Complete documentation is available at http://gohugo.io/.
-hugo [flags] Options   -b, --baseURL string hostname (and path) to the root, e.g. http://spf13.com/ -D, --buildDrafts include content marked as draft -E, --buildExpired include expired content -F, --buildFuture include content with publishdate in the future --cacheDir string filesystem path to cache directory.</description>
+Complete documentation is available at https://gohugo.io/.
+hugo [flags] Options   -b, --baseURL string hostname (and path) to the root, e.g. https://spf13.com/ -D, --buildDrafts include content marked as draft -E, --buildExpired include expired content -F, --buildFuture include content with publishdate in the future --cacheDir string filesystem path to cache directory.</description>
     </item>
     
     <item>
@@ -204,7 +204,7 @@ hugo gen chromastyles [flags] Options   -h, --help help for chromastyles --highl
       <guid>https://gohugo.io/commands/hugo_gen_doc/</guid>
       <description>hugo gen doc  Generate Markdown documentation for the Hugo CLI.
 Synopsis  Generate Markdown documentation for the Hugo CLI.
-This command is, mostly, used to create up-to-date documentation of Hugo&amp;rsquo;s command-line interface for http://gohugo.io/.
+This command is, mostly, used to create up-to-date documentation of Hugo&amp;rsquo;s command-line interface for https://gohugo.io/.
 It creates one Markdown file per command with front matter suitable for rendering in Hugo.
 hugo gen doc [flags] Options   --dir string the directory to write the doc. (default &amp;#34;/tmp/hugodoc/&amp;#34;) -h, --help help for doc Options inherited from parent commands   --config string config file (default is path/config.</description>
     </item>

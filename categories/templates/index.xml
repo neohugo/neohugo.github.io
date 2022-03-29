@@ -271,5 +271,17 @@ These snippets use the printf function available in all Go templates. This funct
 What Variables are Available in this Context?  You can use the template syntax, $., to get the top-level template context from anywhere in your template. This will print out all the values under, .</description>
     </item>
     
+    <item>
+      <title>Markdown Render Hooks</title>
+      <link>https://gohugo.io/templates/render-hooks/</link>
+      <pubDate>Sat, 11 Mar 2017 00:00:00 +0100</pubDate>
+      
+      <guid>https://gohugo.io/templates/render-hooks/</guid>
+      <description>New in v0.62.0  Note that this is only supported with the Goldmark renderer.
+You can override certain parts of the default Markdown rendering to HTML by creating templates with base names render-{kind} in layouts/_default/_markup.
+You can also create type/section specific hooks in layouts/[type/section]/_markup, e.g.: layouts/blog/_markup. New in v0.71.0  The hook kinds currently supported are:
+ image link heading New in v0.71.0   codeblock New in v0.83.0    You can define Output-Format- and language-specific templates if needed.</description>
+    </item>
+    
   </channel>
 </rss>

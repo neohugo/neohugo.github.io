@@ -33,7 +33,7 @@ Get the Site object from a partial  All the methods below, e.g. .Site.RegularPag
       
       <guid>https://gohugo.io/variables/shortcodes/</guid>
       <description>Shortcodes have access to parameters delimited in the shortcode declaration via .Get, page- and site-level variables, and also the following shortcode-specific fields:
- .Name Shortcode name. .Ordinal Zero-based ordinal in relation to its parent. If the parent is the page itself, this ordinal will represent the position of this shortcode in the page content. .Parent provides access to the parent shortcode context in nested shortcodes. This can be very useful for inheritance of common shortcode parameters from the root.</description>
+ .Name Shortcode name. .Ordinal Zero-based ordinal in relation to its parent. If the parent is the page itself, this ordinal will represent the position of this shortcode in the page content. .Page The owning ´Page`. .Parent provides access to the parent shortcode context in nested shortcodes. This can be very useful for inheritance of common shortcode parameters from the root.</description>
     </item>
     
     <item>
