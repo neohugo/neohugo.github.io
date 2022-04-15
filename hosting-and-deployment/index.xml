@@ -99,6 +99,15 @@ hugo &amp;amp;&amp;amp; rsync -avz --delete public/ www-data@ftp.topologix.fr:~/
     </item>
     
     <item>
+      <title>Deployment with Rclone</title>
+      <link>https://gohugo.io/hosting-and-deployment/deployment-with-rclone/</link>
+      <pubDate>Mon, 09 Aug 2021 00:00:00 +0200</pubDate>
+      
+      <guid>https://gohugo.io/hosting-and-deployment/deployment-with-rclone/</guid>
+      <description>Assumptions   A web host running a web server. This could be a shared hosting environment or a VPS. Access to your web host with any of the protocols supported by rclone, such as SFTP. A functional static website built with Hugo Deploying from an Rclone compatible operating system You have installed Rclone.  NB: You can remove --interactive in the commands below once you are comfortable with rclone, if you wish.</description>
+    </item>
+    
+    <item>
       <title>Hosting on KeyCDN</title>
       <link>https://gohugo.io/hosting-and-deployment/hosting-on-keycdn/</link>
       <pubDate>Tue, 12 Sep 2017 00:00:00 +0200</pubDate>

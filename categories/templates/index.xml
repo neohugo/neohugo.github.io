@@ -218,14 +218,15 @@ Hugo provides the ability for you to define any RSS type you wish and can have d
     </item>
     
     <item>
-      <title>Sitemap Template</title>
+      <title>Sitemap Templates</title>
       <link>https://gohugo.io/templates/sitemap-template/</link>
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/sitemap-template/</guid>
-      <description>A single Sitemap template is used to generate the sitemap.xml file. Hugo automatically comes with this template file. No work is needed on the users&amp;rsquo; part unless they want to customize sitemap.xml.
-A sitemap is a Page and therefore has all the page variables available to use in this template along with Sitemap-specific ones:
- .Sitemap.ChangeFreq The page change frequency .Sitemap.Priority The priority of the page .Sitemap.Filename The sitemap filename  If provided, Hugo will use /layouts/sitemap.</description>
+      <description>Overview  Hugo&amp;rsquo;s built-in sitemap templates conform to v0.9 of the sitemap protocol.
+With a monolingual project, Hugo generates a sitemap.xml file in the root of the publishDir using the built-in sitemap.xml template.
+With a multilingual project, Hugo generates:
+ A sitemap.xml file in the root of each site (language) using the built-in sitemap.xml template A sitemap.xml file in the root of the publishDir using the built-in sitemapindex.xml template  Configuration  Set the default values for change frequency and priority, and the name of the generated file, in your site configuration.</description>
     </item>
     
     <item>
@@ -280,7 +281,7 @@ What Variables are Available in this Context?  You can use the template syntax, 
       <description>New in v0.62.0  Note that this is only supported with the Goldmark renderer.
 You can override certain parts of the default Markdown rendering to HTML by creating templates with base names render-{kind} in layouts/_default/_markup.
 You can also create type/section specific hooks in layouts/[type/section]/_markup, e.g.: layouts/blog/_markup. New in v0.71.0  The hook kinds currently supported are:
- image link heading New in v0.71.0   codeblock New in v0.83.0    You can define Output-Format- and language-specific templates if needed.</description>
+ image link heading New in v0.71.0   codeblock New in v0.93.0    You can define Output-Format- and language-specific templates if needed.</description>
     </item>
     
   </channel>

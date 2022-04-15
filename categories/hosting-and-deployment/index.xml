@@ -6,7 +6,7 @@
     <description>Recent content in hosting and deployment on Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Jun 2019 00:00:00 +0200</lastBuildDate><atom:link href="https://gohugo.io/categories/hosting-and-deployment/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Aug 2021 00:00:00 +0200</lastBuildDate><atom:link href="https://gohugo.io/categories/hosting-and-deployment/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hosting &amp; Deployment</title>
       <link>https://gohugo.io/hosting-and-deployment/</link>
@@ -105,6 +105,15 @@ Assumptions   Working familiarity with Git for version control A Bitbucket accou
       <guid>https://gohugo.io/hosting-and-deployment/deployment-with-rsync/</guid>
       <description>Assumptions   A web host running a web server. This could be a shared hosting environment or a VPS. Access to your web host with SSH A functional static website built with Hugo  The spoiler is that you can deploy your entire website with a command that looks like the following:
 hugo &amp;amp;&amp;amp; rsync -avz --delete public/ www-data@ftp.topologix.fr:~/www/ As you will see, we&amp;rsquo;ll put this command in a shell script file, which makes building and deployment as easy as executing .</description>
+    </item>
+    
+    <item>
+      <title>Deployment with Rclone</title>
+      <link>https://gohugo.io/hosting-and-deployment/deployment-with-rclone/</link>
+      <pubDate>Mon, 09 Aug 2021 00:00:00 +0200</pubDate>
+      
+      <guid>https://gohugo.io/hosting-and-deployment/deployment-with-rclone/</guid>
+      <description>Assumptions   A web host running a web server. This could be a shared hosting environment or a VPS. Access to your web host with any of the protocols supported by rclone, such as SFTP. A functional static website built with Hugo Deploying from an Rclone compatible operating system You have installed Rclone.  NB: You can remove --interactive in the commands below once you are comfortable with rclone, if you wish.</description>
     </item>
     
     <item>

@@ -95,6 +95,7 @@
 /extras/gitinfo/                   	/variables/git/
 /content/archetypes/               	/content-management/archetypes/
 /tutorials/deployment-with-rsync/  	/hosting-and-deployment/deployment-with-rsync/
+/tutorials/deployment-with-rclone/ 	/hosting-and-deployment/deployment-with-rclone/
 /extras/datafiles/                 	/templates/data-templates/
 /extras/datadrivencontent/         	/templates/data-templates/
 /doc/datafiles/                    	/templates/data-templates/
