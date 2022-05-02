@@ -13,7 +13,7 @@
   <title>Front Matter | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.20-DEV" />
+  <meta name="generator" content="Hugo 0.22-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,11 +62,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/content-management/front-matter/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_6809532587512095011.png"/><meta property="article:section" content="content-management" />
 <meta property="article:published_time" content="2017-01-09T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-04-15T18:09:38+07:00" />
+<meta property="article:modified_time" content="2022-05-02T21:59:33+07:00" />
 <meta itemprop="name" content="Front Matter">
 <meta itemprop="description" content="Hugo allows you to add front matter in yaml, toml, or json to your content files."><meta itemprop="datePublished" content="2017-01-09T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-04-15T18:09:38+07:00" />
-<meta itemprop="wordCount" content="1343"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="dateModified" content="2022-05-02T21:59:33+07:00" />
+<meta itemprop="wordCount" content="1341"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_6809532587512095011.png"/>
 <meta name="twitter:title" content="Front Matter"/>
@@ -378,7 +378,7 @@ Keyword values can be either strings (<code>#+KEY: VALUE</code>) or a whitespace
 <dt>keywords</dt>
 <dd>the meta keywords for the content.</dd>
 <dt>layout</dt>
-<dd>the layout Hugo should select from the <a href="/templates/lookup-order/" title="Hugo traverses your templates in a specific order when rendering content to allow for DRYer templating.">lookup order</a> when rendering the content. If a <code>type</code> is not specified in the front matter, Hugo will look for the layout of the same name in the layout directory that corresponds with a content&rsquo;s section. See <a href="/content-management/types/#defining-a-content-type" title="Learn how to specify a type and a layout in a content's front matter">&ldquo;Defining a Content Type&rdquo;</a></dd>
+<dd>the layout Hugo should select from the <a href="/templates/lookup-order/" title="Hugo traverses your templates in a specific order when rendering content to allow for DRYer templating.">lookup order</a> when rendering the content. If a <code>type</code> is not specified in the front matter, Hugo will look for the layout of the same name in the layout directory that corresponds with a content&rsquo;s section. See <a href="/content-management/types/">Content Types</a>.</dd>
 <dt>lastmod</dt>
 <dd>the datetime at which the content was last modified.</dd>
 <dt>linkTitle</dt>
@@ -602,7 +602,7 @@ Keyword values can be either strings (<code>#+KEY: VALUE</code>) or a whitespace
 <li>Or a closer ancestor node has its own <code>cascade.banner</code> value set.</li>
 </ul>
 <h2 id="order-content-through-front-matter">Order Content Through Front Matter <a class="header-link" href="#order-content-through-front-matter"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>You can assign content-specific <code>weight</code> in the front matter of your content. These values are especially useful for <a href="/templates/lists/" title="Hugo provides multiple ways to sort and order your content in list templates">ordering</a> in list views. You can use <code>weight</code> for ordering of content and the convention of <a href="/content-management/taxonomies/"><code>&lt;TAXONOMY&gt;_weight</code></a> for ordering content within a taxonomy. See <a href="/templates/lists/#ordering-content" title="See how to order content in list pages; for example, templates that look to specific _index.md for content and front matter.">Ordering and Grouping Hugo Lists</a> to see how <code>weight</code> can be used to organize your content in list views.</p>
+<p>You can assign content-specific <code>weight</code> in the front matter of your content. These values are especially useful for <a href="/templates/lists/" title="Hugo provides multiple ways to sort and order your content in list templates">ordering</a> in list views. You can use <code>weight</code> for ordering of content and the convention of <a href="/content-management/taxonomies/"><code>&lt;TAXONOMY&gt;_weight</code></a> for ordering content within a taxonomy. See <a href="/templates/lists/#order-content" title="See how to order content in list pages; for example, templates that look to specific _index.md for content and front matter.">Ordering and Grouping Hugo Lists</a> to see how <code>weight</code> can be used to organize your content in list views.</p>
 <h2 id="override-global-markdown-configuration">Override Global Markdown Configuration <a class="header-link" href="#override-global-markdown-configuration"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>It&rsquo;s possible to set some options for Markdown rendering in a content&rsquo;s front matter as an override to the <a href="/getting-started/configuration/" title="Hugo documentation for site configuration">BlackFriday rendering options set in your project configuration</a>.</p>
 <h2 id="front-matter-format-specs">Front Matter Format Specs <a class="header-link" href="#front-matter-format-specs"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
@@ -1912,8 +1912,8 @@ Keyword values can be either strings (<code>#+KEY: VALUE</code>) or a whitespace
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/hosting-and-deployment/hosting-on-bitbucket/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Host on Bitbucket
+            <a href="/hosting-and-deployment/hosting-on-cloudflare-pages/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on Cloudflare Pages
             </a>
           </li>
           <li class="f6 fw4">
@@ -1969,7 +1969,7 @@ Keyword values can be either strings (<code>#+KEY: VALUE</code>) or a whitespace
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: April 15, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/8d38d1d9baf37774f2d15e469bcc547c294296b2">Merge pull request #108 from blackb1rd/hugo/v0.97.0 (8d38d1d)</a>
+  Last updated: May 2, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/84649330ab320a0b456191247a36aec68ef94038">Merge pull request #109 from blackb1rd/hugo/v0.98.0 (8464933)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/content-management/front-matter.md" class="

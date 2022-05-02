@@ -79,13 +79,13 @@ Configure GitLab CI/CD  Define your CI/CD jobs by creating a .</description>
     </item>
     
     <item>
-      <title>Host on Bitbucket</title>
-      <link>https://gohugo.io/hosting-and-deployment/hosting-on-bitbucket/</link>
-      <pubDate>Sat, 04 Feb 2017 00:00:00 +0100</pubDate>
+      <title>Host on Cloudflare Pages</title>
+      <link>https://gohugo.io/hosting-and-deployment/hosting-on-cloudflare-pages/</link>
+      <pubDate>Thu, 07 Apr 2022 00:00:00 +0200</pubDate>
       
-      <guid>https://gohugo.io/hosting-and-deployment/hosting-on-bitbucket/</guid>
-      <description>You can use Bitbucket and Aerobatic to build, deploy, and host a Hugo website. Aerobatic is a static hosting service that integrates with Bitbucket and provides a free hosting tier.
-Assumptions   Working familiarity with Git for version control A Bitbucket account  Install Aerobatic CLI  If you haven&amp;rsquo;t previously used Aerobatic, you&amp;rsquo;ll first need to install the Command Line Interface (CLI) and create an account. For a list of all commands available, see the Aerobatic CLI docs.</description>
+      <guid>https://gohugo.io/hosting-and-deployment/hosting-on-cloudflare-pages/</guid>
+      <description>You can host your Hugo site using Cloudflare Pages. Pages are super fast, always up-to-date, and deployed directly from your Git provider (currently supports only GitHub and GitLab).
+Cloudflare Pages has a handy tutorial on how to deploy a Hugo site.</description>
     </item>
     
     <item>

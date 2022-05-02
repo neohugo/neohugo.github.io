@@ -15,7 +15,7 @@ Showcase: Let’s Encrypt
 </title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.20-DEV" />
+  <meta name="generator" content="Hugo 0.22-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -64,10 +64,10 @@ Showcase: Let’s Encrypt
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/showcase/letsencrypt/" /><meta property="og:image" content="https://gohugo.io/showcase/letsencrypt/featured.png"/><meta property="article:section" content="showcase" />
 <meta property="article:published_time" content="2018-03-13T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-04-15T18:09:38+07:00" />
+<meta property="article:modified_time" content="2022-05-02T21:59:33+07:00" />
 <meta itemprop="name" content="Let’s Encrypt">
 <meta itemprop="description" content="Showcase: Lessons learned from taking letsencrypt.org to Hugo."><meta itemprop="datePublished" content="2018-03-13T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-04-15T18:09:38+07:00" />
+<meta itemprop="dateModified" content="2022-05-02T21:59:33+07:00" />
 <meta itemprop="wordCount" content="323"><meta itemprop="image" content="https://gohugo.io/showcase/letsencrypt/featured.png">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/showcase/letsencrypt/featured.png"/>
@@ -275,14 +275,14 @@ Showcase: Let’s Encrypt
 <p>I helped them port the site from Jekyll to Hugo. There are usually very few surprises doing this. I know Hugo very well, but working on sites with a history usually comes up with something new.</p>
 <p>That site is bookmarked in many browsers, so preserving the URLs was a must. Hugo&rsquo;s URL handling is very flexible, but there was one challenge. The website has a mix of standard and what we in Hugo call <em>ugly URLs</em> (<code>https://letsencrypt.org/2017/12/07/looking-forward-to-2018.html</code>). In Hugo this is handled automatically, and you can turn it on globally or per language. But before Hugo <code>0.33</code> you could not configure it for parts of your site. You could set it manually for the relevant pages in front matter &ndash; which is how it was done in Jekyll &ndash; but that would be hard to manage, especially when you start to introduce translations. So, in <a href="https://gohugo.io/news/0.33-relnotes/">Hugo 0.33</a> I added support for <em>ugly URLs</em> per section and also <code>url</code> set in front matter for list pages (<code>https://letsencrypt.org/blog/</code>).</p>
 <p>The lessons learned from this also lead to <a href="/content-management/multilingual/#disable-a-language">disableLanguages</a> in Hugo <code>0.34</code> (a way to turn off languages during translation). And I also registered <a href="https://github.com/gohugoio/hugo/issues/4463">this issue</a>. Once fixed it will make it easier to handle partially translated sites.</p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>The work on getting the content translated is in progress.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
   </div>
 
@@ -351,10 +351,6 @@ Showcase: Let’s Encrypt
       </li>
     
       <li class="bl b--light-gray pl2 f6 hover-bg-light-gray hover-accent-color-light ">
-        <a href="/showcase/stackimpact/" class="db link w-100 pv1 ph1  mid-gray ">StackImpact</a>
-      </li>
-    
-      <li class="bl b--light-gray pl2 f6 hover-bg-light-gray hover-accent-color-light ">
         <a href="/showcase/quiply-employee-communications-app/" class="db link w-100 pv1 ph1  mid-gray ">Quiply Employee Communications App</a>
       </li>
     
@@ -378,7 +374,7 @@ Showcase: Let’s Encrypt
     </div>
 
     <div class="f6 gray mv6">
-      Last Update: April 15, 2022 <br>
+      Last Update: May 2, 2022 <br>
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/showcase/letsencrypt/index.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 ">Improve this page</a>

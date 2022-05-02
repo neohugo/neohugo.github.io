@@ -13,7 +13,7 @@
   <title>URL Management | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.20-DEV" />
+  <meta name="generator" content="Hugo 0.22-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,11 +62,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/content-management/urls/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_8453457148814798693.png"/><meta property="article:section" content="content-management" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-04-15T18:09:38+07:00" />
+<meta property="article:modified_time" content="2022-05-02T21:59:33+07:00" />
 <meta itemprop="name" content="URL Management">
 <meta itemprop="description" content="Hugo supports permalinks, aliases, link canonicalization, and multiple options for handling relative vs absolute URLs."><meta itemprop="datePublished" content="2017-02-01T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-04-15T18:09:38+07:00" />
-<meta itemprop="wordCount" content="1678"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="dateModified" content="2022-05-02T21:59:33+07:00" />
+<meta itemprop="wordCount" content="1676"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_8453457148814798693.png"/>
 <meta name="twitter:title" content="URL Management"/>
@@ -516,7 +516,7 @@ aliases: [/posts/my-old-url/]
     &lt;meta http-equiv=&#34;refresh&#34; content=&#34;0; url=https://example.com/posts/my-intended-url&#34;/&gt;
   &lt;/head&gt;
 &lt;/html&gt;
-</code></pre><p>The <code>http-equiv=&quot;refresh&quot;</code> line is what performs the redirect, in 0 seconds in this case. If an end user of your website goes to <code>https://example.com/posts/my-old-url</code>, they will now be automatically redirected to the newer, correct URL. The addition of <code>&lt;meta name=&quot;robots&quot; content=&quot;noindex&quot;&gt;</code> lets search engine bots know that they should not crawl and index your new alias page.</p>
+</code></pre><p>The <code>http-equiv=&quot;refresh&quot;</code> line is what performs the redirect, in 0 seconds in this case. If an end user of your website goes to <code>https://example.com/posts/my-old-url</code>, they will now be automatically redirected to the newer, correct URL. The addition of <code>&lt;meta name=&quot;robots&quot; content=&quot;noindex&quot;&gt;</code> lets search engine bots know that they should not index your alias page (<code>https://example.com/posts/my-old-url/</code>).</p>
 <h3 id="customize">Customize <a class="header-link" href="#customize"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>You may customize this alias page by creating an <code>alias.html</code> template in the
 layouts folder of your site (i.e., <code>layouts/alias.html</code>). In this case, the data passed to the template is</p>
@@ -1906,8 +1906,8 @@ content/posts/post-1.md
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/hosting-and-deployment/hosting-on-bitbucket/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Host on Bitbucket
+            <a href="/hosting-and-deployment/hosting-on-cloudflare-pages/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on Cloudflare Pages
             </a>
           </li>
           <li class="f6 fw4">
@@ -1963,7 +1963,7 @@ content/posts/post-1.md
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: April 15, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/8d38d1d9baf37774f2d15e469bcc547c294296b2">Merge pull request #108 from blackb1rd/hugo/v0.97.0 (8d38d1d)</a>
+  Last updated: May 2, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/84649330ab320a0b456191247a36aec68ef94038">Merge pull request #109 from blackb1rd/hugo/v0.98.0 (8464933)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/content-management/urls.md" class="

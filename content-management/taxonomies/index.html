@@ -13,7 +13,7 @@
   <title>Taxonomies | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.20-DEV" />
+  <meta name="generator" content="Hugo 0.22-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,10 +62,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/content-management/taxonomies/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_5929249008703249816.png"/><meta property="article:section" content="content-management" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-04-15T18:09:38+07:00" />
+<meta property="article:modified_time" content="2022-05-02T21:59:33+07:00" />
 <meta itemprop="name" content="Taxonomies">
 <meta itemprop="description" content="Hugo includes support for user-defined taxonomies."><meta itemprop="datePublished" content="2017-02-01T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-04-15T18:09:38+07:00" />
+<meta itemprop="dateModified" content="2022-05-02T21:59:33+07:00" />
 <meta itemprop="wordCount" content="1255"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_5929249008703249816.png"/>
@@ -315,7 +315,7 @@ Moonrise Kingdom            &lt;- Value
     ...
 </code></pre><h2 id="default-taxonomies">Hugo Taxonomy Defaults <a class="header-link" href="#default-taxonomies"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Hugo natively supports taxonomies.</p>
-<p>Without adding a single line to your <a href="/getting-started/configuration/">site config</a> file, Hugo will automatically create taxonomies for <code>tags</code> and <code>categories</code>. That would be the same as manually <a href="#configuring-taxonomies">configuring your taxonomies</a> as below:</p>
+<p>Without adding a single line to your <a href="/getting-started/configuration/">site config</a> file, Hugo will automatically create taxonomies for <code>tags</code> and <code>categories</code>. That would be the same as manually <a href="#configure-taxonomies">configuring your taxonomies</a> as below:</p>
 
 <div class="code relative" >
   <div class="code-nav flex flex-nowrap items-stretch">
@@ -649,7 +649,7 @@ Moonrise Kingdom            &lt;- Value
 </div>
 
 <h2 id="order-taxonomies">Order Taxonomies <a class="header-link" href="#order-taxonomies"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>A content file can assign weight for each of its associate taxonomies. Taxonomic weight can be used for sorting or ordering content in <a href="/templates/taxonomy-templates/#taxonomy-page-templates">taxonomy list templates</a> and is declared in a content file&rsquo;s <a href="/content-management/front-matter/">front matter</a>. The convention for declaring taxonomic weight is <code>taxonomyname_weight</code>.</p>
+<p>A content file can assign weight for each of its associate taxonomies. Taxonomic weight can be used for sorting or ordering content in <a href="/templates/taxonomy-templates/#taxonomy-list-templates">taxonomy list templates</a> and is declared in a content file&rsquo;s <a href="/content-management/front-matter/">front matter</a>. The convention for declaring taxonomic weight is <code>taxonomyname_weight</code>.</p>
 <p>The following TOML and YAML examples show a piece of content that has a weight of 22, which can be used for ordering purposes when rendering the pages assigned to the &ldquo;a&rdquo;, &ldquo;b&rdquo; and &ldquo;c&rdquo; values of the <code>tags</code> taxonomy. It has also been assigned the weight of 44 when rendering the &ldquo;d&rdquo; category page.</p>
 <h3 id="example-taxonomic-weight">Example: Taxonomic <code>weight</code> <a class="header-link" href="#example-taxonomic-weight"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 
@@ -716,7 +716,7 @@ Moonrise Kingdom            &lt;- Value
 	</div>
 	
 	
-	<div class="admonition-content"><p>Currently taxonomies only support the <a href="/templates/lists/#default-weight-date">default <code>weight =&gt; date</code> ordering of list content</a>. For more information, see the documentation on <a href="/templates/taxonomy-templates/">taxonomy templates</a>.</p>
+	<div class="admonition-content"><p>Currently taxonomies only support the <a href="/templates/lists/#default-weight--date--linktitle--filepath">default <code>weight =&gt; date</code> ordering of list content</a>. For more information, see the documentation on <a href="/templates/taxonomy-templates/">taxonomy templates</a>.</p>
 </div>
 </aside>
 
@@ -2046,8 +2046,8 @@ Moonrise Kingdom            &lt;- Value
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/hosting-and-deployment/hosting-on-bitbucket/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Host on Bitbucket
+            <a href="/hosting-and-deployment/hosting-on-cloudflare-pages/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on Cloudflare Pages
             </a>
           </li>
           <li class="f6 fw4">
@@ -2103,7 +2103,7 @@ Moonrise Kingdom            &lt;- Value
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: April 15, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/8d38d1d9baf37774f2d15e469bcc547c294296b2">Merge pull request #108 from blackb1rd/hugo/v0.97.0 (8d38d1d)</a>
+  Last updated: May 2, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/84649330ab320a0b456191247a36aec68ef94038">Merge pull request #109 from blackb1rd/hugo/v0.98.0 (8464933)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/content-management/taxonomies.md" class="

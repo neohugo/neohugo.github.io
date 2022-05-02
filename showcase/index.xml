@@ -142,17 +142,6 @@ Not all static site generators are created equal  Finding a tool that will make 
     </item>
     
     <item>
-      <title>StackImpact</title>
-      <link>https://gohugo.io/showcase/stackimpact/</link>
-      <pubDate>Tue, 20 Feb 2018 00:00:00 +0100</pubDate>
-      
-      <guid>https://gohugo.io/showcase/stackimpact/</guid>
-      <description>After gradually handing over the control of our website to WordPress plugins, we realized that we needed to act.
-Static web sites have natural advantages such as security, performance and content versioning (e.g. with Git). Static site generators such as Hugo made static websites cool again. Importantly, the best practices of software development (e.g. peer reviews, multi-stage deployments, rollbacks) can now be easily applied to websites.
-Besides the blog and documentation sections, our website needed custom sections with own templates.</description>
-    </item>
-    
-    <item>
       <title>Quiply Employee Communications App</title>
       <link>https://gohugo.io/showcase/quiply-employee-communications-app/</link>
       <pubDate>Tue, 13 Feb 2018 00:00:00 +0100</pubDate>

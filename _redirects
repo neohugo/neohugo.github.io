@@ -75,7 +75,6 @@
 /templates/sections/               	/templates/section-templates/
 /tutorials/hosting-on-gitlab/      	/hosting-and-deployment/hosting-on-gitlab/
 /variables/menu/                   	/variables/menus/
-/tutorials/hosting-on-bitbucket/   	/hosting-and-deployment/hosting-on-bitbucket/
 /content/sections/                 	/content-management/sections/
 /taxonomies/displaying/            	/templates/taxonomy-templates/
 /templates/terms/                  	/templates/taxonomy-templates/

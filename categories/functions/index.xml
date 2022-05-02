@@ -407,9 +407,9 @@ content/ ├── about.md ├── contact.md └── news/ ├── artic
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/functions/adddate/</guid>
-      <description>The AddDate function takes three arguments in logical order of years, months, and days.
-Example: Randomized Tweets from the Last 2 Years  Let&amp;rsquo;s assume you have a file at data/tweets.toml that contains a list of Tweets to display on your site&amp;rsquo;s homepage. The file is filled with [[tweet]] blocks; e.g.&amp;mdash;
-data/tweets. yaml  &amp;nbsp; toml  &amp;nbsp; json  &amp;nbsp;  tweet:- date:&amp;#34;2017-01-07T00:00:00Z&amp;#34;link:https://twitter.com/spf13name:Steve Franciaquote:&amp;#39;I&amp;#39;&amp;#39;m creator of Hugo. #metadocreference&amp;#39;twitter_handle:&amp;#39;@spf13&amp;#39;   [[tweet]] date = &amp;#39;2017-01-07T00:00:00Z&amp;#39; link = &amp;#39;https://twitter.</description>
+      <description>{{$d:=&amp;#34;2022-01-01&amp;#34;|time.AsTime}} {{$d.AddDate001|time.Format&amp;#34;2006-01-02&amp;#34;}} --&amp;gt; 2022-01-02 {{$d.AddDate011|time.Format&amp;#34;2006-01-02&amp;#34;}} --&amp;gt; 2022-02-02 {{$d.AddDate111|time.Format&amp;#34;2006-01-02&amp;#34;}} --&amp;gt; 2023-02-02 {{$d.AddDate-1-1-1|time.Format&amp;#34;2006-01-02&amp;#34;}} --&amp;gt; 2020-11-30   When adding months or years, Hugo normalizes the final time.Time value if the resulting day does not exist. For example, adding one month to 31 January produces 2 March or 3 March, depending on the year.
+See this explanation from the Go team.
+  {{$d:=&amp;#34;2023-01-31&amp;#34;|time.AsTime}} {{$d.AddDate010|time.Format&amp;#34;2006-01-02&amp;#34;}} --&amp;gt; 2023-03-03 {{$d:=&amp;#34;2024-01-31&amp;#34;|time.AsTime}} {{$d.AddDate010|time.Format&amp;#34;2006-01-02&amp;#34;}} --&amp;gt; 2024-03-02 {{$d:=&amp;#34;2024-02-29&amp;#34;|time.AsTime}} {{$d.AddDate100|time.Format&amp;#34;2006-01-02&amp;#34;}} --&amp;gt; 2025-03-01 </description>
     </item>
     
     <item>
@@ -1027,7 +1027,7 @@ This is **bold** text. Note that os.ReadFile returns raw (uninterpreted) content
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/functions/rellangurl/</guid>
-      <description>absLangURL and relLangURL functions are similar to their absURL and relURL relatives but will add the correct language prefix when the site is configured with more than one language. (See Configuring Multilingual.)
+      <description>absLangURL and relLangURL functions are similar to their absURL and relURL relatives but will add the correct language prefix when the site is configured with more than one language. (See Configure Languages.)
 So for a site baseURL set to https://example.com/hugo/ and the current language is en:
 {{ &amp;#34;blog/&amp;#34; | absLangURL }} → &amp;#34;https://example.com/hugo/en/blog/&amp;#34; {{ &amp;#34;blog/&amp;#34; | relLangURL }} → &amp;#34;/hugo/en/blog/&amp;#34; </description>
     </item>

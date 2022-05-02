@@ -1692,7 +1692,7 @@ A special shout out to @bep and @anthonyfok for their new role as Hugo maintaine
       <guid>https://gohugo.io/news/0.12-relnotes/</guid>
       <description>A lot has happened since Hugo v0.11.0 was released. Most of the work has been focused on polishing the theme engine and adding critical functionality to the templates.
 This release represents over 90 code commits from 28 different contributors.
- 10 new themes created by the community fully themable partials 404 template support in themes shortcode support in themes views support in themes inner shortcode content now treated as markdown support for header ids in markdown (# header {#myid}) where template function to filter lists of content, taxonomies, etc groupby &amp;amp; groupbydate methods to group pages taxonomy pages list now sortable, filterable, limitable &amp;amp; groupable general cleanup to taxonomies &amp;amp; documentation to make it more clear and consistent showcase returned and has been expanded pretty links now always have trailing slashes baseurl can now include a subdirectory better feedback about draft &amp;amp; future post rendering a variety of improvements to the website  </description>
+ 10 new themes created by the community fully themable partials 404 template support in themes shortcode support in themes views support in themes inner shortcode content now treated as markdown support for header ids in markdown (# header {#myid}) where template function to filter lists of content, taxonomies, etc.</description>
     </item>
     
     <item>

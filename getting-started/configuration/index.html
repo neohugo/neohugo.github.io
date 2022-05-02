@@ -13,7 +13,7 @@
   <title>Configure Hugo | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.20-DEV" />
+  <meta name="generator" content="Hugo 0.22-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,10 +62,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/getting-started/configuration/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_10905119886565882197.png"/><meta property="article:section" content="getting-started" />
 <meta property="article:published_time" content="2017-01-02T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-04-15T18:09:38+07:00" />
+<meta property="article:modified_time" content="2022-05-02T21:59:33+07:00" />
 <meta itemprop="name" content="Configure Hugo">
 <meta itemprop="description" content="How to configure your Hugo site."><meta itemprop="datePublished" content="2017-01-02T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-04-15T18:09:38+07:00" />
+<meta itemprop="dateModified" content="2022-05-02T21:59:33+07:00" />
 <meta itemprop="wordCount" content="3710"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_10905119886565882197.png"/>
@@ -718,7 +718,7 @@ config file(s).</p>
 <p><strong>Default value:</strong> false</p>
 <p>If true, auto-detect Chinese/Japanese/Korean Languages in the content. This will make <code>.Summary</code> and <code>.WordCount</code> behave correctly for CJK languages.</p>
 <h3 id="imaging">imaging <a class="header-link" href="#imaging"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>See <a href="/content-management/image-processing/#image-processing-config">Image Processing Config</a>.</p>
+<p>See <a href="/content-management/image-processing/#imaging-configuration">Image Processing Config</a>.</p>
 <h3 id="languagecode">languageCode <a class="header-link" href="#languagecode"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p><strong>Default value:</strong>  &quot;&quot;</p>
 <p>A language tag as defined by <a href="https://datatracker.ietf.org/doc/html/rfc5646">RFC 5646</a>. The internal <a href="https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/_default/rss.xml">RSS template</a> populates its <code>&lt;language&gt;</code> element with this value. The value is not used elsewhere.</p>
@@ -801,10 +801,10 @@ config file(s).</p>
 <h3 id="security">security <a class="header-link" href="#security"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>See <a href="/about/security-model/#security-policy">Security Policy</a></p>
 <h3 id="sitemap">sitemap <a class="header-link" href="#sitemap"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>Default <a href="/templates/sitemap-template/#configure-sitemapxml">sitemap configuration</a>.</p>
+<p>Default <a href="/templates/sitemap-template/#configuration">sitemap configuration</a>.</p>
 <h3 id="summarylength">summaryLength <a class="header-link" href="#summarylength"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p><strong>Default value:</strong> 70</p>
-<p>The length of text in words to show in a <a href="/content-management/summaries/#hugo-defined-automatic-summary-splitting"><code>.Summary</code></a>.</p>
+<p>The length of text in words to show in a <a href="/content-management/summaries/#automatic-summary-splitting"><code>.Summary</code></a>.</p>
 <h3 id="taxonomies">taxonomies <a class="header-link" href="#taxonomies"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>See <a href="/content-management/taxonomies#configure-taxonomies">Configure Taxonomies</a>.</p>
 <h3 id="theme">theme <a class="header-link" href="#theme"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
@@ -3143,8 +3143,8 @@ hugo config | grep emoji
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/hosting-and-deployment/hosting-on-bitbucket/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Host on Bitbucket
+            <a href="/hosting-and-deployment/hosting-on-cloudflare-pages/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on Cloudflare Pages
             </a>
           </li>
           <li class="f6 fw4">
@@ -3200,7 +3200,7 @@ hugo config | grep emoji
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: April 15, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/8d38d1d9baf37774f2d15e469bcc547c294296b2">Merge pull request #108 from blackb1rd/hugo/v0.97.0 (8d38d1d)</a>
+  Last updated: May 2, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/84649330ab320a0b456191247a36aec68ef94038">Merge pull request #109 from blackb1rd/hugo/v0.98.0 (8464933)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/getting-started/configuration.md" class="

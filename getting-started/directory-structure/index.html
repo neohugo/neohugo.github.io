@@ -13,7 +13,7 @@
   <title>Directory Structure | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.20-DEV" />
+  <meta name="generator" content="Hugo 0.22-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,10 +62,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/getting-started/directory-structure/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_10099420609327400012.png"/><meta property="article:section" content="getting-started" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-04-15T18:09:38+07:00" />
+<meta property="article:modified_time" content="2022-05-02T21:59:33+07:00" />
 <meta itemprop="name" content="Directory Structure">
 <meta itemprop="description" content="Hugo&#39;s CLI scaffolds a project directory structure and then takes that single directory and uses it as the input to create a complete website."><meta itemprop="datePublished" content="2017-02-01T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-04-15T18:09:38+07:00" />
+<meta itemprop="dateModified" content="2022-05-02T21:59:33+07:00" />
 <meta itemprop="wordCount" content="499"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_10099420609327400012.png"/>
@@ -288,11 +288,11 @@ By default, Hugo will create new content files with at least <code>date</code>, 
 <dt><a href="https://gohugo.io/hugo-pipes/introduction/#asset-directory"><code>assets</code></a></dt>
 <dd>Stores all the files which need be processed by <a href="https://gohugo.io/hugo-pipes/">Hugo Pipes</a>. Only the files whose <code>.Permalink</code> or <code>.RelPermalink</code> are used will be published to the <code>public</code> directory. Note: assets directory is not created by default.</dd>
 <dt><a href="/getting-started/configuration/"><code>config</code></a></dt>
-<dd>Hugo ships with a large number of <a href="https://gohugo.io/getting-started/configuration/#all-variables-yaml">configuration directives</a>.
+<dd>Hugo ships with a large number of <a href="/getting-started/configuration/#all-configuration-settings">configuration directives</a>.
 The <a href="/getting-started/configuration/#configuration-directory">config directory</a> is where those directives are stored as JSON, YAML, or TOML files. Every root setting object can stand as its own file and structured by environments.
 Projects with minimal settings and no need for environment awareness can use a single <code>config.toml</code> file at its root.</dd>
 </dl>
-<p>Many sites may need little to no configuration, but Hugo ships with a large number of <a href="/getting-started/configuration/#all-variables-yaml">configuration directives</a> for more granular directions on how you want Hugo to build your website. Note: config directory is not created by default.</p>
+<p>Many sites may need little to no configuration, but Hugo ships with a large number of <a href="/getting-started/configuration/#all-configuration-settings">configuration directives</a> for more granular directions on how you want Hugo to build your website. Note: config directory is not created by default.</p>
 <dl>
 <dt><a href="/content-management/organization/"><code>content</code></a></dt>
 <dd>All content for your website will live inside this directory. Each top-level folder in Hugo is considered a <a href="/content-management/sections/">content section</a>. For example, if your site has three main sections&mdash;<code>blog</code>, <code>articles</code>, and <code>tutorials</code>&mdash;you will have three directories at <code>content/blog</code>, <code>content/articles</code>, and <code>content/tutorials</code>. Hugo uses sections to assign default <a href="/content-management/types/">content types</a>.</dd>
@@ -1620,8 +1620,8 @@ used by Hugo when generating your website. You can write these files in YAML, JS
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/hosting-and-deployment/hosting-on-bitbucket/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Host on Bitbucket
+            <a href="/hosting-and-deployment/hosting-on-cloudflare-pages/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on Cloudflare Pages
             </a>
           </li>
           <li class="f6 fw4">
@@ -1677,7 +1677,7 @@ used by Hugo when generating your website. You can write these files in YAML, JS
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: April 15, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/8d38d1d9baf37774f2d15e469bcc547c294296b2">Merge pull request #108 from blackb1rd/hugo/v0.97.0 (8d38d1d)</a>
+  Last updated: May 2, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/84649330ab320a0b456191247a36aec68ef94038">Merge pull request #109 from blackb1rd/hugo/v0.98.0 (8464933)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/getting-started/directory-structure.md" class="

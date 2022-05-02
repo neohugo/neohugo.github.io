@@ -13,7 +13,7 @@
   <title>.AddDate | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.20-DEV" />
+  <meta name="generator" content="Hugo 0.22-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -32,7 +32,7 @@
   
 
   <meta name="description"
-  content="Returns the time corresponding to adding the given number of years, months, and days passed to the function.">
+  content="Returns the time corresponding to adding the given number of years, months, and days to the given time.Time value.">
 
   
 
@@ -58,19 +58,19 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0594cb">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:title" content=".AddDate" />
-<meta property="og:description" content="Returns the time corresponding to adding the given number of years, months, and days passed to the function." />
+<meta property="og:description" content="Returns the time corresponding to adding the given number of years, months, and days to the given time.Time value." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/functions/adddate/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_16695784201015335388.png"/><meta property="article:section" content="functions" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-04-15T18:09:38+07:00" />
+<meta property="article:modified_time" content="2022-05-02T21:59:33+07:00" />
 <meta itemprop="name" content=".AddDate">
-<meta itemprop="description" content="Returns the time corresponding to adding the given number of years, months, and days passed to the function."><meta itemprop="datePublished" content="2017-02-01T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-04-15T18:09:38+07:00" />
-<meta itemprop="wordCount" content="190"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="description" content="Returns the time corresponding to adding the given number of years, months, and days to the given time.Time value."><meta itemprop="datePublished" content="2017-02-01T00:00:00+01:00" />
+<meta itemprop="dateModified" content="2022-05-02T21:59:33+07:00" />
+<meta itemprop="wordCount" content="68"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_16695784201015335388.png"/>
 <meta name="twitter:title" content=".AddDate"/>
-<meta name="twitter:description" content="Returns the time corresponding to adding the given number of years, months, and days passed to the function."/>
+<meta name="twitter:description" content="Returns the time corresponding to adding the given number of years, months, and days to the given time.Time value."/>
 <meta name="twitter:site" content="@GoHugoIO"/>
 
 
@@ -241,7 +241,7 @@
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      Returns the time corresponding to adding the given number of years, months, and days passed to the function.
+      Returns the time corresponding to adding the given number of years, months, and days to the given time.Time value.
     </div>
   
 
@@ -254,100 +254,34 @@
     <h2 class="minor mb1 pt4 primary-color-dark">Syntax</h2>
       <pre class="f5 mb4 ph3 pv2 bg-light-gray" style="border-left:4px solid #0594CB;">.AddDate YEARS MONTHS DAYS</pre>
 
-<p>The <code>AddDate</code> function takes three arguments in logical order of <code>years</code>, <code>months</code>, and <code>days</code>.</p>
-<h2 id="example-randomized-tweets-from-the-last-2-years">Example: Randomized Tweets from the Last 2 Years <a class="header-link" href="#example-randomized-tweets-from-the-last-2-years"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>Let&rsquo;s assume you have a file at <code>data/tweets.toml</code> that contains a list of Tweets to display on your site&rsquo;s homepage. The file is filled with <code>[[tweet]]</code> blocks; e.g.&mdash;</p>
-
-<div class="code relative" id="data/tweets">
-  <div class="code-nav flex flex-nowrap items-stretch">
-      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">data/tweets.</div>
-      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
-        yaml
-      </button>
-      &nbsp;
-      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
-        toml
-      </button>
-      &nbsp;
-      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
-        json
-      </button>
-      &nbsp;
-  </div>
-  <div class="tab-content">
-      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">tweet</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;2017-01-07T00:00:00Z&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">link</span><span class="p">:</span><span class="w"> </span><span class="l">https://twitter.com/spf13</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Steve Francia</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">quote</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;I&#39;&#39;m creator of Hugo. #metadocreference&#39;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">twitter_handle</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;@spf13&#39;</span><span class="w">
-</span></span></span></code></pre></div>
-      </div>
-        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">tweet</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">date</span> <span class="p">=</span> <span class="s1">&#39;2017-01-07T00:00:00Z&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">link</span> <span class="p">=</span> <span class="s1">&#39;https://twitter.com/spf13&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s1">&#39;Steve Francia&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">quote</span> <span class="p">=</span> <span class="s2">&#34;I&#39;m creator of Hugo. #metadocreference&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">twitter_handle</span> <span class="p">=</span> <span class="s1">&#39;@spf13&#39;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$d</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&#34;2022-01-01&#34;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">time</span><span class="na">.AsTime</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$d</span><span class="na">.AddDate</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="nx">1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">time</span><span class="na">.Format</span><span class="w"> </span><span class="s">&#34;2006-01-02&#34;</span><span class="w"> </span><span class="cp">}}</span> --&gt; 2022-01-02
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$d</span><span class="na">.AddDate</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="nx">1</span><span class="w"> </span><span class="nx">1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">time</span><span class="na">.Format</span><span class="w"> </span><span class="s">&#34;2006-01-02&#34;</span><span class="w"> </span><span class="cp">}}</span> --&gt; 2022-02-02
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$d</span><span class="na">.AddDate</span><span class="w"> </span><span class="nx">1</span><span class="w"> </span><span class="nx">1</span><span class="w"> </span><span class="nx">1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">time</span><span class="na">.Format</span><span class="w"> </span><span class="s">&#34;2006-01-02&#34;</span><span class="w"> </span><span class="cp">}}</span> --&gt; 2023-02-02
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$d</span><span class="na">.AddDate</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">time</span><span class="na">.Format</span><span class="w"> </span><span class="s">&#34;2006-01-02&#34;</span><span class="w"> </span><span class="cp">}}</span> --&gt; 2020-11-30
 </span></span></code></pre></div>
-      </div>
-        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">   <span class="nt">&#34;tweet&#34;</span><span class="p">:</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">      <span class="p">{</span>
-</span></span><span class="line"><span class="cl">         <span class="nt">&#34;date&#34;</span><span class="p">:</span> <span class="s2">&#34;2017-01-07T00:00:00Z&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">         <span class="nt">&#34;link&#34;</span><span class="p">:</span> <span class="s2">&#34;https://twitter.com/spf13&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">         <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Steve Francia&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">         <span class="nt">&#34;quote&#34;</span><span class="p">:</span> <span class="s2">&#34;I&#39;m creator of Hugo. #metadocreference&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">         <span class="nt">&#34;twitter_handle&#34;</span><span class="p">:</span> <span class="s2">&#34;@spf13&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">   <span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div>
-      </div>
-        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-  </div>
-</div>
-
-<p>Let&rsquo;s assume you want to grab Tweets from the last two years and present them in a random order. In conjunction with the <a href="/functions/where/"><code>where</code></a> and <a href="/functions/now/"><code>now</code></a> functions, you can limit our range to the last two years via <code>now.AddDate -2 0 0</code>, which represents a point in time 2 years, 0 months, and 0 days before the time of your last site build.</p>
-
-
-
-
-
-
-
-
-
-
-<div class="code relative" id="partials/templates/random-tweets.html"><div class="filename san-serif f6 dib lh-solid pl2 pv2">partials/templates/random-tweets.html</div>
-		<button class="needs-js copy bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-		</button>
+<aside class="admonition note">
+	<div class="note-icon">
 		
-	
-	<div class="code-copy-content nt3" id="tweets.html">
-		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">where</span><span class="w"> </span><span class="na">$.Site.Data.tweets.tweet</span><span class="w"> </span><span class="s">&#34;date&#34;</span><span class="w"> </span><span class="s">&#34;ge&#34;</span><span class="w"> </span><span class="o">(</span><span class="nx">now</span><span class="na">.AddDate</span><span class="w"> </span><span class="mi">-2</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="nx">0</span><span class="o">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">shuffle</span><span class="w"> </span><span class="cp">}}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;item&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">blockquote</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="cp">{{</span><span class="w"> </span><span class="na">.quote</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">safeHTML</span><span class="w"> </span><span class="cp">}}</span>
-</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="ni">&amp;mdash;</span> <span class="cp">{{</span><span class="w"> </span><span class="na">.name</span><span class="w"> </span><span class="cp">}}</span> (<span class="cp">{{</span><span class="w"> </span><span class="na">.twitter_handle</span><span class="w"> </span><span class="cp">}}</span>) <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.link</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="cp">{{</span><span class="w"> </span><span class="nx">dateFormat</span><span class="w"> </span><span class="s">&#34;January 2, 2006&#34;</span><span class="w"> </span><span class="na">.date</span><span class="w"> </span><span class="cp">}}</span>
-</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span></span></span></code></pre></div>
 	</div>
-
+	
+	
+	<div class="admonition-content"><p>When adding months or years, Hugo normalizes the final <code>time.Time</code> value if the resulting day does not exist. For example, adding one month to 31 January produces 2 March or 3 March, depending on the year.</p>
+<p>See <a href="https://github.com/golang/go/issues/31145#issuecomment-479067967">this explanation</a> from the Go team.</p>
 </div>
+</aside>
 
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$d</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&#34;2023-01-31&#34;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">time</span><span class="na">.AsTime</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$d</span><span class="na">.AddDate</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="nx">1</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">time</span><span class="na">.Format</span><span class="w"> </span><span class="s">&#34;2006-01-02&#34;</span><span class="w"> </span><span class="cp">}}</span> --&gt; 2023-03-03
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$d</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&#34;2024-01-31&#34;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">time</span><span class="na">.AsTime</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$d</span><span class="na">.AddDate</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="nx">1</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">time</span><span class="na">.Format</span><span class="w"> </span><span class="s">&#34;2006-01-02&#34;</span><span class="w"> </span><span class="cp">}}</span> --&gt; 2024-03-02
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$d</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&#34;2024-02-29&#34;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">time</span><span class="na">.AsTime</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$d</span><span class="na">.AddDate</span><span class="w"> </span><span class="nx">1</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">time</span><span class="na">.Format</span><span class="w"> </span><span class="s">&#34;2006-01-02&#34;</span><span class="w"> </span><span class="cp">}}</span> --&gt; 2025-03-01
+</span></span></code></pre></div>
 </div>
 
           
@@ -1648,8 +1582,8 @@
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/hosting-and-deployment/hosting-on-bitbucket/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Host on Bitbucket
+            <a href="/hosting-and-deployment/hosting-on-cloudflare-pages/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on Cloudflare Pages
             </a>
           </li>
           <li class="f6 fw4">
@@ -1705,7 +1639,7 @@
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: April 15, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/8d38d1d9baf37774f2d15e469bcc547c294296b2">Merge pull request #108 from blackb1rd/hugo/v0.97.0 (8d38d1d)</a>
+  Last updated: May 2, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/84649330ab320a0b456191247a36aec68ef94038">Merge pull request #109 from blackb1rd/hugo/v0.98.0 (8464933)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/functions/adddate.md" class="

@@ -13,7 +13,7 @@
   <title>Page Variables | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.20-DEV" />
+  <meta name="generator" content="Hugo 0.22-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,10 +62,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/variables/page/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_15385893396821012320.png"/><meta property="article:section" content="variables" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-04-15T18:09:38+07:00" />
+<meta property="article:modified_time" content="2022-05-02T21:59:33+07:00" />
 <meta itemprop="name" content="Page Variables">
 <meta itemprop="description" content="Page-level variables are defined in a content file&#39;s front matter, derived from the content&#39;s file location, or extracted from the content body itself."><meta itemprop="datePublished" content="2017-02-01T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-04-15T18:09:38+07:00" />
+<meta itemprop="dateModified" content="2022-05-02T21:59:33+07:00" />
 <meta itemprop="wordCount" content="1599"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_15385893396821012320.png"/>
@@ -326,9 +326,9 @@
 <dt>.LinkTitle</dt>
 <dd>access when creating links to the content. If set, Hugo will use the <code>linktitle</code> from the front matter before <code>title</code>.</dd>
 <dt>.Next</dt>
-<dd>Points up to the next <a href="/variables/site/#site-pages">regular page</a> (sorted by Hugo&rsquo;s <a href="/templates/lists#default-weight-date-linktitle-filepath">default sort</a>). Example: <code>{{with .Next}}{{.Permalink}}{{end}}</code>. Calling <code>.Next</code> from the first page returns <code>nil</code>.</dd>
+<dd>Points up to the next <a href="/variables/site/#site-pages">regular page</a> (sorted by Hugo&rsquo;s <a href="/templates/lists#default-weight--date--linktitle--filepath">default sort</a>). Example: <code>{{with .Next}}{{.Permalink}}{{end}}</code>. Calling <code>.Next</code> from the first page returns <code>nil</code>.</dd>
 <dt>.NextInSection</dt>
-<dd>Points up to the next <a href="/variables/site/#site-pages">regular page</a> below the same top level section (e.g. in <code>/blog</code>)). Pages are sorted by Hugo&rsquo;s <a href="/templates/lists#default-weight-date-linktitle-filepath">default sort</a>. Example: <code>{{with .NextInSection}}{{.Permalink}}{{end}}</code>. Calling <code>.NextInSection</code> from the first page returns <code>nil</code>.</dd>
+<dd>Points up to the next <a href="/variables/site/#site-pages">regular page</a> below the same top level section (e.g. in <code>/blog</code>)). Pages are sorted by Hugo&rsquo;s <a href="/templates/lists#default-weight--date--linktitle--filepath">default sort</a>. Example: <code>{{with .NextInSection}}{{.Permalink}}{{end}}</code>. Calling <code>.NextInSection</code> from the first page returns <code>nil</code>.</dd>
 <dt>.OutputFormats</dt>
 <dd>contains all formats, including the current format, for a given page. Can be combined the with <a href="/functions/get/"><code>.Get</code> function</a> to grab a specific format. (See <a href="/templates/output-formats/">Output Formats</a>.)</dd>
 <dt>.Pages</dt>
@@ -341,9 +341,9 @@ the context of regular content pages. See <a href="#pages"><code>.Pages</code></
 <dt>.PlainWords</dt>
 <dd>the slice of strings that results from splitting .Plain into words, as defined in Go&rsquo;s <a href="https://golang.org/pkg/strings/#Fields">strings.Fields</a>.</dd>
 <dt>.Prev</dt>
-<dd>Points down to the previous <a href="/variables/site/#site-pages">regular page</a> (sorted by Hugo&rsquo;s <a href="/templates/lists#default-weight-date-linktitle-filepath">default sort</a>). Example: <code>{{if .Prev}}{{.Prev.Permalink}}{{end}}</code>.  Calling <code>.Prev</code> from the last page returns <code>nil</code>.</dd>
+<dd>Points down to the previous <a href="/variables/site/#site-pages">regular page</a> (sorted by Hugo&rsquo;s <a href="/templates/lists#default-weight--date--linktitle--filepath">default sort</a>). Example: <code>{{if .Prev}}{{.Prev.Permalink}}{{end}}</code>.  Calling <code>.Prev</code> from the last page returns <code>nil</code>.</dd>
 <dt>.PrevInSection</dt>
-<dd>Points down to the previous <a href="/variables/site/#site-pages">regular page</a> below the same top level section (e.g. <code>/blog</code>). Pages are sorted by Hugo&rsquo;s <a href="/templates/lists#default-weight-date-linktitle-filepath">default sort</a>. Example: <code>{{if .PrevInSection}}{{.PrevInSection.Permalink}}{{end}}</code>.  Calling <code>.PrevInSection</code> from the last page returns <code>nil</code>.</dd>
+<dd>Points down to the previous <a href="/variables/site/#site-pages">regular page</a> below the same top level section (e.g. <code>/blog</code>). Pages are sorted by Hugo&rsquo;s <a href="/templates/lists#default-weight--date--linktitle--filepath">default sort</a>. Example: <code>{{if .PrevInSection}}{{.PrevInSection.Permalink}}{{end}}</code>.  Calling <code>.PrevInSection</code> from the last page returns <code>nil</code>.</dd>
 <dt>.PublishDate</dt>
 <dd>the date on which the content was or will be published; <code>.Publishdate</code> pulls from the <code>publishdate</code> field in a content&rsquo;s front matter. See also <code>.ExpiryDate</code>, <code>.Date</code>, and <code>.Lastmod</code>.</dd>
 <dt>.RawContent</dt>
@@ -1848,8 +1848,8 @@ favorites:
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/hosting-and-deployment/hosting-on-bitbucket/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Host on Bitbucket
+            <a href="/hosting-and-deployment/hosting-on-cloudflare-pages/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on Cloudflare Pages
             </a>
           </li>
           <li class="f6 fw4">
@@ -1905,7 +1905,7 @@ favorites:
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: April 15, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/8d38d1d9baf37774f2d15e469bcc547c294296b2">Merge pull request #108 from blackb1rd/hugo/v0.97.0 (8d38d1d)</a>
+  Last updated: May 2, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/84649330ab320a0b456191247a36aec68ef94038">Merge pull request #109 from blackb1rd/hugo/v0.98.0 (8464933)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/variables/page.md" class="
