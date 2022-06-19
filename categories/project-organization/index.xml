@@ -15,7 +15,7 @@
       <guid>https://gohugo.io/content-management/comments/</guid>
       <description>Hugo ships with support for Disqus, a third-party service that provides comment and community capabilities to websites via JavaScript.
 Your theme may already support Disqus, but if not, it is easy to add to your templates via Hugo&amp;rsquo;s built-in Disqus partial.
-Add Disqus  Hugo comes with all the code you need to load Disqus into your templates. Before adding Disqus to your site, you&amp;rsquo;ll need to set up an account.</description>
+Add Disqus Hugo comes with all the code you need to load Disqus into your templates. Before adding Disqus to your site, you&amp;rsquo;ll need to set up an account.</description>
     </item>
     
   </channel>

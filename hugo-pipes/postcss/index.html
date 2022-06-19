@@ -13,7 +13,7 @@
   <title>PostCSS | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.22-DEV" />
+  <meta name="generator" content="Hugo 0.23-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,11 +62,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/hugo-pipes/postcss/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_15517871961306151530.png"/><meta property="article:section" content="hugo-pipes" />
 <meta property="article:published_time" content="2018-07-14T00:00:00+02:00" />
-<meta property="article:modified_time" content="2022-05-02T21:59:33+07:00" />
+<meta property="article:modified_time" content="2022-06-19T23:24:54+07:00" />
 <meta itemprop="name" content="PostCSS">
 <meta itemprop="description" content="Hugo Pipes can process CSS files with PostCSS."><meta itemprop="datePublished" content="2018-07-14T00:00:00+02:00" />
-<meta itemprop="dateModified" content="2022-05-02T21:59:33+07:00" />
-<meta itemprop="wordCount" content="278"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="dateModified" content="2022-06-19T23:24:54+07:00" />
+<meta itemprop="wordCount" content="385"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_15517871961306151530.png"/>
 <meta name="twitter:title" content="PostCSS"/>
@@ -286,6 +286,14 @@ URL imports (e.g. <code>@import url('https://fonts.googleapis.com/css?family=Ope
 Note that this import routine does not care about the CSS spec, so you can have @import anywhere in the file.
 Hugo will look for imports relative to the module mount and will respect theme overrides.</dd>
 </dl>
+<p>skipInlineImportsNotFound [bool] 
+
+
+<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
+    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.99.0" target="_blank">New in v0.99.0</a>
+</button>
+</p>
+<p>Before Hugo 0.99.0 when <code>inlineImports</code> was enabled and we failed to resolve an import, we logged it as a warning. We now fail the build. If you have regular CSS imports in your CSS that you want to preserve, you can either use imports with URL or media queries (Hugo does not try to resolve those) or set <code>skipInlineImportsNotFound</code> to true.</p>
 <p><em>If no configuration file is used:</em></p>
 <dl>
 <dt>use [string]</dt>
@@ -1051,6 +1059,11 @@ Hugo will look for imports relative to the module mount and will respect theme o
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/path.basename/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              path.BaseName
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/path.clean/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               path.Clean
             </a>
@@ -1662,7 +1675,7 @@ Hugo will look for imports relative to the module mount and will respect theme o
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: May 2, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/84649330ab320a0b456191247a36aec68ef94038">Merge pull request #109 from blackb1rd/hugo/v0.98.0 (8464933)</a>
+  Last updated: June 19, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/22d493aa56a2750c0cf5c66646ac6972372fabaa">Merge pull request #111 from blackb1rd/hugo/v0.101.0 (22d493a)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/hugo-pipes/postcss.md" class="

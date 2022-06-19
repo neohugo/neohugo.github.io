@@ -13,7 +13,7 @@
   <title>Multilingual Mode | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.22-DEV" />
+  <meta name="generator" content="Hugo 0.23-DEV" />
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -62,11 +62,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/content-management/multilingual/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_9299210639095042647.png"/><meta property="article:section" content="content-management" />
 <meta property="article:published_time" content="2017-01-10T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-05-02T21:59:33+07:00" />
+<meta property="article:modified_time" content="2022-06-19T23:24:54+07:00" />
 <meta itemprop="name" content="Multilingual Mode">
 <meta itemprop="description" content="Hugo supports the creation of websites with multiple languages side by side."><meta itemprop="datePublished" content="2017-01-10T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-05-02T21:59:33+07:00" />
-<meta itemprop="wordCount" content="2534"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="dateModified" content="2022-06-19T23:24:54+07:00" />
+<meta itemprop="wordCount" content="2678"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_9299210639095042647.png"/>
 <meta name="twitter:title" content="Multilingual Mode"/>
@@ -538,98 +538,6 @@ and taxonomy pages will be rendered below <code>/</code> in English (your defaul
 </span></span><span class="line"><span class="cl">Web Server is available at 127.0.0.1:1314 (bind address 127.0.0.1)
 </span></span><span class="line"><span class="cl">Press Ctrl+C to stop
 </span></span></code></pre></div><p>Live reload and <code>--navigateToChanged</code> between the servers work as expected.</p>
-<h3 id="taxonomies-and-blackfriday">Taxonomies and Blackfriday <a class="header-link" href="#taxonomies-and-blackfriday"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>Taxonomies and <a href="/getting-started/configuration/">Blackfriday configuration</a> can also be set per language:</p>
-
-<div class="code relative" id="config">
-  <div class="code-nav flex flex-nowrap items-stretch">
-      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
-      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
-        yaml
-      </button>
-      &nbsp;
-      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
-        toml
-      </button>
-      &nbsp;
-      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
-        json
-      </button>
-      &nbsp;
-  </div>
-  <div class="tab-content">
-      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">Taxonomies</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l">tags</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">blackfriday</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">angledQuotes</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">hrefTargetBlank</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">languages</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">en</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">blackfriday</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">angledQuotes</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">English</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">fr</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">Taxonomies</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">plaque</span><span class="p">:</span><span class="w"> </span><span class="l">plaques</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">Français</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
-</span></span></span></code></pre></div>
-      </div>
-        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">Taxonomies</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">tag</span> <span class="p">=</span> <span class="s1">&#39;tags&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">blackfriday</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">angledQuotes</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">hrefTargetBlank</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">languages</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;English&#39;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">blackfriday</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">angledQuotes</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">fr</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;Français&#39;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span>
-</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">fr</span><span class="p">.</span><span class="nx">Taxonomies</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">plaque</span> <span class="p">=</span> <span class="s1">&#39;plaques&#39;</span>
-</span></span></code></pre></div>
-      </div>
-        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">   <span class="nt">&#34;Taxonomies&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;tag&#34;</span><span class="p">:</span> <span class="s2">&#34;tags&#34;</span>
-</span></span><span class="line"><span class="cl">   <span class="p">},</span>
-</span></span><span class="line"><span class="cl">   <span class="nt">&#34;blackfriday&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;angledQuotes&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;hrefTargetBlank&#34;</span><span class="p">:</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">   <span class="p">},</span>
-</span></span><span class="line"><span class="cl">   <span class="nt">&#34;languages&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;en&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">         <span class="nt">&#34;blackfriday&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;angledQuotes&#34;</span><span class="p">:</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">         <span class="p">},</span>
-</span></span><span class="line"><span class="cl">         <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;English&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">         <span class="nt">&#34;weight&#34;</span><span class="p">:</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">      <span class="p">},</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;fr&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">         <span class="nt">&#34;Taxonomies&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;plaque&#34;</span><span class="p">:</span> <span class="s2">&#34;plaques&#34;</span>
-</span></span><span class="line"><span class="cl">         <span class="p">},</span>
-</span></span><span class="line"><span class="cl">         <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;Français&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">         <span class="nt">&#34;weight&#34;</span><span class="p">:</span> <span class="mi">2</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">   <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div>
-      </div>
-        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-  </div>
-</div>
-
 <h2 id="translate-your-content">Translate Your Content <a class="header-link" href="#translate-your-content"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>There are two ways to manage your content translations. Both ensure each page is assigned a language and is linked to its counterpart translations.</p>
 <h3 id="translation-by-filename">Translation by filename <a class="header-link" href="#translation-by-filename"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
@@ -1428,8 +1336,8 @@ The second file is assigned the French language and is linked to the first.</p>
 </aside>
 
 <p>For merging of content from other languages (i.e. missing content translations), see <a href="/functions/lang.merge/">lang.Merge</a>.</p>
-<p>To track down missing translation strings, run Hugo with the <code>--i18n-warnings</code> flag:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo --i18n-warnings <span class="p">|</span> grep i18n
+<p>To track down missing translation strings, run Hugo with the <code>--printI18nWarnings</code> flag:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo --printI18nWarnings <span class="p">|</span> grep i18n
 </span></span><span class="line"><span class="cl">i18n<span class="p">|</span>MISSING_TRANSLATION<span class="p">|</span>en<span class="p">|</span>wordCount
 </span></span></code></pre></div><h2 id="multilingual-themes-support">Multilingual Themes support <a class="header-link" href="#multilingual-themes-support"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>To support Multilingual mode in your themes, some considerations must be taken for the URLs in the templates. If there is more than one language, URLs must meet the following criteria:</p>
@@ -2185,6 +2093,11 @@ The second file is assigned the French language and is linked to the first.</p>
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/path.basename/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              path.BaseName
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/path.clean/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               path.Clean
             </a>
@@ -2796,7 +2709,7 @@ The second file is assigned the French language and is linked to the first.</p>
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: May 2, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/84649330ab320a0b456191247a36aec68ef94038">Merge pull request #109 from blackb1rd/hugo/v0.98.0 (8464933)</a>
+  Last updated: June 19, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/22d493aa56a2750c0cf5c66646ac6972372fabaa">Merge pull request #111 from blackb1rd/hugo/v0.101.0 (22d493a)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/content-management/multilingual.md" class="

@@ -1,5 +1,6 @@
 # Netlify redirects. See https://www.netlify.com/docs/redirects/
 
+/tools/                            	/zh/tools/
 /about-hugo/                       	/zh/about/
 /docs/                             	/zh/about/
 /content/                          	/zh/content-management/
