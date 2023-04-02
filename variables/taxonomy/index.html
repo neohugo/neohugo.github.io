@@ -13,7 +13,7 @@
   <title>Taxonomy Variables | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.23-DEV" />
+  <meta name="generator" content="Hugo 0.110.0-DEV">
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -26,13 +26,13 @@
   
   
   
-  <link rel="stylesheet" href="/output/css/app.min.b368142944d203fdc1d3dec8ab085c0c0e75aaf9171853110f03e91c1c2616f4.css" integrity="sha256-s2gUKUTSA/3B097IqwhcDA51qvkXGFMRDwPpHBwmFvQ=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/output/css/app.min.b03318b1df01f94314ccbf9f6c0e79c24f1db2c5fefa37614fc49ace24642f7f.css" integrity="sha256-sDMYsd8B&#43;UMUzL&#43;fbA55wk8dssX&#43;&#43;jdhT8SaziRkL38=" crossorigin="anonymous">
   
   
   
 
   <meta name="description"
-  content="Taxonomy pages are of type `Page` and have all page-, site-, and list-level variables available to them. However, taxonomy terms templates have additional variables available to their templates.">
+  content="Hugo&#39;s taxonomy system exposes variables to taxonomy and term templates.">
 
   
 
@@ -42,7 +42,7 @@
 
 
   
-  <script type="text/javascript" src="/output/js/app.175b405753a9c0ce86ab35944e9c4cc1a758a6873209cf5106600f6b2f5a59b6.js" integrity="sha256-F1tAV1OpwM6GqzWUTpxMwadYpocyCc9RBmAPay9aWbY=" crossorigin="anonymous" defer></script>
+  <script type="text/javascript" src="/output/js/app.5a802739f9b2407f0d3a1f84a20731b6705a5a4df051c35686f22bd3aea90731.js" integrity="sha256-WoAnOfmyQH8NOh&#43;EogcxtnBaWk3wUcNWhvIr066pBzE=" crossorigin="anonymous" defer></script>
   
       
  
@@ -58,19 +58,19 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0594cb">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:title" content="Taxonomy Variables" />
-<meta property="og:description" content="Taxonomy pages are of type `Page` and have all page-, site-, and list-level variables available to them. However, taxonomy terms templates have additional variables available to their templates." />
+<meta property="og:description" content="Hugo&#39;s taxonomy system exposes variables to taxonomy and term templates." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/variables/taxonomy/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_16865792560329543504.png"/><meta property="article:section" content="variables" />
-<meta property="article:published_time" content="2017-02-01T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-06-19T23:24:54+07:00" />
+
+<meta property="article:modified_time" content="2023-04-02T12:35:49-07:00" />
 <meta itemprop="name" content="Taxonomy Variables">
-<meta itemprop="description" content="Taxonomy pages are of type `Page` and have all page-, site-, and list-level variables available to them. However, taxonomy terms templates have additional variables available to their templates."><meta itemprop="datePublished" content="2017-02-01T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-06-19T23:24:54+07:00" />
-<meta itemprop="wordCount" content="267"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="description" content="Hugo&#39;s taxonomy system exposes variables to taxonomy and term templates.">
+<meta itemprop="dateModified" content="2023-04-02T12:35:49-07:00" />
+<meta itemprop="wordCount" content="452"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_16865792560329543504.png"/>
 <meta name="twitter:title" content="Taxonomy Variables"/>
-<meta name="twitter:description" content="Taxonomy pages are of type `Page` and have all page-, site-, and list-level variables available to them. However, taxonomy terms templates have additional variables available to their templates."/>
+<meta name="twitter:description" content="Hugo&#39;s taxonomy system exposes variables to taxonomy and term templates."/>
 <meta name="twitter:site" content="@GoHugoIO"/>
 
 
@@ -200,9 +200,9 @@
 		<p class="b">What's on this Page</p>
   	<nav id="TableOfContents">
   <ul>
-    <li><a href="#taxonomy-terms-page-variables">Taxonomy Terms Page Variables</a></li>
-    <li><a href="#use-sitetaxonomies-outside-of-taxonomy-templates">Use <code>.Site.Taxonomies</code> Outside of Taxonomy Templates</a></li>
-    <li><a href="#the-taxonomy-variable">The <code>.Taxonomy</code> Variable</a></li>
+    <li><a href="#taxonomy-templates">Taxonomy templates</a></li>
+    <li><a href="#term-templates">Term templates</a></li>
+    <li><a href="#access-taxonomy-data-from-any-template">Access taxonomy data from any template</a></li>
   </ul>
 </nav>
 	
@@ -250,7 +250,7 @@
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      Taxonomy pages are of type <code>Page</code> and have all page-, site-, and list-level variables available to them. However, taxonomy terms templates have additional variables available to their templates.
+      Hugo&rsquo;s taxonomy system exposes variables to taxonomy and term templates.
     </div>
   
 
@@ -261,88 +261,106 @@
 
 <div class="prose" id="prose">
 
-<h2 id="taxonomy-terms-page-variables">Taxonomy Terms Page Variables <a class="header-link" href="#taxonomy-terms-page-variables"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p><a href="/templates/taxonomy-templates/">Taxonomy terms pages</a> are of the type <code>Page</code> and have the following additional variables.</p>
-<p>For example, the following fields would be available in <code>layouts/_defaults/terms.html</code>, depending on how you organize your <a href="/templates/taxonomy-templates/">taxonomy templates</a>:</p>
+<h2 id="taxonomy-templates">Taxonomy templates <a class="header-link" href="#taxonomy-templates"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<p>Pages rendered by taxonomy templates have <code>.Kind</code> set to <code>taxonomy</code> and <code>.Type</code> set to the taxonomy name.</p>
+<p>In taxonomy templates you may access <code>.Site</code>, <code>.Page</code>. <code>.Section</code>, and <code>.File</code> variables, as well as the following <em>taxonomy</em> variables:</p>
 <dl>
 <dt>.Data.Singular</dt>
-<dd>The singular name of the taxonomy (e.g., <code>tags =&gt; tag</code>)</dd>
+<dd>The singular name of the taxonomy (e.g., <code>tags =&gt; tag</code>).</dd>
 <dt>.Data.Plural</dt>
-<dd>The plural name of the taxonomy (e.g., <code>tags =&gt; tags</code>)</dd>
+<dd>The plural name of the taxonomy (e.g., <code>tags =&gt; tags</code>).</dd>
 <dt>.Data.Pages</dt>
-<dd>The list of pages in the taxonomy</dd>
+<dd>The collection of term pages related to this taxonomy. Aliased by <code>.Pages</code>.</dd>
 <dt>.Data.Terms</dt>
-<dd>The taxonomy itself</dd>
+<dd>A map of terms and weighted pages related to this taxonomy.</dd>
 <dt>.Data.Terms.Alphabetical</dt>
-<dd>The taxonomy terms alphabetized</dd>
+<dd>A map of terms and weighted pages related to this taxonomy, sorted alphabetically in ascending order. Reverse the sort order with<code>.Data.Terms.Alphabetical.Reverse</code>.</dd>
 <dt>.Data.Terms.ByCount</dt>
-<dd>The Terms ordered by popularity</dd>
+<dd>A map of terms and weighted pages related to this taxonomy, sorted by count in ascending order. Reverse the sort order with<code>.Data.Terms.ByCount.Reverse</code>.</dd>
 </dl>
-<p>Note that <code>.Data.Terms.Alphabetical</code> and <code>.Data.Terms.ByCount</code> can also be reversed:</p>
-<ul>
-<li><code>.Data.Terms.Alphabetical.Reverse</code></li>
-<li><code>.Data.Terms.ByCount.Reverse</code></li>
-</ul>
-<h2 id="use-sitetaxonomies-outside-of-taxonomy-templates">Use <code>.Site.Taxonomies</code> Outside of Taxonomy Templates <a class="header-link" href="#use-sitetaxonomies-outside-of-taxonomy-templates"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>The <code>.Site.Taxonomies</code> variable holds all the taxonomies defined site-wide. <code>.Site.Taxonomies</code> is a map of the taxonomy name to a list of its values (e.g., <code>&quot;tags&quot; -&gt; [&quot;tag1&quot;, &quot;tag2&quot;, &quot;tag3&quot;]</code>). Each value, though, is not a string but rather a <em>Taxonomy variable</em>.</p>
-<h2 id="the-taxonomy-variable">The <code>.Taxonomy</code> Variable <a class="header-link" href="#the-taxonomy-variable"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>The <code>.Taxonomy</code> variable, available, for example, as <code>.Site.Taxonomies.tags</code>, contains the list of tags (values) and, for each tag, their corresponding content pages.</p>
-<h3 id="example-usage-of-sitetaxonomies">Example Usage of <code>.Site.Taxonomies</code> <a class="header-link" href="#example-usage-of-sitetaxonomies"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>The following <a href="/templates/partials/">partial template</a> will list all your site&rsquo;s taxonomies, each of their keys, and all the content assigned to each of the keys. For more examples of how to order and render your taxonomies, see  <a href="/templates/taxonomy-templates/">Taxonomy Templates</a>.</p>
-
-
-
-
-
-
-
-
-
-
-<div class="code relative" id="all-taxonomies-keys-and-pages.html"><div class="filename san-serif f6 dib lh-solid pl2 pv2">all-taxonomies-keys-and-pages.html</div>
-		<button class="needs-js copy bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-		</button>
-		
-	
-	<div class="code-copy-content nt3" id="all-taxonomies-keys-and-pages.html">
-		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">$taxonomyname</span><span class="o">,</span><span class="w"> </span><span class="nx">$taxonomy</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="na">.Site.Taxonomies</span><span class="w"> </span><span class="cp">}}</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="s">&#34;/&#34;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">relLangURL</span><span class="cp">}}{{</span><span class="w"> </span><span class="nx">$taxonomyname</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">urlize</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="nx">$taxonomyname</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">$key</span><span class="o">,</span><span class="w"> </span><span class="nx">$value</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">$taxonomy</span><span class="w"> </span><span class="cp">}}</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span> <span class="cp">{{</span><span class="w"> </span><span class="nx">$key</span><span class="w"> </span><span class="cp">}}</span> <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">$value</span><span class="na">.Pages</span><span class="w"> </span><span class="cp">}}</span>
-</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Permalink</span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span> <span class="cp">{{</span><span class="w"> </span><span class="na">.LinkTitle</span><span class="w"> </span><span class="cp">}}</span> <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-</span></span><span class="line"><span class="cl">                <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<h2 id="term-templates">Term templates <a class="header-link" href="#term-templates"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<p>Pages rendered by term templates have <code>.Kind</code> set to <code>term</code> and <code>.Type</code> set to the taxonomy name.</p>
+<p>In term templates you may access <code>.Site</code>, <code>.Page</code>. <code>.Section</code>, and <code>.File</code> variables, as well as the following <em>term</em> variables:</p>
+<dl>
+<dt>.Data.Singular</dt>
+<dd>The singular name of the taxonomy (e.g., <code>tags =&gt; tag</code>).</dd>
+<dt>.Data.Plural</dt>
+<dd>The plural name of the taxonomy (e.g., <code>tags =&gt; tags</code>).</dd>
+<dt>.Data.Pages</dt>
+<dd>The collection of content pages related to this taxonomy. Aliased by <code>.Pages</code>.</dd>
+<dt>.Data.Term</dt>
+<dd>The term itself (e.g., <code>tag-one</code>).</dd>
+</dl>
+<h2 id="access-taxonomy-data-from-any-template">Access taxonomy data from any template <a class="header-link" href="#access-taxonomy-data-from-any-template"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<p>Access the entire taxonomy data structure from any template with <code>site.Taxonomies</code>. This returns a map of taxonomies, terms, and a collection of weighted content pages related to each term. For example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;categories&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;news&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Weight&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Page&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&#34;Title&#34;</span><span class="p">:</span> <span class="s2">&#34;Post 1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&#34;Date&#34;</span><span class="p">:</span> <span class="s2">&#34;2022-12-18T15:13:35-08:00&#34;</span>
+</span></span><span class="line"><span class="cl">          <span class="err">...</span>
+</span></span><span class="line"><span class="cl">          <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Weight&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Page&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&#34;Title&#34;</span><span class="p">:</span> <span class="s2">&#34;Post 2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&#34;Date&#34;</span><span class="p">:</span> <span class="s2">&#34;2022-12-18T15:13:46-08:00&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="err">...</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;tags&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;international&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Weight&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Page&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&#34;Title&#34;</span><span class="p">:</span> <span class="s2">&#34;Post 1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&#34;Date&#34;</span><span class="p">:</span> <span class="s2">&#34;2021-01-01T00:00:00Z&#34;</span>
+</span></span><span class="line"><span class="cl">          <span class="err">...</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Access a subset of the taxonomy data structure by chaining one or more identifiers, or by using the <a href="/functions/index-function/"><code>index</code></a> function with one or more keys. For example, to access the collection of weighted content pages related to the news category, use either of the following:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$pages</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">site</span><span class="na">.Taxonomies.categories.news</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$pages</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">index</span><span class="w"> </span><span class="nx">site</span><span class="na">.Taxonomies</span><span class="w"> </span><span class="s">&#34;categories&#34;</span><span class="w"> </span><span class="s">&#34;news&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><p>For example, to render the entire taxonomy data structure as a nested unordered list:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">$taxonomy</span><span class="o">,</span><span class="w"> </span><span class="nx">$terms</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">site</span><span class="na">.Taxonomies</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nx">site</span><span class="na">.GetPage</span><span class="w"> </span><span class="nx">$taxonomy</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.RelPermalink</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.LinkTitle</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">$term</span><span class="o">,</span><span class="w"> </span><span class="nx">$weightedPages</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">$terms</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nx">site</span><span class="na">.GetPage</span><span class="w"> </span><span class="o">(</span><span class="nx">path</span><span class="na">.Join</span><span class="w"> </span><span class="nx">$taxonomy</span><span class="w"> </span><span class="nx">$term</span><span class="o">)</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.RelPermalink</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.LinkTitle</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">          <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span></span></span></code></pre></div>
-	</div>
-
-</div>
-
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">$weightedPages</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">              <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.RelPermalink</span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span> <span class="cp">{{</span><span class="w"> </span><span class="na">.LinkTitle</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">              <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>See <a href="/templates/taxonomy-templates/">Taxonomy Templates</a> for more examples.</p>
 
 </div>
 
           
-
-<h2>See Also</h2>
-<ul>
-	
-	<li><a href="/templates/lists/">Lists of Content in Hugo</a></li>
-	
-	<li><a href="/content-management/taxonomies/">Taxonomies</a></li>
-	
-	<li><a href="/templates/taxonomy-templates/">Taxonomy Templates</a></li>
-	
-</ul>
 
         </div>
       </div>
@@ -394,6 +412,37 @@
       </li>
       
       <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".installation">Installation</a>
+        <ul class="installation desktopmenu animated fadeIn list pl0 bg-light-gray dn">
+          <li class="f6 fw4">
+            <a href="/installation/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Installation overview
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/macos/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              macOS
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/linux/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Linux
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/windows/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Windows
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/bsd/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              BSD
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".getting-started">Getting Started</a>
         <ul class="getting-started desktopmenu animated fadeIn list pl0 bg-light-gray dn">
           <li class="f6 fw4">
@@ -407,13 +456,8 @@
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/getting-started/installing/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Install Hugo
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/getting-started/usage/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Basic Usage
+              Basic usage
             </a>
           </li>
           <li class="f6 fw4">
@@ -705,11 +749,6 @@
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/templates/alternatives/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Alternative Templating
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/templates/template-debugging/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Template Debugging
             </a>
@@ -841,6 +880,11 @@
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/crypto.fnv32a/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              crypto.FNV32a
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/default/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               default
             </a>
@@ -853,6 +897,11 @@
           <li class="f6 fw4">
             <a href="/functions/dict/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               dict
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/duration/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              duration
             </a>
           </li>
           <li class="f6 fw4">
@@ -1261,8 +1310,23 @@
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/strings.contains/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.Contains
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/strings.containsany/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.ContainsAny
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/strings.count/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               strings.Count
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/strings.firstupper/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.FirstUpper
             </a>
           </li>
           <li class="f6 fw4">
@@ -1326,6 +1390,11 @@
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/time.parseduration/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              time.ParseDuration
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/title/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               title
             </a>
@@ -1373,6 +1442,11 @@
           <li class="f6 fw4">
             <a href="/functions/urlize/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               urlize
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/urlquery/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              urlquery
             </a>
           </li>
           <li class="f6 fw4">
@@ -1464,7 +1538,7 @@
           </li>
           <li class="f6 fw4">
             <a href="/hugo-pipes/scss-sass/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              SASS / SCSS
+              Sass / SCSS
             </a>
           </li>
           <li class="f6 fw4">
@@ -1595,8 +1669,18 @@
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-21yunbox/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on 21YunBox
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/hosting-and-deployment/hosting-on-aws-amplify/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Host on AWS Amplify
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-azure/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on Azure Static Web Apps
             </a>
           </li>
           <li class="f6 fw4">
@@ -1626,7 +1710,7 @@
           </li>
           <li class="f6 fw4">
             <a href="/hosting-and-deployment/hosting-on-keycdn/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hosting on KeyCDN
+              Host on KeyCDN
             </a>
           </li>
           <li class="f6 fw4">
@@ -1642,6 +1726,11 @@
           <li class="f6 fw4">
             <a href="/hosting-and-deployment/deployment-with-rclone/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Deployment with Rclone
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-azure-static-web-apps/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Hosting on Azure Static Web Apps
             </a>
           </li>
         </ul>
@@ -1687,7 +1776,7 @@
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: June 19, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/22d493aa56a2750c0cf5c66646ac6972372fabaa">Merge pull request #111 from blackb1rd/hugo/v0.101.0 (22d493a)</a>
+  Last updated: April 2, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/e4d54d04c1b3f8409ba9ede9679a504778ecd83f">Merge pull request #113 from neohugo/hugo/v0.109.0 (e4d54d0)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/variables/taxonomy.md" class="
@@ -1730,49 +1819,56 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
         
 
 
-  <section class="pb3 w-100">
-    <div class="center mw9"> 
+
+
+
+  <section
+    class="pb3 w-100">
+    <div class="center mw9">
       <h3 class="b f3 mv0 light-gray">Hugo Sponsors</h3>
       <div class="flex-ns flex-wrap center justify-between pt3">
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100">
-              
-                
-                   <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/linode-logo_standard_light_medium.png" alt="Logo for Linode" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            >
+            
+            
+              <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/linode-logo_standard_light_medium.png"
+                  alt="Logo for Linode"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100">
-              
-                
-                   <a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/esolia-logo.svg" alt="Logo for eSolia" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            >
+            
+            
+              <a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/esolia-logo.svg"
+                  alt="Logo for eSolia"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100" style="background-color: #5A2FA1;">
-              
-                
-                   <a href="https://brave.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/brave-logo.svg" alt="Logo for Brave" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            style="background-color: #131A3E;">
+            
+            
+              <a href="https://buttercms.com/hugo-cms/?utm_campaign=sponsorship&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/butter-light.svg"
+                  alt="Logo for ButterCMS"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
       </div>
     </div>
@@ -1784,13 +1880,13 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     </div>
 
     <div class="f7 gray mb5 mb0-ns ph3 w-100"> 
-      <p class="dib mr4">The Hugo logos are copyright © Steve Francia 2013–2022.</p>
+      <p class="dib mr4">The Hugo logos are copyright © Steve Francia 2013–2023.</p>
       <p class="dib">The Hugo Gopher is based on an original work by Renée French.</p>
     </div>
 
     <img src="/images/gopher-side_color.svg" alt="" class="absolute-l bottom-0 dn db-l h4 right-0 z-999"/>
 
-    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100"><div  class="globalmenu mobilemenu pb1 dn">
+    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100 z-2"><div  class="globalmenu mobilemenu pb1 dn">
     
 
 <ul class="list hidden dib ph0 scrolling-touch tc">
@@ -1842,6 +1938,12 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/about/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
           About Hugo
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/installation/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Installation
         </a>
     </li>
   
@@ -1940,9 +2042,6 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
   
 
   
-
-  
-
 
 </body>
 

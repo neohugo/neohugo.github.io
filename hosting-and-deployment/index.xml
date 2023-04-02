@@ -18,6 +18,27 @@ Assumptions You have completed the Quick Start or have a Hugo website you are re
     </item>
     
     <item>
+      <title>Host on Azure Static Web Apps</title>
+      <link>https://gohugo.io/hosting-and-deployment/hosting-on-azure/</link>
+      <pubDate>Fri, 12 Mar 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://gohugo.io/hosting-and-deployment/hosting-on-azure/</guid>
+      <description>Azure Static Web Apps is a service that automatically builds and deploys full stack web apps to Azure from a Git repository, using GitHub Actions or Azure DevOps.
+The following documentation covers how to use GitHub Actions for the deployment. If you are using Azure DevOps, follow the Microsoft documentation.
+Assumptions You have Git 2.8 or greater installed on your machine. You have a GitHub account. Signing up for GitHub is free.</description>
+    </item>
+    
+    <item>
+      <title>Host on 21YunBox</title>
+      <link>https://gohugo.io/hosting-and-deployment/hosting-on-21yunbox/</link>
+      <pubDate>Wed, 06 Jan 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://gohugo.io/hosting-and-deployment/hosting-on-21yunbox/</guid>
+      <description>21YunBox is a fully-managed cloud platform dedicated to make web deployment easy within the Chinese Great Firewall where you can host static sites, backend APIs, databases, cron jobs, and all your other apps in one place. It provides blazing fast Chinese CDN, continuous deployment, one-click HTTPS and other services like managed databases and backend web services, providing an avenue to launch web projects in China.
+21YunBox includes the following features:</description>
+    </item>
+    
+    <item>
       <title>Host on Render</title>
       <link>https://gohugo.io/hosting-and-deployment/hosting-on-render/</link>
       <pubDate>Thu, 06 Jun 2019 00:00:00 +0200</pubDate>
@@ -84,8 +105,8 @@ Configure GitLab CI/CD Define your CI/CD jobs by creating a .</description>
       <pubDate>Thu, 07 Apr 2022 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/hosting-and-deployment/hosting-on-cloudflare-pages/</guid>
-      <description>You can host your Hugo site using Cloudflare Pages. Pages are super fast, always up-to-date, and deployed directly from your Git provider (currently supports only GitHub and GitLab).
-Cloudflare Pages has a handy tutorial on how to deploy a Hugo site.</description>
+      <description>Cloudflare Pages are super fast, always up-to-date, and deployed directly from your Git provider (currently supports only GitHub and GitLab).
+Cloudflare Pages docs have a detailed tutorial on how to deploy a Hugo site.</description>
     </item>
     
     <item>
@@ -108,13 +129,23 @@ hugo &amp;amp;&amp;amp; rsync -avz --delete public/ www-data@ftp.topologix.fr:~/
     </item>
     
     <item>
-      <title>Hosting on KeyCDN</title>
+      <title>Hosting on Azure Static Web Apps</title>
+      <link>https://gohugo.io/hosting-and-deployment/hosting-on-azure-static-web-apps/</link>
+      <pubDate>Mon, 09 May 2022 00:00:00 +0200</pubDate>
+      
+      <guid>https://gohugo.io/hosting-and-deployment/hosting-on-azure-static-web-apps/</guid>
+      <description>You can create and deploy a Hugo web application to Azure Static Web Apps. The final result is a new Azure Static Web App with associated GitHub Actions that give you control over how the app is built and published. You&amp;rsquo;ll learn how to create a Hugo app, set up an Azure Static Web App and deploy the Hugo app to Azure.
+Here&amp;rsquo;s the tutorial on how to Publish a Hugo site to Azure Static Web Apps.</description>
+    </item>
+    
+    <item>
+      <title>Host on KeyCDN</title>
       <link>https://gohugo.io/hosting-and-deployment/hosting-on-keycdn/</link>
       <pubDate>Tue, 12 Sep 2017 00:00:00 +0200</pubDate>
       
       <guid>https://gohugo.io/hosting-and-deployment/hosting-on-keycdn/</guid>
       <description>KeyCDN provides a multitude of features to help accelerate and secure your Hugo site globally including Brotli compression, Let&amp;rsquo;s Encrypt support, Origin Shield, and more.
-Assumptions You already have a Hugo page configured You have a GitLab account You have a KeyCDN account Create a KeyCDN Pull Zone The first step will be to login to your KeyCDN account and create a new zone. Name this whatever you like and select the Pull Zone option.</description>
+Assumptions You already have a Hugo page configured You have a GitLab account You have a KeyCDN account Create a KeyCDN Pull Zone The first step will be to log in to your KeyCDN account and create a new zone. Name this whatever you like and select the Pull Zone option.</description>
     </item>
     
   </channel>

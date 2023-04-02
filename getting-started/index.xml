@@ -10,36 +10,27 @@
     <item>
       <title>Quick Start</title>
       <link>https://gohugo.io/getting-started/quick-start/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0200</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/getting-started/quick-start/</guid>
-      <description>This quick start uses macOS in the examples. For instructions about how to install Hugo on other operating systems, see install.
-It is required to have Git installed to run this tutorial.
-For other approaches to learning Hugo (like books or video tutorials), refer to the external learning resources page.
-Step 1: Install Hugo Homebrew and MacPorts, package managers for macOS, can be installed from brew.sh or macports.org respectively. See install if you are running Windows etc.</description>
+      <description>In this tutorial you will:
+Create a site Add content Configure the site Publish the site Prerequisites Before you begin this tutorial you must:
+Install Hugo (the extended edition) Install Git You must also be comfortable working from the command line.
+Create a site Commands If you are a Windows user, you must run these commands with PowerShell. You cannot use Windows Powershell, which is a different application, or the Command Prompt.</description>
     </item>
     
     <item>
-      <title>Install Hugo</title>
-      <link>https://gohugo.io/getting-started/installing/</link>
-      <pubDate>Tue, 01 Nov 2016 00:00:00 +0100</pubDate>
-      
-      <guid>https://gohugo.io/getting-started/installing/</guid>
-      <description>There is lots of talk about &amp;ldquo;Hugo being written in Go&amp;rdquo;, but you don&amp;rsquo;t need to install Go to enjoy Hugo. Just grab a precompiled binary!
-Hugo is written in Go with support for multiple platforms. The latest release can be found at Hugo Releases.
-Hugo currently provides pre-built binaries for the following:
-macOS (Darwin) for x64, i386, and ARM architectures Windows Linux OpenBSD FreeBSD Hugo may also be compiled from source wherever the Go toolchain can run; e.</description>
-    </item>
-    
-    <item>
-      <title>Basic Usage</title>
+      <title>Basic usage</title>
       <link>https://gohugo.io/getting-started/usage/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/getting-started/usage/</guid>
-      <description>The following is a description of the most common commands you will use while developing your Hugo project. See the Command Line Reference for a comprehensive view of Hugo&amp;rsquo;s CLI.
-Test Installation Once you have installed Hugo, make sure it is in your PATH. You can test that Hugo has been installed correctly via the help command:
-hugo help The output you see in your console should be similar to the following:</description>
+      <description>Test your installation After installing Hugo, test your installation by running:
+hugo version You should see something like:
+hugo v0.105.0-0e3b42b4a9bdeb4d866210819fc6ddcf51582ffa+extended linux/amd64 BuildDate=2022-10-28T12:29:05Z VendorInfo=snap:0.105.0 Display available commands To see a list of the available commands and flags:
+hugo help To get help with a subcommand, use the --help flag. For example:
+hugo server --help Build your site To build your site, cd into your project directory and run:
+hugo The hugo command builds your site, publishing the files to the public directory.</description>
     </item>
     
     <item>
@@ -48,8 +39,8 @@ hugo help The output you see in your console should be similar to the following:
       <pubDate>Mon, 02 Jan 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/getting-started/directory-structure/</guid>
-      <description>New Site Scaffolding Running the hugo new site generator from the command line will create a directory structure with the following elements:
-. ├── archetypes ├── config.toml ├── content ├── data ├── layouts ├── static └── themes Directory Structure Explained The following is a high-level overview of each of the directories with links to each of their respective sections within the Hugo docs.
+      <description>New Site Scaffolding Running hugo new site example from the command line creates a directory structure with the following elements:
+example/ ├── archetypes/ │ └── default.md ├── assets/ ├── content/ ├── data/ ├── layouts/ ├── public/ ├── static/ ├── themes/ └── config.toml Directory Structure Explained The following is a high-level overview of each of the directories with links to each of their respective sections within the Hugo docs.
 archetypes You can create new content files in Hugo using the hugo new command.</description>
     </item>
     
@@ -60,7 +51,7 @@ archetypes You can create new content files in Hugo using the hugo new command.<
       
       <guid>https://gohugo.io/getting-started/configuration/</guid>
       <description>Configuration File Hugo uses the config.toml, config.yaml, or config.json (if found in the site root) as the default site config file.
-The user can choose to override that default with one or more site config files using the command line --config switch.
+The user can choose to override that default with one or more site config files using the command-line --config switch.
 Examples:
 hugo --config debugconfig.toml hugo --config a.toml,b.toml,c.toml Multiple site config files can be specified as a comma-separated string to the --config switch.
 Configuration Directory In addition to using a single site config file, one can use the configDir directory (default to config/) to maintain easier organization and environment specific settings.</description>
@@ -72,9 +63,9 @@ Configuration Directory In addition to using a single site config file, one can 
       <pubDate>Fri, 15 Nov 2019 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/getting-started/configuration-markup/</guid>
-      <description>Configure Markup New in v0.60.0 See Goldmark for settings related to the default Markdown handler in Hugo.
+      <description>Configure Markup See Goldmark for settings related to the default Markdown handler in Hugo.
 Below are all markup related configuration in Hugo with their default settings:
-config. yaml &amp;nbsp; toml &amp;nbsp; json &amp;nbsp; markup: asciidocExt: attributes: {} backend: html5 extensions: [] failureLevel: fatal noHeaderOrFooter: true preserveTOC: false safeMode: unsafe sectionNumbers: false trace: false verbose: false workingFolderCurrent: false defaultMarkdownHandler: goldmark goldmark: extensions: definitionList: true footnote: true linkify: true linkifyProtocol: https strikethrough: true table: true taskList: true typographer: true parser: attribute: block: false title: true autoHeadingID: true autoHeadingIDType: github renderer: hardWraps: false unsafe: false xhtml: false highlight: anchorLineNos: false codeFences: true guessSyntax: false hl_Lines: &amp;#34;&amp;#34; hl_inline: false lineAnchors: &amp;#34;&amp;#34; lineNoStart: 1 lineNos: false lineNumbersInTable: true noClasses: true noHl: false style: monokai tabWidth: 4 tableOfContents: endLevel: 3 ordered: false startLevel: 2 [markup] defaultMarkdownHandler = &amp;#39;goldmark&amp;#39; [markup.</description>
+config. yaml &amp;nbsp; toml &amp;nbsp; json &amp;nbsp; markup: asciidocExt: attributes: {} backend: html5 extensions: [] failureLevel: fatal noHeaderOrFooter: true preserveTOC: false safeMode: unsafe sectionNumbers: false trace: false verbose: false workingFolderCurrent: false defaultMarkdownHandler: goldmark goldmark: extensions: definitionList: true footnote: true linkify: true linkifyProtocol: https strikethrough: true table: true taskList: true typographer: true parser: attribute: block: false title: true autoHeadingID: true autoHeadingIDType: github wrapStandAloneImageWithinParagraph: true renderer: hardWraps: false unsafe: false xhtml: false highlight: anchorLineNos: false codeFences: true guessSyntax: false hl_Lines: &amp;#34;&amp;#34; hl_inline: false lineAnchors: &amp;#34;&amp;#34; lineNoStart: 1 lineNos: false lineNumbersInTable: true noClasses: true noHl: false style: monokai tabWidth: 4 tableOfContents: endLevel: 3 ordered: false startLevel: 2 [markup] defaultMarkdownHandler = &amp;#39;goldmark&amp;#39; [markup.</description>
     </item>
     
     <item>

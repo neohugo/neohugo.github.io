@@ -13,7 +13,7 @@
   <title>Quick Start | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.23-DEV" />
+  <meta name="generator" content="Hugo 0.110.0-DEV">
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -26,13 +26,13 @@
   
   
   
-  <link rel="stylesheet" href="/output/css/app.min.b368142944d203fdc1d3dec8ab085c0c0e75aaf9171853110f03e91c1c2616f4.css" integrity="sha256-s2gUKUTSA/3B097IqwhcDA51qvkXGFMRDwPpHBwmFvQ=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/output/css/app.min.b03318b1df01f94314ccbf9f6c0e79c24f1db2c5fefa37614fc49ace24642f7f.css" integrity="sha256-sDMYsd8B&#43;UMUzL&#43;fbA55wk8dssX&#43;&#43;jdhT8SaziRkL38=" crossorigin="anonymous">
   
   
   
 
   <meta name="description"
-  content="Create a Hugo site using the beautiful Ananke theme.">
+  content="Learn to create a Hugo site in minutes.">
 
   
 
@@ -42,7 +42,7 @@
 
 
   
-  <script type="text/javascript" src="/output/js/app.175b405753a9c0ce86ab35944e9c4cc1a758a6873209cf5106600f6b2f5a59b6.js" integrity="sha256-F1tAV1OpwM6GqzWUTpxMwadYpocyCc9RBmAPay9aWbY=" crossorigin="anonymous" defer></script>
+  <script type="text/javascript" src="/output/js/app.5a802739f9b2407f0d3a1f84a20731b6705a5a4df051c35686f22bd3aea90731.js" integrity="sha256-WoAnOfmyQH8NOh&#43;EogcxtnBaWk3wUcNWhvIr066pBzE=" crossorigin="anonymous" defer></script>
   
       
  
@@ -58,19 +58,19 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0594cb">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:title" content="Quick Start" />
-<meta property="og:description" content="Create a Hugo site using the beautiful Ananke theme." />
+<meta property="og:description" content="Learn to create a Hugo site in minutes." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/getting-started/quick-start/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_13771684703296284199.png"/><meta property="article:section" content="getting-started" />
-<meta property="article:published_time" content="2013-07-01T00:00:00+02:00" />
-<meta property="article:modified_time" content="2022-06-19T23:24:54+07:00" />
+
+<meta property="article:modified_time" content="2023-04-02T12:35:49-07:00" />
 <meta itemprop="name" content="Quick Start">
-<meta itemprop="description" content="Create a Hugo site using the beautiful Ananke theme."><meta itemprop="datePublished" content="2013-07-01T00:00:00+02:00" />
-<meta itemprop="dateModified" content="2022-06-19T23:24:54+07:00" />
-<meta itemprop="wordCount" content="570"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="description" content="Learn to create a Hugo site in minutes.">
+<meta itemprop="dateModified" content="2023-04-02T12:35:49-07:00" />
+<meta itemprop="wordCount" content="712"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_13771684703296284199.png"/>
 <meta name="twitter:title" content="Quick Start"/>
-<meta name="twitter:description" content="Create a Hugo site using the beautiful Ananke theme."/>
+<meta name="twitter:description" content="Learn to create a Hugo site in minutes."/>
 <meta name="twitter:site" content="@GoHugoIO"/>
 
 
@@ -200,12 +200,13 @@
 		<p class="b">What's on this Page</p>
   	<nav id="TableOfContents">
   <ul>
-    <li><a href="#step-1-install-hugo">Step 1: Install Hugo</a></li>
-    <li><a href="#step-2-create-a-new-site">Step 2: Create a New Site</a></li>
-    <li><a href="#step-3-add-a-theme">Step 3: Add a Theme</a></li>
-    <li><a href="#step-4-add-some-content">Step 4: Add Some Content</a></li>
-    <li><a href="#step-5-start-the-hugo-server">Step 5: Start the Hugo server</a></li>
-    <li><a href="#step-6-customize-the-theme">Step 6: Customize the Theme</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#create-a-site">Create a site</a></li>
+    <li><a href="#add-content">Add content</a></li>
+    <li><a href="#configure-the-site">Configure the site</a></li>
+    <li><a href="#publish-the-site">Publish the site</a></li>
+    <li><a href="#ask-for-help">Ask for help</a></li>
+    <li><a href="#other-resources">Other resources</a></li>
   </ul>
 </nav>
 	
@@ -214,7 +215,7 @@
 		
 
 		
-			<a href="https://gohugo.io/getting-started/installing/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Install Hugo">
+			<a href="https://gohugo.io/getting-started/usage/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Basic usage">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -245,7 +246,7 @@
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      Create a Hugo site using the beautiful Ananke theme.
+      Learn to create a Hugo site in minutes.
     </div>
   
 
@@ -256,6 +257,22 @@
 
 <div class="prose" id="prose">
 
+<p>In this tutorial you will:</p>
+<ol>
+<li>Create a site</li>
+<li>Add content</li>
+<li>Configure the site</li>
+<li>Publish the site</li>
+</ol>
+<h2 id="prerequisites">Prerequisites <a class="header-link" href="#prerequisites"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<p>Before you begin this tutorial you must:</p>
+<ol>
+<li><a href="/installation/">Install Hugo</a> (the extended edition)</li>
+<li><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Install Git</a></li>
+</ol>
+<p>You must also be comfortable working from the command line.</p>
+<h2 id="create-a-site">Create a site <a class="header-link" href="#create-a-site"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<h3 id="commands">Commands <a class="header-link" href="#commands"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 
 <aside class="admonition note">
 	<div class="note-icon">
@@ -263,61 +280,88 @@
 	</div>
 	
 	
-	<div class="admonition-content"><p>This quick start uses <code>macOS</code> in the examples. For instructions about how to install Hugo on other operating systems, see <a href="/getting-started/installing">install</a>.</p>
-<p>It is required to have <a href="https://git-scm.com/downloads">Git installed</a> to run this tutorial.</p>
-<p>For other approaches to learning Hugo (like books or video tutorials), refer to the <a href="/getting-started/external-learning-resources/">external learning resources</a> page.</p>
+	<div class="admonition-content"><p>If you are a Windows user, you must run these commands with <a href="https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows">PowerShell</a>. You cannot use Windows Powershell, which is a different application, or the Command Prompt. You may also use a Linux shell if available.</p>
 </div>
 </aside>
 
-<h2 id="step-1-install-hugo">Step 1: Install Hugo <a class="header-link" href="#step-1-install-hugo"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-
-<aside class="admonition note">
-	<div class="note-icon">
-		
-	</div>
-	
-	
-	<div class="admonition-content"><p><code>Homebrew</code> and <code>MacPorts</code>, package managers for <code>macOS</code>,  can be installed from <a href="https://brew.sh/">brew.sh</a> or <a href="https://www.macports.org/">macports.org</a> respectively. See <a href="/getting-started/installing">install</a> if you are running Windows etc.</p>
-</div>
-</aside>
-
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">brew install hugo
-</span></span><span class="line"><span class="cl"><span class="c1"># or</span>
-</span></span><span class="line"><span class="cl">port install hugo
-</span></span></code></pre></div><p>To verify your new install:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo version
-</span></span></code></pre></div>
-<script type="text/javascript" src="https://asciinema.org/a/ItACREbFgvJ0HjnSNeTknxWy9.js" id="asciicast-ItACREbFgvJ0HjnSNeTknxWy9" data-rows="10" async></script>
-
-<h2 id="step-2-create-a-new-site">Step 2: Create a New Site <a class="header-link" href="#step-2-create-a-new-site"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new site quickstart
-</span></span></code></pre></div><p>The above will create a new Hugo site in a folder named <code>quickstart</code>.</p>
-
-<script type="text/javascript" src="https://asciinema.org/a/3mf1JGaN0AX0Z7j5kLGl3hSh8.js" id="asciicast-3mf1JGaN0AX0Z7j5kLGl3hSh8" data-rows="10" async></script>
-
-<h2 id="step-3-add-a-theme">Step 3: Add a Theme <a class="header-link" href="#step-3-add-a-theme"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>See <a href="https://themes.gohugo.io/">themes.gohugo.io</a> for a list of themes to consider. This quickstart uses the beautiful <a href="https://themes.gohugo.io/gohugo-theme-ananke/">Ananke theme</a>.</p>
-<p>First, download the theme from GitHub and add it to your site&rsquo;s <code>themes</code> directory:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> quickstart
+<p>Run these commands to create a Hugo site with the <a href="https://github.com/theNewDynamic/gohugo-theme-ananke">Ananke</a> theme. The next section provides an explanation of each command.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">hugo new site quickstart
+</span></span><span class="line"><span class="cl">cd quickstart
 </span></span><span class="line"><span class="cl">git init
-</span></span><span class="line"><span class="cl">git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
-</span></span></code></pre></div><p>Then, add the theme to the site configuration:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">theme</span> <span class="o">=</span> <span class="se">\&#34;</span>ananke<span class="se">\&#34;</span> &gt;&gt; config.toml
-</span></span></code></pre></div>
-<script type="text/javascript" src="https://asciinema.org/a/7naKerRYUGVPj8kiDmdh5k5h9.js" id="asciicast-7naKerRYUGVPj8kiDmdh5k5h9" data-rows="10" async></script>
-
-<h2 id="step-4-add-some-content">Step 4: Add Some Content <a class="header-link" href="#step-4-add-some-content"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>You can manually create content files (for example as <code>content/&lt;CATEGORY&gt;/&lt;FILE&gt;.&lt;FORMAT&gt;</code>) and provide metadata in them, however you can use the <code>new</code> command to do a few things for you (like add title and date):</p>
-<pre tabindex="0"><code>hugo new posts/my-first-post.md
-</code></pre>
-<script type="text/javascript" src="https://asciinema.org/a/eUojYCfRTZvkEiqc52fUsJRBR.js" id="asciicast-eUojYCfRTZvkEiqc52fUsJRBR" data-rows="10" async></script>
-
-<p>Edit the newly created content file if you want, it will start with something like this:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke themes/ananke
+</span></span><span class="line"><span class="cl">echo &#34;theme = &#39;ananke&#39;&#34; &gt;&gt; config.toml
+</span></span><span class="line"><span class="cl">hugo server
+</span></span></code></pre></div><p>View your site at the URL displayed in your terminal. Press <code>Ctrl + C</code> to stop Hugo&rsquo;s development server.</p>
+<h3 id="explanation-of-commands">Explanation of commands <a class="header-link" href="#explanation-of-commands"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<p>Create the <a href="/getting-started/directory-structure">directory structure</a> for your project in the <code>quickstart</code> directory.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">hugo new site quickstart
+</span></span></code></pre></div><p>Change the current directory to the root of your project.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">cd quickstart
+</span></span></code></pre></div><p>Initialize an empty Git repository in the current directory.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">git init
+</span></span></code></pre></div><p>Clone the <a href="https://github.com/theNewDynamic/gohugo-theme-ananke">Ananke</a> theme into the <code>themes</code> directory, adding it to your project as a <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">Git submodule</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke themes/ananke
+</span></span></code></pre></div><p>Append a line to the site configuration file, indicating the current theme.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">echo &#34;theme = &#39;ananke&#39;&#34; &gt;&gt; config.toml
+</span></span></code></pre></div><p>Start Hugo&rsquo;s development server to view the site.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">hugo server
+</span></span></code></pre></div><p>Press <code>Ctrl + C</code> to stop Hugo&rsquo;s development server.</p>
+<h2 id="add-content">Add content <a class="header-link" href="#add-content"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<p>Add a new page to your site.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">hugo new posts/my-first-post.md
+</span></span></code></pre></div><p>Hugo created the file in the <code>content/posts</code> directory. Open the file with your editor.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">---
 </span></span><span class="line"><span class="cl">title: &#34;My First Post&#34;
-</span></span><span class="line"><span class="cl">date: 2019-03-26T08:47:11+01:00
+</span></span><span class="line"><span class="cl">date: 2022-11-20T09:03:20-08:00
 </span></span><span class="line"><span class="cl">draft: true
 </span></span><span class="line"><span class="cl">---
+</span></span></code></pre></div><p>Notice the <code>draft</code> value in the <a href="/content-management/front-matter">front matter</a> is <code>true</code>. By default, Hugo does not publish draft content when you build the site. Learn more about <a href="/getting-started/usage/#draft-future-and-expired-content">draft, future, and expired content</a>.</p>
+<p>Add some <a href="https://commonmark.org/help/">markdown</a> to the body of the post, but do not change the <code>draft</code> value.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">title: &#34;My First Post&#34;
+</span></span><span class="line"><span class="cl">date: 2022-11-20T09:03:20-08:00
+</span></span><span class="line"><span class="cl">draft: true
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">## Introduction
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">This is **bold** text, and this is *emphasized* text.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Visit the [Hugo](https://gohugo.io) website!
+</span></span></code></pre></div><p>Save the file, then start Hugo’s development server to view the site. You can run either of the following commands to include draft content.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">hugo server --buildDrafts
+</span></span><span class="line"><span class="cl">hugo server -D
+</span></span></code></pre></div><p>View your site at the URL displayed in your terminal. Keep the development server running as you continue to add and change content.</p>
+
+<aside class="admonition note">
+	<div class="note-icon">
+		
+	</div>
+	
+	
+	<div class="admonition-content"><p>Hugo&rsquo;s rendering engine conforms to the CommonMark <a href="https://spec.commonmark.org/">specification</a> for markdown. The CommonMark organization provides a useful <a href="https://spec.commonmark.org/dingus/">live testing tool</a> powered by the reference implementation.</p>
+</div>
+</aside>
+
+<h2 id="configure-the-site">Configure the site <a class="header-link" href="#configure-the-site"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<p>With your editor, open the <a href="/getting-started/configuration/">site configuration</a> file (<code>config.toml</code>) in the root of your project.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">baseURL = &#39;http://example.org/&#39;
+</span></span><span class="line"><span class="cl">languageCode = &#39;en-us&#39;
+</span></span><span class="line"><span class="cl">title = &#39;My New Hugo Site&#39;
+</span></span><span class="line"><span class="cl">theme = &#39;ananke&#39;
+</span></span></code></pre></div><p>Make the following changes:</p>
+<ol>
+<li>
+<p>Set the <code>baseURL</code> for your production site. This value must begin with the protocol and end with a slash, as shown above.</p>
+</li>
+<li>
+<p>Set the <code>languageCode</code> to your language and region.</p>
+</li>
+<li>
+<p>Set the <code>title</code> for your production site.</p>
+</li>
+</ol>
+<p>Start Hugo&rsquo;s development server to see your changes, remembering to include draft content.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">hugo server -D
 </span></span></code></pre></div>
 <aside class="admonition note">
 	<div class="note-icon">
@@ -325,64 +369,21 @@
 	</div>
 	
 	
-	<div class="admonition-content"><p>Drafts do not get deployed; once you finish a post, update the header of the post to say <code>draft: false</code>. More info <a href="/getting-started/usage/#draft-future-and-expired-content">here</a>.</p>
+	<div class="admonition-content"><p>Most theme authors provide configuration guidelines and options. Make sure to visit your theme&rsquo;s repository or documentation site for details.</p>
+<p><a href="https://www.thenewdynamic.com/">The New Dynamic</a>, authors of the Ananke theme, provide <a href="https://github.com/theNewDynamic/gohugo-theme-ananke#readme">documentation</a> for configuration and usage. They also provide a <a href="https://gohugo-ananke-theme-demo.netlify.app/">demonstration site</a>.</p>
 </div>
 </aside>
 
-<h2 id="step-5-start-the-hugo-server">Step 5: Start the Hugo server <a class="header-link" href="#step-5-start-the-hugo-server"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>Now, start the Hugo server with <a href="/getting-started/usage/#draft-future-and-expired-content">drafts</a> enabled:</p>
-
-<script type="text/javascript" src="https://asciinema.org/a/BvJBsF6egk9c163bMsObhuNXj.js" id="asciicast-BvJBsF6egk9c163bMsObhuNXj" data-rows="10" async></script>
-
-<pre tabindex="0"><code>▶ hugo server -D
-
-                   | EN
-+------------------+----+
-  Pages            | 10
-  Paginator pages  |  0
-  Non-page files   |  0
-  Static files     |  3
-  Processed images |  0
-  Aliases          |  1
-  Sitemaps         |  1
-  Cleaned          |  0
-
-Total in 11 ms
-Watching for changes in /Users/bep/quickstart/{content,data,layouts,static,themes}
-Watching for config changes in /Users/bep/quickstart/config.toml
-Environment: &#34;development&#34;
-Serving pages from memory
-Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
-Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
-Press Ctrl+C to stop
-</code></pre><p><strong>Navigate to your new site at <a href="http://localhost:1313/">http://localhost:1313/</a>.</strong></p>
-<p>Feel free to edit or add new content and simply refresh in browser to see changes quickly. (You might need to force refresh your web browser, something like Ctrl-R usually works.)</p>
-<h2 id="step-6-customize-the-theme">Step 6: Customize the Theme <a class="header-link" href="#step-6-customize-the-theme"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>Your new site already looks great, but you will want to tweak it a little before you release it to the public.</p>
-<h3 id="site-configuration">Site Configuration <a class="header-link" href="#site-configuration"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>Open up <code>config.toml</code> in a text editor:</p>
-<pre tabindex="0"><code>baseURL = &#34;https://example.org/&#34;
-languageCode = &#34;en-us&#34;
-title = &#34;My New Hugo Site&#34;
-theme = &#34;ananke&#34;
-</code></pre><p>Replace the <code>title</code> above with something more personal. Also, if you already have a domain ready, set the <code>baseURL</code>. Note that this value is not needed when running the local development server.</p>
-
-<aside class="admonition note">
-	<div class="note-icon">
-		
-	</div>
-	
-	
-	<div class="admonition-content"><p><strong>Tip:</strong> Make the changes to the site configuration or any other file in your site while the Hugo server is running, and you will see the changes in the browser right away, though you may need to <a href="https://kb.iu.edu/d/ahic">clear your cache</a>.</p>
-</div>
-</aside>
-
-<p>For theme specific configuration options, see the <a href="https://github.com/theNewDynamic/gohugo-theme-ananke">theme site</a>.</p>
-<p><strong>For further theme customization, see <a href="/themes/customizing/">Customize a Theme</a>.</strong></p>
-<h3 id="step-7-build-static-pages">Step 7: Build static pages <a class="header-link" href="#step-7-build-static-pages"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>It is simple. Just call:</p>
-<pre tabindex="0"><code>hugo -D
-</code></pre><p>Output will be in <code>./public/</code> directory by default (<code>-d</code>/<code>--destination</code> flag to change it, or set <code>publishdir</code> in the config file).</p>
+<h2 id="publish-the-site">Publish the site <a class="header-link" href="#publish-the-site"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<p>In this step you will <em>publish</em> your site, but you will not <em>deploy</em> it.</p>
+<p>When you <em>publish</em> your site, Hugo creates the entire static site in the <code>public</code> directory in the root of your project. This includes the HTML files, and assets such as images, CSS files, and JavaScript files.</p>
+<p>When you publish your site, you typically do <em>not</em> want to include <a href="/getting-started/usage/#draft-future-and-expired-content">draft, future, or expired content</a>. The command is simple.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">hugo
+</span></span></code></pre></div><p>To learn how to <em>deploy</em> your site, see the <a href="/hosting-and-deployment/">hosting and deployment</a> section.</p>
+<h2 id="ask-for-help">Ask for help <a class="header-link" href="#ask-for-help"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<p>Hugo&rsquo;s <a href="https://discourse.gohugo.io/">forum</a> is an active community of users and developers who answer questions, share knowledge, and provide examples. A quick search of over 20,000 topics will often answer your question. Please be sure to read about <a href="https://discourse.gohugo.io/t/requesting-help/9132">requesting help</a> before asking your first question.</p>
+<h2 id="other-resources">Other resources <a class="header-link" href="#other-resources"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<p>For other resources to help you learn Hugo, including books and video tutorials, see the <a href="/getting-started/external-learning-resources/">external learning resources</a> page.</p>
 
 </div>
 
@@ -395,7 +396,7 @@ theme = &#34;ananke&#34;
 	
 	<li><a href="/hugo-modules/use-modules/">Use Hugo Modules</a></li>
 	
-	<li><a href="/getting-started/usage/">Basic Usage</a></li>
+	<li><a href="/getting-started/usage/">Basic usage</a></li>
 	
 </ul>
 
@@ -449,6 +450,37 @@ theme = &#34;ananke&#34;
       </li>
       
       <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".installation">Installation</a>
+        <ul class="installation desktopmenu animated fadeIn list pl0 bg-light-gray dn">
+          <li class="f6 fw4">
+            <a href="/installation/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Installation overview
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/macos/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              macOS
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/linux/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Linux
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/windows/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Windows
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/bsd/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              BSD
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2  primary-color" data-target=".getting-started">Getting Started</a>
         <ul class="getting-started desktopmenu animated fadeIn list pl0 bg-light-gray db">
           <li class="f6 fw4">
@@ -462,13 +494,8 @@ theme = &#34;ananke&#34;
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/getting-started/installing/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Install Hugo
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/getting-started/usage/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Basic Usage
+              Basic usage
             </a>
           </li>
           <li class="f6 fw4">
@@ -760,11 +787,6 @@ theme = &#34;ananke&#34;
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/templates/alternatives/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Alternative Templating
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/templates/template-debugging/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Template Debugging
             </a>
@@ -896,6 +918,11 @@ theme = &#34;ananke&#34;
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/crypto.fnv32a/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              crypto.FNV32a
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/default/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               default
             </a>
@@ -908,6 +935,11 @@ theme = &#34;ananke&#34;
           <li class="f6 fw4">
             <a href="/functions/dict/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               dict
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/duration/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              duration
             </a>
           </li>
           <li class="f6 fw4">
@@ -1316,8 +1348,23 @@ theme = &#34;ananke&#34;
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/strings.contains/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.Contains
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/strings.containsany/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.ContainsAny
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/strings.count/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               strings.Count
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/strings.firstupper/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.FirstUpper
             </a>
           </li>
           <li class="f6 fw4">
@@ -1381,6 +1428,11 @@ theme = &#34;ananke&#34;
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/time.parseduration/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              time.ParseDuration
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/title/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               title
             </a>
@@ -1428,6 +1480,11 @@ theme = &#34;ananke&#34;
           <li class="f6 fw4">
             <a href="/functions/urlize/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               urlize
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/urlquery/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              urlquery
             </a>
           </li>
           <li class="f6 fw4">
@@ -1519,7 +1576,7 @@ theme = &#34;ananke&#34;
           </li>
           <li class="f6 fw4">
             <a href="/hugo-pipes/scss-sass/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              SASS / SCSS
+              Sass / SCSS
             </a>
           </li>
           <li class="f6 fw4">
@@ -1650,8 +1707,18 @@ theme = &#34;ananke&#34;
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-21yunbox/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on 21YunBox
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/hosting-and-deployment/hosting-on-aws-amplify/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Host on AWS Amplify
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-azure/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on Azure Static Web Apps
             </a>
           </li>
           <li class="f6 fw4">
@@ -1681,7 +1748,7 @@ theme = &#34;ananke&#34;
           </li>
           <li class="f6 fw4">
             <a href="/hosting-and-deployment/hosting-on-keycdn/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hosting on KeyCDN
+              Host on KeyCDN
             </a>
           </li>
           <li class="f6 fw4">
@@ -1697,6 +1764,11 @@ theme = &#34;ananke&#34;
           <li class="f6 fw4">
             <a href="/hosting-and-deployment/deployment-with-rclone/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Deployment with Rclone
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-azure-static-web-apps/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Hosting on Azure Static Web Apps
             </a>
           </li>
         </ul>
@@ -1742,7 +1814,7 @@ theme = &#34;ananke&#34;
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: June 19, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/22d493aa56a2750c0cf5c66646ac6972372fabaa">Merge pull request #111 from blackb1rd/hugo/v0.101.0 (22d493a)</a>
+  Last updated: April 2, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/e4d54d04c1b3f8409ba9ede9679a504778ecd83f">Merge pull request #113 from neohugo/hugo/v0.109.0 (e4d54d0)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/getting-started/quick-start.md" class="
@@ -1785,49 +1857,56 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
         
 
 
-  <section class="pb3 w-100">
-    <div class="center mw9"> 
+
+
+
+  <section
+    class="pb3 w-100">
+    <div class="center mw9">
       <h3 class="b f3 mv0 light-gray">Hugo Sponsors</h3>
       <div class="flex-ns flex-wrap center justify-between pt3">
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100">
-              
-                
-                   <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/linode-logo_standard_light_medium.png" alt="Logo for Linode" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            >
+            
+            
+              <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/linode-logo_standard_light_medium.png"
+                  alt="Logo for Linode"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100">
-              
-                
-                   <a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/esolia-logo.svg" alt="Logo for eSolia" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            >
+            
+            
+              <a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/esolia-logo.svg"
+                  alt="Logo for eSolia"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100" style="background-color: #5A2FA1;">
-              
-                
-                   <a href="https://brave.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/brave-logo.svg" alt="Logo for Brave" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            style="background-color: #131A3E;">
+            
+            
+              <a href="https://buttercms.com/hugo-cms/?utm_campaign=sponsorship&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/butter-light.svg"
+                  alt="Logo for ButterCMS"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
       </div>
     </div>
@@ -1839,13 +1918,13 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     </div>
 
     <div class="f7 gray mb5 mb0-ns ph3 w-100"> 
-      <p class="dib mr4">The Hugo logos are copyright © Steve Francia 2013–2022.</p>
+      <p class="dib mr4">The Hugo logos are copyright © Steve Francia 2013–2023.</p>
       <p class="dib">The Hugo Gopher is based on an original work by Renée French.</p>
     </div>
 
     <img src="/images/gopher-side_color.svg" alt="" class="absolute-l bottom-0 dn db-l h4 right-0 z-999"/>
 
-    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100"><div  class="globalmenu mobilemenu pb1 dn">
+    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100 z-2"><div  class="globalmenu mobilemenu pb1 dn">
     
 
 <ul class="list hidden dib ph0 scrolling-touch tc">
@@ -1897,6 +1976,12 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/about/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
           About Hugo
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/installation/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Installation
         </a>
     </li>
   
@@ -1995,9 +2080,6 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
   
 
   
-
-  
-
 
 </body>
 

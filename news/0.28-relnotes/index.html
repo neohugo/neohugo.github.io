@@ -13,7 +13,7 @@
   <title>Hugo 0.28: High-speed Syntax Highlighting! | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.23-DEV" />
+  <meta name="generator" content="Hugo 0.110.0-DEV">
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -26,7 +26,7 @@
   
   
   
-  <link rel="stylesheet" href="/output/css/app.min.b368142944d203fdc1d3dec8ab085c0c0e75aaf9171853110f03e91c1c2616f4.css" integrity="sha256-s2gUKUTSA/3B097IqwhcDA51qvkXGFMRDwPpHBwmFvQ=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/output/css/app.min.b03318b1df01f94314ccbf9f6c0e79c24f1db2c5fefa37614fc49ace24642f7f.css" integrity="sha256-sDMYsd8B&#43;UMUzL&#43;fbA55wk8dssX&#43;&#43;jdhT8SaziRkL38=" crossorigin="anonymous">
   
   
   
@@ -42,7 +42,7 @@
 
 
   
-  <script type="text/javascript" src="/output/js/app.175b405753a9c0ce86ab35944e9c4cc1a758a6873209cf5106600f6b2f5a59b6.js" integrity="sha256-F1tAV1OpwM6GqzWUTpxMwadYpocyCc9RBmAPay9aWbY=" crossorigin="anonymous" defer></script>
+  <script type="text/javascript" src="/output/js/app.5a802739f9b2407f0d3a1f84a20731b6705a5a4df051c35686f22bd3aea90731.js" integrity="sha256-WoAnOfmyQH8NOh&#43;EogcxtnBaWk3wUcNWhvIr066pBzE=" crossorigin="anonymous" defer></script>
   
       
  
@@ -62,10 +62,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/news/0.28-relnotes/" /><meta property="og:image" content="https://gohugo.io/images/blog/hugo-28-poster.png" /><meta property="article:section" content="news" />
 <meta property="article:published_time" content="2017-09-25T00:00:00+02:00" />
-<meta property="article:modified_time" content="2022-06-19T23:24:54+07:00" />
+<meta property="article:modified_time" content="2023-04-02T12:35:49-07:00" />
 <meta itemprop="name" content="Hugo 0.28: High-speed Syntax Highlighting!">
 <meta itemprop="description" content="Chroma is the new default syntax highlighter in Hugo."><meta itemprop="datePublished" content="2017-09-25T00:00:00+02:00" />
-<meta itemprop="dateModified" content="2022-06-19T23:24:54+07:00" />
+<meta itemprop="dateModified" content="2023-04-02T12:35:49-07:00" />
 <meta itemprop="wordCount" content="355"><meta itemprop="image" content="https://gohugo.io/images/blog/hugo-28-poster.png">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/images/blog/hugo-28-poster.png"/>
@@ -265,9 +265,6 @@
         <pre><code>Hugo `0.28` brings **blistering fast and native syntax highlighting** from [Chroma](https://github.com/alecthomas/chroma) ([fb33d828](https://github.com/gohugoio/hugo/commit/fb33d8286d78a78a74deb44355b621852a1c4033) [@bep](https://github.com/bep) [#3888](https://github.com/gohugoio/hugo/issues/3888)). A big thank you to [Alec Thomas](https://github.com/alecthomas) for taking on this massive task of porting the popular python highlighter Pygments to Go.
 </code></pre>
 <p>Hugo has been caching the highlighter output to disk, so for repeated builds it has been fine, but this little snippet, showing a build of the <a href="https://gohugo.io/">gohugo.io</a> site without cache and with both Pygments and Chroma, should illustrate the improvement:</p>
-
-<script type="text/javascript" src="https://asciinema.org/a/Lc5iwTVny2kuUC8lqvNnL6oDU.js" id="asciicast-Lc5iwTVny2kuUC8lqvNnL6oDU" data-rows="10" async></script>
-
 <p>See the <a href="https://gohugo.io/content-management/syntax-highlighting/">Updated Documentation</a> for more information about how this works.</p>
 <p>Worth mentioning is also the <code>liveReloadPort</code>  flag on <code>hugo server</code>, which makes it possible to do &ldquo;live reloads&rdquo; behind a HTTPS proxy, which makes for very cool remote customer demos.</p>
 <p>One example would be a Hugo server running behind a <a href="https://ngrok.com">ngrok</a> tunnel:</p>
@@ -298,7 +295,7 @@ which has received <strong>9 contributions by 7 contributors</strong>. A special
 <h3 id="other">Other <a class="header-link" href="#other"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <ul>
 <li>Use Chroma as new default syntax highlighter <a href="https://github.com/gohugoio/hugo/commit/fb33d8286d78a78a74deb44355b621852a1c4033">fb33d828</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/3888">#3888</a></li>
-<li>Trim newlines in the hightlight shortcode <a href="https://github.com/gohugoio/hugo/commit/0d29a0f7819e8d73149701052c29f090cd6db42b">0d29a0f7</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/3898">#3898</a></li>
+<li>Trim newlines in the highlight shortcode <a href="https://github.com/gohugoio/hugo/commit/0d29a0f7819e8d73149701052c29f090cd6db42b">0d29a0f7</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/3898">#3898</a></li>
 <li>Update <code>goorgeous</code> <a href="https://github.com/gohugoio/hugo/commit/b8fabce217fcb52e3f273491bef95c7977058732">b8fabce2</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/3899">#3899</a></li>
 <li>Add <code>liveReloadPort</code> flag to server <a href="https://github.com/gohugoio/hugo/commit/b180477631555824a06293053e2b6e63c5f07361">b1804776</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/3882">#3882</a></li>
 <li>Add <code>noHTTPCache</code> flag to hugo server (default on) <a href="https://github.com/gohugoio/hugo/commit/0b34af216154367af7f53ce93d44e6b3d58c3f34">0b34af21</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/3897">#3897</a></li>
@@ -310,7 +307,7 @@ which has received <strong>9 contributions by 7 contributors</strong>. A special
     
 
       <div class="gray f6 mv6">
-        Last Update: June 19, 2022 <br>
+        Last Update: April 2, 2023 <br>
         <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/news/0.28-relnotes/index.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 ">Improve this page</a>
@@ -350,49 +347,56 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
         
 
 
-  <section class="pb3 w-100">
-    <div class="center mw9"> 
+
+
+
+  <section
+    class="pb3 w-100">
+    <div class="center mw9">
       <h3 class="b f3 mv0 light-gray">Hugo Sponsors</h3>
       <div class="flex-ns flex-wrap center justify-between pt3">
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100">
-              
-                
-                   <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/linode-logo_standard_light_medium.png" alt="Logo for Linode" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            >
+            
+            
+              <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/linode-logo_standard_light_medium.png"
+                  alt="Logo for Linode"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100">
-              
-                
-                   <a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/esolia-logo.svg" alt="Logo for eSolia" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            >
+            
+            
+              <a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/esolia-logo.svg"
+                  alt="Logo for eSolia"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100" style="background-color: #5A2FA1;">
-              
-                
-                   <a href="https://brave.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/brave-logo.svg" alt="Logo for Brave" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            style="background-color: #131A3E;">
+            
+            
+              <a href="https://buttercms.com/hugo-cms/?utm_campaign=sponsorship&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/butter-light.svg"
+                  alt="Logo for ButterCMS"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
       </div>
     </div>
@@ -404,13 +408,13 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     </div>
 
     <div class="f7 gray mb5 mb0-ns ph3 w-100"> 
-      <p class="dib mr4">The Hugo logos are copyright © Steve Francia 2013–2022.</p>
+      <p class="dib mr4">The Hugo logos are copyright © Steve Francia 2013–2023.</p>
       <p class="dib">The Hugo Gopher is based on an original work by Renée French.</p>
     </div>
 
     <img src="/images/gopher-side_color.svg" alt="" class="absolute-l bottom-0 dn db-l h4 right-0 z-999"/>
 
-    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100"><div  class="globalmenu mobilemenu pb1 dn">
+    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100 z-2"><div  class="globalmenu mobilemenu pb1 dn">
     
 
 <ul class="list hidden dib ph0 scrolling-touch tc">
@@ -462,6 +466,12 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/about/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
           About Hugo
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/installation/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Installation
         </a>
     </li>
   
@@ -560,9 +570,6 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
   
 
   
-
-  
-
 
 </body>
 

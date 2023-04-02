@@ -13,7 +13,7 @@
   <title>Build Performance | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.23-DEV" />
+  <meta name="generator" content="Hugo 0.110.0-DEV">
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -26,7 +26,7 @@
   
   
   
-  <link rel="stylesheet" href="/output/css/app.min.b368142944d203fdc1d3dec8ab085c0c0e75aaf9171853110f03e91c1c2616f4.css" integrity="sha256-s2gUKUTSA/3B097IqwhcDA51qvkXGFMRDwPpHBwmFvQ=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/output/css/app.min.b03318b1df01f94314ccbf9f6c0e79c24f1db2c5fefa37614fc49ace24642f7f.css" integrity="sha256-sDMYsd8B&#43;UMUzL&#43;fbA55wk8dssX&#43;&#43;jdhT8SaziRkL38=" crossorigin="anonymous">
   
   
   
@@ -42,7 +42,7 @@
 
 
   
-  <script type="text/javascript" src="/output/js/app.175b405753a9c0ce86ab35944e9c4cc1a758a6873209cf5106600f6b2f5a59b6.js" integrity="sha256-F1tAV1OpwM6GqzWUTpxMwadYpocyCc9RBmAPay9aWbY=" crossorigin="anonymous" defer></script>
+  <script type="text/javascript" src="/output/js/app.5a802739f9b2407f0d3a1f84a20731b6705a5a4df051c35686f22bd3aea90731.js" integrity="sha256-WoAnOfmyQH8NOh&#43;EogcxtnBaWk3wUcNWhvIr066pBzE=" crossorigin="anonymous" defer></script>
   
       
  
@@ -62,11 +62,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/troubleshooting/build-performance/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_3078477305553436816.png"/><meta property="article:section" content="troubleshooting" />
 <meta property="article:published_time" content="2017-03-12T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-06-19T23:24:54+07:00" />
+<meta property="article:modified_time" content="2023-04-02T12:35:49-07:00" />
 <meta itemprop="name" content="Build Performance">
 <meta itemprop="description" content="An overview of features used for diagnosing and improving performance issues in site builds."><meta itemprop="datePublished" content="2017-03-12T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-06-19T23:24:54+07:00" />
-<meta itemprop="wordCount" content="360"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="dateModified" content="2023-04-02T12:35:49-07:00" />
+<meta itemprop="wordCount" content="352"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_3078477305553436816.png"/>
 <meta name="twitter:title" content="Build Performance"/>
@@ -252,20 +252,9 @@
 
 <div class="prose" id="prose">
 
-
-<aside class="admonition note">
-	<div class="note-icon">
-		
-	</div>
-	
-	
-	<div class="admonition-content"><p>The example site used below is from <a href="https://github.com/gohugoio/hugo/tree/master/examples/blog">https://github.com/gohugoio/hugo/tree/master/examples/blog</a></p>
-</div>
-</aside>
-
 <h2 id="template-metrics">Template Metrics <a class="header-link" href="#template-metrics"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Hugo is a very fast static site generator, but it is possible to write
-inefficient templates.  Hugo&rsquo;s <em>template metrics</em> feature is extremely helpful
+inefficient templates. Hugo&rsquo;s <em>template metrics</em> feature is extremely helpful
 in pinpointing which templates are executed most often and how long those
 executions take <strong>in terms of CPU time</strong>.</p>
 <table>
@@ -298,43 +287,43 @@ executions take <strong>in terms of CPU time</strong>.</p>
 </tr>
 </tbody>
 </table>
-<pre tabindex="0"><code>▶ hugo --templateMetrics
-Started building sites ...
-
-Built site for language en:
-0 draft content
-0 future content
-0 expired content
-2 regular pages created
-22 other pages created
-0 non-page files copied
-0 paginator pages created
-4 tags created
-3 categories created
-total in 18 ms
-
-Template Metrics:
-
-     cumulative       average       maximum
-       duration      duration      duration  count  template
-     ----------      --------      --------  -----  --------
-     6.419663ms     583.605µs     994.374µs     11  _internal/_default/rss.xml
-     4.718511ms    1.572837ms    3.880742ms      3  indexes/category.html
-     4.642666ms    2.321333ms    3.282842ms      2  posts/single.html
-     4.364445ms     396.767µs    2.451372ms     11  partials/header.html
-     2.346069ms     586.517µs     903.343µs      4  indexes/tag.html
-     2.330919ms     211.901µs    2.281342ms     11  partials/header.includes.html
-     1.238976ms     103.248µs     446.084µs     12  posts/li.html
-       972.16µs      972.16µs      972.16µs      1  _internal/_default/sitemap.xml
-      953.597µs     953.597µs     953.597µs      1  index.html
-      822.263µs     822.263µs     822.263µs      1  indexes/post.html
-      567.498µs       51.59µs     112.205µs     11  partials/navbar.html
-       348.22µs      31.656µs      88.249µs     11  partials/meta.html
-      346.782µs     173.391µs     276.176µs      2  posts/summary.html
-      235.184µs       21.38µs     124.383µs     11  partials/footer.copyright.html
-      132.003µs          12µs     117.999µs     11  partials/menu.html
-       72.547µs       6.595µs      63.764µs     11  partials/footer.html
-</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">▶ hugo --templateMetrics
+</span></span><span class="line"><span class="cl">Started building sites ...
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Built site for language en:
+</span></span><span class="line"><span class="cl">0 draft content
+</span></span><span class="line"><span class="cl">0 future content
+</span></span><span class="line"><span class="cl">0 expired content
+</span></span><span class="line"><span class="cl">2 regular pages created
+</span></span><span class="line"><span class="cl">22 other pages created
+</span></span><span class="line"><span class="cl">0 non-page files copied
+</span></span><span class="line"><span class="cl">0 paginator pages created
+</span></span><span class="line"><span class="cl">4 tags created
+</span></span><span class="line"><span class="cl">3 categories created
+</span></span><span class="line"><span class="cl">total in 18 ms
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Template Metrics:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">     cumulative       average       maximum
+</span></span><span class="line"><span class="cl">       duration      duration      duration  count  template
+</span></span><span class="line"><span class="cl">     ----------      --------      --------  -----  --------
+</span></span><span class="line"><span class="cl">     6.419663ms     583.605µs     994.374µs     11  _internal/_default/rss.xml
+</span></span><span class="line"><span class="cl">     4.718511ms    1.572837ms    3.880742ms      3  indexes/category.html
+</span></span><span class="line"><span class="cl">     4.642666ms    2.321333ms    3.282842ms      2  posts/single.html
+</span></span><span class="line"><span class="cl">     4.364445ms     396.767µs    2.451372ms     11  partials/header.html
+</span></span><span class="line"><span class="cl">     2.346069ms     586.517µs     903.343µs      4  indexes/tag.html
+</span></span><span class="line"><span class="cl">     2.330919ms     211.901µs    2.281342ms     11  partials/header.includes.html
+</span></span><span class="line"><span class="cl">     1.238976ms     103.248µs     446.084µs     12  posts/li.html
+</span></span><span class="line"><span class="cl">       972.16µs      972.16µs      972.16µs      1  _internal/_default/sitemap.xml
+</span></span><span class="line"><span class="cl">      953.597µs     953.597µs     953.597µs      1  index.html
+</span></span><span class="line"><span class="cl">      822.263µs     822.263µs     822.263µs      1  indexes/post.html
+</span></span><span class="line"><span class="cl">      567.498µs       51.59µs     112.205µs     11  partials/navbar.html
+</span></span><span class="line"><span class="cl">       348.22µs      31.656µs      88.249µs     11  partials/meta.html
+</span></span><span class="line"><span class="cl">      346.782µs     173.391µs     276.176µs      2  posts/summary.html
+</span></span><span class="line"><span class="cl">      235.184µs       21.38µs     124.383µs     11  partials/footer.copyright.html
+</span></span><span class="line"><span class="cl">      132.003µs          12µs     117.999µs     11  partials/menu.html
+</span></span><span class="line"><span class="cl">       72.547µs       6.595µs      63.764µs     11  partials/footer.html
+</span></span></code></pre></div>
 <aside class="admonition note">
 	<div class="note-icon">
 		
@@ -350,9 +339,9 @@ values is usually greater than the actual time it takes to build a site.</p>
 
 <h2 id="cached-partials">Cached Partials <a class="header-link" href="#cached-partials"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Some <code>partial</code> templates such as sidebars or menus are executed many times
-during a site build.  Depending on the content within the <code>partial</code> template and
+during a site build. Depending on the content within the <code>partial</code> template and
 the desired output, the template may benefit from caching to reduce the number
-of executions.  The <a href="https://gohugo.io/functions/partialcached/"><code>partialCached</code></a> template function provides
+of executions. The <a href="https://gohugo.io/functions/partialcached/"><code>partialCached</code></a> template function provides
 caching capabilities for <code>partial</code> templates.</p>
 
 <aside class="admonition tip">
@@ -362,7 +351,7 @@ caching capabilities for <code>partial</code> templates.</p>
 	
 	
 	<div class="admonition-content"><p>Note that you can create cached variants of each <code>partial</code> by passing additional
-parameters to <code>partialCached</code> beyond the initial context.  See the
+parameters to <code>partialCached</code> beyond the initial context. See the
 <code>partialCached</code> documentation for more details.</p>
 </div>
 </aside>
@@ -433,6 +422,37 @@ parameters to <code>partialCached</code> beyond the initial context.  See the
       </li>
       
       <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".installation">Installation</a>
+        <ul class="installation desktopmenu animated fadeIn list pl0 bg-light-gray dn">
+          <li class="f6 fw4">
+            <a href="/installation/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Installation overview
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/macos/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              macOS
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/linux/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Linux
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/windows/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Windows
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/bsd/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              BSD
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".getting-started">Getting Started</a>
         <ul class="getting-started desktopmenu animated fadeIn list pl0 bg-light-gray dn">
           <li class="f6 fw4">
@@ -446,13 +466,8 @@ parameters to <code>partialCached</code> beyond the initial context.  See the
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/getting-started/installing/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Install Hugo
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/getting-started/usage/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Basic Usage
+              Basic usage
             </a>
           </li>
           <li class="f6 fw4">
@@ -744,11 +759,6 @@ parameters to <code>partialCached</code> beyond the initial context.  See the
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/templates/alternatives/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Alternative Templating
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/templates/template-debugging/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Template Debugging
             </a>
@@ -880,6 +890,11 @@ parameters to <code>partialCached</code> beyond the initial context.  See the
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/crypto.fnv32a/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              crypto.FNV32a
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/default/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               default
             </a>
@@ -892,6 +907,11 @@ parameters to <code>partialCached</code> beyond the initial context.  See the
           <li class="f6 fw4">
             <a href="/functions/dict/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               dict
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/duration/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              duration
             </a>
           </li>
           <li class="f6 fw4">
@@ -1300,8 +1320,23 @@ parameters to <code>partialCached</code> beyond the initial context.  See the
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/strings.contains/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.Contains
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/strings.containsany/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.ContainsAny
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/strings.count/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               strings.Count
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/strings.firstupper/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.FirstUpper
             </a>
           </li>
           <li class="f6 fw4">
@@ -1365,6 +1400,11 @@ parameters to <code>partialCached</code> beyond the initial context.  See the
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/time.parseduration/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              time.ParseDuration
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/title/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               title
             </a>
@@ -1412,6 +1452,11 @@ parameters to <code>partialCached</code> beyond the initial context.  See the
           <li class="f6 fw4">
             <a href="/functions/urlize/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               urlize
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/urlquery/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              urlquery
             </a>
           </li>
           <li class="f6 fw4">
@@ -1503,7 +1548,7 @@ parameters to <code>partialCached</code> beyond the initial context.  See the
           </li>
           <li class="f6 fw4">
             <a href="/hugo-pipes/scss-sass/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              SASS / SCSS
+              Sass / SCSS
             </a>
           </li>
           <li class="f6 fw4">
@@ -1634,8 +1679,18 @@ parameters to <code>partialCached</code> beyond the initial context.  See the
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-21yunbox/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on 21YunBox
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/hosting-and-deployment/hosting-on-aws-amplify/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Host on AWS Amplify
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-azure/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on Azure Static Web Apps
             </a>
           </li>
           <li class="f6 fw4">
@@ -1665,7 +1720,7 @@ parameters to <code>partialCached</code> beyond the initial context.  See the
           </li>
           <li class="f6 fw4">
             <a href="/hosting-and-deployment/hosting-on-keycdn/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hosting on KeyCDN
+              Host on KeyCDN
             </a>
           </li>
           <li class="f6 fw4">
@@ -1681,6 +1736,11 @@ parameters to <code>partialCached</code> beyond the initial context.  See the
           <li class="f6 fw4">
             <a href="/hosting-and-deployment/deployment-with-rclone/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Deployment with Rclone
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-azure-static-web-apps/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Hosting on Azure Static Web Apps
             </a>
           </li>
         </ul>
@@ -1726,7 +1786,7 @@ parameters to <code>partialCached</code> beyond the initial context.  See the
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: June 19, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/22d493aa56a2750c0cf5c66646ac6972372fabaa">Merge pull request #111 from blackb1rd/hugo/v0.101.0 (22d493a)</a>
+  Last updated: April 2, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/e4d54d04c1b3f8409ba9ede9679a504778ecd83f">Merge pull request #113 from neohugo/hugo/v0.109.0 (e4d54d0)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/troubleshooting/build-performance.md" class="
@@ -1769,49 +1829,56 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
         
 
 
-  <section class="pb3 w-100">
-    <div class="center mw9"> 
+
+
+
+  <section
+    class="pb3 w-100">
+    <div class="center mw9">
       <h3 class="b f3 mv0 light-gray">Hugo Sponsors</h3>
       <div class="flex-ns flex-wrap center justify-between pt3">
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100">
-              
-                
-                   <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/linode-logo_standard_light_medium.png" alt="Logo for Linode" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            >
+            
+            
+              <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/linode-logo_standard_light_medium.png"
+                  alt="Logo for Linode"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100">
-              
-                
-                   <a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/esolia-logo.svg" alt="Logo for eSolia" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            >
+            
+            
+              <a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/esolia-logo.svg"
+                  alt="Logo for eSolia"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100" style="background-color: #5A2FA1;">
-              
-                
-                   <a href="https://brave.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/brave-logo.svg" alt="Logo for Brave" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            style="background-color: #131A3E;">
+            
+            
+              <a href="https://buttercms.com/hugo-cms/?utm_campaign=sponsorship&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/butter-light.svg"
+                  alt="Logo for ButterCMS"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
       </div>
     </div>
@@ -1823,13 +1890,13 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     </div>
 
     <div class="f7 gray mb5 mb0-ns ph3 w-100"> 
-      <p class="dib mr4">The Hugo logos are copyright © Steve Francia 2013–2022.</p>
+      <p class="dib mr4">The Hugo logos are copyright © Steve Francia 2013–2023.</p>
       <p class="dib">The Hugo Gopher is based on an original work by Renée French.</p>
     </div>
 
     <img src="/images/gopher-side_color.svg" alt="" class="absolute-l bottom-0 dn db-l h4 right-0 z-999"/>
 
-    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100"><div  class="globalmenu mobilemenu pb1 dn">
+    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100 z-2"><div  class="globalmenu mobilemenu pb1 dn">
     
 
 <ul class="list hidden dib ph0 scrolling-touch tc">
@@ -1881,6 +1948,12 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/about/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
           About Hugo
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/installation/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Installation
         </a>
     </li>
   
@@ -1979,9 +2052,6 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
   
 
   
-
-  
-
 
 </body>
 

@@ -44,7 +44,7 @@ Get the Site object from a partial All the methods below, e.g. .Site.RegularPage
       <guid>https://gohugo.io/variables/page/</guid>
       <description>The following is a list of page-level variables. Many of these will be defined in the front matter, derived from file location, or extracted from the content itself.
 See .Scratch for page-scoped, writable variables.
-Page Variables .AlternativeOutputFormats contains all alternative formats for a given page; this variable is especially useful link rel list in your site&amp;rsquo;s &amp;lt;head&amp;gt;. (See Output Formats.) .Aliases aliases of this page .BundleType the bundle type: leaf, branch, or an empty string if the page is not a bundle.</description>
+Page Variables .AlternativeOutputFormats contains all alternative formats for a given page; this variable is especially useful link rel list in your site&amp;rsquo;s &amp;lt;head&amp;gt;. (See Output Formats.) .Aliases aliases of this page .Ancestors get the ancestors of each page, simplify breadcrumb navigation implementation complexity .</description>
     </item>
     
     <item>
@@ -61,12 +61,12 @@ Page Variables .AlternativeOutputFormats contains all alternative formats for a 
     <item>
       <title>Taxonomy Variables</title>
       <link>https://gohugo.io/variables/taxonomy/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/variables/taxonomy/</guid>
-      <description>Taxonomy Terms Page Variables Taxonomy terms pages are of the type Page and have the following additional variables.
-For example, the following fields would be available in layouts/_defaults/terms.html, depending on how you organize your taxonomy templates:
-.Data.Singular The singular name of the taxonomy (e.g., tags =&amp;gt; tag) .Data.Plural The plural name of the taxonomy (e.g., tags =&amp;gt; tags) .Data.Pages The list of pages in the taxonomy .Data.Terms The taxonomy itself .</description>
+      <description>Taxonomy templates Pages rendered by taxonomy templates have .Kind set to taxonomy and .Type set to the taxonomy name.
+In taxonomy templates you may access .Site, .Page. .Section, and .File variables, as well as the following taxonomy variables:
+.Data.Singular The singular name of the taxonomy (e.g., tags =&amp;gt; tag). .Data.Plural The plural name of the taxonomy (e.g., tags =&amp;gt; tags). .Data.Pages The collection of term pages related to this taxonomy. Aliased by .</description>
     </item>
     
     <item>
@@ -77,7 +77,7 @@ For example, the following fields would be available in layouts/_defaults/terms.
       <guid>https://gohugo.io/variables/files/</guid>
       <description>For information on creating shortcodes and templates that tap into Hugo&amp;rsquo;s file-related feature set, see Local File Templates.
 The .File object contains the following fields:
-.File.Path the original relative path of the page, relative to the content dir (e.g., posts/foo.en.md) .File.LogicalName the name of the content file that represents a page (e.g., foo.en.md) .File.TranslationBaseName the filename without extension or optional language identifier (e.g., foo) .File.ContentBaseName is a either TranslationBaseName or name of containing folder if file is a leaf bundle.</description>
+.File.Path the original relative path of the page, relative to the content dir (e.g., posts/foo.en.md) .File.LogicalName the name of the content file that represents a page (e.g., foo.en.md) .File.TranslationBaseName the filename without extension or optional language identifier (e.g., foo) .File.ContentBaseName is either a TranslationBaseName or name of containing folder if file is a leaf bundle.</description>
     </item>
     
     <item>

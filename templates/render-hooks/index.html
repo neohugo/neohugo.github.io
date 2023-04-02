@@ -13,7 +13,7 @@
   <title>Markdown Render Hooks | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.23-DEV" />
+  <meta name="generator" content="Hugo 0.110.0-DEV">
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -26,7 +26,7 @@
   
   
   
-  <link rel="stylesheet" href="/output/css/app.min.b368142944d203fdc1d3dec8ab085c0c0e75aaf9171853110f03e91c1c2616f4.css" integrity="sha256-s2gUKUTSA/3B097IqwhcDA51qvkXGFMRDwPpHBwmFvQ=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/output/css/app.min.b03318b1df01f94314ccbf9f6c0e79c24f1db2c5fefa37614fc49ace24642f7f.css" integrity="sha256-sDMYsd8B&#43;UMUzL&#43;fbA55wk8dssX&#43;&#43;jdhT8SaziRkL38=" crossorigin="anonymous">
   
   
   
@@ -42,7 +42,7 @@
 
 
   
-  <script type="text/javascript" src="/output/js/app.175b405753a9c0ce86ab35944e9c4cc1a758a6873209cf5106600f6b2f5a59b6.js" integrity="sha256-F1tAV1OpwM6GqzWUTpxMwadYpocyCc9RBmAPay9aWbY=" crossorigin="anonymous" defer></script>
+  <script type="text/javascript" src="/output/js/app.5a802739f9b2407f0d3a1f84a20731b6705a5a4df051c35686f22bd3aea90731.js" integrity="sha256-WoAnOfmyQH8NOh&#43;EogcxtnBaWk3wUcNWhvIr066pBzE=" crossorigin="anonymous" defer></script>
   
       
  
@@ -62,11 +62,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/templates/render-hooks/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_4068299175218473576.png"/><meta property="article:section" content="templates" />
 <meta property="article:published_time" content="2017-03-11T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-06-19T23:24:54+07:00" />
+<meta property="article:modified_time" content="2023-04-02T12:35:49-07:00" />
 <meta itemprop="name" content="Markdown Render Hooks">
 <meta itemprop="description" content="Render Hooks allow custom templates to override markdown rendering functionality."><meta itemprop="datePublished" content="2017-03-11T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-06-19T23:24:54+07:00" />
-<meta itemprop="wordCount" content="756"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="dateModified" content="2023-04-02T12:35:49-07:00" />
+<meta itemprop="wordCount" content="667"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_4068299175218473576.png"/>
 <meta name="twitter:title" content="Markdown Render Hooks"/>
@@ -252,32 +252,14 @@
 
 <div class="prose" id="prose">
 
-<p>
-
-
-<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
-    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.62.0" target="_blank">New in v0.62.0</a>
-</button>
- Note that this is only supported with the <a href="/getting-started/configuration-markup#goldmark">Goldmark</a> renderer.</p>
+<p>Note that this is only supported with the <a href="/getting-started/configuration-markup#goldmark">Goldmark</a> renderer.</p>
 <p>You can override certain parts of the default Markdown rendering to HTML by creating templates with base names <code>render-{kind}</code> in <code>layouts/_default/_markup</code>.</p>
-<p>You can also create type/section specific hooks in <code>layouts/[type/section]/_markup</code>, e.g.: <code>layouts/blog/_markup</code>.
-
-
-<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
-    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.71.0" target="_blank">New in v0.71.0</a>
-</button>
-</p>
+<p>You can also create type/section specific hooks in <code>layouts/[type/section]/_markup</code>, e.g.: <code>layouts/blog/_markup</code>.</p>
 <p>The hook kinds currently supported are:</p>
 <ul>
 <li><code>image</code></li>
 <li><code>link</code></li>
-<li><code>heading</code> 
-
-
-<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
-    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.71.0" target="_blank">New in v0.71.0</a>
-</button>
-</li>
+<li><code>heading</code></li>
 <li><code>codeblock</code>
 
 
@@ -287,167 +269,16 @@
 </li>
 </ul>
 <p>You can define <a href="/templates/output-formats">Output-Format-</a> and <a href="/content-management/multilingual/">language-</a>specific templates if needed. Your <code>layouts</code> folder may look like this:</p>
-
-
-
-<div class="goat svg-container black f7">
-  
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      font-family="Menlo,Lucida Console,monospace"
-      
-        viewBox="0 0 312 137"
-      >
-      <g transform='translate(8,16)'>
-<text text-anchor='middle' x='0' y='4' fill='currentColor' style='font-size:1em'>l</text>
-<text text-anchor='middle' x='0' y='20' fill='currentColor' style='font-size:1em'>└</text>
-<text text-anchor='middle' x='8' y='4' fill='currentColor' style='font-size:1em'>a</text>
-<text text-anchor='middle' x='8' y='20' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='16' y='4' fill='currentColor' style='font-size:1em'>y</text>
-<text text-anchor='middle' x='16' y='20' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='24' y='4' fill='currentColor' style='font-size:1em'>o</text>
-<text text-anchor='middle' x='32' y='4' fill='currentColor' style='font-size:1em'>u</text>
-<text text-anchor='middle' x='32' y='20' fill='currentColor' style='font-size:1em'>_</text>
-<text text-anchor='middle' x='32' y='36' fill='currentColor' style='font-size:1em'>└</text>
-<text text-anchor='middle' x='40' y='4' fill='currentColor' style='font-size:1em'>t</text>
-<text text-anchor='middle' x='40' y='20' fill='currentColor' style='font-size:1em'>d</text>
-<text text-anchor='middle' x='40' y='36' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='48' y='4' fill='currentColor' style='font-size:1em'>s</text>
-<text text-anchor='middle' x='48' y='20' fill='currentColor' style='font-size:1em'>e</text>
-<text text-anchor='middle' x='48' y='36' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='56' y='20' fill='currentColor' style='font-size:1em'>f</text>
-<text text-anchor='middle' x='64' y='20' fill='currentColor' style='font-size:1em'>a</text>
-<text text-anchor='middle' x='64' y='36' fill='currentColor' style='font-size:1em'>_</text>
-<text text-anchor='middle' x='64' y='52' fill='currentColor' style='font-size:1em'>├</text>
-<text text-anchor='middle' x='64' y='68' fill='currentColor' style='font-size:1em'>├</text>
-<text text-anchor='middle' x='64' y='84' fill='currentColor' style='font-size:1em'>└</text>
-<text text-anchor='middle' x='64' y='100' fill='currentColor' style='font-size:1em'>└</text>
-<text text-anchor='middle' x='64' y='116' fill='currentColor' style='font-size:1em'>└</text>
-<text text-anchor='middle' x='72' y='20' fill='currentColor' style='font-size:1em'>u</text>
-<text text-anchor='middle' x='72' y='36' fill='currentColor' style='font-size:1em'>m</text>
-<text text-anchor='middle' x='72' y='52' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='72' y='68' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='72' y='84' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='72' y='100' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='72' y='116' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='80' y='20' fill='currentColor' style='font-size:1em'>l</text>
-<text text-anchor='middle' x='80' y='36' fill='currentColor' style='font-size:1em'>a</text>
-<text text-anchor='middle' x='80' y='52' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='80' y='68' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='80' y='84' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='80' y='100' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='80' y='116' fill='currentColor' style='font-size:1em'>─</text>
-<text text-anchor='middle' x='88' y='20' fill='currentColor' style='font-size:1em'>t</text>
-<text text-anchor='middle' x='88' y='36' fill='currentColor' style='font-size:1em'>r</text>
-<text text-anchor='middle' x='96' y='36' fill='currentColor' style='font-size:1em'>k</text>
-<text text-anchor='middle' x='96' y='52' fill='currentColor' style='font-size:1em'>r</text>
-<text text-anchor='middle' x='96' y='68' fill='currentColor' style='font-size:1em'>r</text>
-<text text-anchor='middle' x='96' y='84' fill='currentColor' style='font-size:1em'>r</text>
-<text text-anchor='middle' x='96' y='100' fill='currentColor' style='font-size:1em'>r</text>
-<text text-anchor='middle' x='96' y='116' fill='currentColor' style='font-size:1em'>r</text>
-<text text-anchor='middle' x='104' y='36' fill='currentColor' style='font-size:1em'>u</text>
-<text text-anchor='middle' x='104' y='52' fill='currentColor' style='font-size:1em'>e</text>
-<text text-anchor='middle' x='104' y='68' fill='currentColor' style='font-size:1em'>e</text>
-<text text-anchor='middle' x='104' y='84' fill='currentColor' style='font-size:1em'>e</text>
-<text text-anchor='middle' x='104' y='100' fill='currentColor' style='font-size:1em'>e</text>
-<text text-anchor='middle' x='104' y='116' fill='currentColor' style='font-size:1em'>e</text>
-<text text-anchor='middle' x='112' y='36' fill='currentColor' style='font-size:1em'>p</text>
-<text text-anchor='middle' x='112' y='52' fill='currentColor' style='font-size:1em'>n</text>
-<text text-anchor='middle' x='112' y='68' fill='currentColor' style='font-size:1em'>n</text>
-<text text-anchor='middle' x='112' y='84' fill='currentColor' style='font-size:1em'>n</text>
-<text text-anchor='middle' x='112' y='100' fill='currentColor' style='font-size:1em'>n</text>
-<text text-anchor='middle' x='112' y='116' fill='currentColor' style='font-size:1em'>n</text>
-<text text-anchor='middle' x='120' y='52' fill='currentColor' style='font-size:1em'>d</text>
-<text text-anchor='middle' x='120' y='68' fill='currentColor' style='font-size:1em'>d</text>
-<text text-anchor='middle' x='120' y='84' fill='currentColor' style='font-size:1em'>d</text>
-<text text-anchor='middle' x='120' y='100' fill='currentColor' style='font-size:1em'>d</text>
-<text text-anchor='middle' x='120' y='116' fill='currentColor' style='font-size:1em'>d</text>
-<text text-anchor='middle' x='128' y='52' fill='currentColor' style='font-size:1em'>e</text>
-<text text-anchor='middle' x='128' y='68' fill='currentColor' style='font-size:1em'>e</text>
-<text text-anchor='middle' x='128' y='84' fill='currentColor' style='font-size:1em'>e</text>
-<text text-anchor='middle' x='128' y='100' fill='currentColor' style='font-size:1em'>e</text>
-<text text-anchor='middle' x='128' y='116' fill='currentColor' style='font-size:1em'>e</text>
-<text text-anchor='middle' x='136' y='52' fill='currentColor' style='font-size:1em'>r</text>
-<text text-anchor='middle' x='136' y='68' fill='currentColor' style='font-size:1em'>r</text>
-<text text-anchor='middle' x='136' y='84' fill='currentColor' style='font-size:1em'>r</text>
-<text text-anchor='middle' x='136' y='100' fill='currentColor' style='font-size:1em'>r</text>
-<text text-anchor='middle' x='136' y='116' fill='currentColor' style='font-size:1em'>r</text>
-<text text-anchor='middle' x='144' y='52' fill='currentColor' style='font-size:1em'>-</text>
-<text text-anchor='middle' x='144' y='68' fill='currentColor' style='font-size:1em'>-</text>
-<text text-anchor='middle' x='144' y='84' fill='currentColor' style='font-size:1em'>-</text>
-<text text-anchor='middle' x='144' y='100' fill='currentColor' style='font-size:1em'>-</text>
-<text text-anchor='middle' x='144' y='116' fill='currentColor' style='font-size:1em'>-</text>
-<text text-anchor='middle' x='152' y='52' fill='currentColor' style='font-size:1em'>i</text>
-<text text-anchor='middle' x='152' y='68' fill='currentColor' style='font-size:1em'>i</text>
-<text text-anchor='middle' x='152' y='84' fill='currentColor' style='font-size:1em'>l</text>
-<text text-anchor='middle' x='152' y='100' fill='currentColor' style='font-size:1em'>c</text>
-<text text-anchor='middle' x='152' y='116' fill='currentColor' style='font-size:1em'>c</text>
-<text text-anchor='middle' x='160' y='52' fill='currentColor' style='font-size:1em'>m</text>
-<text text-anchor='middle' x='160' y='68' fill='currentColor' style='font-size:1em'>m</text>
-<text text-anchor='middle' x='160' y='84' fill='currentColor' style='font-size:1em'>i</text>
-<text text-anchor='middle' x='160' y='100' fill='currentColor' style='font-size:1em'>o</text>
-<text text-anchor='middle' x='160' y='116' fill='currentColor' style='font-size:1em'>o</text>
-<text text-anchor='middle' x='168' y='52' fill='currentColor' style='font-size:1em'>a</text>
-<text text-anchor='middle' x='168' y='68' fill='currentColor' style='font-size:1em'>a</text>
-<text text-anchor='middle' x='168' y='84' fill='currentColor' style='font-size:1em'>n</text>
-<text text-anchor='middle' x='168' y='100' fill='currentColor' style='font-size:1em'>d</text>
-<text text-anchor='middle' x='168' y='116' fill='currentColor' style='font-size:1em'>d</text>
-<text text-anchor='middle' x='176' y='52' fill='currentColor' style='font-size:1em'>g</text>
-<text text-anchor='middle' x='176' y='68' fill='currentColor' style='font-size:1em'>g</text>
-<text text-anchor='middle' x='176' y='84' fill='currentColor' style='font-size:1em'>k</text>
-<text text-anchor='middle' x='176' y='100' fill='currentColor' style='font-size:1em'>e</text>
-<text text-anchor='middle' x='176' y='116' fill='currentColor' style='font-size:1em'>e</text>
-<text text-anchor='middle' x='184' y='52' fill='currentColor' style='font-size:1em'>e</text>
-<text text-anchor='middle' x='184' y='68' fill='currentColor' style='font-size:1em'>e</text>
-<text text-anchor='middle' x='184' y='84' fill='currentColor' style='font-size:1em'>.</text>
-<text text-anchor='middle' x='184' y='100' fill='currentColor' style='font-size:1em'>b</text>
-<text text-anchor='middle' x='184' y='116' fill='currentColor' style='font-size:1em'>b</text>
-<text text-anchor='middle' x='192' y='52' fill='currentColor' style='font-size:1em'>.</text>
-<text text-anchor='middle' x='192' y='68' fill='currentColor' style='font-size:1em'>.</text>
-<text text-anchor='middle' x='192' y='84' fill='currentColor' style='font-size:1em'>h</text>
-<text text-anchor='middle' x='192' y='100' fill='currentColor' style='font-size:1em'>l</text>
-<text text-anchor='middle' x='192' y='116' fill='currentColor' style='font-size:1em'>l</text>
-<text text-anchor='middle' x='200' y='52' fill='currentColor' style='font-size:1em'>h</text>
-<text text-anchor='middle' x='200' y='68' fill='currentColor' style='font-size:1em'>r</text>
-<text text-anchor='middle' x='200' y='84' fill='currentColor' style='font-size:1em'>t</text>
-<text text-anchor='middle' x='200' y='100' fill='currentColor' style='font-size:1em'>o</text>
-<text text-anchor='middle' x='200' y='116' fill='currentColor' style='font-size:1em'>o</text>
-<text text-anchor='middle' x='208' y='52' fill='currentColor' style='font-size:1em'>t</text>
-<text text-anchor='middle' x='208' y='68' fill='currentColor' style='font-size:1em'>s</text>
-<text text-anchor='middle' x='208' y='84' fill='currentColor' style='font-size:1em'>m</text>
-<text text-anchor='middle' x='208' y='100' fill='currentColor' style='font-size:1em'>c</text>
-<text text-anchor='middle' x='208' y='116' fill='currentColor' style='font-size:1em'>c</text>
-<text text-anchor='middle' x='216' y='52' fill='currentColor' style='font-size:1em'>m</text>
-<text text-anchor='middle' x='216' y='68' fill='currentColor' style='font-size:1em'>s</text>
-<text text-anchor='middle' x='216' y='84' fill='currentColor' style='font-size:1em'>l</text>
-<text text-anchor='middle' x='216' y='100' fill='currentColor' style='font-size:1em'>k</text>
-<text text-anchor='middle' x='216' y='116' fill='currentColor' style='font-size:1em'>k</text>
-<text text-anchor='middle' x='224' y='52' fill='currentColor' style='font-size:1em'>l</text>
-<text text-anchor='middle' x='224' y='68' fill='currentColor' style='font-size:1em'>.</text>
-<text text-anchor='middle' x='224' y='100' fill='currentColor' style='font-size:1em'>.</text>
-<text text-anchor='middle' x='224' y='116' fill='currentColor' style='font-size:1em'>-</text>
-<text text-anchor='middle' x='232' y='68' fill='currentColor' style='font-size:1em'>x</text>
-<text text-anchor='middle' x='232' y='100' fill='currentColor' style='font-size:1em'>h</text>
-<text text-anchor='middle' x='232' y='116' fill='currentColor' style='font-size:1em'>b</text>
-<text text-anchor='middle' x='240' y='68' fill='currentColor' style='font-size:1em'>m</text>
-<text text-anchor='middle' x='240' y='100' fill='currentColor' style='font-size:1em'>t</text>
-<text text-anchor='middle' x='240' y='116' fill='currentColor' style='font-size:1em'>a</text>
-<text text-anchor='middle' x='248' y='68' fill='currentColor' style='font-size:1em'>l</text>
-<text text-anchor='middle' x='248' y='100' fill='currentColor' style='font-size:1em'>m</text>
-<text text-anchor='middle' x='248' y='116' fill='currentColor' style='font-size:1em'>s</text>
-<text text-anchor='middle' x='256' y='100' fill='currentColor' style='font-size:1em'>l</text>
-<text text-anchor='middle' x='256' y='116' fill='currentColor' style='font-size:1em'>h</text>
-<text text-anchor='middle' x='264' y='116' fill='currentColor' style='font-size:1em'>.</text>
-<text text-anchor='middle' x='272' y='116' fill='currentColor' style='font-size:1em'>h</text>
-<text text-anchor='middle' x='280' y='116' fill='currentColor' style='font-size:1em'>t</text>
-<text text-anchor='middle' x='288' y='116' fill='currentColor' style='font-size:1em'>m</text>
-<text text-anchor='middle' x='296' y='116' fill='currentColor' style='font-size:1em'>l</text>
-</g>
-
-    </svg>
-  
-</div>
-<p>Some use cases for the above:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">layouts/
+</span></span><span class="line"><span class="cl">└── _default/
+</span></span><span class="line"><span class="cl">    └── _markup/
+</span></span><span class="line"><span class="cl">        ├── render-codeblock-bash.html
+</span></span><span class="line"><span class="cl">        ├── render-codeblock.html
+</span></span><span class="line"><span class="cl">        ├── render-heading.html
+</span></span><span class="line"><span class="cl">        ├── render-image.html
+</span></span><span class="line"><span class="cl">        ├── render-image.rss.xml
+</span></span><span class="line"><span class="cl">        └── render-link.html
+</span></span></code></pre></div><p>Some use cases for the above:</p>
 <ul>
 <li>Resolve link references using <code>.GetPage</code>. This would make links portable as you could translate <code>./my-post.md</code> (and similar constructs that would work on GitHub) into <code>/blog/2019/01/01/my-post/</code> etc.</li>
 <li>Add <code>target=_blank</code> to external links.</li>
@@ -480,16 +311,29 @@
 <dd>The rendered (HTML) text.</dd>
 <dt>PlainText</dt>
 <dd>The plain variant of the above.</dd>
-<dt>Attributes (map) 
+<dt>Attributes (map)</dt>
+<dd>A map of attributes (e.g. <code>id</code>, <code>class</code>). Note that this will currently always be empty for links.</dd>
+</dl>
+<p>The <code>render-image</code> templates will also receive:</p>
+<dl>
+<dt>IsBlock 
 
 
 <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
-    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.82.0" target="_blank">New in v0.82.0</a>
+    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.108.0" target="_blank">New in v0.108.0</a>
 </button>
 </dt>
-<dd>A map of attributes (e.g. <code>id</code>, <code>class</code>)</dd>
+<dd>Returns true if this is a standalone image and the config option <a href="/getting-started/configuration-markup/#goldmark">markup.goldmark.parser.wrapStandAloneImageWithinParagraph</a> is disabled.</dd>
+<dt>Ordinal  
+
+
+<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
+    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.108.0" target="_blank">New in v0.108.0</a>
+</button>
+</dt>
+<dd>Zero-based ordinal for all the images in the current document.</dd>
 </dl>
-<h3 id="link-with-title-markdown-example">Link with title Markdown example: <a class="header-link" href="#link-with-title-markdown-example"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<h3 id="link-with-title-markdown-example">Link with title Markdown example <a class="header-link" href="#link-with-title-markdown-example"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">[<span class="nt">Text</span>](<span class="na">https://www.gohugo.io &#34;Title&#34;</span>)
 </span></span></code></pre></div><p>Here is a code example for how the render-link.html template could look:</p>
 
@@ -514,8 +358,8 @@
 
 </div>
 
-<h3 id="image-markdown-example">Image Markdown example: <a class="header-link" href="#image-markdown-example"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">![<span class="nt">Text</span>](<span class="na">https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg &#34;Title&#34;</span>)
+<h3 id="image-markdown-example">Image Markdown example <a class="header-link" href="#image-markdown-example"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">![<span class="nt">Text</span>](<span class="na">https://gohugo.io/images/hugo-logo-wide.svg &#34;Title&#34;</span>)
 </span></span></code></pre></div><p>Here is a code example for how the render-image.html template could look:</p>
 
 
@@ -676,7 +520,7 @@
     </svg>
   
 </div>
-<p>The default behaviour for these code blocks is to do <a href="/content-management/syntax-highlighting/#highlighting-in-code-fences">Code Highlighting</a>, but since you can pass attributes to these code blocks, they can be used for almost anything. One example would be the built-in <a href="/content-management/diagrams/#goat-diagrams-ascii">GoAT Diagrams</a> or this <a href="/content-management/diagrams/#mermaid-diagrams">Mermaid Diagram Code Block Hook</a> example.</p>
+<p>The default behavior for these code blocks is to do <a href="/content-management/syntax-highlighting/#highlighting-in-code-fences">Code Highlighting</a>, but since you can pass attributes to these code blocks, they can be used for almost anything. One example would be the built-in <a href="/content-management/diagrams/#goat-diagrams-ascii">GoAT Diagrams</a> or this <a href="/content-management/diagrams/#mermaid-diagrams">Mermaid Diagram Code Block Hook</a> example.</p>
 <p>The context (the &ldquo;.&rdquo;) you receive in a code block template contains:</p>
 <dl>
 <dt>Type (string)</dt>
@@ -702,15 +546,15 @@
 <h2>See Also</h2>
 <ul>
 	
-	<li><a href="/content-management/shortcodes/">Shortcodes</a></li>
-	
 	<li><a href="/functions/markdownify/">markdownify</a></li>
-	
-	<li><a href="/content-management/formats/">Content Formats</a></li>
 	
 	<li><a href="/functions/renderstring/">.RenderString</a></li>
 	
 	<li><a href="/functions/anchorize/">anchorize</a></li>
+	
+	<li><a href="/content-management/formats/">Content Formats</a></li>
+	
+	<li><a href="/content-management/shortcodes/">Shortcodes</a></li>
 	
 </ul>
 
@@ -764,6 +608,37 @@
       </li>
       
       <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".installation">Installation</a>
+        <ul class="installation desktopmenu animated fadeIn list pl0 bg-light-gray dn">
+          <li class="f6 fw4">
+            <a href="/installation/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Installation overview
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/macos/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              macOS
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/linux/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Linux
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/windows/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Windows
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/bsd/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              BSD
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".getting-started">Getting Started</a>
         <ul class="getting-started desktopmenu animated fadeIn list pl0 bg-light-gray dn">
           <li class="f6 fw4">
@@ -777,13 +652,8 @@
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/getting-started/installing/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Install Hugo
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/getting-started/usage/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Basic Usage
+              Basic usage
             </a>
           </li>
           <li class="f6 fw4">
@@ -1075,11 +945,6 @@
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/templates/alternatives/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Alternative Templating
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/templates/template-debugging/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Template Debugging
             </a>
@@ -1211,6 +1076,11 @@
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/crypto.fnv32a/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              crypto.FNV32a
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/default/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               default
             </a>
@@ -1223,6 +1093,11 @@
           <li class="f6 fw4">
             <a href="/functions/dict/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               dict
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/duration/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              duration
             </a>
           </li>
           <li class="f6 fw4">
@@ -1631,8 +1506,23 @@
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/strings.contains/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.Contains
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/strings.containsany/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.ContainsAny
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/strings.count/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               strings.Count
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/strings.firstupper/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.FirstUpper
             </a>
           </li>
           <li class="f6 fw4">
@@ -1696,6 +1586,11 @@
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/time.parseduration/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              time.ParseDuration
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/title/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               title
             </a>
@@ -1743,6 +1638,11 @@
           <li class="f6 fw4">
             <a href="/functions/urlize/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               urlize
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/urlquery/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              urlquery
             </a>
           </li>
           <li class="f6 fw4">
@@ -1834,7 +1734,7 @@
           </li>
           <li class="f6 fw4">
             <a href="/hugo-pipes/scss-sass/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              SASS / SCSS
+              Sass / SCSS
             </a>
           </li>
           <li class="f6 fw4">
@@ -1965,8 +1865,18 @@
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-21yunbox/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on 21YunBox
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/hosting-and-deployment/hosting-on-aws-amplify/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Host on AWS Amplify
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-azure/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on Azure Static Web Apps
             </a>
           </li>
           <li class="f6 fw4">
@@ -1996,7 +1906,7 @@
           </li>
           <li class="f6 fw4">
             <a href="/hosting-and-deployment/hosting-on-keycdn/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hosting on KeyCDN
+              Host on KeyCDN
             </a>
           </li>
           <li class="f6 fw4">
@@ -2012,6 +1922,11 @@
           <li class="f6 fw4">
             <a href="/hosting-and-deployment/deployment-with-rclone/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Deployment with Rclone
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-azure-static-web-apps/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Hosting on Azure Static Web Apps
             </a>
           </li>
         </ul>
@@ -2057,7 +1972,7 @@
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: June 19, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/22d493aa56a2750c0cf5c66646ac6972372fabaa">Merge pull request #111 from blackb1rd/hugo/v0.101.0 (22d493a)</a>
+  Last updated: April 2, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/e4d54d04c1b3f8409ba9ede9679a504778ecd83f">Merge pull request #113 from neohugo/hugo/v0.109.0 (e4d54d0)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/templates/render-hooks.md" class="
@@ -2100,49 +2015,56 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
         
 
 
-  <section class="pb3 w-100">
-    <div class="center mw9"> 
+
+
+
+  <section
+    class="pb3 w-100">
+    <div class="center mw9">
       <h3 class="b f3 mv0 light-gray">Hugo Sponsors</h3>
       <div class="flex-ns flex-wrap center justify-between pt3">
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100">
-              
-                
-                   <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/linode-logo_standard_light_medium.png" alt="Logo for Linode" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            >
+            
+            
+              <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/linode-logo_standard_light_medium.png"
+                  alt="Logo for Linode"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100">
-              
-                
-                   <a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/esolia-logo.svg" alt="Logo for eSolia" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            >
+            
+            
+              <a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/esolia-logo.svg"
+                  alt="Logo for eSolia"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100" style="background-color: #5A2FA1;">
-              
-                
-                   <a href="https://brave.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/brave-logo.svg" alt="Logo for Brave" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            style="background-color: #131A3E;">
+            
+            
+              <a href="https://buttercms.com/hugo-cms/?utm_campaign=sponsorship&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/butter-light.svg"
+                  alt="Logo for ButterCMS"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
       </div>
     </div>
@@ -2154,13 +2076,13 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     </div>
 
     <div class="f7 gray mb5 mb0-ns ph3 w-100"> 
-      <p class="dib mr4">The Hugo logos are copyright © Steve Francia 2013–2022.</p>
+      <p class="dib mr4">The Hugo logos are copyright © Steve Francia 2013–2023.</p>
       <p class="dib">The Hugo Gopher is based on an original work by Renée French.</p>
     </div>
 
     <img src="/images/gopher-side_color.svg" alt="" class="absolute-l bottom-0 dn db-l h4 right-0 z-999"/>
 
-    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100"><div  class="globalmenu mobilemenu pb1 dn">
+    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100 z-2"><div  class="globalmenu mobilemenu pb1 dn">
     
 
 <ul class="list hidden dib ph0 scrolling-touch tc">
@@ -2212,6 +2134,12 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/about/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
           About Hugo
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/installation/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Installation
         </a>
     </li>
   
@@ -2310,9 +2238,6 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
   
 
   
-
-  
-
 
 </body>
 

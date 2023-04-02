@@ -16,6 +16,65 @@
     
     
     <item>
+      <title>Showcase: Ampio Knowledge Base</title>
+      <link>https://gohugo.io/showcase/ampio-help/</link>
+      <pubDate>Sun, 30 Oct 2022 00:00:00 +0200</pubDate>
+      
+      <guid>https://gohugo.io/showcase/ampio-help/</guid>
+      <description>
+        
+        
+        
+        <![CDATA[<img src="https://gohugo.io/showcase/ampio-help/featured_hu8a1f706aa9164980580628cd432977de_1495152_640x0_resize_catmullrom_3.png" width="640" height="320"/>]]>
+        
+        &lt;p&gt;As a company that specializes in highly customizable smart solutions for various industries, Ampio has accumulated a vast amount of knowledge throughout the years. We were on the lookout for a user-friendly platform to impart this knowledge to our clients and installers. Delivering a service that caters to both audiences, scattered around the globe with vastly divergent needs and expectations, was a challenge.&lt;/p&gt;
+&lt;p&gt;On the one hand, we needed something that would let us educate a client with no technical knowledge about our system in a visually appealing way.&lt;/p&gt;
+&lt;p&gt;On the other hand, our installers required technical drawings, offline manuals, and a deep dive into highly specialized subjects.&lt;/p&gt;
+&lt;p&gt;Over and above that, we could not overlook the fact that our internal team of editors and maintainers of the Knowledge Base included non-programmers who had to be able to create content and navigate the architecture of the site just as well as those adept at coding.&lt;/p&gt;
+&lt;p&gt;We started our journey with the following requirements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ease of contribution&lt;/li&gt;
+&lt;li&gt;Efficient search capabilities&lt;/li&gt;
+&lt;li&gt;The possibility of deployment to simple shared hosting&lt;/li&gt;
+&lt;li&gt;Proper support for multilingualism&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;dark-ages-of-wordpress&#34;&gt;Dark ages of WordPress &lt;a class=&#34;header-link&#34; href=&#34;#dark-ages-of-wordpress&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;With the above-mentioned in mind, we built our first revision of the service in WordPress with a commercial knowledge base plugin. The initial requirements seemed not to be exorbitant, and yet we were surprised to see that only a few of the available solutions covered them. Especially, the case of multilingualism appeared to be particularly neglected across the available products.&lt;/p&gt;
+&lt;p&gt;The WordPress-based products made big promises: pay some bucks, bootstrap the service in minutes, and forget about all the development troubles. And although those promises could possibly be deliverable on WordPress&amp;rsquo; end, it was definitely not true for anything more than the most generic deployments. In our case, we were dealing with more and more trade-offs. Plus, the solution was just slow on the simple shared hosting environment that we dedicated to the job.&lt;/p&gt;
+&lt;h2 id=&#34;turning-point&#34;&gt;Turning point &lt;a class=&#34;header-link&#34; href=&#34;#turning-point&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The turning point was the introduction of a new key requirement&amp;mdash;each document was to be downloadable in the PDF format. Such functionality was not available in the plugins we owned, nor did it look like any of the other existing WordPress plugins could fulfill our needs to a satisfactory degree. Nobody in our team was brave enough to add such a functionality to the current stack, so we decided to start from scratch.&lt;/p&gt;
+&lt;p&gt;On top of that new development, we had to remember another one of our key requirements, namely, that mostly non-programmers were to be responsible for the service maintenance and content creation. Initially, we were leaning towards headless CMS-based solutions, but finally we made a bold move and decided to create a Git-managed Jamstack service and see what happens.&lt;/p&gt;
+&lt;h2 id=&#34;hugo-to-the-rescue&#34;&gt;Hugo to the rescue! &lt;a class=&#34;header-link&#34; href=&#34;#hugo-to-the-rescue&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Hugo was our first choice of SSG. The multilingualism support was the primary feature that convinced us. Later on, going through the documentation, we continued to discover new exciting features that we didn&amp;rsquo;t even know we needed when we started.&lt;/p&gt;
+&lt;p&gt;The rich functionalities of WordPress WYSIWYG editors soon turned out to be a curse. It became burdensome to maintain formatting consistency across documents prepared by multiple contributors. When we considered Markdown, we knew that it would give us a lot less flexibility. In our case, it proved to be a blessing in disguise&amp;mdash;the constraints imposed by the notation ensured that each document was prepared in the same way. And in the cases where Markdown was not enough, Hugo shortcodes gave us all that we needed to get the results we anticipated.&lt;/p&gt;
+&lt;p&gt;In terms of PDF generation, we utilized &lt;a href=&#34;https://gohugo.io/templates/output-formats/&#34;&gt;custom output formats&lt;/a&gt; to produce intermediary document representations, which are consumed by our custom tool transforming them to TeX documents, which are finally used to produce PDF files.&lt;/p&gt;
+&lt;p&gt;Custom output formats were also used to create search indexes. The search functionality is built on the brilliant &lt;a href=&#34;https://github.com/teamtnt/tntsearch&#34;&gt;TNTSearch&lt;/a&gt; library. The search queries and results are handled by PHP snippets embedded into static documents handled by Hugo.&lt;/p&gt;
+&lt;p&gt;We even implemented a simple REST API generated by Hugo! We have yet to find something that cannot be achieved with this stack, while in WordPress-based solutions we were struggling with things as simple as defining custom document ordering in one of the categories list views.&lt;/p&gt;
+&lt;p&gt;When talking about Hugo, we cannot forget about the speed. At the beginning we were not considering it a killer feature, but as our document base grew bigger, we appreciated it more and more. Dry-runs are not so common&amp;mdash;most of the time we are working on one of the documents with cache already built during one of the previous Hugo runs. In such a scenario, Hugo rebuilds the site in about a second and we consider it a very good result.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;                   | EN  | PL
+-------------------+-----+------
+  Pages            | 483 | 486
+  Paginator pages  |  56 |  55
+  Non-page files   | 745 | 749
+  Static files     | 917 | 917
+  Processed images | 487 | 490
+  Aliases          |  80 |  79
+  Sitemaps         |   2 |   1
+  Cleaned          |   0 |   0
+
+Total in 1096 ms
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;adaptation-among-the-contributors&#34;&gt;Adaptation among the contributors &lt;a class=&#34;header-link&#34; href=&#34;#adaptation-among-the-contributors&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Very quickly it became apparent that our initial concerns about the adaptation of the workflow among contributors were grossly exaggerated. Markdown is fairly straightforward and did not cause any trouble for the contributors.&lt;/p&gt;
+&lt;p&gt;We recommended that our colleagues use Visual Studio Code as a tool for content creation. The project’s repository tracks project-scoped configuration of the editor, which includes a set of &lt;em&gt;tasks&lt;/em&gt; allowing to run a live server from the GUI level. This is very useful for those who are easily frightened when faced with the mighty terminal.&lt;/p&gt;
+&lt;p&gt;The basic skills of the Git workflow were also easily acquired. At the end of the day, builds and deployments are fully managed by CI/CD processes, so the administration of the service drills down to reviewing and accepting merge requests in the Git frontend. As a side effect, we receive a full and clear history of contributions, which is well appreciated by our quality assurance auditors.&lt;/p&gt;
+&lt;p&gt;We could even say that our experiment spread the love for Git among non-programmers in our organization!&lt;/p&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary &lt;a class=&#34;header-link&#34; href=&#34;#summary&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Hugo is the best! Definitely give it a try if you are ever faced with a challenge similar to ours. And do not give it a second thought if your service contributors are not too technically inclined&amp;mdash;it might still turn out great!&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>News: Fixes the “Stuck on Build” Bug</title>
       <link>https://gohugo.io/news/2021/0.91.2-relnotes/</link>
       <pubDate>Thu, 23 Dec 2021 17:47:41 +0100</pubDate>
@@ -738,6 +797,27 @@ which has received &lt;strong&gt;20 contributions by 10 contributors&lt;/strong&
     </item>
     
     <item>
+      <title>Showcase: Alora Labs</title>
+      <link>https://gohugo.io/showcase/alora-labs/</link>
+      <pubDate>Thu, 27 May 2021 00:00:00 +0200</pubDate>
+      
+      <guid>https://gohugo.io/showcase/alora-labs/</guid>
+      <description>
+        
+        
+        
+        <![CDATA[<img src="https://gohugo.io/showcase/alora-labs/featured_hu15e97d42270c9e985a93353bc5eb2110_83801_640x0_resize_catmullrom_3.png" width="640" height="239"/>]]>
+        
+        &lt;p&gt;At Alora Labs we always have an eye open for new tools and technology that we can utilize to the benefit of our customers or internal projects like our website.&lt;/p&gt;
+&lt;p&gt;The previous iteration of our site was built with Jekyll, which served us well at first. However as time went on, we became frustrated with the number of dependencies we had to rely on, that would often break at the most inconvenient times.&lt;/p&gt;
+&lt;p&gt;Hugo was a breath of fresh air in this regard, a single binary that works equally well on Windows as it did on macOS or Linux. We no longer need additional tools for image optimization, Sass compilation or JavaScript bundling. Everything just works, and with a substantial performance boost too.&lt;/p&gt;
+&lt;p&gt;Hugo has become a favorite tool in the toolbelt and the foundation for many client projects. We couldn&amp;rsquo;t be happier with the switch and we are optimistic about recommending Hugo for many years to come.&lt;/p&gt;
+&lt;p&gt;Thank you to the vibrant community and talented development team for all the hard work in making Hugo a success. As excellent as Hugo is now, we cannot wait to see what the release notes have in store for us next.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>News: Hugo 0.83.1: One Bug Fix</title>
       <link>https://gohugo.io/news/0.83.1-relnotes/</link>
       <pubDate>Sun, 02 May 2021 00:00:00 +0200</pubDate>
@@ -1229,9 +1309,9 @@ which has received &lt;strong&gt;20 contributions by 13 contributors&lt;/strong&
         <![CDATA[<img src="https://gohugo.io/showcase/godot-tutorials/featured_hu9debe7d7e6d1a72f19d3b8209a030483_72068_640x0_resize_catmullrom_3.png" width="640" height="372"/>]]>
         
         &lt;p&gt;&lt;a href=&#34;https://godottutorials.com&#34;&gt;Godot Tutorials&lt;/a&gt; started as a way to teach beginners game programming and game development.
-As I created videos, I ran into a problem; if I made a mistake with a Youtube video, it was difficult to correct errors.&lt;/p&gt;
+As I created videos, I ran into a problem; if I made a mistake with a YouTube video, it was difficult to correct errors.&lt;/p&gt;
 &lt;p&gt;I discovered that blogging episodes and having articles that teach on top of my videos is a fantastic solution to my problem.&lt;/p&gt;
-&lt;p&gt;As I researched blogging platforms, I came across two solutions; however, I chose &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; because it&amp;rsquo;s built with markdown in mind and simplified my workflow.&lt;/p&gt;
+&lt;p&gt;As I researched blogging platforms, I came across two solutions; however, I chose &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; because it&amp;rsquo;s built with Markdown in mind and simplified my workflow.&lt;/p&gt;
 &lt;p&gt;In a sense, with &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; programmed the right way, I can focus &lt;strong&gt;more time on planning, creating, and editing&lt;/strong&gt;
 my videos and &lt;strong&gt;less time maintaining and fixing&lt;/strong&gt; my website.&lt;/p&gt;
 
@@ -11437,131 +11517,6 @@ which has received &lt;strong&gt;8 contributions by 7 contributors&lt;/strong&gt
 &lt;li&gt;Fix Babel on Windows &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/723ec555e75fbfa94d90d3ecbcd5775d6c7800e1&#34;&gt;723ec555&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7251&#34;&gt;#7251&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Upgrade chroma to 0.7.3 to fix invalid css &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/b342e8fbdb23157f3979af91cb5d8d3438003707&#34;&gt;b342e8fb&lt;/a&gt; &lt;a href=&#34;https://github.com/apexskier&#34;&gt;@apexskier&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7207&#34;&gt;#7207&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>News: JavaScript Transpiler</title>
-      <link>https://gohugo.io/news/0.70.0-relnotes/</link>
-      <pubDate>Wed, 06 May 2020 00:00:00 +0200</pubDate>
-      
-      <guid>https://gohugo.io/news/0.70.0-relnotes/</guid>
-      <description>
-        
-        
-        
-        <![CDATA[<img src="https://gohugo.io/news/0.70.0-relnotes/hugo-70-featured_hu7e53232ad438751d3345bfcf581a92c2_65533_640x0_resize_catmullrom_3.png" width="640" height="320"/>]]>
-        
-        &lt;p&gt;This is a small release, and the main new feature is that you can now use &lt;a href=&#34;https://gohugo.io/hugo-pipes/babel/&#34;&gt;Babel&lt;/a&gt; to transpile JavaScript.&lt;/p&gt;
-&lt;p&gt;This release represents &lt;strong&gt;22 contributions by 12 contributors&lt;/strong&gt; to the main Hugo code base.&lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; leads the Hugo development with a significant amount of contributions, but also a big shoutout to &lt;a href=&#34;https://github.com/BurtonQin&#34;&gt;@BurtonQin&lt;/a&gt;, &lt;a href=&#34;https://github.com/tekezo&#34;&gt;@tekezo&lt;/a&gt;, and &lt;a href=&#34;https://github.com/sensimevanidus&#34;&gt;@sensimevanidus&lt;/a&gt; for their ongoing contributions.
-And a big thanks to &lt;a href=&#34;https://github.com/digitalcraftsman&#34;&gt;@digitalcraftsman&lt;/a&gt; and &lt;a href=&#34;https://github.com/onedrawingperday&#34;&gt;@onedrawingperday&lt;/a&gt; for their relentless work on keeping the themes site in pristine condition and to &lt;a href=&#34;https://github.com/davidsneighbour&#34;&gt;@davidsneighbour&lt;/a&gt; and &lt;a href=&#34;https://github.com/kaushalmodi&#34;&gt;@kaushalmodi&lt;/a&gt; for all the great work on the documentation site.&lt;/p&gt;
-&lt;p&gt;Many have also been busy writing and fixing the documentation in &lt;a href=&#34;https://github.com/gohugoio/hugoDocs&#34;&gt;hugoDocs&lt;/a&gt;,
-which has received &lt;strong&gt;6 contributions by 4 contributors&lt;/strong&gt;. A special thanks to &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;, &lt;a href=&#34;https://github.com/MJ2097&#34;&gt;@MJ2097&lt;/a&gt;, &lt;a href=&#34;https://github.com/jeremyzilar&#34;&gt;@jeremyzilar&lt;/a&gt;, and &lt;a href=&#34;https://github.com/larryclaman&#34;&gt;@larryclaman&lt;/a&gt; for their work on the documentation site.&lt;/p&gt;
-&lt;p&gt;Hugo now has:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;43734+ &lt;a href=&#34;https://github.com/gohugoio/hugo/stargazers&#34;&gt;stars&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;437+ &lt;a href=&#34;https://github.com/gohugoio/hugo/graphs/contributors&#34;&gt;contributors&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;316+ &lt;a href=&#34;http://themes.gohugo.io/&#34;&gt;themes&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;enhancements&#34;&gt;Enhancements &lt;a class=&#34;header-link&#34; href=&#34;#enhancements&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id=&#34;templates&#34;&gt;Templates &lt;a class=&#34;header-link&#34; href=&#34;#templates&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Change defer RLock to RUnlock &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/5146dc614fc45df698ebf890af06421dea988c96&#34;&gt;5146dc61&lt;/a&gt; &lt;a href=&#34;https://github.com/BurtonQin&#34;&gt;@BurtonQin&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;output&#34;&gt;Output &lt;a class=&#34;header-link&#34; href=&#34;#output&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Modify gen chromastyles to output all CSS classes &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/102ec2da7adcc4afb7050b17989f0486f8379679&#34;&gt;102ec2da&lt;/a&gt; &lt;a href=&#34;https://github.com/acahir&#34;&gt;@acahir&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7167&#34;&gt;#7167&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;core&#34;&gt;Core &lt;a class=&#34;header-link&#34; href=&#34;#core&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Add Unlock before panic &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/736f84b2d539857f7fdd0e42353af80b4dccfe8d&#34;&gt;736f84b2&lt;/a&gt; &lt;a href=&#34;https://github.com/BurtonQin&#34;&gt;@BurtonQin&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;other&#34;&gt;Other &lt;a class=&#34;header-link&#34; href=&#34;#other&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Update minify to v2.6.2 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/01befcce35ec992d195ce1b9a6a1eeda693cb5a8&#34;&gt;01befcce&lt;/a&gt; &lt;a href=&#34;https://github.com/pperzyna&#34;&gt;@pperzyna&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/6699&#34;&gt;#6699&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Add support for sort by boolean &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/04b1a6d997e72d9abada28db22650d38ccbcbb39&#34;&gt;04b1a6d9&lt;/a&gt; &lt;a href=&#34;https://github.com/Mipsters&#34;&gt;@Mipsters&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Update to Libsass 3.6.4 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/dd31e800075eebd78f921df8b4865c238006e7a7&#34;&gt;dd31e800&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7231&#34;&gt;#7231&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Rename transpileJS to babel &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/6add6d77b48cf0aab8b39d7a2bddedb1aa2a52b8&#34;&gt;6add6d77&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/5764&#34;&gt;#5764&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Add JavaScript transpiling solution &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/2a171ff1c5d9b1603fe78c67d2d894bb2efccc8b&#34;&gt;2a171ff1&lt;/a&gt; &lt;a href=&#34;https://github.com/hmmmmniek&#34;&gt;@hmmmmniek&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/5764&#34;&gt;#5764&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Disable a test locally &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/67f920419a53c7ff11e01c4286dca23e92110a12&#34;&gt;67f92041&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Add diagnostic hints to init timeout message &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/fe60b7d9e4c12dbc428f992c05969bc14c7fe7a2&#34;&gt;fe60b7d9&lt;/a&gt; &lt;a href=&#34;https://github.com/mtlynch&#34;&gt;@mtlynch&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Update goldmark-highlighting &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/5c41f41ad4b14e48aea64687a7600f5ad231e879&#34;&gt;5c41f41a&lt;/a&gt; &lt;a href=&#34;https://github.com/satotake&#34;&gt;@satotake&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7027&#34;&gt;#7027&lt;/a&gt;&lt;a href=&#34;https://github.com/gohugoio/hugo/issues/6596&#34;&gt;#6596&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Update go-org to v1.1.0 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/2b28e5a9cb79af2a8d70c80036f52bcf5399b9df&#34;&gt;2b28e5a9&lt;/a&gt; &lt;a href=&#34;https://github.com/niklasfasching&#34;&gt;@niklasfasching&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Update to goldmark v1.1.28 &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/feaa582cbe950e82969da5e99e3fb9a3947025df&#34;&gt;feaa582c&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7113&#34;&gt;#7113&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;fixes&#34;&gt;Fixes &lt;a class=&#34;header-link&#34; href=&#34;#fixes&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id=&#34;other-1&#34;&gt;Other &lt;a class=&#34;header-link&#34; href=&#34;#other-1&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Fix some missing JS class collector cases &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/c03ea2b66010d2996d652903cb8fa41e983e787f&#34;&gt;c03ea2b6&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7216&#34;&gt;#7216&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Fix IsAncestor and IsDescendant when the same page is passed &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/8d5766d417d6564a1aa1cbe8f9a29ab9bba22371&#34;&gt;8d5766d4&lt;/a&gt; &lt;a href=&#34;https://github.com/tekezo&#34;&gt;@tekezo&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Fix IsAncestor and IsDescendant under subsection &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/27a4c4410cd9592249925fb14b32605fb961c597&#34;&gt;27a4c441&lt;/a&gt; &lt;a href=&#34;https://github.com/tekezo&#34;&gt;@tekezo&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Fix typo in test suite &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/49e6c8cb4ed83e20f1e0ac164e91c38854177b99&#34;&gt;49e6c8cb&lt;/a&gt; &lt;a href=&#34;https://github.com/panakour&#34;&gt;@panakour&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Fix class collector when running with &amp;ndash;minify &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/f37e77f2d338cf876cfa637a662acd76f0f2009b&#34;&gt;f37e77f2&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7161&#34;&gt;#7161&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Fix toLower &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/27af5a339a4d3c5712b5ed946a636a8c21916039&#34;&gt;27af5a33&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7198&#34;&gt;#7198&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Fix broken test &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/b3c825756f3251f8b26e53262f9d6f484aecf750&#34;&gt;b3c82575&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Fix typo in Hugo&amp;rsquo;s Security Model &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/cd4d8202016bd3eb5ed9144c8945edaba73c8cf4&#34;&gt;cd4d8202&lt;/a&gt; &lt;a href=&#34;https://github.com/sensimevanidus&#34;&gt;@sensimevanidus&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Fix query parameter handling in server fast render mode &lt;a href=&#34;https://github.com/gohugoio/hugo/commit/ee67dbeff5bae6941facaaa39cb995a1ee6def03&#34;&gt;ee67dbef&lt;/a&gt; &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; &lt;a href=&#34;https://github.com/gohugoio/hugo/issues/7163&#34;&gt;#7163&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Showcase: Digital.gov</title>
-      <link>https://gohugo.io/showcase/digitalgov/</link>
-      <pubDate>Fri, 01 May 2020 00:00:00 +0200</pubDate>
-      
-      <guid>https://gohugo.io/showcase/digitalgov/</guid>
-      <description>
-        
-        
-        
-        <![CDATA[<img src="https://gohugo.io/showcase/digitalgov/featured_hu45beff20946cd0e416030040cf926cad_65077_640x0_resize_catmullrom_3.png" width="640" height="320"/>]]>
-        
-        &lt;p&gt;For over a decade, Digital.gov has provided guidance, training, and community support to the people who are responsible for delivering digital services in the U.S. government. Essentially, it is a place where people can find examples of problems being solved in government, and get links to the tools and resources they need.&lt;/p&gt;
-&lt;p&gt;Through collaboration in our communities of practice, Digital.gov is a window into the people who work in technology in government and the challenges they face making digital services stronger and more effective. &lt;a href=&#34;https://digital.gov/2019/12/19/a-new-digitalgov/&#34;&gt;Read more about our site »&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Digital.gov is built using the &lt;a href=&#34;https://designsystem.digital.gov/&#34;&gt;U.S. Web Design System&lt;/a&gt; (USWDS) and have followed the &lt;a href=&#34;https://designsystem.digital.gov/maturity-model/&#34;&gt;design principles&lt;/a&gt; in building out our new site:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Start with real user needs&lt;/strong&gt;  — We used human-centered design methods to inform our product decisions (like qualitative user research), and gathered feedback from real users. We also continually test our assumptions with small experiments.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Earn trust&lt;/strong&gt;  —We recognize that trust has to be earned every time. We are including all  &lt;a href=&#34;https://digital.gov/resources/required-web-content-and-links/&#34;&gt;required links and content&lt;/a&gt;  on our site, clearly identifying as a government site, building with modern best practices, and using https.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Embrace accessibility&lt;/strong&gt;  —  &lt;a href=&#34;https://digital.gov/resources/intro-accessibility/&#34;&gt;Accessibility&lt;/a&gt;  affects everybody, and we built it into every decision. We’re continually working to conform to Section 508 requirements, use user experience best practices, and support a wide range of devices.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Promote continuity&lt;/strong&gt;  — We started from shared solutions like USWDS and  &lt;a href=&#34;https://federalist.18f.gov/&#34;&gt;Federalist&lt;/a&gt;. We designed our site to clearly identify as a government site by including USWDS’s .gov banner, common colors and patterns, and built with modern best practices.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Listen&lt;/strong&gt;  — We actively collect user feedback and web metrics. We use the  &lt;a href=&#34;https://digital.gov/services/dap/&#34;&gt;Digital Analytics Program&lt;/a&gt;  (DAP) and analyze the data to discover actionable insights. We make small, incremental changes to continuously improve our website by listening to readers and learning from what we hear.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;More on the &lt;a href=&#34;https://designsystem.digital.gov/maturity-model/&#34;&gt;USWDS maturity model »&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;open-tools&#34;&gt;Open Tools &lt;a class=&#34;header-link&#34; href=&#34;#open-tools&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;We didn’t start from scratch. We built and designed the Digital.gov using many of the open-source tools and services that we develop for government here in the  &lt;a href=&#34;https://www.gsa.gov/tts/&#34;&gt;Technology Transformation Services&lt;/a&gt; (TTS).&lt;/p&gt;
-&lt;p&gt;Using services that make it possible to design, build, and iterate quickly are essential to modern web design and development, which is why &lt;a href=&#34;https://federalist.18f.gov/&#34;&gt;Federalist&lt;/a&gt; and the &lt;a href=&#34;https://designsystem.digital.gov/&#34;&gt;U.S. Web Design System&lt;/a&gt; are such a great combination.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Why Hugo?&lt;/strong&gt; Well, with around &lt;code&gt;~3,000&lt;/code&gt; files &lt;em&gt;(and growing)&lt;/em&gt; and &lt;code&gt;~9,000&lt;/code&gt; built pages, we needed a site generator that could handle that volume with lightning fast speed.&lt;/p&gt;
-&lt;p&gt;Hugo was the clear option. The &lt;a href=&#34;https://federalist.18f.gov/&#34;&gt;Federalist&lt;/a&gt; team quickly added it to their available site generators, and we were off.&lt;/p&gt;
-&lt;p&gt;At the moment, it takes around &lt;code&gt;32 seconds&lt;/code&gt; to build close to &lt;code&gt;~10,000&lt;/code&gt; pages!&lt;/p&gt;
-&lt;p&gt;Take a look:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  EN
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-------------------+-------
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Pages            &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;7973&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Paginator pages  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;600&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Non-page files   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;108&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Static files     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;851&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Processed images &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Aliases          &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1381&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Sitemaps         &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Cleaned          &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Built in 32.427 seconds
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In addition to Hugo, we are proudly using a number of other tools and services, all built by government are free to use:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://federalist.18f.gov/&#34;&gt;Federalist&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.search.gov/&#34;&gt;Search.gov&lt;/a&gt;  — A free, hosted search platform for federal websites.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.cloud.gov/&#34;&gt;Cloud.gov&lt;/a&gt;  — helps teams build, run, and authorize cloud-ready or legacy government systems quickly and cheaply.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://digital.gov/services/mobile-application-testing-program/&#34;&gt;Federal CrowdSource Mobile Testing Program&lt;/a&gt;  — Free mobile compatibility testing by feds, for feds.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://digital.gov/services/dap/&#34;&gt;Digital Analytics Program&lt;/a&gt;  (DAP) — A free analytics tool for measuring digital services in the federal government&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.section508.gov/&#34;&gt;Section508.gov&lt;/a&gt;  and  &lt;a href=&#34;https://www.plainlanguage.gov/&#34;&gt;PlainLanguage.gov&lt;/a&gt;  resources&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://api.data.gov/&#34;&gt;API.data.gov&lt;/a&gt;  — a free API management service for federal agencies&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://digital.gov/services/u-s-digital-registry/&#34;&gt;U.S. Digital Registry&lt;/a&gt;  — A resource for confirming the official status of government social media accounts, mobile apps, and mobile websites.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Questions or feedback?&lt;/strong&gt; &lt;a href=&#34;https://github.com/GSA/digitalgov.gov/issues&#34;&gt;Submit an issue&lt;/a&gt; or send us an email to &lt;a href=&#34;mailto:digitalgov@gsa.gov&#34;&gt;digitalgov@gsa.gov&lt;/a&gt; ❤️&lt;/p&gt;
 
       </description>
     </item>

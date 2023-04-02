@@ -13,7 +13,7 @@
   <title>absLangURL | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.23-DEV" />
+  <meta name="generator" content="Hugo 0.110.0-DEV">
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -26,13 +26,13 @@
   
   
   
-  <link rel="stylesheet" href="/output/css/app.min.b368142944d203fdc1d3dec8ab085c0c0e75aaf9171853110f03e91c1c2616f4.css" integrity="sha256-s2gUKUTSA/3B097IqwhcDA51qvkXGFMRDwPpHBwmFvQ=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/output/css/app.min.b03318b1df01f94314ccbf9f6c0e79c24f1db2c5fefa37614fc49ace24642f7f.css" integrity="sha256-sDMYsd8B&#43;UMUzL&#43;fbA55wk8dssX&#43;&#43;jdhT8SaziRkL38=" crossorigin="anonymous">
   
   
   
 
   <meta name="description"
-  content="Adds the absolute URL with correct language prefix according to site configuration for multilingual.">
+  content="Returns an absolute URL with a language prefix, if any.">
 
   
 
@@ -42,7 +42,7 @@
 
 
   
-  <script type="text/javascript" src="/output/js/app.175b405753a9c0ce86ab35944e9c4cc1a758a6873209cf5106600f6b2f5a59b6.js" integrity="sha256-F1tAV1OpwM6GqzWUTpxMwadYpocyCc9RBmAPay9aWbY=" crossorigin="anonymous" defer></script>
+  <script type="text/javascript" src="/output/js/app.5a802739f9b2407f0d3a1f84a20731b6705a5a4df051c35686f22bd3aea90731.js" integrity="sha256-WoAnOfmyQH8NOh&#43;EogcxtnBaWk3wUcNWhvIr066pBzE=" crossorigin="anonymous" defer></script>
   
       
  
@@ -58,19 +58,19 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0594cb">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:title" content="absLangURL" />
-<meta property="og:description" content="Adds the absolute URL with correct language prefix according to site configuration for multilingual." />
+<meta property="og:description" content="Returns an absolute URL with a language prefix, if any." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/functions/abslangurl/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_16926537318202466135.png"/><meta property="article:section" content="functions" />
-<meta property="article:published_time" content="2017-02-01T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-06-19T23:24:54+07:00" />
+
+<meta property="article:modified_time" content="2023-04-02T12:35:49-07:00" />
 <meta itemprop="name" content="absLangURL">
-<meta itemprop="description" content="Adds the absolute URL with correct language prefix according to site configuration for multilingual."><meta itemprop="datePublished" content="2017-02-01T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-06-19T23:24:54+07:00" />
-<meta itemprop="wordCount" content="57"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="description" content="Returns an absolute URL with a language prefix, if any.">
+<meta itemprop="dateModified" content="2023-04-02T12:35:49-07:00" />
+<meta itemprop="wordCount" content="242"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_16926537318202466135.png"/>
 <meta name="twitter:title" content="absLangURL"/>
-<meta name="twitter:description" content="Adds the absolute URL with correct language prefix according to site configuration for multilingual."/>
+<meta name="twitter:description" content="Returns an absolute URL with a language prefix, if any."/>
 <meta name="twitter:site" content="@GoHugoIO"/>
 
 
@@ -200,7 +200,7 @@
 
 	<div date-pref>
 		
-			<a href="https://gohugo.io/functions/unix/" class="dib f6 pl1 hover-bg-light-gray br-100" title=".Unix ">
+			<a href="https://gohugo.io/functions/with/" class="dib f6 pl1 hover-bg-light-gray br-100" title="with ">
 				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -241,7 +241,7 @@
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      Adds the absolute URL with correct language prefix according to site configuration for multilingual.
+      Returns an absolute URL with a language prefix, if any.
     </div>
   
 
@@ -254,11 +254,45 @@
     <h2 class="minor mb1 pt4 primary-color-dark">Syntax</h2>
       <pre class="f5 mb4 ph3 pv2 bg-light-gray" style="border-left:4px solid #0594CB;">absLangURL INPUT</pre>
 
-<p>Both <code>absLangURL</code> and <a href="/functions/rellangurl/"><code>relLangURL</code></a> are similar to their <a href="/functions/absurl/"><code>absURL</code></a> and <a href="/functions/relurl"><code>relURL</code></a> relatives but will add the correct language prefix when the site is configured with more than one language.</p>
-<p>So for a site  <code>baseURL</code> set to <code>https://example.com/hugo/</code> and the current language is <code>en</code>:</p>
-<pre tabindex="0"><code>{{ &#34;blog/&#34; | absLangURL }} → &#34;https://example.com/hugo/en/blog/&#34;
-{{ &#34;blog/&#34; | relLangURL }} → &#34;/hugo/en/blog/&#34;
-</code></pre>
+<p>Use this function with both monolingual and multilingual configurations. The URL returned by this function depends on:</p>
+<ul>
+<li>Whether the input begins with a slash</li>
+<li>The <code>baseURL</code> in site configuration</li>
+<li>The language prefix, if any</li>
+</ul>
+<p>In examples that follow, the project is multilingual with content in both Español (<code>es</code>) and English (<code>en</code>). The default language is Español. The returned values are from the English site.</p>
+<h3 id="input-does-not-begin-with-a-slash">Input does not begin with a slash <a class="header-link" href="#input-does-not-begin-with-a-slash"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<p>If the input does not begin with a slash, the resulting URL will be correct regardless of the <code>baseURL</code>.</p>
+<p>With <code>baseURL = https://example.org/</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">absLangURL</span><span class="w"> </span><span class="s">&#34;&#34;</span><span class="w"> </span><span class="cp">}}</span>           →   https://example.org/en/
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">absLangURL</span><span class="w"> </span><span class="s">&#34;articles&#34;</span><span class="w"> </span><span class="cp">}}</span>   →   https://example.org/en/articles
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">absLangURL</span><span class="w"> </span><span class="s">&#34;style.css&#34;</span><span class="w"> </span><span class="cp">}}</span>  →   https://example.org/en/style.css
+</span></span></code></pre></div><p>With <code>baseURL = https://example.org/docs/</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">absLangURL</span><span class="w"> </span><span class="s">&#34;&#34;</span><span class="w"> </span><span class="cp">}}</span>           →   https://example.org/docs/en/
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">absLangURL</span><span class="w"> </span><span class="s">&#34;articles&#34;</span><span class="w"> </span><span class="cp">}}</span>   →   https://example.org/docs/en/articles
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">absLangURL</span><span class="w"> </span><span class="s">&#34;style.css&#34;</span><span class="w"> </span><span class="cp">}}</span>  →   https://example.org/docs/en/style.css
+</span></span></code></pre></div><h3 id="input-begins-with-a-slash">Input begins with a slash <a class="header-link" href="#input-begins-with-a-slash"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<p>If the input begins with a slash, the resulting URL will be incorrect when the <code>baseURL</code> includes a subdirectory. With a leading slash, the function returns a URL relative to the protocol+host section of the <code>baseURL</code>.</p>
+<p>With <code>baseURL = https://example.org/</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">absLangURL</span><span class="w"> </span><span class="s">&#34;/&#34;</span><span class="w"> </span><span class="cp">}}</span>          →   https://example.org/en/
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">absLangURL</span><span class="w"> </span><span class="s">&#34;/articles&#34;</span><span class="w"> </span><span class="cp">}}</span>  →   https://example.org/en/articles
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">absLangURL</span><span class="w"> </span><span class="s">&#34;/style.css&#34;</span><span class="w"> </span><span class="cp">}}</span> →   https://example.org/en/style.css
+</span></span></code></pre></div><p>With <code>baseURL = https://example.org/docs/</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">absLangURL</span><span class="w"> </span><span class="s">&#34;/&#34;</span><span class="w"> </span><span class="cp">}}</span>          →   https://example.org/en/
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">absLangURL</span><span class="w"> </span><span class="s">&#34;/articles&#34;</span><span class="w"> </span><span class="cp">}}</span>  →   https://example.org/en/articles
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">absLangURL</span><span class="w"> </span><span class="s">&#34;/style.css&#34;</span><span class="w"> </span><span class="cp">}}</span> →   https://example.org/en/style.css
+</span></span></code></pre></div>
+<aside class="admonition note">
+	<div class="note-icon">
+		
+	</div>
+	
+	
+	<div class="admonition-content"><p>The last three examples are not desirable in most situations. As a best practice, never include a leading slash when using this function.</p>
+</div>
+</aside>
+
+
 </div>
 
           
@@ -266,15 +300,15 @@
 <h2>See Also</h2>
 <ul>
 	
-	<li><a href="/functions/rellangurl/">relLangURL</a></li>
-	
 	<li><a href="/functions/uniq/">uniq</a></li>
+	
+	<li><a href="/functions/rellangurl/">relLangURL</a></li>
 	
 	<li><a href="/functions/i18n/">i18n</a></li>
 	
 	<li><a href="/content-management/multilingual/">Multilingual Mode</a></li>
 	
-	<li><a href="/functions/urls.parse/">urls.Parse</a></li>
+	<li><a href="/functions/urlquery/">urlquery</a></li>
 	
 </ul>
 
@@ -328,6 +362,37 @@
       </li>
       
       <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".installation">Installation</a>
+        <ul class="installation desktopmenu animated fadeIn list pl0 bg-light-gray dn">
+          <li class="f6 fw4">
+            <a href="/installation/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Installation overview
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/macos/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              macOS
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/linux/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Linux
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/windows/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Windows
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/bsd/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              BSD
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".getting-started">Getting Started</a>
         <ul class="getting-started desktopmenu animated fadeIn list pl0 bg-light-gray dn">
           <li class="f6 fw4">
@@ -341,13 +406,8 @@
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/getting-started/installing/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Install Hugo
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/getting-started/usage/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Basic Usage
+              Basic usage
             </a>
           </li>
           <li class="f6 fw4">
@@ -639,11 +699,6 @@
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/templates/alternatives/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Alternative Templating
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/templates/template-debugging/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Template Debugging
             </a>
@@ -775,6 +830,11 @@
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/crypto.fnv32a/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              crypto.FNV32a
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/default/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               default
             </a>
@@ -787,6 +847,11 @@
           <li class="f6 fw4">
             <a href="/functions/dict/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               dict
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/duration/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              duration
             </a>
           </li>
           <li class="f6 fw4">
@@ -1195,8 +1260,23 @@
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/strings.contains/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.Contains
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/strings.containsany/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.ContainsAny
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/strings.count/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               strings.Count
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/strings.firstupper/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.FirstUpper
             </a>
           </li>
           <li class="f6 fw4">
@@ -1260,6 +1340,11 @@
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/time.parseduration/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              time.ParseDuration
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/title/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               title
             </a>
@@ -1307,6 +1392,11 @@
           <li class="f6 fw4">
             <a href="/functions/urlize/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               urlize
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/urlquery/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              urlquery
             </a>
           </li>
           <li class="f6 fw4">
@@ -1398,7 +1488,7 @@
           </li>
           <li class="f6 fw4">
             <a href="/hugo-pipes/scss-sass/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              SASS / SCSS
+              Sass / SCSS
             </a>
           </li>
           <li class="f6 fw4">
@@ -1529,8 +1619,18 @@
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-21yunbox/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on 21YunBox
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/hosting-and-deployment/hosting-on-aws-amplify/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Host on AWS Amplify
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-azure/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on Azure Static Web Apps
             </a>
           </li>
           <li class="f6 fw4">
@@ -1560,7 +1660,7 @@
           </li>
           <li class="f6 fw4">
             <a href="/hosting-and-deployment/hosting-on-keycdn/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hosting on KeyCDN
+              Host on KeyCDN
             </a>
           </li>
           <li class="f6 fw4">
@@ -1576,6 +1676,11 @@
           <li class="f6 fw4">
             <a href="/hosting-and-deployment/deployment-with-rclone/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Deployment with Rclone
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-azure-static-web-apps/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Hosting on Azure Static Web Apps
             </a>
           </li>
         </ul>
@@ -1621,7 +1726,7 @@
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: June 19, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/22d493aa56a2750c0cf5c66646ac6972372fabaa">Merge pull request #111 from blackb1rd/hugo/v0.101.0 (22d493a)</a>
+  Last updated: April 2, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/e4d54d04c1b3f8409ba9ede9679a504778ecd83f">Merge pull request #113 from neohugo/hugo/v0.109.0 (e4d54d0)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/functions/abslangurl.md" class="
@@ -1664,49 +1769,56 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
         
 
 
-  <section class="pb3 w-100">
-    <div class="center mw9"> 
+
+
+
+  <section
+    class="pb3 w-100">
+    <div class="center mw9">
       <h3 class="b f3 mv0 light-gray">Hugo Sponsors</h3>
       <div class="flex-ns flex-wrap center justify-between pt3">
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100">
-              
-                
-                   <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/linode-logo_standard_light_medium.png" alt="Logo for Linode" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            >
+            
+            
+              <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/linode-logo_standard_light_medium.png"
+                  alt="Logo for Linode"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100">
-              
-                
-                   <a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/esolia-logo.svg" alt="Logo for eSolia" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            >
+            
+            
+              <a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/esolia-logo.svg"
+                  alt="Logo for eSolia"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100" style="background-color: #5A2FA1;">
-              
-                
-                   <a href="https://brave.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/brave-logo.svg" alt="Logo for Brave" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            style="background-color: #131A3E;">
+            
+            
+              <a href="https://buttercms.com/hugo-cms/?utm_campaign=sponsorship&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/butter-light.svg"
+                  alt="Logo for ButterCMS"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
       </div>
     </div>
@@ -1718,13 +1830,13 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     </div>
 
     <div class="f7 gray mb5 mb0-ns ph3 w-100"> 
-      <p class="dib mr4">The Hugo logos are copyright © Steve Francia 2013–2022.</p>
+      <p class="dib mr4">The Hugo logos are copyright © Steve Francia 2013–2023.</p>
       <p class="dib">The Hugo Gopher is based on an original work by Renée French.</p>
     </div>
 
     <img src="/images/gopher-side_color.svg" alt="" class="absolute-l bottom-0 dn db-l h4 right-0 z-999"/>
 
-    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100"><div  class="globalmenu mobilemenu pb1 dn">
+    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100 z-2"><div  class="globalmenu mobilemenu pb1 dn">
     
 
 <ul class="list hidden dib ph0 scrolling-touch tc">
@@ -1776,6 +1888,12 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/about/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
           About Hugo
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/installation/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Installation
         </a>
     </li>
   
@@ -1874,9 +1992,6 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
   
 
   
-
-  
-
 
 </body>
 

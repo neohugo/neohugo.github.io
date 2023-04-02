@@ -6,16 +6,36 @@
     <description>Recent content in Showcase on Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 Jan 2021 00:00:00 +0100</lastBuildDate><atom:link href="https://gohugo.io/showcase/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Oct 2022 00:00:00 +0200</lastBuildDate><atom:link href="https://gohugo.io/showcase/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ampio Knowledge Base</title>
+      <link>https://gohugo.io/showcase/ampio-help/</link>
+      <pubDate>Sun, 30 Oct 2022 00:00:00 +0200</pubDate>
+      
+      <guid>https://gohugo.io/showcase/ampio-help/</guid>
+      <description>As a company that specializes in highly customizable smart solutions for various industries, Ampio has accumulated a vast amount of knowledge throughout the years. We were on the lookout for a user-friendly platform to impart this knowledge to our clients and installers. Delivering a service that caters to both audiences, scattered around the globe with vastly divergent needs and expectations, was a challenge.
+On the one hand, we needed something that would let us educate a client with no technical knowledge about our system in a visually appealing way.</description>
+    </item>
+    
+    <item>
+      <title>Alora Labs</title>
+      <link>https://gohugo.io/showcase/alora-labs/</link>
+      <pubDate>Thu, 27 May 2021 00:00:00 +0200</pubDate>
+      
+      <guid>https://gohugo.io/showcase/alora-labs/</guid>
+      <description>At Alora Labs we always have an eye open for new tools and technology that we can utilize to the benefit of our customers or internal projects like our website.
+The previous iteration of our site was built with Jekyll, which served us well at first. However as time went on, we became frustrated with the number of dependencies we had to rely on, that would often break at the most inconvenient times.</description>
+    </item>
+    
     <item>
       <title>Godot Tutorials</title>
       <link>https://gohugo.io/showcase/godot-tutorials/</link>
       <pubDate>Thu, 07 Jan 2021 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/showcase/godot-tutorials/</guid>
-      <description>Godot Tutorials started as a way to teach beginners game programming and game development. As I created videos, I ran into a problem; if I made a mistake with a Youtube video, it was difficult to correct errors.
+      <description>Godot Tutorials started as a way to teach beginners game programming and game development. As I created videos, I ran into a problem; if I made a mistake with a YouTube video, it was difficult to correct errors.
 I discovered that blogging episodes and having articles that teach on top of my videos is a fantastic solution to my problem.
-As I researched blogging platforms, I came across two solutions; however, I chose Hugo because it&amp;rsquo;s built with markdown in mind and simplified my workflow.</description>
+As I researched blogging platforms, I came across two solutions; however, I chose Hugo because it&amp;rsquo;s built with Markdown in mind and simplified my workflow.</description>
     </item>
     
     <item>
@@ -82,16 +102,6 @@ Render speed. We know from past experience that JavaScript-based static site gen
     </item>
     
     <item>
-      <title>Over</title>
-      <link>https://gohugo.io/showcase/over/</link>
-      <pubDate>Wed, 12 Sep 2018 00:00:00 +0200</pubDate>
-      
-      <guid>https://gohugo.io/showcase/over/</guid>
-      <description>At Over we&amp;rsquo;re into creativity, and technology should not get in the way. We want it to be easy for everyone to create, and Hugo does the same for us. That&amp;rsquo;s one of the reasons many of us are fond of using it.
-People from all disciplines contribute to our website, be it legal documentation, layout and design, recruiting, marketing and of course… engineering. Hugo allows us to do this with as little friction as possible.</description>
-    </item>
-    
-    <item>
       <title>Tomango</title>
       <link>https://gohugo.io/showcase/tomango/</link>
       <pubDate>Fri, 04 May 2018 00:00:00 +0200</pubDate>
@@ -100,16 +110,6 @@ People from all disciplines contribute to our website, be it legal documentation
       <description>Hugo is our static site generator (SSG) of choice. It&amp;rsquo;s really quick. After using it on a number of client projects, it became clear that our new site had to be built with Hugo.
 The big benefit of an SSG is how it moves all the heavy lifting to the build time.
 For example in WordPress, all the category pages are created at runtime, generating a lot of database queries. In Hugo, the paginated category pages are created at build time - so all the computational complexity is done once, and doesn&amp;rsquo;t impact the user at all.</description>
-    </item>
-    
-    <item>
-      <title>Flesland Flis AS</title>
-      <link>https://gohugo.io/showcase/flesland-flis/</link>
-      <pubDate>Tue, 24 Apr 2018 00:00:00 +0200</pubDate>
-      
-      <guid>https://gohugo.io/showcase/flesland-flis/</guid>
-      <description>For Flesland Flis I use a combination of Hugo, Forestry.io and Netlify. Static Site Generators and Hugo has been on my radar for a long time, and with all the nice features released in Hugo the last years, it&amp;rsquo;s now my preferred solution for new clients. Also a huge thanks to the guys at Forestry.io, for making such a smooth CMS for Hugo.
-The #1 reason why I love Hugo is the logic between content and layout, and of course the speed.</description>
     </item>
     
     <item>
@@ -180,8 +180,8 @@ It’s a multi-page, single-page (!) website written in Hugo, a static site gene
       
       <guid>https://gohugo.io/showcase/template/</guid>
       <description>Have a notable Hugo site1? We would love to feature it in this Showcase Section
-We would really appreciate if you could:
-Fork https://github.com/gohugoio/hugoDocs Run hugo new showcase/your-site (this requires &amp;gt;= Hugo 0.49). This will use the archetype bundle in the docs repo. Follow the instructions in the newly created page bundle. Create a new pull request in https://github.com/gohugoio/hugoDocs/pulls We want this to show Hugo in its best light, so this is not for the average Hugo blog.</description>
+Please:
+Fork https://github.com/gohugoio/hugoDocs. Run hugo new showcase/your-site. This will use the archetype bundle in the docs repo. Follow the instructions in the newly created page bundle. Create a new pull request in https://github.com/gohugoio/hugoDocs/pulls. We want this to show Hugo in its best light, so this is not for the average Hugo blog. In most cases the answer to &amp;ldquo;Is my site notable?</description>
     </item>
     
   </channel>

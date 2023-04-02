@@ -35,9 +35,9 @@ Kind The page Kind (the home page is one). See the example tables below per kind
       
       <guid>https://gohugo.io/templates/output-formats/</guid>
       <description>This page describes how to properly configure your site with the media types and output formats, as well as where to create your templates for your custom outputs.
-Media Types A media type (also known as MIME type and content type) is a two-part identifier for file formats and format contents transmitted on the Internet.
+Media Types A media type (also known as MIME type and content type) is a two-part identifier for file formats and format contents transmitted on the internet.
 This is the full set of built-in media types in Hugo:
-type suffixes application/javascript [js jsm mjs] application/json [json] application/manifest&amp;#43;json [webmanifest] application/octet-stream [] application/pdf [pdf] application/rss&amp;#43;xml [xml rss] application/toml [toml] application/typescript [ts] application/xml [xml] application/yaml [yaml yml] font/otf [otf] font/ttf [ttf] image/bmp [bmp] image/gif [gif] image/jpeg [jpg jpeg jpe jif jfif] image/png [png] image/svg&amp;#43;xml [svg] image/webp [webp] text/calendar [ics] text/css [css] text/csv [csv] text/html [html] text/jsx [jsx] text/markdown [md markdown] text/plain [txt] text/tsx [tsx] text/x-sass [sass] text/x-scss [scss] video/3gpp [3gpp 3gp] video/mp4 [mp4] video/mpeg [mpg mpeg] video/ogg [ogv] video/webm [webm] video/x-msvideo [avi] Note:</description>
+type suffixes application/json [json] application/manifest&amp;#43;json [webmanifest] application/octet-stream [] application/pdf [pdf] application/rss&amp;#43;xml [xml rss] application/toml [toml] application/xml [xml] application/yaml [yaml yml] font/otf [otf] font/ttf [ttf] image/bmp [bmp] image/gif [gif] image/jpeg [jpg jpeg jpe jif jfif] image/png [png] image/svg&amp;#43;xml [svg] image/webp [webp] text/calendar [ics] text/css [css] text/csv [csv] text/html [html] text/javascript [js jsm mjs] text/jsx [jsx] text/markdown [md markdown] text/plain [txt] text/tsx [tsx] text/typescript [ts] text/x-sass [sass] text/x-scss [scss] video/3gpp [3gpp 3gp] video/mp4 [mp4] video/mpeg [mpg mpeg] video/ogg [ogv] video/webm [webm] video/x-msvideo [avi] Note:</description>
     </item>
     
     <item>
@@ -47,9 +47,9 @@ type suffixes application/javascript [js jsm mjs] application/json [json] applic
       
       <guid>https://gohugo.io/templates/base/</guid>
       <description>The block keyword allows you to define the outer shell of your pages&amp;rsquo; one or more master template(s) and then fill in or override portions as necessary.
-Base Template Lookup Order New in v0.63.0 Since Hugo v0.63, the base template lookup order closely follows that of the template it applies to (e.g. _default/list.html).
+Base Template Lookup Order The base template lookup order closely follows that of the template it applies to (e.g. _default/list.html).
 See Template Lookup Order for details and examples.
-Define the Base Template The following defines a simple base template at _default/baseof.</description>
+Define the Base Template The following defines a simple base template at _default/baseof.html. As a default template, it is the shell from which all your pages will be rendered unless you specify another *baseof.</description>
     </item>
     
     <item>
@@ -125,8 +125,10 @@ You want content of every type to be shown on the homepage but only with limited
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/data-templates/</guid>
-      <description>Hugo supports loading data from YAML, JSON, XML, and TOML files located in the data directory in the root of your Hugo project.
-The Data Folder The data folder is where you can store additional data for Hugo to use when generating your site. Data files aren&amp;rsquo;t used to generate standalone pages; rather, they&amp;rsquo;re meant to be supplemental to content files. This feature can extend the content in case your front matter fields grow out of control.</description>
+      <description>Hugo supports loading data from YAML, JSON, XML, and TOML files located in the data directory at the root of your Hugo project.
+The Data Folder The data folder should store additional data for Hugo to use when generating your site.
+Data files are not for generating standalone pages. They should supplement content files by:
+extending the content when the front matter fields grow out of control, or showing a larger dataset in a template (see the example below).</description>
     </item>
     
     <item>
@@ -146,7 +148,7 @@ Use Partials in your Templates All partials for your Hugo project are located in
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/shortcode-templates/</guid>
-      <description>Shortcodes are a means to consolidate templating into small, reusable snippets that you can embed directly inside of your content. In this sense, you can think of shortcodes as the intermediary between page and list templates and basic content files.
+      <description>Shortcodes are a means to consolidate templating into small, reusable snippets that you can embed directly inside your content. In this sense, you can think of shortcodes as the intermediary between page and list templates and basic content files.
 Hugo also ships with built-in shortcodes for common use cases. (See Content Management: Shortcodes.)
 Create Custom Shortcodes Hugo&amp;rsquo;s built-in shortcodes cover many common, but not all, use cases. Luckily, Hugo provides the ability to easily create custom shortcodes to meet your website&amp;rsquo;s needs.</description>
     </item>
@@ -179,9 +181,9 @@ In addition to the standard page variables, the 404 page has access to all site 
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/menu-templates/</guid>
-      <description>Hugo makes no assumptions about how your rendered HTML will be structured. Instead, it provides all of the functions you will need to be able to build your menu however you want.
+      <description>Hugo makes no assumptions about how your rendered HTML will be structured. Instead, it provides all the functions you will need to build your menu however you want.
 The following is an example:
-layouts/partials/sidebar.html &amp;lt;!-- sidebar start --&amp;gt; &amp;lt;aside&amp;gt; &amp;lt;ul&amp;gt; {{ $currentPage := . }} {{ range .Site.Menus.main }} {{ if .HasChildren }} &amp;lt;li class=&amp;#34;{{ if $currentPage.HasMenuCurrent &amp;#34;main&amp;#34; . }}active{{ end }}&amp;#34;&amp;gt; &amp;lt;a href=&amp;#34;#&amp;#34;&amp;gt; {{ .Pre }} &amp;lt;span&amp;gt;{{ .</description>
+layouts/partials/sidebar.html &amp;lt;!-- sidebar start --&amp;gt; &amp;lt;aside&amp;gt; &amp;lt;ul&amp;gt; {{ $currentPage := . }} {{ range .Site.Menus.main }} {{ if .HasChildren }} &amp;lt;li class=&amp;#34;{{ if $currentPage.HasMenuCurrent &amp;#34;main&amp;#34; . }}active{{ end }}&amp;#34;&amp;gt; &amp;lt;a href=&amp;#34;#&amp;#34;&amp;gt; {{ .Pre }} &amp;lt;span&amp;gt;{{ .Name }}&amp;lt;/span&amp;gt; &amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;ul class=&amp;#34;sub-menu&amp;#34;&amp;gt; {{ range .</description>
     </item>
     
     <item>
@@ -239,18 +241,10 @@ Robots.txt Template Lookup Order You may overwrite the internal template with a 
       
       <guid>https://gohugo.io/templates/internal/</guid>
       <description>While the following internal templates are called similar to partials, they do not observe the partial template lookup order.
-Google Analytics Hugo ships with internal templates for Google Analytics tracking, including both synchronous and asynchronous tracking codes. As well as support for both v3 and v4 of Google Analytics.
-Configure Google Analytics Provide your tracking id in your configuration file:
-Google Analytics v3 (analytics.js) config. yaml &amp;nbsp; toml &amp;nbsp; json &amp;nbsp; googleAnalytics: UA-PROPERTY_ID googleAnalytics = &amp;#39;UA-PROPERTY_ID&amp;#39; { &amp;#34;googleAnalytics&amp;#34;: &amp;#34;UA-PROPERTY_ID&amp;#34; } Google Analytics v4 (gtag.</description>
-    </item>
-    
-    <item>
-      <title>DEPRECATED - Alternative Templating Languages</title>
-      <link>https://gohugo.io/templates/alternatives/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
-      
-      <guid>https://gohugo.io/templates/alternatives/</guid>
-      <description>Support for Amber and Ace templates has been removed since Hugo 0.62 per issue #6609.</description>
+Google Analytics Hugo ships with internal templates supporting Google Analytics, both Google Analytics 4 (GA4) and Universal Analytics.
+Note: Universal Analytics are deprecated. For details, see Universal Analytics will be going away.
+Configure Google Analytics Provide your tracking ID in your configuration file:
+Google Analytics 4 (gtag.js) config. yaml &amp;nbsp; toml &amp;nbsp; json &amp;nbsp; googleAnalytics: G-MEASUREMENT_ID googleAnalytics = &amp;#39;G-MEASUREMENT_ID&amp;#39; { &amp;#34;googleAnalytics&amp;#34;: &amp;#34;G-MEASUREMENT_ID&amp;#34; } Google Universal Analytics (analytics.</description>
     </item>
     
     <item>
@@ -270,10 +264,11 @@ What Variables are Available in this Context? You can use the template syntax, $
       <pubDate>Sat, 11 Mar 2017 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/templates/render-hooks/</guid>
-      <description>New in v0.62.0 Note that this is only supported with the Goldmark renderer.
+      <description>Note that this is only supported with the Goldmark renderer.
 You can override certain parts of the default Markdown rendering to HTML by creating templates with base names render-{kind} in layouts/_default/_markup.
-You can also create type/section specific hooks in layouts/[type/section]/_markup, e.g.: layouts/blog/_markup. New in v0.71.0 The hook kinds currently supported are:
-image link heading New in v0.71.0 codeblock New in v0.93.0 You can define Output-Format- and language-specific templates if needed.</description>
+You can also create type/section specific hooks in layouts/[type/section]/_markup, e.g.: layouts/blog/_markup.
+The hook kinds currently supported are:
+image link heading codeblock New in v0.93.0 You can define Output-Format- and language-specific templates if needed. Your layouts folder may look like this:</description>
     </item>
     
   </channel>

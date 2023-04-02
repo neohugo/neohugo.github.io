@@ -13,7 +13,7 @@
   <title>Create Your Own Shortcodes | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.23-DEV" />
+  <meta name="generator" content="Hugo 0.110.0-DEV">
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -26,7 +26,7 @@
   
   
   
-  <link rel="stylesheet" href="/output/css/app.min.b368142944d203fdc1d3dec8ab085c0c0e75aaf9171853110f03e91c1c2616f4.css" integrity="sha256-s2gUKUTSA/3B097IqwhcDA51qvkXGFMRDwPpHBwmFvQ=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/output/css/app.min.b03318b1df01f94314ccbf9f6c0e79c24f1db2c5fefa37614fc49ace24642f7f.css" integrity="sha256-sDMYsd8B&#43;UMUzL&#43;fbA55wk8dssX&#43;&#43;jdhT8SaziRkL38=" crossorigin="anonymous">
   
   
   
@@ -42,7 +42,7 @@
 
 
   
-  <script type="text/javascript" src="/output/js/app.175b405753a9c0ce86ab35944e9c4cc1a758a6873209cf5106600f6b2f5a59b6.js" integrity="sha256-F1tAV1OpwM6GqzWUTpxMwadYpocyCc9RBmAPay9aWbY=" crossorigin="anonymous" defer></script>
+  <script type="text/javascript" src="/output/js/app.5a802739f9b2407f0d3a1f84a20731b6705a5a4df051c35686f22bd3aea90731.js" integrity="sha256-WoAnOfmyQH8NOh&#43;EogcxtnBaWk3wUcNWhvIr066pBzE=" crossorigin="anonymous" defer></script>
   
       
  
@@ -62,11 +62,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/templates/shortcode-templates/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_17073483402089907998.png"/><meta property="article:section" content="templates" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-06-19T23:24:54+07:00" />
+<meta property="article:modified_time" content="2023-04-02T12:35:49-07:00" />
 <meta itemprop="name" content="Create Your Own Shortcodes">
 <meta itemprop="description" content="You can extend Hugo&#39;s built-in shortcodes by creating your own using the same templating syntax as that for single and list pages."><meta itemprop="datePublished" content="2017-02-01T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-06-19T23:24:54+07:00" />
-<meta itemprop="wordCount" content="1944"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="dateModified" content="2023-04-02T12:35:49-07:00" />
+<meta itemprop="wordCount" content="1948"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_17073483402089907998.png"/>
 <meta name="twitter:title" content="Create Your Own Shortcodes"/>
@@ -263,7 +263,7 @@
 
 <div class="prose" id="prose">
 
-<p>Shortcodes are a means to consolidate templating into small, reusable snippets that you can embed directly inside of your content. In this sense, you can think of shortcodes as the intermediary between <a href="/templates/" title="The templates section of the Hugo docs.">page and list templates</a> and <a href="/content-management/formats/" title="See how Hugo leverages markdown--and other supported formats--to create content for your website.">basic content files</a>.</p>
+<p>Shortcodes are a means to consolidate templating into small, reusable snippets that you can embed directly inside your content. In this sense, you can think of shortcodes as the intermediary between <a href="/templates/" title="The templates section of the Hugo docs.">page and list templates</a> and <a href="/content-management/formats/" title="See how Hugo leverages markdown--and other supported formats--to create content for your website.">basic content files</a>.</p>
 
 <aside class="admonition note">
 	<div class="note-icon">
@@ -285,8 +285,8 @@
 <h3 id="file-location">File Location <a class="header-link" href="#file-location"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>To create a shortcode, place an HTML template in the <code>layouts/shortcodes</code> directory of your <a href="/getting-started/directory-structure/#directory-structure-explained" title="Learn how Hugo scaffolds new sites and what it expects to find in each of your directories.">source organization</a>. Consider the file name carefully since the shortcode name will mirror that of the file but without the <code>.html</code> extension. For example, <code>layouts/shortcodes/myshortcode.html</code> will be called with either <code>{{&lt; myshortcode /&gt;}}</code> or <code>{{% myshortcode /%}}</code> depending on the type of parameters you choose.</p>
 <p>You can organize your shortcodes in subfolders, e.g. in <code>layouts/shortcodes/boxes</code>. These shortcodes would then be accessible with their relative path, e.g:</p>
-<pre tabindex="0"><code>{{&lt; boxes/square &gt;}}
-</code></pre><p>Note the forward slash.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">boxes</span><span class="err">/</span><span class="nx">square</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span>
+</span></span></code></pre></div><p>Note the forward slash.</p>
 <h3 id="shortcode-template-lookup-order">Shortcode Template Lookup Order <a class="header-link" href="#shortcode-template-lookup-order"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>Shortcode templates have a simple <a href="/templates/lookup-order/" title="See the order in which Hugo traverses your template files to decide where and how to render your content at build time">lookup order</a>:</p>
 <ol>
@@ -306,23 +306,32 @@
 <h3 id="access-parameters">Access Parameters <a class="header-link" href="#access-parameters"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>All shortcode parameters can be accessed via the <code>.Get</code> method. Whether you pass a key (i.e., string) or a number to the <code>.Get</code> method depends on whether you are accessing a named or positional parameter, respectively.</p>
 <p>To access a parameter by name, use the <code>.Get</code> method followed by the named parameter as a quoted string:</p>
-<pre tabindex="0"><code>{{ .Get &#34;class&#34; }}
-</code></pre><p>To access a parameter by position, use the <code>.Get</code> followed by a numeric position, keeping in mind that positional parameters are zero-indexed:</p>
-<pre tabindex="0"><code>{{ .Get 0 }}
-</code></pre><p>For the second position, you would just use:</p>
-<pre tabindex="0"><code>{{ .Get 1 }}
-</code></pre><p><code>with</code> is great when the output depends on a parameter being set:</p>
-<pre tabindex="0"><code>{{ with .Get &#34;class&#34; }} class=&#34;{{ . }}&#34;{{ end }}
-</code></pre><p><code>.Get</code> can also be used to check if a parameter has been provided. This is
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;class&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><p>To access a parameter by position, use the <code>.Get</code> followed by a numeric position, keeping in mind that positional parameters are zero-indexed:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><p>For the second position, you would just use:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><p><code>with</code> is great when the output depends on a parameter being set:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;class&#34;</span><span class="w"> </span><span class="cp">}}</span> class=&#34;<span class="cp">{{</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>&#34;<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><p><code>.Get</code> can also be used to check if a parameter has been provided. This is
 most helpful when the condition depends on either of the values, or both:</p>
-<pre tabindex="0"><code>{{ if or (.Get &#34;title&#34;) (.Get &#34;alt&#34;) }} alt=&#34;{{ with .Get &#34;alt&#34; }}{{ . }}{{ else }}{{ .Get &#34;title&#34; }}{{ end }}&#34;{{ end }}
-</code></pre><h4 id="inner"><code>.Inner</code> <a class="header-link" href="#inner"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
-<p>If a closing shortcode is used, the <code>.Inner</code> variable will be populated with all of the content between the opening and closing shortcodes. If a closing shortcode is required, you can check the length of <code>.Inner</code> as an indicator of its existence.</p>
-<p>A shortcode with content declared via the <code>.Inner</code> variable can also be declared without the
-content and without the closing
-by using the self-closing syntax:</p>
-<pre tabindex="0"><code>{{&lt; innershortcode /&gt;}}
-</code></pre><h4 id="params"><code>.Params</code> <a class="header-link" href="#params"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="o">(</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;title&#34;</span><span class="o">)</span><span class="w"> </span><span class="o">(</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;alt&#34;</span><span class="o">)</span><span class="w"> </span><span class="cp">}}</span> alt=&#34;<span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;alt&#34;</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;title&#34;</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>&#34;<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><h4 id="inner"><code>.Inner</code> <a class="header-link" href="#inner"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
+<p>If a closing shortcode is used, the <code>.Inner</code> variable will be populated with the content between the opening and closing shortcodes. If a closing shortcode is required, you can check the length of <code>.Inner</code> as an indicator of its existence.</p>
+<p>A shortcode with content declared via the <code>.Inner</code> variable can also be declared without the content and without the closing by using the self-closing syntax:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">innershortcode</span><span class="w"> </span><span class="err">/&gt;</span><span class="cp">}}</span>
+</span></span></code></pre></div>
+<aside class="admonition warning">
+	<div class="admonition-icon">
+		
+	</div>
+	
+	
+	<div class="admonition-content"><p>Any shortcode that refers to <code>.Inner</code> must be closed or self-closed.</p>
+</div>
+</aside>
+
+<h4 id="params"><code>.Params</code> <a class="header-link" href="#params"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
 <p>The <code>.Params</code> variable in shortcodes contains the list parameters passed to shortcode for more complicated use cases. You can also access higher-scoped parameters with the following logic:</p>
 <dl>
 <dt><code>$.Params</code></dt>
@@ -335,14 +344,14 @@ by using the self-closing syntax:</p>
 <h4 id="isnamedparams"><code>.IsNamedParams</code> <a class="header-link" href="#isnamedparams"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
 <p>The <code>.IsNamedParams</code> variable checks whether the shortcode declaration uses named parameters and returns a boolean value.</p>
 <p>For example, you could create an <code>image</code> shortcode that can take either a <code>src</code> named parameter or the first positional parameter, depending on the preference of the content&rsquo;s author. Let&rsquo;s assume the <code>image</code> shortcode is called as follows:</p>
-<pre tabindex="0"><code>{{&lt; image src=&#34;images/my-image.jpg&#34; &gt;}}
-</code></pre><p>You could then include the following as part of your shortcode templating:</p>
-<pre tabindex="0"><code>{{ if .IsNamedParams }}
-&lt;img src=&#34;{{ .Get &#34;src&#34; }}&#34; alt=&#34;&#34;&gt;
-{{ else }}
-&lt;img src=&#34;{{ .Get 0 }}&#34; alt=&#34;&#34;&gt;
-{{ end }}
-</code></pre><p>See the <a href="#single-flexible-example-vimeo">example Vimeo shortcode</a> below for <code>.IsNamedParams</code> in action.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">image</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="s">&#34;images/my-image.jpg&#34;</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span>
+</span></span></code></pre></div><p>You could then include the following as part of your shortcode templating:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="na">.IsNamedParams</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;src&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><p>See the <a href="#single-flexible-example-vimeo">example Vimeo shortcode</a> below for <code>.IsNamedParams</code> in action.</p>
 
 <aside class="admonition warning">
 	<div class="admonition-icon">
@@ -361,9 +370,9 @@ by using the self-closing syntax:</p>
 <h2 id="custom-shortcode-examples">Custom Shortcode Examples <a class="header-link" href="#custom-shortcode-examples"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>The following are examples of the different types of shortcodes you can create via shortcode template files in <code>/layouts/shortcodes</code>.</p>
 <h3 id="single-word-example-year">Single-word Example: <code>year</code> <a class="header-link" href="#single-word-example-year"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>Let&rsquo;s assume you would like to keep mentions of your copyright year current in your content files without having to continually review your markdown. Your goal is to be able to call the shortcode as follows:</p>
-<pre tabindex="0"><code>{{&lt; year &gt;}}
-</code></pre>
+<p>Let&rsquo;s assume you would like to keep mentions of your copyright year current in your content files without having to continually review your Markdown. Your goal is to be able to call the shortcode as follows:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">year</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span>
+</span></span></code></pre></div>
 
 
 
@@ -386,9 +395,9 @@ by using the self-closing syntax:</p>
 </div>
 
 <h3 id="single-positional-example-youtube">Single Positional Example: <code>youtube</code> <a class="header-link" href="#single-positional-example-youtube"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>Embedded videos are a common addition to markdown content that can quickly become unsightly. The following is the code used by <a href="/content-management/shortcodes/#youtube" title="See how to use Hugo's built-in YouTube shortcode.">Hugo&rsquo;s built-in YouTube shortcode</a>:</p>
-<pre tabindex="0"><code>{{&lt; youtube 09jf3ow9jfw &gt;}}
-</code></pre><p>Would load the template at <code>/layouts/shortcodes/youtube.html</code>:</p>
+<p>Embedded videos are a common addition to Markdown content that can quickly become unsightly. The following is the code used by <a href="/content-management/shortcodes/#youtube" title="See how to use Hugo's built-in YouTube shortcode.">Hugo&rsquo;s built-in YouTube shortcode</a>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">youtube</span><span class="w"> </span><span class="mi">09</span><span class="nx">jf3ow9jfw</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span>
+</span></span></code></pre></div><p>Would load the template at <code>/layouts/shortcodes/youtube.html</code>:</p>
 
 
 
@@ -407,7 +416,7 @@ by using the self-closing syntax:</p>
 	<div class="code-copy-content nt3" >
 		
 		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;embed video-player&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;youtube-player&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/html&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;640&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;385&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://www.youtube.com/embed/</span><span class="cp">{{</span><span class="w"> </span><span class="k">index</span><span class="w"> </span><span class="na">.Params</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span> <span class="na">allowfullscreen</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&#34;0&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;youtube-player&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/html&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;640&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;385&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://www.youtube.com/embed/</span><span class="cp">{{</span><span class="w"> </span><span class="k">index</span><span class="w"> </span><span class="na">.Params</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span> <span class="na">allowfullscreen</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&#34;0&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 	</div>
@@ -525,9 +534,9 @@ by using the self-closing syntax:</p>
 </div>
 
 <h3 id="single-flexible-example-vimeo">Single Flexible Example: <code>vimeo</code> <a class="header-link" href="#single-flexible-example-vimeo"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<pre tabindex="0"><code>{{&lt; vimeo 49718712 &gt;}}
-{{&lt; vimeo id=&#34;49718712&#34; class=&#34;flex-video&#34; &gt;}}
-</code></pre><p>Would load the template found at <code>/layouts/shortcodes/vimeo.html</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">vimeo</span><span class="w"> </span><span class="mi">49718712</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">vimeo</span><span class="w"> </span><span class="nx">id</span><span class="o">=</span><span class="s">&#34;49718712&#34;</span><span class="w"> </span><span class="nx">class</span><span class="o">=</span><span class="s">&#34;flex-video&#34;</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span>
+</span></span></code></pre></div><p>Would load the template found at <code>/layouts/shortcodes/vimeo.html</code>:</p>
 
 
 
@@ -550,8 +559,8 @@ by using the self-closing syntax:</p>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://player.vimeo.com/video/</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;id&#34;</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="cp">}}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">len</span><span class="w"> </span><span class="na">.Params</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">eq</span><span class="w"> </span><span class="nx">2</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="nx">1</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="cp">}}</span><span class="s">vimeo-container</span><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://player.vimeo.com/video/</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">len</span><span class="w"> </span><span class="na">.Params</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">eq</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="cp">}}</span><span class="s">vimeo-container</span><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://player.vimeo.com/video/</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span></span></span></code></pre></div>
 	</div>
@@ -609,8 +618,8 @@ by using the self-closing syntax:</p>
 </div>
 
 <p>The template for the <code>highlight</code> shortcode uses the following code, which is already included in Hugo:</p>
-<pre tabindex="0"><code>{{ .Get 0 | highlight .Inner }}
-</code></pre><p>The rendered output of the HTML example code block will be as follows:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">highlight</span><span class="w"> </span><span class="na">.Inner</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><p>The rendered output of the HTML example code block will be as follows:</p>
 
 
 
@@ -633,7 +642,7 @@ by using the self-closing syntax:</p>
 </div>
 
 <h3 id="nested-shortcode-image-gallery">Nested Shortcode: Image Gallery <a class="header-link" href="#nested-shortcode-image-gallery"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>Hugo&rsquo;s <a href="/variables/shortcodes/"><code>.Parent</code> shortcode variable</a> returns a boolean value depending on whether the shortcode in question is called within the context of a <em>parent</em> shortcode. This provides an inheritance model for common shortcode parameters.</p>
+<p>Hugo&rsquo;s <a href="/variables/shortcodes/"><code>.Parent</code> shortcode variable</a> provides access to the parent shortcode context when the shortcode in question is called within the context of a <em>parent</em> shortcode. This provides an inheritance model for common shortcode parameters.</p>
 <p>The following example is contrived but demonstrates the concept. Assume you have a <code>gallery</code> shortcode that expects one named <code>class</code> parameter:</p>
 
 
@@ -688,18 +697,18 @@ by using the self-closing syntax:</p>
 </div>
 
 <p>You can then call your shortcode in your content as follows:</p>
-<pre tabindex="0"><code>{{&lt; gallery class=&#34;content-gallery&#34; &gt;}}
-  {{&lt; img src=&#34;/images/one.jpg&#34; &gt;}}
-  {{&lt; img src=&#34;/images/two.jpg&#34; &gt;}}
-{{&lt; /gallery &gt;}}
-{{&lt; img src=&#34;/images/three.jpg&#34; &gt;}}
-</code></pre><p>This will output the following HTML. Note how the first two <code>img</code> shortcodes inherit the <code>class</code> value of <code>content-gallery</code> set with the call to the parent <code>gallery</code>, whereas the third <code>img</code> only uses <code>src</code>:</p>
-<pre tabindex="0"><code>&lt;div class=&#34;content-gallery&#34;&gt;
-    &lt;img src=&#34;/images/one.jpg&#34; class=&#34;content-gallery-image&#34;&gt;
-    &lt;img src=&#34;/images/two.jpg&#34; class=&#34;content-gallery-image&#34;&gt;
-&lt;/div&gt;
-&lt;img src=&#34;/images/three.jpg&#34;&gt;
-</code></pre><h2 id="error-handling-in-shortcodes">Error Handling in Shortcodes <a class="header-link" href="#error-handling-in-shortcodes"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">gallery</span><span class="w"> </span><span class="nx">class</span><span class="o">=</span><span class="s">&#34;content-gallery&#34;</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">  <span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">img</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="s">&#34;/images/one.jpg&#34;</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">  <span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">img</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="s">&#34;/images/two.jpg&#34;</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="err">/</span><span class="nx">gallery</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="err">&lt;</span><span class="w"> </span><span class="nx">img</span><span class="w"> </span><span class="nx">src</span><span class="o">=</span><span class="s">&#34;/images/three.jpg&#34;</span><span class="w"> </span><span class="err">&gt;</span><span class="cp">}}</span>
+</span></span></code></pre></div><p>This will output the following HTML. Note how the first two <code>img</code> shortcodes inherit the <code>class</code> value of <code>content-gallery</code> set with the call to the parent <code>gallery</code>, whereas the third <code>img</code> only uses <code>src</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;content-gallery&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/images/one.jpg&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;content-gallery-image&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/images/two.jpg&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;content-gallery-image&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/images/three.jpg&#34;</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h2 id="error-handling-in-shortcodes">Error Handling in Shortcodes <a class="header-link" href="#error-handling-in-shortcodes"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Use the <a href="/functions/errorf">errorf</a> template func and <a href="/variables/shortcodes/">.Position</a> variable to get useful error messages in shortcodes:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">{{</span> with .Get <span class="s2">&#34;name&#34;</span> <span class="o">}}</span>
 </span></span><span class="line"><span class="cl"><span class="o">{{</span> <span class="k">else</span> <span class="o">}}</span>
@@ -710,14 +719,7 @@ by using the self-closing syntax:</p>
 </span></span></code></pre></div><h2 id="more-shortcode-examples">More Shortcode Examples <a class="header-link" href="#more-shortcode-examples"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>More shortcode examples can be found in the <a href="https://github.com/spf13/spf13.com/tree/master/layouts/shortcodes" title="See more examples of shortcodes by visiting the shortcode directory of the source for spf13.com, the blog of Hugo's creator, Steve Francia.">shortcodes directory for spf13.com</a> and the <a href="https://github.com/gohugoio/hugo/tree/master/docs/layouts/shortcodes" title="See the shortcode source directory for the documentation site you're currently reading.">shortcodes directory for the Hugo docs</a>.</p>
 <h2 id="inline-shortcodes">Inline Shortcodes <a class="header-link" href="#inline-shortcodes"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-
-
-
-<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
-    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.52" target="_blank">New in v0.52</a>
-</button>
-
-<p>Since Hugo 0.52, you can implement your shortcodes inline &ndash; e.g. where you use them in the content file. This can be useful for scripting that you only need in one place.</p>
+<p>You can also implement your shortcodes inline &ndash; e.g. where you use them in the content file. This can be useful for scripting that you only need in one place.</p>
 <p>This feature is disabled by default, but can be enabled in your site config:</p>
 
 <div class="code relative" id="config">
@@ -835,6 +837,37 @@ by using the self-closing syntax:</p>
       </li>
       
       <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".installation">Installation</a>
+        <ul class="installation desktopmenu animated fadeIn list pl0 bg-light-gray dn">
+          <li class="f6 fw4">
+            <a href="/installation/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Installation overview
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/macos/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              macOS
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/linux/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Linux
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/windows/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Windows
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/bsd/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              BSD
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".getting-started">Getting Started</a>
         <ul class="getting-started desktopmenu animated fadeIn list pl0 bg-light-gray dn">
           <li class="f6 fw4">
@@ -848,13 +881,8 @@ by using the self-closing syntax:</p>
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/getting-started/installing/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Install Hugo
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/getting-started/usage/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Basic Usage
+              Basic usage
             </a>
           </li>
           <li class="f6 fw4">
@@ -1146,11 +1174,6 @@ by using the self-closing syntax:</p>
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/templates/alternatives/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Alternative Templating
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/templates/template-debugging/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Template Debugging
             </a>
@@ -1282,6 +1305,11 @@ by using the self-closing syntax:</p>
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/crypto.fnv32a/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              crypto.FNV32a
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/default/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               default
             </a>
@@ -1294,6 +1322,11 @@ by using the self-closing syntax:</p>
           <li class="f6 fw4">
             <a href="/functions/dict/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               dict
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/duration/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              duration
             </a>
           </li>
           <li class="f6 fw4">
@@ -1702,8 +1735,23 @@ by using the self-closing syntax:</p>
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/strings.contains/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.Contains
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/strings.containsany/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.ContainsAny
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/strings.count/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               strings.Count
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/strings.firstupper/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.FirstUpper
             </a>
           </li>
           <li class="f6 fw4">
@@ -1767,6 +1815,11 @@ by using the self-closing syntax:</p>
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/time.parseduration/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              time.ParseDuration
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/title/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               title
             </a>
@@ -1814,6 +1867,11 @@ by using the self-closing syntax:</p>
           <li class="f6 fw4">
             <a href="/functions/urlize/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               urlize
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/urlquery/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              urlquery
             </a>
           </li>
           <li class="f6 fw4">
@@ -1905,7 +1963,7 @@ by using the self-closing syntax:</p>
           </li>
           <li class="f6 fw4">
             <a href="/hugo-pipes/scss-sass/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              SASS / SCSS
+              Sass / SCSS
             </a>
           </li>
           <li class="f6 fw4">
@@ -2036,8 +2094,18 @@ by using the self-closing syntax:</p>
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-21yunbox/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on 21YunBox
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/hosting-and-deployment/hosting-on-aws-amplify/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Host on AWS Amplify
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-azure/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on Azure Static Web Apps
             </a>
           </li>
           <li class="f6 fw4">
@@ -2067,7 +2135,7 @@ by using the self-closing syntax:</p>
           </li>
           <li class="f6 fw4">
             <a href="/hosting-and-deployment/hosting-on-keycdn/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hosting on KeyCDN
+              Host on KeyCDN
             </a>
           </li>
           <li class="f6 fw4">
@@ -2083,6 +2151,11 @@ by using the self-closing syntax:</p>
           <li class="f6 fw4">
             <a href="/hosting-and-deployment/deployment-with-rclone/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Deployment with Rclone
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-azure-static-web-apps/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Hosting on Azure Static Web Apps
             </a>
           </li>
         </ul>
@@ -2128,7 +2201,7 @@ by using the self-closing syntax:</p>
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: June 19, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/22d493aa56a2750c0cf5c66646ac6972372fabaa">Merge pull request #111 from blackb1rd/hugo/v0.101.0 (22d493a)</a>
+  Last updated: April 2, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/e4d54d04c1b3f8409ba9ede9679a504778ecd83f">Merge pull request #113 from neohugo/hugo/v0.109.0 (e4d54d0)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/templates/shortcode-templates.md" class="
@@ -2171,49 +2244,56 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
         
 
 
-  <section class="pb3 w-100">
-    <div class="center mw9"> 
+
+
+
+  <section
+    class="pb3 w-100">
+    <div class="center mw9">
       <h3 class="b f3 mv0 light-gray">Hugo Sponsors</h3>
       <div class="flex-ns flex-wrap center justify-between pt3">
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100">
-              
-                
-                   <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/linode-logo_standard_light_medium.png" alt="Logo for Linode" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            >
+            
+            
+              <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/linode-logo_standard_light_medium.png"
+                  alt="Logo for Linode"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100">
-              
-                
-                   <a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/esolia-logo.svg" alt="Logo for eSolia" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            >
+            
+            
+              <a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/esolia-logo.svg"
+                  alt="Logo for eSolia"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100" style="background-color: #5A2FA1;">
-              
-                
-                   <a href="https://brave.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/brave-logo.svg" alt="Logo for Brave" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            style="background-color: #131A3E;">
+            
+            
+              <a href="https://buttercms.com/hugo-cms/?utm_campaign=sponsorship&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/butter-light.svg"
+                  alt="Logo for ButterCMS"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
       </div>
     </div>
@@ -2225,13 +2305,13 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     </div>
 
     <div class="f7 gray mb5 mb0-ns ph3 w-100"> 
-      <p class="dib mr4">The Hugo logos are copyright © Steve Francia 2013–2022.</p>
+      <p class="dib mr4">The Hugo logos are copyright © Steve Francia 2013–2023.</p>
       <p class="dib">The Hugo Gopher is based on an original work by Renée French.</p>
     </div>
 
     <img src="/images/gopher-side_color.svg" alt="" class="absolute-l bottom-0 dn db-l h4 right-0 z-999"/>
 
-    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100"><div  class="globalmenu mobilemenu pb1 dn">
+    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100 z-2"><div  class="globalmenu mobilemenu pb1 dn">
     
 
 <ul class="list hidden dib ph0 scrolling-touch tc">
@@ -2283,6 +2363,12 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/about/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
           About Hugo
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/installation/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Installation
         </a>
     </li>
   
@@ -2381,9 +2467,6 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
   
 
   
-
-  
-
 
 </body>
 

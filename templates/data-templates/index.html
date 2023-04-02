@@ -13,7 +13,7 @@
   <title>Data Templates | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.23-DEV" />
+  <meta name="generator" content="Hugo 0.110.0-DEV">
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -26,7 +26,7 @@
   
   
   
-  <link rel="stylesheet" href="/output/css/app.min.b368142944d203fdc1d3dec8ab085c0c0e75aaf9171853110f03e91c1c2616f4.css" integrity="sha256-s2gUKUTSA/3B097IqwhcDA51qvkXGFMRDwPpHBwmFvQ=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/output/css/app.min.b03318b1df01f94314ccbf9f6c0e79c24f1db2c5fefa37614fc49ace24642f7f.css" integrity="sha256-sDMYsd8B&#43;UMUzL&#43;fbA55wk8dssX&#43;&#43;jdhT8SaziRkL38=" crossorigin="anonymous">
   
   
   
@@ -42,7 +42,7 @@
 
 
   
-  <script type="text/javascript" src="/output/js/app.175b405753a9c0ce86ab35944e9c4cc1a758a6873209cf5106600f6b2f5a59b6.js" integrity="sha256-F1tAV1OpwM6GqzWUTpxMwadYpocyCc9RBmAPay9aWbY=" crossorigin="anonymous" defer></script>
+  <script type="text/javascript" src="/output/js/app.5a802739f9b2407f0d3a1f84a20731b6705a5a4df051c35686f22bd3aea90731.js" integrity="sha256-WoAnOfmyQH8NOh&#43;EogcxtnBaWk3wUcNWhvIr066pBzE=" crossorigin="anonymous" defer></script>
   
       
  
@@ -62,11 +62,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/templates/data-templates/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_9975776730536255476.png"/><meta property="article:section" content="templates" />
 <meta property="article:published_time" content="2017-02-01T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-06-19T23:24:54+07:00" />
+<meta property="article:modified_time" content="2023-04-02T12:35:49-07:00" />
 <meta itemprop="name" content="Data Templates">
 <meta itemprop="description" content="In addition to Hugo&#39;s built-in variables, you can specify your own custom data in templates or shortcodes that pull from both local and dynamic sources."><meta itemprop="datePublished" content="2017-02-01T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-06-19T23:24:54+07:00" />
-<meta itemprop="wordCount" content="1520"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="dateModified" content="2023-04-02T12:35:49-07:00" />
+<meta itemprop="wordCount" content="1594"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_9975776730536255476.png"/>
 <meta name="twitter:title" content="Data Templates"/>
@@ -268,19 +268,59 @@
 <div class="prose" id="prose">
 
 <!-- raw HTML omitted -->
-<p>Hugo supports loading data from YAML, JSON, XML, and TOML files located in the <code>data</code> directory in the root of your Hugo project.</p>
+<p>Hugo supports loading data from YAML, JSON, XML, and TOML files located in the <code>data</code> directory at the root of your Hugo project.</p>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/FyPgSuwIMWQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
 <h2 id="the-data-folder">The Data Folder <a class="header-link" href="#the-data-folder"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>The <code>data</code> folder is where you can store additional data for Hugo to use when generating your site. Data files aren&rsquo;t used to generate standalone pages; rather, they&rsquo;re meant to be supplemental to content files. This feature can extend the content in case your front matter fields grow out of control. Or perhaps you want to show a larger dataset in a template (see example below). In both cases, it&rsquo;s a good idea to outsource the data in their own files.</p>
+<p>The <code>data</code> folder should store additional data for Hugo to use when generating your site.</p>
+<p>Data files are not for generating standalone pages. They should supplement content files by:</p>
+<ul>
+<li>extending the content when the front matter fields grow out of control, or</li>
+<li>showing a larger dataset in a template (see the example below).</li>
+</ul>
+<p>In both cases, it&rsquo;s a good idea to outsource the data in their (own) files.</p>
 <p>These files must be YAML, JSON, XML, or TOML files (using the <code>.yml</code>, <code>.yaml</code>, <code>.json</code>, <code>.xml</code>, or <code>.toml</code> extension). The data will be accessible as a <code>map</code> in the <code>.Site.Data</code> variable.</p>
+<p>To access the data using the <code>site.Data.filename</code> notation, the filename must begin with an underscore or a Unicode letter, followed by zero or more underscores, Unicode letters, or Unicode digits. For example:</p>
+<ul>
+<li><code>123.json</code> - Invalid</li>
+<li><code>x123.json</code> - Valid</li>
+<li><code>_123.json</code> - Valid</li>
+</ul>
+<p>To access the data using the <a href="/functions/index-function/"><code>index</code></a> function, the filename is irrelevant. For example:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Data file</th>
+<th style="text-align:left">Template code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>123.json</code></td>
+<td style="text-align:left"><code>{{ index .Site.Data &quot;123&quot; }}</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>x123.json</code></td>
+<td style="text-align:left"><code>{{ index .Site.Data &quot;x123&quot; }}</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>_123.json</code></td>
+<td style="text-align:left"><code>{{ index .Site.Data &quot;_123&quot; }}</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>x-123.json</code></td>
+<td style="text-align:left"><code>{{ index .Site.Data &quot;x-123&quot; }}</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="data-files-in-themes">Data Files in Themes <a class="header-link" href="#data-files-in-themes"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>Data Files can also be used in <a href="/themes/">Hugo themes</a> but note that theme data files follow the same logic as other template files in the <a href="/templates/lookup-order/">Hugo lookup order</a> (i.e., given two files with the same name and relative path, the file in the root project <code>data</code> directory will override the file in the <code>themes/&lt;THEME&gt;/data</code> directory).</p>
-<p>Therefore, theme authors should take care to not include data files that could be easily overwritten by a user who decides to <a href="/themes/customizing/">customize a theme</a>. For theme-specific data items that shouldn&rsquo;t be overridden, it can be wise to prefix the folder structure with a namespace; e.g. <code>mytheme/data/&lt;THEME&gt;/somekey/...</code>. To check if any such duplicate exists, run hugo with the <code>-v</code> flag.</p>
-<p>The keys in the map created with data templates from data files will be a dot-chained set of <code>path</code>, <code>filename</code>, and <code>key</code> in file (if applicable).</p>
+<p>Data Files can also be used in <a href="/themes/">Hugo themes</a>.</p>
+<p>However, note that the theme data files are merged with the project directory taking precedence. That is, Given two files with the same name and relative path, the data in the file in the root project <code>data</code> directory will override the data from the file in the <code>themes/&lt;THEME&gt;/data</code> directory <em>for keys that are duplicated</em>).</p>
+<p>Therefore, theme authors should be careful not to include data files that could be easily overwritten by a user who decides to <a href="/themes/customizing/">customize a theme</a>. For theme-specific data items that shouldn&rsquo;t be overridden, it can be wise to prefix the folder structure with a namespace; e.g. <code>mytheme/data/&lt;THEME&gt;/somekey/...</code>. To check if any such duplicate exists, run hugo with the <code>-v</code> flag.</p>
+<p>The keys in the map created with data templates from data files will be a dot-chained set of <code>path</code>, <code>filename</code>, and <code>key</code> in the file (if applicable).</p>
 <p>This is best explained with an example:</p>
 <h2 id="example-jaco-pastorius-solo-discography">Example: Jaco Pastorius&rsquo; Solo Discography <a class="header-link" href="#example-jaco-pastorius-solo-discography"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p><a href="https://en.wikipedia.org/wiki/Jaco_Pastorius_discography">Jaco Pastorius</a> was a great bass player, but his solo discography is short enough to use as an example. <a href="https://en.wikipedia.org/wiki/John_Patitucci">John Patitucci</a> is another bass giant.</p>
@@ -361,16 +401,16 @@
 
 <p>The list of bass players can be accessed via <code>.Site.Data.jazz.bass</code>, a single bass player by adding the filename without the suffix, e.g. <code>.Site.Data.jazz.bass.jacopastorius</code>.</p>
 <p>You can now render the list of recordings for all the bass players in a template:</p>
-<pre tabindex="0"><code>{{ range $.Site.Data.jazz.bass }}
-   {{ partial &#34;artist.html&#34; . }}
-{{ end }}
-</code></pre><p>And then in the <code>partials/artist.html</code>:</p>
-<pre tabindex="0"><code>&lt;ul&gt;
-{{ range .discography }}
-  &lt;li&gt;{{ . }}&lt;/li&gt;
-{{ end }}
-&lt;/ul&gt;
-</code></pre><p>Discover a new favorite bass player? Just add another <code>.toml</code> file in the same directory.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">$.Site.Data.jazz.bass</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">   <span class="cp">{{</span><span class="w"> </span><span class="nx">partial</span><span class="w"> </span><span class="s">&#34;artist.html&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><p>And then in the <code>partials/artist.html</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.discography</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>Discover a new favorite bass player? Just add another <code>.toml</code> file in the same directory.</p>
 <h2 id="example-accessing-named-values-in-a-data-file">Example: Accessing Named Values in a Data File <a class="header-link" href="#example-accessing-named-values-in-a-data-file"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Assume you have the following data structure in your <code>User0123.[yml|toml|xml|json]</code> data file located directly in <code>data/</code>:</p>
 
@@ -425,33 +465,27 @@
 </div>
 
 <p>You can use the following code to render the <code>Short Description</code> in your layout:</p>
-<pre tabindex="0"><code>&lt;div&gt;Short Description of {{.Site.Data.User0123.Name}}: &lt;p&gt;{{ index .Site.Data.User0123 &#34;Short Description&#34; | markdownify }}&lt;/p&gt;&lt;/div&gt;
-</code></pre><p>Note the use of the <a href="/functions/markdownify/"><code>markdownify</code> template function</a>. This will send the description through the Markdown rendering engine.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>Short Description of <span class="cp">{{</span><span class="na">.Site.Data.User0123.Name</span><span class="cp">}}</span>: <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="k">index</span><span class="w"> </span><span class="na">.Site.Data.User0123</span><span class="w"> </span><span class="s">&#34;Short Description&#34;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">markdownify</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>Note the use of the <a href="/functions/markdownify/"><code>markdownify</code> template function</a>. This will send the description through the Markdown rendering engine.</p>
 <h2 id="get-remote-data">Get Remote Data <a class="header-link" href="#get-remote-data"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Use <code>getJSON</code> or <code>getCSV</code> to get remote data:</p>
-<pre tabindex="0"><code>{{ $dataJ := getJSON &#34;url&#34; }}
-{{ $dataC := getCSV &#34;separator&#34; &#34;url&#34; }}
-</code></pre><p>If you use a prefix or postfix for the URL, the functions accept <a href="https://en.wikipedia.org/wiki/Variadic_function">variadic arguments</a>:</p>
-<pre tabindex="0"><code>{{ $dataJ := getJSON &#34;url prefix&#34; &#34;arg1&#34; &#34;arg2&#34; &#34;arg n&#34; }}
-{{ $dataC := getCSV  &#34;separator&#34; &#34;url prefix&#34; &#34;arg1&#34; &#34;arg2&#34; &#34;arg n&#34; }}
-</code></pre><p>The separator for <code>getCSV</code> must be put in the first position and can only be one character long.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$dataJ</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">getJSON</span><span class="w"> </span><span class="s">&#34;url&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$dataC</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">getCSV</span><span class="w"> </span><span class="s">&#34;separator&#34;</span><span class="w"> </span><span class="s">&#34;url&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><p>If you use a prefix or postfix for the URL, the functions accept <a href="https://en.wikipedia.org/wiki/Variadic_function">variadic arguments</a>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$dataJ</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">getJSON</span><span class="w"> </span><span class="s">&#34;url prefix&#34;</span><span class="w"> </span><span class="s">&#34;arg1&#34;</span><span class="w"> </span><span class="s">&#34;arg2&#34;</span><span class="w"> </span><span class="s">&#34;arg n&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$dataC</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">getCSV</span><span class="w">  </span><span class="s">&#34;separator&#34;</span><span class="w"> </span><span class="s">&#34;url prefix&#34;</span><span class="w"> </span><span class="s">&#34;arg1&#34;</span><span class="w"> </span><span class="s">&#34;arg2&#34;</span><span class="w"> </span><span class="s">&#34;arg n&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><p>The separator for <code>getCSV</code> must be put in the first position and can only be one character long.</p>
 <p>All passed arguments will be joined to the final URL:</p>
-<pre tabindex="0"><code>{{ $urlPre := &#34;https://api.github.com&#34; }}
-{{ $gistJ := getJSON $urlPre &#34;/users/GITHUB_USERNAME/gists&#34; }}
-</code></pre><p>This will resolve internally to the following:</p>
-<pre tabindex="0"><code>{{ $gistJ := getJSON &#34;https://api.github.com/users/GITHUB_USERNAME/gists&#34; }}
-</code></pre><h3 id="add-http-headers">Add HTTP headers <a class="header-link" href="#add-http-headers"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>
-
-
-<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
-    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.84.0" target="_blank">New in v0.84.0</a>
-</button>
- Both <code>getJSON</code> and <code>getCSV</code> takes an optional map as the last argument, e.g.:</p>
-<pre tabindex="0"><code>{{ $data := getJSON &#34;https://example.org/api&#34; (dict &#34;Authorization&#34; &#34;Bearer abcd&#34;)  }}
-</code></pre><p>If you need multiple values for the same header key, use a slice:</p>
-<pre tabindex="0"><code>{{ $data := getJSON &#34;https://example.org/api&#34; (dict &#34;X-List&#34; (slice &#34;a&#34; &#34;b&#34; &#34;c&#34;))  }}
-</code></pre><h3 id="example-for-csv-files">Example for CSV files <a class="header-link" href="#example-for-csv-files"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$urlPre</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&#34;https://api.github.com&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$gistJ</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">getJSON</span><span class="w"> </span><span class="nx">$urlPre</span><span class="w"> </span><span class="s">&#34;/users/GITHUB_USERNAME/gists&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><p>This will resolve internally to the following:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$gistJ</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">getJSON</span><span class="w"> </span><span class="s">&#34;https://api.github.com/users/GITHUB_USERNAME/gists&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><h3 id="add-http-headers">Add HTTP headers <a class="header-link" href="#add-http-headers"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<p>Both <code>getJSON</code> and <code>getCSV</code> takes an optional map as the last argument, e.g.:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$data</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">getJSON</span><span class="w"> </span><span class="s">&#34;https://example.org/api&#34;</span><span class="w"> </span><span class="o">(</span><span class="nx">dict</span><span class="w"> </span><span class="s">&#34;Authorization&#34;</span><span class="w"> </span><span class="s">&#34;Bearer abcd&#34;</span><span class="o">)</span><span class="w">  </span><span class="cp">}}</span>
+</span></span></code></pre></div><p>If you need multiple values for the same header key, use a slice:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$data</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">getJSON</span><span class="w"> </span><span class="s">&#34;https://example.org/api&#34;</span><span class="w"> </span><span class="o">(</span><span class="nx">dict</span><span class="w"> </span><span class="s">&#34;X-List&#34;</span><span class="w"> </span><span class="o">(</span><span class="nx">slice</span><span class="w"> </span><span class="s">&#34;a&#34;</span><span class="w"> </span><span class="s">&#34;b&#34;</span><span class="w"> </span><span class="s">&#34;c&#34;</span><span class="o">))</span><span class="w">  </span><span class="cp">}}</span>
+</span></span></code></pre></div><h3 id="example-for-csv-files">Example for CSV files <a class="header-link" href="#example-for-csv-files"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>For <code>getCSV</code>, the one-character-long separator must be placed in the first position followed by the URL. The following is an example of creating an HTML table in a <a href="/templates/partials/">partial template</a> from a published CSV:</p>
 
 
@@ -483,9 +517,9 @@
 </span></span><span class="line"><span class="cl">    <span class="cp">{{</span><span class="w"> </span><span class="nx">$sep</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&#34;,&#34;</span><span class="w"> </span><span class="cp">}}</span>
 </span></span><span class="line"><span class="cl">    <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">$i</span><span class="o">,</span><span class="w"> </span><span class="nx">$r</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">getCSV</span><span class="w"> </span><span class="nx">$sep</span><span class="w"> </span><span class="nx">$url</span><span class="w"> </span><span class="cp">}}</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="k">index</span><span class="w"> </span><span class="nx">$r</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="k">index</span><span class="w"> </span><span class="nx">$r</span><span class="w"> </span><span class="nx">1</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="k">index</span><span class="w"> </span><span class="nx">$r</span><span class="w"> </span><span class="nx">2</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="k">index</span><span class="w"> </span><span class="nx">$r</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="k">index</span><span class="w"> </span><span class="nx">$r</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="k">index</span><span class="w"> </span><span class="nx">$r</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
@@ -499,7 +533,7 @@
 <p>Each downloaded URL will be cached in the default folder <code>$TMPDIR/hugo_cache/</code>. The variable <code>$TMPDIR</code> will be resolved to your system-dependent temporary directory.</p>
 <p>With the command-line flag <code>--cacheDir</code>, you can specify any folder on your system as a caching directory.</p>
 <p>You can also set <code>cacheDir</code> in the <a href="/getting-started/configuration/">main configuration file</a>.</p>
-<p>If you don&rsquo;t like caching at all, you can fully disable caching with the command line flag <code>--ignoreCache</code>.</p>
+<p>If you don&rsquo;t like caching at all, you can fully disable caching with the command-line flag <code>--ignoreCache</code>.</p>
 <h3 id="authentication-when-using-rest-urls">Authentication When Using REST URLs <a class="header-link" href="#authentication-when-using-rest-urls"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>Currently, you can only use those authentication methods that can be put into an URL. <a href="https://en.wikipedia.org/wiki/OAuth">OAuth</a> and other authentication methods are not implemented.</p>
 <h2 id="load-local-files">Load Local files <a class="header-link" href="#load-local-files"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
@@ -512,12 +546,12 @@
 	</div>
 	
 	
-	<div class="admonition-content"><p>The local CSV files to be loaded using <code>getCSV</code> must be located <strong>outside</strong> of the <code>data</code> directory.</p>
+	<div class="admonition-content"><p>The local CSV files to be loaded using <code>getCSV</code> must be located <strong>outside</strong> the <code>data</code> directory.</p>
 </div>
 </aside>
 
 <h2 id="livereload-with-data-files">LiveReload with Data Files <a class="header-link" href="#livereload-with-data-files"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>There is no chance to trigger a <a href="/getting-started/usage/#livereload">LiveReload</a> when the content of a URL changes. However, when a <em>local</em> file changes (i.e., <code>data/*</code> and <code>themes/&lt;THEME&gt;/data/*</code>), a LiveReload will be triggered. Symlinks are not supported. Note too that because downloading of data takes a while, Hugo stops processing your Markdown files until the data download has completed.</p>
+<p>There is no chance to trigger a <a href="/getting-started/usage/#livereload">LiveReload</a> when the content of a URL changes. However, when a <em>local</em> file changes (i.e., <code>data/*</code> and <code>themes/&lt;THEME&gt;/data/*</code>), a LiveReload will be triggered. Symlinks are not supported. Note too that because downloading data takes a while, Hugo stops processing your Markdown files until the data download has been completed.</p>
 
 <aside class="admonition warning">
 	<div class="admonition-icon">
@@ -612,6 +646,37 @@
       </li>
       
       <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".installation">Installation</a>
+        <ul class="installation desktopmenu animated fadeIn list pl0 bg-light-gray dn">
+          <li class="f6 fw4">
+            <a href="/installation/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Installation overview
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/macos/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              macOS
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/linux/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Linux
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/windows/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Windows
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/bsd/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              BSD
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".getting-started">Getting Started</a>
         <ul class="getting-started desktopmenu animated fadeIn list pl0 bg-light-gray dn">
           <li class="f6 fw4">
@@ -625,13 +690,8 @@
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/getting-started/installing/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Install Hugo
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/getting-started/usage/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Basic Usage
+              Basic usage
             </a>
           </li>
           <li class="f6 fw4">
@@ -923,11 +983,6 @@
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/templates/alternatives/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Alternative Templating
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/templates/template-debugging/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Template Debugging
             </a>
@@ -1059,6 +1114,11 @@
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/crypto.fnv32a/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              crypto.FNV32a
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/default/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               default
             </a>
@@ -1071,6 +1131,11 @@
           <li class="f6 fw4">
             <a href="/functions/dict/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               dict
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/duration/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              duration
             </a>
           </li>
           <li class="f6 fw4">
@@ -1479,8 +1544,23 @@
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/strings.contains/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.Contains
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/strings.containsany/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.ContainsAny
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/strings.count/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               strings.Count
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/strings.firstupper/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.FirstUpper
             </a>
           </li>
           <li class="f6 fw4">
@@ -1544,6 +1624,11 @@
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/time.parseduration/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              time.ParseDuration
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/title/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               title
             </a>
@@ -1591,6 +1676,11 @@
           <li class="f6 fw4">
             <a href="/functions/urlize/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               urlize
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/urlquery/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              urlquery
             </a>
           </li>
           <li class="f6 fw4">
@@ -1682,7 +1772,7 @@
           </li>
           <li class="f6 fw4">
             <a href="/hugo-pipes/scss-sass/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              SASS / SCSS
+              Sass / SCSS
             </a>
           </li>
           <li class="f6 fw4">
@@ -1813,8 +1903,18 @@
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-21yunbox/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on 21YunBox
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/hosting-and-deployment/hosting-on-aws-amplify/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Host on AWS Amplify
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-azure/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on Azure Static Web Apps
             </a>
           </li>
           <li class="f6 fw4">
@@ -1844,7 +1944,7 @@
           </li>
           <li class="f6 fw4">
             <a href="/hosting-and-deployment/hosting-on-keycdn/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hosting on KeyCDN
+              Host on KeyCDN
             </a>
           </li>
           <li class="f6 fw4">
@@ -1860,6 +1960,11 @@
           <li class="f6 fw4">
             <a href="/hosting-and-deployment/deployment-with-rclone/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Deployment with Rclone
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-azure-static-web-apps/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Hosting on Azure Static Web Apps
             </a>
           </li>
         </ul>
@@ -1905,7 +2010,7 @@
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: June 19, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/22d493aa56a2750c0cf5c66646ac6972372fabaa">Merge pull request #111 from blackb1rd/hugo/v0.101.0 (22d493a)</a>
+  Last updated: April 2, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/e4d54d04c1b3f8409ba9ede9679a504778ecd83f">Merge pull request #113 from neohugo/hugo/v0.109.0 (e4d54d0)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/templates/data-templates.md" class="
@@ -1948,49 +2053,56 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
         
 
 
-  <section class="pb3 w-100">
-    <div class="center mw9"> 
+
+
+
+  <section
+    class="pb3 w-100">
+    <div class="center mw9">
       <h3 class="b f3 mv0 light-gray">Hugo Sponsors</h3>
       <div class="flex-ns flex-wrap center justify-between pt3">
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100">
-              
-                
-                   <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/linode-logo_standard_light_medium.png" alt="Logo for Linode" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            >
+            
+            
+              <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/linode-logo_standard_light_medium.png"
+                  alt="Logo for Linode"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100">
-              
-                
-                   <a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/esolia-logo.svg" alt="Logo for eSolia" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            >
+            
+            
+              <a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/esolia-logo.svg"
+                  alt="Logo for eSolia"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100" style="background-color: #5A2FA1;">
-              
-                
-                   <a href="https://brave.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/brave-logo.svg" alt="Logo for Brave" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            style="background-color: #131A3E;">
+            
+            
+              <a href="https://buttercms.com/hugo-cms/?utm_campaign=sponsorship&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/butter-light.svg"
+                  alt="Logo for ButterCMS"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
       </div>
     </div>
@@ -2002,13 +2114,13 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     </div>
 
     <div class="f7 gray mb5 mb0-ns ph3 w-100"> 
-      <p class="dib mr4">The Hugo logos are copyright © Steve Francia 2013–2022.</p>
+      <p class="dib mr4">The Hugo logos are copyright © Steve Francia 2013–2023.</p>
       <p class="dib">The Hugo Gopher is based on an original work by Renée French.</p>
     </div>
 
     <img src="/images/gopher-side_color.svg" alt="" class="absolute-l bottom-0 dn db-l h4 right-0 z-999"/>
 
-    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100"><div  class="globalmenu mobilemenu pb1 dn">
+    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100 z-2"><div  class="globalmenu mobilemenu pb1 dn">
     
 
 <ul class="list hidden dib ph0 scrolling-touch tc">
@@ -2060,6 +2172,12 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/about/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
           About Hugo
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/installation/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Installation
         </a>
     </li>
   
@@ -2158,9 +2276,6 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
   
 
   
-
-  
-
 
 </body>
 

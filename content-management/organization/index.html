@@ -13,7 +13,7 @@
   <title>Content Organization | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.23-DEV" />
+  <meta name="generator" content="Hugo 0.110.0-DEV">
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -26,7 +26,7 @@
   
   
   
-  <link rel="stylesheet" href="/output/css/app.min.b368142944d203fdc1d3dec8ab085c0c0e75aaf9171853110f03e91c1c2616f4.css" integrity="sha256-s2gUKUTSA/3B097IqwhcDA51qvkXGFMRDwPpHBwmFvQ=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/output/css/app.min.b03318b1df01f94314ccbf9f6c0e79c24f1db2c5fefa37614fc49ace24642f7f.css" integrity="sha256-sDMYsd8B&#43;UMUzL&#43;fbA55wk8dssX&#43;&#43;jdhT8SaziRkL38=" crossorigin="anonymous">
   
   
   
@@ -42,7 +42,7 @@
 
 
   
-  <script type="text/javascript" src="/output/js/app.175b405753a9c0ce86ab35944e9c4cc1a758a6873209cf5106600f6b2f5a59b6.js" integrity="sha256-F1tAV1OpwM6GqzWUTpxMwadYpocyCc9RBmAPay9aWbY=" crossorigin="anonymous" defer></script>
+  <script type="text/javascript" src="/output/js/app.5a802739f9b2407f0d3a1f84a20731b6705a5a4df051c35686f22bd3aea90731.js" integrity="sha256-WoAnOfmyQH8NOh&#43;EogcxtnBaWk3wUcNWhvIr066pBzE=" crossorigin="anonymous" defer></script>
   
       
  
@@ -61,11 +61,11 @@
 <meta property="og:description" content="Hugo assumes that the same structure that works to organize your source content is used to organize the rendered site." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/content-management/organization/" /><meta property="og:image" content="https://gohugo.io/content-management/organization/1-featured-content-bundles.png"/><meta property="article:section" content="content-management" />
-<meta property="article:published_time" content="2017-02-01T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-06-19T23:24:54+07:00" />
+
+<meta property="article:modified_time" content="2023-04-02T12:35:49-07:00" />
 <meta itemprop="name" content="Content Organization">
-<meta itemprop="description" content="Hugo assumes that the same structure that works to organize your source content is used to organize the rendered site."><meta itemprop="datePublished" content="2017-02-01T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-06-19T23:24:54+07:00" />
+<meta itemprop="description" content="Hugo assumes that the same structure that works to organize your source content is used to organize the rendered site.">
+<meta itemprop="dateModified" content="2023-04-02T12:35:49-07:00" />
 <meta itemprop="wordCount" content="1045"><meta itemprop="image" content="https://gohugo.io/content-management/organization/1-featured-content-bundles.png">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/content-management/organization/1-featured-content-bundles.png"/>
@@ -213,7 +213,7 @@
 		
 
 		
-			<a href="https://gohugo.io/content-management/syntax-highlighting/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Syntax Highlighting">
+			<a href="https://gohugo.io/content-management/page-bundles/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Page Bundles">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -296,19 +296,19 @@ The illustration shows three bundles. Note that the home page bundle cannot cont
 <p>In Hugo, your content should be organized in a manner that reflects the rendered website.</p>
 <p>While Hugo supports content nested at any level, the top levels (i.e. <code>content/&lt;DIRECTORIES&gt;</code>) are special in Hugo and are considered the content type used to determine layouts etc. To read more about sections, including how to nest them, see <a href="/content-management/sections/">sections</a>.</p>
 <p>Without any additional configuration, the following will automatically work:</p>
-<pre tabindex="0"><code>.
-└── content
-    └── about
-    |   └── index.md  // &lt;- https://example.com/about/
-    ├── posts
-    |   ├── firstpost.md   // &lt;- https://example.com/posts/firstpost/
-    |   ├── happy
-    |   |   └── ness.md  // &lt;- https://example.com/posts/happy/ness/
-    |   └── secondpost.md  // &lt;- https://example.com/posts/secondpost/
-    └── quote
-        ├── first.md       // &lt;- https://example.com/quote/first/
-        └── second.md      // &lt;- https://example.com/quote/second/
-</code></pre><h2 id="path-breakdown-in-hugo">Path Breakdown in Hugo <a class="header-link" href="#path-breakdown-in-hugo"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">.
+</span></span><span class="line"><span class="cl">└── content
+</span></span><span class="line"><span class="cl">    └── about
+</span></span><span class="line"><span class="cl">    |   └── index.md  // &lt;- https://example.com/about/
+</span></span><span class="line"><span class="cl">    ├── posts
+</span></span><span class="line"><span class="cl">    |   ├── firstpost.md   // &lt;- https://example.com/posts/firstpost/
+</span></span><span class="line"><span class="cl">    |   ├── happy
+</span></span><span class="line"><span class="cl">    |   |   └── ness.md  // &lt;- https://example.com/posts/happy/ness/
+</span></span><span class="line"><span class="cl">    |   └── secondpost.md  // &lt;- https://example.com/posts/secondpost/
+</span></span><span class="line"><span class="cl">    └── quote
+</span></span><span class="line"><span class="cl">        ├── first.md       // &lt;- https://example.com/quote/first/
+</span></span><span class="line"><span class="cl">        └── second.md      // &lt;- https://example.com/quote/second/
+</span></span></code></pre></div><h2 id="path-breakdown-in-hugo">Path Breakdown in Hugo <a class="header-link" href="#path-breakdown-in-hugo"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>The following demonstrates the relationships between your content organization and the output URL structure for your Hugo website when it renders. These examples assume you are <a href="/content-management/urls/#pretty-urls">using pretty URLs</a>, which is the default behavior for Hugo. The examples also assume a key-value of <code>baseURL = &quot;https://example.com&quot;</code> in your <a href="/getting-started/configuration/">site&rsquo;s configuration file</a>.</p>
 <h3 id="index-pages-_indexmd">Index Pages: <code>_index.md</code> <a class="header-link" href="#index-pages-_indexmd"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p><code>_index.md</code> has a special role in Hugo. It allows you to add front matter and content to your <a href="/templates/lists/">list templates</a>. These templates include those for <a href="/templates/section-templates/">section templates</a>, <a href="/templates/taxonomy-templates/">taxonomy templates</a>, <a href="/templates/taxonomy-templates/">taxonomy terms templates</a>, and your <a href="/templates/homepage/">homepage template</a>.</p>
@@ -324,40 +324,40 @@ The illustration shows three bundles. Note that the home page bundle cannot cont
 </aside>
 
 <p>You can create one <code>_index.md</code> for your homepage and one in each of your content sections, taxonomies, and taxonomy terms. The following shows typical placement of an <code>_index.md</code> that would contain content and front matter for a <code>posts</code> section list page on a Hugo website:</p>
-<pre tabindex="0"><code>.         url
-.       ⊢--^-⊣
-.        path    slug
-.       ⊢--^-⊣⊢---^---⊣
-.           filepath
-.       ⊢------^------⊣
-content/posts/_index.md
-</code></pre><p>At build, this will output to the following destination with the associated values:</p>
-<pre tabindex="0"><code>
-                     url (&#34;/posts/&#34;)
-                    ⊢-^-⊣
-       baseurl      section (&#34;posts&#34;)
-⊢--------^---------⊣⊢-^-⊣
-        permalink
-⊢----------^-------------⊣
-https://example.com/posts/index.html
-</code></pre><p>The <a href="/content-management/sections/">sections</a> can be nested as deeply as you want. The important thing to understand is that to make the section tree fully navigational, at least the lower-most section must include a content file. (i.e. <code>_index.md</code>).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">.         url
+</span></span><span class="line"><span class="cl">.       ⊢--^-⊣
+</span></span><span class="line"><span class="cl">.        path    slug
+</span></span><span class="line"><span class="cl">.       ⊢--^-⊣⊢---^---⊣
+</span></span><span class="line"><span class="cl">.           filepath
+</span></span><span class="line"><span class="cl">.       ⊢------^------⊣
+</span></span><span class="line"><span class="cl">content/posts/_index.md
+</span></span></code></pre></div><p>At build, this will output to the following destination with the associated values:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                     url (&#34;/posts/&#34;)
+</span></span><span class="line"><span class="cl">                    ⊢-^-⊣
+</span></span><span class="line"><span class="cl">       baseurl      section (&#34;posts&#34;)
+</span></span><span class="line"><span class="cl">⊢--------^---------⊣⊢-^-⊣
+</span></span><span class="line"><span class="cl">        permalink
+</span></span><span class="line"><span class="cl">⊢----------^-------------⊣
+</span></span><span class="line"><span class="cl">https://example.com/posts/index.html
+</span></span></code></pre></div><p>The <a href="/content-management/sections/">sections</a> can be nested as deeply as you want. The important thing to understand is that to make the section tree fully navigational, at least the lower-most section must include a content file. (i.e. <code>_index.md</code>).</p>
 <h3 id="single-pages-in-sections">Single Pages in Sections <a class="header-link" href="#single-pages-in-sections"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>Single content files in each of your sections will be rendered as <a href="/templates/single-page-templates/">single page templates</a>. Here is an example of a single <code>post</code> within <code>posts</code>:</p>
-<pre tabindex="0"><code>                   path (&#34;posts/my-first-hugo-post.md&#34;)
-.       ⊢-----------^------------⊣
-.      section        slug
-.       ⊢-^-⊣⊢--------^----------⊣
-content/posts/my-first-hugo-post.md
-</code></pre><p>When Hugo builds your site, the content will be output to the following destination:</p>
-<pre tabindex="0"><code>
-                               url (&#34;/posts/my-first-hugo-post/&#34;)
-                   ⊢------------^----------⊣
-       baseurl     section     slug
-⊢--------^--------⊣⊢-^--⊣⊢-------^---------⊣
-                 permalink
-⊢--------------------^---------------------⊣
-https://example.com/posts/my-first-hugo-post/index.html
-</code></pre><h2 id="paths-explained">Paths Explained <a class="header-link" href="#paths-explained"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">                   path (&#34;posts/my-first-hugo-post.md&#34;)
+</span></span><span class="line"><span class="cl">.       ⊢-----------^------------⊣
+</span></span><span class="line"><span class="cl">.      section        slug
+</span></span><span class="line"><span class="cl">.       ⊢-^-⊣⊢--------^----------⊣
+</span></span><span class="line"><span class="cl">content/posts/my-first-hugo-post.md
+</span></span></code></pre></div><p>When Hugo builds your site, the content will be output to the following destination:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                               url (&#34;/posts/my-first-hugo-post/&#34;)
+</span></span><span class="line"><span class="cl">                   ⊢------------^----------⊣
+</span></span><span class="line"><span class="cl">       baseurl     section     slug
+</span></span><span class="line"><span class="cl">⊢--------^--------⊣⊢-^--⊣⊢-------^---------⊣
+</span></span><span class="line"><span class="cl">                 permalink
+</span></span><span class="line"><span class="cl">⊢--------------------^---------------------⊣
+</span></span><span class="line"><span class="cl">https://example.com/posts/my-first-hugo-post/index.html
+</span></span></code></pre></div><h2 id="paths-explained">Paths Explained <a class="header-link" href="#paths-explained"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>The following concepts provide more insight into the relationship between your project&rsquo;s organization and the default Hugo behavior when building output for the website.</p>
 <h3 id="section"><code>section</code> <a class="header-link" href="#section"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>A default content type is determined by the section in which a content item is stored. <code>section</code> is determined by the location within the project&rsquo;s <code>content</code> directory. <code>section</code> <em>cannot</em> be specified or overridden in front matter.</p>
@@ -411,8 +411,8 @@ https://example.com/posts/my-first-hugo-post/index.html
 </div>
 
 <p>This will render to the following destination according to Hugo&rsquo;s default behavior:</p>
-<pre tabindex="0"><code>example.com/posts/new-post/
-</code></pre><h3 id="section-1"><code>section</code> <a class="header-link" href="#section-1"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">example.com/posts/new-post/
+</span></span></code></pre></div><h3 id="section-1"><code>section</code> <a class="header-link" href="#section-1"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p><code>section</code> is determined by a content item&rsquo;s location on disk and <em>cannot</em> be specified in the front matter. See <a href="/content-management/sections/">sections</a> for more information.</p>
 <h3 id="type"><code>type</code> <a class="header-link" href="#type"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>A content item&rsquo;s <code>type</code> is also determined by its location on disk but, unlike <code>section</code>, it <em>can</em> be specified in the front matter. See <a href="/content-management/types/">types</a>. This can come in especially handy when you want a piece of content to render using a different layout. In the following example, you can create a layout at <code>layouts/new/mylayout.html</code> that Hugo will use to render this piece of content, even in the midst of many other posts.</p>
@@ -469,8 +469,8 @@ https://example.com/posts/my-first-hugo-post/index.html
 </div>
 
 <p>Assuming your <code>baseURL</code> is <a href="/getting-started/configuration/">configured</a> to <code>https://example.com</code>, the addition of <code>url</code> to the front matter will make <code>old-url.md</code> render to the following destination:</p>
-<pre tabindex="0"><code>https://example.com/blog/new-url/
-</code></pre><p>You can see more information on how to control output paths in <a href="/content-management/urls/">URL Management</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">https://example.com/blog/new-url/
+</span></span></code></pre></div><p>You can see more information on how to control output paths in <a href="/content-management/urls/">URL Management</a>.</p>
 
 </div>
 
@@ -487,7 +487,7 @@ https://example.com/posts/my-first-hugo-post/index.html
 	
 	<li><a href="/content-management/types/">Content Types</a></li>
 	
-	<li><a href="/content-management/related/">Related Content</a></li>
+	<li><a href="/hugo-modules/configuration/">Configure Modules</a></li>
 	
 </ul>
 
@@ -541,6 +541,37 @@ https://example.com/posts/my-first-hugo-post/index.html
       </li>
       
       <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".installation">Installation</a>
+        <ul class="installation desktopmenu animated fadeIn list pl0 bg-light-gray dn">
+          <li class="f6 fw4">
+            <a href="/installation/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Installation overview
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/macos/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              macOS
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/linux/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Linux
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/windows/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Windows
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/bsd/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              BSD
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".getting-started">Getting Started</a>
         <ul class="getting-started desktopmenu animated fadeIn list pl0 bg-light-gray dn">
           <li class="f6 fw4">
@@ -554,13 +585,8 @@ https://example.com/posts/my-first-hugo-post/index.html
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/getting-started/installing/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Install Hugo
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/getting-started/usage/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Basic Usage
+              Basic usage
             </a>
           </li>
           <li class="f6 fw4">
@@ -852,11 +878,6 @@ https://example.com/posts/my-first-hugo-post/index.html
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/templates/alternatives/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Alternative Templating
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/templates/template-debugging/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Template Debugging
             </a>
@@ -988,6 +1009,11 @@ https://example.com/posts/my-first-hugo-post/index.html
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/crypto.fnv32a/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              crypto.FNV32a
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/default/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               default
             </a>
@@ -1000,6 +1026,11 @@ https://example.com/posts/my-first-hugo-post/index.html
           <li class="f6 fw4">
             <a href="/functions/dict/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               dict
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/duration/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              duration
             </a>
           </li>
           <li class="f6 fw4">
@@ -1408,8 +1439,23 @@ https://example.com/posts/my-first-hugo-post/index.html
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/strings.contains/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.Contains
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/strings.containsany/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.ContainsAny
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/strings.count/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               strings.Count
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/strings.firstupper/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.FirstUpper
             </a>
           </li>
           <li class="f6 fw4">
@@ -1473,6 +1519,11 @@ https://example.com/posts/my-first-hugo-post/index.html
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/time.parseduration/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              time.ParseDuration
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/title/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               title
             </a>
@@ -1520,6 +1571,11 @@ https://example.com/posts/my-first-hugo-post/index.html
           <li class="f6 fw4">
             <a href="/functions/urlize/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               urlize
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/urlquery/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              urlquery
             </a>
           </li>
           <li class="f6 fw4">
@@ -1611,7 +1667,7 @@ https://example.com/posts/my-first-hugo-post/index.html
           </li>
           <li class="f6 fw4">
             <a href="/hugo-pipes/scss-sass/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              SASS / SCSS
+              Sass / SCSS
             </a>
           </li>
           <li class="f6 fw4">
@@ -1742,8 +1798,18 @@ https://example.com/posts/my-first-hugo-post/index.html
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-21yunbox/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on 21YunBox
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/hosting-and-deployment/hosting-on-aws-amplify/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Host on AWS Amplify
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-azure/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on Azure Static Web Apps
             </a>
           </li>
           <li class="f6 fw4">
@@ -1773,7 +1839,7 @@ https://example.com/posts/my-first-hugo-post/index.html
           </li>
           <li class="f6 fw4">
             <a href="/hosting-and-deployment/hosting-on-keycdn/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hosting on KeyCDN
+              Host on KeyCDN
             </a>
           </li>
           <li class="f6 fw4">
@@ -1789,6 +1855,11 @@ https://example.com/posts/my-first-hugo-post/index.html
           <li class="f6 fw4">
             <a href="/hosting-and-deployment/deployment-with-rclone/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Deployment with Rclone
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-azure-static-web-apps/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Hosting on Azure Static Web Apps
             </a>
           </li>
         </ul>
@@ -1834,7 +1905,7 @@ https://example.com/posts/my-first-hugo-post/index.html
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: June 19, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/22d493aa56a2750c0cf5c66646ac6972372fabaa">Merge pull request #111 from blackb1rd/hugo/v0.101.0 (22d493a)</a>
+  Last updated: April 2, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/e4d54d04c1b3f8409ba9ede9679a504778ecd83f">Merge pull request #113 from neohugo/hugo/v0.109.0 (e4d54d0)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/content-management/organization/index.md" class="
@@ -1877,49 +1948,56 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
         
 
 
-  <section class="pb3 w-100">
-    <div class="center mw9"> 
+
+
+
+  <section
+    class="pb3 w-100">
+    <div class="center mw9">
       <h3 class="b f3 mv0 light-gray">Hugo Sponsors</h3>
       <div class="flex-ns flex-wrap center justify-between pt3">
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100">
-              
-                
-                   <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/linode-logo_standard_light_medium.png" alt="Logo for Linode" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            >
+            
+            
+              <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/linode-logo_standard_light_medium.png"
+                  alt="Logo for Linode"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100">
-              
-                
-                   <a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/esolia-logo.svg" alt="Logo for eSolia" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            >
+            
+            
+              <a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/esolia-logo.svg"
+                  alt="Logo for eSolia"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100" style="background-color: #5A2FA1;">
-              
-                
-                   <a href="https://brave.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/brave-logo.svg" alt="Logo for Brave" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            style="background-color: #131A3E;">
+            
+            
+              <a href="https://buttercms.com/hugo-cms/?utm_campaign=sponsorship&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/butter-light.svg"
+                  alt="Logo for ButterCMS"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
       </div>
     </div>
@@ -1931,13 +2009,13 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     </div>
 
     <div class="f7 gray mb5 mb0-ns ph3 w-100"> 
-      <p class="dib mr4">The Hugo logos are copyright © Steve Francia 2013–2022.</p>
+      <p class="dib mr4">The Hugo logos are copyright © Steve Francia 2013–2023.</p>
       <p class="dib">The Hugo Gopher is based on an original work by Renée French.</p>
     </div>
 
     <img src="/images/gopher-side_color.svg" alt="" class="absolute-l bottom-0 dn db-l h4 right-0 z-999"/>
 
-    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100"><div  class="globalmenu mobilemenu pb1 dn">
+    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100 z-2"><div  class="globalmenu mobilemenu pb1 dn">
     
 
 <ul class="list hidden dib ph0 scrolling-touch tc">
@@ -1989,6 +2067,12 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/about/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
           About Hugo
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/installation/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Installation
         </a>
     </li>
   
@@ -2087,9 +2171,6 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
   
 
   
-
-  
-
 
 </body>
 

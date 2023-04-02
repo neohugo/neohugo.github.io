@@ -13,7 +13,7 @@
   <title>URL Management | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.23-DEV" />
+  <meta name="generator" content="Hugo 0.110.0-DEV">
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -26,7 +26,7 @@
   
   
   
-  <link rel="stylesheet" href="/output/css/app.min.b368142944d203fdc1d3dec8ab085c0c0e75aaf9171853110f03e91c1c2616f4.css" integrity="sha256-s2gUKUTSA/3B097IqwhcDA51qvkXGFMRDwPpHBwmFvQ=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/output/css/app.min.b03318b1df01f94314ccbf9f6c0e79c24f1db2c5fefa37614fc49ace24642f7f.css" integrity="sha256-sDMYsd8B&#43;UMUzL&#43;fbA55wk8dssX&#43;&#43;jdhT8SaziRkL38=" crossorigin="anonymous">
   
   
   
@@ -42,7 +42,7 @@
 
 
   
-  <script type="text/javascript" src="/output/js/app.175b405753a9c0ce86ab35944e9c4cc1a758a6873209cf5106600f6b2f5a59b6.js" integrity="sha256-F1tAV1OpwM6GqzWUTpxMwadYpocyCc9RBmAPay9aWbY=" crossorigin="anonymous" defer></script>
+  <script type="text/javascript" src="/output/js/app.5a802739f9b2407f0d3a1f84a20731b6705a5a4df051c35686f22bd3aea90731.js" integrity="sha256-WoAnOfmyQH8NOh&#43;EogcxtnBaWk3wUcNWhvIr066pBzE=" crossorigin="anonymous" defer></script>
   
       
  
@@ -61,12 +61,12 @@
 <meta property="og:description" content="Hugo supports permalinks, aliases, link canonicalization, and multiple options for handling relative vs absolute URLs." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/content-management/urls/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_8453457148814798693.png"/><meta property="article:section" content="content-management" />
-<meta property="article:published_time" content="2017-02-01T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-06-19T23:24:54+07:00" />
+
+<meta property="article:modified_time" content="2023-04-02T12:35:49-07:00" />
 <meta itemprop="name" content="URL Management">
-<meta itemprop="description" content="Hugo supports permalinks, aliases, link canonicalization, and multiple options for handling relative vs absolute URLs."><meta itemprop="datePublished" content="2017-02-01T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-06-19T23:24:54+07:00" />
-<meta itemprop="wordCount" content="1697"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="description" content="Hugo supports permalinks, aliases, link canonicalization, and multiple options for handling relative vs absolute URLs.">
+<meta itemprop="dateModified" content="2023-04-02T12:35:49-07:00" />
+<meta itemprop="wordCount" content="1691"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_8453457148814798693.png"/>
 <meta name="twitter:title" content="URL Management"/>
@@ -361,7 +361,7 @@
   </div>
 </div>
 
-<p>If the standard date-based permalink configuration does not meet your needs, you can also format URL segments using <a href="https://golang.org/pkg/time/#Time.Format">Go time formatting directives</a>. For example, a URL structure with two digit years and month and day digits without zero padding can be accomplished with:</p>
+<p>If the standard date-based permalink configuration does not meet your needs, you can also format URL segments using <a href="https://pkg.go.dev/time#Time.Format">Go time formatting directives</a>. For example, a URL structure with two digit years and month and day digits without zero padding can be accomplished with:</p>
 
 <div class="code relative" id="config">
   <div class="code-nav flex flex-nowrap items-stretch">
@@ -422,13 +422,7 @@
 <dt><code>:section</code></dt>
 <dd>the content&rsquo;s section</dd>
 <dt><code>:sections</code></dt>
-<dd>the content&rsquo;s sections hierarchy. 
-
-
-<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
-    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.83.0" target="_blank">New in v0.83.0</a>
-</button>
- Since Hugo 0.83 you can use a selection of the sections using <em>slice syntax</em>: <code>:sections[1:]</code> includes all but the first, <code>:sections[:last]</code> includes all but the last, <code>:sections[last]</code> includes only the last, <code>:sections[1:2]</code> includes section 2 and 3. Note that this slice access will not throw any out-of-bounds errors, so you don&rsquo;t have to be exact.</dd>
+<dd>the content&rsquo;s sections hierarchy. You can use a selection of the sections using <em>slice syntax</em>: <code>:sections[1:]</code> includes all but the first, <code>:sections[:last]</code> includes all but the last, <code>:sections[last]</code> includes only the last, <code>:sections[1:2]</code> includes section 2 and 3. Note that this slice access will not throw any out-of-bounds errors, so you don&rsquo;t have to be exact.</dd>
 <dt><code>:title</code></dt>
 <dd>the content&rsquo;s title</dd>
 <dt><code>:slug</code></dt>
@@ -495,30 +489,30 @@
 <h3 id="example-aliases-in-multilingual">Example: Aliases in Multilingual <a class="header-link" href="#example-aliases-in-multilingual"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>On <a href="/content-management/multilingual/">multilingual sites</a>, each translation of a post can have unique aliases. To use the same alias across multiple languages, prefix it with the language code.</p>
 <p>In <code>/posts/my-new-post.es.md</code>:</p>
-<pre tabindex="0"><code>---
-aliases:
-    - /es/posts/my-original-post/
----
-</code></pre><p>From Hugo 0.55 you can also have page-relative aliases, so <code> /es/posts/my-original-post/</code> can be simplified to the more portable <code>my-original-post/</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">aliases:
+</span></span><span class="line"><span class="cl">    <span class="k">-</span> /es/posts/my-original-post/
+</span></span><span class="line"><span class="cl">---
+</span></span></code></pre></div><p>From Hugo 0.55 you can also have page-relative aliases, so <code>/es/posts/my-original-post/</code> can be simplified to the more portable <code>my-original-post/</code></p>
 <h3 id="how-hugo-aliases-work">How Hugo Aliases Work <a class="header-link" href="#how-hugo-aliases-work"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>When aliases are specified, Hugo creates a directory to match the alias entry. Inside the directory, Hugo creates an <code>.html</code> file specifying the canonical URL for the page and the new redirect target.</p>
 <p>For example, a content file at <code>posts/my-intended-url.md</code> with the following in the front matter:</p>
-<pre tabindex="0"><code>---
-title: My New post
-aliases: [/posts/my-old-url/]
----
-</code></pre><p>Assuming a <code>baseURL</code> of <code>example.com</code>, the contents of the auto-generated alias <code>.html</code> found at <code>https://example.com/posts/my-old-url/</code> will contain the following:</p>
-<pre tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;https://example.com/posts/my-intended-url&lt;/title&gt;
-    &lt;link rel=&#34;canonical&#34; href=&#34;https://example.com/posts/my-intended-url&#34;/&gt;
-    &lt;meta name=&#34;robots&#34; content=&#34;noindex&#34;&gt;
-    &lt;meta http-equiv=&#34;content-type&#34; content=&#34;text/html; charset=utf-8&#34;/&gt;
-    &lt;meta http-equiv=&#34;refresh&#34; content=&#34;0; url=https://example.com/posts/my-intended-url&#34;/&gt;
-  &lt;/head&gt;
-&lt;/html&gt;
-</code></pre><p>The <code>http-equiv=&quot;refresh&quot;</code> line is what performs the redirect, in 0 seconds in this case. If an end user of your website goes to <code>https://example.com/posts/my-old-url</code>, they will now be automatically redirected to the newer, correct URL. The addition of <code>&lt;meta name=&quot;robots&quot; content=&quot;noindex&quot;&gt;</code> lets search engine bots know that they should not index your alias page (<code>https://example.com/posts/my-old-url/</code>).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">My New post</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">aliases</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">/posts/my-old-url/]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
+</span></span></span></code></pre></div><p>Assuming a <code>baseURL</code> of <code>example.com</code>, the contents of the auto-generated alias <code>.html</code> found at <code>https://example.com/posts/my-old-url/</code> will contain the following:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>https://example.com/posts/my-intended-url<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;canonical&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://example.com/posts/my-intended-url&#34;</span><span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;robots&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;noindex&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;content-type&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;text/html; charset=utf-8&#34;</span><span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;refresh&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;0; url=https://example.com/posts/my-intended-url&#34;</span><span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>The <code>http-equiv=&quot;refresh&quot;</code> line is what performs the redirect, in 0 seconds in this case. If an end user of your website goes to <code>https://example.com/posts/my-old-url</code>, they will now be automatically redirected to the newer, correct URL. The addition of <code>&lt;meta name=&quot;robots&quot; content=&quot;noindex&quot;&gt;</code> lets search engine bots know that they should not index your alias page (<code>https://example.com/posts/my-old-url/</code>).</p>
 <h3 id="customize">Customize <a class="header-link" href="#customize"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>You may customize this alias page by creating an <code>alias.html</code> template in the
 layouts folder of your site (i.e., <code>layouts/alias.html</code>). In this case, the data passed to the template is</p>
@@ -538,40 +532,40 @@ and the complete filename or directory.</li>
 <h2 id="pretty-urls">Pretty URLs <a class="header-link" href="#pretty-urls"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Hugo&rsquo;s default behavior is to render your content with &ldquo;pretty&rdquo; URLs. No non-standard server-side configuration is required for these pretty URLs to work.</p>
 <p>The following demonstrates the concept:</p>
-<pre tabindex="0"><code>content/posts/_index.md
-=&gt; example.com/posts/
-content/posts/post-1.md
-=&gt; example.com/posts/post-1/
-</code></pre><h2 id="ugly-urls">Ugly URLs <a class="header-link" href="#ugly-urls"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">content/posts/_index.md
+</span></span><span class="line"><span class="cl">=&gt; example.com/posts/
+</span></span><span class="line"><span class="cl">content/posts/post-1.md
+</span></span><span class="line"><span class="cl">=&gt; example.com/posts/post-1/
+</span></span></code></pre></div><h2 id="ugly-urls">Ugly URLs <a class="header-link" href="#ugly-urls"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>If you would like to have what are often referred to as &ldquo;ugly URLs&rdquo; (e.g., example.com/urls.html), set <code>uglyurls = true</code> or <code>uglyurls: true</code> in your site&rsquo;s <code>config.toml</code> or <code>config.yaml</code>, respectively. You can also set the <code>HUGO_UGLYURLS</code> environment variable to <code>true</code> when running <code>hugo</code> or <code>hugo server</code>.</p>
 <p>If you want a specific piece of content to have an exact URL, you can specify this in the <a href="/content-management/front-matter/">front matter</a> under the <code>url</code> key. The following are examples of the same content directory and what the eventual URL structure will be when Hugo runs with its default behavior.</p>
 <p>See <a href="/content-management/organization/">Content Organization</a> for more details on paths.</p>
-<pre tabindex="0"><code>.
-└── content
-    └── about
-    |   └── _index.md  // &lt;- https://example.com/about/
-    ├── posts
-    |   ├── firstpost.md   // &lt;- https://example.com/posts/firstpost/
-    |   ├── happy
-    |   |   └── ness.md  // &lt;- https://example.com/posts/happy/ness/
-    |   └── secondpost.md  // &lt;- https://example.com/posts/secondpost/
-    └── quote
-        ├── first.md       // &lt;- https://example.com/quote/first/
-        └── second.md      // &lt;- https://example.com/quote/second/
-</code></pre><p>Here&rsquo;s the same organization run with <code>hugo --uglyURLs</code>:</p>
-<pre tabindex="0"><code>.
-└── content
-    └── about
-    |   └── _index.md  // &lt;- https://example.com/about.html
-    ├── posts
-    |   ├── firstpost.md   // &lt;- https://example.com/posts/firstpost.html
-    |   ├── happy
-    |   |   └── ness.md    // &lt;- https://example.com/posts/happy/ness.html
-    |   └── secondpost.md  // &lt;- https://example.com/posts/secondpost.html
-    └── quote
-        ├── first.md       // &lt;- https://example.com/quote/first.html
-        └── second.md      // &lt;- https://example.com/quote/second.html
-</code></pre><h2 id="canonicalization">Canonicalization <a class="header-link" href="#canonicalization"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">.
+</span></span><span class="line"><span class="cl">└── content
+</span></span><span class="line"><span class="cl">    └── about
+</span></span><span class="line"><span class="cl">    |   └── _index.md  // &lt;- https://example.com/about/
+</span></span><span class="line"><span class="cl">    ├── posts
+</span></span><span class="line"><span class="cl">    |   ├── firstpost.md   // &lt;- https://example.com/posts/firstpost/
+</span></span><span class="line"><span class="cl">    |   ├── happy
+</span></span><span class="line"><span class="cl">    |   |   └── ness.md  // &lt;- https://example.com/posts/happy/ness/
+</span></span><span class="line"><span class="cl">    |   └── secondpost.md  // &lt;- https://example.com/posts/secondpost/
+</span></span><span class="line"><span class="cl">    └── quote
+</span></span><span class="line"><span class="cl">        ├── first.md       // &lt;- https://example.com/quote/first/
+</span></span><span class="line"><span class="cl">        └── second.md      // &lt;- https://example.com/quote/second/
+</span></span></code></pre></div><p>Here&rsquo;s the same organization run with <code>hugo --uglyURLs</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">.
+</span></span><span class="line"><span class="cl">└── content
+</span></span><span class="line"><span class="cl">    └── about
+</span></span><span class="line"><span class="cl">    |   └── _index.md  // &lt;- https://example.com/about.html
+</span></span><span class="line"><span class="cl">    ├── posts
+</span></span><span class="line"><span class="cl">    |   ├── firstpost.md   // &lt;- https://example.com/posts/firstpost.html
+</span></span><span class="line"><span class="cl">    |   ├── happy
+</span></span><span class="line"><span class="cl">    |   |   └── ness.md    // &lt;- https://example.com/posts/happy/ness.html
+</span></span><span class="line"><span class="cl">    |   └── secondpost.md  // &lt;- https://example.com/posts/secondpost.html
+</span></span><span class="line"><span class="cl">    └── quote
+</span></span><span class="line"><span class="cl">        ├── first.md       // &lt;- https://example.com/quote/first.html
+</span></span><span class="line"><span class="cl">        └── second.md      // &lt;- https://example.com/quote/second.html
+</span></span></code></pre></div><h2 id="canonicalization">Canonicalization <a class="header-link" href="#canonicalization"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>By default, all relative URLs encountered in the input are left unmodified, e.g. <code>/css/foo.css</code> would stay as <code>/css/foo.css</code>. The <code>canonifyURLs</code> field in your site <code>config</code> has a default value of <code>false</code>.</p>
 <p>By setting <code>canonifyURLs</code> to <code>true</code>, all relative URLs would instead be <em>canonicalized</em> using <code>baseURL</code>.  For example, assuming you have <code>baseURL = https://example.com/</code>, the relative URL <code>/css/foo.css</code> would be turned into the absolute URL <code>https://example.com/css/foo.css</code>.</p>
 <p>Benefits of canonicalization include fixing all URLs to be absolute, which may aid with some parsing tasks. Note, however, that all modern browsers handle this on the client without issue.</p>
@@ -588,10 +582,10 @@ content/posts/post-1.md
 </aside>
 
 <p>To find out the current value of <code>canonifyURLs</code> for your website, you may use the handy <code>hugo config</code> command added in v0.13.</p>
-<pre tabindex="0"><code>hugo config | grep -i canon
-</code></pre><p>Or, if you are on Windows and do not have <code>grep</code> installed:</p>
-<pre tabindex="0"><code>hugo config | FINDSTR /I canon
-</code></pre><h2 id="set-url-in-front-matter">Set URL in Front Matter <a class="header-link" href="#set-url-in-front-matter"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">hugo config | grep -i canon
+</span></span></code></pre></div><p>Or, if you are on Windows and do not have <code>grep</code> installed:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">hugo config | FINDSTR /I canon
+</span></span></code></pre></div><h2 id="set-url-in-front-matter">Set URL in Front Matter <a class="header-link" href="#set-url-in-front-matter"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>In addition to specifying permalink values in your site configuration for different content sections, Hugo provides even more granular control for individual pieces of content.</p>
 <p>Both <code>slug</code> and <code>url</code> can be defined in individual front matter. For more information on content destinations at build time, see <a href="/content-management/organization/">Content Organization</a>.</p>
 <p>From Hugo 0.55, you can use URLs relative to the current site context (the language), which makes it simpler to maintain. For a Japanese translation, both of the following examples would get the same URL:</p>
@@ -615,15 +609,15 @@ content/posts/post-1.md
 <h2>See Also</h2>
 <ul>
 	
+	<li><a href="/functions/urlquery/">urlquery</a></li>
+	
 	<li><a href="/functions/urls.parse/">urls.Parse</a></li>
 	
-	<li><a href="/content-management/cross-references/">Links and Cross References</a></li>
-	
-	<li><a href="/functions/abslangurl/">absLangURL</a></li>
-	
-	<li><a href="/functions/absurl/">absURL</a></li>
-	
 	<li><a href="/functions/querify/">querify</a></li>
+	
+	<li><a href="/functions/safeurl/">safeURL</a></li>
+	
+	<li><a href="/functions/uniq/">uniq</a></li>
 	
 </ul>
 
@@ -677,6 +671,37 @@ content/posts/post-1.md
       </li>
       
       <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".installation">Installation</a>
+        <ul class="installation desktopmenu animated fadeIn list pl0 bg-light-gray dn">
+          <li class="f6 fw4">
+            <a href="/installation/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Installation overview
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/macos/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              macOS
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/linux/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Linux
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/windows/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Windows
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/bsd/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              BSD
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".getting-started">Getting Started</a>
         <ul class="getting-started desktopmenu animated fadeIn list pl0 bg-light-gray dn">
           <li class="f6 fw4">
@@ -690,13 +715,8 @@ content/posts/post-1.md
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/getting-started/installing/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Install Hugo
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/getting-started/usage/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Basic Usage
+              Basic usage
             </a>
           </li>
           <li class="f6 fw4">
@@ -988,11 +1008,6 @@ content/posts/post-1.md
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/templates/alternatives/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Alternative Templating
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/templates/template-debugging/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Template Debugging
             </a>
@@ -1124,6 +1139,11 @@ content/posts/post-1.md
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/crypto.fnv32a/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              crypto.FNV32a
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/default/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               default
             </a>
@@ -1136,6 +1156,11 @@ content/posts/post-1.md
           <li class="f6 fw4">
             <a href="/functions/dict/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               dict
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/duration/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              duration
             </a>
           </li>
           <li class="f6 fw4">
@@ -1544,8 +1569,23 @@ content/posts/post-1.md
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/strings.contains/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.Contains
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/strings.containsany/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.ContainsAny
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/strings.count/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               strings.Count
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/strings.firstupper/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.FirstUpper
             </a>
           </li>
           <li class="f6 fw4">
@@ -1609,6 +1649,11 @@ content/posts/post-1.md
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/time.parseduration/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              time.ParseDuration
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/title/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               title
             </a>
@@ -1656,6 +1701,11 @@ content/posts/post-1.md
           <li class="f6 fw4">
             <a href="/functions/urlize/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               urlize
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/urlquery/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              urlquery
             </a>
           </li>
           <li class="f6 fw4">
@@ -1747,7 +1797,7 @@ content/posts/post-1.md
           </li>
           <li class="f6 fw4">
             <a href="/hugo-pipes/scss-sass/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              SASS / SCSS
+              Sass / SCSS
             </a>
           </li>
           <li class="f6 fw4">
@@ -1878,8 +1928,18 @@ content/posts/post-1.md
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-21yunbox/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on 21YunBox
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/hosting-and-deployment/hosting-on-aws-amplify/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Host on AWS Amplify
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-azure/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on Azure Static Web Apps
             </a>
           </li>
           <li class="f6 fw4">
@@ -1909,7 +1969,7 @@ content/posts/post-1.md
           </li>
           <li class="f6 fw4">
             <a href="/hosting-and-deployment/hosting-on-keycdn/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hosting on KeyCDN
+              Host on KeyCDN
             </a>
           </li>
           <li class="f6 fw4">
@@ -1925,6 +1985,11 @@ content/posts/post-1.md
           <li class="f6 fw4">
             <a href="/hosting-and-deployment/deployment-with-rclone/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Deployment with Rclone
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-azure-static-web-apps/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Hosting on Azure Static Web Apps
             </a>
           </li>
         </ul>
@@ -1970,7 +2035,7 @@ content/posts/post-1.md
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: June 19, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/22d493aa56a2750c0cf5c66646ac6972372fabaa">Merge pull request #111 from blackb1rd/hugo/v0.101.0 (22d493a)</a>
+  Last updated: April 2, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/e4d54d04c1b3f8409ba9ede9679a504778ecd83f">Merge pull request #113 from neohugo/hugo/v0.109.0 (e4d54d0)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/content-management/urls.md" class="
@@ -2013,49 +2078,56 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
         
 
 
-  <section class="pb3 w-100">
-    <div class="center mw9"> 
+
+
+
+  <section
+    class="pb3 w-100">
+    <div class="center mw9">
       <h3 class="b f3 mv0 light-gray">Hugo Sponsors</h3>
       <div class="flex-ns flex-wrap center justify-between pt3">
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100">
-              
-                
-                   <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/linode-logo_standard_light_medium.png" alt="Logo for Linode" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            >
+            
+            
+              <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/linode-logo_standard_light_medium.png"
+                  alt="Logo for Linode"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100">
-              
-                
-                   <a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/esolia-logo.svg" alt="Logo for eSolia" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            >
+            
+            
+              <a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/esolia-logo.svg"
+                  alt="Logo for eSolia"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100" style="background-color: #5A2FA1;">
-              
-                
-                   <a href="https://brave.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/brave-logo.svg" alt="Logo for Brave" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            style="background-color: #131A3E;">
+            
+            
+              <a href="https://buttercms.com/hugo-cms/?utm_campaign=sponsorship&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/butter-light.svg"
+                  alt="Logo for ButterCMS"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
       </div>
     </div>
@@ -2067,13 +2139,13 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     </div>
 
     <div class="f7 gray mb5 mb0-ns ph3 w-100"> 
-      <p class="dib mr4">The Hugo logos are copyright © Steve Francia 2013–2022.</p>
+      <p class="dib mr4">The Hugo logos are copyright © Steve Francia 2013–2023.</p>
       <p class="dib">The Hugo Gopher is based on an original work by Renée French.</p>
     </div>
 
     <img src="/images/gopher-side_color.svg" alt="" class="absolute-l bottom-0 dn db-l h4 right-0 z-999"/>
 
-    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100"><div  class="globalmenu mobilemenu pb1 dn">
+    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100 z-2"><div  class="globalmenu mobilemenu pb1 dn">
     
 
 <ul class="list hidden dib ph0 scrolling-touch tc">
@@ -2125,6 +2197,12 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/about/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
           About Hugo
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/installation/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Installation
         </a>
     </li>
   
@@ -2223,9 +2301,6 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
   
 
   
-
-  
-
 
 </body>
 

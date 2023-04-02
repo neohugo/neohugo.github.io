@@ -13,7 +13,7 @@
   <title>Configure Hugo | Hugo</title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.23-DEV" />
+  <meta name="generator" content="Hugo 0.110.0-DEV">
 
   
   <meta name="robots" content="noindex, nofollow">
@@ -26,7 +26,7 @@
   
   
   
-  <link rel="stylesheet" href="/output/css/app.min.b368142944d203fdc1d3dec8ab085c0c0e75aaf9171853110f03e91c1c2616f4.css" integrity="sha256-s2gUKUTSA/3B097IqwhcDA51qvkXGFMRDwPpHBwmFvQ=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/output/css/app.min.b03318b1df01f94314ccbf9f6c0e79c24f1db2c5fefa37614fc49ace24642f7f.css" integrity="sha256-sDMYsd8B&#43;UMUzL&#43;fbA55wk8dssX&#43;&#43;jdhT8SaziRkL38=" crossorigin="anonymous">
   
   
   
@@ -42,7 +42,7 @@
 
 
   
-  <script type="text/javascript" src="/output/js/app.175b405753a9c0ce86ab35944e9c4cc1a758a6873209cf5106600f6b2f5a59b6.js" integrity="sha256-F1tAV1OpwM6GqzWUTpxMwadYpocyCc9RBmAPay9aWbY=" crossorigin="anonymous" defer></script>
+  <script type="text/javascript" src="/output/js/app.5a802739f9b2407f0d3a1f84a20731b6705a5a4df051c35686f22bd3aea90731.js" integrity="sha256-WoAnOfmyQH8NOh&#43;EogcxtnBaWk3wUcNWhvIr066pBzE=" crossorigin="anonymous" defer></script>
   
       
  
@@ -62,11 +62,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/getting-started/configuration/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_10905119886565882197.png"/><meta property="article:section" content="getting-started" />
 <meta property="article:published_time" content="2017-01-02T00:00:00+01:00" />
-<meta property="article:modified_time" content="2022-06-19T23:24:54+07:00" />
+<meta property="article:modified_time" content="2023-04-02T12:35:49-07:00" />
 <meta itemprop="name" content="Configure Hugo">
 <meta itemprop="description" content="How to configure your Hugo site."><meta itemprop="datePublished" content="2017-01-02T00:00:00+01:00" />
-<meta itemprop="dateModified" content="2022-06-19T23:24:54+07:00" />
-<meta itemprop="wordCount" content="3945"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="dateModified" content="2023-04-02T12:35:49-07:00" />
+<meta itemprop="wordCount" content="4221"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_10905119886565882197.png"/>
 <meta name="twitter:title" content="Configure Hugo"/>
@@ -206,6 +206,7 @@
     <li><a href="#all-configuration-settings">All Configuration Settings</a></li>
     <li><a href="#configure-build">Configure Build</a></li>
     <li><a href="#configure-server">Configure Server</a></li>
+    <li><a href="#_404-server-error-page">404 Server Error Page</a></li>
     <li><a href="#configure-title-case">Configure Title Case</a></li>
     <li><a href="#configuration-environment-variables">Configuration Environment Variables</a></li>
     <li><a href="#configuration-lookup-order">Configuration Lookup Order</a></li>
@@ -283,11 +284,11 @@
 <p>Hugo uses the <code>config.toml</code>, <code>config.yaml</code>, or <code>config.json</code> (if found in the
 site root) as the default site config file.</p>
 <p>The user can choose to override that default with one or more site config files
-using the command line <code>--config</code> switch.</p>
+using the command-line <code>--config</code> switch.</p>
 <p>Examples:</p>
-<pre tabindex="0"><code>hugo --config debugconfig.toml
-hugo --config a.toml,b.toml,c.toml
-</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">hugo --config debugconfig.toml
+</span></span><span class="line"><span class="cl">hugo --config a.toml,b.toml,c.toml
+</span></span></code></pre></div>
 <aside class="admonition note">
 	<div class="note-icon">
 		
@@ -389,20 +390,46 @@ hugo --config a.toml,b.toml,c.toml
 <li>Each directory holds a group of files containing settings unique to an environment.</li>
 <li>Files can be localized to become language specific.</li>
 </ul>
-<pre tabindex="0"><code>├── config
-│   ├── _default
-│   │   ├── config.toml
-│   │   ├── languages.toml
-│   │   ├── menus.en.toml
-│   │   ├── menus.zh.toml
-│   │   └── params.toml
-│   ├── production
-│   │   ├── config.toml
-│   │   └── params.toml
-│   └── staging
-│       ├── config.toml
-│       └── params.toml
-</code></pre><p>Considering the structure above, when running <code>hugo --environment staging</code>, Hugo will use every settings from <code>config/_default</code> and merge <code>staging</code>&rsquo;s on top of those.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">├── config
+</span></span><span class="line"><span class="cl">│   ├── _default
+</span></span><span class="line"><span class="cl">│   │   ├── config.toml
+</span></span><span class="line"><span class="cl">│   │   ├── languages.toml
+</span></span><span class="line"><span class="cl">│   │   ├── menus.en.toml
+</span></span><span class="line"><span class="cl">│   │   ├── menus.zh.toml
+</span></span><span class="line"><span class="cl">│   │   └── params.toml
+</span></span><span class="line"><span class="cl">│   ├── production
+</span></span><span class="line"><span class="cl">│   │   ├── config.toml
+</span></span><span class="line"><span class="cl">│   │   └── params.toml
+</span></span><span class="line"><span class="cl">│   └── staging
+</span></span><span class="line"><span class="cl">│       ├── config.toml
+</span></span><span class="line"><span class="cl">│       └── params.toml
+</span></span></code></pre></div><p>Considering the structure above, when running <code>hugo --environment staging</code>, Hugo will use every setting from <code>config/_default</code> and merge <code>staging</code>&rsquo;s on top of those.</p>
+<p>Let&rsquo;s take an example to understand this better. Let&rsquo;s say you are using Google Analytics for your website. This requires you to specify <code>googleAnalytics = &quot;G-XXXXXXXX&quot;</code> in <code>config.toml</code>. Now consider the following scenario:</p>
+<ul>
+<li>You don&rsquo;t want the Analytics code to be loaded in development i.e. in your <code>localhost</code></li>
+<li>You want to use separate googleAnalytics IDs for your production &amp; staging environments (say):
+<ul>
+<li><code>G-PPPPPPPP</code> for production</li>
+<li><code>G-SSSSSSSS</code> for staging</li>
+</ul>
+</li>
+</ul>
+<p>This is how you need to configure your <code>config.toml</code> files considering the above scenario:</p>
+<ol>
+<li>
+<p>In <code>_default/config.toml</code> you don&rsquo;t need to mention <code>googleAnalytics</code> parameter at all. This ensures that no Google Analytics code is loaded in your development server i.e. when you run <code>hugo serve</code>. This works since, by default Hugo sets <code>Environment=development</code> when you run <code>hugo serve</code> which uses the config files from <code>_default</code> folder</p>
+</li>
+<li>
+<p>In <code>production/config.toml</code> you just need to have one line:</p>
+<p><code>googleAnalytics = &quot;G-PPPPPPPP&quot;</code></p>
+<p>You don&rsquo;t need to mention all other parameters like <code>title</code>, <code>baseURL</code>, <code>theme</code> etc. again in this config file. You need to mention only those parameters which are different or new for the production environment. This is due to the fact that Hugo is going to <strong>merge</strong> this on top of <code>_default/config.toml</code>. Now when you run <code>hugo</code> (build command), by default hugo sets <code>Environment=production</code>, so the <code>G-PPPPPPPP</code> analytics code will be there in your production website</p>
+</li>
+<li>
+<p>Similarly in <code>staging/config.toml</code> you just need to have one line:</p>
+<p><code>googleAnalytics = &quot;G-SSSSSSSS&quot;</code></p>
+<p>Now you need to tell Hugo that you are using the staging environment. So your build command should be <code>hugo --environment staging</code> which will load the <code>G-SSSSSSSS</code> analytics code in your staging website</p>
+</li>
+</ol>
 
 <aside class="admonition note">
 	<div class="note-icon">
@@ -413,15 +440,8 @@ hugo --config a.toml,b.toml,c.toml
 	<div class="admonition-content"><p>Default environments are <strong>development</strong> with <code>hugo server</code> and <strong>production</strong> with <code>hugo</code>.</p>
 </div>
 </aside>
-</p>
+
 <h2 id="merge-configuration-from-themes">Merge Configuration from Themes <a class="header-link" href="#merge-configuration-from-themes"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>
-
-
-<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
-    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.84.0" target="_blank">New in v0.84.0</a>
-</button>
- The configuration merge described below was improved in Hugo 0.84.0 and made fully configurable. The big change/improvement was that we now, by default, do deep merging of <code>params</code> maps from themes.</p>
 <p>The configuration value for <code>_merge</code> can be one of:</p>
 <dl>
 <dt>none</dt>
@@ -647,14 +667,7 @@ config file(s).</p>
 <h3 id="caches">caches <a class="header-link" href="#caches"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>See <a href="#configure-file-caches">Configure File Caches</a></p>
 <h3 id="cascade">cascade <a class="header-link" href="#cascade"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-
-
-
-<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
-    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.86.0" target="_blank">New in v0.86.0</a>
-</button>
-
-<p>Pass down down default configuration values (front matter) to pages in the content tree. The options in site config is the same as in page front matter, see <a href="/content-management/front-matter#front-matter-cascade">Front Matter Cascade</a>.</p>
+<p>Pass down default configuration values (front matter) to pages in the content tree. The options in site config is the same as in page front matter, see <a href="/content-management/front-matter#front-matter-cascade">Front Matter Cascade</a>.</p>
 <h3 id="canonifyurls">canonifyURLs <a class="header-link" href="#canonifyurls"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p><strong>Default value:</strong> false</p>
 <p>Enable to turn relative URLs into absolute.</p>
@@ -719,19 +732,17 @@ config file(s).</p>
 <p>See <a href="/content-management/image-processing/#imaging-configuration">Image Processing Config</a>.</p>
 <h3 id="languagecode">languageCode <a class="header-link" href="#languagecode"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p><strong>Default value:</strong>  &quot;&quot;</p>
-<p>A language tag as defined by <a href="https://datatracker.ietf.org/doc/html/rfc5646">RFC 5646</a>. The internal <a href="https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/_default/rss.xml">RSS template</a> populates its <code>&lt;language&gt;</code> element with this value. The value is not used elsewhere.</p>
+<p>A language tag as defined by <a href="https://datatracker.ietf.org/doc/html/rfc5646">RFC 5646</a>. This value is used to populate:</p>
+<ul>
+<li>The <code>&lt;language&gt;</code> element in the internal <a href="https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/_default/rss.xml">RSS template</a></li>
+<li>The <code>lang</code> attribute of the <code>&lt;html&gt;</code> element in the internal <a href="https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/alias.html">alias template</a></li>
+</ul>
 <h3 id="languages">languages <a class="header-link" href="#languages"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>See <a href="/content-management/multilingual/#configure-languages">Configure Languages</a>.</p>
 <h3 id="disablelanguages">disableLanguages <a class="header-link" href="#disablelanguages"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>See <a href="/content-management/multilingual/#disable-a-language">Disable a Language</a></p>
 <h3 id="markup">markup <a class="header-link" href="#markup"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>See <a href="/getting-started/configuration-markup">Configure Markup</a>.
-
-
-<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
-    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.60.0" target="_blank">New in v0.60.0</a>
-</button>
-</p>
+<p>See <a href="/getting-started/configuration-markup">Configure Markup</a>.</p>
 <h3 id="mediatypes">mediaTypes <a class="header-link" href="#mediatypes"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>See <a href="/templates/output-formats/#media-types">Configure Media Types</a>.</p>
 <h3 id="menus">menus <a class="header-link" href="#menus"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
@@ -739,13 +750,7 @@ config file(s).</p>
 <h3 id="minify">minify <a class="header-link" href="#minify"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>See <a href="#configure-minify">Configure Minify</a></p>
 <h3 id="module">module <a class="header-link" href="#module"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>Module config see <a href="/hugo-modules/configuration/">Module Config</a>.
-
-
-<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
-    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.56.0" target="_blank">New in v0.56.0</a>
-</button>
-</p>
+<p>Module config see <a href="/hugo-modules/configuration/">Module Config</a>.</p>
 <h3 id="newcontenteditor">newContentEditor <a class="header-link" href="#newcontenteditor"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p><strong>Default value:</strong> &quot;&quot;</p>
 <p>The editor to use when creating new content.</p>
@@ -772,19 +777,13 @@ config file(s).</p>
 <p><strong>Default value:</strong> &ldquo;public&rdquo;</p>
 <p>The directory to where Hugo will write the final static site (the HTML files etc.).</p>
 <h3 id="related">related <a class="header-link" href="#related"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>: See <a href="/content-management/related/#configure-related-content">Related Content</a>.
-
-
-<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
-    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.27" target="_blank">New in v0.27</a>
-</button>
-</p>
+<p>: See <a href="/content-management/related/#configure-related-content">Related Content</a>.</p>
 <h3 id="relativeurls">relativeURLs <a class="header-link" href="#relativeurls"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p><strong>Default value:</strong> false</p>
 <p>Enable this to make all relative URLs relative to content root. Note that this does not affect absolute URLs.</p>
 <h3 id="reflinkserrorlevel">refLinksErrorLevel <a class="header-link" href="#reflinkserrorlevel"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p><strong>Default value:</strong> &ldquo;ERROR&rdquo;</p>
-<p>When using <code>ref</code> or <code>relref</code> to resolve page links and a link cannot resolved, it will be logged with this log level. Valid values are <code>ERROR</code> (default) or <code>WARNING</code>. Any <code>ERROR</code> will fail the build (<code>exit -1</code>).</p>
+<p>When using <code>ref</code> or <code>relref</code> to resolve page links and a link cannot be resolved, it will be logged with this log level. Valid values are <code>ERROR</code> (default) or <code>WARNING</code>. Any <code>ERROR</code> will fail the build (<code>exit -1</code>).</p>
 <h3 id="reflinksnotfoundurl">refLinksNotFoundURL <a class="header-link" href="#reflinksnotfoundurl"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>URL to be used as a placeholder when a page reference cannot be found in <code>ref</code> or <code>relref</code>. Is used as-is.</p>
 <h3 id="removepathaccents">removePathAccents <a class="header-link" href="#removepathaccents"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
@@ -814,13 +813,6 @@ config file(s).</p>
 <p><strong>Default value:</strong> &ldquo;30s&rdquo;</p>
 <p>Timeout for generating page contents, specified as a <a href="https://pkg.go.dev/time#Duration">duration</a> or in milliseconds. <em>Note:</em> this is used to bail out of recursive content generation. You might need to raise this limit if your pages are slow to generate (e.g., because they require large image processing or depend on remote contents).</p>
 <h3 id="timezone">timeZone <a class="header-link" href="#timezone"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-
-
-
-<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
-    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.87.0" target="_blank">New in v0.87.0</a>
-</button>
-
 <p>The time zone (or location), e.g. <code>Europe/Oslo</code>,  used to parse front matter dates without such information and in the <a href="/functions/time/"><code>time</code> function</a>. The list of valid values may be system dependent, but should include <code>UTC</code>, <code>Local</code>, and any location in the <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">IANA Time Zone database</a>.</p>
 <h3 id="title">title <a class="header-link" href="#title"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p>Site title.</p>
@@ -828,6 +820,7 @@ config file(s).</p>
 <p><strong>Default value:</strong>  &ldquo;AP&rdquo;</p>
 <p>See <a href="#configure-title-case">Configure Title Case</a></p>
 <h3 id="uglyurls">uglyURLs <a class="header-link" href="#uglyurls"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<p><strong>Default value:</strong> false</p>
 <p>When enabled, creates URL of the form <code>/filename.html</code> instead of <code>/filename/</code>.</p>
 <h3 id="watch">watch <a class="header-link" href="#watch"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <p><strong>Default value:</strong> false</p>
@@ -840,21 +833,14 @@ config file(s).</p>
 	
 	
 	<div class="admonition-content"><p>If you are developing your site on a *nix machine, here is a handy shortcut for finding a configuration option from the command line:</p>
-<pre tabindex="0"><code>cd ~/sites/yourhugosite
-hugo config | grep emoji
-</code></pre><p>which shows output like</p>
-<pre tabindex="0"><code>enableemoji: true
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">cd ~/sites/yourhugosite
+</span></span><span class="line"><span class="cl">hugo config | grep emoji
+</span></span></code></pre></div><p>which shows output like</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">enableemoji: true
+</span></span></code></pre></div></div>
 </aside>
 
 <h2 id="configure-build">Configure Build <a class="header-link" href="#configure-build"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-
-
-
-<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
-    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.66.0" target="_blank">New in v0.66.0</a>
-</button>
-
 <p>The <code>build</code> configuration section contains global build-related configuration options.</p>
 
 <div class="code relative" id="config">
@@ -907,34 +893,15 @@ hugo config | grep emoji
 <dl>
 <dt>useResourceCacheWhen</dt>
 <dd>When to use the cached resources in <code>/resources/_gen</code> for PostCSS and ToCSS. Valid values are <code>never</code>, <code>always</code> and <code>fallback</code>. The last value means that the cache will be tried if PostCSS/extended version is not available.</dd>
-<dt>writeStats 
-
-
-<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
-    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.69.0" target="_blank">New in v0.69.0</a>
-</button>
-</dt>
+<dt>writeStats</dt>
 <dd>When enabled, a file named <code>hugo_stats.json</code> will be written to your project root with some aggregated data about the build, e.g. list of HTML entities published to be used to do <a href="/hugo-pipes/postprocess/#css-purging-with-postcss">CSS pruning</a>. If you&rsquo;re only using this for the production build, you should consider placing it below <a href="/getting-started/configuration/#configuration-directory">config/production</a>. It&rsquo;s also worth mentioning that, due to the nature of the partial server builds, new HTML entities will be added when you add or change them while the server is running, but the old values will not be removed until you restart the server or run a regular <code>hugo</code> build.</dd>
 </dl>
-<p><strong>Note</strong> that the prime use case for this is purging of unused CSS; it is build for speed and there may be false positives (e.g. elements that isn&rsquo;t really a HTML element).</p>
+<p><strong>Note</strong> that the prime use case for this is purging of unused CSS; it is built for speed and there may be false positives (e.g., detection of HTML elements that are not HTML elements).</p>
 <dl>
-<dt>noJSConfigInAssets 
-
-
-<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
-    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.78.0" target="_blank">New in v0.78.0</a>
-</button>
-</dt>
+<dt>noJSConfigInAssets</dt>
 <dd>Turn off writing a <code>jsconfig.json</code> into your <code>/assets</code> folder with mapping of imports from running <a href="https://gohugo.io/hugo-pipes/js">js.Build</a>. This file is intended to help with intellisense/navigation inside code editors such as <a href="https://code.visualstudio.com/">VS Code</a>. Note that if you do not use <code>js.Build</code>, no file will be written.</dd>
 </dl>
 <h2 id="configure-server">Configure Server <a class="header-link" href="#configure-server"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-
-
-
-<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
-    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.67.0" target="_blank">New in v0.67.0</a>
-</button>
-
 <p>This is only relevant when running <code>hugo server</code>, and it allows to set HTTP headers during development, which allows you to test out your Content Security Policy and similar. The configuration format matches <a href="https://docs.netlify.com/routing/headers/#syntax-for-the-netlify-configuration-file">Netlify&rsquo;s</a> with slightly more powerful <a href="https://github.com/gobwas/glob">Glob matching</a>:</p>
 
 <div class="code relative" id="config">
@@ -1003,7 +970,7 @@ hugo config | grep emoji
   </div>
 </div>
 
-<p>Since this is is &ldquo;development only&rdquo;, it may make sense to put it below the <code>development</code> environment:</p>
+<p>Since this is &ldquo;development only&rdquo;, it may make sense to put it below the <code>development</code> environment:</p>
 
 <div class="code relative" id="config/development/server">
   <div class="code-nav flex flex-nowrap items-stretch">
@@ -1067,13 +1034,6 @@ hugo config | grep emoji
   </div>
 </div>
 
-
-
-
-<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
-    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.72.0" target="_blank">New in v0.72.0</a>
-</button>
-
 <p>You can also specify simple redirects rules for the server. The syntax is again similar to Netlify&rsquo;s.</p>
 <p>Note that a <code>status</code> code of 200 will trigger a <a href="https://docs.netlify.com/routing/redirects/rewrites-proxies/">URL rewrite</a>, which is what you want in SPA situations, e.g:</p>
 
@@ -1129,14 +1089,21 @@ hugo config | grep emoji
   </div>
 </div>
 
-<p>
+<p>Setting <code>force=true</code> will make a redirect even if there is existing content in the path. Note that before Hugo 0.76  <code>force</code> was the default behavior, but this is inline with how Netlify does it.</p>
+<h2 id="_404-server-error-page">404 Server Error Page <a class="header-link" href="#_404-server-error-page"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+
 
 
 <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
-    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.76.0" target="_blank">New in v0.76.0</a>
+    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.103.0" target="_blank">New in v0.103.0</a>
 </button>
- Setting <code>force=true</code> will make a redirect even if there is existing content in the path. Note that before Hugo 0.76  <code>force</code> was the default behaviour, but this is inline with how Netlify does it.</p>
-<h2 id="configure-title-case">Configure Title Case <a class="header-link" href="#configure-title-case"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+
+<p>Hugo will, by default, render all 404 errors when running <code>hugo server</code> with the <code>404.html</code> template. Note that if you have already added one or more redirects to your <a href="#configure-server">Server Config</a>, you need to add the 404 redirect explicitly, e.g:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">redirects</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">from</span>   <span class="p">=</span> <span class="s2">&#34;/**&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">to</span>     <span class="p">=</span> <span class="s2">&#34;/404.html&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">status</span> <span class="p">=</span> <span class="mi">404</span>
+</span></span></code></pre></div><h2 id="configure-title-case">Configure Title Case <a class="header-link" href="#configure-title-case"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Set <code>titleCaseStyle</code> to specify the title style used by the <a href="/functions/title/">title</a> template function and the automatic section titles in Hugo. It defaults to <a href="https://www.apstylebook.com/">AP Stylebook</a> for title casing, but you can also set it to <code>Chicago</code> or <code>Go</code> (every word starts with a capital letter).</p>
 <h2 id="configuration-environment-variables">Configuration Environment Variables <a class="header-link" href="#configuration-environment-variables"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <dl>
@@ -1228,8 +1195,8 @@ hugo config | grep emoji
 <h2 id="configure-with-environment-variables">Configure with Environment Variables <a class="header-link" href="#configure-with-environment-variables"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>In addition to the 3 config options already mentioned, configuration key-values can be defined through operating system environment variables.</p>
 <p>For example, the following command will effectively set a website&rsquo;s title on Unix-like systems:</p>
-<pre tabindex="0"><code>$ env HUGO_TITLE=&#34;Some Title&#34; hugo
-</code></pre><p>This is really useful if you use a service such as Netlify to deploy your site. Look at the Hugo docs <a href="https://github.com/gohugoio/hugoDocs/blob/master/netlify.toml">Netlify configuration file</a> for an example.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">$ env HUGO_TITLE=&#34;Some Title&#34; hugo
+</span></span></code></pre></div><p>This is really useful if you use a service such as Netlify to deploy your site. Look at the Hugo docs <a href="https://github.com/gohugoio/hugoDocs/blob/master/netlify.toml">Netlify configuration file</a> for an example.</p>
 
 <aside class="admonition note">
 	<div class="note-icon">
@@ -1242,15 +1209,10 @@ hugo config | grep emoji
 </div>
 </aside>
 
-<p>
-
-
-<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
-    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.79.0" target="_blank">New in v0.79.0</a>
-</button>
- If you are using snake_cased variable names, the above will not work, so since Hugo 0.79.0 Hugo determines the delimiter to use by the first character after <code>HUGO</code>. This allows you to define environment variables on the form <code>HUGOxPARAMSxAPI_KEY=abcdefgh</code>, using any <a href="https://stackoverflow.com/questions/2821043/allowed-characters-in-linux-environment-variable-names#:~:text=So%20names%20may%20contain%20any,not%20begin%20with%20a%20digit.">allowed</a> delimiter.</p>
+<p>If you are using snake_cased variable names, the above will not work. Hugo determines the delimiter to use by the first character after <code>HUGO</code>. This allows you to define environment variables on the form <code>HUGOxPARAMSxAPI_KEY=abcdefgh</code>, using any <a href="https://stackoverflow.com/questions/2821043/allowed-characters-in-linux-environment-variable-names#:~:text=So%20names%20may%20contain%20any,not%20begin%20with%20a%20digit.">allowed</a> delimiter.</p>
 
 <h2 id="ignore-content-and-data-files-when-rendering">Ignore Content and Data Files when Rendering <a class="header-link" href="#ignore-content-and-data-files-when-rendering"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<p><strong>Note:</strong> This works, but we recommend you use the newer and more powerful <a href="https://gohugo.io/hugo-modules/configuration/#module-config-mounts">includeFiles and excludeFiles</a> mount options.</p>
 <p>To exclude specific files from the <code>content</code> and <code>data</code> directories when rendering your site, set <code>ignoreFiles</code> to one or more regular expressions to match against the absolute file path.</p>
 <p>To ignore files ending with <code>.foo</code> or <code>.boo</code>:</p>
 
@@ -1575,13 +1537,6 @@ hugo config | grep emoji
 <h2 id="configure-additional-output-formats">Configure Additional Output Formats <a class="header-link" href="#configure-additional-output-formats"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Hugo v0.20 introduced the ability to render your content to multiple output formats (e.g., to JSON, AMP html, or CSV). See <a href="/templates/output-formats/">Output Formats</a> for information on how to add these values to your Hugo project&rsquo;s configuration file.</p>
 <h2 id="configure-minify">Configure Minify <a class="header-link" href="#configure-minify"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-
-
-
-<button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
-    <a href="https://github.com/gohugoio/hugo/releases/tag/v0.68.0" target="_blank">New in v0.68.0</a>
-</button>
-
 <p>Default configuration:</p>
 
 <div class="code relative" id="config">
@@ -1910,6 +1865,37 @@ hugo config | grep emoji
       </li>
       
       <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
+        <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 " data-target=".installation">Installation</a>
+        <ul class="installation desktopmenu animated fadeIn list pl0 bg-light-gray dn">
+          <li class="f6 fw4">
+            <a href="/installation/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Installation overview
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/macos/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              macOS
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/linux/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Linux
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/windows/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Windows
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/installation/bsd/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              BSD
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8">
         <a href="javascript:void(0)" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2  primary-color" data-target=".getting-started">Getting Started</a>
         <ul class="getting-started desktopmenu animated fadeIn list pl0 bg-light-gray db">
           <li class="f6 fw4">
@@ -1923,13 +1909,8 @@ hugo config | grep emoji
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/getting-started/installing/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Install Hugo
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/getting-started/usage/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Basic Usage
+              Basic usage
             </a>
           </li>
           <li class="f6 fw4">
@@ -2221,11 +2202,6 @@ hugo config | grep emoji
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/templates/alternatives/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Alternative Templating
-            </a>
-          </li>
-          <li class="f6 fw4">
             <a href="/templates/template-debugging/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Template Debugging
             </a>
@@ -2357,6 +2333,11 @@ hugo config | grep emoji
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/crypto.fnv32a/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              crypto.FNV32a
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/default/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               default
             </a>
@@ -2369,6 +2350,11 @@ hugo config | grep emoji
           <li class="f6 fw4">
             <a href="/functions/dict/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               dict
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/duration/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              duration
             </a>
           </li>
           <li class="f6 fw4">
@@ -2777,8 +2763,23 @@ hugo config | grep emoji
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/strings.contains/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.Contains
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/strings.containsany/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.ContainsAny
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/strings.count/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               strings.Count
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/strings.firstupper/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.FirstUpper
             </a>
           </li>
           <li class="f6 fw4">
@@ -2842,6 +2843,11 @@ hugo config | grep emoji
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/time.parseduration/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              time.ParseDuration
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/title/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               title
             </a>
@@ -2889,6 +2895,11 @@ hugo config | grep emoji
           <li class="f6 fw4">
             <a href="/functions/urlize/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               urlize
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/urlquery/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              urlquery
             </a>
           </li>
           <li class="f6 fw4">
@@ -2980,7 +2991,7 @@ hugo config | grep emoji
           </li>
           <li class="f6 fw4">
             <a href="/hugo-pipes/scss-sass/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              SASS / SCSS
+              Sass / SCSS
             </a>
           </li>
           <li class="f6 fw4">
@@ -3111,8 +3122,18 @@ hugo config | grep emoji
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-21yunbox/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on 21YunBox
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/hosting-and-deployment/hosting-on-aws-amplify/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Host on AWS Amplify
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-azure/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Host on Azure Static Web Apps
             </a>
           </li>
           <li class="f6 fw4">
@@ -3142,7 +3163,7 @@ hugo config | grep emoji
           </li>
           <li class="f6 fw4">
             <a href="/hosting-and-deployment/hosting-on-keycdn/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Hosting on KeyCDN
+              Host on KeyCDN
             </a>
           </li>
           <li class="f6 fw4">
@@ -3158,6 +3179,11 @@ hugo config | grep emoji
           <li class="f6 fw4">
             <a href="/hosting-and-deployment/deployment-with-rclone/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               Deployment with Rclone
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/hosting-and-deployment/hosting-on-azure-static-web-apps/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Hosting on Azure Static Web Apps
             </a>
           </li>
         </ul>
@@ -3203,7 +3229,7 @@ hugo config | grep emoji
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: June 19, 2022: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/22d493aa56a2750c0cf5c66646ac6972372fabaa">Merge pull request #111 from blackb1rd/hugo/v0.101.0 (22d493a)</a>
+  Last updated: April 2, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/e4d54d04c1b3f8409ba9ede9679a504778ecd83f">Merge pull request #113 from neohugo/hugo/v0.109.0 (e4d54d0)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/getting-started/configuration.md" class="
@@ -3246,49 +3272,56 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
         
 
 
-  <section class="pb3 w-100">
-    <div class="center mw9"> 
+
+
+
+  <section
+    class="pb3 w-100">
+    <div class="center mw9">
       <h3 class="b f3 mv0 light-gray">Hugo Sponsors</h3>
       <div class="flex-ns flex-wrap center justify-between pt3">
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100">
-              
-                
-                   <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/linode-logo_standard_light_medium.png" alt="Logo for Linode" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            >
+            
+            
+              <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/linode-logo_standard_light_medium.png"
+                  alt="Logo for Linode"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100">
-              
-                
-                   <a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/esolia-logo.svg" alt="Logo for eSolia" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            >
+            
+            
+              <a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/esolia-logo.svg"
+                  alt="Logo for eSolia"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
-          
-          
-            <div class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100" style="background-color: #5A2FA1;">
-              
-                
-                   <a href="https://brave.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=homepage" class="grow">
-                
-              <img src="/images/sponsors/brave-logo.svg" alt="Logo for Brave" class="img h3 center" />
-              </a>
-              
-            </div>
-          
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            style="background-color: #131A3E;">
+            
+            
+              <a href="https://buttercms.com/hugo-cms/?utm_campaign=sponsorship&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
+                <img
+                  src="/images/sponsors/butter-light.svg"
+                  alt="Logo for ButterCMS"
+                  class="img h3 center"
+              /></a>
+            
+          </div>
         
       </div>
     </div>
@@ -3300,13 +3333,13 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     </div>
 
     <div class="f7 gray mb5 mb0-ns ph3 w-100"> 
-      <p class="dib mr4">The Hugo logos are copyright © Steve Francia 2013–2022.</p>
+      <p class="dib mr4">The Hugo logos are copyright © Steve Francia 2013–2023.</p>
       <p class="dib">The Hugo Gopher is based on an original work by Renée French.</p>
     </div>
 
     <img src="/images/gopher-side_color.svg" alt="" class="absolute-l bottom-0 dn db-l h4 right-0 z-999"/>
 
-    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100"><div  class="globalmenu mobilemenu pb1 dn">
+    <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 pt3 w-100 z-2"><div  class="globalmenu mobilemenu pb1 dn">
     
 
 <ul class="list hidden dib ph0 scrolling-touch tc">
@@ -3358,6 +3391,12 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     <li  class="tl dib ma0 hover-bg-black w-100">
         <a href="/about/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
           About Hugo
+        </a>
+    </li>
+  
+    <li  class="tl dib ma0 hover-bg-black w-100">
+        <a href="/installation/" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4">
+          Installation
         </a>
     </li>
   
@@ -3456,9 +3495,6 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
   
 
   
-
-  
-
 
 </body>
 
