@@ -5,12 +5,11 @@
     <link>https://gohugo.io/categories/fundamentals/</link>
     <description>Recent content in fundamentals on Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 15 Nov 2019 00:00:00 +0100</lastBuildDate><atom:link href="https://gohugo.io/categories/fundamentals/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://gohugo.io/categories/fundamentals/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction to Hugo Templating</title>
       <link>https://gohugo.io/templates/introduction/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/templates/introduction/</guid>
       <description>The following is only a primer on Go Templates. For an in-depth look into Go Templates, check the official Go docs.
@@ -21,7 +20,7 @@ Basic Syntax Go Templates are HTML files with the addition of variables and func
     <item>
       <title>Hugo&#39;s Lookup Order</title>
       <link>https://gohugo.io/templates/lookup-order/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/templates/lookup-order/</guid>
       <description>Hugo Layouts Lookup Rules Hugo takes the parameters listed below into consideration when choosing a layout for a given page. They are listed in a priority order. This should feel natural, but look at the table below for concrete examples of the different parameter variations.
@@ -31,7 +30,7 @@ Kind The page Kind (the home page is one). See the example tables below per kind
     <item>
       <title>Base Templates and Blocks</title>
       <link>https://gohugo.io/templates/base/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/templates/base/</guid>
       <description>The block keyword allows you to define the outer shell of your pages&amp;rsquo; one or more master template(s) and then fill in or override portions as necessary.
@@ -54,36 +53,36 @@ The illustration shows three bundles. Note that the home page bundle cannot cont
     <item>
       <title>Directory Structure</title>
       <link>https://gohugo.io/getting-started/directory-structure/</link>
-      <pubDate>Mon, 02 Jan 2017 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/getting-started/directory-structure/</guid>
       <description>New Site Scaffolding Running hugo new site example from the command line creates a directory structure with the following elements:
-example/ ├── archetypes/ │ └── default.md ├── assets/ ├── content/ ├── data/ ├── layouts/ ├── public/ ├── static/ ├── themes/ └── config.toml Directory Structure Explained The following is a high-level overview of each of the directories with links to each of their respective sections within the Hugo docs.
+example/ ├── archetypes/ │ └── default.md ├── assets/ ├── content/ ├── data/ ├── layouts/ ├── public/ ├── static/ ├── themes/ └── hugo.toml Directory Structure Explained The following is a high-level overview of each of the directories with links to each of their respective sections within the Hugo docs.
 archetypes You can create new content files in Hugo using the hugo new command.</description>
     </item>
     
     <item>
       <title>Configure Hugo</title>
       <link>https://gohugo.io/getting-started/configuration/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0200</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/getting-started/configuration/</guid>
-      <description>Configuration File Hugo uses the config.toml, config.yaml, or config.json (if found in the site root) as the default site config file.
+      <description>Configuration File Hugo uses the hugo.toml, hugo.yaml, or hugo.json (if found in the site root) as the default site configuration file.
 The user can choose to override that default with one or more site config files using the command-line --config switch.
 Examples:
 hugo --config debugconfig.toml hugo --config a.toml,b.toml,c.toml Multiple site config files can be specified as a comma-separated string to the --config switch.
-Configuration Directory In addition to using a single site config file, one can use the configDir directory (default to config/) to maintain easier organization and environment specific settings.</description>
+hugo.toml vs config.toml In Hugo 0.110.0 we changed the default config base filename to hugo, e.</description>
     </item>
     
     <item>
       <title>Configure Markup</title>
       <link>https://gohugo.io/getting-started/configuration-markup/</link>
-      <pubDate>Fri, 15 Nov 2019 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/getting-started/configuration-markup/</guid>
       <description>Configure Markup See Goldmark for settings related to the default Markdown handler in Hugo.
 Below are all markup related configuration in Hugo with their default settings:
-config. yaml &amp;nbsp; toml &amp;nbsp; json &amp;nbsp; markup: asciidocExt: attributes: {} backend: html5 extensions: [] failureLevel: fatal noHeaderOrFooter: true preserveTOC: false safeMode: unsafe sectionNumbers: false trace: false verbose: false workingFolderCurrent: false defaultMarkdownHandler: goldmark goldmark: extensions: definitionList: true footnote: true linkify: true linkifyProtocol: https strikethrough: true table: true taskList: true typographer: true parser: attribute: block: false title: true autoHeadingID: true autoHeadingIDType: github wrapStandAloneImageWithinParagraph: true renderer: hardWraps: false unsafe: false xhtml: false highlight: anchorLineNos: false codeFences: true guessSyntax: false hl_Lines: &amp;#34;&amp;#34; hl_inline: false lineAnchors: &amp;#34;&amp;#34; lineNoStart: 1 lineNos: false lineNumbersInTable: true noClasses: true noHl: false style: monokai tabWidth: 4 tableOfContents: endLevel: 3 ordered: false startLevel: 2 [markup] defaultMarkdownHandler = &amp;#39;goldmark&amp;#39; [markup.</description>
+hugo. yaml &amp;nbsp; toml &amp;nbsp; json &amp;nbsp; markup: asciidocExt: attributes: {} backend: html5 extensions: [] failureLevel: fatal noHeaderOrFooter: true preserveTOC: false safeMode: unsafe sectionNumbers: false trace: false verbose: false workingFolderCurrent: false defaultMarkdownHandler: goldmark goldmark: extensions: definitionList: true footnote: true linkify: true linkifyProtocol: https strikethrough: true table: true taskList: true typographer: apostrophe: &amp;#39;&amp;amp;rsquo;&amp;#39; disable: false ellipsis: &amp;#39;&amp;amp;hellip;&amp;#39; emDash: &amp;#39;&amp;amp;mdash;&amp;#39; enDash: &amp;#39;&amp;amp;ndash;&amp;#39; leftAngleQuote: &amp;#39;&amp;amp;laquo;&amp;#39; leftDoubleQuote: &amp;#39;&amp;amp;ldquo;&amp;#39; leftSingleQuote: &amp;#39;&amp;amp;lsquo;&amp;#39; rightAngleQuote: &amp;#39;&amp;amp;raquo;&amp;#39; rightDoubleQuote: &amp;#39;&amp;amp;rdquo;&amp;#39; rightSingleQuote: &amp;#39;&amp;amp;rsquo;&amp;#39; parser: attribute: block: false title: true autoHeadingID: true autoHeadingIDType: github wrapStandAloneImageWithinParagraph: true renderer: hardWraps: false unsafe: false xhtml: false highlight: anchorLineNos: false codeFences: true guessSyntax: false hl_Lines: &amp;#34;&amp;#34; hl_inline: false lineAnchors: &amp;#34;&amp;#34; lineNoStart: 1 lineNos: false lineNumbersInTable: true noClasses: true noHl: false style: monokai tabWidth: 4 tableOfContents: endLevel: 3 ordered: false startLevel: 2 [markup] defaultMarkdownHandler = &amp;#39;goldmark&amp;#39; [markup.</description>
     </item>
     
     <item>

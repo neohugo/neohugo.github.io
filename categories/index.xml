@@ -5,23 +5,14 @@
     <link>https://gohugo.io/categories/</link>
     <description>Recent content in Categories on Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 04 Jun 2022 00:00:00 +0200</lastBuildDate><atom:link href="https://gohugo.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Mar 2023 00:00:00 +0100</lastBuildDate><atom:link href="https://gohugo.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>functions</title>
       <link>https://gohugo.io/categories/functions/</link>
-      <pubDate>Sat, 04 Jun 2022 00:00:00 +0200</pubDate>
+      <pubDate>Wed, 01 Mar 2023 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/categories/functions/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hosting and deployment</title>
-      <link>https://gohugo.io/categories/hosting-and-deployment/</link>
-      <pubDate>Mon, 09 May 2022 00:00:00 +0200</pubDate>
-      
-      <guid>https://gohugo.io/categories/hosting-and-deployment/</guid>
       <description></description>
     </item>
     
@@ -35,51 +26,6 @@
     </item>
     
     <item>
-      <title>asset management</title>
-      <link>https://gohugo.io/categories/asset-management/</link>
-      <pubDate>Mon, 20 Jul 2020 00:00:00 +0200</pubDate>
-      
-      <guid>https://gohugo.io/categories/asset-management/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>fundamentals</title>
-      <link>https://gohugo.io/categories/fundamentals/</link>
-      <pubDate>Fri, 15 Nov 2019 00:00:00 +0100</pubDate>
-      
-      <guid>https://gohugo.io/categories/fundamentals/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>getting started</title>
-      <link>https://gohugo.io/categories/getting-started/</link>
-      <pubDate>Fri, 15 Nov 2019 00:00:00 +0100</pubDate>
-      
-      <guid>https://gohugo.io/categories/getting-started/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>variables and params</title>
-      <link>https://gohugo.io/categories/variables-and-params/</link>
-      <pubDate>Sun, 20 Oct 2019 00:00:00 +0200</pubDate>
-      
-      <guid>https://gohugo.io/categories/variables-and-params/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hugo modules</title>
-      <link>https://gohugo.io/categories/hugo-modules/</link>
-      <pubDate>Wed, 24 Jul 2019 00:00:00 +0200</pubDate>
-      
-      <guid>https://gohugo.io/categories/hugo-modules/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>blog</title>
       <link>https://gohugo.io/categories/blog/</link>
       <pubDate>Wed, 04 Jul 2018 00:00:00 +0200</pubDate>
@@ -89,36 +35,27 @@
     </item>
     
     <item>
-      <title>troubleshooting</title>
-      <link>https://gohugo.io/categories/troubleshooting/</link>
-      <pubDate>Sat, 10 Feb 2018 00:00:00 +0100</pubDate>
+      <title>about hugo</title>
+      <link>https://gohugo.io/categories/about-hugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gohugo.io/categories/troubleshooting/</guid>
+      <guid>https://gohugo.io/categories/about-hugo/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>maintenance</title>
-      <link>https://gohugo.io/categories/maintenance/</link>
-      <pubDate>Fri, 09 Feb 2018 00:00:00 +0100</pubDate>
+      <title>asset management</title>
+      <link>https://gohugo.io/categories/asset-management/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gohugo.io/categories/maintenance/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>templates</title>
-      <link>https://gohugo.io/categories/templates/</link>
-      <pubDate>Wed, 22 Mar 2017 00:00:00 +0100</pubDate>
-      
-      <guid>https://gohugo.io/categories/templates/</guid>
+      <guid>https://gohugo.io/categories/asset-management/</guid>
       <description></description>
     </item>
     
     <item>
       <title>content management</title>
       <link>https://gohugo.io/categories/content-management/</link>
-      <pubDate>Fri, 24 Feb 2017 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/categories/content-management/</guid>
       <description></description>
@@ -127,7 +64,7 @@
     <item>
       <title>contribute</title>
       <link>https://gohugo.io/categories/contribute/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/categories/contribute/</guid>
       <description></description>
@@ -136,18 +73,45 @@
     <item>
       <title>developer tools</title>
       <link>https://gohugo.io/categories/developer-tools/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/categories/developer-tools/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>about hugo</title>
-      <link>https://gohugo.io/categories/about-hugo/</link>
-      <pubDate>Mon, 01 Feb 2016 00:00:00 +0100</pubDate>
+      <title>fundamentals</title>
+      <link>https://gohugo.io/categories/fundamentals/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gohugo.io/categories/about-hugo/</guid>
+      <guid>https://gohugo.io/categories/fundamentals/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>getting started</title>
+      <link>https://gohugo.io/categories/getting-started/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/categories/getting-started/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hosting and deployment</title>
+      <link>https://gohugo.io/categories/hosting-and-deployment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/categories/hosting-and-deployment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo modules</title>
+      <link>https://gohugo.io/categories/hugo-modules/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/categories/hugo-modules/</guid>
       <description></description>
     </item>
     
@@ -161,11 +125,47 @@
     </item>
     
     <item>
+      <title>maintenance</title>
+      <link>https://gohugo.io/categories/maintenance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/categories/maintenance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>project organization</title>
       <link>https://gohugo.io/categories/project-organization/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/categories/project-organization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>templates</title>
+      <link>https://gohugo.io/categories/templates/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/categories/templates/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>troubleshooting</title>
+      <link>https://gohugo.io/categories/troubleshooting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/categories/troubleshooting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>variables and params</title>
+      <link>https://gohugo.io/categories/variables-and-params/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/categories/variables-and-params/</guid>
       <description></description>
     </item>
     

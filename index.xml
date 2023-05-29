@@ -4,7 +4,7 @@
     <link>https://gohugo.io/</link>
     <description>Recent Hugo news from gohugo.io</description>
     <generator>Neohugo -- neohugo.github.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate>
     <image>
       <url>https://gohugo.io/img/hugo.png</url>
@@ -1167,7 +1167,9 @@ SiteNew/Regular_List_terms-16                53.5k ± 0%     53.4k ± 0%   -0.18
 
 &lt;div class=&#34;code relative&#34; id=&#34;config&#34;&gt;
   &lt;div class=&#34;code-nav flex flex-nowrap items-stretch&#34;&gt;
-      &lt;div class=&#34;san-serif f6 dib lh-solid pl2 pv2 mr2&#34;&gt;config.&lt;/div&gt;
+      &lt;div class=&#34;san-serif f6 dib lh-solid pl2 pv2 mr2&#34;&gt;
+        config.
+      &lt;/div&gt;
       &lt;button data-toggle-tab=&#34;yaml&#34; class=&#34;tab-button active ba san-serif f6 dib lh-solid ph2 pv2&#34;&gt;
         yaml
       &lt;/button&gt;
@@ -1227,7 +1229,7 @@ which has received &lt;strong&gt;20 contributions by 13 contributors&lt;/strong&
 &lt;/ul&gt;
 &lt;h2 id=&#34;notes&#34;&gt;Notes &lt;a class=&#34;header-link&#34; href=&#34;#notes&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;We have updated to Beta 6 of the Dart Sass Protocol which is not backwards compatible, so if you use Dart Sass you need to also update &lt;a href=&#34;https://gohugo.io/hugo-pipes/scss-sass/#options&#34;&gt;that binary&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;We have updated to Beta 6 of the Dart Sass Protocol which is not backwards compatible, so if you use Dart Sass you need to also update &lt;a href=&#34;https://gohugo.io/hugo-pipes/toCSS/#options&#34;&gt;that binary&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;hugo gen autocomplete&lt;/code&gt; now default to &lt;code&gt;stdout&lt;/code&gt;; you can change this by setting &lt;code&gt;--completionfile&lt;/code&gt;. As an added bonus we now also support auto completion for zsh, fish and powershell.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;changelog&#34;&gt;Changelog &lt;a class=&#34;header-link&#34; href=&#34;#changelog&#34;&gt;&lt;svg class=&#34;fill-current o-60 hover-accent-color-light&#34; height=&#34;22px&#34; viewBox=&#34;0 0 24 24&#34; width=&#34;22px&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;none&#34;/&gt;&lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
@@ -1330,7 +1332,7 @@ my videos and &lt;strong&gt;less time maintaining and fixing&lt;/strong&gt; my w
         
         <![CDATA[<img src="https://gohugo.io/news/0.80.0-relnotes/featured_hu79434c84cc6c2c78f7828eb64a40630a_162027_640x0_resize_catmullrom_3.png" width="640" height="320"/>]]>
         
-        &lt;p&gt;The last Hugo release of the year brings a new &lt;a href=&#34;https://gohugo.io/functions/images/#overlay&#34;&gt;images.Overlay&lt;/a&gt; filter to overlay an image on top of another, e.g. for watermarking, and &lt;a href=&#34;https://gohugo.io/hugo-pipes/scss-sass/#options&#34;&gt;Dart Sass&lt;/a&gt; support.&lt;/p&gt;
+        &lt;p&gt;The last Hugo release of the year brings a new &lt;a href=&#34;https://gohugo.io/functions/images/#overlay&#34;&gt;images.Overlay&lt;/a&gt; filter to overlay an image on top of another, e.g. for watermarking, and &lt;a href=&#34;https://gohugo.io/hugo-pipes/toCSS/#options&#34;&gt;Dart Sass&lt;/a&gt; support.&lt;/p&gt;
 &lt;p&gt;This release represents &lt;strong&gt;29 contributions by 12 contributors&lt;/strong&gt; to the main Hugo code base. &lt;a href=&#34;https://github.com/bep&#34;&gt;@bep&lt;/a&gt; leads the Hugo development with a significant amount of contributions, but also a big shoutout to &lt;a href=&#34;https://github.com/moorereason&#34;&gt;@moorereason&lt;/a&gt;, and &lt;a href=&#34;https://github.com/davidsneighbour&#34;&gt;@davidsneighbour&lt;/a&gt; for their ongoing contributions.
 And a big thanks to &lt;a href=&#34;https://github.com/digitalcraftsman&#34;&gt;@digitalcraftsman&lt;/a&gt; for his relentless work on keeping the themes site in pristine condition and to &lt;a href=&#34;https://github.com/davidsneighbour&#34;&gt;@davidsneighbour&lt;/a&gt;, &lt;a href=&#34;https://github.com/coliff&#34;&gt;@coliff&lt;/a&gt; and &lt;a href=&#34;https://github.com/kaushalmodi&#34;&gt;@kaushalmodi&lt;/a&gt; for all the great work on the documentation site.&lt;/p&gt;
 &lt;p&gt;Many have also been busy writing and fixing the documentation in &lt;a href=&#34;https://github.com/gohugoio/hugoDocs&#34;&gt;hugoDocs&lt;/a&gt;,
@@ -10941,7 +10943,9 @@ which has received &lt;strong&gt;11 contributions by 6 contributors&lt;/strong&g
 
 &lt;div class=&#34;code relative&#34; id=&#34;config&#34;&gt;
   &lt;div class=&#34;code-nav flex flex-nowrap items-stretch&#34;&gt;
-      &lt;div class=&#34;san-serif f6 dib lh-solid pl2 pv2 mr2&#34;&gt;config.&lt;/div&gt;
+      &lt;div class=&#34;san-serif f6 dib lh-solid pl2 pv2 mr2&#34;&gt;
+        config.
+      &lt;/div&gt;
       &lt;button data-toggle-tab=&#34;yaml&#34; class=&#34;tab-button active ba san-serif f6 dib lh-solid ph2 pv2&#34;&gt;
         yaml
       &lt;/button&gt;

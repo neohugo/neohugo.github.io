@@ -5,12 +5,11 @@
     <link>https://gohugo.io/contribute/</link>
     <description>Recent content in Contribute to the Hugo Project on Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 01 Feb 2017 00:00:00 +0100</lastBuildDate><atom:link href="https://gohugo.io/contribute/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://gohugo.io/contribute/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Contribute to Hugo Development</title>
       <link>https://gohugo.io/contribute/development/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/contribute/development/</guid>
       <description>Introduction Hugo is an open-source project and lives by the work of its contributors. There are plenty of open issues, and we need your help to make Hugo even more awesome. You don&amp;rsquo;t need to be a Go guru to contribute to the project&amp;rsquo;s development.
@@ -21,17 +20,16 @@ You are new to Git or open-source projects in general You are a fan of Hugo and 
     <item>
       <title>Contribute to the Hugo Docs</title>
       <link>https://gohugo.io/contribute/documentation/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/contribute/documentation/</guid>
-      <description>Create Your Fork It&amp;rsquo;s best to make changes to the Hugo docs on your local machine to check for consistent visual styling. Make sure you&amp;rsquo;ve created a fork of hugoDocs on GitHub and cloned the repository locally on your machine. For more information, you can see GitHub&amp;rsquo;s documentation on &amp;ldquo;forking&amp;rdquo; or follow along with Hugo&amp;rsquo;s development contribution guide.
-You can then create a separate branch for your additions. Be sure to choose a descriptive branch name that best fits the type of content.</description>
+      <description>GitHub workflow Step 1 Fork the documentation repository. Step 2 Clone your fork. Step 3 Create a new branch with a descriptive name. git checkout -b fix/typos-site-variables Step 4 Make changes. Step 5 Commit your changes with a descriptive commit message, typically 50 characters or less. Included the &amp;ldquo;Closes&amp;rdquo; keyword if your change addresses one or more open issues. git commit -m &amp;#34;Fix typos on site variables page Closes #1234 Closes #5678&amp;#34; Step 5 Push the new branch to your fork of the documentation repository.</description>
     </item>
     
     <item>
       <title>Add Your Hugo Theme to the Showcase</title>
       <link>https://gohugo.io/contribute/themes/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/contribute/themes/</guid>
       <description>A collection of all themes created by the Hugo community, including screenshots and demos, can be found at themes.gohugo.io. Every theme in this list will automatically be added to the theme site.

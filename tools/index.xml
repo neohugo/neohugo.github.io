@@ -5,12 +5,11 @@
     <link>https://gohugo.io/tools/</link>
     <description>Recent content in Developer Tools on Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 05 Dec 2016 00:00:00 +0100</lastBuildDate><atom:link href="https://gohugo.io/tools/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://gohugo.io/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Migrate to Hugo</title>
       <link>https://gohugo.io/tools/migrations/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/tools/migrations/</guid>
       <description>This section highlights some projects around Hugo that are independently developed. These tools try to extend the functionality of our static site generator or help you to get started.
@@ -21,7 +20,7 @@ Take a look at this list of migration tools if you currently use other blogging 
     <item>
       <title>Starter Kits</title>
       <link>https://gohugo.io/tools/starter-kits/</link>
-      <pubDate>Wed, 22 Feb 2017 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/tools/starter-kits/</guid>
       <description>Know of a Hugo-related starter kit that isn&amp;rsquo;t mentioned here? Please add it to the list.
@@ -32,7 +31,7 @@ Wowchemy. Wowchemy is the 5,500+ star open source Hugo starter kit and website b
     <item>
       <title>Frontend Interfaces with Hugo</title>
       <link>https://gohugo.io/tools/frontends/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/tools/frontends/</guid>
       <description>enwrite. Enwrite enables evernote-powered, statically generated blogs and websites. Now posting to your blog or updating your website is as easy as writing a new note in Evernote! Lipi. Lipi is a native GUI frontend written in Java to manage your Hugo websites. Netlify CMS. Netlify CMS is an open source, serverless solution for managing Git based content in static sites, and it works on any platform that can host static sites.</description>
@@ -41,7 +40,7 @@ Wowchemy. Wowchemy is the 5,500+ star open source Hugo starter kit and website b
     <item>
       <title>Editor Plug-ins for Hugo</title>
       <link>https://gohugo.io/tools/editors/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/tools/editors/</guid>
       <description>The Hugo community uses a wide range of preferred tools and has developed plug-ins for some of the most popular text editors to help automate parts of your workflow.
@@ -51,7 +50,7 @@ Sublime Text Hugofy. Hugofy is a plugin for Sublime Text 3 to make life easier t
     <item>
       <title>Search for your Hugo Website</title>
       <link>https://gohugo.io/tools/search/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/tools/search/</guid>
       <description>A static website with a dynamic search function? Yes, Hugo provides an alternative to embeddable scripts from Google or other search engines for static websites. Hugo allows you to provide your visitors with a custom search function by indexing your content files directly.
@@ -61,7 +60,7 @@ GitHub Gist for Hugo Workflow. This gist contains a simple workflow to create a 
     <item>
       <title>Other Hugo Community Projects</title>
       <link>https://gohugo.io/tools/other/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gohugo.io/tools/other/</guid>
       <description>And for all the other small things around Hugo:

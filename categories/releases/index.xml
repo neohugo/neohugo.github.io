@@ -5,7 +5,7 @@
     <link>https://gohugo.io/categories/releases/</link>
     <description>Recent content in Releases on Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <lastBuildDate>Wed, 17 Nov 2021 00:00:00 +0100</lastBuildDate><atom:link href="https://gohugo.io/categories/releases/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo 0.89.4: One Bug Fix</title>
@@ -656,8 +656,7 @@ deps: Make the build flags shared between sites 0df7bd62 @bep #6789 Fix baseof w
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0100</pubDate>
       
       <guid>https://gohugo.io/news/0.63.0-relnotes/</guid>
-      <description>Note: There is already a patch release with some fixes.
-Hugo 0.63 is, in general, considerably faster and more memory effective (see the site-building benchmarks below comparing it to v0.62). Not that we are particularly concerned about Hugo&amp;rsquo;s build speed. We leave that to others. But we would hate if it got slower, so we have a comprehensive benchmark suite. And when we needed to simplify the template handling code to solve a concurrency issue, it also became more effective.</description>
+      <description>Hugo 0.63 is, in general, considerably faster and more memory effective (see the site-building benchmarks below comparing it to v0.62). Not that we are particularly concerned about Hugo&amp;rsquo;s build speed. We leave that to others. But we would hate if it got slower, so we have a comprehensive benchmark suite. And when we needed to simplify the template handling code to solve a concurrency issue, it also became more effective. And as a bonus, we also finally got the base template lookup order that you really, really wanted!</description>
     </item>
     
     <item>
@@ -1433,17 +1432,6 @@ config. yaml &amp;nbsp; toml &amp;nbsp; json &amp;nbsp; blackfriday: angledQuote
     </item>
     
     <item>
-      <title>Hugo 0.25.1</title>
-      <link>https://gohugo.io/news/0.25.1-relnotes/</link>
-      <pubDate>Mon, 10 Jul 2017 17:53:58 -0400</pubDate>
-      
-      <guid>https://gohugo.io/news/0.25.1-relnotes/</guid>
-      <description>This is a bug-fix release with a couple of important fixes.
-Hugo now has:
-18277+ stars 456+ contributors 170+ themes Fixes Fix union when the first slice is empty dbbc5c48 @bep #3686 Navigate to changed on CREATE When working with content from IntelliJ IDE, like WebStorm, every file save is followed by two events: &amp;ldquo;RENAME&amp;rdquo; and then &amp;ldquo;CREATE&amp;rdquo;. 7bcc1ce6 @miltador Final (!) fix for issue with escaped JSON front matter 7f82b41a @bep #3682 Fix issue with escaped JSON front matter 84db6c74 @bep #3682 </description>
-    </item>
-    
-    <item>
       <title>Hugo 0.25</title>
       <link>https://gohugo.io/news/0.25-relnotes/</link>
       <pubDate>Fri, 07 Jul 2017 17:53:58 -0400</pubDate>
@@ -1751,6 +1739,17 @@ Added support for pretty URLs (filename/index.html vs filename.html) Hugo suppor
       <guid>https://gohugo.io/news/0.7-relnotes/</guid>
       <description>As the first public release here&amp;rsquo;s a bit about what Hugo can do so far:
 0.7.0 July 4, 2013 Hugo now includes a simple server First public release 0.6.0 July 2, 2013 Hugo includes an example documentation site which it builds 0.5.0 June 25, 2013 Hugo is quite usable and able to build spf13.com </description>
+    </item>
+    
+    <item>
+      <title>Hugo 0.25.1</title>
+      <link>https://gohugo.io/news/0.25.1-relnotes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gohugo.io/news/0.25.1-relnotes/</guid>
+      <description>This is a bug-fix release with a couple of important fixes.
+Hugo now has:
+18277+ stars 456+ contributors 170+ themes Fixes Fix union when the first slice is empty dbbc5c48 @bep #3686 Navigate to changed on CREATE When working with content from IntelliJ IDE, like WebStorm, every file save is followed by two events: &amp;ldquo;RENAME&amp;rdquo; and then &amp;ldquo;CREATE&amp;rdquo;. 7bcc1ce6 @miltador Final (!) fix for issue with escaped JSON front matter 7f82b41a @bep #3682 Fix issue with escaped JSON front matter 84db6c74 @bep #3682 </description>
     </item>
     
   </channel>

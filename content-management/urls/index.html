@@ -1,40 +1,73 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-us">
+<html
+  class="no-js"
+  lang="
+    en
+  
+  ">
+  <head>
+    <meta charset="utf-8" />
+    
+    <link
+      rel="preload"
+      href="https://gohugo.io/fonts/muli-latin-200.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin />
+    <link
+      rel="preload"
+      href="https://gohugo.io/fonts/muli-latin-400.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin />
+    <link
+      rel="preload"
+      href="https://gohugo.io/fonts/muli-latin-800.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin />
 
-<head>
-  <meta charset="utf-8">
-  
-  <link rel="preload" href="https://gohugo.io/fonts/muli-latin-200.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="https://gohugo.io/fonts/muli-latin-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="https://gohugo.io/fonts/muli-latin-800.woff2" as="font" type="font/woff2" crossorigin>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <title>
+      
+        URL Management | Hugo
+      
 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
-  <title>URL Management | Hugo</title>
+    </title>
 
-  <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="generator" content="Hugo 0.110.0-DEV">
+    <meta name="viewport" content="width=device-width,minimum-scale=1" />
+    <meta name="generator" content="Hugo 0.113.0-DEV">
 
-  
-  <meta name="robots" content="noindex, nofollow">
-  
+    
+      <meta name="robots" content="index, follow" />
+    
 
-  
-  
-  
-  
-  
-  
-  
-  <link rel="stylesheet" href="/output/css/app.min.b03318b1df01f94314ccbf9f6c0e79c24f1db2c5fefa37614fc49ace24642f7f.css" integrity="sha256-sDMYsd8B&#43;UMUzL&#43;fbA55wk8dssX&#43;&#43;jdhT8SaziRkL38=" crossorigin="anonymous">
-  
-  
-  
+    
+    
+    
+      
+    
+    
+      
+        <link
+          rel="stylesheet"
+          href="/output/css/app.min.a832962a67e26bb64619e3de5faeaf124462d791802743409826bb5788adf48e.css"
+          integrity="sha256-qDKWKmfia7ZGGePeX66vEkRi15GAJ0NAmCa7V4it9I4="
+          crossorigin="anonymous" />
+      
+      
+    
 
-  <meta name="description"
-  content="Hugo supports permalinks, aliases, link canonicalization, and multiple options for handling relative vs absolute URLs.">
 
-  
+    <meta
+      name="description"
+      content="
+        Control the structure and appearance of URLs through front matter entries and settings in your site configuration.
+      
+      " />
+
+    
 
 
 
@@ -50,7 +83,7 @@
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-  
+    
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
@@ -58,28 +91,53 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0594cb">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:title" content="URL Management" />
-<meta property="og:description" content="Hugo supports permalinks, aliases, link canonicalization, and multiple options for handling relative vs absolute URLs." />
+<meta property="og:description" content="Control the structure and appearance of URLs through front matter entries and settings in your site configuration." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/content-management/urls/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_8453457148814798693.png"/><meta property="article:section" content="content-management" />
 
-<meta property="article:modified_time" content="2023-04-15T19:14:10-07:00" />
+<meta property="article:modified_time" content="2023-05-29T10:15:55-07:00" />
 <meta itemprop="name" content="URL Management">
-<meta itemprop="description" content="Hugo supports permalinks, aliases, link canonicalization, and multiple options for handling relative vs absolute URLs.">
-<meta itemprop="dateModified" content="2023-04-15T19:14:10-07:00" />
-<meta itemprop="wordCount" content="1691"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="description" content="Control the structure and appearance of URLs through front matter entries and settings in your site configuration.">
+<meta itemprop="dateModified" content="2023-05-29T10:15:55-07:00" />
+<meta itemprop="wordCount" content="1385"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_8453457148814798693.png"/>
 <meta name="twitter:title" content="URL Management"/>
-<meta name="twitter:description" content="Hugo supports permalinks, aliases, link canonicalization, and multiple options for handling relative vs absolute URLs."/>
+<meta name="twitter:description" content="Control the structure and appearance of URLs through front matter entries and settings in your site configuration."/>
 <meta name="twitter:site" content="@GoHugoIO"/>
 
+      
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MBZGKNMDWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-</head>
-
-<body class="ma0 sans-serif bg-primary-color-light">
   
+  gtag('config', 'G-MBZGKNMDWC', {'anonymize_ip': true, 'dimension1': 'gohugo.io', 'dimension2': ''});
 
-  
+
+
+var trackOutboundLink = function(id, url) {
+  gtag('event', 'click', {
+    'event_category': 'outbound',
+    'event_label': id,
+    'transport_type': 'beacon'
+  });
+}
+
+</script>
+
+
+    
+
+  </head>
+
+  <body
+    class="ma0 sans-serif bg-primary-color-light">
+    
+
+    
 <nav class="bg-primary-color-dark pv4 w-100" role="navigation">
 
   <div class="center flex-ns flex-wrap items-center justify-start mw9">
@@ -188,9 +246,9 @@
   </div>
 </nav>
 
-  
-  <main role="main" class="content-with-sidebar min-vh-100 pb7 pb0-ns">
     
+    <main role="main" class="content-with-sidebar min-vh-100 pb7 pb0-ns">
+      
   <article class="w-100 ph4 pb5 pb6-ns pt1 pt5-ns">
     <div class="flex-l">
 
@@ -200,13 +258,10 @@
 		<p class="b">What's on this Page</p>
   	<nav id="TableOfContents">
   <ul>
-    <li><a href="#permalinks">Permalinks</a></li>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#front-matter">Front matter</a></li>
+    <li><a href="#site-configuration">Site configuration</a></li>
     <li><a href="#aliases">Aliases</a></li>
-    <li><a href="#pretty-urls">Pretty URLs</a></li>
-    <li><a href="#ugly-urls">Ugly URLs</a></li>
-    <li><a href="#canonicalization">Canonicalization</a></li>
-    <li><a href="#set-url-in-front-matter">Set URL in Front Matter</a></li>
-    <li><a href="#relative-urls">Relative URLs</a></li>
   </ul>
 </nav>
 	
@@ -254,7 +309,7 @@
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      Hugo supports permalinks, aliases, link canonicalization, and multiple options for handling relative vs absolute URLs.
+      Control the structure and appearance of URLs through front matter entries and settings in your site configuration.
     </div>
   
 
@@ -265,9 +320,190 @@
 
 <div class="prose" id="prose">
 
-<h2 id="permalinks">Permalinks <a class="header-link" href="#permalinks"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>The default Hugo target directory for your built website is <code>public/</code>. However, you can change this value by specifying a different <code>publishDir</code> in your <a href="/getting-started/configuration/">site configuration</a>. The directories created at build time for a section reflect the position of the content&rsquo;s directory within the <code>content</code> folder and namespace matching its layout within the <code>contentdir</code> hierarchy.</p>
-<p>The <code>permalinks</code> option in your <a href="/getting-started/configuration/">site configuration</a> allows you to adjust the directory paths (i.e., the URLs) on a per-section basis. This will change where the files are written to and will change the page&rsquo;s internal &ldquo;canonical&rdquo; location, such that template references to <code>.RelPermalink</code> will honor the adjustments made as a result of the mappings in this option.</p>
+<h2 id="overview">Overview <a class="header-link" href="#overview"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<p>By default, when Hugo renders a page, the resulting URL matches the file path within the <code>content</code> directory. For example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">content/posts/post-1.md → https://example.org/posts/post-1/
+</span></span></code></pre></div><p>You can change the structure and appearance of URLs with front matter values and site configuration options.</p>
+<h2 id="front-matter">Front matter <a class="header-link" href="#front-matter"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<h3 id="slug"><code>slug</code> <a class="header-link" href="#slug"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<p>Set the <code>slug</code> in front matter to override the last segment of the path. The <code>slug</code> value does not affect section pages.</p>
+
+<div class="code relative" id="content/posts/post-1.md">
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
+        content/posts/post-1.md
+      </div>
+      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
+        yaml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        toml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        json
+      </button>
+      &nbsp;
+  </div>
+  <div class="tab-content">
+      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">slug</span><span class="p">:</span><span class="w"> </span><span class="l">my-first-post</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">My First Post</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">---</span></span></span></code></pre></div>
+      </div>
+      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c">+++</span>
+</span></span><span class="line"><span class="cl"><span class="nx">slug</span> <span class="p">=</span> <span class="s1">&#39;my-first-post&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;My First Post&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c">+++</span></span></span></code></pre></div>
+      </div>
+      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;slug&#34;</span><span class="p">:</span> <span class="s2">&#34;my-first-post&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;My First Post&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+      </div>
+  </div>
+</div>
+
+<p>The resulting URL will be:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">https://example.org/posts/my-first-post/
+</span></span></code></pre></div><h3 id="url"><code>url</code> <a class="header-link" href="#url"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<p>Set the <code>url</code> in front matter to override the entire path. Use this with either regular pages or section pages.</p>
+<p>With this front matter:</p>
+
+<div class="code relative" id="content/posts/post-1.md">
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
+        content/posts/post-1.md
+      </div>
+      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
+        yaml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        toml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        json
+      </button>
+      &nbsp;
+  </div>
+  <div class="tab-content">
+      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">My First Article</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">/articles/my-first-article</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">---</span></span></span></code></pre></div>
+      </div>
+      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c">+++</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;My First Article&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">url</span> <span class="p">=</span> <span class="s1">&#39;/articles/my-first-article&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c">+++</span></span></span></code></pre></div>
+      </div>
+      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;My First Article&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;url&#34;</span><span class="p">:</span> <span class="s2">&#34;/articles/my-first-article&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+      </div>
+  </div>
+</div>
+
+<p>The resulting URL will be:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">https://example.org/articles/my-first-article/
+</span></span></code></pre></div><p>If you include a file extension:</p>
+
+<div class="code relative" id="content/posts/post-1.md">
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
+        content/posts/post-1.md
+      </div>
+      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
+        yaml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        toml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        json
+      </button>
+      &nbsp;
+  </div>
+  <div class="tab-content">
+      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">My First Article</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">/articles/my-first-article.html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">---</span></span></span></code></pre></div>
+      </div>
+      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c">+++</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;My First Article&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">url</span> <span class="p">=</span> <span class="s1">&#39;/articles/my-first-article.html&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c">+++</span></span></span></code></pre></div>
+      </div>
+      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;My First Article&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;url&#34;</span><span class="p">:</span> <span class="s2">&#34;/articles/my-first-article.html&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+      </div>
+  </div>
+</div>
+
+<p>The resulting URL will be:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">https://example.org/articles/my-first-article.html
+</span></span></code></pre></div><p>In a monolingual site, a <code>url</code> value with or without a leading slash is relative to the <code>baseURL</code>.</p>
+<p>In a multilingual site:</p>
+<ul>
+<li>A <code>url</code> value with a leading slash is relative to the <code>baseURL</code>.</li>
+<li>A <code>url</code> value without a leading slash is relative to the <code>baseURL</code> plus the language prefix.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Site type</th>
+<th style="text-align:left">Front matter <code>url</code></th>
+<th style="text-align:left">Resulting URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">monolingual</td>
+<td style="text-align:left"><code>/about</code></td>
+<td style="text-align:left"><code>https://example.org/about/</code></td>
+</tr>
+<tr>
+<td style="text-align:left">monolingual</td>
+<td style="text-align:left"><code>about</code></td>
+<td style="text-align:left"><code>https://example.org/about/</code></td>
+</tr>
+<tr>
+<td style="text-align:left">multilingual</td>
+<td style="text-align:left"><code>/about</code></td>
+<td style="text-align:left"><code>https://example.org/about/</code></td>
+</tr>
+<tr>
+<td style="text-align:left">multilingual</td>
+<td style="text-align:left"><code>about</code></td>
+<td style="text-align:left"><code>https://example.org/de/about/</code></td>
+</tr>
+</tbody>
+</table>
+<p>If you set both <code>slug</code> and <code>url</code> in front matter, the <code>url</code> value takes precedence.</p>
+<h2 id="site-configuration">Site configuration <a class="header-link" href="#site-configuration"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<h3 id="permalinks">Permalinks <a class="header-link" href="#permalinks"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<p>In your site configuration, set a URL pattern for regular pages within a top-level section. This is recursive, affecting descendant regular pages.</p>
 
 <aside class="admonition note">
 	<div class="note-icon">
@@ -275,16 +511,25 @@
 	</div>
 	
 	
-	<div class="admonition-content"><p>These examples use the default values for <code>publishDir</code> and <code>contentDir</code>; i.e., <code>public</code> and <code>content</code>, respectively. You can override the default values in your <a href="/getting-started/configuration/">site&rsquo;s <code>config</code> file</a>.</p>
+	<div class="admonition-content"><p>The  <code>permalinks</code> defined in your site configuration do not apply to section pages. To adjust the URL for section pages, set <code>url</code> in front matter.</p>
 </div>
 </aside>
 
-<p>For example, if one of your <a href="/content-management/sections/">sections</a> is called <code>posts</code> and you want to adjust the canonical path to be hierarchical based on the year, month, and post title, you could set up the following configurations in YAML and TOML, respectively.</p>
-<h3 id="permalinks-configuration-example">Permalinks Configuration Example <a class="header-link" href="#permalinks-configuration-example"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<h4 id="permalinks-examples">Examples <a class="header-link" href="#permalinks-examples"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
+<p>With this content structure:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">content/
+</span></span><span class="line"><span class="cl">├── posts/
+</span></span><span class="line"><span class="cl">│   ├── _index.md
+</span></span><span class="line"><span class="cl">│   ├── post-1.md
+</span></span><span class="line"><span class="cl">│   └── post-2.md
+</span></span><span class="line"><span class="cl">└── _index.md
+</span></span></code></pre></div><p>Create a date-based hierarchy, recursively, for regular pages within the <code>posts</code> section:</p>
 
-<div class="code relative" id="config">
+<div class="code relative" id="hugo">
   <div class="code-nav flex flex-nowrap items-stretch">
-      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
+        hugo.
+      </div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
@@ -301,18 +546,18 @@
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">permalinks</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">posts</span><span class="p">:</span><span class="w"> </span><span class="l">/:year/:month/:title/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">posts</span><span class="p">:</span><span class="w"> </span><span class="l">/posts/:year/:month/:title/</span><span class="w">
 </span></span></span></code></pre></div>
       </div>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">posts</span> <span class="p">=</span> <span class="s1">&#39;/:year/:month/:title/&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">posts</span> <span class="p">=</span> <span class="s1">&#39;/posts/:year/:month/:title/&#39;</span>
 </span></span></code></pre></div>
       </div>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">   <span class="nt">&#34;permalinks&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;posts&#34;</span><span class="p">:</span> <span class="s2">&#34;/:year/:month/:title/&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;posts&#34;</span><span class="p">:</span> <span class="s2">&#34;/posts/:year/:month/:title/&#34;</span>
 </span></span><span class="line"><span class="cl">   <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div>
@@ -320,12 +565,25 @@
   </div>
 </div>
 
-<p>Only the content under <code>posts/</code> will have the new URL structure. For example, the file <code>content/posts/sample-entry.md</code> with <code>date: 2017-02-27T19:20:00-05:00</code> in its front matter will render to <code>public/2017/02/sample-entry/index.html</code> at build time and therefore be reachable at <code>https://example.com/2017/02/sample-entry/</code>.</p>
-<p>To configure the <code>permalinks</code> option for pages in the &ldquo;root&rdquo; section, use <strong>/</strong> as the key:</p>
+<p>The structure of the published site will be:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">public/
+</span></span><span class="line"><span class="cl">├── posts/
+</span></span><span class="line"><span class="cl">│   ├── 2023/
+</span></span><span class="line"><span class="cl">│   │   └── 03/
+</span></span><span class="line"><span class="cl">│   │       ├── post-1/
+</span></span><span class="line"><span class="cl">│   │       │   └── index.html
+</span></span><span class="line"><span class="cl">│   │       └── post-2/
+</span></span><span class="line"><span class="cl">│   │           └── index.html
+</span></span><span class="line"><span class="cl">│   └── index.html
+</span></span><span class="line"><span class="cl">├── favicon.ico
+</span></span><span class="line"><span class="cl">└── index.html
+</span></span></code></pre></div><p>To create a date-based hierarchy for regular pages in the content root:</p>
 
-<div class="code relative" id="config">
+<div class="code relative" id="hugo">
   <div class="code-nav flex flex-nowrap items-stretch">
-      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
+        hugo.
+      </div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
@@ -342,18 +600,18 @@
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">permalinks</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">/</span><span class="p">:</span><span class="w"> </span><span class="l">/:year/:month/:filename/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">/</span><span class="p">:</span><span class="w"> </span><span class="l">/:year/:month/:title/</span><span class="w">
 </span></span></span></code></pre></div>
       </div>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="s1">&#39;/&#39;</span> <span class="p">=</span> <span class="s1">&#39;/:year/:month/:filename/&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;/&#39;</span> <span class="p">=</span> <span class="s1">&#39;/:year/:month/:title/&#39;</span>
 </span></span></code></pre></div>
       </div>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">   <span class="nt">&#34;permalinks&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;/&#34;</span><span class="p">:</span> <span class="s2">&#34;/:year/:month/:filename/&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;/&#34;</span><span class="p">:</span> <span class="s2">&#34;/:year/:month/:title/&#34;</span>
 </span></span><span class="line"><span class="cl">   <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div>
@@ -361,11 +619,97 @@
   </div>
 </div>
 
-<p>If the standard date-based permalink configuration does not meet your needs, you can also format URL segments using <a href="https://pkg.go.dev/time#Time.Format">Go time formatting directives</a>. For example, a URL structure with two digit years and month and day digits without zero padding can be accomplished with:</p>
 
-<div class="code relative" id="config">
+<aside class="admonition note">
+	<div class="note-icon">
+		
+	</div>
+	
+	
+	<div class="admonition-content"><p>A URL pattern defined for the content root is not recursive.</p>
+</div>
+</aside>
+
+<p>Use the same approach with taxonomies. For example, to omit the taxonomy segment of the URL:</p>
+
+<div class="code relative" id="hugo">
   <div class="code-nav flex flex-nowrap items-stretch">
-      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">config.</div>
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
+        hugo.
+      </div>
+      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
+        yaml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        toml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        json
+      </button>
+      &nbsp;
+  </div>
+  <div class="tab-content">
+      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">permalinks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l">/:title/</span><span class="w">
+</span></span></span></code></pre></div>
+      </div>
+      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">tags</span> <span class="p">=</span> <span class="s1">&#39;/:title/&#39;</span>
+</span></span></code></pre></div>
+      </div>
+      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;permalinks&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;tags&#34;</span><span class="p">:</span> <span class="s2">&#34;/:title/&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+      </div>
+  </div>
+</div>
+
+<p>Front matter <code>url</code> values take precedence over URL patterns defined in <code>permalinks</code>.</p>
+<h4 id="tokens">Tokens <a class="header-link" href="#tokens"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
+<p>Use these tokens when defining the URL pattern. The <code>date</code> field in front matter determines the value of time-related tokens.</p>
+<dl>
+<dt><code>:year</code></dt>
+<dd>the 4-digit year</dd>
+<dt><code>:month</code></dt>
+<dd>the 2-digit month</dd>
+<dt><code>:monthname</code></dt>
+<dd>the name of the month</dd>
+<dt><code>:day</code></dt>
+<dd>the 2-digit day</dd>
+<dt><code>:weekday</code></dt>
+<dd>the 1-digit day of the week (Sunday = 0)</dd>
+<dt><code>:weekdayname</code></dt>
+<dd>the name of the day of the week</dd>
+<dt><code>:yearday</code></dt>
+<dd>the 1- to 3-digit day of the year</dd>
+<dt><code>:section</code></dt>
+<dd>the content&rsquo;s section</dd>
+<dt><code>:sections</code></dt>
+<dd>the content&rsquo;s sections hierarchy. You can use a selection of the sections using <em>slice syntax</em>: <code>:sections[1:]</code> includes all but the first, <code>:sections[:last]</code> includes all but the last, <code>:sections[last]</code> includes only the last, <code>:sections[1:2]</code> includes section 2 and 3. Note that this slice access will not throw any out-of-bounds errors, so you don&rsquo;t have to be exact.</dd>
+<dt><code>:title</code></dt>
+<dd>the content&rsquo;s title</dd>
+<dt><code>:slug</code></dt>
+<dd>the content&rsquo;s slug (or title if no slug is provided in the front matter)</dd>
+<dt><code>:slugorfilename</code></dt>
+<dd>the content&rsquo;s slug (or filename if no slug is provided in the front matter)</dd>
+<dt><code>:filename</code></dt>
+<dd>the content&rsquo;s filename (without extension)</dd>
+</dl>
+<p>For time-related values, you can also use the layout string components defined in Go&rsquo;s <a href="https://pkg.go.dev/time#pkg-constants">time package</a>. For example:</p>
+
+<div class="code relative" id="hugo">
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
+        hugo.
+      </div>
       <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
         yaml
       </button>
@@ -401,175 +745,70 @@
   </div>
 </div>
 
-<p>You can also configure permalinks of taxonomies with the same syntax, by using the plural form of the taxonomy instead of the section. You will probably only want to use the configuration values <code>:slug</code> or <code>:title</code>.</p>
-<h3 id="permalink-configuration-values">Permalink Configuration Values <a class="header-link" href="#permalink-configuration-values"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>The following is a list of values that can be used in a <code>permalink</code> definition in your site <code>config</code> file. All references to time are dependent on the content&rsquo;s date.</p>
-<dl>
-<dt><code>:year</code></dt>
-<dd>the 4-digit year</dd>
-<dt><code>:month</code></dt>
-<dd>the 2-digit month</dd>
-<dt><code>:monthname</code></dt>
-<dd>the name of the month</dd>
-<dt><code>:day</code></dt>
-<dd>the 2-digit day</dd>
-<dt><code>:weekday</code></dt>
-<dd>the 1-digit day of the week (Sunday = 0)</dd>
-<dt><code>:weekdayname</code></dt>
-<dd>the name of the day of the week</dd>
-<dt><code>:yearday</code></dt>
-<dd>the 1- to 3-digit day of the year</dd>
-<dt><code>:section</code></dt>
-<dd>the content&rsquo;s section</dd>
-<dt><code>:sections</code></dt>
-<dd>the content&rsquo;s sections hierarchy. You can use a selection of the sections using <em>slice syntax</em>: <code>:sections[1:]</code> includes all but the first, <code>:sections[:last]</code> includes all but the last, <code>:sections[last]</code> includes only the last, <code>:sections[1:2]</code> includes section 2 and 3. Note that this slice access will not throw any out-of-bounds errors, so you don&rsquo;t have to be exact.</dd>
-<dt><code>:title</code></dt>
-<dd>the content&rsquo;s title</dd>
-<dt><code>:slug</code></dt>
-<dd>the content&rsquo;s slug (or title if no slug is provided in the front matter)</dd>
-<dt><code>:slugorfilename</code></dt>
-<dd>the content&rsquo;s slug (or filename if no slug is provided in the front matter)</dd>
-<dt><code>:filename</code></dt>
-<dd>the content&rsquo;s filename (without extension)</dd>
-</dl>
-<p>Additionally, a Go time format string prefixed with <code>:</code> may be used.</p>
-<h2 id="aliases">Aliases <a class="header-link" href="#aliases"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>Aliases can be used to create redirects to your page from other URLs.</p>
-<p>Aliases comes in two forms:</p>
-<ol>
-<li>Starting with a <code>/</code> meaning they are relative to the <code>BaseURL</code>, e.g. <code>/posts/my-blogpost/</code></li>
-<li>They are relative to the <code>Page</code> they&rsquo;re defined in, e.g. <code>my-blogpost</code> or even something like <code>../blog/my-blogpost</code> (new in Hugo 0.55).</li>
-</ol>
-<h3 id="example-aliases">Example: Aliases <a class="header-link" href="#example-aliases"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>Let&rsquo;s assume you create a new piece of content at <code>content/posts/my-awesome-blog-post.md</code>. The content is a revision of your previous post at <code>content/posts/my-original-url.md</code>. You can create an <code>aliases</code> field in the front matter of your new <code>my-awesome-blog-post.md</code> where you can add previous paths. The following examples show how to create this field in TOML and YAML front matter, respectively.</p>
-<h4 id="toml-front-matter">TOML Front Matter <a class="header-link" href="#toml-front-matter"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
+<h3 id="appearance">Appearance <a class="header-link" href="#appearance"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<p>The appearance of a URL is either ugly or pretty.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Path</th>
+<th style="text-align:left">URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ugly</td>
+<td style="text-align:left">content/about.md</td>
+<td style="text-align:left"><code>https://example.org/about.html</code></td>
+</tr>
+<tr>
+<td style="text-align:left">pretty</td>
+<td style="text-align:left">content/about.md</td>
+<td style="text-align:left"><code>https://example.org/about/</code></td>
+</tr>
+</tbody>
+</table>
+<p>By default, Hugo produces pretty URLs. To generate ugly URLs, change your site configuration:</p>
 
-
-
-
-
-
-
-
-<div class="code relative" id="content/posts/my-awesome-post.md"><div class="filename san-serif f6 dib lh-solid pl2 pv2">content/posts/my-awesome-post.md</div>
-	<div class="code-copy-content nt3" >
-		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">+++
-</span></span><span class="line"><span class="cl">aliases = [
-</span></span><span class="line"><span class="cl">    &#34;/posts/my-original-url/&#34;,
-</span></span><span class="line"><span class="cl">    &#34;/2010/01/01/even-earlier-url.html&#34;
-</span></span><span class="line"><span class="cl">]
-</span></span><span class="line"><span class="cl">+++</span></span></code></pre></div>
-	</div>
-
+<div class="code relative" id="hugo">
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
+        hugo.
+      </div>
+      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
+        yaml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        toml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        json
+      </button>
+      &nbsp;
+  </div>
+  <div class="tab-content">
+      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">uglyURLs</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span></code></pre></div>
+      </div>
+      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">uglyURLs</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span></code></pre></div>
+      </div>
+      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;uglyURLs&#34;</span><span class="p">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+      </div>
+  </div>
 </div>
 
-<h4 id="yaml-front-matter">YAML Front Matter <a class="header-link" href="#yaml-front-matter"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
-
-
-
-
-
-
-
-
-<div class="code relative" id="content/posts/my-awesome-post.md"><div class="filename san-serif f6 dib lh-solid pl2 pv2">content/posts/my-awesome-post.md</div>
-	<div class="code-copy-content nt3" >
-		
-		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">---
-</span></span><span class="line"><span class="cl">aliases:
-</span></span><span class="line"><span class="cl">    <span class="k">-</span> /posts/my-original-url/
-</span></span><span class="line"><span class="cl">    <span class="k">-</span> /2010/01/01/even-earlier-url.html
-</span></span><span class="line"><span class="cl">---</span></span></code></pre></div>
-	</div>
-
-</div>
-
-<p>Now when you visit any of the locations specified in aliases&mdash;i.e., <em>assuming the same site domain</em>&mdash;you&rsquo;ll be redirected to the page they are specified on. For example, a visitor to <code>example.com/posts/my-original-url/</code> will be immediately redirected to <code>example.com/posts/my-awesome-post/</code>.</p>
-<h3 id="example-aliases-in-multilingual">Example: Aliases in Multilingual <a class="header-link" href="#example-aliases-in-multilingual"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>On <a href="/content-management/multilingual/">multilingual sites</a>, each translation of a post can have unique aliases. To use the same alias across multiple languages, prefix it with the language code.</p>
-<p>In <code>/posts/my-new-post.es.md</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">---
-</span></span><span class="line"><span class="cl">aliases:
-</span></span><span class="line"><span class="cl">    <span class="k">-</span> /es/posts/my-original-post/
-</span></span><span class="line"><span class="cl">---
-</span></span></code></pre></div><p>From Hugo 0.55 you can also have page-relative aliases, so <code>/es/posts/my-original-post/</code> can be simplified to the more portable <code>my-original-post/</code></p>
-<h3 id="how-hugo-aliases-work">How Hugo Aliases Work <a class="header-link" href="#how-hugo-aliases-work"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>When aliases are specified, Hugo creates a directory to match the alias entry. Inside the directory, Hugo creates an <code>.html</code> file specifying the canonical URL for the page and the new redirect target.</p>
-<p>For example, a content file at <code>posts/my-intended-url.md</code> with the following in the front matter:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">My New post</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">aliases</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">/posts/my-old-url/]</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
-</span></span></span></code></pre></div><p>Assuming a <code>baseURL</code> of <code>example.com</code>, the contents of the auto-generated alias <code>.html</code> found at <code>https://example.com/posts/my-old-url/</code> will contain the following:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>https://example.com/posts/my-intended-url<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;canonical&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://example.com/posts/my-intended-url&#34;</span><span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;robots&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;noindex&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;content-type&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;text/html; charset=utf-8&#34;</span><span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;refresh&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;0; url=https://example.com/posts/my-intended-url&#34;</span><span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>The <code>http-equiv=&quot;refresh&quot;</code> line is what performs the redirect, in 0 seconds in this case. If an end user of your website goes to <code>https://example.com/posts/my-old-url</code>, they will now be automatically redirected to the newer, correct URL. The addition of <code>&lt;meta name=&quot;robots&quot; content=&quot;noindex&quot;&gt;</code> lets search engine bots know that they should not index your alias page (<code>https://example.com/posts/my-old-url/</code>).</p>
-<h3 id="customize">Customize <a class="header-link" href="#customize"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>You may customize this alias page by creating an <code>alias.html</code> template in the
-layouts folder of your site (i.e., <code>layouts/alias.html</code>). In this case, the data passed to the template is</p>
-<dl>
-<dt><code>Permalink</code></dt>
-<dd>the link to the page being aliased</dd>
-<dt><code>Page</code></dt>
-<dd>the Page data for the page being aliased</dd>
-</dl>
-<h3 id="important-behaviors-of-aliases">Important Behaviors of Aliases <a class="header-link" href="#important-behaviors-of-aliases"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<ol>
-<li>Hugo makes no assumptions about aliases. They also do not change based
-on your UglyURLs setting. You need to provide absolute paths to your web root
-and the complete filename or directory.</li>
-<li>Aliases are rendered <em>before</em> any content are rendered and therefore will be overwritten by any content with the same location.</li>
-</ol>
-<h2 id="pretty-urls">Pretty URLs <a class="header-link" href="#pretty-urls"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>Hugo&rsquo;s default behavior is to render your content with &ldquo;pretty&rdquo; URLs. No non-standard server-side configuration is required for these pretty URLs to work.</p>
-<p>The following demonstrates the concept:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">content/posts/_index.md
-</span></span><span class="line"><span class="cl">=&gt; example.com/posts/
-</span></span><span class="line"><span class="cl">content/posts/post-1.md
-</span></span><span class="line"><span class="cl">=&gt; example.com/posts/post-1/
-</span></span></code></pre></div><h2 id="ugly-urls">Ugly URLs <a class="header-link" href="#ugly-urls"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>If you would like to have what are often referred to as &ldquo;ugly URLs&rdquo; (e.g., example.com/urls.html), set <code>uglyurls = true</code> or <code>uglyurls: true</code> in your site&rsquo;s <code>config.toml</code> or <code>config.yaml</code>, respectively. You can also set the <code>HUGO_UGLYURLS</code> environment variable to <code>true</code> when running <code>hugo</code> or <code>hugo server</code>.</p>
-<p>If you want a specific piece of content to have an exact URL, you can specify this in the <a href="/content-management/front-matter/">front matter</a> under the <code>url</code> key. The following are examples of the same content directory and what the eventual URL structure will be when Hugo runs with its default behavior.</p>
-<p>See <a href="/content-management/organization/">Content Organization</a> for more details on paths.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">.
-</span></span><span class="line"><span class="cl">└── content
-</span></span><span class="line"><span class="cl">    └── about
-</span></span><span class="line"><span class="cl">    |   └── _index.md  // &lt;- https://example.com/about/
-</span></span><span class="line"><span class="cl">    ├── posts
-</span></span><span class="line"><span class="cl">    |   ├── firstpost.md   // &lt;- https://example.com/posts/firstpost/
-</span></span><span class="line"><span class="cl">    |   ├── happy
-</span></span><span class="line"><span class="cl">    |   |   └── ness.md  // &lt;- https://example.com/posts/happy/ness/
-</span></span><span class="line"><span class="cl">    |   └── secondpost.md  // &lt;- https://example.com/posts/secondpost/
-</span></span><span class="line"><span class="cl">    └── quote
-</span></span><span class="line"><span class="cl">        ├── first.md       // &lt;- https://example.com/quote/first/
-</span></span><span class="line"><span class="cl">        └── second.md      // &lt;- https://example.com/quote/second/
-</span></span></code></pre></div><p>Here&rsquo;s the same organization run with <code>hugo --uglyURLs</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">.
-</span></span><span class="line"><span class="cl">└── content
-</span></span><span class="line"><span class="cl">    └── about
-</span></span><span class="line"><span class="cl">    |   └── _index.md  // &lt;- https://example.com/about.html
-</span></span><span class="line"><span class="cl">    ├── posts
-</span></span><span class="line"><span class="cl">    |   ├── firstpost.md   // &lt;- https://example.com/posts/firstpost.html
-</span></span><span class="line"><span class="cl">    |   ├── happy
-</span></span><span class="line"><span class="cl">    |   |   └── ness.md    // &lt;- https://example.com/posts/happy/ness.html
-</span></span><span class="line"><span class="cl">    |   └── secondpost.md  // &lt;- https://example.com/posts/secondpost.html
-</span></span><span class="line"><span class="cl">    └── quote
-</span></span><span class="line"><span class="cl">        ├── first.md       // &lt;- https://example.com/quote/first.html
-</span></span><span class="line"><span class="cl">        └── second.md      // &lt;- https://example.com/quote/second.html
-</span></span></code></pre></div><h2 id="canonicalization">Canonicalization <a class="header-link" href="#canonicalization"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>By default, all relative URLs encountered in the input are left unmodified, e.g. <code>/css/foo.css</code> would stay as <code>/css/foo.css</code>. The <code>canonifyURLs</code> field in your site <code>config</code> has a default value of <code>false</code>.</p>
-<p>By setting <code>canonifyURLs</code> to <code>true</code>, all relative URLs would instead be <em>canonicalized</em> using <code>baseURL</code>.  For example, assuming you have <code>baseURL = https://example.com/</code>, the relative URL <code>/css/foo.css</code> would be turned into the absolute URL <code>https://example.com/css/foo.css</code>.</p>
-<p>Benefits of canonicalization include fixing all URLs to be absolute, which may aid with some parsing tasks. Note, however, that all modern browsers handle this on the client without issue.</p>
-<p>Benefits of non-canonicalization include being able to have scheme-relative resource inclusion; e.g., so that <code>http</code> vs <code>https</code> can be decided according to how the page was retrieved.</p>
+<h3 id="post-processing">Post-processing <a class="header-link" href="#post-processing"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<p>Hugo provides two mutually exclusive configuration options to alter URLs <em>after</em> it renders a page.</p>
+<h4 id="canonical-urls">Canonical URLs <a class="header-link" href="#canonical-urls"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
 
 <aside class="admonition note">
 	<div class="note-icon">
@@ -577,30 +816,287 @@ and the complete filename or directory.</li>
 	</div>
 	
 	
-	<div class="admonition-content"><p>In the May 2014 release of Hugo v0.11, the default value of <code>canonifyURLs</code> was switched from <code>true</code> to <code>false</code>, which we think is the better default and should continue to be the case going forward. Please verify and adjust your website accordingly if you are upgrading from v0.10 or older versions.</p>
+	<div class="admonition-content"><p>This is a legacy configuration option, superseded by template functions and markdown render hooks, and will likely be <a href="https://github.com/gohugoio/hugo/issues/4733">removed in a future release</a>.</p>
 </div>
 </aside>
 
-<p>To find out the current value of <code>canonifyURLs</code> for your website, you may use the handy <code>hugo config</code> command added in v0.13.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">hugo config | grep -i canon
-</span></span></code></pre></div><p>Or, if you are on Windows and do not have <code>grep</code> installed:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">hugo config | FINDSTR /I canon
-</span></span></code></pre></div><h2 id="set-url-in-front-matter">Set URL in Front Matter <a class="header-link" href="#set-url-in-front-matter"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>In addition to specifying permalink values in your site configuration for different content sections, Hugo provides even more granular control for individual pieces of content.</p>
-<p>Both <code>slug</code> and <code>url</code> can be defined in individual front matter. For more information on content destinations at build time, see <a href="/content-management/organization/">Content Organization</a>.</p>
-<p>From Hugo 0.55, you can use URLs relative to the current site context (the language), which makes it simpler to maintain. For a Japanese translation, both of the following examples would get the same URL:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">---
-</span></span><span class="line"><span class="cl">title: &#34;Custom URL!&#34;
-</span></span><span class="line"><span class="cl">url: &#34;/jp/custom/foo&#34;
-</span></span><span class="line"><span class="cl">---
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">---
-</span></span><span class="line"><span class="cl">title: &#34;Custom URL!&#34;
-</span></span><span class="line"><span class="cl">url: &#34;custom/foo&#34;
-</span></span><span class="line"><span class="cl">---
-</span></span></code></pre></div><h2 id="relative-urls">Relative URLs <a class="header-link" href="#relative-urls"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
-<p>By default, all relative URLs are left unchanged by Hugo, which can be problematic when you want to make your site browsable from a local file system.</p>
-<p>Setting <code>relativeURLs</code> to <code>true</code> in your <a href="/getting-started/configuration/">site configuration</a> will cause Hugo to rewrite all relative URLs to be relative to the current content.</p>
-<p>For example, if your <code>/posts/first/</code> page contains a link to <code>/about/</code>, Hugo will rewrite the URL to <code>../../about/</code>.</p>
+<p>If enabled, Hugo performs a search and replace <em>after</em> it renders the page. It searches for site-relative URLs (those with a leading slash) associated with <code>action</code>, <code>href</code>, <code>src</code>, <code>srcset</code>, and <code>url</code> attributes. It then prepends the <code>baseURL</code> to create absolute URLs.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">&lt;a href=&#34;/about&#34;&gt; → &lt;a href=&#34;https://example.org/about/&#34;&gt;
+</span></span><span class="line"><span class="cl">&lt;img src=&#34;/a.gif&#34;&gt; → &lt;img src=&#34;https://example.org/a.gif&#34;&gt;
+</span></span></code></pre></div><p>This is an imperfect, brute force approach that can affect content as well as HTML attributes. As noted above, this is a legacy configuration option that will likely be removed in a future release.</p>
+<p>To enable:</p>
+
+<div class="code relative" id="hugo">
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
+        hugo.
+      </div>
+      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
+        yaml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        toml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        json
+      </button>
+      &nbsp;
+  </div>
+  <div class="tab-content">
+      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">canonifyURLs</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span></code></pre></div>
+      </div>
+      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">canonifyURLs</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span></code></pre></div>
+      </div>
+      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;canonifyURLs&#34;</span><span class="p">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+      </div>
+  </div>
+</div>
+
+<h4 id="relative-urls">Relative URLs <a class="header-link" href="#relative-urls"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
+
+<aside class="admonition note">
+	<div class="note-icon">
+		
+	</div>
+	
+	
+	<div class="admonition-content"><p>Do not enable this option unless you are creating a serverless site, navigable via the file system.</p>
+</div>
+</aside>
+
+<p>If enabled, Hugo performs a search and replace <em>after</em> it renders the page. It searches for site-relative URLs (those with a leading slash) associated with <code>action</code>, <code>href</code>, <code>src</code>, <code>srcset</code>, and <code>url</code> attributes. It then transforms the URL to be relative to the current page.</p>
+<p>For example, when rendering <code>content/posts/post-1</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">&lt;a href=&#34;/about&#34;&gt; → &lt;a href=&#34;../../about&#34;&gt;
+</span></span><span class="line"><span class="cl">&lt;img src=&#34;/a.gif&#34;&gt; → &lt;img src=&#34;../../a.gif&#34;&gt;
+</span></span></code></pre></div><p>This is an imperfect, brute force approach that can affect content as well as HTML attributes. As noted above, do not enable this option unless you are creating a serverless site.</p>
+<p>To enable:</p>
+
+<div class="code relative" id="hugo">
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
+        hugo.
+      </div>
+      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
+        yaml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        toml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        json
+      </button>
+      &nbsp;
+  </div>
+  <div class="tab-content">
+      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">relativeURLs</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span></code></pre></div>
+      </div>
+      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">relativeURLs</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span></code></pre></div>
+      </div>
+      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;relativeURLs&#34;</span><span class="p">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+      </div>
+  </div>
+</div>
+
+<h2 id="aliases">Aliases <a class="header-link" href="#aliases"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+<p>Create redirects from old URLs to new URLs with aliases:</p>
+<ul>
+<li>An alias with a leading slash is relative to the <code>baseURL</code></li>
+<li>An alias without a leading slash is relative to the current directory</li>
+</ul>
+<h3 id="alias-examples">Examples <a class="header-link" href="#alias-examples"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<p>Change the file name of an existing page, and create an alias from the previous URL to the new URL:</p>
+
+<div class="code relative" id="content/posts/new-file-name.md">
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
+        content/posts/new-file-name.md.
+      </div>
+      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
+        yaml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        toml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        json
+      </button>
+      &nbsp;
+  </div>
+  <div class="tab-content">
+      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">aliases</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">/posts/previous-file-name</span><span class="w">
+</span></span></span></code></pre></div>
+      </div>
+      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">aliases</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;/posts/previous-file-name&#39;</span><span class="p">]</span>
+</span></span></code></pre></div>
+      </div>
+      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;aliases&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;/posts/previous-file-name&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+      </div>
+  </div>
+</div>
+
+<p>Each of these directory-relative aliases is equivalent to the site-relative alias above:</p>
+<ul>
+<li><code>previous-file-name</code></li>
+<li><code>./previous-file-name</code></li>
+<li><code>../posts/previous-file-name</code></li>
+</ul>
+<p>You can create more than one alias to the current page:</p>
+
+<div class="code relative" id="content/posts/new-file-name.md">
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
+        content/posts/new-file-name.md.
+      </div>
+      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
+        yaml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        toml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        json
+      </button>
+      &nbsp;
+  </div>
+  <div class="tab-content">
+      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">aliases</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">previous-file-name</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">original-file-name</span><span class="w">
+</span></span></span></code></pre></div>
+      </div>
+      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">aliases</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;previous-file-name&#39;</span><span class="p">,</span> <span class="s1">&#39;original-file-name&#39;</span><span class="p">]</span>
+</span></span></code></pre></div>
+      </div>
+      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;aliases&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;previous-file-name&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;original-file-name&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+      </div>
+  </div>
+</div>
+
+<p>In a multilingual site, use a directory-relative alias, or include the language prefix with a site-relative alias:</p>
+
+<div class="code relative" id="content/posts/new-file-name.de.md">
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
+        content/posts/new-file-name.de.md.
+      </div>
+      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
+        yaml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        toml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        json
+      </button>
+      &nbsp;
+  </div>
+  <div class="tab-content">
+      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">aliases</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">/de/posts/previous-file-name</span><span class="w">
+</span></span></span></code></pre></div>
+      </div>
+      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">aliases</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;/de/posts/previous-file-name&#39;</span><span class="p">]</span>
+</span></span></code></pre></div>
+      </div>
+      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;aliases&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;/de/posts/previous-file-name&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+      </div>
+  </div>
+</div>
+
+<h3 id="how-aliases-work">How Aliases Work <a class="header-link" href="#how-aliases-work"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<p>Using the first example above, Hugo generates the following site structure:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">public/
+</span></span><span class="line"><span class="cl">├── posts/
+</span></span><span class="line"><span class="cl">│   ├── new-file-name/
+</span></span><span class="line"><span class="cl">│   │   └── index.html
+</span></span><span class="line"><span class="cl">│   ├── previous-file-name/
+</span></span><span class="line"><span class="cl">│   │   └── index.html
+</span></span><span class="line"><span class="cl">│   └── index.html
+</span></span><span class="line"><span class="cl">└── index.html
+</span></span></code></pre></div><p>The alias from the previous URL to the new URL is a client-side redirect:</p>
+
+<div class="code relative" id="posts/previous-file-name/index.html">
+  <div class="f6 dib lh-solid pl2 pv2">posts/previous-file-name/index.html</div>
+  <div class="code-copy-content nt3"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en-us&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>https://example.org/posts/new-file-name/<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;canonical&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://example.org/posts/new-file-name/&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;robots&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;noindex&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;refresh&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;0; url=https://example.org/posts/new-file-name/&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></span></span></code></pre></div>
+  </div>
+</div>
+
+<p>Collectively, the elements in the <code>head</code> section:</p>
+<ul>
+<li>Tell search engines that the new URL is canonical</li>
+<li>Tell search engines not to index the previous URL</li>
+<li>Tell the browser to redirect to the new URL</li>
+</ul>
+<p>Hugo renders alias files before rendering pages. A new page with the previous file name will overwrite the alias, as expected.</p>
+<h3 id="customize">Customize <a class="header-link" href="#customize"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
+<p>Create a new template (<code>layouts/alias.html</code>) to customize the content of the alias files. The template receives the following context:</p>
+<dl>
+<dt><code>Permalink</code></dt>
+<dd>the link to the page being aliased</dd>
+<dt><code>Page</code></dt>
+<dd>the Page data for the page being aliased</dd>
+</dl>
 
 </div>
 
@@ -609,15 +1105,15 @@ and the complete filename or directory.</li>
 <h2>See Also</h2>
 <ul>
 	
-	<li><a href="/functions/urlquery/">urlquery</a></li>
+	<li><a href="/content-management/organization/">Content Organization</a></li>
 	
-	<li><a href="/functions/urls.parse/">urls.Parse</a></li>
+	<li><a href="/functions/urldecode/">urldecode</a></li>
 	
-	<li><a href="/functions/querify/">querify</a></li>
+	<li><a href="/functions/urlencode/">urlencode</a></li>
 	
-	<li><a href="/functions/safeurl/">safeURL</a></li>
+	<li><a href="/getting-started/configuration/">Configure Hugo</a></li>
 	
-	<li><a href="/functions/uniq/">uniq</a></li>
+	<li><a href="/content-management/cross-references/">Links and Cross References</a></li>
 	
 </ul>
 
@@ -1074,6 +1570,11 @@ and the complete filename or directory.</li>
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/store/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              .Store
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/unix/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               .Unix
             </a>
@@ -1191,6 +1692,11 @@ and the complete filename or directory.</li>
           <li class="f6 fw4">
             <a href="/functions/findre/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               findRE
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/functions/findresubmatch/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              findRESubmatch
             </a>
           </li>
           <li class="f6 fw4">
@@ -1589,6 +2095,11 @@ and the complete filename or directory.</li>
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/strings.hasprefix/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              strings.HasPrefix
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/strings.hassuffix/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               strings.HasSuffix
             </a>
@@ -1709,6 +2220,11 @@ and the complete filename or directory.</li>
             </a>
           </li>
           <li class="f6 fw4">
+            <a href="/functions/urls.joinpath/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              urls.JoinPath
+            </a>
+          </li>
+          <li class="f6 fw4">
             <a href="/functions/urls.parse/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
               urls.Parse
             </a>
@@ -1766,7 +2282,7 @@ and the complete filename or directory.</li>
           </li>
           <li class="f6 fw4">
             <a href="/variables/menus/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Menu Entry Properties
+              Menu Variables
             </a>
           </li>
           <li class="f6 fw4">
@@ -1796,8 +2312,8 @@ and the complete filename or directory.</li>
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/hugo-pipes/scss-sass/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Sass / SCSS
+            <a href="/hugo-pipes/transform-to-css/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
+              Transpile Sass to SCSS
             </a>
           </li>
           <li class="f6 fw4">
@@ -1827,7 +2343,7 @@ and the complete filename or directory.</li>
           </li>
           <li class="f6 fw4">
             <a href="/hugo-pipes/bundling/" class="db link hover-bg-gray hover-white pl3 pr2 pv2 black ">
-              Asset bundling
+              Concatenating assets
             </a>
           </li>
           <li class="f6 fw4">
@@ -2035,7 +2551,7 @@ and the complete filename or directory.</li>
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: April 15, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/60370ec2a5ec37a97c278f1f8f9ab3bb22185152">Merge pull request #114 from neohugo/neohugo/v0.109.1 (60370ec)</a>
+  Last updated: May 29, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/712fd85648edd5dd0d4c37a4e8cc7b91ba4005c1">Merge pull request #115 from neohugo/hugo/v0.112.4 (712fd85)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/content-management/urls.md" class="
@@ -2048,9 +2564,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
     </div>
   </div>
 
-  </main>
+    </main>
 
-  <footer class="bg-primary-color-dark ph4-ns pt4 relative w-100" role="contentinfo">
+    <footer class="bg-primary-color-dark ph4-ns pt4 relative w-100" role="contentinfo">
     <div class="center flex-ns flex-wrap justify-between mw9 w-90">
       <div class="pb3 pt4 w-100 w-50-ns">
 
@@ -2081,6 +2597,15 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 
 
 
+
+  <style>
+    a.show-on-hover {
+      opacity: 0;
+    }
+    a.show-on-hover:hover {
+      opacity: 1;
+    }
+  </style>
   <section
     class="pb3 w-100">
     <div class="center mw9">
@@ -2089,43 +2614,68 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
         
           <div
             class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
-            >
+            style="background-color: ;">
             
             
-              <a href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
-                <img
-                  src="/images/sponsors/linode-logo_standard_light_medium.png"
-                  alt="Logo for Linode"
-                  class="img h3 center"
-              /></a>
-            
-          </div>
-        
-          <div
-            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
-            >
             
             
-              <a href="https://esolia.com/post/why-did-esolia-choose-hugo/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
-                <img
-                  src="/images/sponsors/esolia-logo.svg"
-                  alt="Logo for eSolia"
-                  class="img h3 center"
-              /></a>
+              
+              <a
+                href="https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter"
+                onclick="trackOutboundLink(&#39;Sponsor Linode Footer&#39;, &#39;https://www.linode.com/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter&#39;);"
+                class="w-100 grow pa3"
+                style="">
+                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 575.8 178.3" viewBox="0 0 575.8 178.3"><path d="m148.6 78.9-24.7-13.6-20.8 12.7-.3 13-10.1-6.7-13.8 8.4c-.2-3.9-.4-8.6-.6-14.2l-14.2-9.5c3.9-2 8.4-4.3 13.5-7-.1 0 .1 1.4-2-46.5l-32-15.4-43.6 13.6 9.7 46.9 14.6 11.4-11.1 5.3 7.3 35.3 10.2 9.6-7.3 4.5 5.7 27.3 22.9 24.3c.1-.1 2.4-1.9 29.5-23.5l-.8-18.6 11.7 9.9c.2-.2 2.4-1.9 23.7-18.8l.8-13.7 8.8 6.1c.1-.2 2.1-1.7 19.3-15.3z"></path><path d="m128.1 93.5 20.5-14.6-24.7-13.6-20.8 12.7z" fill="#141414"></path><path d="m125.8 119.5 2.3-26-25-15.5-.5 25.4z" fill="#004b16"></path><path d="m92.6 146-.3-27-25.1-19.1 1.9 26.4z" fill="#004b16"></path><path d="m92.3 119 25.5-18.2-25.1-16.5-25.5 15.6z" fill="#141414"></path><path d="m52.1 178.2-4.1-27.6-24.6-24.1 5.7 27.4z" fill="#004b16"></path><path d="m48 150.6 32.4-23.1-25.1-20.4-31.9 19.4z" fill="#141414"></path><path d="m45.9 136.3-5.3-36.4-27.4-22.8 7.3 35.4z" fill="#004b16"></path><path d="m40.6 99.9 37.7-21.4-28.2-18.9-36.9 17.5z" fill="#141414"></path><path d="m38 82.5-7.3-49.9-30.7-19 9.7 46.9z" fill="#004b16"></path><path d="m30.7 32.6 44.9-17.2-32-15.4-43.6 13.6z" fill="#141414"></path><g fill="#1cb35c"><path d="m145.2 104.2c-19 15.1-19.4 15.4-19.3 15.4 2.4-27.2 2.2-26 2.3-26 21.8-15.5 20.4-14.6 20.5-14.6z"></path><path d="m116.2 127.2c-23.5 18.7-23.8 18.8-23.7 18.8-.2-28.2-.3-27-.2-27 27.1-19.4 25.4-18.2 25.5-18.2z"></path><path d="m81.6 154.7c-29.4 23.3-29.6 23.5-29.5 23.5-4.2-28.4-4.1-27.5-4-27.5 34.5-24.6 32.3-23.1 32.4-23.1z"></path><path d="m75.6 15.4c2.1 47.9 1.9 46.5 2 46.5-38.8 20.2-39.7 20.6-39.6 20.6-7.5-51-7.4-49.9-7.3-49.9z"></path><path d="m78.3 78.5c1.6 36.3 1.4 35.1 1.5 35.1-33.6 22.6-34 22.8-33.9 22.8-5.5-37.4-5.4-36.4-5.3-36.4z"></path></g><path d="m191.4 33.6 16.8-4c0 81.8-3.1 93.5 8 97.1-2.6 4.9-7.1 7.4-13.3 7.4-15.3 0-11.5-11.3-11.5-100.5z"></path><path d="m233.7 132.7v-58.4h-9.2v-13.8h26.3v72.2zm8.7-100.1c12.9 0 12.9 19.5 0 19.5s-12.9-19.5 0-19.5z"></path><path d="m316.8 132.7c0-43.6 1.1-49.6-3.5-55.2-5.8-6.9-20-5-26.1 3v52.2h-16.8v-72.2h12.1l3.1 6.7c9.1-10.8 30.4-10.9 40.6-.4 9.7 10 7.4 20.5 7.4 65.8z"></path><path d="m347.2 96.4c0-49.2 69.4-51.1 69.4 0-.1 50.7-69.4 50.8-69.4 0zm17.5 0c0 28.8 22.2 27.7 29.7 17.7 7-9.4 8.8-41.2-12.5-41.2-12.3 0-17.2 11.3-17.2 23.5z"></path><path d="m476.4 132.7c0-7.4 1.8-3.4-7.1-.4-10.2 3.5-25.1 2-34.1-7.9-11.1-12.3-12.6-39.5 1.3-54.6 11.4-12.3 28.5-13.1 39.9-7.4v-28.9l16.9-4v103.1zm0-54.9c-8.9-7.1-20.9-4.8-26.8 1.9-8.1 9.1-11.2 40.2 16.2 40.2 2.9 0 9-2.2 10.6-4.4z"></path><path d="m574.6 101.8h-51.6c1.2 22.3 29 21.4 38.1 12.2l6.5 12.9c-14 11.3-62.3 15-62.3-29.5.1-54.1 81.3-49 69.3 4.4zm-51-12.7h35.5c-1.2-10.6-7-15.8-17.5-15.8-9.7 0-15.6 5.2-18 15.8z"></path></svg>
+
+              </a>
             
           </div>
         
           <div
             class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
-            style="background-color: #131A3E;">
+            style="background-color: #004887;">
             
             
-              <a href="https://buttercms.com/hugo-cms/?utm_campaign=sponsorship&amp;utm_medium=banner&amp;utm_source=hugofooter" class="grow">
-                <img
-                  src="/images/sponsors/butter-light.svg"
-                  alt="Logo for ButterCMS"
-                  class="img h3 center"
-              /></a>
+            
+            
+              
+              <a
+                href="https://bep.is/en/hugo-sponsor-2023-01/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter"
+                onclick="trackOutboundLink(&#39;Sponsor Your Company? Footer&#39;, &#39;https://bep.is/en/hugo-sponsor-2023-01/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter&#39;);"
+                class="w-100 grow pa3
+                  show-on-hover
+                "
+                style="">
+                <svg viewBox="0 0 298 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M92.056 39.544H86.68L68.536 66.616V80.056H78.712V91H46.072V80.056H55.672V66.52L36.952 39.544H31.384V28.6H57.208V39.544H52.024L62.488 55.288H63.064L73.432 39.544H67.48V28.6H92.056V39.544ZM134.601 69.4C134.601 76.248 132.361 81.72 127.881 85.816C123.401 89.912 117.705 91.96 110.793 91.96C104.137 91.96 98.6965 90.04 94.4725 86.2C90.3125 82.296 88.2325 76.856 88.2325 69.88C88.2325 63.544 90.1525 58.104 93.9925 53.56C97.8325 49.016 103.657 46.744 111.465 46.744C119.273 46.744 125.065 49.016 128.841 53.56C132.681 58.04 134.601 63.32 134.601 69.4ZM121.833 69.016C121.833 64.6 120.809 61.368 118.761 59.32C116.713 57.272 114.217 56.248 111.273 56.248C108.073 56.248 105.545 57.4 103.689 59.704C101.897 61.944 101.001 65.112 101.001 69.208C101.001 72.92 101.833 76.056 103.497 78.616C105.225 81.176 107.785 82.456 111.177 82.456C114.377 82.456 116.937 81.272 118.857 78.904C120.841 76.472 121.833 73.176 121.833 69.016ZM191.379 91H172.755V84.376C169.875 89.368 165.235 91.864 158.835 91.864C154.739 91.864 151.187 90.648 148.179 88.216C145.171 85.784 143.667 82.008 143.667 76.888V57.016H137.907V47.704H156.051V72.088C156.051 75.864 156.659 78.552 157.875 80.152C159.155 81.688 161.011 82.456 163.443 82.456C166.387 82.456 168.659 81.496 170.259 79.576C171.923 77.656 172.755 75.192 172.755 72.184V57.016H165.747V47.704H185.139V81.688H191.379V91ZM222.863 47.128C224.079 47.128 225.423 47.32 226.895 47.704C228.431 48.024 229.935 48.632 231.407 49.528L233.327 64.696L223.919 65.752L222.287 58.36C221.007 57.592 219.887 57.208 218.927 57.208C217.519 57.208 216.271 57.752 215.183 58.84C214.159 59.928 213.647 61.528 213.647 63.64V81.688H221.327V91H195.503V81.688H201.263V57.112H195.023V47.704H212.687V55.96C213.391 53.464 214.511 51.384 216.047 49.72C217.647 47.992 219.919 47.128 222.863 47.128Z" fill="white"/>
+<path d="M37.568 124.032C36.0747 125.44 33.9413 126.571 31.168 127.424C28.4373 128.235 25.6 128.64 22.656 128.64C16.64 128.64 11.6693 126.699 7.744 122.816C3.86133 118.891 1.92 113.856 1.92 107.712C1.92 104.256 2.64533 100.843 4.096 97.472C5.54667 94.1013 7.808 91.3067 10.88 89.088C13.952 86.8693 17.8773 85.76 22.656 85.76C26.1547 85.76 29.1413 86.2507 31.616 87.232C34.0907 88.2133 36.0533 89.3653 37.504 90.688L38.592 99.712L32.768 100.288L31.744 94.528C29.184 92.864 26.112 92.032 22.528 92.032C18.6027 92.032 15.4453 93.3973 13.056 96.128C10.7093 98.8587 9.536 102.592 9.536 107.328C9.536 112.277 10.7947 116.032 13.312 118.592C15.8293 121.109 19.136 122.368 23.232 122.368C26.6453 122.368 29.44 121.771 31.616 120.576L32.64 114.368L38.464 114.944L37.568 124.032ZM72.802 113.664C72.802 118.144 71.3727 121.771 68.514 124.544C65.698 127.275 62.0287 128.64 57.506 128.64C53.1113 128.64 49.57 127.317 46.882 124.672C44.2367 122.027 42.914 118.443 42.914 113.92C42.914 109.739 44.1727 106.155 46.69 103.168C49.2073 100.139 52.9407 98.624 57.89 98.624C62.882 98.624 66.6153 100.117 69.09 103.104C71.5647 106.091 72.802 109.611 72.802 113.664ZM65.698 113.472C65.698 110.4 64.9513 108.053 63.458 106.432C62.0073 104.811 60.1087 104 57.762 104C55.33 104 53.4313 104.875 52.066 106.624C50.7007 108.331 50.018 110.635 50.018 113.536C50.018 116.267 50.658 118.571 51.938 120.448C53.2607 122.325 55.202 123.264 57.762 123.264C60.2367 123.264 62.178 122.368 63.586 120.576C64.994 118.741 65.698 116.373 65.698 113.472ZM129.478 128H116.806V122.752H118.406V111.488C118.406 108.757 117.915 106.837 116.934 105.728C115.995 104.576 114.651 104 112.902 104C110.64 104 108.976 104.768 107.91 106.304C106.886 107.84 106.352 109.589 106.31 111.552V122.752H110.597V128H97.9255V122.752H99.4615V111.488C99.4615 108.757 98.9708 106.837 97.9895 105.728C97.0508 104.576 95.7282 104 94.0215 104C91.8028 104 90.1602 104.768 89.0935 106.304C88.0268 107.797 87.4722 109.525 87.4295 111.488V122.752H92.8055V128H76.2935V122.752H80.5815V104.576H76.3575V99.264H87.4295V104C88.3255 102.421 89.5202 101.141 91.0135 100.16C92.5068 99.1787 94.3202 98.688 96.4535 98.688C98.5868 98.688 100.507 99.2213 102.214 100.288C103.92 101.312 105.115 102.933 105.798 105.152C106.651 103.189 107.888 101.632 109.51 100.48C111.131 99.2853 113.115 98.688 115.462 98.688C118.064 98.688 120.347 99.52 122.31 101.184C124.272 102.848 125.254 105.451 125.254 108.992V122.752H129.478V128ZM164.428 112.896C164.428 116.992 163.34 120.64 161.164 123.84C159.03 127.04 155.724 128.64 151.244 128.64C147.105 128.64 144.097 127.147 142.22 124.16V136.256H147.916V141.632H131.084V136.256H135.372V104.512H130.892V99.264H142.22V104.96C143.03 103.253 144.204 101.781 145.74 100.544C147.318 99.3067 149.43 98.688 152.076 98.688C155.745 98.688 158.71 99.9467 160.972 102.464C163.276 104.939 164.428 108.416 164.428 112.896ZM157.324 113.6C157.324 110.528 156.62 108.203 155.212 106.624C153.804 105.003 152.012 104.192 149.836 104.192C147.532 104.192 145.718 105.067 144.396 106.816C143.073 108.565 142.369 110.613 142.284 112.96L142.22 115.2C142.22 117.589 142.902 119.509 144.268 120.96C145.676 122.411 147.468 123.136 149.644 123.136C152.076 123.136 153.953 122.283 155.276 120.576C156.641 118.869 157.324 116.544 157.324 113.6ZM170.922 101.376C173.055 100.352 174.954 99.648 176.618 99.264C178.282 98.88 180.202 98.688 182.378 98.688C185.578 98.688 188.202 99.4987 190.25 101.12C192.341 102.741 193.386 105.173 193.386 108.416V121.344C193.386 123.051 194.09 123.904 195.498 123.904C195.882 123.904 196.373 123.819 196.97 123.648L197.034 127.424C195.626 128.235 194.09 128.64 192.426 128.64C188.799 128.64 186.837 126.741 186.538 122.944V122.816C185.685 124.309 184.469 125.653 182.89 126.848C181.354 128.043 179.434 128.64 177.13 128.64C175.125 128.64 173.141 128.043 171.178 126.848C169.258 125.611 168.298 123.477 168.298 120.448C168.298 116.907 169.706 114.581 172.522 113.472C175.338 112.32 178.389 111.744 181.674 111.744C182.485 111.744 183.317 111.765 184.17 111.808C185.023 111.851 185.813 111.915 186.538 112V110.4C186.538 108.693 186.239 107.157 185.642 105.792C185.045 104.427 183.551 103.744 181.162 103.744C180.266 103.744 179.413 103.808 178.602 103.936C177.834 104.064 177.087 104.32 176.362 104.704L175.21 109.12L169.706 108.544L170.922 101.376ZM186.538 116.608V115.584C185.813 115.499 185.066 115.413 184.298 115.328C183.53 115.243 182.741 115.2 181.93 115.2C180.223 115.2 178.687 115.499 177.322 116.096C175.999 116.693 175.338 117.888 175.338 119.68C175.338 122.283 176.725 123.584 179.498 123.584C181.119 123.584 182.655 123.008 184.106 121.856C185.557 120.661 186.367 118.912 186.538 116.608ZM234.863 128H219.503V122.752H223.727V111.488C223.727 108.757 223.236 106.837 222.255 105.728C221.273 104.576 219.908 104 218.159 104C215.983 104 214.255 104.704 212.975 106.112C211.737 107.52 211.097 109.248 211.055 111.296V122.752H215.343V128H199.919V122.752H204.207V104.576H199.727V99.264H211.055V103.936C213.06 100.437 216.239 98.688 220.591 98.688C223.321 98.688 225.668 99.52 227.631 101.184C229.593 102.848 230.575 105.451 230.575 108.992V122.752H234.863V128ZM267.085 104.512H264.077L254.477 128L251.277 136.256H255.501V141.632H240.141V136.256H245.005L247.821 128.256L237.645 104.512H234.509V99.264H248.653V104.512H245.005L251.661 120.064H252.045L257.421 104.512H254.157V99.264H267.085V104.512ZM275.625 98.688L270.121 98.176L271.145 89.152C273.15 88.0427 275.22 87.2107 277.353 86.656C279.486 86.1013 281.449 85.824 283.241 85.824C286.825 85.824 289.812 86.6347 292.201 88.256C294.633 89.8347 295.849 92.032 295.849 94.848C295.849 97.024 295.209 98.7947 293.929 100.16C292.649 101.483 291.177 102.592 289.513 103.488C287.892 104.384 286.441 105.237 285.161 106.048C283.881 106.859 283.241 107.84 283.241 108.992C283.241 110.4 284.201 111.104 286.121 111.104V115.456C279.252 116.139 275.817 114.24 275.817 109.76C275.817 107.755 276.436 106.197 277.673 105.088C278.91 103.936 280.34 102.976 281.961 102.208C283.582 101.44 285.012 100.608 286.249 99.712C287.486 98.7733 288.105 97.536 288.105 96C288.105 93.3547 286.206 92.032 282.409 92.032C281.428 92.032 280.382 92.16 279.273 92.416C278.206 92.672 277.289 93.056 276.521 93.568L275.625 98.688ZM277.673 128V119.872H285.865V128H277.673Z" fill="white"/>
+</svg>
+
+              </a>
+            
+          </div>
+        
+          <div
+            class="ba b--dark-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l  o-100"
+            style="background-color: #004887;">
+            
+            
+            
+            
+              
+              <a
+                href="https://bep.is/en/hugo-sponsor-2023-01/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter"
+                onclick="trackOutboundLink(&#39;Sponsor Your Company? Footer&#39;, &#39;https://bep.is/en/hugo-sponsor-2023-01/?utm_campaign=hugosponsor&amp;utm_medium=banner&amp;utm_source=hugofooter&#39;);"
+                class="w-100 grow pa3
+                  show-on-hover
+                "
+                style="">
+                <svg viewBox="0 0 298 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M92.056 39.544H86.68L68.536 66.616V80.056H78.712V91H46.072V80.056H55.672V66.52L36.952 39.544H31.384V28.6H57.208V39.544H52.024L62.488 55.288H63.064L73.432 39.544H67.48V28.6H92.056V39.544ZM134.601 69.4C134.601 76.248 132.361 81.72 127.881 85.816C123.401 89.912 117.705 91.96 110.793 91.96C104.137 91.96 98.6965 90.04 94.4725 86.2C90.3125 82.296 88.2325 76.856 88.2325 69.88C88.2325 63.544 90.1525 58.104 93.9925 53.56C97.8325 49.016 103.657 46.744 111.465 46.744C119.273 46.744 125.065 49.016 128.841 53.56C132.681 58.04 134.601 63.32 134.601 69.4ZM121.833 69.016C121.833 64.6 120.809 61.368 118.761 59.32C116.713 57.272 114.217 56.248 111.273 56.248C108.073 56.248 105.545 57.4 103.689 59.704C101.897 61.944 101.001 65.112 101.001 69.208C101.001 72.92 101.833 76.056 103.497 78.616C105.225 81.176 107.785 82.456 111.177 82.456C114.377 82.456 116.937 81.272 118.857 78.904C120.841 76.472 121.833 73.176 121.833 69.016ZM191.379 91H172.755V84.376C169.875 89.368 165.235 91.864 158.835 91.864C154.739 91.864 151.187 90.648 148.179 88.216C145.171 85.784 143.667 82.008 143.667 76.888V57.016H137.907V47.704H156.051V72.088C156.051 75.864 156.659 78.552 157.875 80.152C159.155 81.688 161.011 82.456 163.443 82.456C166.387 82.456 168.659 81.496 170.259 79.576C171.923 77.656 172.755 75.192 172.755 72.184V57.016H165.747V47.704H185.139V81.688H191.379V91ZM222.863 47.128C224.079 47.128 225.423 47.32 226.895 47.704C228.431 48.024 229.935 48.632 231.407 49.528L233.327 64.696L223.919 65.752L222.287 58.36C221.007 57.592 219.887 57.208 218.927 57.208C217.519 57.208 216.271 57.752 215.183 58.84C214.159 59.928 213.647 61.528 213.647 63.64V81.688H221.327V91H195.503V81.688H201.263V57.112H195.023V47.704H212.687V55.96C213.391 53.464 214.511 51.384 216.047 49.72C217.647 47.992 219.919 47.128 222.863 47.128Z" fill="white"/>
+<path d="M37.568 124.032C36.0747 125.44 33.9413 126.571 31.168 127.424C28.4373 128.235 25.6 128.64 22.656 128.64C16.64 128.64 11.6693 126.699 7.744 122.816C3.86133 118.891 1.92 113.856 1.92 107.712C1.92 104.256 2.64533 100.843 4.096 97.472C5.54667 94.1013 7.808 91.3067 10.88 89.088C13.952 86.8693 17.8773 85.76 22.656 85.76C26.1547 85.76 29.1413 86.2507 31.616 87.232C34.0907 88.2133 36.0533 89.3653 37.504 90.688L38.592 99.712L32.768 100.288L31.744 94.528C29.184 92.864 26.112 92.032 22.528 92.032C18.6027 92.032 15.4453 93.3973 13.056 96.128C10.7093 98.8587 9.536 102.592 9.536 107.328C9.536 112.277 10.7947 116.032 13.312 118.592C15.8293 121.109 19.136 122.368 23.232 122.368C26.6453 122.368 29.44 121.771 31.616 120.576L32.64 114.368L38.464 114.944L37.568 124.032ZM72.802 113.664C72.802 118.144 71.3727 121.771 68.514 124.544C65.698 127.275 62.0287 128.64 57.506 128.64C53.1113 128.64 49.57 127.317 46.882 124.672C44.2367 122.027 42.914 118.443 42.914 113.92C42.914 109.739 44.1727 106.155 46.69 103.168C49.2073 100.139 52.9407 98.624 57.89 98.624C62.882 98.624 66.6153 100.117 69.09 103.104C71.5647 106.091 72.802 109.611 72.802 113.664ZM65.698 113.472C65.698 110.4 64.9513 108.053 63.458 106.432C62.0073 104.811 60.1087 104 57.762 104C55.33 104 53.4313 104.875 52.066 106.624C50.7007 108.331 50.018 110.635 50.018 113.536C50.018 116.267 50.658 118.571 51.938 120.448C53.2607 122.325 55.202 123.264 57.762 123.264C60.2367 123.264 62.178 122.368 63.586 120.576C64.994 118.741 65.698 116.373 65.698 113.472ZM129.478 128H116.806V122.752H118.406V111.488C118.406 108.757 117.915 106.837 116.934 105.728C115.995 104.576 114.651 104 112.902 104C110.64 104 108.976 104.768 107.91 106.304C106.886 107.84 106.352 109.589 106.31 111.552V122.752H110.597V128H97.9255V122.752H99.4615V111.488C99.4615 108.757 98.9708 106.837 97.9895 105.728C97.0508 104.576 95.7282 104 94.0215 104C91.8028 104 90.1602 104.768 89.0935 106.304C88.0268 107.797 87.4722 109.525 87.4295 111.488V122.752H92.8055V128H76.2935V122.752H80.5815V104.576H76.3575V99.264H87.4295V104C88.3255 102.421 89.5202 101.141 91.0135 100.16C92.5068 99.1787 94.3202 98.688 96.4535 98.688C98.5868 98.688 100.507 99.2213 102.214 100.288C103.92 101.312 105.115 102.933 105.798 105.152C106.651 103.189 107.888 101.632 109.51 100.48C111.131 99.2853 113.115 98.688 115.462 98.688C118.064 98.688 120.347 99.52 122.31 101.184C124.272 102.848 125.254 105.451 125.254 108.992V122.752H129.478V128ZM164.428 112.896C164.428 116.992 163.34 120.64 161.164 123.84C159.03 127.04 155.724 128.64 151.244 128.64C147.105 128.64 144.097 127.147 142.22 124.16V136.256H147.916V141.632H131.084V136.256H135.372V104.512H130.892V99.264H142.22V104.96C143.03 103.253 144.204 101.781 145.74 100.544C147.318 99.3067 149.43 98.688 152.076 98.688C155.745 98.688 158.71 99.9467 160.972 102.464C163.276 104.939 164.428 108.416 164.428 112.896ZM157.324 113.6C157.324 110.528 156.62 108.203 155.212 106.624C153.804 105.003 152.012 104.192 149.836 104.192C147.532 104.192 145.718 105.067 144.396 106.816C143.073 108.565 142.369 110.613 142.284 112.96L142.22 115.2C142.22 117.589 142.902 119.509 144.268 120.96C145.676 122.411 147.468 123.136 149.644 123.136C152.076 123.136 153.953 122.283 155.276 120.576C156.641 118.869 157.324 116.544 157.324 113.6ZM170.922 101.376C173.055 100.352 174.954 99.648 176.618 99.264C178.282 98.88 180.202 98.688 182.378 98.688C185.578 98.688 188.202 99.4987 190.25 101.12C192.341 102.741 193.386 105.173 193.386 108.416V121.344C193.386 123.051 194.09 123.904 195.498 123.904C195.882 123.904 196.373 123.819 196.97 123.648L197.034 127.424C195.626 128.235 194.09 128.64 192.426 128.64C188.799 128.64 186.837 126.741 186.538 122.944V122.816C185.685 124.309 184.469 125.653 182.89 126.848C181.354 128.043 179.434 128.64 177.13 128.64C175.125 128.64 173.141 128.043 171.178 126.848C169.258 125.611 168.298 123.477 168.298 120.448C168.298 116.907 169.706 114.581 172.522 113.472C175.338 112.32 178.389 111.744 181.674 111.744C182.485 111.744 183.317 111.765 184.17 111.808C185.023 111.851 185.813 111.915 186.538 112V110.4C186.538 108.693 186.239 107.157 185.642 105.792C185.045 104.427 183.551 103.744 181.162 103.744C180.266 103.744 179.413 103.808 178.602 103.936C177.834 104.064 177.087 104.32 176.362 104.704L175.21 109.12L169.706 108.544L170.922 101.376ZM186.538 116.608V115.584C185.813 115.499 185.066 115.413 184.298 115.328C183.53 115.243 182.741 115.2 181.93 115.2C180.223 115.2 178.687 115.499 177.322 116.096C175.999 116.693 175.338 117.888 175.338 119.68C175.338 122.283 176.725 123.584 179.498 123.584C181.119 123.584 182.655 123.008 184.106 121.856C185.557 120.661 186.367 118.912 186.538 116.608ZM234.863 128H219.503V122.752H223.727V111.488C223.727 108.757 223.236 106.837 222.255 105.728C221.273 104.576 219.908 104 218.159 104C215.983 104 214.255 104.704 212.975 106.112C211.737 107.52 211.097 109.248 211.055 111.296V122.752H215.343V128H199.919V122.752H204.207V104.576H199.727V99.264H211.055V103.936C213.06 100.437 216.239 98.688 220.591 98.688C223.321 98.688 225.668 99.52 227.631 101.184C229.593 102.848 230.575 105.451 230.575 108.992V122.752H234.863V128ZM267.085 104.512H264.077L254.477 128L251.277 136.256H255.501V141.632H240.141V136.256H245.005L247.821 128.256L237.645 104.512H234.509V99.264H248.653V104.512H245.005L251.661 120.064H252.045L257.421 104.512H254.157V99.264H267.085V104.512ZM275.625 98.688L270.121 98.176L271.145 89.152C273.15 88.0427 275.22 87.2107 277.353 86.656C279.486 86.1013 281.449 85.824 283.241 85.824C286.825 85.824 289.812 86.6347 292.201 88.256C294.633 89.8347 295.849 92.032 295.849 94.848C295.849 97.024 295.209 98.7947 293.929 100.16C292.649 101.483 291.177 102.592 289.513 103.488C287.892 104.384 286.441 105.237 285.161 106.048C283.881 106.859 283.241 107.84 283.241 108.992C283.241 110.4 284.201 111.104 286.121 111.104V115.456C279.252 116.139 275.817 114.24 275.817 109.76C275.817 107.755 276.436 106.197 277.673 105.088C278.91 103.936 280.34 102.976 281.961 102.208C283.582 101.44 285.012 100.608 286.249 99.712C287.486 98.7733 288.105 97.536 288.105 96C288.105 93.3547 286.206 92.032 282.409 92.032C281.428 92.032 280.382 92.16 279.273 92.416C278.206 92.672 277.289 93.056 276.521 93.568L275.625 98.688ZM277.673 128V119.872H285.865V128H277.673Z" fill="white"/>
+</svg>
+
+              </a>
             
           </div>
         
@@ -2297,11 +2847,9 @@ f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 
 </footer>
 
-  
-  
 
-  
+    
 
-</body>
 
+  </body>
 </html>
