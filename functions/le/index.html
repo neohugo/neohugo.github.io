@@ -37,7 +37,7 @@
     </title>
 
     <meta name="viewport" content="width=device-width,minimum-scale=1" />
-    <meta name="generator" content="Hugo 0.113.0-DEV">
+    <meta name="generator" content="Hugo 0.116.0-DEV">
 
     
       <meta name="robots" content="index, follow" />
@@ -63,7 +63,7 @@
     <meta
       name="description"
       content="
-        Returns the boolean truth of arg1 &lt;= arg2.
+        Returns the boolean truth of arg1 &lt;= arg2 &amp;&amp; arg1 &lt;= arg3.
       
       " />
 
@@ -91,19 +91,19 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0594cb">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:title" content="le" />
-<meta property="og:description" content="Returns the boolean truth of arg1 &lt;= arg2." />
+<meta property="og:description" content="Returns the boolean truth of arg1 &lt;= arg2 &amp;&amp; arg1 &lt;= arg3." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/functions/le/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_6951888528684300887.png"/><meta property="article:section" content="functions" />
 
-<meta property="article:modified_time" content="2023-05-29T10:15:55-07:00" />
+<meta property="article:modified_time" content="2023-07-28T22:53:10-07:00" />
 <meta itemprop="name" content="le">
-<meta itemprop="description" content="Returns the boolean truth of arg1 &lt;= arg2.">
-<meta itemprop="dateModified" content="2023-05-29T10:15:55-07:00" />
-<meta itemprop="wordCount" content="8"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="description" content="Returns the boolean truth of arg1 &lt;= arg2 &amp;&amp; arg1 &lt;= arg3.">
+<meta itemprop="dateModified" content="2023-07-28T22:53:10-07:00" />
+<meta itemprop="wordCount" content="77"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_6951888528684300887.png"/>
 <meta name="twitter:title" content="le"/>
-<meta name="twitter:description" content="Returns the boolean truth of arg1 &lt;= arg2."/>
+<meta name="twitter:description" content="Returns the boolean truth of arg1 &lt;= arg2 &amp;&amp; arg1 &lt;= arg3."/>
 <meta name="twitter:site" content="@GoHugoIO"/>
 
       
@@ -299,7 +299,7 @@ var trackOutboundLink = function(id, url) {
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      Returns the boolean truth of arg1 &lt;= arg2.
+      Returns the boolean truth of arg1 &lt;= arg2 &amp;&amp; arg1 &lt;= arg3.
     </div>
   
 
@@ -310,9 +310,20 @@ var trackOutboundLink = function(id, url) {
 
 <div class="prose" id="prose">
     <h2 class="minor mb1 pt4 primary-color-dark">Syntax</h2>
-      <pre class="f5 mb4 ph3 pv2 bg-light-gray" style="border-left:4px solid #0594CB;">le ARG1 ARG2</pre>
+      <pre class="f5 mb4 ph3 pv2 bg-light-gray" style="border-left:4px solid #0594CB;">le ARG1 ARG2 [ARG...]</pre>
 
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">le</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="cp">}}</span>true<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">le</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="cp">}}</span> → true
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">le</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="cp">}}</span> → true
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">le</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="cp">}}</span> → false
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">le</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="cp">}}</span> → true
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">le</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="cp">}}</span> → true
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">le</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="cp">}}</span> → true
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">le</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="cp">}}</span> → true
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">le</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="cp">}}</span> → false
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">le</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="cp">}}</span> → false
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">le</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="cp">}}</span> → false
 </span></span></code></pre></div>
 </div>
 
@@ -1767,7 +1778,7 @@ var trackOutboundLink = function(id, url) {
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: May 29, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/712fd85648edd5dd0d4c37a4e8cc7b91ba4005c1">Merge pull request #115 from neohugo/hugo/v0.112.4 (712fd85)</a>
+  Last updated: July 28, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b7ab2a68c3065812e2e470ee1a748435a56e3b72">Merge pull request #116 from neohugo/hugo/v0.115.4 (b7ab2a6)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/functions/le.md" class="

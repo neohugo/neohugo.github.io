@@ -37,7 +37,7 @@
     </title>
 
     <meta name="viewport" content="width=device-width,minimum-scale=1" />
-    <meta name="generator" content="Hugo 0.113.0-DEV">
+    <meta name="generator" content="Hugo 0.116.0-DEV">
 
     
       <meta name="robots" content="index, follow" />
@@ -97,13 +97,13 @@ hugo mod init github.com/gohugoio/testshortcodes Note that Hugo Modules supports
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/commands/hugo_mod_init/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_9645151940199476826.png"/><meta property="article:section" content="commands" />
 
-<meta property="article:modified_time" content="2023-05-29T10:15:55-07:00" />
+<meta property="article:modified_time" content="2023-07-28T22:53:10-07:00" />
 <meta itemprop="name" content="hugo mod init">
 <meta itemprop="description" content="hugo mod init Initialize this project as a Hugo Module.
 Synopsis Initialize this project as a Hugo Module. It will try to guess the module path, but you may help by passing it as an argument, e.g:
 hugo mod init github.com/gohugoio/testshortcodes Note that Hugo Modules supports multi-module projects, so you can initialize a Hugo Module inside a subfolder on GitHub, as one example. hugo mod init [flags] [args] Options -b, --baseURL string hostname (and path) to the root, e.">
-<meta itemprop="dateModified" content="2023-05-29T10:15:55-07:00" />
-<meta itemprop="wordCount" content="221"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="dateModified" content="2023-07-28T22:53:10-07:00" />
+<meta itemprop="wordCount" content="210"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_9645151940199476826.png"/>
 <meta name="twitter:title" content="hugo mod init"/>
@@ -319,7 +319,7 @@ inside a subfolder on GitHub, as one example.
 <pre tabindex="0"><code>hugo mod init [flags] [args]
 </code></pre><h3 id="options">Options <a class="header-link" href="#options"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <pre tabindex="0"><code>  -b, --baseURL string      hostname (and path) to the root, e.g. https://spf13.com/
-      --cacheDir string     filesystem path to cache directory. Defaults: $TMPDIR/hugo_cache/
+      --cacheDir string     filesystem path to cache directory. Defaults: $TMPDIR/hugo_cache_$USER/
   -c, --contentDir string   filesystem path to content directory
   -h, --help                help for init
   -t, --theme strings       themes to use (located in /themes/THEMENAME/)
@@ -331,13 +331,11 @@ inside a subfolder on GitHub, as one example.
   -d, --destination string         filesystem path to write files to
   -e, --environment string         build environment
       --ignoreVendorPaths string   ignores any _vendor for module paths matching the given Glob pattern
-      --log                        enable Logging
-      --logFile string             log File path (if set, logging enabled automatically)
+      --logLevel string            log level (debug|info|warn|error)
       --quiet                      build in quiet mode
   -s, --source string              filesystem path to read files relative from
       --themesDir string           filesystem path to themes directory
   -v, --verbose                    verbose output
-      --verboseLog                 verbose logging
 </code></pre><h3 id="see-also">SEE ALSO <a class="header-link" href="#see-also"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <ul>
 <li><a href="/commands/hugo_mod/">hugo mod</a>	 - Various Hugo Modules helpers.</li>
@@ -1796,7 +1794,7 @@ inside a subfolder on GitHub, as one example.
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: May 29, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/712fd85648edd5dd0d4c37a4e8cc7b91ba4005c1">Merge pull request #115 from neohugo/hugo/v0.112.4 (712fd85)</a>
+  Last updated: July 28, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b7ab2a68c3065812e2e470ee1a748435a56e3b72">Merge pull request #116 from neohugo/hugo/v0.115.4 (b7ab2a6)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/commands/hugo_mod_init.md" class="

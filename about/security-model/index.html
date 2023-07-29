@@ -37,7 +37,7 @@
     </title>
 
     <meta name="viewport" content="width=device-width,minimum-scale=1" />
-    <meta name="generator" content="Hugo 0.113.0-DEV">
+    <meta name="generator" content="Hugo 0.116.0-DEV">
 
     
       <meta name="robots" content="index, follow" />
@@ -95,11 +95,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/about/security-model/" /><meta property="og:image" content="https://gohugo.io/about/security-model/hugo-security-model-featured.png"/><meta property="article:section" content="about" />
 
-<meta property="article:modified_time" content="2023-05-29T10:15:55-07:00" />
+<meta property="article:modified_time" content="2023-07-28T22:53:10-07:00" />
 <meta itemprop="name" content="Hugo&#39;s Security Model">
 <meta itemprop="description" content="A summary of Hugo&#39;s security model.">
-<meta itemprop="dateModified" content="2023-05-29T10:15:55-07:00" />
-<meta itemprop="wordCount" content="597"><meta itemprop="image" content="https://gohugo.io/about/security-model/hugo-security-model-featured.png">
+<meta itemprop="dateModified" content="2023-07-28T22:53:10-07:00" />
+<meta itemprop="wordCount" content="609"><meta itemprop="image" content="https://gohugo.io/about/security-model/hugo-security-model-featured.png">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/about/security-model/hugo-security-model-featured.png"/>
 <meta name="twitter:title" content="Hugo&#39;s Security Model"/>
@@ -352,16 +352,18 @@ var trackOutboundLink = function(id, url) {
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">enableInlineShortcodes</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">exec</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">allow</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">^dart-sass-embedded$</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">^(dart-)?sass(-embedded)?$</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">^go$</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">^npx$</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">^postcss$</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">osEnv</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">(?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\w+)$</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">(?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\w+|(XDG_CONFIG_)?HOME|USERPROFILE|SSH_AUTH_SOCK|DISPLAY|LANG)$</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">funcs</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">getenv</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">^HUGO_</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">^CI$</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">goTemplates</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">AllowActionJSTmpl</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">http</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">mediaTypes</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">methods</span><span class="p">:</span><span class="w">
@@ -375,10 +377,12 @@ var trackOutboundLink = function(id, url) {
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">security</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">enableInlineShortcodes</span> <span class="p">=</span> <span class="kc">false</span>
 </span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">security</span><span class="p">.</span><span class="nx">exec</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">allow</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;^dart-sass-embedded$&#39;</span><span class="p">,</span> <span class="s1">&#39;^go$&#39;</span><span class="p">,</span> <span class="s1">&#39;^npx$&#39;</span><span class="p">,</span> <span class="s1">&#39;^postcss$&#39;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">osEnv</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;(?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\w+)$&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">allow</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;^(dart-)?sass(-embedded)?$&#39;</span><span class="p">,</span> <span class="s1">&#39;^go$&#39;</span><span class="p">,</span> <span class="s1">&#39;^npx$&#39;</span><span class="p">,</span> <span class="s1">&#39;^postcss$&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">osEnv</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;(?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\w+|(XDG_CONFIG_)?HOME|USERPROFILE|SSH_AUTH_SOCK|DISPLAY|LANG)$&#39;</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">security</span><span class="p">.</span><span class="nx">funcs</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">getenv</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;^HUGO_&#39;</span><span class="p">,</span> <span class="s1">&#39;^CI$&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">security</span><span class="p">.</span><span class="nx">goTemplates</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">AllowActionJSTmpl</span> <span class="p">=</span> <span class="kc">false</span>
 </span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">security</span><span class="p">.</span><span class="nx">http</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">methods</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;(?i)GET|POST&#39;</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">urls</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;.*&#39;</span><span class="p">]</span>
@@ -391,13 +395,13 @@ var trackOutboundLink = function(id, url) {
 </span></span><span class="line"><span class="cl">      <span class="nt">&#34;enableInlineShortcodes&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">      <span class="nt">&#34;exec&#34;</span><span class="p">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">         <span class="nt">&#34;allow&#34;</span><span class="p">:</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;^dart-sass-embedded$&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;^(dart-)?sass(-embedded)?$&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="s2">&#34;^go$&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="s2">&#34;^npx$&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="s2">&#34;^postcss$&#34;</span>
 </span></span><span class="line"><span class="cl">         <span class="p">],</span>
 </span></span><span class="line"><span class="cl">         <span class="nt">&#34;osEnv&#34;</span><span class="p">:</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;(?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\\w+)$&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;(?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\\w+|(XDG_CONFIG_)?HOME|USERPROFILE|SSH_AUTH_SOCK|DISPLAY|LANG)$&#34;</span>
 </span></span><span class="line"><span class="cl">         <span class="p">]</span>
 </span></span><span class="line"><span class="cl">      <span class="p">},</span>
 </span></span><span class="line"><span class="cl">      <span class="nt">&#34;funcs&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -405,6 +409,9 @@ var trackOutboundLink = function(id, url) {
 </span></span><span class="line"><span class="cl">            <span class="s2">&#34;^HUGO_&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="s2">&#34;^CI$&#34;</span>
 </span></span><span class="line"><span class="cl">         <span class="p">]</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;goTemplates&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;AllowActionJSTmpl&#34;</span><span class="p">:</span> <span class="kc">false</span>
 </span></span><span class="line"><span class="cl">      <span class="p">},</span>
 </span></span><span class="line"><span class="cl">      <span class="nt">&#34;http&#34;</span><span class="p">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">         <span class="nt">&#34;mediaTypes&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
@@ -1884,7 +1891,7 @@ It may be worth adding that Hugo is a static site generator with no concept of d
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: May 29, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/712fd85648edd5dd0d4c37a4e8cc7b91ba4005c1">Merge pull request #115 from neohugo/hugo/v0.112.4 (712fd85)</a>
+  Last updated: July 28, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b7ab2a68c3065812e2e470ee1a748435a56e3b72">Merge pull request #116 from neohugo/hugo/v0.115.4 (b7ab2a6)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/about/security-model/index.md" class="

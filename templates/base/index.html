@@ -37,7 +37,7 @@
     </title>
 
     <meta name="viewport" content="width=device-width,minimum-scale=1" />
-    <meta name="generator" content="Hugo 0.113.0-DEV">
+    <meta name="generator" content="Hugo 0.116.0-DEV">
 
     
       <meta name="robots" content="index, follow" />
@@ -95,10 +95,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/templates/base/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_17423941292993273686.png"/><meta property="article:section" content="templates" />
 
-<meta property="article:modified_time" content="2023-05-29T10:15:55-07:00" />
+<meta property="article:modified_time" content="2023-07-28T22:53:10-07:00" />
 <meta itemprop="name" content="Base Templates and Blocks">
 <meta itemprop="description" content="The base and block constructs allow you to define the outer shell of your master templates (i.e., the chrome of the page).">
-<meta itemprop="dateModified" content="2023-05-29T10:15:55-07:00" />
+<meta itemprop="dateModified" content="2023-07-28T22:53:10-07:00" />
 <meta itemprop="wordCount" content="403"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_17423941292993273686.png"/>
@@ -342,17 +342,17 @@ var trackOutboundLink = function(id, url) {
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="nx">block</span><span class="w"> </span><span class="s">&#34;title&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="k">block</span><span class="w"> </span><span class="s">&#34;title&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
 </span></span><span class="line"><span class="cl">      <span class="c">&lt;!-- Blocks may include default content. --&gt;</span>
 </span></span><span class="line"><span class="cl">      <span class="cp">{{</span><span class="w"> </span><span class="na">.Site.Title</span><span class="w"> </span><span class="cp">}}</span>
 </span></span><span class="line"><span class="cl">    <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Code that all your templates share, like a header --&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="cp">{{</span><span class="w"> </span><span class="nx">block</span><span class="w"> </span><span class="s">&#34;main&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">    <span class="cp">{{</span><span class="w"> </span><span class="k">block</span><span class="w"> </span><span class="s">&#34;main&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
 </span></span><span class="line"><span class="cl">      <span class="c">&lt;!-- The part of the page that begins to differ between templates --&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-</span></span><span class="line"><span class="cl">    <span class="cp">{{</span><span class="w"> </span><span class="nx">block</span><span class="w"> </span><span class="s">&#34;footer&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">    <span class="cp">{{</span><span class="w"> </span><span class="k">block</span><span class="w"> </span><span class="s">&#34;footer&#34;</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}</span>
 </span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- More shared code, perhaps a footer but that can be overridden if need be in  --&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
@@ -366,7 +366,7 @@ var trackOutboundLink = function(id, url) {
 <div class="code relative" id="layouts/_default/list.html">
   <div class="f6 dib lh-solid pl2 pv2">layouts/_default/list.html</div>
     <button class="needs-js copy bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-  <div class="code-copy-content nt3"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">define</span><span class="w"> </span><span class="s">&#34;main&#34;</span><span class="w"> </span><span class="cp">}}</span>
+  <div class="code-copy-content nt3"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">define</span><span class="w"> </span><span class="s">&#34;main&#34;</span><span class="w"> </span><span class="cp">}}</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Posts<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="na">.Pages</span><span class="w"> </span><span class="cp">}}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
@@ -388,7 +388,7 @@ var trackOutboundLink = function(id, url) {
 	
 	<div class="admonition-content"><p>Code that you put outside the block definitions <em>can</em> break your layout. This even includes HTML comments. For example:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="c">&lt;!-- Seemingly harmless HTML comment..that will break your layout at build --&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">define</span><span class="w"> </span><span class="s">&#34;main&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">define</span><span class="w"> </span><span class="s">&#34;main&#34;</span><span class="w"> </span><span class="cp">}}</span>
 </span></span><span class="line"><span class="cl">...your code here
 </span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
 </span></span></code></pre></div><p><a href="https://discourse.gohugo.io/t/baseof-html-block-templates-and-list-types-results-in-empty-pages/5612/6">See this thread from the Hugo discussion forums.</a></p>
@@ -400,11 +400,11 @@ var trackOutboundLink = function(id, url) {
 <div class="code relative" id="layouts/_default/single.html">
   <div class="f6 dib lh-solid pl2 pv2">layouts/_default/single.html</div>
     <button class="needs-js copy bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
-  <div class="code-copy-content nt3"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">define</span><span class="w"> </span><span class="s">&#34;title&#34;</span><span class="w"> </span><span class="cp">}}</span>
+  <div class="code-copy-content nt3"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">define</span><span class="w"> </span><span class="s">&#34;title&#34;</span><span class="w"> </span><span class="cp">}}</span>
 </span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- This will override the default value set in baseof.html; i.e., &#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Site.Title</span><span class="w"> </span><span class="cp">}}</span><span class="c">&#34; in the original example--&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="cp">{{</span><span class="w"> </span><span class="na">.Title</span><span class="w"> </span><span class="cp">}}</span> <span class="ni">&amp;ndash;</span> <span class="cp">{{</span><span class="w"> </span><span class="na">.Site.Title</span><span class="w"> </span><span class="cp">}}</span>
 </span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
-</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">define</span><span class="w"> </span><span class="s">&#34;main&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">define</span><span class="w"> </span><span class="s">&#34;main&#34;</span><span class="w"> </span><span class="cp">}}</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Title</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="cp">{{</span><span class="w"> </span><span class="na">.Content</span><span class="w"> </span><span class="cp">}}</span>
 </span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span></span></span></code></pre></div>
@@ -1859,7 +1859,7 @@ var trackOutboundLink = function(id, url) {
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: May 29, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/712fd85648edd5dd0d4c37a4e8cc7b91ba4005c1">Merge pull request #115 from neohugo/hugo/v0.112.4 (712fd85)</a>
+  Last updated: July 28, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b7ab2a68c3065812e2e470ee1a748435a56e3b72">Merge pull request #116 from neohugo/hugo/v0.115.4 (b7ab2a6)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/templates/base.md" class="

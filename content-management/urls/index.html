@@ -37,7 +37,7 @@
     </title>
 
     <meta name="viewport" content="width=device-width,minimum-scale=1" />
-    <meta name="generator" content="Hugo 0.113.0-DEV">
+    <meta name="generator" content="Hugo 0.116.0-DEV">
 
     
       <meta name="robots" content="index, follow" />
@@ -95,11 +95,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/content-management/urls/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_8453457148814798693.png"/><meta property="article:section" content="content-management" />
 
-<meta property="article:modified_time" content="2023-05-29T10:15:55-07:00" />
+<meta property="article:modified_time" content="2023-07-28T22:53:10-07:00" />
 <meta itemprop="name" content="URL Management">
 <meta itemprop="description" content="Control the structure and appearance of URLs through front matter entries and settings in your site configuration.">
-<meta itemprop="dateModified" content="2023-05-29T10:15:55-07:00" />
-<meta itemprop="wordCount" content="1385"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="dateModified" content="2023-07-28T22:53:10-07:00" />
+<meta itemprop="wordCount" content="1714"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_8453457148814798693.png"/>
 <meta name="twitter:title" content="URL Management"/>
@@ -503,27 +503,19 @@ var trackOutboundLink = function(id, url) {
 <p>If you set both <code>slug</code> and <code>url</code> in front matter, the <code>url</code> value takes precedence.</p>
 <h2 id="site-configuration">Site configuration <a class="header-link" href="#site-configuration"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <h3 id="permalinks">Permalinks <a class="header-link" href="#permalinks"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
-<p>In your site configuration, set a URL pattern for regular pages within a top-level section. This is recursive, affecting descendant regular pages.</p>
-
-<aside class="admonition note">
-	<div class="note-icon">
-		
-	</div>
-	
-	
-	<div class="admonition-content"><p>The  <code>permalinks</code> defined in your site configuration do not apply to section pages. To adjust the URL for section pages, set <code>url</code> in front matter.</p>
-</div>
-</aside>
-
-<h4 id="permalinks-examples">Examples <a class="header-link" href="#permalinks-examples"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
+<p>In your site configuration, define a URL pattern for each top-level section. Each URL pattern can target a given language and/or <a href="https://gohugo.io/templates/section-templates/#page-kinds">page kind</a>.</p>
+<p>Front matter <code>url</code> values override the URL patterns defined in the <code>permalinks</code> section of your site configuration.</p>
+<h4 id="permalinks-monolingual-examples">Monolingual examples <a class="header-link" href="#permalinks-monolingual-examples"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
 <p>With this content structure:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">content/
 </span></span><span class="line"><span class="cl">├── posts/
-</span></span><span class="line"><span class="cl">│   ├── _index.md
-</span></span><span class="line"><span class="cl">│   ├── post-1.md
-</span></span><span class="line"><span class="cl">│   └── post-2.md
+</span></span><span class="line"><span class="cl">│   ├── bash-in-slow-motion.md
+</span></span><span class="line"><span class="cl">│   └── tls-in-a-nutshell.md
+</span></span><span class="line"><span class="cl">├── tutorials/
+</span></span><span class="line"><span class="cl">│   ├── git-for-beginners.md
+</span></span><span class="line"><span class="cl">│   └── javascript-bundling-with-hugo.md
 </span></span><span class="line"><span class="cl">└── _index.md
-</span></span></code></pre></div><p>Create a date-based hierarchy, recursively, for regular pages within the <code>posts</code> section:</p>
+</span></span></code></pre></div><p>Render tutorials under &ldquo;training&rdquo;, and render the posts under &ldquo;articles&rdquo; with a date-base hierarchy:</p>
 
 <div class="code relative" id="hugo">
   <div class="code-nav flex flex-nowrap items-stretch">
@@ -546,18 +538,35 @@ var trackOutboundLink = function(id, url) {
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">permalinks</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">posts</span><span class="p">:</span><span class="w"> </span><span class="l">/posts/:year/:month/:title/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">page</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">posts</span><span class="p">:</span><span class="w"> </span><span class="l">/articles/:year/:month/:slug/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">tutorials</span><span class="p">:</span><span class="w"> </span><span class="l">/training/:slug/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">section</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">posts</span><span class="p">:</span><span class="w"> </span><span class="l">/articles/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">tutorials</span><span class="p">:</span><span class="w"> </span><span class="l">/training/</span><span class="w">
 </span></span></span></code></pre></div>
       </div>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">posts</span> <span class="p">=</span> <span class="s1">&#39;/posts/:year/:month/:title/&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">permalinks</span><span class="p">.</span><span class="nx">page</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">posts</span> <span class="p">=</span> <span class="s1">&#39;/articles/:year/:month/:slug/&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">tutorials</span> <span class="p">=</span> <span class="s1">&#39;/training/:slug/&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">permalinks</span><span class="p">.</span><span class="nx">section</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">posts</span> <span class="p">=</span> <span class="s1">&#39;/articles/&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">tutorials</span> <span class="p">=</span> <span class="s1">&#39;/training/&#39;</span>
 </span></span></code></pre></div>
       </div>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">   <span class="nt">&#34;permalinks&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;posts&#34;</span><span class="p">:</span> <span class="s2">&#34;/posts/:year/:month/:title/&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;page&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;posts&#34;</span><span class="p">:</span> <span class="s2">&#34;/articles/:year/:month/:slug/&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;tutorials&#34;</span><span class="p">:</span> <span class="s2">&#34;/training/:slug/&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;section&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;posts&#34;</span><span class="p">:</span> <span class="s2">&#34;/articles/&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;tutorials&#34;</span><span class="p">:</span> <span class="s2">&#34;/training/&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
 </span></span><span class="line"><span class="cl">   <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div>
@@ -567,15 +576,21 @@ var trackOutboundLink = function(id, url) {
 
 <p>The structure of the published site will be:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">public/
-</span></span><span class="line"><span class="cl">├── posts/
-</span></span><span class="line"><span class="cl">│   ├── 2023/
-</span></span><span class="line"><span class="cl">│   │   └── 03/
-</span></span><span class="line"><span class="cl">│   │       ├── post-1/
-</span></span><span class="line"><span class="cl">│   │       │   └── index.html
-</span></span><span class="line"><span class="cl">│   │       └── post-2/
-</span></span><span class="line"><span class="cl">│   │           └── index.html
-</span></span><span class="line"><span class="cl">│   └── index.html
-</span></span><span class="line"><span class="cl">├── favicon.ico
+</span></span><span class="line"><span class="cl">├── articles/
+</span></span><span class="line"><span class="cl">│   ├── 2023/
+</span></span><span class="line"><span class="cl">│   │   ├── 04/
+</span></span><span class="line"><span class="cl">│   │   │   └── bash-in-slow-motion/
+</span></span><span class="line"><span class="cl">│   │   │       └── index.html
+</span></span><span class="line"><span class="cl">│   │   └── 06/
+</span></span><span class="line"><span class="cl">│   │       └── tls-in-a-nutshell/
+</span></span><span class="line"><span class="cl">│   │           └── index.html
+</span></span><span class="line"><span class="cl">│   └── index.html
+</span></span><span class="line"><span class="cl">├── training/
+</span></span><span class="line"><span class="cl">│   ├── git-for-beginners/
+</span></span><span class="line"><span class="cl">│   │   └── index.html
+</span></span><span class="line"><span class="cl">│   ├── javascript-bundling-with-hugo/
+</span></span><span class="line"><span class="cl">│   │   └── index.html
+</span></span><span class="line"><span class="cl">│   └── index.html
 </span></span><span class="line"><span class="cl">└── index.html
 </span></span></code></pre></div><p>To create a date-based hierarchy for regular pages in the content root:</p>
 
@@ -600,18 +615,22 @@ var trackOutboundLink = function(id, url) {
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">permalinks</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">/</span><span class="p">:</span><span class="w"> </span><span class="l">/:year/:month/:title/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">page</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">/</span><span class="p">:</span><span class="w"> </span><span class="l">/:year/:month/:slug/</span><span class="w">
 </span></span></span></code></pre></div>
       </div>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="s1">&#39;/&#39;</span> <span class="p">=</span> <span class="s1">&#39;/:year/:month/:title/&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">permalinks</span><span class="p">.</span><span class="nx">page</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;/&#39;</span> <span class="p">=</span> <span class="s1">&#39;/:year/:month/:slug/&#39;</span>
 </span></span></code></pre></div>
       </div>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">   <span class="nt">&#34;permalinks&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;/&#34;</span><span class="p">:</span> <span class="s2">&#34;/:year/:month/:title/&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;page&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;/&#34;</span><span class="p">:</span> <span class="s2">&#34;/:year/:month/:slug/&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
 </span></span><span class="line"><span class="cl">   <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div>
@@ -619,18 +638,7 @@ var trackOutboundLink = function(id, url) {
   </div>
 </div>
 
-
-<aside class="admonition note">
-	<div class="note-icon">
-		
-	</div>
-	
-	
-	<div class="admonition-content"><p>A URL pattern defined for the content root is not recursive.</p>
-</div>
-</aside>
-
-<p>Use the same approach with taxonomies. For example, to omit the taxonomy segment of the URL:</p>
+<p>Use the same approach with taxonomy terms. For example, to omit the taxonomy segment of the URL:</p>
 
 <div class="code relative" id="hugo">
   <div class="code-nav flex flex-nowrap items-stretch">
@@ -653,18 +661,22 @@ var trackOutboundLink = function(id, url) {
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">permalinks</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l">/:title/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">term</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l">/:slug/</span><span class="w">
 </span></span></span></code></pre></div>
       </div>
       <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">tags</span> <span class="p">=</span> <span class="s1">&#39;/:title/&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">permalinks</span><span class="p">.</span><span class="nx">term</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">tags</span> <span class="p">=</span> <span class="s1">&#39;/:slug/&#39;</span>
 </span></span></code></pre></div>
       </div>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">   <span class="nt">&#34;permalinks&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;tags&#34;</span><span class="p">:</span> <span class="s2">&#34;/:title/&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;term&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;tags&#34;</span><span class="p">:</span> <span class="s2">&#34;/:slug/&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
 </span></span><span class="line"><span class="cl">   <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div>
@@ -672,8 +684,159 @@ var trackOutboundLink = function(id, url) {
   </div>
 </div>
 
-<p>Front matter <code>url</code> values take precedence over URL patterns defined in <code>permalinks</code>.</p>
-<h4 id="tokens">Tokens <a class="header-link" href="#tokens"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
+<h4 id="permalinks-multilingual-example">Multilingual example <a class="header-link" href="#permalinks-multilingual-example"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
+<p>Use the <code>permalinks</code> configuration as a component of your localization strategy.</p>
+<p>With this content structure:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">content/
+</span></span><span class="line"><span class="cl">├── de/
+</span></span><span class="line"><span class="cl">│   ├── books/
+</span></span><span class="line"><span class="cl">│   │   ├── les-miserables.md
+</span></span><span class="line"><span class="cl">│   │   └── the-hunchback-of-notre-dame.md
+</span></span><span class="line"><span class="cl">│   └── _index.md
+</span></span><span class="line"><span class="cl">└── en/
+</span></span><span class="line"><span class="cl">    ├── books/
+</span></span><span class="line"><span class="cl">    │   ├── les-miserables.md
+</span></span><span class="line"><span class="cl">    │   └── the-hunchback-of-notre-dame.md
+</span></span><span class="line"><span class="cl">    └── _index.md
+</span></span></code></pre></div><p>And this site configuration:</p>
+
+<div class="code relative" id="hugo">
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
+        hugo.
+      </div>
+      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
+        yaml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        toml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        json
+      </button>
+      &nbsp;
+  </div>
+  <div class="tab-content">
+      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">defaultContentLanguage</span><span class="p">:</span><span class="w"> </span><span class="l">en</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">defaultContentLanguageInSubdir</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">languages</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">en</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">contentDir</span><span class="p">:</span><span class="w"> </span><span class="l">content/en</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">languageCode</span><span class="p">:</span><span class="w"> </span><span class="l">en-US</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">languageDirection</span><span class="p">:</span><span class="w"> </span><span class="l">ltr</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">languageName</span><span class="p">:</span><span class="w"> </span><span class="l">English</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">permalinks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">page</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">books</span><span class="p">:</span><span class="w"> </span><span class="l">/books/:slug/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">section</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">books</span><span class="p">:</span><span class="w"> </span><span class="l">/books/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">es</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">contentDir</span><span class="p">:</span><span class="w"> </span><span class="l">content/de</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">languageCode</span><span class="p">:</span><span class="w"> </span><span class="l">es-ES</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">languageDirection</span><span class="p">:</span><span class="w"> </span><span class="l">ltr</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">languageName</span><span class="p">:</span><span class="w"> </span><span class="l">Español</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">permalinks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">page</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">books</span><span class="p">:</span><span class="w"> </span><span class="l">/libros/:slug/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">section</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">books</span><span class="p">:</span><span class="w"> </span><span class="l">/libros/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span></span></span></code></pre></div>
+      </div>
+      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">defaultContentLanguage</span> <span class="p">=</span> <span class="s1">&#39;en&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">defaultContentLanguageInSubdir</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">languages</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">contentDir</span> <span class="p">=</span> <span class="s1">&#39;content/en&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">languageCode</span> <span class="p">=</span> <span class="s1">&#39;en-US&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">languageDirection</span> <span class="p">=</span> <span class="s1">&#39;ltr&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">languageName</span> <span class="p">=</span> <span class="s1">&#39;English&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">permalinks</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">      <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">permalinks</span><span class="p">.</span><span class="nx">page</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">books</span> <span class="p">=</span> <span class="s1">&#39;/books/:slug/&#39;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">permalinks</span><span class="p">.</span><span class="nx">section</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">books</span> <span class="p">=</span> <span class="s1">&#39;/books/&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">es</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">contentDir</span> <span class="p">=</span> <span class="s1">&#39;content/de&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">languageCode</span> <span class="p">=</span> <span class="s1">&#39;es-ES&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">languageDirection</span> <span class="p">=</span> <span class="s1">&#39;ltr&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">languageName</span> <span class="p">=</span> <span class="s1">&#39;Español&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">es</span><span class="p">.</span><span class="nx">permalinks</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">      <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">es</span><span class="p">.</span><span class="nx">permalinks</span><span class="p">.</span><span class="nx">page</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">books</span> <span class="p">=</span> <span class="s1">&#39;/libros/:slug/&#39;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">es</span><span class="p">.</span><span class="nx">permalinks</span><span class="p">.</span><span class="nx">section</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">books</span> <span class="p">=</span> <span class="s1">&#39;/libros/&#39;</span>
+</span></span></code></pre></div>
+      </div>
+      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;defaultContentLanguage&#34;</span><span class="p">:</span> <span class="s2">&#34;en&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;defaultContentLanguageInSubdir&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;languages&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;en&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;contentDir&#34;</span><span class="p">:</span> <span class="s2">&#34;content/en&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;languageCode&#34;</span><span class="p">:</span> <span class="s2">&#34;en-US&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;languageDirection&#34;</span><span class="p">:</span> <span class="s2">&#34;ltr&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;languageName&#34;</span><span class="p">:</span> <span class="s2">&#34;English&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;permalinks&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;page&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">               <span class="nt">&#34;books&#34;</span><span class="p">:</span> <span class="s2">&#34;/books/:slug/&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;section&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">               <span class="nt">&#34;books&#34;</span><span class="p">:</span> <span class="s2">&#34;/books/&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">         <span class="p">},</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;weight&#34;</span><span class="p">:</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;es&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;contentDir&#34;</span><span class="p">:</span> <span class="s2">&#34;content/de&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;languageCode&#34;</span><span class="p">:</span> <span class="s2">&#34;es-ES&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;languageDirection&#34;</span><span class="p">:</span> <span class="s2">&#34;ltr&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;languageName&#34;</span><span class="p">:</span> <span class="s2">&#34;Español&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;permalinks&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;page&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">               <span class="nt">&#34;books&#34;</span><span class="p">:</span> <span class="s2">&#34;/libros/:slug/&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;section&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">               <span class="nt">&#34;books&#34;</span><span class="p">:</span> <span class="s2">&#34;/libros/&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">         <span class="p">},</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;weight&#34;</span><span class="p">:</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+      </div>
+  </div>
+</div>
+
+<p>The structure of the published site will be:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">public/
+</span></span><span class="line"><span class="cl">├── en/
+</span></span><span class="line"><span class="cl">│   ├── books/
+</span></span><span class="line"><span class="cl">│   │   ├── les-miserables/
+</span></span><span class="line"><span class="cl">│   │   │   └── index.html
+</span></span><span class="line"><span class="cl">│   │   ├── the-hunchback-of-notre-dame/
+</span></span><span class="line"><span class="cl">│   │   │   └── index.html
+</span></span><span class="line"><span class="cl">│   │   └── index.html
+</span></span><span class="line"><span class="cl">│   └── index.html
+</span></span><span class="line"><span class="cl">├── es/
+</span></span><span class="line"><span class="cl">│   ├── libros/
+</span></span><span class="line"><span class="cl">│   │   ├── les-miserables/
+</span></span><span class="line"><span class="cl">│   │   │   └── index.html
+</span></span><span class="line"><span class="cl">│   │   ├── the-hunchback-of-notre-dame/
+</span></span><span class="line"><span class="cl">│   │   │   └── index.html
+</span></span><span class="line"><span class="cl">│   │   └── index.html
+</span></span><span class="line"><span class="cl">│   └── index.html
+</span></span><span class="line"><span class="cl">└── index.html
+</span></span></code></pre></div><h4 id="tokens">Tokens <a class="header-link" href="#tokens"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h4>
 <p>Use these tokens when defining the URL pattern. The <code>date</code> field in front matter determines the value of time-related tokens.</p>
 <dl>
 <dt><code>:year</code></dt>
@@ -2551,7 +2714,7 @@ var trackOutboundLink = function(id, url) {
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: May 29, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/712fd85648edd5dd0d4c37a4e8cc7b91ba4005c1">Merge pull request #115 from neohugo/hugo/v0.112.4 (712fd85)</a>
+  Last updated: July 28, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b7ab2a68c3065812e2e470ee1a748435a56e3b72">Merge pull request #116 from neohugo/hugo/v0.115.4 (b7ab2a6)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/content-management/urls.md" class="

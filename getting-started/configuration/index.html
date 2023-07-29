@@ -37,7 +37,7 @@
     </title>
 
     <meta name="viewport" content="width=device-width,minimum-scale=1" />
-    <meta name="generator" content="Hugo 0.113.0-DEV">
+    <meta name="generator" content="Hugo 0.116.0-DEV">
 
     
       <meta name="robots" content="index, follow" />
@@ -95,11 +95,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/getting-started/configuration/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_10905119886565882197.png"/><meta property="article:section" content="getting-started" />
 
-<meta property="article:modified_time" content="2023-05-29T10:15:55-07:00" />
+<meta property="article:modified_time" content="2023-07-28T22:53:10-07:00" />
 <meta itemprop="name" content="Configure Hugo">
 <meta itemprop="description" content="How to configure your Hugo site.">
-<meta itemprop="dateModified" content="2023-05-29T10:15:55-07:00" />
-<meta itemprop="wordCount" content="4357"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
+<meta itemprop="dateModified" content="2023-07-28T22:53:10-07:00" />
+<meta itemprop="wordCount" content="4661"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_10905119886565882197.png"/>
 <meta name="twitter:title" content="Configure Hugo"/>
@@ -264,6 +264,7 @@ var trackOutboundLink = function(id, url) {
     <li><a href="#merge-configuration-from-themes">Merge Configuration from Themes</a></li>
     <li><a href="#all-configuration-settings">All Configuration Settings</a></li>
     <li><a href="#configure-build">Configure Build</a></li>
+    <li><a href="#configure-cache-busters">Configure Cache Busters</a></li>
     <li><a href="#configure-server">Configure Server</a></li>
     <li><a href="#_404-server-error-page">404 Server Error Page</a></li>
     <li><a href="#configure-title-case">Configure Title Case</a></li>
@@ -940,6 +941,15 @@ config file(s).</p>
   <div class="tab-content">
       <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">build</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">cachebusters</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l">assets/watching/hugo_stats\.json</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l">styles\.css</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l">(postcss|tailwind)\.config\.js</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l">css</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l">assets/.*\.(js|ts|jsx|tsx)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l">js</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l">assets/.*\.(.*)$</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l">$1</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">noJSConfigInAssets</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">useResourceCacheWhen</span><span class="p">:</span><span class="w"> </span><span class="l">fallback</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">writeStats</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
@@ -951,12 +961,42 @@ config file(s).</p>
 </span></span><span class="line"><span class="cl">  <span class="nx">noJSConfigInAssets</span> <span class="p">=</span> <span class="kc">false</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">useResourceCacheWhen</span> <span class="p">=</span> <span class="s1">&#39;fallback&#39;</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">writeStats</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">build</span><span class="p">.</span><span class="nx">cachebusters</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">source</span> <span class="p">=</span> <span class="s1">&#39;assets/watching/hugo_stats\.json&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">target</span> <span class="p">=</span> <span class="s1">&#39;styles\.css&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">build</span><span class="p">.</span><span class="nx">cachebusters</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">source</span> <span class="p">=</span> <span class="s1">&#39;(postcss|tailwind)\.config\.js&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">target</span> <span class="p">=</span> <span class="s1">&#39;css&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">build</span><span class="p">.</span><span class="nx">cachebusters</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">source</span> <span class="p">=</span> <span class="s1">&#39;assets/.*\.(js|ts|jsx|tsx)&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">target</span> <span class="p">=</span> <span class="s1">&#39;js&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">build</span><span class="p">.</span><span class="nx">cachebusters</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">source</span> <span class="p">=</span> <span class="s1">&#39;assets/.*\.(.*)$&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">target</span> <span class="p">=</span> <span class="s1">&#39;$1&#39;</span>
 </span></span></code></pre></div>
       </div>
         <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
       <div data-pane="json" class="code-copy-content nt3 tab-pane ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">   <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;cachebusters&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">         <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;source&#34;</span><span class="p">:</span> <span class="s2">&#34;assets/watching/hugo_stats\\.json&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;target&#34;</span><span class="p">:</span> <span class="s2">&#34;styles\\.css&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="p">},</span>
+</span></span><span class="line"><span class="cl">         <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;source&#34;</span><span class="p">:</span> <span class="s2">&#34;(postcss|tailwind)\\.config\\.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;target&#34;</span><span class="p">:</span> <span class="s2">&#34;css&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="p">},</span>
+</span></span><span class="line"><span class="cl">         <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;source&#34;</span><span class="p">:</span> <span class="s2">&#34;assets/.*\\.(js|ts|jsx|tsx)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;target&#34;</span><span class="p">:</span> <span class="s2">&#34;js&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="p">},</span>
+</span></span><span class="line"><span class="cl">         <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;source&#34;</span><span class="p">:</span> <span class="s2">&#34;assets/.*\\.(.*)$&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;target&#34;</span><span class="p">:</span> <span class="s2">&#34;$1&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">],</span>
 </span></span><span class="line"><span class="cl">      <span class="nt">&#34;noJSConfigInAssets&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">      <span class="nt">&#34;useResourceCacheWhen&#34;</span><span class="p">:</span> <span class="s2">&#34;fallback&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">      <span class="nt">&#34;writeStats&#34;</span><span class="p">:</span> <span class="kc">false</span>
@@ -978,6 +1018,112 @@ config file(s).</p>
 <dl>
 <dt>noJSConfigInAssets</dt>
 <dd>Turn off writing a <code>jsconfig.json</code> into your <code>/assets</code> folder with mapping of imports from running <a href="https://gohugo.io/hugo-pipes/js">js.Build</a>. This file is intended to help with intellisense/navigation inside code editors such as <a href="https://code.visualstudio.com/">VS Code</a>. Note that if you do not use <code>js.Build</code>, no file will be written.</dd>
+<dt>cachebusters</dt>
+<dd>See <a href="#configure-cache-busters">Configure Cache Busters</a></dd>
+</dl>
+<h2 id="configure-cache-busters">Configure Cache Busters <a class="header-link" href="#configure-cache-busters"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
+
+
+
+<button
+  class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 mr2 ml2 px-4 border border-gray-400 rounded shadow">
+  <a
+    href="https://github.com/gohugoio/hugo/releases/tag/v0.112.0"
+    target="_blank"
+    >New in v0.112.0</a
+  >
+</button>
+
+<p>The <code>build.cachebusters</code> configuration option was added to support development using Tailwind 3.x&rsquo;s JIT compiler where a <code>build</code> config may look like this:</p>
+
+<div class="code relative" id="hugo">
+  <div class="code-nav flex flex-nowrap items-stretch">
+      <div class="san-serif f6 dib lh-solid pl2 pv2 mr2">
+        hugo.
+      </div>
+      <button data-toggle-tab="yaml" class="tab-button active ba san-serif f6 dib lh-solid ph2 pv2">
+        yaml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="toml" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        toml
+      </button>
+      &nbsp;
+      <button data-toggle-tab="json" class="tab-button  ba san-serif f6 dib lh-solid ph2 pv2">
+        json
+      </button>
+      &nbsp;
+  </div>
+  <div class="tab-content">
+      <div data-pane="yaml" class="code-copy-content nt3 tab-pane active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">build</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">cachebusters</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l">assets/watching/hugo_stats\.json</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l">styles\.css</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l">(postcss|tailwind)\.config\.js</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l">css</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l">assets/.*\.(js|ts|jsx|tsx)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l">js</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l">assets/.*\.(.*)$</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l">$1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">writeStats</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span></code></pre></div>
+      </div>
+        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
+      <div data-pane="toml" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">build</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">writeStats</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">build</span><span class="p">.</span><span class="nx">cachebusters</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">source</span> <span class="p">=</span> <span class="s1">&#39;assets/watching/hugo_stats\.json&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">target</span> <span class="p">=</span> <span class="s1">&#39;styles\.css&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">build</span><span class="p">.</span><span class="nx">cachebusters</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">source</span> <span class="p">=</span> <span class="s1">&#39;(postcss|tailwind)\.config\.js&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">target</span> <span class="p">=</span> <span class="s1">&#39;css&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">build</span><span class="p">.</span><span class="nx">cachebusters</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">source</span> <span class="p">=</span> <span class="s1">&#39;assets/.*\.(js|ts|jsx|tsx)&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">target</span> <span class="p">=</span> <span class="s1">&#39;js&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">build</span><span class="p">.</span><span class="nx">cachebusters</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">source</span> <span class="p">=</span> <span class="s1">&#39;assets/.*\.(.*)$&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">target</span> <span class="p">=</span> <span class="s1">&#39;$1&#39;</span>
+</span></span></code></pre></div>
+      </div>
+        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
+      <div data-pane="json" class="code-copy-content nt3 tab-pane ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;cachebusters&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">         <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;source&#34;</span><span class="p">:</span> <span class="s2">&#34;assets/watching/hugo_stats\\.json&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;target&#34;</span><span class="p">:</span> <span class="s2">&#34;styles\\.css&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="p">},</span>
+</span></span><span class="line"><span class="cl">         <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;source&#34;</span><span class="p">:</span> <span class="s2">&#34;(postcss|tailwind)\\.config\\.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;target&#34;</span><span class="p">:</span> <span class="s2">&#34;css&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="p">},</span>
+</span></span><span class="line"><span class="cl">         <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;source&#34;</span><span class="p">:</span> <span class="s2">&#34;assets/.*\\.(js|ts|jsx|tsx)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;target&#34;</span><span class="p">:</span> <span class="s2">&#34;js&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="p">},</span>
+</span></span><span class="line"><span class="cl">         <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;source&#34;</span><span class="p">:</span> <span class="s2">&#34;assets/.*\\.(.*)$&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;target&#34;</span><span class="p">:</span> <span class="s2">&#34;$1&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">],</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;writeStats&#34;</span><span class="p">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+      </div>
+        <button class="needs-js copy copy-toggle bg-accent-color-dark f6 absolute top-0 right-0 lh-solid hover-bg-primary-color-dark bn white ph3 pv2" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="copy button"></button>
+  </div>
+</div>
+
+<p>Some key points in the above are <code>writeStats = true</code>, which writes a <code>hugo_stats.json</code> file on each build with HTML classes etc. that&rsquo;s used in the rendered output. Changes to this file will trigger a rebuild of the <code>styles.css</code> file. You also need to add <code>hugo_stats.json</code> to Hugo&rsquo;s server watcher. See <a href="https://github.com/bep/hugo-starter-tailwind-basic">Hugo Starter Tailwind Basic</a> for a running example.</p>
+<dl>
+<dt>source</dt>
+<dd>A regexp matching file(s) relative to one of the virtual component directories in Hugo, typically <code>assets/...</code>.</dd>
+<dt>target</dt>
+<dd>A regexp matching the keys in the resource cache that should be expired when <code>source</code> changes. You can use the matching regexp groups from <code>source</code> in the expression, e.g. <code>$1</code>.</dd>
 </dl>
 <h2 id="configure-server">Configure Server <a class="header-link" href="#configure-server"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>This is only relevant when running <code>hugo server</code>, and it allows to set HTTP headers during development, which allows you to test out your Content Security Policy and similar. The configuration format matches <a href="https://docs.netlify.com/routing/headers/#syntax-for-the-netlify-configuration-file">Netlify&rsquo;s</a> with slightly more powerful <a href="https://github.com/gobwas/glob">Glob matching</a>:</p>
@@ -1239,7 +1385,14 @@ config file(s).</p>
 
 <h2 id="configure-title-case">Configure Title Case <a class="header-link" href="#configure-title-case"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <p>Set <code>titleCaseStyle</code> to specify the title style used by the <a href="/functions/title/">title</a> template function and the automatic section titles in Hugo.</p>
-<p>By default, Hugo adheres to the capitalization rules in the <a href="https://www.apstylebook.com/">Associated Press (AP) Stylebook</a>. Set <code>titleCaseStyle</code> to <code>chicago</code> if you would prefer to follow the <a href="https://www.chicagomanualofstyle.org/home.html">Chicago Manual of Style</a>, or set if to <code>go</code> to use Go&rsquo;s convention of capitalizing every word.</p>
+<p>Can be one of:</p>
+<ul>
+<li><code>ap</code> (default),  the capitalization rules in the <a href="https://www.apstylebook.com/">Associated Press (AP) Stylebook</a></li>
+<li><code>chicago</code>, the <a href="https://www.chicagomanualofstyle.org/home.html">Chicago Manual of Style</a></li>
+<li><code>go</code>, Go&rsquo;s convention of capitalizing every word.</li>
+<li><code>firstupper</code>, capitalize the first letter of the first word.</li>
+<li><code>none</code>, no capitalization.</li>
+</ul>
 <h2 id="configuration-environment-variables">Configuration Environment Variables <a class="header-link" href="#configuration-environment-variables"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h2>
 <dl>
 <dt>HUGO_NUMWORKERMULTIPLIER</dt>
@@ -1732,9 +1885,8 @@ config file(s).</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">keepWhitespace</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">js</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">keepVarNames</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">noNullishOperator</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">precision</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">2022</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">json</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">keepNumbers</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">precision</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
@@ -1769,9 +1921,8 @@ config file(s).</p>
 </span></span><span class="line"><span class="cl">      <span class="nx">keepWhitespace</span> <span class="p">=</span> <span class="kc">false</span>
 </span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">minify</span><span class="p">.</span><span class="nx">tdewolff</span><span class="p">.</span><span class="nx">js</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">keepVarNames</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">noNullishOperator</span> <span class="p">=</span> <span class="kc">false</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">precision</span> <span class="p">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">version</span> <span class="p">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">version</span> <span class="p">=</span> <span class="mi">2022</span>
 </span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">minify</span><span class="p">.</span><span class="nx">tdewolff</span><span class="p">.</span><span class="nx">json</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">keepNumbers</span> <span class="p">=</span> <span class="kc">false</span>
 </span></span><span class="line"><span class="cl">      <span class="nx">precision</span> <span class="p">=</span> <span class="mi">0</span>
@@ -1809,9 +1960,8 @@ config file(s).</p>
 </span></span><span class="line"><span class="cl">         <span class="p">},</span>
 </span></span><span class="line"><span class="cl">         <span class="nt">&#34;js&#34;</span><span class="p">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&#34;keepVarNames&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;noNullishOperator&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&#34;precision&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="mi">2022</span>
 </span></span><span class="line"><span class="cl">         <span class="p">},</span>
 </span></span><span class="line"><span class="cl">         <span class="nt">&#34;json&#34;</span><span class="p">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&#34;keepNumbers&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
@@ -1940,7 +2090,7 @@ config file(s).</p>
 <h3 id="the-keywords-explained">The keywords explained <a class="header-link" href="#the-keywords-explained"><svg class="fill-current o-60 hover-accent-color-light" height="22px" viewBox="0 0 24 24" width="22px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></a></h3>
 <dl>
 <dt><code>:cacheDir</code></dt>
-<dd>This is the value of the <code>cacheDir</code> config option if set (can also be set via OS env variable <code>HUGO_CACHEDIR</code>). It will fall back to <code>/opt/build/cache/hugo_cache/</code> on Netlify, or a <code>hugo_cache</code> directory below the OS temp dir for the others. This means that if you run your builds on Netlify, all caches configured with <code>:cacheDir</code> will be saved and restored on the next build. For other CI vendors, please read their documentation. For an CircleCI example, see <a href="https://github.com/bep/hugo-sass-test/blob/6c3960a8f4b90e8938228688bc49bdcdd6b2d99e/.circleci/config.yml">this configuration</a>.</dd>
+<dd>This is the value of the <code>cacheDir</code> config option if set (can also be set via OS env variable <code>HUGO_CACHEDIR</code>). It will fall back to <code>/opt/build/cache/hugo_cache/</code> on Netlify, or a <code>hugo_cache_$USER</code> directory below the OS temp dir for the others. This means that if you run your builds on Netlify, all caches configured with <code>:cacheDir</code> will be saved and restored on the next build. For other CI vendors, please read their documentation. For an CircleCI example, see <a href="https://github.com/bep/hugo-sass-test/blob/6c3960a8f4b90e8938228688bc49bdcdd6b2d99e/.circleci/config.yml">this configuration</a>.</dd>
 <dt><code>:project</code></dt>
 <dd>The base directory name of the current Hugo project. This means that, in its default setting, every project will have separated file caches, which means that when you do <code>hugo --gc</code> you will not touch files related to other Hugo projects running on the same PC.</dd>
 <dt><code>:resourceDir</code></dt>
@@ -3410,7 +3560,7 @@ config file(s).</p>
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: May 29, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/712fd85648edd5dd0d4c37a4e8cc7b91ba4005c1">Merge pull request #115 from neohugo/hugo/v0.112.4 (712fd85)</a>
+  Last updated: July 28, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b7ab2a68c3065812e2e470ee1a748435a56e3b72">Merge pull request #116 from neohugo/hugo/v0.115.4 (b7ab2a6)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/getting-started/configuration.md" class="

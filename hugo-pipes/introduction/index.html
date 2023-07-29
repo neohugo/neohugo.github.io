@@ -37,7 +37,7 @@
     </title>
 
     <meta name="viewport" content="width=device-width,minimum-scale=1" />
-    <meta name="generator" content="Hugo 0.113.0-DEV">
+    <meta name="generator" content="Hugo 0.116.0-DEV">
 
     
       <meta name="robots" content="index, follow" />
@@ -95,10 +95,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gohugo.io/hugo-pipes/introduction/" /><meta property="og:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_3431511264709384207.png"/><meta property="article:section" content="hugo-pipes" />
 
-<meta property="article:modified_time" content="2023-05-29T10:15:55-07:00" />
+<meta property="article:modified_time" content="2023-07-28T22:53:10-07:00" />
 <meta itemprop="name" content="Hugo Pipes Introduction">
 <meta itemprop="description" content="Hugo Pipes is Hugo&#39;s asset processing set of functions.">
-<meta itemprop="dateModified" content="2023-05-29T10:15:55-07:00" />
+<meta itemprop="dateModified" content="2023-07-28T22:53:10-07:00" />
 <meta itemprop="wordCount" content="947"><meta itemprop="image" content="https://gohugo.io/images/gohugoio-card.png"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_3431511264709384207.png"/>
@@ -406,7 +406,7 @@ ContentType</dd>
 <p>When fetching a remote <code>Resource</code>, <code>resources.GetRemote</code> takes an optional options map as the second argument, e.g.:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$resource</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">resources</span><span class="na">.GetRemote</span><span class="w"> </span><span class="s">&#34;https://example.org/api&#34;</span><span class="w"> </span><span class="o">(</span><span class="nx">dict</span><span class="w"> </span><span class="s">&#34;headers&#34;</span><span class="w"> </span><span class="o">(</span><span class="nx">dict</span><span class="w"> </span><span class="s">&#34;Authorization&#34;</span><span class="w"> </span><span class="s">&#34;Bearer abcd&#34;</span><span class="o">))</span><span class="w"> </span><span class="cp">}}</span>
 </span></span></code></pre></div><p>If you need multiple values for the same header key, use a slice:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$resource</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">resources</span><span class="na">.GetRemote</span><span class="w"> </span><span class="s">&#34;https://example.org/api&#34;</span><span class="w">  </span><span class="o">(</span><span class="nx">dict</span><span class="w"> </span><span class="s">&#34;headers&#34;</span><span class="w"> </span><span class="o">(</span><span class="nx">dict</span><span class="w"> </span><span class="s">&#34;X-List&#34;</span><span class="w"> </span><span class="o">(</span><span class="nx">slice</span><span class="w"> </span><span class="s">&#34;a&#34;</span><span class="w"> </span><span class="s">&#34;b&#34;</span><span class="w"> </span><span class="s">&#34;c&#34;</span><span class="o">)))</span><span class="w"> </span><span class="cp">}}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$resource</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">resources</span><span class="na">.GetRemote</span><span class="w"> </span><span class="s">&#34;https://example.org/api&#34;</span><span class="w">  </span><span class="o">(</span><span class="nx">dict</span><span class="w"> </span><span class="s">&#34;headers&#34;</span><span class="w"> </span><span class="o">(</span><span class="nx">dict</span><span class="w"> </span><span class="s">&#34;X-List&#34;</span><span class="w"> </span><span class="o">(</span><span class="k">slice</span><span class="w"> </span><span class="s">&#34;a&#34;</span><span class="w"> </span><span class="s">&#34;b&#34;</span><span class="w"> </span><span class="s">&#34;c&#34;</span><span class="o">)))</span><span class="w"> </span><span class="cp">}}</span>
 </span></span></code></pre></div><p>You can also change the request method and set the request body:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$postResponse</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">resources</span><span class="na">.GetRemote</span><span class="w"> </span><span class="s">&#34;https://example.org/api&#34;</span><span class="w">  </span><span class="o">(</span><span class="nx">dict</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s">&#34;method&#34;</span><span class="w"> </span><span class="s">&#34;post&#34;</span><span class="w">
@@ -1907,7 +1907,7 @@ Non-transformation methods deprived of such aliases are <code>resources.Get</cod
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f6 dark-gray mb2">
-  Last updated: May 29, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/712fd85648edd5dd0d4c37a4e8cc7b91ba4005c1">Merge pull request #115 from neohugo/hugo/v0.112.4 (712fd85)</a>
+  Last updated: July 28, 2023: <a class="hide-child link primary-color" href="https://github.com/gohugoio/hugoDocs/commit/b7ab2a68c3065812e2e470ee1a748435a56e3b72">Merge pull request #116 from neohugo/hugo/v0.115.4 (b7ab2a6)</a>
 </h6>
 
       <a href="https://github.com/gohugoio/hugoDocs/edit/master/content/en/hugo-pipes/introduction.md" class="
