@@ -5,6 +5,7 @@
     <link>https://gohugo.io/maintenance/</link>
     <description>Recent content in Maintenance on Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://gohugo.io/maintenance/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://gohugo.io/maintenance/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
